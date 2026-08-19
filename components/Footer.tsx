@@ -7,7 +7,8 @@ import { GitHubStar } from "./GitHubStar";
 import { LocaleLink } from "./LocaleLink";
 
 export function Footer({ stars }: { stars?: number | null }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const communityLabel = locale === "zh-hk" ? "社群" : locale === "zh-cn" ? "社区" : "Community";
 
   return (
     <footer className="mt-auto border-t border-line">
@@ -29,6 +30,9 @@ export function Footer({ stars }: { stars?: number | null }) {
           <LocaleLink href="/integrations" className="hover:text-ink">
             {t("nav.integrations")}
           </LocaleLink>
+          <LocaleLink href="/community" className="hover:text-ink">
+            {communityLabel}
+          </LocaleLink>
           <LocaleLink href="/prompts" className="hover:text-ink">
             {t("nav.prompts")}
           </LocaleLink>
@@ -41,11 +45,14 @@ export function Footer({ stars }: { stars?: number | null }) {
           <GetGrokBot variant="link" />
           <GitHubStar stars={stars} label="always" />
         </div>
-        <p className="mt-6 text-[12px] text-faint">
+        <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-[12px] text-faint">
           <a href="https://github.com/jeremy-prt/bloub" className="hover:text-mute" rel="noreferrer">
             {t("bot.credit")}
           </a>
-        </p>
+          <a href="https://github.com/Alain00/blobatar" className="hover:text-mute" rel="noreferrer">
+            Community blobs powered by Blobatar
+          </a>
+        </div>
       </div>
     </footer>
   );
