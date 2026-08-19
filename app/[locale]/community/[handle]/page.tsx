@@ -29,7 +29,7 @@ export default async function CommunityProfilePage({
   const decoded = decodeURIComponent(handle).toLowerCase();
   const stories = discoverStories
     .filter((item) => item.handle?.toLowerCase() === decoded)
-    .toSorted((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+    .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 
   if (!stories.length) notFound();
 
