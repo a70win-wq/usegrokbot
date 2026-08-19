@@ -10,9 +10,9 @@
   },
   "stats": {
     "total": 15,
-    "candidates": 14,
-    "xCandidates": 10,
-    "alreadyIngested": 1,
+    "candidates": 4,
+    "xCandidates": 0,
+    "alreadyIngested": 11,
     "sourceOnly": 4
   },
   "cases": [
@@ -23,11 +23,10 @@
       "sourceSummary": "SpaceXAI product roster with real agent-to-agent PR handoff screenshots.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -37,11 +36,10 @@
       "sourceSummary": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -77,11 +75,10 @@
       "sourceSummary": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -91,11 +88,10 @@
       "sourceSummary": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -105,11 +101,10 @@
       "sourceSummary": "Reconcile materials, write the pack back into Box via MCP.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -119,11 +114,10 @@
       "sourceSummary": "Teach-a-task on a real CMS instead of writing a deploy script.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 3,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 3
       }
     },
     {
@@ -133,11 +127,10 @@
       "sourceSummary": "Bot pushes hardware updates so the human can stay off X.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 2,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 2
       }
     },
     {
@@ -156,7 +149,7 @@
     {
       "id": "24-7-support-agent-in-19-minutes",
       "title": "24/7 support agent in 19 minutes",
-      "url": "https://www.youtube.com/watch",
+      "url": "https://www.youtube.com/watch?v=bUALqTpUze0",
       "sourceSummary": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
       "sourceType": "youtube",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
@@ -173,11 +166,10 @@
       "sourceSummary": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 2,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 2
       }
     },
     {
@@ -187,11 +179,10 @@
       "sourceSummary": "Bot scans the day's settled markets and writes the report.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 2,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 2
       }
     },
     {
@@ -201,11 +192,10 @@
       "sourceSummary": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
       "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
-        "attempts": 2,
-        "reason": "direct GitHub Actions commit"
+        "attempts": 2
       }
     },
     {
