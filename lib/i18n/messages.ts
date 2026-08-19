@@ -8,6 +8,11 @@ export const messages = {
       toDark: "Switch to dark mode",
       toLight: "Switch to light mode",
     },
+    bot: {
+      aria: "Grok Bot avatar",
+      nextColor: "Change bot color",
+      credit: "Bot avatar from bloub",
+    },
     nav: {
       discover: "Discover",
       useCases: "Use Cases",
@@ -320,6 +325,11 @@ export const messages = {
       toDark: "轉做黑夜模式",
       toLight: "轉做日頭模式",
     },
+    bot: {
+      aria: "Grok Bot 頭像",
+      nextColor: "轉機械人顏色",
+      credit: "機械人頭像來自 bloub",
+    },
     nav: {
       discover: "發現",
       useCases: "使用案例",
@@ -628,6 +638,11 @@ export const messages = {
       toggle: "切换日间和夜间模式",
       toDark: "切换到夜间模式",
       toLight: "切换到日间模式",
+    },
+    bot: {
+      aria: "Grok Bot 头像",
+      nextColor: "换机器人颜色",
+      credit: "机器人头像来自 bloub",
     },
     nav: {
       discover: "发现",

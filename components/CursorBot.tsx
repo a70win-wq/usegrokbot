@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { BotFace } from "./BotFace";
+import { BloubBot } from "@/components/BloubBot";
 
 /** Official Grok Bot face, ~3× a 16px cursor, sits beside the pointer. */
-const SIZE = 48;
-const OFFSET_X = 16;
-const OFFSET_Y = 18;
+const SIZE = 72;
+const OFFSET_X = 18;
+const OFFSET_Y = 20;
 
 export function CursorBot() {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ export function CursorBot() {
       className="pointer-events-none fixed top-0 left-0 z-[200] opacity-0"
       style={{ willChange: "transform" }}
     >
-      <BotFace size={SIZE} color="#007aff" look="auto" />
+      <BloubBot size={SIZE} color="#4f7cff" paper="var(--canvas)" playing follow crop="scene" />
     </div>
   );
 }

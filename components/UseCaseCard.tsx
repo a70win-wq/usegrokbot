@@ -27,7 +27,7 @@ export function UseCaseCard({
   return (
     <article className="spring-lift group relative flex h-full flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
       <div className="flex items-start justify-between gap-3">
-        <BotFace size={28} color={botColorFor(useCase.slug)} />
+        <BotFace size={28} color={botColorFor(useCase.slug)} paper="var(--card)" />
         <div className="relative z-10 flex items-center gap-1">
           <StatusBadge status={trust.status} label={t(`trust.${trust.status}`)} />
           <SaveButton slug={useCase.slug} title={item.title} />

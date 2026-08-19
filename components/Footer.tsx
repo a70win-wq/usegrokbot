@@ -37,6 +37,11 @@ export function Footer() {
             {t("nav.submitShort")}
           </LocaleLink>
         </div>
+        <p className="mt-6 text-[12px] text-faint">
+          <a href="https://github.com/jeremy-prt/bloub" className="hover:text-mute" rel="noreferrer">
+            {t("bot.credit")}
+          </a>
+        </p>
       </div>
     </footer>
   );

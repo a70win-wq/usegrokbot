@@ -1,19 +1,7 @@
-import { cn } from "@/lib/cn";
+import { BloubBot } from "@/components/BloubBot";
+import { COLORS } from "@/lib/bloub";
 
-export const botPalette = [
-  "#1d1d1f",
-  "#8b5a2b",
-  "#ff3b30",
-  "#ff6b00",
-  "#34c759",
-  "#00c7be",
-  "#007aff",
-  "#5856d6",
-  "#af52de",
-  "#ff2d55",
-  "#ff9f1a",
-  "#8e8e93",
-] as const;
+export const botPalette = COLORS.map((item) => item.hex);
 
 export function botColorFor(key: string) {
   let hash = 0;
@@ -22,77 +10,41 @@ export function botColorFor(key: string) {
 }
 
 export const botColors = {
-  sales: "#ff6b00",
-  marketing: "#ff3b30",
-  content: "#af52de",
-  research: "#007aff",
-  operations: "#8e8e93",
-  "customer-support": "#34c759",
-  hr: "#ff2d55",
-  coding: "#00c7be",
-  finance: "#5856d6",
-  productivity: "#1d1d1f",
-  default: "#007aff",
+  sales: "#f08a24",
+  marketing: "#e8483f",
+  content: "#e152b0",
+  research: "#3b93f0",
+  operations: "#a3a3a3",
+  "customer-support": "#3ecf8e",
+  hr: "#e152b0",
+  coding: "#2fbfa0",
+  finance: "#8b5cf6",
+  productivity: "#0a0a0c",
+  default: "#3b93f0",
 } as const;
 
-/** Official Grok Bot blob. `look="auto"` slowly turns the eyes on its own. */
+/** Official Grok Bot blob from bloub. Frozen by default; `look="auto"` blinks. */
 export function BotFace({
-  color = "#007aff",
+  color = "#3b93f0",
   size = 32,
   className,
   look = "none",
+  paper = "var(--canvas)",
 }: {
   color?: string;
   size?: number;
   className?: string;
   look?: "none" | "auto";
+  paper?: string;
 }) {
-  const eyeW = Math.max(3, size * 0.16);
-  const eyeH = Math.max(4.5, size * 0.23);
-  const gap = size * 0.11;
-  const travel = Math.max(2, size * 0.2);
-
   return (
-    <span
-      className={cn("relative inline-block shrink-0 overflow-hidden rounded-full", className)}
-      style={{
-        width: size,
-        height: size,
-        background: `radial-gradient(circle at 32% 28%, color-mix(in srgb, ${color} 70%, white), ${color} 56%, color-mix(in srgb, ${color} 82%, black))`,
-        boxShadow: `inset 0 ${size * 0.04}px ${size * 0.08}px rgba(255,255,255,0.35), inset 0 ${-size * 0.05}px ${size * 0.1}px rgba(0,0,0,0.18)`,
-      }}
-      aria-hidden
-    >
-      <span
-        className={cn("absolute inset-0", look === "auto" && "bot-eyes")}
-        style={
-          look === "auto"
-            ? {
-                ["--look" as string]: `${travel}px`,
-                animation: "bot-look 3.2s ease-in-out infinite",
-              }
-            : undefined
-        }
-      >
-        <span
-          className="absolute rounded-full bg-white"
-          style={{
-            width: eyeW,
-            height: eyeH,
-            top: "36%",
-            left: `calc(50% - ${gap / 2 + eyeW}px)`,
-          }}
-        />
-        <span
-          className="absolute rounded-full bg-white"
-          style={{
-            width: eyeW,
-            height: eyeH,
-            top: "36%",
-            left: `calc(50% + ${gap / 2}px)`,
-          }}
-        />
-      </span>
-    </span>
+    <BloubBot
+      size={size}
+      color={color}
+      paper={paper}
+      crop="icon"
+      frozenAt={look === "auto" ? undefined : 1}
+      className={className}
+    />
   );
 }

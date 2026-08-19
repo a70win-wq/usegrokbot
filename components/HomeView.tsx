@@ -6,6 +6,7 @@ import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/compone
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { PopularIntegrations } from "@/components/PopularIntegrations";
+import { HeroBot } from "@/components/HeroBot";
 import { SearchBar } from "@/components/SearchBar";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { discoverStories, getFeaturedDiscoverStories } from "@/data/discover";
@@ -49,17 +50,22 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
 
       <section>
         <div className="mx-auto max-w-[1240px] px-5 pt-20 pb-12 md:px-8 md:pt-[104px] md:pb-16">
-          <p className="text-[13px] font-medium tracking-[0.14em] text-mute uppercase">{t("home.kicker")}</p>
-          <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
-            {t("home.title")}
-          </h1>
-          <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
-          <div className="mt-8">
-            <SearchBar initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
+          <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
+            <div className="min-w-0">
+              <p className="text-[13px] font-medium tracking-[0.14em] text-mute uppercase">{t("home.kicker")}</p>
+              <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
+                {t("home.title")}
+              </h1>
+              <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
+              <div className="mt-8">
+                <SearchBar initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
+              </div>
+              <p className="mt-4 text-[12px] text-faint">
+                {t("home.proof", { n: useCases.length })}
+              </p>
+            </div>
+            <HeroBot />
           </div>
-          <p className="mt-4 text-[12px] text-faint">
-            {t("home.proof", { n: useCases.length })}
-          </p>
         </div>
       </section>
 
