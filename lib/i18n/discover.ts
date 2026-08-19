@@ -233,6 +233,119 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "Ad libraries, review sites, and competitor changelogs are exactly the shape Grok Bot is built for",
     output: "每週對手差額",
   },
+  "one-person-company-rahul": {
+    title: "一人公司",
+    headline: "Rahul 寫了怎樣用 Grok Bot 跑一人公司——由找客到每週匯報",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Rahul（@sairahul1）在 X 發表文章〈How To Build a One-Person Company Using Grok Bot〉。開頭就是一人公司的負荷——找客、寫外展、做圖、回覆、數一星期——再用 Bot 系統接手這些線。",
+    howItWorks:
+      "他講設定、插件、每隻 Bot 一份章程、示範一次就變成例行工作，以及六個起步角色（幕僚長、Scout、Quill、Forge、Guide、Ledger）。我們摘要公開文章——沒有重跑他的公司棧。附近一條流傳的 Elon 連結其實引用了另一篇 Grok Bot 帖，所以我們保留 Rahul 原文。",
+    whyUseful: "這是今日人在打開的長文：「一工一隻 Bot」。如果你就是整間公司，由呢度開始。",
+    whyItMatters: "今日 X 上最熱的社群 Grok Bot 指南。是打法，不是客戶截圖。我們保留 Rahul 原帖。",
+    whoShouldTry: ["一人創辦人", "自己就係整間公司的營運", "已經在付 Grok Bot 的人"],
+    usefulFor: "一人創辦人 / 營運",
+    quote: "You find the leads. Write the outreach. Make the images. Answer the replies. Count the week.",
+    result: "六隻起步 Bot · 一人公司",
+  },
+  "clothes-resale-scotty-beam": {
+    title: "賣掉未着過的衫",
+    headline: "SCOTTY BEAM 寫 Cursor 同事把妹妹未着過的衫交給 Grok Bot",
+    whatTheyDid:
+      "2026 年 8 月 18 日，SCOTTY BEAM（@ScottyBeamIO）寫有 Cursor 的人把妹妹不再着的一堆衫交給 Grok Bot。賣掉要影相、上架、寫描述、回買家、議價——所以一直拖。那堆衫就交給 Bot。",
+    howItWorks:
+      "Scotty 話 Bot 睇相、認衫、寫 listing，再同買家議價。他亦指自己較長的文章，比較 Grok Bot、Hermes、OpenClaw，以及自動化 X 內容。賣衫是 Cursor 那個人的工；比較文是 Scotty 自己的。兩邊都沒有在這裡重跑。",
+    whyUseful: "一堆衫就是人人都明的工：拖住的麻煩，一句「賣掉這些」。",
+    whyItMatters: "這是轉述別人的 Bot，加上 Scotty 自己的長文。兩邊都寫清楚。",
+    whoShouldTry: ["堆住二手貨的人", "一人營運", "拖住上架的人"],
+    usefulFor: "二手 / 一人營運",
+    quote: "You can just say: “Sell these”. And let it figure out the rest.",
+    result: "影相、上架、回買家、議價",
+  },
+  "five-bots-peter-yang": {
+    title: "五隻實用 Bot",
+    headline: "Peter Yang 出了五隻 Grok Bot 教學——顧問、YouTube、X、收件箱、旅行",
+    whatTheyDid:
+      "2026 年 8 月 17 日，Peter Yang（@petergyang）發教學：五隻有用的 Bot——一隻顧問負責開同管其他 Bot、YouTube 研究找出局片、X 偵察找病毒同搞笑帖、「數碼 Marie Kondo」清收件箱同忘記的訂閱、再加旅行禮賓。",
+    howItWorks:
+      "他亦試過 Gamer Bot 玩經典遊戲，並問 Grok Bot 能不能取代 ChatGPT 做日常主力。我們摘要公開帖——沒有重跑他那五隻。",
+    whyUseful: "五份有名的工，不是空泛「試試 agent」。想砌第一隊，抄這張名單。",
+    whyItMatters: "這週人在收藏的實用設定教學。社群文；我們保留 Peter 原帖。",
+    whoShouldTry: ["剛砌第一隊 Bot 的人", "創作者", "營運"],
+    usefulFor: "營運 / 創作者",
+    quote: "Here's my new tutorial where I show you how to set up 5 useful bots",
+    result: "五隻 Bot · 顧問加專員",
+  },
+  "ultimate-guide-miles-deutscher": {
+    title: "Grok Bot 完全指南",
+    headline: "Miles Deutscher 發表〈Grok Bot: The Ultimate Guide〉——設定、插件、他那五隻",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Miles Deutscher（@milesdeutscher）發長文：Grok Bot 是什麼、怎樣設定、插件，以及他實際在跑的五隻——Alex 找 YouTube 出局片、Sandra 睇樓盤、Jonathan 睇投資組合、Lucy 分 Slack、Oscar 做雜務。",
+    howItWorks:
+      "他話由發布就開始試。文章就是工——設定、用例、插件，同老實的價錢。我們沒有重跑 Alex 或 Sandra。",
+    whyUseful: "如果你想抄一張公開的枱——有名的 Bot、提示詞、插件——這篇是長讀。",
+    whyItMatters: "這週另一篇人在打開的 Grok Bot 長文。社群；我們保留 Miles 原帖。",
+    whoShouldTry: ["已經有 Bot 的人", "想砌一小隊的營運", "創作者"],
+    usefulFor: "營運 / 創作者",
+    quote: "Grok Bot is the most powerful AI agent I've ever used.",
+    result: "五隻有名的 Bot · 設定加插件",
+  },
+  "bot-team-tips-ben-lang": {
+    title: "@bot 團隊貼士",
+    headline: "Ben Lang 收集了 @bot 團隊在傳的 Grok Bot 專業貼士",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Ben Lang（@benln）發了他從 @bot 團隊收集的清單：同一個插件駁多個帳戶、一隻幕僚長加幾個專員、釘住常用 agent、用 Notion 記未做完的工、示範一次教會，仲有更多。",
+    howItWorks:
+      "他簡介寫緊 Building SpaceXAI，via Cursor team。帖仍然是個人帳戶收集團隊貼士——不是 @bot 或 @xai 原文——所以我們維持社群標籤，保留他原帖。",
+    whyUseful: "短、抄得走的設定習慣。如果你的 Bot 仍然只係多一個聊天室，先做幕僚長，再加一頁 Notion「仲有咩未做」。",
+    whyItMatters: "這是公開轉述的團隊貼士，不是 UseGrokBot 重測。沒有標官方，也沒有標已測試。",
+    whoShouldTry: ["已經有 Bot 的人", "想砌一小隊的營運"],
+    usefulFor: "營運",
+    quote: "One Chief of Staff plus a few specialists beats one mega-chat",
+    result: "十二條貼士 · 幕僚長加專員",
+  },
+  "ceo-desk-teslaconomics": {
+    title: "六隻 Bot 加一個 CEO",
+    headline: "Teslaconomics 跑六隻 Grok Bot，再加一隻「CEO」在上面調度",
+    whatTheyDid:
+      "2026 年 8 月 14 日，Teslaconomics（@Teslaconomics）寫他已經有六隻 Grok Bot，各做一工——提醒、圖像同影片、估公司、分析影片、幫手發帖——再在上面放一隻 CEO Bot，他只同一個收件箱傾。",
+    howItWorks:
+      "先專員，再幕僚長式 CEO 分派工作、交返一個包裹。他公開了第一條訊息同三個例行（早、午、晚）。我們沒有重跑他的枱。",
+    whyUseful: "沒有 CEO，你就係各組群聊的中間人。這是公開可複製的做法：讓一隻 Bot 做收件箱。",
+    whyItMatters: "有名的人、有名的名單、公開提示詞。社群——我們沒有重測 CEO。",
+    whoShouldTry: ["已經跑多過一隻 Bot 的人", "營運", "創作者"],
+    usefulFor: "營運 / 創作者",
+    quote: "With a CEO you text one inbox like a person.",
+    result: "六個專員 · 一隻 CEO Bot",
+  },
+  "agent-loops-alex-finn": {
+    title: "最好的循環",
+    headline: "Alex Finn 讓一隻 Grok Bot 叫另一隻每五分鐘循環做同一份工",
+    whatTheyDid:
+      "2026 年 8 月 16 日，Alex Finn（@AlexFinn）寫 Grok Bot 天生適合循環：主 agent 叫另一隻每五分鐘循環一份工，再監察它。他話有一隻調度 Bot 看住工程 Bot 二十四小時，每三十分鐘想一個改進方法。",
+    howItWorks:
+      "他對比單一 Bot 用 /loop 自己看自己。多一隻 Bot 就是另一個上下文做判斷。我們摘要公開帖——沒有重跑他那二十四小時循環。",
+    whyUseful: "如果你想工作自己繼續，又唔想自己睇住 /loop，這就是兩隻 Bot 的版本。",
+    whyItMatters: "有人公開在跑的具體循環做法。社群；我們沒有重測工程循環。",
+    whoShouldTry: ["建造者", "工程師", "要跑長工的研究"],
+    usefulFor: "建造者 / 工程",
+    quote:
+      "All you do is tell your main agent to tell another agent to loop on a task every 5 minutes, and monitor it while it goes",
+    result: "五分鐘循環 · 調度加專員",
+  },
+  "firstmate-kun-chen": {
+    title: "Firstmate，一個收件箱",
+    headline: "Kun Chen 公開可複製的 Firstmate 提示——你只同一隻 Grok Bot 傾",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Kun Chen（@kunchenguid）發了一個 Firstmate Bot 系統提示：開一隻、把 github.com/kunchenguid/firstmate 的 GROK_BOT.md 貼進描述，之後只同這隻傾。它開、分派、協調其他 Bot。",
+    howItWorks:
+      "他話 Firstmate 是他在其他 harness 已用的幕僚長做法，而家變成一段短 Grok Bot 描述。我們沒有重跑 Firstmate。",
+    whyUseful: "如果你唔想十二個聊天室，這是公開提示：一隻 Bot 去請同調度其餘的。",
+    whyItMatters: "有 repo、有提示、有名的人。社群——我們沒有重測 Firstmate。",
+    whoShouldTry: ["已經有 Bot 的人", "想要一個收件箱的營運"],
+    usefulFor: "營運",
+    quote: "the only agent you talk to. it creates, delegates, juggles, and continuously improves other bots for you",
+    result: "一隻 Firstmate · 可複製提示",
+  },
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
@@ -452,6 +565,119 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "市场 / 创始人",
     quote: "Ad libraries, review sites, and competitor changelogs are exactly the shape Grok Bot is built for",
     output: "每周竞品差额",
+  },
+  "one-person-company-rahul": {
+    title: "一人公司",
+    headline: "Rahul 写了怎样用 Grok Bot 跑一人公司——从找客到每周汇报",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Rahul（@sairahul1）在 X 发表文章〈How To Build a One-Person Company Using Grok Bot〉。开头就是一人公司的负荷——找客、写外展、做图、回复、数一星期——再用 Bot 系统接手这些线。",
+    howItWorks:
+      "他讲设置、插件、每只 Bot 一份章程、示范一次就变成例行工作，以及六个起步角色（幕僚长、Scout、Quill、Forge、Guide、Ledger）。我们摘要公开文章——没有重跑他的公司栈。附近一条流传的 Elon 链接其实引用了另一篇 Grok Bot 帖，所以我们保留 Rahul 原文。",
+    whyUseful: "这是今天人们在打开的长文：「一工一只 Bot」。如果你就是整间公司，从这里开始。",
+    whyItMatters: "今天 X 上最热的社区 Grok Bot 指南。是打法，不是客户截图。我们保留 Rahul 原帖。",
+    whoShouldTry: ["一人创始人", "自己就是整间公司的运营", "已经在付 Grok Bot 的人"],
+    usefulFor: "一人创始人 / 运营",
+    quote: "You find the leads. Write the outreach. Make the images. Answer the replies. Count the week.",
+    result: "六只起步 Bot · 一人公司",
+  },
+  "clothes-resale-scotty-beam": {
+    title: "卖掉没穿过的衣服",
+    headline: "SCOTTY BEAM 写 Cursor 同事把妹妹没穿过的衣服交给 Grok Bot",
+    whatTheyDid:
+      "2026 年 8 月 18 日，SCOTTY BEAM（@ScottyBeamIO）写有 Cursor 的人把妹妹不再穿的一堆衣服交给 Grok Bot。卖掉要拍照、上架、写描述、回买家、议价——所以一直拖。那堆衣服就交给 Bot。",
+    howItWorks:
+      "Scotty 说 Bot 看照片、认衣服、写 listing，再和买家议价。他也指向自己较长的文章，比较 Grok Bot、Hermes、OpenClaw，以及自动化 X 内容。卖衣服是 Cursor 那个人的工；比较文是 Scotty 自己的。两边都没有在这里重跑。",
+    whyUseful: "一堆衣服就是人人都懂的工：拖着的麻烦，一句「卖掉这些」。",
+    whyItMatters: "这是转述别人的 Bot，加上 Scotty 自己的长文。两边都写清楚。",
+    whoShouldTry: ["堆着二手货的人", "一人运营", "拖着上架的人"],
+    usefulFor: "二手 / 一人运营",
+    quote: "You can just say: “Sell these”. And let it figure out the rest.",
+    result: "拍照、上架、回买家、议价",
+  },
+  "five-bots-peter-yang": {
+    title: "五只实用 Bot",
+    headline: "Peter Yang 出了五只 Grok Bot 教程——顾问、YouTube、X、收件箱、旅行",
+    whatTheyDid:
+      "2026 年 8 月 17 日，Peter Yang（@petergyang）发教程：五只有用的 Bot——一只顾问负责开和管理其他 Bot、YouTube 研究找出局片、X 侦察找病毒和搞笑帖、「数码 Marie Kondo」清收件箱和忘记的订阅、再加上旅行礼宾。",
+    howItWorks:
+      "他也试过 Gamer Bot 玩经典游戏，并问 Grok Bot 能不能取代 ChatGPT 做日常主力。我们摘要公开帖——没有重跑他那五只。",
+    whyUseful: "五份有名的工，不是空泛「试试 agent」。想砌第一队，抄这张名单。",
+    whyItMatters: "这周人们在收藏的实用设置教程。社区文；我们保留 Peter 原帖。",
+    whoShouldTry: ["刚砌第一队 Bot 的人", "创作者", "运营"],
+    usefulFor: "运营 / 创作者",
+    quote: "Here's my new tutorial where I show you how to set up 5 useful bots",
+    result: "五只 Bot · 顾问加专员",
+  },
+  "ultimate-guide-miles-deutscher": {
+    title: "Grok Bot 完全指南",
+    headline: "Miles Deutscher 发表〈Grok Bot: The Ultimate Guide〉——设置、插件、他那五只",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Miles Deutscher（@milesdeutscher）发长文：Grok Bot 是什么、怎样设置、插件，以及他实际在跑的五只——Alex 找 YouTube 出局片、Sandra 看楼盘、Jonathan 看投资组合、Lucy 分 Slack、Oscar 做杂务。",
+    howItWorks:
+      "他说从发布就开始试。文章就是工——设置、用例、插件，和老实的价钱。我们没有重跑 Alex 或 Sandra。",
+    whyUseful: "如果你想抄一张公开的桌——有名的 Bot、提示词、插件——这篇是长读。",
+    whyItMatters: "这周另一篇人们在打开的 Grok Bot 长文。社区；我们保留 Miles 原帖。",
+    whoShouldTry: ["已经有 Bot 的人", "想砌一小队的运营", "创作者"],
+    usefulFor: "运营 / 创作者",
+    quote: "Grok Bot is the most powerful AI agent I've ever used.",
+    result: "五只有名的 Bot · 设置加插件",
+  },
+  "bot-team-tips-ben-lang": {
+    title: "@bot 团队提示",
+    headline: "Ben Lang 收集了 @bot 团队在传的 Grok Bot 专业提示",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Ben Lang（@benln）发了他从 @bot 团队收集的清单：同一个插件接多个账户、一只幕僚长加几个专员、钉住常用 agent、用 Notion 记没做完的工、示范一次教会，还有更多。",
+    howItWorks:
+      "他简介写着 Building SpaceXAI，via Cursor team。帖仍然是个人账户收集团队提示——不是 @bot 或 @xai 原文——所以我们维持社区标签，保留他原帖。",
+    whyUseful: "短、抄得走的设置习惯。如果你的 Bot 仍然只是多一个聊天室，先做幕僚长，再加一页 Notion「还有什么没做」。",
+    whyItMatters: "这是公开转述的团队提示，不是 UseGrokBot 重测。没有标官方，也没有标已测试。",
+    whoShouldTry: ["已经有 Bot 的人", "想砌一小队的运营"],
+    usefulFor: "运营",
+    quote: "One Chief of Staff plus a few specialists beats one mega-chat",
+    result: "十二条提示 · 幕僚长加专员",
+  },
+  "ceo-desk-teslaconomics": {
+    title: "六只 Bot 加一个 CEO",
+    headline: "Teslaconomics 跑六只 Grok Bot，再加一只「CEO」在上面调度",
+    whatTheyDid:
+      "2026 年 8 月 14 日，Teslaconomics（@Teslaconomics）写他已经有六只 Grok Bot，各做一工——提醒、图像和视频、估公司、分析视频、帮忙发帖——再在上面放一只 CEO Bot，他只跟一个收件箱聊。",
+    howItWorks:
+      "先专员，再幕僚长式 CEO 分派工作、交回一个包裹。他公开了第一条消息和三个例行（早、午、晚）。我们没有重跑他的桌。",
+    whyUseful: "没有 CEO，你就是各组群聊的中间人。这是公开可复制的做法：让一只 Bot 做收件箱。",
+    whyItMatters: "有名的人、有名的名单、公开提示词。社区——我们没有重测 CEO。",
+    whoShouldTry: ["已经跑超过一只 Bot 的人", "运营", "创作者"],
+    usefulFor: "运营 / 创作者",
+    quote: "With a CEO you text one inbox like a person.",
+    result: "六个专员 · 一只 CEO Bot",
+  },
+  "agent-loops-alex-finn": {
+    title: "最好的循环",
+    headline: "Alex Finn 让一只 Grok Bot 叫另一只每五分钟循环做同一份工",
+    whatTheyDid:
+      "2026 年 8 月 16 日，Alex Finn（@AlexFinn）写 Grok Bot 天生适合循环：主 agent 叫另一只每五分钟循环一份工，再监察它。他说有一只调度 Bot 看着工程 Bot 二十四小时，每三十分钟想一个改进方法。",
+    howItWorks:
+      "他对比单一 Bot 用 /loop 自己看自己。多一只 Bot 就是另一个上下文做判断。我们摘要公开帖——没有重跑他那二十四小时循环。",
+    whyUseful: "如果你想工作自己继续，又不想自己盯着 /loop，这就是两只 Bot 的版本。",
+    whyItMatters: "有人公开在跑的具体循环做法。社区；我们没有重测工程循环。",
+    whoShouldTry: ["建造者", "工程师", "要跑长工的研究"],
+    usefulFor: "建造者 / 工程",
+    quote:
+      "All you do is tell your main agent to tell another agent to loop on a task every 5 minutes, and monitor it while it goes",
+    result: "五分钟循环 · 调度加专员",
+  },
+  "firstmate-kun-chen": {
+    title: "Firstmate，一个收件箱",
+    headline: "Kun Chen 公开可复制的 Firstmate 提示——你只跟一只 Grok Bot 聊",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Kun Chen（@kunchenguid）发了一个 Firstmate Bot 系统提示：开一只、把 github.com/kunchenguid/firstmate 的 GROK_BOT.md 贴进描述，之后只跟这只聊。它开、分派、协调其他 Bot。",
+    howItWorks:
+      "他说 Firstmate 是他在其他 harness 已用的幕僚长做法，现在变成一段短 Grok Bot 描述。我们没有重跑 Firstmate。",
+    whyUseful: "如果你不想十二个聊天室，这是公开提示：一只 Bot 去请和调度其余的。",
+    whyItMatters: "有 repo、有提示、有名的人。社区——我们没有重测 Firstmate。",
+    whoShouldTry: ["已经有 Bot 的人", "想要一个收件箱的运营"],
+    usefulFor: "运营",
+    quote: "the only agent you talk to. it creates, delegates, juggles, and continuously improves other bots for you",
+    result: "一只 Firstmate · 可复制提示",
   },
 };
 

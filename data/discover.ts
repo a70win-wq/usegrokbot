@@ -79,6 +79,14 @@ const BOT_LAUNCH = "https://x.com/bot/status/2087224798078517251";
 const ELON_INBOX = "https://x.com/elonmusk/status/2089950078429782061";
 const NATE_HERK_HACKS = "https://x.com/nateherk/status/2089917020087210160";
 const BLAKE_KING_BOTS = "https://x.com/BlakeKing777/status/2089881822884692399";
+const RAHUL_COMPANY = "https://x.com/sairahul1/status/2089995692874068433";
+const SCOTTY_CLOTHES = "https://x.com/ScottyBeamIO/status/2089747957545410816";
+const PETER_YANG_FIVE = "https://x.com/petergyang/status/2089401696946634801";
+const MILES_GUIDE = "https://x.com/milesdeutscher/status/2089800752156025272";
+const BEN_LANG_TIPS = "https://x.com/benln/status/2089699901567340808";
+const TESLACONOMICS_CEO = "https://x.com/Teslaconomics/status/2088355513482596607";
+const ALEX_FINN_LOOPS = "https://x.com/AlexFinn/status/2089038594690408891";
+const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const DIGITAL_TRENDS =
   "https://www.digitaltrends.com/computing/grok-bot-wants-to-take-work-off-your-plate-not-just-answer-your-queries/";
 const NATE = "https://natesnewsletter.substack.com/p/grok-bot-review";
@@ -185,6 +193,247 @@ export const discoverStories: DiscoverStory[] = [
     trending: true,
   },
   {
+    slug: "one-person-company-rahul",
+    title: "One-Person Company",
+    headline: "Rahul wrote how to run a one-person company on Grok Bot — leads through weekly reporting",
+    whatTheyDid:
+      "On 19 Aug 2026 Rahul (@sairahul1) published an X article: “How To Build a One-Person Company Using Grok Bot.” The open is the solo-founder load — find the leads, write the outreach, make the images, answer the replies, count the week — and a Bot system that takes those lanes.",
+    howItWorks:
+      "He walks setup, plugins, a charter per Bot, teach-a-task routines, and six starter roles (chief of staff, Scout, Quill, Forge, Guide, Ledger). We summarize the public article — we did not re-run his company stack. A nearby Elon permalink that was circulating for this story quoted a different Grok Bot post, so we keep Rahul’s original.",
+    whyUseful:
+      "This is the long-form “hire a Bot per job” write-up people were opening today. If you are the whole company, start here.",
+    whyItMatters:
+      "Hottest community Grok Bot guide on X today. It is a playbook, not a named customer screenshot. We keep Rahul’s permalink.",
+    whoShouldTry: ["Solo founders", "Operators who are the whole company", "People already paying for Grok Bot"],
+    usefulFor: "Solo founders / Operators",
+    quote: "You find the leads. Write the outreach. Make the images. Answer the replies. Count the week.",
+    result: "6 starter bots · one-person company",
+    category: "sales",
+    outcomes: ["make-money", "automate-work"],
+    apps: ["browser", "gmail", "linkedin"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Rahul",
+    handle: "sairahul1",
+    publishedAt: "2026-08-19",
+    xPostUrl: RAHUL_COMPANY,
+    sourceUrl: RAHUL_COMPANY,
+    sourceLabel: "Rahul on X",
+    trending: true,
+    featured: true,
+  },
+  {
+    slug: "clothes-resale-scotty-beam",
+    title: "Resale the Unworn Clothes",
+    headline: "SCOTTY BEAM posted a Cursor teammate handing sister’s unworn clothes to Grok Bot",
+    whatTheyDid:
+      "On 18 Aug 2026 SCOTTY BEAM (@ScottyBeamIO) wrote that someone at Cursor gave Grok Bot a pile of clothes his sister never wore. Selling them meant photos, listings, descriptions, buyer replies, and price talk — so she kept putting it off. The Bot was handed the pile.",
+    howItWorks:
+      "Scotty says the Bot looked at the photos, identified the items, wrote listings, and started negotiating with buyers. He also pointed at his longer article comparing Grok Bot vs Hermes vs OpenClaw and automating X content. The clothes job is the Cursor person’s; the comparison article is Scotty’s. We did not re-run either.",
+    whyUseful:
+      "The clothes pile is the job people get: a chore you keep delaying, handed off as “sell these.”",
+    whyItMatters:
+      "It is a community amplification of someone else’s Bot, plus Scotty’s own write-up. Both stay attributed.",
+    whoShouldTry: ["People sitting on a resale pile", "Solo operators", "Anyone delaying a messy listing job"],
+    usefulFor: "Resale / Solo operators",
+    quote: "You can just say: “Sell these”. And let it figure out the rest.",
+    result: "Photos, listings, buyer replies, price talk",
+    category: "sales",
+    outcomes: ["make-money", "automate-work"],
+    apps: ["browser"],
+    difficulty: "medium",
+    schedule: "one-time",
+    source: "community",
+    authorName: "SCOTTY BEAM",
+    handle: "ScottyBeamIO",
+    publishedAt: "2026-08-18",
+    xPostUrl: SCOTTY_CLOTHES,
+    sourceUrl: SCOTTY_CLOTHES,
+    sourceLabel: "SCOTTY BEAM on X",
+    trending: true,
+  },
+  {
+    slug: "five-bots-peter-yang",
+    title: "Five Practical Bots",
+    headline: "Peter Yang published a tutorial for five Grok Bots — advisor, YouTube, X, inbox, trips",
+    whatTheyDid:
+      "On 17 Aug 2026 Peter Yang (@petergyang) posted a tutorial: five useful Bots — an advisor that creates and manages the others, a YouTube researcher for outlier videos, an X scout for viral and funny posts, a “digital Marie Kondo” for inbox and leftover subscriptions, and a travel concierge.",
+    howItWorks:
+      "He also tested a Gamer Bot on classic games and asked whether Grok Bot can replace ChatGPT as a daily driver. We summarize the public post — we did not re-run his five Bots.",
+    whyUseful:
+      "Five named jobs, not a generic “try agents” thread. If you want a first roster, copy the list.",
+    whyItMatters:
+      "This is the practical-setup tutorial people were bookmarking this week. Community write-up; we keep Peter’s permalink.",
+    whoShouldTry: ["People setting up a first Bot team", "Creators", "Operators"],
+    usefulFor: "Operators / Creators",
+    quote: "Here's my new tutorial where I show you how to set up 5 useful bots",
+    result: "5 Bots · advisor + specialists",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["youtube", "x", "gmail", "browser"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Peter Yang",
+    handle: "petergyang",
+    publishedAt: "2026-08-17",
+    xPostUrl: PETER_YANG_FIVE,
+    sourceUrl: PETER_YANG_FIVE,
+    sourceLabel: "Peter Yang on X",
+    trending: true,
+  },
+  {
+    slug: "ultimate-guide-miles-deutscher",
+    title: "Grok Bot Ultimate Guide",
+    headline: "Miles Deutscher published “Grok Bot: The Ultimate Guide” — setup, plugins, his five-agent desk",
+    whatTheyDid:
+      "On 18 Aug 2026 Miles Deutscher (@milesdeutscher) posted a long-form guide: what Grok Bot is, how to set it up, plugins, and the five Bots he actually runs — Alex on YouTube outliers, Sandra on listings, Jonathan on portfolio numbers, Lucy on Slack triage, Oscar as a generalist.",
+    howItWorks:
+      "He says he has been testing since launch. The article is the job — setup, use cases, plugins, and an honest price note. We did not re-run Alex or Sandra.",
+    whyUseful:
+      "If you want one public desk to copy — named Bots, prompts, and plugins — this is the long read.",
+    whyItMatters:
+      "This is the other long-form Grok Bot guide people were opening this week. Community; we keep Miles’s permalink.",
+    whoShouldTry: ["People who already have a Bot", "Operators building a small team", "Creators"],
+    usefulFor: "Operators / Creators",
+    quote: "Grok Bot is the most powerful AI agent I've ever used.",
+    result: "5 named Bots · setup + plugins",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser", "youtube", "slack", "google-sheets"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Miles Deutscher",
+    handle: "milesdeutscher",
+    publishedAt: "2026-08-18",
+    xPostUrl: MILES_GUIDE,
+    sourceUrl: MILES_GUIDE,
+    sourceLabel: "Miles Deutscher on X",
+    trending: true,
+  },
+  {
+    slug: "bot-team-tips-ben-lang",
+    title: "Pro Tips From the @bot Team",
+    headline: "Ben Lang collected Grok Bot pro tips the @bot team was sharing",
+    whatTheyDid:
+      "On 18 Aug 2026 Ben Lang (@benln) posted a list he collected from the @bot team: multiple accounts per plugin, one chief of staff plus specialists, pin your favorite agents, keep a Notion page of outstanding work, teach-a-task, and more.",
+    howItWorks:
+      "His bio says he is building SpaceXAI via the Cursor team. The post is still his personal account collecting team tips — not an @bot or @xai permalink — so we keep the community badge and his original post.",
+    whyUseful:
+      "Short, copyable setup habits. If your Bot still feels like one more chat, start with chief of staff plus a Notion “what’s left” page.",
+    whyItMatters:
+      "These are team tips relayed in public, not a UseGrokBot re-test. We did not mark it official or tested.",
+    whoShouldTry: ["People who already have a Bot", "Operators building a small team"],
+    usefulFor: "Operators",
+    quote: "One Chief of Staff plus a few specialists beats one mega-chat",
+    result: "12 tips · chief of staff + specialists",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["notion", "gmail"],
+    difficulty: "easy",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Ben Lang",
+    handle: "benln",
+    publishedAt: "2026-08-18",
+    xPostUrl: BEN_LANG_TIPS,
+    sourceUrl: BEN_LANG_TIPS,
+    sourceLabel: "Ben Lang on X",
+    relatedUseCase: "daily-work-brief",
+  },
+  {
+    slug: "ceo-desk-teslaconomics",
+    title: "Six Bots and a CEO",
+    headline: "Teslaconomics runs six Grok Bots plus a master “CEO” that orchestrates them",
+    whatTheyDid:
+      "On 14 Aug 2026 Teslaconomics (@Teslaconomics) wrote that he already had six Grok Bots with one job each — reminders, images and video, valuing companies, analyzing videos, posts — then put a CEO Bot on top so he texts one inbox.",
+    howItWorks:
+      "Specialists first, then a chief-of-staff CEO that routes work and returns one package. He published the first message and three routines (morning, midday, evening). We did not re-run his desk.",
+    whyUseful:
+      "Without a CEO you are the middleman between group chats. This is the public copy-paste for making one Bot the inbox.",
+    whyItMatters:
+      "Named person, named roster, published prompt. Community — we did not re-test the CEO.",
+    whoShouldTry: ["Anyone running more than one Bot", "Operators", "Creators"],
+    usefulFor: "Operators / Creators",
+    quote: "With a CEO you text one inbox like a person.",
+    result: "6 specialists · one CEO Bot",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser", "x"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Teslaconomics",
+    handle: "Teslaconomics",
+    publishedAt: "2026-08-14",
+    xPostUrl: TESLACONOMICS_CEO,
+    sourceUrl: TESLACONOMICS_CEO,
+    sourceLabel: "Teslaconomics on X",
+    relatedUseCase: "daily-work-brief",
+  },
+  {
+    slug: "agent-loops-alex-finn",
+    title: "Best-in-Class Loops",
+    headline: "Alex Finn has one Grok Bot tell another to loop a task every five minutes",
+    whatTheyDid:
+      "On 16 Aug 2026 Alex Finn (@AlexFinn) wrote that Grok Bot is built for loops: the main agent instructs another to loop a task every five minutes and monitor it. He said an orchestrator watched an engineer Bot for 24 hours and reflected every 30 minutes on one way to improve.",
+    howItWorks:
+      "He contrasts this with a single Bot /loop watching itself. The extra Bot is a different context making the judgment. We summarize the public post — we did not re-run his 24-hour loop.",
+    whyUseful:
+      "If you want a job to keep going without you babysitting /loop, this is the two-Bot version.",
+    whyItMatters:
+      "Concrete loop recipe from someone running it in public. Community; we did not re-test the engineer loop.",
+    whoShouldTry: ["Builders", "Engineers", "Researchers running long jobs"],
+    usefulFor: "Builders / Engineering",
+    quote:
+      "All you do is tell your main agent to tell another agent to loop on a task every 5 minutes, and monitor it while it goes",
+    result: "5-minute loop · orchestrator + specialist",
+    category: "coding",
+    outcomes: ["build-software", "automate-work"],
+    apps: ["browser", "github"],
+    difficulty: "advanced",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Alex Finn",
+    handle: "AlexFinn",
+    publishedAt: "2026-08-16",
+    xPostUrl: ALEX_FINN_LOOPS,
+    sourceUrl: ALEX_FINN_LOOPS,
+    sourceLabel: "Alex Finn on X",
+  },
+  {
+    slug: "firstmate-kun-chen",
+    title: "Firstmate, One Inbox",
+    headline: "Kun Chen published a copy-paste Firstmate prompt — the only Grok Bot you talk to",
+    whatTheyDid:
+      "On 18 Aug 2026 Kun Chen (@kunchenguid) posted a system prompt for a Firstmate Bot: create it, paste GROK_BOT.md from github.com/kunchenguid/firstmate into the description, and talk only to that Bot. It creates, delegates, and coordinates the others.",
+    howItWorks:
+      "He says Firstmate is a chief-of-staff pattern he already used in other harnesses, now a short Grok Bot description. We did not re-run Firstmate.",
+    whyUseful:
+      "If you do not want twelve chats, this is a public prompt for one Bot that hires and juggles the rest.",
+    whyItMatters:
+      "Named repo, named prompt, named person. Community — we did not re-test Firstmate.",
+    whoShouldTry: ["People who already have a Bot", "Operators who want one inbox"],
+    usefulFor: "Operators",
+    quote: "the only agent you talk to. it creates, delegates, juggles, and continuously improves other bots for you",
+    result: "One Firstmate · copy-paste prompt",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Kun Chen",
+    handle: "kunchenguid",
+    publishedAt: "2026-08-18",
+    xPostUrl: KUN_FIRSTMATE,
+    sourceUrl: KUN_FIRSTMATE,
+    sourceLabel: "Kun Chen on X",
+    relatedUseCase: "daily-work-brief",
+  },
+  {
     slug: "grok-bot-launch-bot",
     title: "Grok Bot Launch",
     headline: "@bot introduced Grok Bot as AI teammates with their own computer",
@@ -213,7 +462,6 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: BOT_LAUNCH,
     sourceLabel: "Official post on X",
     relatedUseCase: "lead-researcher",
-    trending: true,
   },
   {
     slug: "overnight-sales-xai",
@@ -244,7 +492,6 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
     relatedUseCase: "lead-researcher",
-    trending: true,
     featured: true,
   },
   {
