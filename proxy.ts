@@ -8,7 +8,15 @@ import {
   type UrlLocale,
 } from "@/lib/i18n/paths";
 
-const SKIP = new Set(["sitemap.xml", "robots.txt", "icon", "favicon.ico", "apple-icon"]);
+const SKIP = new Set([
+  "sitemap.xml",
+  "robots.txt",
+  "icon",
+  "favicon.ico",
+  "apple-icon",
+  "opengraph-image",
+  "twitter-image",
+]);
 
 function detectUrlLocale(request: NextRequest): UrlLocale {
   const cookie = request.cookies.get(LOCALE_COOKIE)?.value;
@@ -65,5 +73,7 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|icon|sitemap.xml|robots.txt|.*\\..*).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|icon|apple-icon|opengraph-image|twitter-image|sitemap.xml|robots.txt|.*\\..*).*)",
+  ],
 };

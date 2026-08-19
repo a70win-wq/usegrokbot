@@ -48,7 +48,7 @@ export async function generateMetadata({
       locale: ogLocale[raw],
       images: [
         {
-          url: `${site.url}/opengraph-image`,
+          url: `${site.url}/og.png`,
           width: 1200,
           height: 630,
           alt: `${site.name} — ${messages[locale].home.title}`,
@@ -57,7 +57,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      images: [`${site.url}/opengraph-image`],
+      images: [`${site.url}/og.png`],
     },
     robots: {
       index: true,
