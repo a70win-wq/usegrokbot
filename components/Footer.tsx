@@ -8,7 +8,7 @@ import { LocaleLink } from "./LocaleLink";
 
 export function Footer({ stars }: { stars?: number | null }) {
   const { t, locale } = useI18n();
-  const communityLabel = locale === "zh-hk" ? "社群" : locale === "zh-cn" ? "社区" : "Community";
+  const communityLabel = locale === "zh-Hant" ? "社群" : locale === "zh-Hans" ? "社区" : "Community";
 
   return (
     <footer className="mt-auto border-t border-line">
