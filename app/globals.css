@@ -1,6 +1,32 @@
 @import "tailwindcss";
 
-:root {
+:root,
+html[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #f6f7f9;
+  --elevated: #f1f3f6;
+  --card: #ffffff;
+  --card-hover: #f8f9fb;
+  --input: #ffffff;
+  --line: rgb(15 23 42 / 0.1);
+  --line-strong: rgb(15 23 42 / 0.18);
+  --ink: #111318;
+  --mute: #5c6370;
+  --faint: #7b8290;
+  --accent: #4f7cff;
+  --accent-2: #6d28d9;
+  --accent-soft: rgb(79 124 255 / 0.1);
+  --danger: #dc2626;
+  --warn: #d97706;
+  --ok: #16a34a;
+  --inverse: #ffffff;
+  --shadow-search: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow-menu: 0 16px 40px rgb(15 23 42 / 0.1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html[data-theme="dark"] {
   color-scheme: dark;
   --canvas: #0b0d10;
   --elevated: #171a20;
@@ -19,8 +45,8 @@
   --warn: #ff9f0a;
   --ok: #34c759;
   --inverse: #0b0d10;
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-search: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-menu: 0 16px 40px rgb(0 0 0 / 0.45);
 }
 
 @theme inline {
@@ -78,7 +104,25 @@ body {
 .featured-glow {
   box-shadow:
     0 0 80px rgb(79 124 255 / 0.08),
+    0 8px 24px rgb(15 23 42 / 0.05);
+}
+
+html[data-theme="dark"] .featured-glow {
+  box-shadow:
+    0 0 80px rgb(79 124 255 / 0.08),
     0 0 120px rgb(139 92 246 / 0.05);
+}
+
+.search-field-hero {
+  box-shadow: var(--shadow-search);
+}
+
+.search-field-hero:focus {
+  box-shadow: 0 12px 40px rgb(79 124 255 / 0.12);
+}
+
+.search-menu {
+  box-shadow: var(--shadow-menu);
 }
 
 .prompt-scroll::-webkit-scrollbar {
@@ -87,7 +131,7 @@ body {
 }
 
 .prompt-scroll::-webkit-scrollbar-thumb {
-  background: rgb(255 255 255 / 0.16);
+  background: var(--line-strong);
   border-radius: 999px;
 }
 

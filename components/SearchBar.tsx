@@ -203,7 +203,7 @@ export function SearchBar({
         className={cn(
           "w-full border border-line bg-elevated pr-16 pl-12 text-[15px] text-ink placeholder:text-faint transition-[border-color,box-shadow] duration-200",
           variant === "hero"
-            ? "h-14 rounded-full shadow-[0_1px_2px_rgb(0_0_0/0.4)] focus:border-line-strong focus:shadow-[0_12px_40px_rgb(79_124_255/0.12)]"
+            ? "search-field-hero h-14 rounded-full focus:border-line-strong"
             : "h-12 rounded-full focus:border-line-strong",
         )}
       />
@@ -212,7 +212,7 @@ export function SearchBar({
       </span>
 
       {showResults || showSuggestions ? (
-        <div className="absolute inset-x-0 top-[calc(100%+8px)] z-30 overflow-hidden rounded-2xl border border-line bg-card shadow-[0_16px_40px_rgb(0_0_0/0.45)]">
+        <div className="search-menu absolute inset-x-0 top-[calc(100%+8px)] z-30 overflow-hidden rounded-2xl border border-line bg-card">
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}

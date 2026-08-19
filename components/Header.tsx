@@ -10,6 +10,7 @@ import { BotFace, botColorFor } from "./BotFace";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
 import { SearchBar } from "./SearchBar";
+import { ThemeToggle } from "./ThemeToggle";
 import { useSaved } from "./saved";
 
 export function Header() {
@@ -65,6 +66,7 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <HeaderSearch />
+          <ThemeToggle />
           <div className="hidden lg:block">
             <LanguageSwitch />
           </div>

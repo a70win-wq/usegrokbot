@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 import type { TrustStatus } from "@/data/verification";
 
 const styles: Record<TrustStatus, string> = {
-  official: "border-accent-2/35 bg-accent-2/10 text-[#c4b5fd]",
+  official: "border-accent-2/35 bg-accent-2/10 text-accent-2",
   library: "border-line bg-elevated text-faint",
   community: "border-line bg-elevated text-mute",
   tested: "border-ok/30 bg-ok/10 text-ok",

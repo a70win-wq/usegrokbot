@@ -7,6 +7,7 @@ import { Providers } from "@/components/Providers";
 import { messages } from "@/lib/i18n/messages";
 import { URL_LOCALES, htmlLang, isUrlLocale, ogLocale, urlToLocale } from "@/lib/i18n/paths";
 import { site } from "@/lib/site";
+import { themeBootScript } from "@/lib/theme-script";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -69,11 +70,12 @@ export default async function LocaleLayout({
   return (
     <html
       lang={htmlLang[locale]}
+      data-theme="light"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      style={{ colorScheme: "dark" }}
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <Providers>
           <Header />
           <main className="flex-1">{children}</main>

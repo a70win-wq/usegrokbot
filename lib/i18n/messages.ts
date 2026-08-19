@@ -3,6 +3,11 @@ import type { Locale } from "./types";
 export const messages = {
   en: {
     lang: { label: "Language" },
+    theme: {
+      toggle: "Toggle light and dark mode",
+      toDark: "Switch to dark mode",
+      toLight: "Switch to light mode",
+    },
     nav: {
       discover: "Discover",
       useCases: "Use Cases",
@@ -310,6 +315,11 @@ export const messages = {
   },
   "zh-Hant": {
     lang: { label: "語言" },
+    theme: {
+      toggle: "切換日頭同黑夜模式",
+      toDark: "轉做黑夜模式",
+      toLight: "轉做日頭模式",
+    },
     nav: {
       discover: "發現",
       useCases: "使用案例",
@@ -614,6 +624,11 @@ export const messages = {
   },
   "zh-Hans": {
     lang: { label: "语言" },
+    theme: {
+      toggle: "切换日间和夜间模式",
+      toDark: "切换到夜间模式",
+      toLight: "切换到日间模式",
+    },
     nav: {
       discover: "发现",
       useCases: "使用场景",

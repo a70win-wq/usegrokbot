@@ -53,7 +53,7 @@ export function CustomizePrompt({ useCase }: { useCase: UseCase }) {
       <button
         type="button"
         onClick={generate}
-        className="spring-press mt-5 inline-flex h-11 items-center rounded-[10px] bg-ink px-4 text-sm text-inverse hover:bg-neutral-800"
+        className="spring-press mt-5 inline-flex h-11 items-center rounded-[10px] bg-ink px-4 text-sm text-inverse hover:opacity-90"
       >
         {t("detail.generate")}
       </button>

@@ -40,7 +40,7 @@ export function CopyButton({ text, label, className, variant = "ghost" }: CopyBu
         "spring-press inline-flex h-9 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[13px] font-medium transition",
         variant === "ghost" &&
           "border border-line bg-transparent text-mute hover:border-line-strong hover:text-ink",
-        variant === "solid" && "h-11 bg-ink px-5 text-sm text-inverse hover:bg-neutral-800",
+        variant === "solid" && "h-11 bg-ink px-5 text-sm text-inverse hover:opacity-90",
         variant === "inline" && "h-8 px-2.5 text-mute hover:text-ink",
         className,
       )}
