@@ -312,5 +312,119 @@
     "xPostUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
     "sourceUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
     "sourceLabel": "Logan Jastremski on X"
+  },
+  {
+    "slug": "debbie-book-my-flights",
+    "title": "book my flights",
+    "headline": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
+    "whatTheyDid": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Debbie",
+    "publishedAt": "2026-08-19",
+    "sourceUrl": "https://debbie.codes/blog/i-tested-if-grok-bot-could-book-my-flights",
+    "sourceLabel": "Debbie · Debbie Codes"
+  },
+  {
+    "slug": "debbie-buy-gluten-free-beer-on-a-sunday-night",
+    "title": "buy gluten-free beer on a Sunday night",
+    "headline": "CoS shopping run — the fun case that shows computer-use, not chat.",
+    "whatTheyDid": "CoS shopping run — the fun case that shows computer-use, not chat.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "CoS shopping run — the fun case that shows computer-use, not chat.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Debbie",
+    "publishedAt": "2026-08-19",
+    "sourceUrl": "https://debbie.codes/blog/i-sent-grok-bot-to-buy-my-gluten-free-beer",
+    "sourceLabel": "Debbie · debbie.codes"
+  },
+  {
+    "slug": "build-great-products-24-7-support-agent-in-19-minutes",
+    "title": "24/7 support agent in 19 minutes",
+    "headline": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
+    "whatTheyDid": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
+    "howItWorks": "This public youtube was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Build Great Products",
+    "publishedAt": "2026-08-19",
+    "sourceUrl": "https://www.youtube.com/watch?v=bUALqTpUze0",
+    "sourceLabel": "Build Great Products · YouTube"
+  },
+  {
+    "slug": "cloud-computer-field-notes",
+    "title": "cloud-computer field notes",
+    "headline": "Hands-on JP writeup of living on the shared VM for a week.",
+    "whatTheyDid": "Hands-on JP writeup of living on the shared VM for a week.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Hands-on JP writeup of living on the shared VM for a week.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "伊藤貴將（いとぱん）｜安曇むすひ",
+    "publishedAt": "2026-08-16",
+    "sourceUrl": "https://note.com/azumimusuhi/n/n0485219790bb",
+    "sourceLabel": "伊藤貴將（いとぱん）｜安曇むすひ · note（ノート）"
   }
 ]

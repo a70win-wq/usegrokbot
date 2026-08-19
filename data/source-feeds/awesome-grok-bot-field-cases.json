@@ -1,19 +1,20 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "source": {
     "name": "awesome-grok-bot Field Cases",
     "repository": "https://github.com/RongleCat/awesome-grok-bot",
     "rawReadme": "https://raw.githubusercontent.com/RongleCat/awesome-grok-bot/main/README.md",
     "section": "Field Cases",
     "sourceListLicense": "CC0-1.0",
-    "note": "The list metadata is CC0. Linked X posts, articles, videos and other source content retain their own rights. UseGrokBot summarizes the original source and links back rather than copying it wholesale."
+    "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
     "total": 15,
-    "candidates": 4,
+    "candidates": 0,
     "xCandidates": 0,
-    "alreadyIngested": 11,
-    "sourceOnly": 4
+    "nonXCandidates": 0,
+    "alreadyIngested": 15,
+    "pending": 0
   },
   "cases": [
     {
@@ -49,10 +50,10 @@
       "sourceSummary": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
       "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
-        "status": "source-only",
-        "attempts": 0
+        "status": "published",
+        "attempts": 1
       }
     },
     {
@@ -62,10 +63,10 @@
       "sourceSummary": "CoS shopping run — the fun case that shows computer-use, not chat.",
       "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
-        "status": "source-only",
-        "attempts": 0
+        "status": "published",
+        "attempts": 1
       }
     },
     {
@@ -153,10 +154,10 @@
       "sourceSummary": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
       "sourceType": "youtube",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
-        "status": "source-only",
-        "attempts": 0
+        "status": "published",
+        "attempts": 1
       }
     },
     {
@@ -205,10 +206,10 @@
       "sourceSummary": "Hands-on JP writeup of living on the shared VM for a week.",
       "sourceType": "note",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "candidate",
+      "sourceStatus": "already-ingested",
       "ingest": {
-        "status": "source-only",
-        "attempts": 0
+        "status": "published",
+        "attempts": 1
       }
     }
   ]
