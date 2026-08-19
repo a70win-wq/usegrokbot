@@ -42,7 +42,7 @@ export function pageMeta({
   const locale = parseUrlLocale(urlLocale);
   const url = absoluteUrl(path, locale);
   const image = {
-    url: `${site.url}/opengraph-image`,
+    url: `${site.url}/og.png`,
     width: 1200,
     height: 630,
     alt: `${site.name} — ${title}`,
