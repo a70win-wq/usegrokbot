@@ -372,6 +372,90 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "the only agent you talk to. it creates, delegates, juggles, and continuously improves other bots for you",
     result: "一隻 Firstmate · 可複製提示",
   },
+  "calendar-booking-yunta-tsai": {
+    title: "睇日曆，再訂位",
+    headline: "Yun-Ta Tsai 用中英夾雜對 Grok Bot 講：搵仲未訂的預約，邊行去車邊訂",
+    whatTheyDid:
+      "2026 年 8 月 12 日，Yun-Ta Tsai（@yunta_tsai）寫 Grok Bot 行過他的日曆，搵出事前仲要預訂、但他未做的事，揀最好的時間，再在網站上走預訂流程。他喺停車場行去車嗰陣，用中英夾雜同它講。",
+    howItWorks: "先語音、再掃日曆，然後 Bot 去預訂網站開工。我們保留 Yun-Ta 原帖。沒有重跑那次預訂。",
+    whyUseful: "這是人會指住的個人營運工：不是聊天摘要——係日曆上仲要訂的位，行去車已經處理。",
+    whyItMatters: "Grok Bot 登場那週的公開電腦用例子。社群；沒有標已測試。",
+    whoShouldTry: ["忙的專業人士", "日曆上仲有未訂預約的人", "想講、唔想打字的人"],
+    usefulFor: "個人 / 營運",
+    quote:
+      "While I was walking in the parking lot before getting to my cars, I was talking to it in mixed Chinese and English.",
+    result: "掃日曆 · 在網站上預訂",
+  },
+  "parents-bot-yunta-tsai": {
+    title: "俾父母的第一隻 Bot",
+    headline: "Yun-Ta Tsai 為父母開了第一隻 Grok Bot——話它識中文，唔使行插件迷宮",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Yun-Ta Tsai（@yunta_tsai）寫 Grok Bot 係他會推薦俾年長父母的第一個 AI 產品。他們已經識聊天。唔想跳技能、插件、MCP。想問完就有人做完。他引用自己先前那條：俾父母的第一隻 Bot，標了「乖兒子」。",
+    howItWorks:
+      "跟進帖係論點：自然、順、中文好，年長的人可以自己做完多數事，唔使靠人。我們保留這條原帖。沒有幫他父母開 Bot。",
+    whyUseful: "如果用家係永遠唔會設定 MCP 的父母，這就是公開的「問就得」例子。",
+    whyItMatters: "同日曆訂位係同一個人。另一份工：俾唔使學技術棧的人用的 Bot。",
+    whoShouldTry: ["幫父母開 Bot 的子女", "唔會碰插件的人", "講中文的家庭"],
+    usefulFor: "個人 / 家庭",
+    quote: "Grok @bot is probably the first AI product I would recommend for senior parents.",
+    result: "俾父母的第一隻 Bot · 中文",
+  },
+  "eight-use-cases-eric-zakariasson": {
+    title: "這週八個用例",
+    headline: "eric zakariasson 發了這週八份 Grok Bot 工——第一份係發訊息指揮吸塵機械人",
+    whatTheyDid:
+      "2026 年 8 月 19 日，eric zakariasson（@ericzakariasson）發了一串：這週八個好有趣的 Grok Bot 用例。第一個係把 Bot 駁去吸塵機械人，再發訊息叫 Grok 去邊度清潔——引用 Yun-Ta Tsai 駁 Matic 那條。",
+    howItWorks:
+      "其餘指向其他公開工：過 Google「我不是機械人」、整部 Mac 當成人工作間、3D 遊戲、水喉公司辦公室主任、追從未退款的商戶、招聘加清剩餘訂閱、以及五盤生意的夜更。我們摘要 Eric 的匯總——八份都沒有重跑。",
+    whyUseful: "一串、八份具體工。想睇這週人實際發過咩，由呢度開始。",
+    whyItMatters: "這是社群匯總，不是 Eric 自己的吸塵機。吸塵工是 Yun-Ta 的；名單是 Eric 的。兩邊都寫清楚。",
+    whoShouldTry: ["在收集第一份工的人", "營運", "想掃這週公開例子的人"],
+    usefulFor: "營運",
+    quote: "here are 8 really interesting grok bot use cases from this week!",
+    result: "八份公開工 · 由吸塵機械人開始",
+  },
+  "three-employees-scotty-beam": {
+    title: "Gustavo、Walter、Jesse",
+    headline: "SCOTTY BEAM 寫了三隻有名的 Grok Bot 員工——Gustavo 管 Notion，Walter 管 DocuSign，Jesse 管 ManyChat",
+    whatTheyDid:
+      "2026 年 8 月 18 日，SCOTTY BEAM（@ScottyBeamIO）寫有人教 Grok Bot 跑生意：自己做一次，讓 Bot 睇住。三隻有名的員工：Gustavo 管營運（Notion 客戶中心、入職表格、第一次通話前準備）；Walter 管銷售（協議經 DocuSign，跟到客戶簽同付款）；Jesse 管線索（ManyChat 私訊寫進 Notion，有人問價錢就即刻通知）。",
+    howItWorks:
+      "Scotty 話它們共用一部雲端電腦同登入。這條帖同賣未着過的衫係另一條。我們保留這條原帖。沒有重跑 Gustavo、Walter 或 Jesse。",
+    whyUseful: "有名的工、有名的工具。想砌第一隊銷售營運，抄這三條線。",
+    whyItMatters: "熱度一般，枱好具體。社群轉述別人的團隊——我們留 Scotty 原帖，唔會發明創辦人係邊個。",
+    whoShouldTry: ["一人營運", "細銷售團隊", "想用示範教會 Bot 的人"],
+    usefulFor: "營運 / 銷售",
+    quote: "he performed each task while the bot watched, then told it to do the same thing.",
+    result: "Gustavo · Walter · Jesse",
+  },
+  "math-explainer-yunta-tsai": {
+    title: "俾仔女的數學片",
+    headline: "Yun-Ta Tsai 叫 Grok Bot 做數學講解片——用 Grok 語音 API 講得興高采烈",
+    whatTheyDid:
+      "2026 年 8 月 16 日，Yun-Ta Tsai（@yunta_tsai）寫仔女卡住點把數字拆成冪次和，他又搵唔到好的講解。於是叫 Grok Bot 做一條。Bot 把想法做出嚟等他審——仲用 Grok 語音 API 做了開朗的旁白。",
+    howItWorks: "他話可以把擱住的想法丟俾 Bot，它會做出嚟等你審。我們保留原帖同附件影片。沒有重做那條講解。",
+    whyUseful: "一條教學片就係你會拖的工。交出去，再審成品。",
+    whyItMatters: "有名的人、有名的工、有附件影片。社群；沒有標已測試。",
+    whoShouldTry: ["父母", "老師", "要一條一次性講解的創作者"],
+    usefulFor: "內容 / 個人",
+    quote: "I asked the @bot to make one. It even made a cheerful voice using the @grok voice API.",
+    result: "數學講解片 · Grok 語音 API",
+  },
+  "teach-a-task-eric-zakariasson": {
+    title: "示範一次就教會",
+    headline: "eric zakariasson 示範點教 Grok Bot 一份工——撳 +、錄瀏覽器，Bot 再做一次",
+    whatTheyDid:
+      "2026 年 8 月 13 日，eric zakariasson（@ericzakariasson）發了短教學：聊天室撳 +，錄自己在瀏覽器點做，Bot 睇住就可以再做。他話多數工它自己做得完——當它卡住先用呢招。",
+    howItWorks:
+      "這是帶片段的功能走查，不是客戶截圖。他簡介寫緊 tinkering @spacexai；帖仍然是個人帳戶，所以我們維持社群標籤。",
+    whyUseful: "Bot 一路撳錯路徑，示範一次快過改提示詞。",
+    whyItMatters: "有具體步驟，不是預告。社群；沒有標官方，也沒有標已測試。",
+    whoShouldTry: ["Bot 一路行錯路的人", "想教會例行工作的營運", "非工程師"],
+    usefulFor: "營運",
+    quote:
+      "hit + in the chat and record yourself doing it in the browser. the bot watches, then it can do it again.",
+    result: "錄一次 · Bot 再行同一條路",
+  },
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
@@ -730,6 +814,90 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "运营",
     quote: "the only agent you talk to. it creates, delegates, juggles, and continuously improves other bots for you",
     result: "一只 Firstmate · 可复制提示",
+  },
+  "calendar-booking-yunta-tsai": {
+    title: "看日历，再订位",
+    headline: "Yun-Ta Tsai 用中英夹杂对 Grok Bot 说：找还没订的预约，边走向车边订",
+    whatTheyDid:
+      "2026 年 8 月 12 日，Yun-Ta Tsai（@yunta_tsai）写 Grok Bot 走完他的日历，找出事前还要预订、但他没做的事，选最好的时间，再在网站上走预订流程。他在停车场走向车的时候，用中英夹杂和它说。",
+    howItWorks: "先语音、再扫日历，然后 Bot 去预订网站开工。我们保留 Yun-Ta 原帖。没有重跑那次预订。",
+    whyUseful: "这是人们会指着的个人运营工：不是聊天摘要——是日历上还要订的位，走向车就已经处理。",
+    whyItMatters: "Grok Bot 上线那周的公开电脑用例子。社区；没有标已测试。",
+    whoShouldTry: ["忙的专业人士", "日历上还有未订预约的人", "想说、不想打字的人"],
+    usefulFor: "个人 / 运营",
+    quote:
+      "While I was walking in the parking lot before getting to my cars, I was talking to it in mixed Chinese and English.",
+    result: "扫日历 · 在网站上预订",
+  },
+  "parents-bot-yunta-tsai": {
+    title: "给父母的第一只 Bot",
+    headline: "Yun-Ta Tsai 为父母开了第一只 Grok Bot——说它会中文，不用走插件迷宫",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Yun-Ta Tsai（@yunta_tsai）写 Grok Bot 是他会推荐给年长父母的第一个 AI 产品。他们已经会聊天。不想跳技能、插件、MCP。想问完就有人做完。他引用自己先前那条：给父母的第一只 Bot，标了「乖兒子」。",
+    howItWorks:
+      "跟进帖是论点：自然、顺、中文好，年长的人可以自己做完多数事，不用靠人。我们保留这条原帖。没有帮他父母开 Bot。",
+    whyUseful: "如果用户是永远不会配置 MCP 的父母，这就是公开的「问就行」例子。",
+    whyItMatters: "和日历订位是同一个人。另一份工：给不用学技术栈的人用的 Bot。",
+    whoShouldTry: ["帮父母开 Bot 的子女", "不会碰插件的人", "讲中文的家庭"],
+    usefulFor: "个人 / 家庭",
+    quote: "Grok @bot is probably the first AI product I would recommend for senior parents.",
+    result: "给父母的第一只 Bot · 中文",
+  },
+  "eight-use-cases-eric-zakariasson": {
+    title: "这周八个用例",
+    headline: "eric zakariasson 发了这周八份 Grok Bot 工——第一份是发消息指挥吸尘机器人",
+    whatTheyDid:
+      "2026 年 8 月 19 日，eric zakariasson（@ericzakariasson）发了一串：这周八个很有趣的 Grok Bot 用例。第一个是把 Bot 接到吸尘机器人，再发消息叫 Grok 去哪里清洁——引用 Yun-Ta Tsai 接 Matic 那条。",
+    howItWorks:
+      "其余指向其他公开工：过 Google「我不是机器人」、整台 Mac 当成人工作间、3D 游戏、水管公司办公室主任、追从未退款的商户、招聘加清剩余订阅、以及五盘生意的夜班。我们摘要 Eric 的汇总——八份都没有重跑。",
+    whyUseful: "一串、八份具体工。想看这周人实际发过什么，从这里开始。",
+    whyItMatters: "这是社区汇总，不是 Eric 自己的吸尘器。吸尘工是 Yun-Ta 的；名单是 Eric 的。两边都写清楚。",
+    whoShouldTry: ["在收集第一份工的人", "运营", "想扫这周公开例子的人"],
+    usefulFor: "运营",
+    quote: "here are 8 really interesting grok bot use cases from this week!",
+    result: "八份公开工 · 从吸尘机器人开始",
+  },
+  "three-employees-scotty-beam": {
+    title: "Gustavo、Walter、Jesse",
+    headline: "SCOTTY BEAM 写了三只有名的 Grok Bot 员工——Gustavo 管 Notion，Walter 管 DocuSign，Jesse 管 ManyChat",
+    whatTheyDid:
+      "2026 年 8 月 18 日，SCOTTY BEAM（@ScottyBeamIO）写有人教 Grok Bot 跑生意：自己做一次，让 Bot 看着。三只有名的员工：Gustavo 管运营（Notion 客户中心、入职表格、第一次通话前准备）；Walter 管销售（协议经 DocuSign，跟到客户签和付款）；Jesse 管线索（ManyChat 私信写进 Notion，有人问价钱就立刻通知）。",
+    howItWorks:
+      "Scotty 说它们共用一台云端电脑和登录。这条帖和卖没穿过的衣服是另一条。我们保留这条原帖。没有重跑 Gustavo、Walter 或 Jesse。",
+    whyUseful: "有名的工、有名的工具。想砌第一队销售运营，抄这三条线。",
+    whyItMatters: "热度一般，桌很具体。社区转述别人的团队——我们留 Scotty 原帖，不会发明创始人是谁。",
+    whoShouldTry: ["一人运营", "小销售团队", "想用示范教会 Bot 的人"],
+    usefulFor: "运营 / 销售",
+    quote: "he performed each task while the bot watched, then told it to do the same thing.",
+    result: "Gustavo · Walter · Jesse",
+  },
+  "math-explainer-yunta-tsai": {
+    title: "给孩子的数学片",
+    headline: "Yun-Ta Tsai 让 Grok Bot 做数学讲解片——用 Grok 语音 API 讲得兴高采烈",
+    whatTheyDid:
+      "2026 年 8 月 16 日，Yun-Ta Tsai（@yunta_tsai）写孩子卡住怎么把数字拆成幂次和，他又找不到好的讲解。于是让 Grok Bot 做一条。Bot 把想法做出来等他审——还用 Grok 语音 API 做了开朗的旁白。",
+    howItWorks: "他说可以把搁着的想法丢给 Bot，它会做出来等你审。我们保留原帖和附件视频。没有重做那条讲解。",
+    whyUseful: "一条教学片就是你会拖的工。交出去，再审成品。",
+    whyItMatters: "有名的人、有名的工、有附件视频。社区；没有标已测试。",
+    whoShouldTry: ["父母", "老师", "要一条一次性讲解的创作者"],
+    usefulFor: "内容 / 个人",
+    quote: "I asked the @bot to make one. It even made a cheerful voice using the @grok voice API.",
+    result: "数学讲解片 · Grok 语音 API",
+  },
+  "teach-a-task-eric-zakariasson": {
+    title: "示范一次就教会",
+    headline: "eric zakariasson 示范怎么教 Grok Bot 一份工——点 +、录浏览器，Bot 再做一次",
+    whatTheyDid:
+      "2026 年 8 月 13 日，eric zakariasson（@ericzakariasson）发了短教程：聊天室点 +，录自己在浏览器怎么做，Bot 看着就可以再做。他说多数工它自己做得完——当它卡住再用这招。",
+    howItWorks:
+      "这是带片段的功能走查，不是客户截图。他简介写着 tinkering @spacexai；帖仍然是个人账户，所以我们维持社区标签。",
+    whyUseful: "Bot 一路点错路径，示范一次快过改提示词。",
+    whyItMatters: "有具体步骤，不是预告。社区；没有标官方，也没有标已测试。",
+    whoShouldTry: ["Bot 一路走错路的人", "想教会例行工作的运营", "非工程师"],
+    usefulFor: "运营",
+    quote:
+      "hit + in the chat and record yourself doing it in the browser. the bot watches, then it can do it again.",
+    result: "录一次 · Bot 再走同一条路",
   },
 };
 
