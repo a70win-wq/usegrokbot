@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "sidshekhar24-polymarket-daily-settlement-brief",
+    "title": "Polymarket daily settlement brief",
+    "headline": "Bot scans the day's settled markets and writes the report.",
+    "whatTheyDid": "Bot scans the day's settled markets and writes the report.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Bot scans the day's settled markets and writes the report.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Sid Shekhar",
+    "handle": "sidshekhar24",
+    "publishedAt": "2026-08-18",
+    "xPostUrl": "https://x.com/sidshekhar24/status/2089735218861326727",
+    "sourceUrl": "https://x.com/sidshekhar24/status/2089735218861326727",
+    "sourceLabel": "Sid Shekhar on X"
+  }
+]
