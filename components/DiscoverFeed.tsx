@@ -14,6 +14,7 @@ import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
 const tabs: DiscoverTab[] = ["trending", "latest", "official", "community"];
+const mobilePrimary: DiscoverCategorySlug[] = ["sales", "marketing", "research"];
 
 const categoryKeys: Record<DiscoverCategorySlug, string> = {
   sales: "discover.catSales",
@@ -42,11 +43,23 @@ const tabKeys: Record<DiscoverTab, string> = {
   community: "discover.tabCommunity",
 };
 
+const tabIcon: Record<DiscoverTab, string> = {
+  trending: "🔥 ",
+  latest: "🆕 ",
+  official: "✅ ",
+  community: "👥 ",
+};
+
 export function DiscoverFeed({ query = "" }: { query?: string }) {
   const { t } = useI18n();
   const [tab, setTab] = useState<DiscoverTab>("trending");
   const [category, setCategory] = useState<DiscoverCategorySlug | "all">("all");
   const [outcome, setOutcome] = useState<OutcomeSlug | "all">("all");
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  const extraActive =
+    (category !== "all" && !mobilePrimary.includes(category)) || outcome !== "all";
+  const showMore = moreOpen || extraActive;
 
   const stories = useMemo(
     () => filterDiscoverStories({ query, tab, category, outcome }),
@@ -63,21 +76,24 @@ export function DiscoverFeed({ query = "" }: { query?: string }) {
             onClick={() => setTab(item)}
             aria-pressed={tab === item}
             className={cn(
-              "inline-flex h-9 shrink-0 items-center rounded-full border px-3.5 text-[13px] transition",
+              "inline-flex h-11 shrink-0 items-center rounded-full border px-3.5 text-[13px] transition md:h-9",
               tab === item
                 ? "border-ink bg-ink text-inverse"
                 : "border-line text-mute hover:border-line-strong hover:text-ink",
             )}
           >
-            {item === "trending" ? "🔥 " : item === "latest" ? "🆕 " : item === "official" ? "✅ " : "🧪 "}
+            {tabIcon[item]}
             {t(tabKeys[item])}
           </button>
         ))}
       </div>
+      {tab === "trending" ? (
+        <p className="mt-2 text-[12px] text-faint">{t("discover.tabTrendingHint")}</p>
+      ) : null}
 
       <div className="mt-4 flex gap-2 overflow-x-auto pb-1">
         <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
-        {discoverCategorySlugs.map((item) => (
+        {mobilePrimary.map((item) => (
           <Chip
             key={item}
             active={category === item}
@@ -85,9 +101,46 @@ export function DiscoverFeed({ query = "" }: { query?: string }) {
             label={t(categoryKeys[item])}
           />
         ))}
+        <button
+          type="button"
+          onClick={() => setMoreOpen((value) => !value)}
+          aria-expanded={showMore}
+          className={cn(
+            "inline-flex h-11 shrink-0 items-center rounded-full border px-3 text-[13px] transition md:hidden",
+            showMore || extraActive
+              ? "border-ink text-ink"
+              : "border-line text-mute hover:border-line-strong hover:text-ink",
+          )}
+        >
+          {showMore ? t("discover.hideFilters") : t("discover.moreFilters")}
+        </button>
+        <div className="hidden gap-2 md:flex">
+          {discoverCategorySlugs
+            .filter((item) => !mobilePrimary.includes(item))
+            .map((item) => (
+              <Chip
+                key={item}
+                active={category === item}
+                onClick={() => setCategory(item)}
+                label={t(categoryKeys[item])}
+              />
+            ))}
+        </div>
       </div>
 
-      <div className="mt-3">
+      <div className={cn("mt-3", showMore ? "block" : "hidden md:block")}>
+        <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
+          {discoverCategorySlugs
+            .filter((item) => !mobilePrimary.includes(item))
+            .map((item) => (
+              <Chip
+                key={item}
+                active={category === item}
+                onClick={() => setCategory(item)}
+                label={t(categoryKeys[item])}
+              />
+            ))}
+        </div>
         <p className="text-[12px] text-faint">{t("discover.byOutcome")}</p>
         <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
           <Chip active={outcome === "all"} onClick={() => setOutcome("all")} label={t("discover.catAll")} />
@@ -138,7 +191,7 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "inline-flex h-8 shrink-0 items-center rounded-full border px-3 text-[13px] transition",
+        "inline-flex h-11 shrink-0 items-center rounded-full border px-3 text-[13px] transition md:h-8",
         active ? "border-ink text-ink" : "border-line text-mute hover:border-line-strong hover:text-ink",
       )}
     >

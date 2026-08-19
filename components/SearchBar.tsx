@@ -153,8 +153,9 @@ export function SearchBar({
       const selected = menuItems[activeIndex];
       if (selected) {
         event.preventDefault();
-        if (stayOnPage && !selected.href.startsWith("/discover") && !selected.href.startsWith("/use-cases")) {
+        if (stayOnPage && showSuggestions) {
           onQueryChange?.(selected.title);
+          setQuery(selected.title);
           setOpen(false);
           return;
         }
@@ -204,41 +205,64 @@ export function SearchBar({
             </div>
           ) : (
             <ul>
-              {menuItems.map((item, index) => (
-                <li key={item.href + item.title}>
-                  <LocaleLink
-                    href={item.href}
-                    className={cn(
-                      "block px-4 py-3 transition hover:bg-card-hover",
-                      activeIndex === index && "bg-card-hover",
+              {menuItems.map((item, index) => {
+                const filterOnly = stayOnPage && showSuggestions;
+                const className = cn(
+                  "block w-full px-4 py-3 text-left transition hover:bg-card-hover",
+                  activeIndex === index && "bg-card-hover",
+                );
+                return (
+                  <li key={item.href + item.title}>
+                    {filterOnly ? (
+                      <button
+                        type="button"
+                        className={className}
+                        onClick={() => {
+                          onQueryChange?.(item.title);
+                          setQuery(item.title);
+                          setOpen(false);
+                        }}
+                      >
+                        <div className="text-sm font-medium text-ink">{item.title}</div>
+                      </button>
+                    ) : (
+                      <LocaleLink
+                        href={item.href}
+                        className={className}
+                        onClick={() => setOpen(false)}
+                      >
+                        <div className="text-sm font-medium text-ink">{item.title}</div>
+                        {item.detail ? (
+                          <div className="mt-0.5 line-clamp-1 text-[13px] text-mute">{item.detail}</div>
+                        ) : null}
+                      </LocaleLink>
                     )}
-                    onClick={() => {
-                      if (stayOnPage && !item.href.startsWith("/discover") && !item.href.startsWith("/use-cases")) {
-                        onQueryChange?.(item.title);
-                      }
-                      setOpen(false);
-                    }}
-                  >
-                    <div className="text-sm font-medium text-ink">{item.title}</div>
-                    {item.detail ? (
-                      <div className="mt-0.5 line-clamp-1 text-[13px] text-mute">{item.detail}</div>
-                    ) : null}
-                  </LocaleLink>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           )}
           {showResults ? (
-            <LocaleLink
-              href={stayOnPage ? "/" : `/use-cases?q=${encodeURIComponent(trimmed)}`}
-              className="block border-t border-line px-4 py-2.5 text-[13px] text-ink"
-              onClick={() => {
-                if (stayOnPage) onQueryChange?.(trimmed);
-                setOpen(false);
-              }}
-            >
-              {stayOnPage ? t("search.seeStories") : t("search.seeAll")}
-            </LocaleLink>
+            stayOnPage ? (
+              <button
+                type="button"
+                className="block w-full border-t border-line px-4 py-2.5 text-left text-[13px] text-ink"
+                onClick={() => {
+                  onQueryChange?.(trimmed);
+                  setOpen(false);
+                }}
+              >
+                {t("search.seeStories")}
+              </button>
+            ) : (
+              <LocaleLink
+                href={`/use-cases?q=${encodeURIComponent(trimmed)}`}
+                className="block border-t border-line px-4 py-2.5 text-[13px] text-ink"
+                onClick={() => setOpen(false)}
+              >
+                {t("search.seeAll")}
+              </LocaleLink>
+            )
           ) : null}
         </div>
       ) : null}

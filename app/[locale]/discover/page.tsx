@@ -10,6 +10,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
-export default function DiscoverPage() {
-  return <DiscoverIndexView />;
+export default async function DiscoverPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  const { q } = await searchParams;
+  return <DiscoverIndexView initialQuery={q ?? ""} />;
 }

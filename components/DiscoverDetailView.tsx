@@ -1,6 +1,7 @@
 "use client";
 
 import { AppNamePills } from "@/components/AppPills";
+import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DiscoverCard } from "@/components/DiscoverCard";
 import { JsonLd } from "@/components/JsonLd";
@@ -11,8 +12,10 @@ import { XPostEmbed } from "@/components/XPostEmbed";
 import type { DiscoverStory } from "@/data/discover";
 import { getRelatedDiscoverStories, getRelatedUseCase } from "@/data/discover";
 import type { UseCase } from "@/data/types";
+import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { formatStoryDate } from "@/lib/format";
 import { localizeDiscoverStory, localizeUseCase, useI18n } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
 export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
   const { locale, t, absoluteHref } = useI18n();
@@ -23,6 +26,15 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
   const sourceLabel = story.source === "official" ? t("discover.officialBadge") : t("discover.communityBadge");
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOriginalX") : t("discover.viewOriginal");
+  const localeTag = locale === "en" ? "en" : locale;
+  const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
+  const checkLabel =
+    story.source === "official"
+      ? t("discover.verifiedOfficial", { date: checked })
+      : t("discover.sourceChecked", { date: checked });
+  const sourceAuthorType = story.handle === "xai" || story.handle === "bot" || story.authorName === "xAI" || story.authorName === "Jellypod"
+    ? "Organization"
+    : "Person";
 
   return (
     <article className="mx-auto max-w-[800px] px-5 py-10 md:px-8 md:py-16">
@@ -33,7 +45,20 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           headline: item.title,
           description: item.headline,
           datePublished: story.publishedAt,
-          author: { "@type": "Person", name: story.authorName },
+          dateModified: LAST_REVIEWED,
+          author: { "@type": "Organization", name: site.name, url: site.url },
+          publisher: { "@type": "Organization", name: site.name, url: site.url },
+          isBasedOn: story.sourceUrl,
+          citation: {
+            "@type": "CreativeWork",
+            name: story.sourceLabel,
+            url: story.sourceUrl,
+            author: {
+              "@type": sourceAuthorType,
+              name: story.authorName,
+              ...(story.handle ? { url: `https://x.com/${story.handle}` } : {}),
+            },
+          },
           mainEntityOfPage: absoluteHref(`/discover/${story.slug}`),
         }}
       />
@@ -56,12 +81,16 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           {t(`discover.cat${story.category.charAt(0).toUpperCase()}${story.category.slice(1)}`)}
         </span>
         <span className="text-[12px] text-faint">{formatStoryDate(story.publishedAt, locale)}</span>
+        <span className="text-[12px] text-faint">{checkLabel}</span>
       </div>
 
-      <p className="mt-5 text-[14px] text-mute">
-        {item.authorName}
-        {story.handle ? <span className="text-faint"> @{story.handle}</span> : null}
-      </p>
+      <div className="mt-5 flex items-center gap-3">
+        <AuthorAvatar name={item.authorName} handle={story.handle} />
+        <p className="text-[14px] text-mute">
+          {item.authorName}
+          {story.handle ? <span className="text-faint"> @{story.handle}</span> : null}
+        </p>
+      </div>
       <h1 className="mt-2 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p>
 

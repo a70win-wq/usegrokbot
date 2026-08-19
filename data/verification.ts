@@ -1,6 +1,7 @@
 import type { UseCase } from "./types";
 
-export type TrustStatus = "official" | "library" | "community";
+/** `tested` is reserved. Only assign it after UseGrokBot has actually run the Bot. */
+export type TrustStatus = "official" | "library" | "community" | "tested";
 
 export type Verification = {
   status: TrustStatus;

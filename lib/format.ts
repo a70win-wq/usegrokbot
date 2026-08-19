@@ -29,3 +29,11 @@ export function formatStoryDate(isoDate: string, locale: Locale) {
     year: "numeric",
   }).format(date);
 }
+
+export function formatCardDate(isoDate: string, locale: Locale, now = new Date()) {
+  const exact = formatStoryDate(isoDate, locale);
+  const date = new Date(isoDate.includes("T") ? isoDate : `${isoDate}T12:00:00Z`);
+  const days = Math.abs((now.getTime() - date.getTime()) / 86_400_000);
+  if (days >= 30) return exact;
+  return `${formatRelativeTime(isoDate, locale, now)} · ${exact}`;
+}

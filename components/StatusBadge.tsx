@@ -5,6 +5,7 @@ const styles: Record<TrustStatus, string> = {
   official: "border-ok/30 bg-ok/10 text-ok",
   library: "border-line bg-elevated text-faint",
   community: "border-line bg-elevated text-mute",
+  tested: "border-ok/30 bg-ok/10 text-ok",
 };
 
 export function StatusBadge({

@@ -12,9 +12,9 @@ import { isOfficial } from "@/data/verification";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-export function HomeView() {
+export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
   const { t, absoluteHref } = useI18n();
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialQuery);
   const popular = getPopularUseCases(6);
   const officialCount = useCases.filter(isOfficial).length;
 
@@ -29,7 +29,7 @@ export function HomeView() {
           description: site.description,
           potentialAction: {
             "@type": "SearchAction",
-            target: absoluteHref("/use-cases?q={search_term_string}"),
+            target: absoluteHref("/discover?q={search_term_string}"),
             "query-input": "required name=search_term_string",
           },
         }}
@@ -53,7 +53,7 @@ export function HomeView() {
           </h1>
           <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
           <div className="mt-8">
-            <SearchBar onQueryChange={setQuery} stayOnPage />
+            <SearchBar initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
           </div>
           <p className="mt-4 text-[12px] text-faint">
             {t("home.officialCount", { n: officialCount })}
