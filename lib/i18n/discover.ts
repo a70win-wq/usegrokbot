@@ -261,6 +261,19 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "You can just say: “Sell these”. And let it figure out the rest.",
     result: "影相、上架、回買家、議價",
   },
+  "3d-game-roundtable-space": {
+    title: "3D 遊戲，再自己上載",
+    headline: "0xMarioNawfal 寫 Grok @bot 砌咗 3D 遊戲、自己打、再把影片上載去 X",
+    whatTheyDid:
+      "2026 年 8 月 19 日，0xMarioNawfal（@RoundtableSpace）寫 Grok @bot 可以砌成隻 3D 遊戲、自己錄屏自動玩、剪片，再上載去 X——全部自己做。附件片段來自 Dan（@Daniel_Farinax）。",
+    howItWorks: "Mario 轉發一段公開錄影。我們保留他原帖。沒有重跑那隻遊戲，也沒有重做上載。",
+    whyUseful: "這是人會指住的電腦用工：不是聊天答案——係砌好的遊戲，再加一條交得出的 X 影片。",
+    whyItMatters: "即日社群轉發一份具體 Bot 工。片段是 Dan 的；帖是 Mario 的。兩邊都寫清楚。",
+    whoShouldTry: ["建造者", "做遊戲的人", "想 Bot 交出片段的創作者"],
+    usefulFor: "建造者 / 創作者",
+    quote: "It knows how to screen record, auto-play the game, edit the video, and upload the video all by itself",
+    result: "3D 遊戲 · 錄、剪、上載去 X",
+  },
   "five-bots-peter-yang": {
     title: "五隻實用 Bot",
     headline: "Peter Yang 出了五隻 Grok Bot 教學——顧問、YouTube、X、收件箱、旅行",
@@ -331,6 +344,19 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote:
       "All you do is tell your main agent to tell another agent to loop on a task every 5 minutes, and monitor it while it goes",
     result: "五分鐘循環 · 調度加專員",
+  },
+  "grok-bot-walkthrough-alex-finn": {
+    title: "設定走查",
+    headline: "Alex Finn 發了 Grok Bot 設定影片——用例同插件",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Alex Finn（@AlexFinn）發了另一篇，唔係嗰條五分鐘循環：一條影片講點樣設定 Grok Bot、用例、插件，同設定啱先會好用。他話係一隊可以日夜開工的 agent。",
+    howItWorks: "這是公開設定走查，不是客戶截圖。我們保留 Alex 原帖。沒有重跑他的枱，也沒有重剪影片。",
+    whyUseful: "如果你想一條片由設定開始——不是另一條五分鐘循環——這就是人在睇的那條。",
+    whyItMatters: "這週最受注意的社群 Grok Bot 設定片。同循環卡係另一條帖。社群；沒有標已測試。",
+    whoShouldTry: ["剛開第一隻 Bot 的人", "營運", "創作者"],
+    usefulFor: "營運 / 創作者",
+    quote: "In this video I cover setting up Grok Bot, use cases, plugins, and what makes Grok Bot so good",
+    result: "影片走查 · 設定、用例、插件",
   },
   "firstmate-kun-chen": {
     title: "Firstmate，一個收件箱",
@@ -594,6 +620,19 @@ const hans: Record<string, DiscoverStoryI18n> = {
     quote: "You can just say: “Sell these”. And let it figure out the rest.",
     result: "拍照、上架、回买家、议价",
   },
+  "3d-game-roundtable-space": {
+    title: "3D 游戏，再自己上传",
+    headline: "0xMarioNawfal 写 Grok @bot 做了 3D 游戏、自己打、再把视频上传到 X",
+    whatTheyDid:
+      "2026 年 8 月 19 日，0xMarioNawfal（@RoundtableSpace）写 Grok @bot 可以做成整个 3D 游戏、自己录屏自动玩、剪片，再上传到 X——全部自己做。附件片段来自 Dan（@Daniel_Farinax）。",
+    howItWorks: "Mario 转发一段公开录像。我们保留他原帖。没有重跑那只游戏，也没有重做上传。",
+    whyUseful: "这是人们会指着的电脑用工：不是聊天答案——是做好的游戏，再加一条交得出的 X 视频。",
+    whyItMatters: "当日社区转发一份具体 Bot 工。片段是 Dan 的；帖是 Mario 的。两边都写清楚。",
+    whoShouldTry: ["建造者", "做游戏的人", "想 Bot 交出片段的创作者"],
+    usefulFor: "建造者 / 创作者",
+    quote: "It knows how to screen record, auto-play the game, edit the video, and upload the video all by itself",
+    result: "3D 游戏 · 录、剪、上传到 X",
+  },
   "five-bots-peter-yang": {
     title: "五只实用 Bot",
     headline: "Peter Yang 出了五只 Grok Bot 教程——顾问、YouTube、X、收件箱、旅行",
@@ -664,6 +703,19 @@ const hans: Record<string, DiscoverStoryI18n> = {
     quote:
       "All you do is tell your main agent to tell another agent to loop on a task every 5 minutes, and monitor it while it goes",
     result: "五分钟循环 · 调度加专员",
+  },
+  "grok-bot-walkthrough-alex-finn": {
+    title: "设置走查",
+    headline: "Alex Finn 发了 Grok Bot 设置视频——用例和插件",
+    whatTheyDid:
+      "2026 年 8 月 18 日，Alex Finn（@AlexFinn）发了另一篇，不是那条五分钟循环：一条视频讲怎样设置 Grok Bot、用例、插件，以及设置对了才会好用。他说是一队可以日夜开工的 agent。",
+    howItWorks: "这是公开设置走查，不是客户截图。我们保留 Alex 原帖。没有重跑他的桌，也没有重剪视频。",
+    whyUseful: "如果你想一条片从设置开始——不是另一条五分钟循环——这就是人们在看的那条。",
+    whyItMatters: "这周最受注意的社区 Grok Bot 设置片。和循环卡是另一条帖。社区；没有标已测试。",
+    whoShouldTry: ["刚开第一只 Bot 的人", "运营", "创作者"],
+    usefulFor: "运营 / 创作者",
+    quote: "In this video I cover setting up Grok Bot, use cases, plugins, and what makes Grok Bot so good",
+    result: "视频走查 · 设置、用例、插件",
   },
   "firstmate-kun-chen": {
     title: "Firstmate，一个收件箱",
