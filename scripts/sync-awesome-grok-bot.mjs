@@ -12,9 +12,18 @@ function normalizeUrl(value) {
   try {
     const url = new URL(value.trim());
     url.hash = "";
-    url.search = "";
-    const normalized = url.toString().replace(/\/$/, "");
-    return normalized.replace("https://twitter.com/", "https://x.com/");
+
+    const host = url.hostname.replace(/^www\./, "");
+    if (host === "x.com" || host === "twitter.com") {
+      url.hostname = "x.com";
+      url.search = "";
+    } else {
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^(utm_|ref$|source$|fbclid$|gclid$)/i.test(key)) url.searchParams.delete(key);
+      }
+    }
+
+    return url.toString().replace(/\/$/, "");
   } catch {
     return value.trim().replace(/\/$/, "");
   }
