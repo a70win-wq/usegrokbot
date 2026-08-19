@@ -14,6 +14,46 @@ export type DiscoverStoryI18n = {
 };
 
 const hant: Record<string, DiscoverStoryI18n> = {
+  "clear-email-elon": {
+    title: "清走你的電郵",
+    headline: "Elon 今日在 X 指 Grok Bot 去做九萬封電郵大掃除",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Elon 引用 Mike P（@mikepat711）：Grok Bot 正在行兩個 Gmail 帳戶——大約九萬封電郵——刪走 Mike 自己從來不敢動的垃圾。Elon 一句就係產品提示：「Clear your email with @Grok @Bot。」",
+    howItWorks:
+      "這不是發布示範。一個真人把兩個在用的收件箱交給 Grok Bot，叫它清。Elon 同一個早上轉發。我們保留 Elon 原帖。沒有在這裡重跑那九萬封。",
+    whyUseful: "清收件箱係人人都明的 Grok Bot 工作。如果你盯住十年 Gmail 不敢動，這就是今日熱度最高的公開例子。",
+    whyItMatters: "今日 Elon 時間線上最熱的 Grok Bot 帖——幾小時幾百萬觀看。工作是 Mike 的；熱度是 Elon 的。兩邊都寫清楚。",
+    whoShouldTry: ["收件箱炸掉的人", "創辦人", "營運"],
+    usefulFor: "Gmail 浸死的人",
+    quote: "Clear your email with @Grok @Bot",
+  },
+  "week-of-hacks-nate-herk": {
+    title: "一週 Grok Bot 技巧",
+    headline: "Nate Herk 今日寫了九個 Grok Bot 技巧——Elon 問「What’s ur @Bots？」",
+    whatTheyDid:
+      "Nate Herk 在 X 發表〈A Week of Grok Bot Lessons in 10 Mins〉：九個把預設 Bot 變成一隊的做法。Elon 同一個早上引用，問大家跑緊咩 Bot。",
+    howItWorks:
+      "他的做法：Grill Me 技能訪問你、抽出背景；Klaus 做幕僚長，你只同一隻 Bot 傾；專員 Motion、Eyes、Miner、Coffee、Views；共用記憶對私人記憶；Composio 接多啲 app；ClickUp 避免工作消失在聊天；示範一次就教會；例行工作；已登入的瀏覽器設定檔。我們摘要公開文章——沒有重跑 Klaus。",
+    whyUseful: "這是今日人在收藏的設定文。如果你已經開咗 Bot，但仍然覺得只係多一個聊天室，由呢度開始。",
+    whyItMatters: "Elon 沒有再發一個新流程。他指住這篇。文章是工作；Elon 條問題係點解全時間線都係它。",
+    whoShouldTry: ["已經有 Bot 的人", "想砌一小隊的營運", "創作者"],
+    usefulFor: "營運 / 創作者",
+    quote: "What’s ur @Bots?",
+  },
+  "household-bots-blake-king": {
+    title: "頭 48 小時，唔使識 code",
+    headline: "Blake King 零編程試 Grok Bot——Elon 今日轉發",
+    whatTheyDid:
+      "Blake 接了公開挑戰，跳過 OpenClaw，兩個晚上：駁電郵、叫 Bot 做一份 12 頁家庭預算 PowerPoint、為太太生意開一隊 Bot、再每日收 Tesla 新聞摘要。",
+    howItWorks:
+      "他話產品會一步步帶你設定。不用寫 code。先電郵，再預算簡報，再一小隊，再早報。Elon 在 2026 年 8 月 19 日轉發。我們沒有重跑他的 Bot。",
+    whyUseful: "多數發布帖當你已經識用 agent。這篇是非工程師，講頭幾份真的交得出的工。",
+    whyItMatters: "今日它同清收件箱、Nate 的技巧一齊出現在 Elon 時間線。而家討論的就是：人用 Grok Bot 做家庭同小生意的真工作。",
+    whoShouldTry: ["非工程師", "家庭", "小生意老闆"],
+    usefulFor: "初學者 / 小生意",
+    quote:
+      "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+  },
   "grok-bot-launch-bot": {
     title: "Grok Bot 登場",
     headline: "@bot 介紹 Grok Bot：有自己電腦的 AI 隊友",
@@ -177,6 +217,46 @@ const hant: Record<string, DiscoverStoryI18n> = {
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
+  "clear-email-elon": {
+    title: "清掉你的邮件",
+    headline: "Elon 今天在 X 指 Grok Bot 去做九万封邮件大扫除",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Elon 引用 Mike P（@mikepat711）：Grok Bot 正在走两个 Gmail 账户——大约九万封邮件——删掉 Mike 自己从来不敢动的垃圾。Elon 一句话就是产品提示：「Clear your email with @Grok @Bot。」",
+    howItWorks:
+      "这不是发布演示。一个真人把两个正在用的收件箱交给 Grok Bot，叫它清。Elon 同一个早上转发。我们保留 Elon 原帖。没有在这里重跑那九万封。",
+    whyUseful: "清理收件箱是人人都懂的 Grok Bot 工作。如果你盯着十年 Gmail 不敢动，这就是今天热度最高的公开例子。",
+    whyItMatters: "今天 Elon 时间线上最热的 Grok Bot 帖——几小时几百万观看。工作是 Mike 的；热度是 Elon 的。两边都写清楚。",
+    whoShouldTry: ["收件箱炸掉的人", "创始人", "运营"],
+    usefulFor: "被 Gmail 淹没的人",
+    quote: "Clear your email with @Grok @Bot",
+  },
+  "week-of-hacks-nate-herk": {
+    title: "一周 Grok Bot 技巧",
+    headline: "Nate Herk 今天写了九个 Grok Bot 技巧——Elon 问「What’s ur @Bots？」",
+    whatTheyDid:
+      "Nate Herk 在 X 发表〈A Week of Grok Bot Lessons in 10 Mins〉：九个把默认 Bot 变成一队的做法。Elon 同一个早上引用，问大家在跑什么 Bot。",
+    howItWorks:
+      "他的做法：Grill Me 技能采访你、抽出背景；Klaus 做幕僚长，你只跟一只 Bot 聊；专员 Motion、Eyes、Miner、Coffee、Views；共享记忆对私人记忆；Composio 接更多 app；ClickUp 避免工作消失在聊天；示范一次就教会；例行工作；已登录的浏览器配置。我们摘要公开文章——没有重跑 Klaus。",
+    whyUseful: "这是今天人们在收藏的设置文。如果你已经开了 Bot，但仍然觉得只是多一个聊天室，从这里开始。",
+    whyItMatters: "Elon 没有再发一个新流程。他指着这篇。文章是工作；Elon 那句问就是它出现在每条时间线的原因。",
+    whoShouldTry: ["已经有 Bot 的人", "想组一小队的运营", "创作者"],
+    usefulFor: "运营 / 创作者",
+    quote: "What’s ur @Bots?",
+  },
+  "household-bots-blake-king": {
+    title: "头 48 小时，不用会 code",
+    headline: "Blake King 零编程试 Grok Bot——Elon 今天转发",
+    whatTheyDid:
+      "Blake 接了公开挑战，跳过 OpenClaw，两个晚上：接邮件、让 Bot 做一份 12 页家庭预算 PowerPoint、为太太生意开一队 Bot、再每天收 Tesla 新闻摘要。",
+    howItWorks:
+      "他说产品会一步步带你设置。不用写 code。先邮件，再预算幻灯片，再一小队，再早报。Elon 在 2026 年 8 月 19 日转发。我们没有重跑他的 Bot。",
+    whyUseful: "多数发布帖当你已经会用 agent。这篇是非工程师，讲头几份真正交得出的活。",
+    whyItMatters: "今天它和清收件箱、Nate 的技巧一起出现在 Elon 时间线。现在讨论的就是：人用 Grok Bot 做家庭和小生意的真工作。",
+    whoShouldTry: ["非工程师", "家庭", "小生意老板"],
+    usefulFor: "初学者 / 小生意",
+    quote:
+      "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+  },
   "grok-bot-launch-bot": {
     title: "Grok Bot 上线",
     headline: "@bot 介绍 Grok Bot：拥有自己电脑的 AI 队友",

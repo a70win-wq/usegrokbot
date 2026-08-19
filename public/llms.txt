@@ -9,7 +9,9 @@ Locales: /en /zh-hk /zh-cn
 
 - https://usegrokbot.com/en
 - https://usegrokbot.com/en/discover
-- https://usegrokbot.com/en/discover/competitor-monitor-jellypod
+- https://usegrokbot.com/en/discover/clear-email-elon
+- https://usegrokbot.com/en/discover/week-of-hacks-nate-herk
+- https://usegrokbot.com/en/discover/household-bots-blake-king
 - https://usegrokbot.com/en/use-cases
 - https://usegrokbot.com/en/learn/what-is-grok-bot
 - https://usegrokbot.com/sitemap.xml

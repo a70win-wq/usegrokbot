@@ -58,6 +58,9 @@ export type DiscoverStory = {
 
 const XAI_INTRO = "https://x.ai/news/introducing-grok-bot";
 const BOT_LAUNCH = "https://x.com/bot/status/2087224798078517251";
+const ELON_INBOX = "https://x.com/elonmusk/status/2089950078429782061";
+const NATE_HERK_HACKS = "https://x.com/nateherk/status/2089917020087210160";
+const BLAKE_KING_BOTS = "https://x.com/BlakeKing777/status/2089881822884692399";
 const DIGITAL_TRENDS =
   "https://www.digitaltrends.com/computing/grok-bot-wants-to-take-work-off-your-plate-not-just-answer-your-queries/";
 const NATE = "https://natesnewsletter.substack.com/p/grok-bot-review";
@@ -67,6 +70,97 @@ const AXEL =
   "https://www.linkedin.com/posts/axel-schapmann_how-to-use-grok-bot-for-reddit-marketing-activity-7494004829774688256-L40s";
 
 export const discoverStories: DiscoverStory[] = [
+  {
+    slug: "clear-email-elon",
+    title: "Clear Your Email",
+    headline: "Elon pointed Grok Bot at a 90,000-email inbox cleanup — today, on X",
+    whatTheyDid:
+      "On 19 Aug 2026 Elon quote-tweeted Mike P (@mikepat711): Grok Bot was walking two Gmail accounts — about 90,000 emails — and deleting junk Mike had never dared to touch. Elon’s line was the product tip: “Clear your email with @Grok @Bot.”",
+    howItWorks:
+      "This is not a launch demo. A real person handed Grok Bot two live inboxes and told it to purge. Elon amplified the job the same morning. We keep Elon’s permalink. We did not re-run the 90,000-email pass.",
+    whyUseful:
+      "Inbox cleanup is the Grok Bot job people actually understand. If you have been staring at a decade of Gmail, this is the public example getting attention today.",
+    whyItMatters:
+      "Hottest Grok Bot post on Elon’s timeline today — millions of views in a few hours. The work is Mike’s; the heat is Elon’s. Both stay attributed.",
+    whoShouldTry: ["Anyone with a wrecked inbox", "Founders", "Operators"],
+    usefulFor: "Anyone drowning in Gmail",
+    quote: "Clear your email with @Grok @Bot",
+    category: "operations",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["gmail"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "official",
+    authorName: "Elon Musk",
+    handle: "elonmusk",
+    publishedAt: "2026-08-19",
+    xPostUrl: ELON_INBOX,
+    sourceUrl: ELON_INBOX,
+    sourceLabel: "Elon Musk on X",
+    relatedUseCase: "inbox-organizer",
+    trending: true,
+  },
+  {
+    slug: "week-of-hacks-nate-herk",
+    title: "A Week of Grok Bot Hacks",
+    headline: "Nate Herk wrote nine Grok Bot hacks today — Elon asked “What’s ur @Bots?”",
+    whatTheyDid:
+      "Nate Herk published “A Week of Grok Bot Lessons in 10 Mins” on X: nine hacks for turning a default Bot into a team. Elon quote-tweeted it the same morning and asked people what Bots they run.",
+    howItWorks:
+      "His stack: a Grill Me skill that interviews you for context; Klaus as chief of staff so you talk to one Bot; specialists (Motion, Eyes, Miner, Coffee, Views); shared vs private memory; Composio for extra apps; ClickUp so work does not vanish in chat; teach-by-demo; routines; a signed-in browser profile. We summarize the public article — we did not re-run Klaus.",
+    whyUseful:
+      "This is the setup write-up people were bookmarking today. If you already created a Bot and it still feels like one more chat, start here.",
+    whyItMatters:
+      "Elon did not post a new workflow. He pointed at this one. The article is the job; Elon’s question is why it is on every timeline.",
+    whoShouldTry: ["People who already have a Bot", "Operators building a small team", "Creators"],
+    usefulFor: "Operators / Creators",
+    quote: "What’s ur @Bots?",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser", "gmail"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Nate Herk",
+    handle: "nateherk",
+    publishedAt: "2026-08-19",
+    xPostUrl: NATE_HERK_HACKS,
+    sourceUrl: NATE_HERK_HACKS,
+    sourceLabel: "Nate Herk on X",
+    relatedUseCase: "daily-work-brief",
+    trending: true,
+  },
+  {
+    slug: "household-bots-blake-king",
+    title: "First 48 Hours, No Code",
+    headline: "Blake King tried Grok Bot with zero coding — Elon retweeted it today",
+    whatTheyDid:
+      "Blake accepted a public challenge, skipped OpenClaw, and in two nights: linked email, had a Bot build a 12-page household budget PowerPoint, stood up a team for his wife’s business, and started daily Tesla news recaps.",
+    howItWorks:
+      "He says the product walked him through setup. No code. Email first, then a budget deck, then a small team, then a morning recap. Elon retweeted the post on 19 Aug 2026. We did not re-run his Bots.",
+    whyUseful:
+      "Most launch posts assume you already think in agents. This one is a non-engineer showing the first jobs that actually shipped.",
+    whyItMatters:
+      "It sat on Elon’s timeline today next to the inbox purge and Nate’s hacks. That is the current conversation: people trying Grok Bot on real household and small-business work.",
+    whoShouldTry: ["Non-engineers", "Households", "Small business owners"],
+    usefulFor: "Beginners / Small business",
+    quote:
+      "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+    category: "personal",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["gmail", "browser"],
+    difficulty: "easy",
+    schedule: "daily",
+    source: "community",
+    authorName: "Blake King",
+    handle: "BlakeKing777",
+    publishedAt: "2026-08-19",
+    xPostUrl: BLAKE_KING_BOTS,
+    sourceUrl: BLAKE_KING_BOTS,
+    sourceLabel: "Blake King on X",
+    relatedUseCase: "daily-ai-news-brief",
+    trending: true,
+  },
   {
     slug: "grok-bot-launch-bot",
     title: "Grok Bot Launch",
@@ -347,7 +441,6 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: NATE,
     sourceLabel: "Nate’s Newsletter: Grok Bot review",
     relatedUseCase: "travel-concierge",
-    trending: true,
   },
   {
     slug: "youtube-comments-remy",
@@ -402,7 +495,6 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: REMY,
     sourceLabel: "Remy: what I’m actually using Grok Bot for",
     relatedUseCase: "content-repurposing-bot",
-    trending: true,
   },
   {
     slug: "monday-marketing-report-jellypod",
@@ -457,7 +549,6 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: JELLYPOD,
     sourceLabel: "Jellypod: How to use Grok Bot for marketing",
     relatedUseCase: "competitor-monitor",
-    trending: true,
   },
 ];
 
