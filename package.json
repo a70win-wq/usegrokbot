@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.32.0",
