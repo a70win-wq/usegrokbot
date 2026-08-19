@@ -1,1 +1,316 @@
-[]
+[
+  {
+    "slug": "n2parko-cos-em-five-eng-ics-databricks-pm",
+    "title": "CoS + EM + five eng ICs + Databricks + PM",
+    "headline": "SpaceXAI product roster with real agent-to-agent PR handoff screenshots.",
+    "whatTheyDid": "SpaceXAI product roster with real agent-to-agent PR handoff screenshots.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "SpaceXAI product roster with real agent-to-agent PR handoff screenshots.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "slack"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "n2parko",
+    "handle": "n2parko",
+    "publishedAt": "2026-08-11",
+    "xPostUrl": "https://x.com/n2parko/status/2087251704744235298",
+    "sourceUrl": "https://x.com/n2parko/status/2087251704744235298",
+    "sourceLabel": "n2parko on X"
+  },
+  {
+    "slug": "leerob-four-technical-bets",
+    "title": "four technical bets",
+    "headline": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "whatTheyDid": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Lee Robinson",
+    "handle": "leerob",
+    "publishedAt": "2026-08-17",
+    "xPostUrl": "https://x.com/leerob/status/2089169319099777364",
+    "sourceUrl": "https://x.com/leerob/status/2089169319099777364",
+    "sourceLabel": "Lee Robinson on X"
+  },
+  {
+    "slug": "yunta-tsai-calendar-reservations-while-walking",
+    "title": "calendar + reservations while walking",
+    "headline": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "whatTheyDid": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Yun-Ta Tsai",
+    "handle": "yunta_tsai",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/yunta_tsai/status/2087415205756391461",
+    "sourceUrl": "https://x.com/yunta_tsai/status/2087415205756391461",
+    "sourceLabel": "Yun-Ta Tsai on X"
+  },
+  {
+    "slug": "gota-bara-twelve-jobs-on-one-roster",
+    "title": "twelve jobs on one roster",
+    "headline": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "whatTheyDid": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Gota",
+    "handle": "gota_bara",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/gota_bara/status/2087666940450152841",
+    "sourceUrl": "https://x.com/gota_bara/status/2087666940450152841",
+    "sourceLabel": "Gota on X"
+  },
+  {
+    "slug": "box-credit-committee-pack",
+    "title": "credit-committee pack",
+    "headline": "Reconcile materials, write the pack back into Box via MCP.",
+    "whatTheyDid": "Reconcile materials, write the pack back into Box via MCP.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Reconcile materials, write the pack back into Box via MCP.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Box",
+    "handle": "Box",
+    "publishedAt": "2026-08-11",
+    "xPostUrl": "https://x.com/Box/status/2087275866950938662",
+    "sourceUrl": "https://x.com/Box/status/2087275866950938662",
+    "sourceLabel": "Box on X"
+  },
+  {
+    "slug": "mrfundman-wordpress-updates-taught-once",
+    "title": "WordPress updates taught once",
+    "headline": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "whatTheyDid": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mr fundman",
+    "handle": "mrfundman",
+    "publishedAt": "2026-08-18",
+    "xPostUrl": "https://x.com/mrfundman/status/2089760255890571404",
+    "sourceUrl": "https://x.com/mrfundman/status/2089760255890571404",
+    "sourceLabel": "mr fundman on X"
+  },
+  {
+    "slug": "kettlebelldan-arduino-updates-from-a-bot",
+    "title": "Arduino updates from a Bot",
+    "headline": "Bot pushes hardware updates so the human can stay off X.",
+    "whatTheyDid": "Bot pushes hardware updates so the human can stay off X.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Bot pushes hardware updates so the human can stay off X.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Dan",
+    "handle": "KettlebellDan",
+    "publishedAt": "2026-08-19",
+    "xPostUrl": "https://x.com/KettlebellDan/status/2089920364419874937",
+    "sourceUrl": "https://x.com/KettlebellDan/status/2089920364419874937",
+    "sourceLabel": "Dan on X"
+  },
+  {
+    "slug": "farzyness-webby-shotry-writey",
+    "title": "Webby / Shotry / Writey",
+    "headline": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "whatTheyDid": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Farzad 🇺🇸 🇮🇷",
+    "handle": "farzyness",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/farzyness/status/2087340859138224540",
+    "sourceUrl": "https://x.com/farzyness/status/2087340859138224540",
+    "sourceLabel": "Farzad 🇺🇸 🇮🇷 on X"
+  },
+  {
+    "slug": "sidshekhar24-polymarket-daily-settlement-brief",
+    "title": "Polymarket daily settlement brief",
+    "headline": "Bot scans the day's settled markets and writes the report.",
+    "whatTheyDid": "Bot scans the day's settled markets and writes the report.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Bot scans the day's settled markets and writes the report.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Sid Shekhar",
+    "handle": "sidshekhar24",
+    "publishedAt": "2026-08-18",
+    "xPostUrl": "https://x.com/sidshekhar24/status/2089735218861326727",
+    "sourceUrl": "https://x.com/sidshekhar24/status/2089735218861326727",
+    "sourceLabel": "Sid Shekhar on X"
+  },
+  {
+    "slug": "loganjastremski-the-unlock-is-the-computer-not-4-6",
+    "title": "the unlock is the computer, not 4.6",
+    "headline": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "whatTheyDid": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Logan Jastremski",
+    "handle": "LoganJastremski",
+    "publishedAt": "2026-08-19",
+    "xPostUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
+    "sourceUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
+    "sourceLabel": "Logan Jastremski on X"
+  }
+]
