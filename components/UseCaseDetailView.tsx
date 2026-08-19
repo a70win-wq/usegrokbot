@@ -13,6 +13,7 @@ import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { AppPills } from "@/components/AppPills";
 import { CapabilityRow } from "@/components/CapabilityRow";
 import { StatusBadge } from "@/components/StatusBadge";
+import { getDiscoverStoryForUseCase } from "@/data/discover";
 import type { UseCase } from "@/data/types";
 import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
@@ -30,6 +31,7 @@ export function UseCaseDetailView({
   const setupMins = useCase.setupTime.replace(" min", "");
   const trust = verificationFor(useCase.slug);
   const localeTag = locale === "en" ? "en" : locale;
+  const inspired = getDiscoverStoryForUseCase(useCase.slug);
 
   return (
     <article className="mx-auto max-w-[800px] px-5 py-10 md:px-8 md:py-16">
@@ -89,8 +91,18 @@ export function UseCaseDetailView({
         ))}
       </div>
       <div className="mt-3">
+        <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
+          {t("detail.integrations")}
+        </p>
         <AppPills useCase={useCase} />
       </div>
+      {inspired ? (
+        <p className="mt-4 text-[13px] text-mute">
+          {inspired.handle
+            ? t("detail.inspiredByHandle", { handle: inspired.handle })
+            : t("detail.inspiredByName", { name: inspired.authorName })}
+        </p>
+      ) : null}
       <div className="mt-4">
         <CapabilityRow
           useCase={useCase}

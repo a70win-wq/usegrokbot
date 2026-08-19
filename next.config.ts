@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
         destination: "https://usegrokbot.com/:path*",
         permanent: true,
       },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/apps",
+        destination: "/:locale/integrations",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/apps/:slug",
+        destination: "/:locale/integrations/:slug",
+        permanent: true,
+      },
     ];
   },
 };

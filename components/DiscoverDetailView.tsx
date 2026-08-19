@@ -102,6 +102,11 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       </div>
       <h1 className="mt-2 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p>
+      <p className="mt-3 text-[13px] text-faint">
+        {story.handle
+          ? t("discover.basedOn", { handle: story.handle })
+          : t("discover.basedOnNamed", { name: story.authorName })}
+      </p>
       {item.result || item.output ? (
         <div className="mt-6 rounded-[12px] border border-line bg-elevated px-4 py-3">
           <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
@@ -154,6 +159,9 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
         ))}
       </div>
       <div className="mt-3">
+        <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
+          {t("discover.integrations")}
+        </p>
         <AppNamePills apps={story.apps} />
       </div>
 

@@ -24,8 +24,8 @@ export function Footer() {
           <LocaleLink href="/categories" className="hover:text-ink">
             {t("nav.categories")}
           </LocaleLink>
-          <LocaleLink href="/apps" className="hover:text-ink">
-            {t("nav.apps")}
+          <LocaleLink href="/integrations" className="hover:text-ink">
+            {t("nav.integrations")}
           </LocaleLink>
           <LocaleLink href="/prompts" className="hover:text-ink">
             {t("nav.prompts")}

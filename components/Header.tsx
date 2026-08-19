@@ -1,8 +1,8 @@
 "use client";
 
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Heart, Menu, Search, X } from "lucide-react";
+import { Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
@@ -14,21 +14,24 @@ import { useSaved } from "./saved";
 
 export function Header() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const path = stripLocalePrefix(pathname);
   const { slugs } = useSaved();
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
-  const officialOpen = path.startsWith("/discover") && searchParams.get("tab") === "official";
 
   const nav = [
     {
       href: "/",
       label: t("nav.discover"),
-      match: (current: string) => current === "/" || (current.startsWith("/discover") && !officialOpen),
+      match: (current: string) => current === "/" || current.startsWith("/discover"),
     },
     { href: "/use-cases", label: t("nav.workflows") },
-    { href: "/discover?tab=official", label: t("nav.official"), match: () => officialOpen },
+    {
+      href: "/integrations",
+      label: t("nav.integrations"),
+      match: (current: string) => current.startsWith("/integrations") || current.startsWith("/apps"),
+    },
+    { href: "/submit", label: t("nav.submitShort") },
     { href: "/learn/what-is-grok-bot", label: t("nav.about"), match: (current: string) => current.startsWith("/learn") },
   ];
 
@@ -62,21 +65,9 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <HeaderSearch />
-          <LanguageSwitch />
-          <LocaleLink
-            href="/saved"
-            className="inline-flex h-9 items-center gap-1.5 rounded-lg px-2.5 text-[13px] text-mute hover:text-ink"
-          >
-            <Heart className="size-3.5" strokeWidth={1.75} />
-            <span className="hidden sm:inline">{t("nav.saved")}</span>
-            {slugs.length > 0 ? <span className="font-mono text-[11px] text-faint">{slugs.length}</span> : null}
-          </LocaleLink>
-          <LocaleLink
-            href="/submit"
-            className="hidden h-9 items-center rounded-lg border border-line px-3 text-[13px] text-mute hover:border-line-strong hover:text-ink sm:inline-flex"
-          >
-            {t("nav.submit")}
-          </LocaleLink>
+          <div className="hidden lg:block">
+            <LanguageSwitch />
+          </div>
           <button
             type="button"
             className="inline-flex size-9 items-center justify-center rounded-lg text-mute lg:hidden"
@@ -102,10 +93,14 @@ export function Header() {
                 {item.label}
               </LocaleLink>
             ))}
-            <LocaleLink href="/submit" className="rounded-lg px-3 py-3 text-sm text-ink" onClick={() => setOpen(false)}>
-              {t("nav.submit")}
+            <LocaleLink href="/saved" className="rounded-lg px-3 py-3 text-sm text-ink" onClick={() => setOpen(false)}>
+              {t("nav.saved")}
+              {slugs.length > 0 ? <span className="ml-2 font-mono text-[11px] text-faint">{slugs.length}</span> : null}
             </LocaleLink>
           </nav>
+          <div className="mt-4">
+            <LanguageSwitch />
+          </div>
         </div>
       ) : null}
     </header>

@@ -1,3 +1,4 @@
+import { appSearchText } from "@/data/apps";
 import { searchDiscoverStories } from "@/data/discover";
 import type { AppSlug, CategorySlug, Difficulty, Schedule, UseCase } from "@/data/types";
 import { isOfficial } from "@/data/verification";
@@ -29,7 +30,9 @@ function haystack(useCase: UseCase, original?: UseCase) {
     useCase.difficulty,
     ...useCase.tags,
     ...useCase.apps,
+    ...useCase.apps.map((app) => appSearchText(app)),
     ...(useCase.alsoUses ?? []),
+    ...(useCase.alsoUses ?? []).map((app) => appSearchText(app)),
   ];
   if (original && original !== useCase) {
     parts.push(original.title, original.shortDescription, original.description, original.problem);

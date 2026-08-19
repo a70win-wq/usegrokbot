@@ -10,7 +10,7 @@ export function AppCard({ app, count }: { app: App; count: number }) {
 
   return (
     <LocaleLink
-      href={`/apps/${app.slug}`}
+      href={`/integrations/${app.slug}`}
       className="spring-lift flex items-center gap-3 rounded-[14px] border border-line bg-card px-4 py-3.5 hover:border-line-strong hover:bg-card-hover"
     >
       <div className="flex size-9 items-center justify-center rounded-[10px] bg-accent-soft text-accent">

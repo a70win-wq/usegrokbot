@@ -1,3 +1,4 @@
+import { appSearchText } from "./apps";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { getUseCase } from "./use-cases";
 
@@ -27,11 +28,12 @@ export type OutcomeSlug = (typeof outcomeSlugs)[number];
 
 export type DiscoverSourceKind = "official" | "community";
 
-export type DiscoverTab = "trending" | "latest" | "official" | "tested" | "community";
+export type DiscoverTab = "trending" | "latest" | "featured" | "official" | "tested" | "community";
 
 export const discoverTabs: DiscoverTab[] = [
   "trending",
   "latest",
+  "featured",
   "official",
   "tested",
   "community",
@@ -615,6 +617,7 @@ export type DiscoverFilters = {
   tab?: DiscoverTab;
   category?: DiscoverCategorySlug | "all";
   outcome?: OutcomeSlug | "all";
+  app?: AppSlug | "all";
 };
 
 function haystack(story: DiscoverStory) {
@@ -628,8 +631,12 @@ function haystack(story: DiscoverStory) {
     story.handle ?? "",
     story.category,
     story.quote ?? "",
+    story.result ?? "",
+    story.output ?? "",
     ...story.apps,
+    ...story.apps.map((app) => appSearchText(app)),
     ...story.outcomes,
+    ...story.outcomes.map((item) => item.replace(/-/g, " ")),
     ...story.whoShouldTry,
   ]
     .join(" ")
@@ -644,14 +651,19 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   if (filters.tab === "official") next = next.filter((item) => item.source === "official");
   if (filters.tab === "community") next = next.filter((item) => item.source === "community");
   if (filters.tab === "tested") next = next.filter((item) => item.tested);
+  if (filters.tab === "featured") next = next.filter((item) => item.featured);
 
   const category = filters.category;
   const outcome = filters.outcome;
+  const app = filters.app;
   if (category && category !== "all") {
     next = next.filter((item) => item.category === category);
   }
   if (outcome && outcome !== "all") {
     next = next.filter((item) => item.outcomes.includes(outcome));
+  }
+  if (app && app !== "all") {
+    next = next.filter((item) => item.apps.includes(app));
   }
   if (words.length) {
     next = next.filter((item) => {
@@ -669,6 +681,14 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
 
 export function searchDiscoverStories(query: string, limit = 5) {
   return filterDiscoverStories({ query, tab: "latest" }).slice(0, limit);
+}
+
+export function getDiscoverStoriesByApp(app: AppSlug) {
+  return discoverStories.filter((item) => item.apps.includes(app));
+}
+
+export function getDiscoverStoryForUseCase(slug: string) {
+  return discoverStories.find((item) => item.relatedUseCase === slug);
 }
 
 export function assertUniqueDiscoverSlugs() {

@@ -5,6 +5,7 @@ import { DiscoverCard } from "@/components/DiscoverCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
+import { PopularIntegrations } from "@/components/PopularIntegrations";
 import { SearchBar } from "@/components/SearchBar";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { discoverStories, getFeaturedDiscoverStories } from "@/data/discover";
@@ -63,10 +64,10 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
       </section>
 
       <section className="mx-auto max-w-[1240px] px-5 pb-12 md:px-8">
-        <DiscoverFilters {...filters} />
+        <DiscoverFilters {...filters} showOutcomes={false} />
       </section>
 
-      {featured.length ? (
+      {featured.length > 0 && filters.tab !== "featured" ? (
         <section className="mx-auto max-w-[1240px] px-5 pb-16 md:px-8">
           <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">
             {t("home.featuredTitle")}
@@ -81,8 +82,10 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
       ) : null}
 
       <section className="mx-auto max-w-[1240px] px-5 pb-8 md:px-8">
-        <DiscoverFeed query={query} showIntro hideFilters filterState={filters} />
+        <DiscoverFeed query={query} showIntro hideFilters showOutcomes={false} filterState={filters} />
       </section>
+
+      <PopularIntegrations />
 
       <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -98,6 +101,19 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
           {popular.map((item) => (
             <UseCaseCard key={item.slug} useCase={item} cta="build" />
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-8">
+        <div className="rounded-[18px] border border-line bg-elevated px-6 py-12 text-center md:px-12">
+          <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.submitTitle")}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-mute">{t("home.submitBody")}</p>
+          <LocaleLink
+            href="/submit"
+            className="accent-gradient spring-press mt-7 inline-flex h-11 items-center rounded-[10px] px-5 text-sm font-medium"
+          >
+            {t("home.submitCta")}
+          </LocaleLink>
         </div>
       </section>
 
@@ -119,25 +135,7 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
         <p className="mt-8 text-[13px] text-faint">{t("home.verifyNote")}</p>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-5 pt-6 pb-24 md:px-8">
-        <div className="rounded-[18px] border border-line bg-elevated px-6 py-12 text-center md:px-12">
-          <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.ctaTitle")}</h2>
-          <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <LocaleLink
-              href="/use-cases"
-              className="accent-gradient spring-press inline-flex h-11 items-center rounded-[10px] px-5 text-sm font-medium"
-            >
-              {t("home.browse")}
-            </LocaleLink>
-            <LocaleLink
-              href="/submit"
-              className="spring-press inline-flex h-11 items-center rounded-[10px] border border-line px-5 text-sm text-ink"
-            >
-              {t("home.submit")}
-            </LocaleLink>
-          </div>
-        </div>
-      </section>
+      <div className="h-16" />
     </>
   );
 }

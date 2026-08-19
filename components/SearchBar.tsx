@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
+import { appSearchText, apps } from "@/data/apps";
 import { searchDiscoverStories } from "@/data/discover";
 import { useCases } from "@/data/use-cases";
 import { cn } from "@/lib/cn";
@@ -93,6 +94,12 @@ export function SearchBar({
     return searchUseCases(localized, query, useCases).slice(0, 4);
   }, [query, locale]);
 
+  const integrations = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return apps.filter((app) => appSearchText(app.slug).includes(q) || app.name.toLowerCase().includes(q)).slice(0, 3);
+  }, [query]);
+
   const trimmed = query.trim();
   function resultsPath(value: string) {
     const q = encodeURIComponent(value);
@@ -106,6 +113,11 @@ export function SearchBar({
           href: `/discover/${item.slug}`,
           title: item.title,
           detail: item.headline,
+        })),
+        ...integrations.map((item) => ({
+          href: `/integrations/${item.slug}`,
+          title: item.name,
+          detail: t("search.integration"),
         })),
         ...results.map((item) => ({
           href: `/use-cases/${item.slug}`,
@@ -204,7 +216,7 @@ export function SearchBar({
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
-          {showResults && stories.length === 0 && results.length === 0 ? (
+          {showResults && stories.length === 0 && results.length === 0 && integrations.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}
               <p className="mt-1 text-faint">{t("search.emptyHint")}</p>

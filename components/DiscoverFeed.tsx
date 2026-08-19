@@ -2,6 +2,9 @@
 
 import { useMemo, useState } from "react";
 import { DiscoverCard } from "@/components/DiscoverCard";
+import { LocaleLink } from "@/components/LocaleLink";
+import { NamedIcon } from "@/components/icons";
+import { appsBySlug, popularIntegrationSlugs } from "@/data/apps";
 import {
   discoverCategorySlugs,
   discoverTabs,
@@ -11,6 +14,7 @@ import {
   type DiscoverTab,
   type OutcomeSlug,
 } from "@/data/discover";
+import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
@@ -39,6 +43,7 @@ const outcomeKeys: Record<OutcomeSlug, string> = {
 const tabKeys: Record<DiscoverTab, string> = {
   trending: "discover.tabTrending",
   latest: "discover.tabLatest",
+  featured: "discover.tabFeatured",
   official: "discover.tabOfficial",
   tested: "discover.tabTested",
   community: "discover.tabCommunity",
@@ -47,6 +52,7 @@ const tabKeys: Record<DiscoverTab, string> = {
 const tabIcons: Record<DiscoverTab, string> = {
   trending: "🔥",
   latest: "🆕",
+  featured: "⭐",
   official: "✅",
   tested: "🧪",
   community: "👥",
@@ -61,19 +67,38 @@ export type DiscoverFilterState = {
   setCategory: (category: DiscoverCategorySlug | "all") => void;
   outcome: OutcomeSlug | "all";
   setOutcome: (outcome: OutcomeSlug | "all") => void;
+  app: AppSlug | "all";
+  setApp: (app: AppSlug | "all") => void;
 };
 
 export function useDiscoverFilterState(initialTab: DiscoverTab = "trending"): DiscoverFilterState {
   const [tab, setTab] = useState<DiscoverTab>(initialTab);
   const [category, setCategory] = useState<DiscoverCategorySlug | "all">("all");
   const [outcome, setOutcome] = useState<OutcomeSlug | "all">("all");
-  return { tab, setTab, category, setCategory, outcome, setOutcome };
+  const [app, setApp] = useState<AppSlug | "all">("all");
+  return { tab, setTab, category, setCategory, outcome, setOutcome, app, setApp };
 }
 
-export function DiscoverFilters({ tab, setTab, category, setCategory, outcome, setOutcome }: DiscoverFilterState) {
+export function DiscoverFilters({
+  tab,
+  setTab,
+  category,
+  setCategory,
+  outcome,
+  setOutcome,
+  app,
+  setApp,
+  showOutcomes = true,
+}: DiscoverFilterState & { showOutcomes?: boolean }) {
   const { t } = useI18n();
   const [moreOpen, setMoreOpen] = useState(false);
-  const extraActive = tab === "community" || tab === "tested" || category !== "all" || outcome !== "all";
+  const extraActive =
+    tab === "community" ||
+    tab === "tested" ||
+    tab === "featured" ||
+    category !== "all" ||
+    outcome !== "all" ||
+    app !== "all";
   const showMore = moreOpen || extraActive;
 
   return (
@@ -108,6 +133,9 @@ export function DiscoverFilters({ tab, setTab, category, setCategory, outcome, s
       {tab === "tested" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabTestedHint")}</p>
       ) : null}
+      {tab === "featured" ? (
+        <p className="mt-2 text-[12px] text-faint">{t("discover.tabFeaturedHint")}</p>
+      ) : null}
 
       <div className="mt-4 hidden gap-2 overflow-x-auto pb-1 md:flex">
         <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
@@ -121,9 +149,27 @@ export function DiscoverFilters({ tab, setTab, category, setCategory, outcome, s
         ))}
       </div>
 
-      <div className={cn("mt-3", showMore ? "block" : "hidden md:block")}>
+      <div className="mt-3 hidden gap-2 overflow-x-auto pb-1 md:flex">
+        <Chip active={app === "all"} onClick={() => setApp("all")} label={t("discover.catAll")} />
+        {popularIntegrationSlugs.map((item) => (
+          <IntegrationChip key={item} slug={item} active={app === item} onClick={() => setApp(item)} />
+        ))}
+        <LocaleLink
+          href="/integrations"
+          className="inline-flex h-8 shrink-0 items-center rounded-full border border-line px-3 text-[13px] text-mute hover:border-line-strong hover:text-ink"
+        >
+          {t("discover.moreIntegrations")}
+        </LocaleLink>
+      </div>
+
+      <div className={cn("mt-3", showMore ? "block" : "hidden", showOutcomes ? "md:block" : "md:hidden")}>
         <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
           <p className="sr-only">{t("discover.byTrust")}</p>
+          <TabChip
+            active={tab === "featured"}
+            label={`${tabIcons.featured} ${t(tabKeys.featured)}`}
+            onClick={() => setTab("featured")}
+          />
           <TabChip
             active={tab === "community"}
             label={`${tabIcons.community} ${t(tabKeys.community)}`}
@@ -144,18 +190,29 @@ export function DiscoverFilters({ tab, setTab, category, setCategory, outcome, s
             />
           ))}
         </div>
-        <p className="text-[12px] text-faint">{t("discover.byOutcome")}</p>
-        <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
-          <Chip active={outcome === "all"} onClick={() => setOutcome("all")} label={t("discover.catAll")} />
-          {outcomeSlugs.map((item) => (
-            <Chip
-              key={item}
-              active={outcome === item}
-              onClick={() => setOutcome(item)}
-              label={t(outcomeKeys[item])}
-            />
+        <p className="mb-2 text-[12px] text-faint md:hidden">{t("discover.integrations")}</p>
+        <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
+          <Chip active={app === "all"} onClick={() => setApp("all")} label={t("discover.catAll")} />
+          {popularIntegrationSlugs.map((item) => (
+            <IntegrationChip key={item} slug={item} active={app === item} onClick={() => setApp(item)} />
           ))}
         </div>
+        {showOutcomes ? (
+          <>
+            <p className="text-[12px] text-faint">{t("discover.byOutcome")}</p>
+            <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
+              <Chip active={outcome === "all"} onClick={() => setOutcome("all")} label={t("discover.catAll")} />
+              {outcomeSlugs.map((item) => (
+                <Chip
+                  key={item}
+                  active={outcome === item}
+                  onClick={() => setOutcome(item)}
+                  label={t(outcomeKeys[item])}
+                />
+              ))}
+            </div>
+          </>
+        ) : null}
       </div>
     </div>
   );
@@ -166,25 +223,27 @@ export function DiscoverFeed({
   initialTab = "trending",
   showIntro = false,
   hideFilters = false,
+  showOutcomes = true,
   filterState,
 }: {
   query?: string;
   initialTab?: DiscoverTab;
   showIntro?: boolean;
   hideFilters?: boolean;
+  showOutcomes?: boolean;
   filterState?: DiscoverFilterState;
 }) {
   const { t } = useI18n();
   const internal = useDiscoverFilterState(initialTab);
   const filters = filterState ?? internal;
-  const { tab, category, outcome } = filters;
-  const resetKey = `${query}\0${tab}\0${category}\0${outcome}`;
+  const { tab, category, outcome, app } = filters;
+  const resetKey = `${query}\0${tab}\0${category}\0${outcome}\0${app}`;
   const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
   const stories = useMemo(
-    () => filterDiscoverStories({ query, tab, category, outcome }),
-    [query, tab, category, outcome],
+    () => filterDiscoverStories({ query, tab, category, outcome, app }),
+    [query, tab, category, outcome, app],
   );
 
   const shown = stories.slice(0, visible);
@@ -200,7 +259,7 @@ export function DiscoverFeed({
         </div>
       ) : null}
 
-      {hideFilters ? null : <DiscoverFilters {...filters} />}
+      {hideFilters ? null : <DiscoverFilters {...filters} showOutcomes={showOutcomes} />}
 
       <p className="mt-6 text-[13px] text-faint">{t("discover.count", { n: stories.length })}</p>
       {tab === "community" ? (
@@ -237,6 +296,32 @@ export function DiscoverFeed({
         </>
       )}
     </div>
+  );
+}
+
+function IntegrationChip({
+  slug,
+  active,
+  onClick,
+}: {
+  slug: AppSlug;
+  active: boolean;
+  onClick: () => void;
+}) {
+  const app = appsBySlug[slug];
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-pressed={active}
+      className={cn(
+        "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border px-3 text-[13px] transition md:h-8",
+        active ? "border-accent text-ink" : "border-line text-mute hover:border-line-strong hover:text-ink",
+      )}
+    >
+      <NamedIcon name={app.icon} className="size-3.5" />
+      {app.name}
+    </button>
   );
 }
 

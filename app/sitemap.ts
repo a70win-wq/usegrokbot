@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }),
-    ...entries("/apps", { changeFrequency: "weekly", priority: 0.8 }),
+    ...entries("/integrations", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/prompts", { changeFrequency: "weekly", priority: 0.8 }),
     ...entries("/learn", { changeFrequency: "weekly", priority: 0.8 }),
     ...entries("/submit", { changeFrequency: "monthly", priority: 0.5 }),
@@ -53,7 +53,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...categories.flatMap((item) =>
       entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.6 }),
     ),
-    ...apps.flatMap((item) => entries(`/apps/${item.slug}`, { changeFrequency: "monthly", priority: 0.6 })),
+    ...apps.flatMap((item) =>
+      entries(`/integrations/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, reviewed),
+    ),
     ...learnArticles.flatMap((item) =>
       entries(
         `/learn/${item.slug}`,

@@ -33,10 +33,6 @@ export function DiscoverCard({
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
-  const checkLabel =
-    story.source === "official"
-      ? t("discover.verifiedOfficial", { date: checked })
-      : t("discover.sourceChecked", { date: checked });
   const buildHref = story.relatedUseCase ? `/use-cases/${story.relatedUseCase}` : `/discover/${story.slug}`;
   const buildLabel = story.relatedUseCase ? t("discover.buildWorkflow") : t("discover.readCase");
 
@@ -62,12 +58,13 @@ export function DiscoverCard({
             <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
           </div>
         </div>
-        <StatusBadge status={trust.status} label={trust.label} />
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          <StatusBadge status={trust.status} label={trust.label} />
+          <p className="text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
+            {t(`discover.cat${capitalize(story.category)}`)}
+          </p>
+        </div>
       </div>
-
-      <p className="mt-4 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
-        {t(`discover.cat${capitalize(story.category)}`)}
-      </p>
       <h3
         className={cn(
           "mt-1 font-medium tracking-tight text-ink",
@@ -97,9 +94,12 @@ export function DiscoverCard({
       </p>
 
       <div className="relative mt-3">
+        <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
+          {t("discover.integrations")}
+        </p>
         <AppNamePills apps={story.apps} />
       </div>
-      <p className="relative mt-3 text-[11px] text-faint">{checkLabel}</p>
+      <p className="relative mt-3 text-[11px] text-faint">{t("discover.lastVerified", { date: checked })}</p>
 
       <div className="relative z-10 mt-auto flex flex-col gap-2 pt-5 sm:flex-row-reverse sm:items-center sm:justify-end">
         <LocaleLink

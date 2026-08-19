@@ -1,4 +1,4 @@
-import type { App } from "./types";
+import type { App, AppSlug } from "./types";
 
 export const apps: App[] = [
   {
@@ -100,3 +100,19 @@ export const appsBySlug = Object.fromEntries(apps.map((app) => [app.slug, app]))
 >;
 
 export const homeApps = apps.filter((app) => app.showOnHome);
+
+export const popularIntegrationSlugs: AppSlug[] = [
+  "gmail",
+  "slack",
+  "google-sheets",
+  "github",
+  "notion",
+  "x",
+  "google-calendar",
+  "salesforce",
+];
+
+export function appSearchText(slug: AppSlug) {
+  const app = appsBySlug[slug];
+  return `${app.slug.replace(/-/g, " ")} ${app.name}`.toLowerCase();
+}
