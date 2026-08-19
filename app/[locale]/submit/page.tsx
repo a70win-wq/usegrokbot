@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { BlobatarAvatar } from "@/components/BlobatarAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -14,6 +15,16 @@ function isPublicXUrl(value: string) {
   }
 }
 
+function identityFromXUrl(value: string) {
+  try {
+    const url = new URL(value.trim());
+    if (!/^(www\.)?(x\.com|twitter\.com)$/i.test(url.hostname)) return "";
+    return decodeURIComponent(url.pathname.split("/").filter(Boolean)[0] ?? "").replace(/^@/, "");
+  } catch {
+    return "";
+  }
+}
+
 type IngestResponse = {
   status: "published" | "queued" | "extracted" | "skipped";
   slug?: string;
@@ -24,10 +35,14 @@ type IngestResponse = {
 };
 
 export default function SubmitPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState<IngestResponse | null>(null);
+  const [xUrlPreview, setXUrlPreview] = useState("");
+  const handle = identityFromXUrl(xUrlPreview);
+  const identitySeed = handle || "your-grok-bot";
+  const copy = identityCopy(locale);
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -93,9 +108,15 @@ export default function SubmitPage() {
 
       {done ? (
         <div className="mt-10 rounded-2xl border border-line bg-elevated px-5 py-8">
-          <p className="text-lg font-medium text-ink">
-            {done.status === "published" ? t("submit.published") : t("submit.queued")}
-          </p>
+          <div className="flex items-center gap-4">
+            <BlobatarAvatar name={identitySeed} size={56} expression="love" />
+            <div>
+              <p className="text-lg font-medium text-ink">
+                {done.status === "published" ? t("submit.published") : t("submit.queued")}
+              </p>
+              {handle ? <p className="mt-1 text-[13px] text-faint">@{handle}</p> : null}
+            </div>
+          </div>
           <div className="mt-5 flex flex-wrap gap-3">
             {done.url ? (
               <LocaleLink href={done.url} className="accent-gradient inline-flex h-11 items-center rounded-[10px] px-4 text-sm font-medium">
@@ -116,7 +137,29 @@ export default function SubmitPage() {
         </div>
       ) : (
         <form onSubmit={onSubmit} className="mt-10 space-y-5">
-          <Field name="xUrl" label={t("submit.xUrl")} required placeholder="https://x.com/..." />
+          <label className="block">
+            <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.xUrl")}</span>
+            <input
+              name="xUrl"
+              required
+              placeholder="https://x.com/..."
+              value={xUrlPreview}
+              onChange={(event) => setXUrlPreview(event.target.value)}
+              className="h-11 w-full rounded-[10px] border border-line bg-input px-3 text-sm text-ink placeholder:text-faint"
+            />
+          </label>
+
+          <div className="flex items-center gap-4 rounded-2xl border border-line bg-elevated px-4 py-4">
+            <BlobatarAvatar name={identitySeed} size={72} expression={handle ? "happy" : "thinking"} />
+            <div className="min-w-0">
+              <p className="text-sm font-medium text-ink">{copy.title}</p>
+              <p className="mt-1 truncate text-[13px] text-mute">
+                {handle ? `@${handle}` : copy.placeholderName}
+              </p>
+              <p className="mt-1 text-[12px] leading-5 text-faint">{copy.body}</p>
+            </div>
+          </div>
+
           <label className="block">
             <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.prompt")}</span>
             <textarea
@@ -148,26 +191,24 @@ export default function SubmitPage() {
   );
 }
 
-function Field({
-  name,
-  label,
-  required,
-  placeholder,
-}: {
-  name: string;
-  label: string;
-  required?: boolean;
-  placeholder?: string;
-}) {
-  return (
-    <label className="block">
-      <span className="mb-1.5 block text-[12px] font-medium text-faint">{label}</span>
-      <input
-        name={name}
-        required={required}
-        placeholder={placeholder}
-        className="h-11 w-full rounded-[10px] border border-line bg-input px-3 text-sm text-ink placeholder:text-faint"
-      />
-    </label>
-  );
+function identityCopy(locale: string) {
+  if (locale === "zh-Hant") {
+    return {
+      title: "你嘅 UseGrokBot 身份",
+      body: "貼上 X URL，就會即時生成你嘅社群 Blob。同一個 handle 永遠係同一隻。",
+      placeholderName: "你嘅 Grok Bot",
+    };
+  }
+  if (locale === "zh-Hans") {
+    return {
+      title: "你的 UseGrokBot 身份",
+      body: "贴上 X URL，就会即时生成你的社区 Blob。同一个 handle 永远是同一只。",
+      placeholderName: "你的 Grok Bot",
+    };
+  }
+  return {
+    title: "Your UseGrokBot identity",
+    body: "Paste an X URL to reveal your community Blob. Same handle, same creature every time.",
+    placeholderName: "Your Grok Bot",
+  };
 }

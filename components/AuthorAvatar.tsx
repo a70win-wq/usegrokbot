@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/cn";
+import { BlobatarAvatar } from "./BlobatarAvatar";
 
 export function AuthorAvatar({
   name,
@@ -15,13 +16,6 @@ export function AuthorAvatar({
   className?: string;
 }) {
   const [failed, setFailed] = useState(false);
-  const initials = name
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
   const src = handle && !failed ? `https://unavatar.io/x/${encodeURIComponent(handle)}` : undefined;
   const box = size === 48 ? "size-12" : "size-10";
 
@@ -40,15 +34,12 @@ export function AuthorAvatar({
   }
 
   return (
-    <span
-      aria-hidden
-      className={cn(
-        box,
-        "inline-flex shrink-0 items-center justify-center rounded-full bg-elevated text-[11px] font-medium text-mute",
-        className,
-      )}
-    >
-      {initials}
-    </span>
+    <BlobatarAvatar
+      name={handle ?? name}
+      size={size}
+      expression="happy"
+      className={className}
+      title={`${name} community avatar`}
+    />
   );
 }
