@@ -41,6 +41,12 @@ export function pageMeta({
 }): Metadata {
   const locale = parseUrlLocale(urlLocale);
   const url = absoluteUrl(path, locale);
+  const image = {
+    url: `${site.url}/opengraph-image`,
+    width: 1200,
+    height: 630,
+    alt: `${site.name} — ${title}`,
+  };
   return {
     title,
     description,
@@ -57,11 +63,13 @@ export function pageMeta({
       type: "website",
       locale: ogLocale[locale],
       alternateLocale: URL_LOCALES.filter((item) => item !== locale).map((item) => ogLocale[item]),
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [image],
     },
   };
 }

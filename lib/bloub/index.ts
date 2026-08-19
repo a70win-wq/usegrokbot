@@ -6,3 +6,4 @@ export { DEFAULT_EXPRESSION, EXPRESSION_BY_ID, EXPRESSIONS, type ExpressionId } 
 export { DEMI_VIEWBOX, RAYON } from "./repere";
 export { POSES, SEQUENCE, STATE_BY_ID, type StateId } from "./states";
 export { PITCH, PITCH_MAX, YAW_MAX } from "./gaze";
+export { BOT_EYE, BOT_INK, BOT_PAPER, botLogoDataUri, botLogoSvg } from "./logo-svg";

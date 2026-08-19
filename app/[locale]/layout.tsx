@@ -46,9 +46,18 @@ export async function generateMetadata({
       siteName: site.name,
       type: "website",
       locale: ogLocale[raw],
+      images: [
+        {
+          url: `${site.url}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: `${site.name} — ${messages[locale].home.title}`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
+      images: [`${site.url}/opengraph-image`],
     },
     robots: {
       index: true,

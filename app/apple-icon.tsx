@@ -1,11 +1,11 @@
 import { ImageResponse } from "next/og";
 import { BOT_INK, BOT_PAPER, botLogoDataUri } from "@/lib/bloub/logo-svg";
 
-export const size = { width: 32, height: 32 };
+export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 export const runtime = "nodejs";
 
-export default function Icon() {
+export default function AppleIcon() {
   return new ImageResponse(
     (
       <div
@@ -18,7 +18,7 @@ export default function Icon() {
           background: BOT_PAPER,
         }}
       >
-        <img src={botLogoDataUri({ ink: BOT_INK, size: 256 })} width={28} height={28} alt="" />
+        <img src={botLogoDataUri({ ink: BOT_INK, size: 512 })} width={148} height={148} alt="" />
       </div>
     ),
     size,
