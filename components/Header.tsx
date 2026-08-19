@@ -28,7 +28,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/90 backdrop-blur-md">
-      <div className="mx-auto flex h-12 max-w-[1120px] items-center justify-between px-5 md:px-8">
+      <div className="mx-auto flex h-12 max-w-[1240px] items-center justify-between px-5 md:px-8">
         <LocaleLink href="/" className="flex items-center gap-2 text-[15px] font-medium tracking-tight text-ink">
           <BotFace size={18} color={botColorFor("usegrokbot")} />
           UseGrokBot

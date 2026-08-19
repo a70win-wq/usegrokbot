@@ -11,6 +11,7 @@ export type DiscoverStoryI18n = {
   whoShouldTry: string[];
   usefulFor: string;
   quote?: string;
+  result?: string;
 };
 
 const hant: Record<string, DiscoverStoryI18n> = {
@@ -26,6 +27,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["收件箱炸掉的人", "創辦人", "營運"],
     usefulFor: "Gmail 浸死的人",
     quote: "Clear your email with @Grok @Bot",
+    result: "九萬封電郵 · 兩個 Gmail",
   },
   "week-of-hacks-nate-herk": {
     title: "一週 Grok Bot 技巧",
@@ -39,6 +41,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["已經有 Bot 的人", "想砌一小隊的營運", "創作者"],
     usefulFor: "營運 / 創作者",
     quote: "What’s ur @Bots?",
+    result: "九個技巧 · 一隻幕僚長",
   },
   "household-bots-blake-king": {
     title: "頭 48 小時，唔使識 code",
@@ -53,6 +56,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     usefulFor: "初學者 / 小生意",
     quote:
       "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+    result: "12 頁預算簡報 · 48 小時，唔使 code",
   },
   "grok-bot-launch-bot": {
     title: "Grok Bot 登場",
@@ -78,6 +82,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["SDR", "自己做外展的創辦人", "銷售主管"],
     usefulFor: "銷售 / 創辦人",
     quote: "researches accounts overnight, scores contacts with intent, drafts email and LinkedIn in each seller’s voice",
+    result: "通宵研究 · 早上只留待批核草稿",
   },
   "crm-notes-xai": {
     title: "通話後更新 CRM",
@@ -229,6 +234,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["收件箱炸掉的人", "创始人", "运营"],
     usefulFor: "被 Gmail 淹没的人",
     quote: "Clear your email with @Grok @Bot",
+    result: "九万封邮件 · 两个 Gmail",
   },
   "week-of-hacks-nate-herk": {
     title: "一周 Grok Bot 技巧",
@@ -242,6 +248,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["已经有 Bot 的人", "想组一小队的运营", "创作者"],
     usefulFor: "运营 / 创作者",
     quote: "What’s ur @Bots?",
+    result: "九个技巧 · 一只幕僚长",
   },
   "household-bots-blake-king": {
     title: "头 48 小时，不用会 code",
@@ -256,6 +263,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "初学者 / 小生意",
     quote:
       "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+    result: "12 页预算幻灯片 · 48 小时，不用 code",
   },
   "grok-bot-launch-bot": {
     title: "Grok Bot 上线",
@@ -281,6 +289,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["SDR", "自己做外展的创始人", "销售主管"],
     usefulFor: "销售 / 创始人",
     quote: "researches accounts overnight, scores contacts with intent, drafts email and LinkedIn in each seller’s voice",
+    result: "通宵研究 · 早上只留待审批草稿",
   },
   "crm-notes-xai": {
     title: "通话后更新 CRM",

@@ -23,7 +23,7 @@ export function UseCaseCard({
   const localeTag = locale === "en" ? "en" : locale;
 
   return (
-    <article className="spring-lift group relative flex h-full flex-col rounded-[16px] border border-line bg-card p-5 shadow-[0_1px_2px_rgb(0_0_0/0.04)] hover:border-line-strong hover:shadow-[0_10px_28px_rgb(0_0_0/0.06)]">
+    <article className="spring-lift group relative flex h-full flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
       <div className="flex items-start justify-between gap-3">
         <BotFace size={28} color={botColorFor(useCase.slug)} />
         <div className="relative z-10 flex items-center gap-1">

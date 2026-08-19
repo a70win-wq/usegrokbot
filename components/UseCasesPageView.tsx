@@ -15,7 +15,7 @@ export function UseCasesPageView({
   const { t, absoluteHref } = useI18n();
 
   return (
-    <div className="mx-auto max-w-[1120px] px-5 py-12 md:px-8 md:py-16">
+    <div className="mx-auto max-w-[1240px] px-5 py-12 md:px-8 md:py-16">
       <JsonLd
         data={{
           "@context": "https://schema.org",

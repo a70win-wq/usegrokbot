@@ -12,7 +12,7 @@ export default function SavedPage() {
   const items = slugs.map((slug) => getUseCase(slug)).filter(Boolean);
 
   return (
-    <div className="mx-auto max-w-[1120px] px-5 py-12 md:px-8 md:py-16">
+    <div className="mx-auto max-w-[1240px] px-5 py-12 md:px-8 md:py-16">
       <h1 className="text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{t("pages.savedTitle")}</h1>
       <p className="mt-3 text-base text-mute">{t("pages.savedBody")}</p>
       {!ready ? (

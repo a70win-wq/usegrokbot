@@ -46,9 +46,9 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
       />
 
       <section>
-        <div className="mx-auto max-w-[1120px] px-5 pt-16 pb-10 md:px-8 md:pt-24 md:pb-12">
+        <div className="mx-auto max-w-[1240px] px-5 pt-20 pb-12 md:px-8 md:pt-[104px] md:pb-16">
           <p className="text-[14px] text-mute">{t("home.kicker")}</p>
-          <h1 className="mt-5 max-w-3xl text-[clamp(40px,7vw,72px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
+          <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
             {t("home.title")}
           </h1>
           <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
@@ -61,11 +61,11 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-5 pb-8 md:px-8">
+      <section className="mx-auto max-w-[1240px] px-5 pb-8 md:px-8">
         <DiscoverFeed query={query} />
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-5 py-16 md:px-8 md:py-20">
+      <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{t("home.buildTitle")}</h2>
@@ -82,7 +82,7 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-5 py-16 md:px-8">
+      <section className="mx-auto max-w-[1240px] px-5 py-20 md:px-8">
         <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.how")}</h2>
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           {[
@@ -101,7 +101,7 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1120px] px-5 pt-6 pb-24 md:px-8">
+      <section className="mx-auto max-w-[1240px] px-5 pt-6 pb-24 md:px-8">
         <div className="rounded-[18px] border border-line bg-elevated px-6 py-12 text-center md:px-12">
           <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.ctaTitle")}</h2>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">

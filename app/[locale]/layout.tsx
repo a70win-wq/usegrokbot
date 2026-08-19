@@ -71,6 +71,7 @@ export default async function LocaleLayout({
       lang={htmlLang[locale]}
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      style={{ colorScheme: "dark" }}
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
         <Providers>

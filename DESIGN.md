@@ -1,12 +1,12 @@
 # UseGrokBot — Design System
 
-> A light workflow catalog. Not a blog. Not a dashboard. Not a chat app. Not a landing-page playground.
+> A dark discovery hub that still reads as a catalog. Not a blog. Not a dashboard. Not a chat app. Not a landing-page playground.
 
-The site should feel like Linear’s restraint + a Gumloop-style template library + a prompt directory. A visitor goes from “what can Grok Bot do?” to a copied prompt in about 30 seconds.
+The site should feel like Linear × Vercel × Gumloop, plus a little xAI. A visitor goes from a real X story to a copied setup without leaving.
 
-**Theme:** light. Bot faces carry the color. Do not switch to dark, purple glow, or liquid effects.
-**Canvas:** `#ffffff`
-**Accent:** near-black `#111111`. Orange `#ff9f1a` is reserved, almost never used.
+**Theme:** dark gray, not dead black. Upgrade the current IA — do not redesign it.
+**Canvas:** `#0B0D10`
+**Accent:** electric blue `#4F7CFF`. Violet `#8B5CF6` only on hover, featured glow, and official/verified highlight.
 
 ---
 
@@ -29,13 +29,14 @@ Discover → Understand → See the result → Copy the prompt → Use it
 
 ### Not this
 
-- Cyberpunk, neon glow, liquid goo, magnetic cursors
+- Cyberpunk, neon, liquid goo, magnetic cursors
 - Huge mesh gradients, aurora blobs, WebGL heroes
-- Generic Inter + purple glow + 3D orb
+- Generic Inter + purple wash + 3D orb
 - Crowded dashboard cards with 9 meta chips
 - Chat-agent chrome on the marketing surface
 - Stock “AI brain” artwork
-- Dark-mode flip mid-page
+- Violet used as a page color
+- Prompt-shop cards (Discover cards are case studies)
 
 ---
 
@@ -47,33 +48,33 @@ Surfaces step up in small increments. Elevation comes from **hairline borders**,
 
 | Token | Hex | Role |
 |---|---|---|
-| `--canvas` | `#ffffff` | Page canvas |
-| `--elevated` | `#f6f6f6` | Header bands, tools strip, search fill, prompt well |
-| `--card` | `#ffffff` | Cards, panels |
-| `--card-hover` | `#fafafa` | Card hover |
-| `--input` | `#ffffff` | Form fields, prompt body |
+| `--canvas` | `#0B0D10` | Page canvas |
+| `--elevated` | `#171A20` | Nested wells, search fill, result box |
+| `--card` | `#12151A` | Cards, panels |
+| `--card-hover` | `#171A20` | Card hover |
+| `--input` | `#171A20` | Form fields, prompt body |
 
 ### Borders and text
 
 | Token | Hex | Role |
 |---|---|---|
-| `--line` | `rgb(0 0 0 / 0.08)` | Default hairline |
-| `--line-strong` | `rgb(0 0 0 / 0.16)` | Hover, focus-adjacent |
-| `--ink` | `#111111` | Headings, primary copy |
-| `--mute` | `#6b6b6b` | Body, descriptions |
-| `--faint` | `#8e8e8e` | Meta, placeholders, captions |
-| `--inverse` | `#ffffff` | Text on solid fills |
+| `--line` | `rgb(255 255 255 / 0.08)` | Default hairline |
+| `--line-strong` | `rgb(255 255 255 / 0.16)` | Hover, focus-adjacent |
+| `--ink` | `#F5F7FA` | Headings, primary copy |
+| `--mute` | `#9CA3AF` | Body, descriptions |
+| `--faint` | `#6B7280` | Meta, placeholders, captions |
+| `--inverse` | `#0B0D10` | Text on solid fills |
 
 ### Accent — use sparingly
 
-The brand accent is **near-black**, not a wash. Color lives in BotFace marks.
+The brand accent is **electric blue**. Violet is a highlight, not a theme.
 
 | Token | Value | Role |
 |---|---|---|
-| `--accent` | `#111111` | Links, focus ring, active chip, icon marks |
-| `--accent-2` | `#ff9f1a` | Reserved. Do not use as a page accent. |
-| `--accent-soft` | `rgb(0 0 0 / 0.04)` | Chip / icon well fill |
-| `--accent-gradient` | `#111111` | Primary filled CTA only |
+| `--accent` | `#4F7CFF` | Primary CTA, links, focus, active tab |
+| `--accent-2` | `#8B5CF6` | Hover mix, featured glow, official badge only |
+| `--accent-soft` | `rgb(79 124 255 / 0.14)` | Chip / icon well fill |
+| `--accent-gradient` | `#4F7CFF` | Primary filled CTA: Build this workflow |
 
 ### Status (example output only)
 
@@ -88,8 +89,8 @@ The brand accent is **near-black**, not a wash. Color lives in BotFace marks.
 - One filled action per view. Everything else is ghost, hairline, or text.
 - No colored body text. Body stays `--mute`.
 - No gradient on cards, chips, or section backgrounds.
-- Do not introduce purple glow, liquid goo, or extra brand hues.
-- One elevated band per page is enough to break white-on-white. Do not stripe every section.
+- Featured glow only: blue → violet at 5–10% opacity. No cyberpunk wash.
+- One featured card may take two columns. Do not stripe every section.
 
 ---
 
@@ -124,14 +125,14 @@ The brand accent is **near-black**, not a wash. Color lives in BotFace marks.
 
 | Token | Value |
 |---|---|
-| Page max | `1120px` |
+| Page max | `1240px` |
 | Narrow (learn, submit, prompt well) | `760px` |
 | Detail content | `800px` + optional 280px related rail on xl |
 | Gutter | 20px mobile / 32px desktop |
 | Section gap | 72px mobile / 104px desktop |
 | Card gap | 16px mobile / 20px desktop |
 | Header height | 56px |
-| Radius card | 14px |
+| Radius card | 16px |
 | Radius control | 10px |
 | Radius chip / pill | 999px |
 | Radius prompt | 12px |

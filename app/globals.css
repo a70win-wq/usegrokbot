@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --canvas: #ffffff;
-  --elevated: #f6f6f6;
-  --card: #ffffff;
-  --card-hover: #fafafa;
-  --input: #ffffff;
-  --line: rgb(0 0 0 / 0.08);
-  --line-strong: rgb(0 0 0 / 0.16);
-  --ink: #111111;
-  --mute: #6b6b6b;
-  --faint: #8e8e8e;
-  --accent: #111111;
-  --accent-2: #ff9f1a;
-  --accent-soft: rgb(0 0 0 / 0.04);
+  color-scheme: dark;
+  --canvas: #0b0d10;
+  --elevated: #171a20;
+  --card: #12151a;
+  --card-hover: #171a20;
+  --input: #171a20;
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.16);
+  --ink: #f5f7fa;
+  --mute: #9ca3af;
+  --faint: #6b7280;
+  --accent: #4f7cff;
+  --accent-2: #8b5cf6;
+  --accent-soft: rgb(79 124 255 / 0.14);
   --danger: #ff3b30;
   --warn: #ff9f0a;
   --ok: #34c759;
-  --inverse: #ffffff;
+  --inverse: #0b0d10;
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -56,7 +57,7 @@ body {
 }
 
 ::selection {
-  background: rgb(0 0 0 / 0.12);
+  background: rgb(79 124 255 / 0.28);
   color: var(--ink);
 }
 
@@ -66,8 +67,18 @@ body {
 }
 
 .accent-gradient {
-  background: #111111;
-  color: #ffffff;
+  background: #4f7cff;
+  color: #f5f7fa;
+}
+
+.accent-gradient:hover {
+  background: color-mix(in srgb, #4f7cff 88%, #8b5cf6);
+}
+
+.featured-glow {
+  box-shadow:
+    0 0 80px rgb(79 124 255 / 0.08),
+    0 0 120px rgb(139 92 246 / 0.05);
 }
 
 .prompt-scroll::-webkit-scrollbar {
@@ -76,7 +87,7 @@ body {
 }
 
 .prompt-scroll::-webkit-scrollbar-thumb {
-  background: rgb(0 0 0 / 0.15);
+  background: rgb(255 255 255 / 0.16);
   border-radius: 999px;
 }
 

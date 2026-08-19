@@ -40,6 +40,7 @@ export type DiscoverStory = {
   whoShouldTry: string[];
   usefulFor: string;
   quote?: string;
+  result?: string;
   category: DiscoverCategorySlug;
   outcomes: OutcomeSlug[];
   apps: AppSlug[];
@@ -85,6 +86,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Anyone with a wrecked inbox", "Founders", "Operators"],
     usefulFor: "Anyone drowning in Gmail",
     quote: "Clear your email with @Grok @Bot",
+    result: "90,000 emails · two Gmail accounts",
     category: "operations",
     outcomes: ["save-time", "automate-work"],
     apps: ["gmail"],
@@ -115,6 +117,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["People who already have a Bot", "Operators building a small team", "Creators"],
     usefulFor: "Operators / Creators",
     quote: "What’s ur @Bots?",
+    result: "9 hacks · one chief of staff",
     category: "operations",
     outcomes: ["automate-work", "save-time"],
     apps: ["browser", "gmail"],
@@ -146,6 +149,7 @@ export const discoverStories: DiscoverStory[] = [
     usefulFor: "Beginners / Small business",
     quote:
       "I have zero coding experience. … I set up the bot, linked my email, had it build a full 12-page household budget PowerPoint",
+    result: "12-page budget deck · 48 hours, no code",
     category: "personal",
     outcomes: ["save-time", "automate-work"],
     apps: ["gmail", "browser"],
@@ -207,6 +211,7 @@ export const discoverStories: DiscoverStory[] = [
     usefulFor: "Sales / Founders",
     quote:
       "researches accounts overnight, scores contacts with intent, drafts email and LinkedIn in each seller’s voice",
+    result: "Overnight research · drafts ready to approve",
     category: "sales",
     outcomes: ["make-money", "grow-business"],
     apps: ["browser", "gmail", "linkedin"],

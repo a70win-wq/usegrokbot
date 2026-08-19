@@ -14,7 +14,7 @@ export function ExampleOutput({ example }: { example: UseCase["exampleOutput"] }
   const { t } = useI18n();
 
   return (
-    <div className="rounded-[16px] border border-line bg-card p-5 shadow-[0_1px_2px_rgb(0_0_0/0.04)] md:p-6">
+    <div className="rounded-2xl border border-line bg-card p-5 md:p-6">
       <p className="font-mono text-[11px] font-medium tracking-wide text-faint uppercase">{t("detail.example")}</p>
       <h3 className="mt-2 text-lg font-medium tracking-tight text-ink">{example.title}</h3>
       <div className="mt-5 space-y-5">

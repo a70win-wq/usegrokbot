@@ -6,10 +6,12 @@ import { cn } from "@/lib/cn";
 export function AuthorAvatar({
   name,
   handle,
+  size = 40,
   className,
 }: {
   name: string;
   handle?: string;
+  size?: 40 | 48;
   className?: string;
 }) {
   const [failed, setFailed] = useState(false);
@@ -21,6 +23,7 @@ export function AuthorAvatar({
     .slice(0, 2)
     .toUpperCase();
   const src = handle && !failed ? `https://unavatar.io/x/${encodeURIComponent(handle)}` : undefined;
+  const box = size === 48 ? "size-12" : "size-10";
 
   if (src) {
     return (
@@ -28,9 +31,9 @@ export function AuthorAvatar({
       <img
         src={src}
         alt=""
-        width={36}
-        height={36}
-        className={cn("size-9 shrink-0 rounded-full bg-elevated object-cover", className)}
+        width={size}
+        height={size}
+        className={cn(box, "shrink-0 rounded-full bg-elevated object-cover", className)}
         onError={() => setFailed(true)}
       />
     );
@@ -40,7 +43,8 @@ export function AuthorAvatar({
     <span
       aria-hidden
       className={cn(
-        "inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-elevated text-[11px] font-medium text-mute",
+        box,
+        "inline-flex shrink-0 items-center justify-center rounded-full bg-elevated text-[11px] font-medium text-mute",
         className,
       )}
     >

@@ -93,6 +93,12 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       </div>
       <h1 className="mt-2 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p>
+      {item.result ? (
+        <div className="mt-6 rounded-[12px] border border-line bg-elevated px-4 py-3">
+          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">{t("discover.result")}</p>
+          <p className="mt-1 text-[15px] text-ink">{item.result}</p>
+        </div>
+      ) : null}
 
       <section className="mt-10">
         <h2 className="text-[13px] font-medium tracking-[0.08em] text-faint uppercase">{t("discover.whatTheyDid")}</h2>
@@ -140,12 +146,25 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
         <AppNamePills apps={story.apps} />
       </div>
 
-      <p className="mt-6 text-[14px]">
-        <a href={originalHref} target="_blank" rel="noreferrer" className="text-accent">
+      <div className="mt-8 flex flex-col gap-2 sm:flex-row-reverse sm:items-center sm:justify-end">
+        {related ? (
+          <LocaleLink
+            href={`/use-cases/${related.slug}`}
+            className="accent-gradient spring-press inline-flex h-11 items-center justify-center rounded-[10px] px-4 text-sm font-medium"
+          >
+            {t("discover.buildWorkflow")} →
+          </LocaleLink>
+        ) : null}
+        <a
+          href={originalHref}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex h-11 items-center justify-center rounded-[10px] border border-line px-4 text-sm text-mute hover:border-line-strong hover:text-ink"
+        >
           {originalLabel} ↗
         </a>
-        <span className="mt-1 block text-[12px] text-faint">{story.sourceLabel}</span>
-      </p>
+      </div>
+      <p className="mt-2 text-[12px] text-faint">{story.sourceLabel}</p>
 
       {story.xPostUrl ? (
         <section className="mt-12">
@@ -163,7 +182,7 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           <p className="mt-2 text-sm text-mute">{t("discover.relatedWorkflow")}</p>
           <LocaleLink
             href={`/use-cases/${related.slug}`}
-            className="mt-4 inline-flex h-11 items-center rounded-[10px] bg-ink px-4 text-sm font-medium text-inverse"
+            className="accent-gradient spring-press mt-4 inline-flex h-11 items-center rounded-[10px] px-4 text-sm font-medium"
           >
             {t("discover.viewGuide", { title: relatedTitle ?? related.title })} →
           </LocaleLink>

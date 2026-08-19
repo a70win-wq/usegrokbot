@@ -13,7 +13,7 @@ export function CategoryDetailView({ category, items }: { category: Category; it
   const item = localizeCategory(category, locale);
 
   return (
-    <div className="mx-auto max-w-[1120px] px-5 py-12 md:px-8 md:py-16">
+    <div className="mx-auto max-w-[1240px] px-5 py-12 md:px-8 md:py-16">
       <Breadcrumbs items={[{ href: "/categories", label: t("nav.categories") }, { label: item.name }]} />
       <h1 className="mt-6 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">
         {t("pages.categoryHeading", { name: item.name })}
