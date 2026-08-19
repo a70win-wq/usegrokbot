@@ -128,7 +128,7 @@ export function CommunityView({
 }
 
 function communityCopy(locale: string) {
-  if (locale === "zh-hk") {
+  if (locale === "zh-Hant") {
     return {
       title: "UseGrokBot 社群",
       body: "睇下邊啲人分享緊真實 Grok Bot 案例，同埋邊啲開源 Contributor 幫緊 UseGrokBot 成長。每個公開 handle 都有一隻固定 Blob 身份。",
@@ -145,7 +145,7 @@ function communityCopy(locale: string) {
       sourceOnly: "公開來源作者",
     };
   }
-  if (locale === "zh-cn") {
+  if (locale === "zh-Hans") {
     return {
       title: "UseGrokBot 社区",
       body: "看看谁在分享真实 Grok Bot 案例，以及哪些开源 Contributor 正在帮助 UseGrokBot 成长。每个公开 handle 都有一只固定 Blob 身份。",
