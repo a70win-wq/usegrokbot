@@ -1,3 +1,4 @@
+import ingestedStories from "./discover/ingested.json";
 import { appSearchText } from "./apps";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { getUseCase } from "./use-cases";
@@ -95,7 +96,7 @@ const JELLYPOD = "https://www.jellypod.com/workflows/how-to-use-grok-bot-for-mar
 const AXEL =
   "https://www.linkedin.com/posts/axel-schapmann_how-to-use-grok-bot-for-reddit-marketing-activity-7494004829774688256-L40s";
 
-export const discoverStories: DiscoverStory[] = [
+const curatedStories: DiscoverStory[] = [
   {
     slug: "clear-email-elon",
     title: "Clear Your Email",
@@ -836,6 +837,11 @@ export const discoverStories: DiscoverStory[] = [
     sourceLabel: "Jellypod: How to use Grok Bot for marketing",
     relatedUseCase: "competitor-monitor",
   },
+];
+
+export const discoverStories: DiscoverStory[] = [
+  ...curatedStories,
+  ...(ingestedStories as DiscoverStory[]),
 ];
 
 const bySlug = new Map(discoverStories.map((story) => [story.slug, story]));

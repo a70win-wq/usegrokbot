@@ -107,6 +107,8 @@ npm run lint
 npm run build
 ```
 
+The fastest way to add a public example is [Submit a use case](https://usegrokbot.com/submit). Paste the X post. A machine extracts the rest, validates it, and publishes if it passes.
+
 ## Contributing
 
 Contributions are welcome.
@@ -124,7 +126,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution rules.
 
 ## Roadmap
 
-The project is moving toward a community-powered, zero-touch ingestion pipeline:
+X post submissions already run this loop. Other public sources are next:
 
 ```text
 X / public source

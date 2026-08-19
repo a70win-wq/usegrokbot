@@ -27,6 +27,18 @@ The easiest path is the website submission page:
 
 A submission should start from a **real public source** such as an X post, article, video, or public GitHub project.
 
+For an X post, the site then:
+
+1. Reads the public post
+2. Asks a model to draft the case
+3. Validates source, attribution, duplicates, and result numbers
+4. Opens a pull request
+5. Merges it if validation passed
+
+Normal cases do not wait for a person. Failures go to a GitHub issue labeled `error-queue`.
+
+Set `INGEST_GITHUB_TOKEN` on Vercel (contents + pull requests) so `/api/ingest` can open and merge the PR. AI calls go through the Vercel AI Gateway.
+
 ## Source and attribution rules
 
 Every community example should preserve the original source.
@@ -56,7 +68,7 @@ If it does not, describe the concrete deliverable as an **Output** instead.
 
 ## Discover stories
 
-Discover content currently lives in `data/discover.ts`.
+Curated discover content lives in `data/discover.ts`. Machine-ingested X cases are appended to `data/discover/ingested.json`.
 
 A good discover story explains:
 
