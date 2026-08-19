@@ -30,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (latest, item) => (item.publishedAt > latest ? item.publishedAt : latest),
     discoverStories[0]?.publishedAt ?? LAST_REVIEWED,
   );
+  const communityHandles = [...new Set(
+    discoverStories
+      .filter((item) => item.source === "community" && item.handle)
+      .map((item) => item.handle!.toLowerCase()),
+  )];
 
   return [
     ...entries("/", { changeFrequency: "weekly", priority: 1 }, day(latestStory)),
@@ -40,6 +45,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/integrations", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
+    ...entries("/community", { changeFrequency: "weekly", priority: 0.6 }, day(latestStory)),
+    ...communityHandles.flatMap((handle) =>
+      entries(`/community/${handle}`, { changeFrequency: "weekly", priority: 0.5 }, day(latestStory)),
+    ),
     ...entries("/prompts", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/learn", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/submit", { changeFrequency: "monthly", priority: 0.5 }, reviewed),
