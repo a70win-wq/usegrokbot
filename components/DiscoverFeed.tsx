@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { DiscoverCard } from "@/components/DiscoverCard";
 import {
   discoverCategorySlugs,
@@ -178,7 +178,9 @@ export function DiscoverFeed({
   const internal = useDiscoverFilterState(initialTab);
   const filters = filterState ?? internal;
   const { tab, category, outcome } = filters;
-  const [visible, setVisible] = useState(PAGE_SIZE);
+  const resetKey = `${query}\0${tab}\0${category}\0${outcome}`;
+  const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
+  const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
   const stories = useMemo(
     () => filterDiscoverStories({ query, tab, category, outcome }),
@@ -186,10 +188,6 @@ export function DiscoverFeed({
   );
 
   const shown = stories.slice(0, visible);
-
-  useEffect(() => {
-    setVisible(PAGE_SIZE);
-  }, [query, tab, category, outcome]);
 
   return (
     <div>
@@ -229,7 +227,7 @@ export function DiscoverFeed({
             <div className="mt-8 flex justify-center">
               <button
                 type="button"
-                onClick={() => setVisible((count) => count + PAGE_SIZE)}
+                onClick={() => setPage({ key: resetKey, count: visible + PAGE_SIZE })}
                 className="inline-flex h-11 items-center rounded-[10px] border border-line px-5 text-sm text-ink hover:border-line-strong"
               >
                 {t("discover.loadMore")}
