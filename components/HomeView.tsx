@@ -58,7 +58,12 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
               </h1>
               <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
               <div className="mt-8">
-                <SearchBar initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
+                <SearchBar
+                  initialQuery={initialQuery}
+                  onQueryChange={setQuery}
+                  stayOnPage
+                  destination="discover"
+                />
               </div>
               <p className="mt-4 text-[12px] text-faint">
                 {t("home.proof", { n: useCases.length })}

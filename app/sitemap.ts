@@ -38,11 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries(`/discover/${item.slug}`, { changeFrequency: "weekly", priority: 0.8 }, day(item.publishedAt)),
     ),
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }),
+    ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
     ...entries("/integrations", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/prompts", { changeFrequency: "weekly", priority: 0.8 }),
-    ...entries("/learn", { changeFrequency: "weekly", priority: 0.8 }),
-    ...entries("/submit", { changeFrequency: "monthly", priority: 0.5 }),
+    ...entries("/prompts", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
+    ...entries("/learn", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
+    ...entries("/submit", { changeFrequency: "monthly", priority: 0.5 }, reviewed),
     ...useCases.flatMap((item) =>
       entries(
         `/use-cases/${item.slug}`,
@@ -51,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
     ),
     ...categories.flatMap((item) =>
-      entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.6 }),
+      entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.6 }, reviewed),
     ),
     ...apps.flatMap((item) =>
       entries(`/integrations/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, reviewed),

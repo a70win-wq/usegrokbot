@@ -1,55 +1,49 @@
 "use client";
 
 import { useState } from "react";
-import { categories } from "@/data/categories";
-import { localizeCategory, useI18n } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
+function isPublicXUrl(value: string) {
+  try {
+    const url = new URL(value);
+    return /^(www\.)?(x\.com|twitter\.com)$/i.test(url.hostname) && url.pathname.length > 1;
+  } catch {
+    return false;
+  }
+}
+
 export default function SubmitPage() {
-  const { locale, t } = useI18n();
+  const { t } = useI18n();
   const [error, setError] = useState("");
 
   function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const name = String(form.get("name") ?? "").trim();
-    const does = String(form.get("does") ?? "").trim();
-    if (!name || !does) {
+    const xUrl = String(form.get("xUrl") ?? "").trim();
+    if (!xUrl) {
       setError(t("submit.missing"));
       return;
     }
+    if (!isPublicXUrl(xUrl)) {
+      setError(t("submit.invalidUrl"));
+      return;
+    }
 
-    const title = `Pending review: ${name}`;
+    const title = `Ingest use case: ${xUrl}`;
     const body = [
-      "## Status",
-      "Pending review — do not publish automatically.",
-      "",
       "## X post URL",
-      String(form.get("xUrl") ?? "Not provided"),
-      "",
-      "## What they built",
-      does,
-      "",
-      "## Result / outcome",
-      String(form.get("result") ?? "Not provided"),
-      "",
-      "## Integrations",
-      String(form.get("apps") ?? "Not specified"),
-      "",
-      "## Category",
-      String(form.get("category") ?? ""),
-      "",
-      "## Workflow steps",
-      String(form.get("steps") ?? "Not provided"),
+      xUrl,
       "",
       "## Prompt",
-      "```",
-      String(form.get("prompt") ?? "Not provided"),
-      "```",
+      String(form.get("prompt") ?? "").trim() || "Not provided",
       "",
-      "## Submitted by",
-      String(form.get("author") ?? "Anonymous"),
-      String(form.get("handle") ?? ""),
+      "## Notes",
+      String(form.get("notes") ?? "").trim() || "Not provided",
+      "",
+      "## Ingest",
+      "Extract name, @handle, post date, title, what they built, apps / integrations, result or output, category, trust status, and the original X source.",
+      "Do not invent result numbers. If the post has no number, publish it as Output.",
     ].join("\n");
 
     const url = `https://github.com/${site.githubRepo}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
@@ -70,49 +64,22 @@ export default function SubmitPage() {
       </p>
 
       <form onSubmit={onSubmit} className="mt-10 space-y-5">
-        <Field name="name" label={t("submit.name")} required />
-        <Field name="author" label={t("submit.author")} />
-        <Field name="handle" label={t("submit.handle")} placeholder="@handle" />
-        <Field name="xUrl" label={t("submit.xUrl")} placeholder="https://x.com/..." />
-        <label className="block">
-          <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.does")}</span>
-          <textarea
-            name="does"
-            required
-            rows={4}
-            className="w-full rounded-[10px] border border-line bg-input px-3 py-2.5 text-sm text-ink"
-          />
-        </label>
-        <Field name="result" label={t("submit.result")} placeholder={t("submit.resultHint")} />
-        <label className="block">
-          <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.category")}</span>
-          <select
-            name="category"
-            className="h-11 w-full rounded-[10px] border border-line bg-input px-3 text-sm text-ink"
-            defaultValue="sales"
-          >
-            {categories.map((category) => (
-              <option key={category.slug} value={category.slug}>
-                {localizeCategory(category, locale).name}
-              </option>
-            ))}
-          </select>
-        </label>
-        <Field name="apps" label={t("submit.apps")} placeholder="Gmail, Slack, Browser" />
-        <label className="block">
-          <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.steps")}</span>
-          <textarea
-            name="steps"
-            rows={4}
-            className="w-full rounded-[10px] border border-line bg-input px-3 py-2.5 text-sm text-ink"
-          />
-        </label>
+        <Field name="xUrl" label={t("submit.xUrl")} required placeholder="https://x.com/..." />
         <label className="block">
           <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.prompt")}</span>
           <textarea
             name="prompt"
             rows={8}
             className="w-full rounded-[10px] border border-line bg-input px-3 py-2.5 font-mono text-[13px] text-ink"
+          />
+        </label>
+        <label className="block">
+          <span className="mb-1.5 block text-[12px] font-medium text-faint">{t("submit.notes")}</span>
+          <textarea
+            name="notes"
+            rows={4}
+            placeholder={t("submit.notesHint")}
+            className="w-full rounded-[10px] border border-line bg-input px-3 py-2.5 text-sm text-ink placeholder:text-faint"
           />
         </label>
         {error ? <p className="text-sm text-danger">{error}</p> : null}
