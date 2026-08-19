@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "slug": "farzyness-webby-shotry-writey",
+    "title": "Webby / Shotry / Writey",
+    "headline": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "whatTheyDid": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Farzad 🇺🇸 🇮🇷",
+    "handle": "farzyness",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/farzyness/status/2087340859138224540",
+    "sourceUrl": "https://x.com/farzyness/status/2087340859138224540",
+    "sourceLabel": "Farzad 🇺🇸 🇮🇷 on X"
+  }
+]
