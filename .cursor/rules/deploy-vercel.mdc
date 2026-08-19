@@ -1,0 +1,25 @@
+---
+description: After finishing site updates, deploy them to Vercel production
+alwaysApply: true
+---
+
+# Deploy to Vercel after updates
+
+When you finish a user-requested change that should go live (UI, copy, pages, content, styles), deploy it to Vercel production before you stop. Do not wait for the user to ask again.
+
+## How
+
+This repo is linked to Vercel project `usegrokbot` (team `aipost`) via `.vercel/project.json`. There is no git remote. Use the CLI, not git push:
+
+```bash
+vercel deploy --prod -y --no-wait --scope aipost
+vercel inspect <deployment-url>
+```
+
+Then give the user the production URL (`https://usegrokbot.com` and the deployment URL).
+
+## Do not
+
+- Deploy unrelated local experiments or half-finished work
+- Change Vercel env vars, domains, or project settings as part of a normal deploy
+- Skip deploy because the change looks small. If it is on the live site, ship it.
