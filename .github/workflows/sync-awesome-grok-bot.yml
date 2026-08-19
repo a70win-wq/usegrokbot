@@ -1,0 +1,49 @@
+name: Sync awesome-grok-bot Field Cases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync-awesome-grok-bot.mjs"
+      - ".github/workflows/sync-awesome-grok-bot.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-awesome-grok-bot-field-cases
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Sync Field Cases source feed
+        run: node scripts/sync-awesome-grok-bot.mjs
+
+      - name: Commit source-feed changes
+        shell: bash
+        run: |
+          if git diff --quiet -- data/source-feeds/awesome-grok-bot-field-cases.json; then
+            echo "No source-feed changes."
+            exit 0
+          fi
+
+          git config user.name "usegrokbot-source-bot"
+          git config user.email "usegrokbot-source-bot@users.noreply.github.com"
+          git add data/source-feeds/awesome-grok-bot-field-cases.json
+          git commit -m "chore: sync awesome-grok-bot Field Cases"
+          git push origin HEAD:main
