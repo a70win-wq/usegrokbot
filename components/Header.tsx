@@ -7,13 +7,14 @@ import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
 import { BotFace, botColorFor } from "./BotFace";
+import { GitHubStar } from "./GitHubStar";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
 import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
 import { useSaved } from "./saved";
 
-export function Header() {
+export function Header({ stars }: { stars?: number | null }) {
   const pathname = usePathname();
   const path = stripLocalePrefix(pathname);
   const { slugs } = useSaved();
@@ -66,6 +67,7 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <HeaderSearch />
+          <GitHubStar stars={stars} />
           <ThemeToggle />
           <div className="hidden lg:block">
             <LanguageSwitch />

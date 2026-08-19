@@ -13,6 +13,10 @@ export const messages = {
       nextColor: "Change bot color",
       credit: "Bot avatar from bloub",
     },
+    github: {
+      star: "Star",
+      starAria: "Star UseGrokBot on GitHub",
+    },
     nav: {
       discover: "Discover",
       useCases: "Use Cases",
@@ -330,6 +334,10 @@ export const messages = {
       nextColor: "轉機械人顏色",
       credit: "機械人頭像來自 bloub",
     },
+    github: {
+      star: "星星",
+      starAria: "喺 GitHub 畀 UseGrokBot 星星",
+    },
     nav: {
       discover: "發現",
       useCases: "使用案例",
@@ -643,6 +651,10 @@ export const messages = {
       aria: "Grok Bot 头像",
       nextColor: "换机器人颜色",
       credit: "机器人头像来自 bloub",
+    },
+    github: {
+      star: "点星",
+      starAria: "在 GitHub 给 UseGrokBot 点星",
     },
     nav: {
       discover: "发现",

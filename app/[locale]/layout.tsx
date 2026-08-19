@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Providers } from "@/components/Providers";
+import { getGithubStars } from "@/lib/github";
 import { messages } from "@/lib/i18n/messages";
 import { URL_LOCALES, htmlLang, isUrlLocale, ogLocale, urlToLocale } from "@/lib/i18n/paths";
 import { site } from "@/lib/site";
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
   if (!isUrlLocale(locale)) notFound();
+  const stars = await getGithubStars();
 
   return (
     <html
@@ -86,9 +88,9 @@ export default async function LocaleLayout({
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <Providers>
-          <Header />
+          <Header stars={stars} />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer stars={stars} />
         </Providers>
       </body>
     </html>

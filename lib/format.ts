@@ -4,6 +4,13 @@ export function setupMinutes(setupTime: string) {
   return setupTime.replace(" min", "");
 }
 
+export function formatStarCount(count: number) {
+  if (count < 1000) return String(count);
+  if (count < 10_000) return `${(count / 1000).toFixed(1).replace(/\.0$/, "")}k`;
+  if (count < 1_000_000) return `${Math.round(count / 1000)}k`;
+  return `${(count / 1_000_000).toFixed(1).replace(/\.0$/, "")}m`;
+}
+
 export function formatRelativeTime(isoDate: string, locale: Locale, now = new Date()) {
   const date = new Date(isoDate.includes("T") ? isoDate : `${isoDate}T12:00:00Z`);
   const diffMs = date.getTime() - now.getTime();

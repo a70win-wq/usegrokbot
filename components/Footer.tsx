@@ -2,15 +2,16 @@
 
 import { useI18n } from "@/lib/i18n";
 import { BotFace, botColorFor } from "./BotFace";
+import { GitHubStar } from "./GitHubStar";
 import { LocaleLink } from "./LocaleLink";
 
-export function Footer() {
+export function Footer({ stars }: { stars?: number | null }) {
   const { t } = useI18n();
 
   return (
     <footer className="mt-auto border-t border-line">
       <div className="mx-auto flex max-w-[1240px] flex-col px-5 py-12 md:px-8">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-mute">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-mute">
           <LocaleLink href="/" className="flex items-center gap-2 text-ink">
             <BotFace size={18} color={botColorFor("usegrokbot")} />
             UseGrokBot
@@ -36,6 +37,7 @@ export function Footer() {
           <LocaleLink href="/submit" className="hover:text-ink">
             {t("nav.submitShort")}
           </LocaleLink>
+          <GitHubStar stars={stars} label="always" />
         </div>
         <p className="mt-6 text-[12px] text-faint">
           <a href="https://github.com/jeremy-prt/bloub" className="hover:text-mute" rel="noreferrer">
