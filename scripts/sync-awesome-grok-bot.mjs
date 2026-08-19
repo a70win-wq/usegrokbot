@@ -42,6 +42,7 @@ function sourceType(url) {
   const host = new URL(url).hostname.replace(/^www\./, "");
   if (host === "x.com" || host === "twitter.com") return "x";
   if (host === "youtube.com" || host === "youtu.be") return "youtube";
+  if (host === "github.com") return "github";
   if (host.endsWith("substack.com")) return "newsletter";
   if (host === "note.com") return "note";
   return "article";
@@ -111,9 +112,17 @@ async function main() {
     const alreadyIngested = existingUrls.has(item.url);
     const old = previousByUrl.get(item.url);
     const oldIngest = old?.ingest && typeof old.ingest === "object" ? old.ingest : undefined;
-    const ingest = alreadyIngested
-      ? { status: "published", attempts: oldIngest?.attempts ?? 0 }
-      : oldIngest ?? { status: type === "x" ? "pending" : "source-only", attempts: 0 };
+
+    let ingest;
+    if (alreadyIngested) {
+      ingest = { status: "published", attempts: oldIngest?.attempts ?? 0 };
+    } else if (oldIngest?.status === "source-only") {
+      // V2 stored non-X links without processing them. V3 promotes them into the
+      // same zero-touch queue used by X cases.
+      ingest = { status: "pending", attempts: oldIngest?.attempts ?? 0 };
+    } else {
+      ingest = oldIngest ?? { status: "pending", attempts: 0 };
+    }
 
     return {
       id: slugify(item.title),
@@ -128,21 +137,22 @@ async function main() {
   });
 
   const payload = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     source: {
       name: "awesome-grok-bot Field Cases",
       repository: "https://github.com/RongleCat/awesome-grok-bot",
       rawReadme: README_URL,
       section: "Field Cases",
       sourceListLicense: "CC0-1.0",
-      note: "The list metadata is CC0. Linked X posts, articles, videos and other source content retain their own rights. UseGrokBot summarizes the original source and links back rather than copying it wholesale.",
+      note: "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale.",
     },
     stats: {
       total: cases.length,
       candidates: cases.filter((item) => item.sourceStatus === "candidate").length,
       xCandidates: cases.filter((item) => item.sourceStatus === "candidate" && item.sourceType === "x").length,
+      nonXCandidates: cases.filter((item) => item.sourceStatus === "candidate" && item.sourceType !== "x").length,
       alreadyIngested: cases.filter((item) => item.sourceStatus === "already-ingested").length,
-      sourceOnly: cases.filter((item) => item.ingest.status === "source-only").length,
+      pending: cases.filter((item) => ["pending", "retry"].includes(item.ingest.status)).length,
     },
     cases,
   };
@@ -150,13 +160,15 @@ async function main() {
   await mkdir(dirname(OUTPUT_PATH), { recursive: true });
   const next = `${JSON.stringify(payload, null, 2)}\n`;
   if (previousSource === next) {
-    console.log(`No source-feed changes. ${payload.stats.total} Field Cases, ${payload.stats.xCandidates} X candidates.`);
+    console.log(
+      `No source-feed changes. ${payload.stats.total} Field Cases, ${payload.stats.xCandidates} X candidates, ${payload.stats.nonXCandidates} non-X candidates.`,
+    );
     return;
   }
 
   await writeFile(OUTPUT_PATH, next, "utf8");
   console.log(
-    `Updated ${OUTPUT_PATH}: ${payload.stats.total} total, ${payload.stats.xCandidates} X candidates, ${payload.stats.alreadyIngested} already ingested.`,
+    `Updated ${OUTPUT_PATH}: ${payload.stats.total} total, ${payload.stats.xCandidates} X candidates, ${payload.stats.nonXCandidates} non-X candidates, ${payload.stats.alreadyIngested} already ingested.`,
   );
 }
 
