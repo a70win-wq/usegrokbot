@@ -72,12 +72,39 @@ Related build guide
 
 Useful public indexes such as [`awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot) can act as discovery sources, while UseGrokBot still links to and attributes the original underlying source.
 
+## Automatic source feeds
+
+UseGrokBot can watch public Grok Bot indexes without manually copying entries.
+
+The first source feed watches the **Field Cases** section of [`RongleCat/awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot). A GitHub Action runs every 6 hours and on sync-pipeline changes:
+
+```text
+awesome-grok-bot / Field Cases
+          ↓
+Parse title + original URL + source summary
+          ↓
+Compare with data/discover.ts
+          ↓
+Mark candidate / already-ingested
+          ↓
+data/source-feeds/awesome-grok-bot-field-cases.json
+```
+
+Run it locally with:
+
+```bash
+npm run sync:awesome-grok-bot
+```
+
+The source feed is an **index of candidates**, not permission to republish the linked content. UseGrokBot should fetch the original source, create its own summary, preserve attribution, and link back.
+
 ## Project structure
 
 ```text
 app/          Next.js routes and pages
 components/   UI components
 data/         Discover stories, workflows, and structured content
+scripts/      Source sync and ingestion utilities
 lib/          i18n and shared utilities
 public/       Static assets
 ```
@@ -105,6 +132,7 @@ Useful commands:
 ```bash
 npm run lint
 npm run build
+npm run sync:awesome-grok-bot
 ```
 
 ## Contributing
