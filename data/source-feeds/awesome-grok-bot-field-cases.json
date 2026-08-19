@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "name": "awesome-grok-bot Field Cases",
+    "repository": "https://github.com/RongleCat/awesome-grok-bot",
+    "rawReadme": "https://raw.githubusercontent.com/RongleCat/awesome-grok-bot/main/README.md",
+    "section": "Field Cases",
+    "sourceListLicense": "CC0-1.0",
+    "note": "The list metadata is CC0. Linked X posts, articles, videos and other source content retain their own rights. UseGrokBot summarizes the original source and links back rather than copying it wholesale."
+  },
+  "stats": {
+    "total": 15,
+    "candidates": 14,
+    "xCandidates": 10,
+    "alreadyIngested": 1,
+    "sourceOnly": 4
+  },
+  "cases": [
+    {
+      "id": "n2parko-cos-em-five-eng-ics-databricks-pm",
+      "title": "n2parko: CoS + EM + five eng ICs + Databricks + PM",
+      "url": "https://x.com/n2parko/status/2087251704744235298",
+      "sourceSummary": "SpaceXAI product roster with real agent-to-agent PR handoff screenshots.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "lee-robinson-four-technical-bets",
+      "title": "Lee Robinson: four technical bets",
+      "url": "https://x.com/leerob/status/2089169319099777364",
+      "sourceSummary": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "debbie-book-my-flights",
+      "title": "Debbie: book my flights",
+      "url": "https://debbie.codes/blog/i-tested-if-grok-bot-could-book-my-flights",
+      "sourceSummary": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
+      "sourceType": "article",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "source-only",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "debbie-buy-gluten-free-beer-on-a-sunday-night",
+      "title": "Debbie: buy gluten-free beer on a Sunday night",
+      "url": "https://debbie.codes/blog/i-sent-grok-bot-to-buy-my-gluten-free-beer",
+      "sourceSummary": "CoS shopping run — the fun case that shows computer-use, not chat.",
+      "sourceType": "article",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "source-only",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "yun-ta-calendar-reservations-while-walking",
+      "title": "Yun-Ta: calendar + reservations while walking",
+      "url": "https://x.com/yunta_tsai/status/2087415205756391461",
+      "sourceSummary": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "gota-twelve-jobs-on-one-roster",
+      "title": "Gota: twelve jobs on one roster",
+      "url": "https://x.com/gota_bara/status/2087666940450152841",
+      "sourceSummary": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "box-credit-committee-pack",
+      "title": "Box: credit-committee pack",
+      "url": "https://x.com/Box/status/2087275866950938662",
+      "sourceSummary": "Reconcile materials, write the pack back into Box via MCP.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "wordpress-updates-taught-once",
+      "title": "WordPress updates taught once",
+      "url": "https://x.com/mrfundman/status/2089760255890571404",
+      "sourceSummary": "Teach-a-task on a real CMS instead of writing a deploy script.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "arduino-updates-from-a-bot",
+      "title": "Arduino updates from a Bot",
+      "url": "https://x.com/KettlebellDan/status/2089920364419874937",
+      "sourceSummary": "Bot pushes hardware updates so the human can stay off X.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "nate-twelve-bots-in-eight-hours",
+      "title": "Nate: twelve Bots in eight hours",
+      "url": "https://natesnewsletter.substack.com/p/grok-bot-review",
+      "sourceSummary": "Is the $200 agent team worth it — with a real first-day roster.",
+      "sourceType": "newsletter",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "24-7-support-agent-in-19-minutes",
+      "title": "24/7 support agent in 19 minutes",
+      "url": "https://www.youtube.com/watch",
+      "sourceSummary": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
+      "sourceType": "youtube",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "source-only",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "farzad-roster-webby-shotry-writey",
+      "title": "Farzad roster: Webby / Shotry / Writey",
+      "url": "https://x.com/farzyness/status/2087340859138224540",
+      "sourceSummary": "Named specialists plus an orchestrator — the pattern that keeps showing up.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "sid-polymarket-daily-settlement-brief",
+      "title": "Sid: Polymarket daily settlement brief",
+      "url": "https://x.com/sidshekhar24/status/2089735218861326727",
+      "sourceSummary": "Bot scans the day's settled markets and writes the report.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "logan-the-unlock-is-the-computer-not-4-6",
+      "title": "Logan: the unlock is the computer, not 4.6",
+      "url": "https://x.com/LoganJastremski/status/2089903051557491092",
+      "sourceSummary": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "pending",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "japanese-note-group-cloud-computer-field-notes",
+      "title": "Japanese note group: cloud-computer field notes",
+      "url": "https://note.com/azumimusuhi/n/n0485219790bb",
+      "sourceSummary": "Hands-on JP writeup of living on the shared VM for a week.",
+      "sourceType": "note",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "source-only",
+        "attempts": 0
+      }
+    }
+  ]
+}
