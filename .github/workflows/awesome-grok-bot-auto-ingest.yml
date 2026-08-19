@@ -46,6 +46,9 @@ jobs:
           SOURCE_INGEST_LIMIT: "10"
           SOURCE_INGEST_MAX_ATTEMPTS: "3"
 
+      - name: Refresh source status after ingest
+        run: node scripts/sync-awesome-grok-bot.mjs
+
       - name: Validate Discover data before publishing
         run: npm run validate:discover
 
