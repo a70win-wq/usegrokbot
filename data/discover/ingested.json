@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "gota-bara-twelve-jobs-on-one-roster",
+    "title": "twelve jobs on one roster",
+    "headline": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "whatTheyDid": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Image factory, research briefs, 3D, travel debate, cancel subscriptions, local LLM on the VM.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Gota",
+    "handle": "gota_bara",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/gota_bara/status/2087666940450152841",
+    "sourceUrl": "https://x.com/gota_bara/status/2087666940450152841",
+    "sourceLabel": "Gota on X"
+  }
+]
