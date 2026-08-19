@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "leerob-four-technical-bets",
+    "title": "four technical bets",
+    "headline": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "whatTheyDid": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "No UI, thin client / thick server, always-on computer, browser as a first-class tool.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Lee Robinson",
+    "handle": "leerob",
+    "publishedAt": "2026-08-17",
+    "xPostUrl": "https://x.com/leerob/status/2089169319099777364",
+    "sourceUrl": "https://x.com/leerob/status/2089169319099777364",
+    "sourceLabel": "Lee Robinson on X"
+  }
+]
