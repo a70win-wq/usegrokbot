@@ -4,6 +4,10 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const PATHS = [
   "/",
+  "/discover",
+  "/discover/competitor-monitor-jellypod",
+  "/discover/overnight-sales-xai",
+  "/discover/grok-bot-launch-bot",
   "/use-cases",
   "/use-cases/competitor-monitor",
   "/use-cases/lead-researcher",

@@ -7,6 +7,11 @@ export const INDEXNOW_KEY_LOCATION = `${site.url}/${INDEXNOW_KEY}.txt`;
 
 export const PRIORITY_PATHS = [
   "/",
+  "/discover",
+  "/discover/competitor-monitor-jellypod",
+  "/discover/overnight-sales-xai",
+  "/discover/grok-bot-launch-bot",
+  "/discover/travel-concierge-nate",
   "/use-cases",
   "/use-cases/competitor-monitor",
   "/use-cases/lead-researcher",

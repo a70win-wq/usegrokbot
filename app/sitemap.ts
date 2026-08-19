@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { apps } from "@/data/apps";
 import { categories } from "@/data/categories";
+import { discoverStories } from "@/data/discover";
 import { learnArticles } from "@/data/learn";
 import { useCases } from "@/data/use-cases";
 import { URL_LOCALES, absoluteUrl, languageAlternates } from "@/lib/i18n/paths";
@@ -22,6 +23,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   return [
     ...entries("/", { changeFrequency: "weekly", priority: 1 }, now),
+    ...entries("/discover", { changeFrequency: "weekly", priority: 0.9 }, now),
+    ...discoverStories.flatMap((item) =>
+      entries(`/discover/${item.slug}`, { changeFrequency: "weekly", priority: 0.8 }, now),
+    ),
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.8 }, now),
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, now),
     ...entries("/apps", { changeFrequency: "weekly", priority: 0.8 }, now),

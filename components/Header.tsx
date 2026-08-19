@@ -19,10 +19,10 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   const nav = [
+    { href: "/", label: t("nav.discover"), match: (current: string) => current === "/" || current.startsWith("/discover") },
     { href: "/use-cases", label: t("nav.useCases") },
     { href: "/prompts", label: t("nav.prompts") },
     { href: "/categories", label: t("nav.categories") },
-    { href: "/apps", label: t("nav.apps") },
     { href: "/learn", label: t("nav.learn") },
   ];
 
@@ -36,7 +36,9 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {nav.map((item) => {
-            const active = path === item.href || path.startsWith(`${item.href}/`);
+            const active = "match" in item && item.match
+              ? item.match(path)
+              : path === item.href || path.startsWith(`${item.href}/`);
             return (
               <LocaleLink
                 key={item.href}

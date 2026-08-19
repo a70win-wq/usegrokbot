@@ -2,10 +2,10 @@ export const site = {
   name: "UseGrokBot",
   domain: "usegrokbot.com",
   url: "https://usegrokbot.com",
-  tagline: "What can Grok Bot do for you?",
+  tagline: "See how people are actually using Grok Bot — then build it yourself.",
   description:
-    "Real jobs. Ready-to-use prompts. Grok Bot workflows mapped to official xAI examples. Find a task, copy the prompt, put your Grok Bot to work.",
-  brandLine: "Find a task. Copy the prompt. Put your Grok Bot to work.",
+    "Discover real Grok Bot workflows shared on X, see how they work, and copy the setup yourself.",
+  brandLine: "See how people are actually using Grok Bot — then build it yourself.",
   githubRepo: "a70win-wq/usegrokbot",
   githubUrl: "https://github.com/a70win-wq/usegrokbot",
 } as const;

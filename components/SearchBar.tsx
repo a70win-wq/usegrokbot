@@ -4,9 +4,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
+import { searchDiscoverStories } from "@/data/discover";
 import { useCases } from "@/data/use-cases";
 import { cn } from "@/lib/cn";
-import { localizeUseCase, useI18n } from "@/lib/i18n";
+import { localizeDiscoverStory, localizeUseCase, useI18n } from "@/lib/i18n";
 import { searchUseCases } from "@/lib/search";
 
 type SearchBarProps = {
@@ -14,6 +15,7 @@ type SearchBarProps = {
   initialQuery?: string;
   onQueryChange?: (value: string) => void;
   autoFocus?: boolean;
+  stayOnPage?: boolean;
 };
 
 export function SearchBar({
@@ -21,6 +23,7 @@ export function SearchBar({
   initialQuery = "",
   onQueryChange,
   autoFocus,
+  stayOnPage = false,
 }: SearchBarProps) {
   const router = useRouter();
   const { locale, t, list, localizeHref } = useI18n();
@@ -79,19 +82,34 @@ export function SearchBar({
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  const stories = useMemo(() => {
+    return searchDiscoverStories(query, 4).map((item) => localizeDiscoverStory(item, locale));
+  }, [query, locale]);
+
   const results = useMemo(() => {
     const localized = useCases.map((item) => localizeUseCase(item, locale));
-    return searchUseCases(localized, query, useCases).slice(0, 7);
+    return searchUseCases(localized, query, useCases).slice(0, 4);
   }, [query, locale]);
 
   const trimmed = query.trim();
   const showResults = variant === "hero" && open && trimmed.length > 0;
   const showSuggestions = variant === "hero" && open && trimmed.length === 0;
   const menuItems = showResults
-    ? results.map((item) => ({ href: `/use-cases/${item.slug}`, title: item.title, detail: item.shortDescription }))
+    ? [
+        ...stories.map((item) => ({
+          href: `/discover/${item.slug}`,
+          title: item.title,
+          detail: item.headline,
+        })),
+        ...results.map((item) => ({
+          href: `/use-cases/${item.slug}`,
+          title: item.title,
+          detail: item.shortDescription,
+        })),
+      ]
     : showSuggestions
       ? suggestions.map((item) => ({
-          href: `/use-cases?q=${encodeURIComponent(item)}`,
+          href: stayOnPage ? "/" : `/use-cases?q=${encodeURIComponent(item)}`,
           title: item,
           detail: "",
         }))
@@ -105,6 +123,11 @@ export function SearchBar({
   }
 
   function goToQuery(value = trimmed) {
+    if (stayOnPage) {
+      onQueryChange?.(value);
+      setOpen(false);
+      return;
+    }
     router.push(localizeHref(`/use-cases?q=${encodeURIComponent(value)}`));
     setOpen(false);
   }
@@ -169,7 +192,7 @@ export function SearchBar({
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
-          {showResults && results.length === 0 ? (
+          {showResults && stories.length === 0 && results.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}
               <p className="mt-1 text-faint">{t("search.emptyHint")}</p>
@@ -184,7 +207,12 @@ export function SearchBar({
                       "block px-4 py-3 transition hover:bg-card-hover",
                       activeIndex === index && "bg-card-hover",
                     )}
-                    onClick={() => setOpen(false)}
+                    onClick={() => {
+                      if (stayOnPage && !item.href.startsWith("/discover") && !item.href.startsWith("/use-cases")) {
+                        onQueryChange?.(item.title);
+                      }
+                      setOpen(false);
+                    }}
                   >
                     <div className="text-sm font-medium text-ink">{item.title}</div>
                     {item.detail ? (
@@ -197,11 +225,14 @@ export function SearchBar({
           )}
           {showResults ? (
             <LocaleLink
-              href={`/use-cases?q=${encodeURIComponent(trimmed)}`}
+              href={stayOnPage ? "/" : `/use-cases?q=${encodeURIComponent(trimmed)}`}
               className="block border-t border-line px-4 py-2.5 text-[13px] text-ink"
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                if (stayOnPage) onQueryChange?.(trimmed);
+                setOpen(false);
+              }}
             >
-              {t("search.seeAll")}
+              {stayOnPage ? t("search.seeStories") : t("search.seeAll")}
             </LocaleLink>
           ) : null}
         </div>

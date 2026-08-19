@@ -3,6 +3,18 @@ import type { AppSlug, UseCase } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { displayApps } from "@/lib/capabilities";
 
+export function AppNamePills({ apps }: { apps: AppSlug[] }) {
+  return (
+    <div className="flex flex-wrap gap-1.5">
+      {apps.map((app) => (
+        <span key={app} className="rounded-full bg-elevated px-2 py-0.5 text-[11px] text-mute">
+          {appsBySlug[app].name}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 export function AppPills({
   useCase,
   highlight,

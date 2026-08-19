@@ -1,6 +1,9 @@
+import { searchDiscoverStories } from "@/data/discover";
 import type { AppSlug, CategorySlug, Difficulty, Schedule, UseCase } from "@/data/types";
 import { isOfficial } from "@/data/verification";
 import type { Locale } from "@/lib/i18n/types";
+
+export { searchDiscoverStories };
 
 export type SortKey = "popular" | "newest" | "az";
 
