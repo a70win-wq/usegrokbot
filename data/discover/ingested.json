@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "mrfundman-wordpress-updates-taught-once",
+    "title": "WordPress updates taught once",
+    "headline": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "whatTheyDid": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Teach-a-task on a real CMS instead of writing a deploy script.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mr fundman",
+    "handle": "mrfundman",
+    "publishedAt": "2026-08-18",
+    "xPostUrl": "https://x.com/mrfundman/status/2089760255890571404",
+    "sourceUrl": "https://x.com/mrfundman/status/2089760255890571404",
+    "sourceLabel": "mr fundman on X"
+  }
+]
