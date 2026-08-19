@@ -60,7 +60,7 @@ jobs:
         run: npx tsx scripts/ingest-awesome-grok-bot.ts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SOURCE_INGEST_LIMIT: "6"
+          SOURCE_INGEST_LIMIT: "10"
           SOURCE_INGEST_MAX_ATTEMPTS: "3"
 
       - name: Preserve processed feed
