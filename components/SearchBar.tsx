@@ -153,6 +153,11 @@ export function SearchBar({
       const selected = menuItems[activeIndex];
       if (selected) {
         event.preventDefault();
+        if (stayOnPage && !selected.href.startsWith("/discover") && !selected.href.startsWith("/use-cases")) {
+          onQueryChange?.(selected.title);
+          setOpen(false);
+          return;
+        }
         router.push(localizeHref(selected.href));
         setOpen(false);
         return;

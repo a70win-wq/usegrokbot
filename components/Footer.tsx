@@ -15,7 +15,7 @@ export function Footer() {
             <BotFace size={18} color={botColorFor("usegrokbot")} />
             UseGrokBot
           </LocaleLink>
-          <LocaleLink href="/" className="hover:text-ink">
+          <LocaleLink href="/discover" className="hover:text-ink">
             {t("nav.discover")}
           </LocaleLink>
           <LocaleLink href="/use-cases" className="hover:text-ink">
