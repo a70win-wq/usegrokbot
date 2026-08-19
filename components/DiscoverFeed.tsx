@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { BlobatarAvatar } from "@/components/BlobatarAvatar";
 import { DiscoverCard } from "@/components/DiscoverCard";
 import { LocaleLink } from "@/components/LocaleLink";
 import { NamedIcon } from "@/components/icons";
@@ -268,6 +269,12 @@ export function DiscoverFeed({
 
       {stories.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-line bg-elevated px-5 py-10 text-center">
+          <BlobatarAvatar
+            name={`empty:${query || tab}:${category}:${outcome}:${app}`}
+            size={72}
+            expression="thinking"
+            className="mx-auto mb-4"
+          />
           <p className="text-sm text-ink">
             {tab === "tested" ? t("discover.testedEmpty") : t("discover.empty")}
           </p>
