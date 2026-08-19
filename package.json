@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "validate:discover": "tsx scripts/validate-discover.ts"
+    "validate:discover": "tsx scripts/validate-discover.ts",
+    "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs",
+    "ingest:awesome-grok-bot": "tsx scripts/ingest-awesome-grok-bot.ts"
   },
   "dependencies": {
     "ai": "^7.0.68",

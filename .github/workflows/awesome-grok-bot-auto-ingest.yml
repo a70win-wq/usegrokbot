@@ -1,0 +1,89 @@
+name: Auto-ingest awesome-grok-bot Field Cases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/sync-awesome-grok-bot.mjs"
+      - "scripts/ingest-awesome-grok-bot.ts"
+      - ".github/workflows/awesome-grok-bot-auto-ingest.yml"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: awesome-grok-bot-auto-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync Field Cases source feed
+        run: node scripts/sync-awesome-grok-bot.mjs
+
+      - name: Commit fresh source feed before ingest
+        shell: bash
+        run: |
+          git config user.name "usegrokbot-source-bot"
+          git config user.email "usegrokbot-source-bot@users.noreply.github.com"
+
+          if git diff --quiet -- data/source-feeds/awesome-grok-bot-field-cases.json; then
+            echo "Source feed is already current."
+          else
+            git add data/source-feeds/awesome-grok-bot-field-cases.json
+            git commit -m "chore: sync awesome-grok-bot Field Cases"
+            git push origin HEAD:main
+          fi
+
+      - name: Auto-ingest X candidates
+        run: npx tsx scripts/ingest-awesome-grok-bot.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          SOURCE_INGEST_LIMIT: "12"
+          SOURCE_INGEST_MAX_ATTEMPTS: "3"
+
+      - name: Preserve processed feed
+        run: cp data/source-feeds/awesome-grok-bot-field-cases.json /tmp/awesome-grok-bot-field-cases.json
+
+      - name: Refresh main after machine-ingested PRs
+        shell: bash
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p data/source-feeds
+          cp /tmp/awesome-grok-bot-field-cases.json data/source-feeds/awesome-grok-bot-field-cases.json
+          node scripts/sync-awesome-grok-bot.mjs
+
+      - name: Commit final source state
+        shell: bash
+        run: |
+          if git diff --quiet -- data/source-feeds/awesome-grok-bot-field-cases.json; then
+            echo "Final source state is already current."
+            exit 0
+          fi
+
+          git add data/source-feeds/awesome-grok-bot-field-cases.json
+          git commit -m "chore: record awesome-grok-bot ingest state"
+          git push origin HEAD:main

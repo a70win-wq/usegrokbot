@@ -72,13 +72,49 @@ Related build guide
 
 Useful public indexes such as [`awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot) can act as discovery sources, while UseGrokBot still links to and attributes the original underlying source.
 
+## Automatic source ingestion
+
+UseGrokBot watches the **Field Cases** section of [`RongleCat/awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot) every 6 hours.
+
+```text
+awesome-grok-bot / Field Cases
+          ↓
+Source feed + URL dedupe
+          ↓
+X cases → existing machine-ingest pipeline
+          ↓
+AI relevance + metadata extraction
+          ↓
+Source / attribution / result validation
+          ↓
+PR → auto-merge → Discover
+```
+
+Non-X Field Cases (articles, videos, newsletters, notes) remain in the machine-readable source feed until generic-source ingestion supports them.
+
+The synced source index lives at:
+
+```text
+data/source-feeds/awesome-grok-bot-field-cases.json
+```
+
+Local commands:
+
+```bash
+npm run sync:awesome-grok-bot
+npm run ingest:awesome-grok-bot
+```
+
+The source feed is an index of candidates, not permission to republish linked content. UseGrokBot summarizes the original source, preserves attribution, and links back.
+
 ## Project structure
 
 ```text
 app/          Next.js routes and pages
 components/   UI components
-data/         Discover stories, workflows, and structured content
-lib/          i18n and shared utilities
+data/         Discover stories, workflows, source feeds, and structured content
+scripts/      Validation, source sync, and ingestion utilities
+lib/          i18n, ingestion, and shared utilities
 public/       Static assets
 ```
 
@@ -105,6 +141,8 @@ Useful commands:
 ```bash
 npm run lint
 npm run build
+npm run validate:discover
+npm run sync:awesome-grok-bot
 ```
 
 The fastest way to add a public example is [Submit a use case](https://usegrokbot.com/submit). Paste the X post. A machine extracts the rest, validates it, and publishes if it passes.
@@ -126,7 +164,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution rules.
 
 ## Roadmap
 
-X post submissions already run this loop. Other public sources are next:
+X post submissions and the `awesome-grok-bot` X Field Cases source now run through the machine-ingest loop. Generic article / video sources are next:
 
 ```text
 X / public source

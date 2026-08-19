@@ -16,6 +16,9 @@ The long-term goal is simple:
 - [x] Submission page
 - [x] Open-source repository
 - [x] MIT license
+- [x] X-post machine ingestion: extract, validate, PR, auto-merge
+- [x] Automatic source feed: `awesome-grok-bot` Field Cases every 6 hours
+- [x] Auto-ingest new X Field Cases through the existing machine-ingest pipeline
 - [ ] Improve discover cards with stronger Result / Output presentation
 - [ ] Improve mobile filter density and touch targets
 - [ ] Expand trust labels: Official / Tested / Community
@@ -47,16 +50,20 @@ Publish
 
 Planned work:
 
-- [ ] Monitor public Grok Bot sources for candidate cases
-- [ ] Parse X mentions / submitted public URLs
-- [ ] Extract author, handle, date, integrations, category, and outcome
-- [ ] Detect duplicates automatically
-- [ ] Separate verified numeric `Result` from non-numeric `Output`
-- [ ] Reject unsupported claims automatically
-- [ ] Generate structured content files
-- [ ] Add automated CI content validation
-- [ ] Auto-publish cases that pass validation
-- [ ] Keep failed cases in an error / retry queue instead of blocking the pipeline
+- [x] Monitor a public Grok Bot source for candidate cases (`awesome-grok-bot` Field Cases)
+- [x] Parse submitted public X URLs
+- [x] Extract author, handle, date, integrations, category, and outcome from X
+- [x] Detect duplicate X post IDs automatically
+- [x] Separate verified numeric `Result` from non-numeric `Output` for X ingest
+- [x] Reject unsupported result numbers automatically
+- [x] Generate structured ingested DiscoverStory content
+- [x] Add automated CI content validation
+- [x] Auto-publish X cases that pass validation
+- [x] Keep failed X cases in an error queue instead of blocking normal ingestion
+- [ ] Add more public source indexes / feeds
+- [ ] Add generic article / newsletter / video source ingestion
+- [ ] Parse X mentions such as `@UseGrokBot`
+- [ ] Detect semantic duplicates across different source URLs
 
 ## Community
 
