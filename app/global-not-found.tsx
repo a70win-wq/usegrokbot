@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { BlobatarAvatar } from "@/components/BlobatarAvatar";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,7 @@ export default function GlobalNotFound() {
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
         <div className="mx-auto max-w-[640px] px-5 py-24 text-center">
+          <BlobatarAvatar name="usegrokbot-lost-bot" size={104} expression="sad" className="mx-auto mb-6" />
           <h1 className="text-3xl font-medium tracking-tight text-ink">Page not found</h1>
           <p className="mt-3 text-mute">That URL is not in the library.</p>
           <Link
