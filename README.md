@@ -1,7 +1,7 @@
 # UseGrokBot
 
 <p align="center">
-  <strong>Discover real Grok Bot workflows from X — then build them yourself.</strong>
+  <strong>Discover real Grok Bot workflows from the public web — then build them yourself.</strong>
 </p>
 
 <p align="center">
@@ -24,7 +24,7 @@
 
 UseGrokBot is an open-source discovery hub for real Grok Bot use cases.
 
-Instead of dumping prompts into a directory, UseGrokBot starts with real examples shared publicly by the Grok Bot community, keeps attribution to the original source, explains what was built in plain language, and connects useful examples to ready-to-build workflows.
+Instead of dumping prompts into a directory, UseGrokBot starts with public examples from X and the wider web, keeps attribution to the original source, explains what was built in plain language, and connects useful examples to ready-to-build workflows.
 
 ```text
 Discover → Understand → Build → Copy → Share
@@ -32,8 +32,8 @@ Discover → Understand → Build → Copy → Share
 
 ## Why UseGrokBot?
 
-- **Real examples** — discover public Grok Bot use cases from X and the wider community.
-- **Original attribution** — community cases link back to the original author and source.
+- **Real examples** — public Grok Bot use cases from X, articles, videos, newsletters, GitHub, and community writeups.
+- **Original attribution** — every community case links back to the original source.
 - **Plain-English explanations** — understand what the Bot actually did and why it matters.
 - **Buildable workflows** — turn an interesting example into a reusable workflow and prompt.
 - **Integrations** — browse workflows by the apps and tools you already use.
@@ -48,11 +48,11 @@ UseGrokBot distinguishes between different levels of verification:
 - 🧪 **Tested** — tested by UseGrokBot.
 - 👥 **Community** — shared publicly by the community and linked back to the original source.
 
-We do not invent result numbers. If the original source does not provide a measurable result, the case should be described as an **Output** instead.
+We do not invent result numbers. If the original source does not provide a measurable result, the case is described as an **Output** instead.
 
 ## Community-powered discovery
 
-Useful Grok Bot examples are spread across X, tutorials, videos, GitHub repositories, and community writeups. UseGrokBot turns those scattered signals into a structured discovery layer.
+Useful Grok Bot examples are spread across X, tutorials, videos, GitHub repositories, newsletters, and community writeups. UseGrokBot turns those scattered signals into a structured discovery layer.
 
 A public source can become:
 
@@ -72,25 +72,40 @@ Related build guide
 
 Useful public indexes such as [`awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot) can act as discovery sources, while UseGrokBot still links to and attributes the original underlying source.
 
-## Automatic source ingestion
+## Zero-touch automatic source ingestion
 
 UseGrokBot watches the **Field Cases** section of [`RongleCat/awesome-grok-bot`](https://github.com/RongleCat/awesome-grok-bot) every 6 hours.
+
+Supported source types include:
+
+- X posts
+- Articles / blogs
+- Newsletters / Substack
+- YouTube videos
+- GitHub repositories
+- note.com / article-style sources
 
 ```text
 awesome-grok-bot / Field Cases
           ↓
 Source feed + URL dedupe
           ↓
-X cases → existing machine-ingest pipeline
+X / Article / Video / Newsletter / GitHub
           ↓
-AI relevance + metadata extraction
+Metadata + source checks
           ↓
-Source / attribution / result validation
+Conservative structured case
           ↓
-PR → auto-merge → Discover
+Discover validation
+          ↓
+Direct automated commit
+          ↓
+Vercel deployment
 ```
 
-Non-X Field Cases (articles, videos, newsletters, notes) remain in the machine-readable source feed until generic-source ingestion supports them.
+For X cases, UseGrokBot prefers the machine extraction path and falls back to a conservative source-index summary if AI extraction is unavailable.
+
+For non-X cases, the ingestion worker reads source metadata such as author, date, page title, site name, YouTube oEmbed data, or public GitHub repository metadata. It **does not copy article, video, newsletter, or repository bodies** into UseGrokBot.
 
 The synced source index lives at:
 
@@ -98,14 +113,34 @@ The synced source index lives at:
 data/source-feeds/awesome-grok-bot-field-cases.json
 ```
 
+The structured machine-ingested cases live at:
+
+```text
+data/discover/ingested.json
+```
+
 Local commands:
 
 ```bash
 npm run sync:awesome-grok-bot
 npm run ingest:awesome-grok-bot
+npm run validate:discover
 ```
 
-The source feed is an index of candidates, not permission to republish linked content. UseGrokBot summarizes the original source, preserves attribution, and links back.
+The source feed is an index of candidates, not permission to republish linked content. UseGrokBot summarizes conservatively, preserves attribution, and links back to the original source.
+
+## Safety rules for ingestion
+
+Automated ingestion must preserve a few hard rules:
+
+- Keep the original source URL.
+- Do not invent numeric results.
+- Do not invent quotes.
+- Do not mark automatically ingested cases as Tested, Featured, or Trending.
+- X cases require a real X permalink.
+- Non-X cases require a real HTTP(S) source URL.
+- Duplicate source URLs are rejected.
+- Linked third-party content keeps its original rights.
 
 ## Project structure
 
@@ -125,6 +160,7 @@ public/       Static assets
 - TypeScript
 - Tailwind CSS 4
 - Vercel deployment
+- GitHub Actions
 - Structured local content
 
 ## Local development
@@ -143,9 +179,10 @@ npm run lint
 npm run build
 npm run validate:discover
 npm run sync:awesome-grok-bot
+npm run ingest:awesome-grok-bot
 ```
 
-The fastest way to add a public example is [Submit a use case](https://usegrokbot.com/submit). Paste the X post. A machine extracts the rest, validates it, and publishes if it passes.
+The fastest way to submit a public X example is [Submit a use case](https://usegrokbot.com/submit). Paste the X post and the machine handles the rest if it passes validation.
 
 ## Contributing
 
@@ -158,27 +195,15 @@ You can help by:
 - improving Traditional / Simplified Chinese translations
 - fixing mobile UX or accessibility issues
 - improving workflow guides
+- adding a public source index
+- improving source metadata extraction
 - fixing bugs or documentation
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution rules.
 
 ## Roadmap
 
-X post submissions and the `awesome-grok-bot` X Field Cases source now run through the machine-ingest loop. Generic article / video sources are next:
-
-```text
-X / public source
-      ↓
-AI relevance + metadata extraction
-      ↓
-Source / duplicate / evidence validation
-      ↓
-Structured case
-      ↓
-CI validation
-      ↓
-Publish
-```
+Multi-source ingestion is now live. The next ingestion priorities are additional public source indexes, `@UseGrokBot` mention ingestion, semantic duplicate detection, and better integration mapping.
 
 See [ROADMAP.md](ROADMAP.md) for planned work.
 
@@ -188,7 +213,7 @@ The code in this repository is licensed under the [MIT License](LICENSE).
 
 The MIT license covers the software code. The **UseGrokBot** name, logo, and project branding remain associated with this project and are not a grant of trademark rights.
 
-Third-party posts, screenshots, articles, videos, logos, names, and other linked materials remain the property of their respective owners and are used only as sources / references where applicable.
+Third-party posts, screenshots, articles, videos, logos, names, repositories, and other linked materials remain the property of their respective owners and are used only as sources / references where applicable.
 
 ## Disclaimer
 
