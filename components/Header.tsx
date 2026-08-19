@@ -21,7 +21,7 @@ export function Header({ stars }: { stars?: number | null }) {
   const { slugs } = useSaved();
   const { t, locale } = useI18n();
   const [open, setOpen] = useState(false);
-  const communityLabel = locale === "zh-hk" ? "社群" : locale === "zh-cn" ? "社区" : "Community";
+  const communityLabel = locale === "zh-Hant" ? "社群" : locale === "zh-Hans" ? "社区" : "Community";
 
   const nav = [
     {
