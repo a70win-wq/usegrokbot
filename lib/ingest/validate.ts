@@ -32,6 +32,26 @@ function normalizeQuote(value: string) {
   return value.replace(/\s+/g, " ").trim().toLowerCase();
 }
 
+function canonicalSourceUrl(value: string) {
+  try {
+    const url = new URL(value);
+    if (url.protocol !== "http:" && url.protocol !== "https:") return null;
+    url.hash = "";
+    const host = url.hostname.replace(/^www\./, "");
+    if (host === "twitter.com" || host === "x.com") {
+      url.hostname = "x.com";
+      url.search = "";
+    } else {
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^(utm_|ref$|source$|fbclid$|gclid$)/i.test(key)) url.searchParams.delete(key);
+      }
+    }
+    return url.toString().replace(/\/$/, "");
+  } catch {
+    return null;
+  }
+}
+
 export function existingStoryKeys(stories: DiscoverStory[] = discoverStories) {
   const slugs = new Set(stories.map((item) => item.slug));
   const tweetIds = new Set(
@@ -130,5 +150,19 @@ export function assertStorySafe(story: DiscoverStory, stories: DiscoverStory[] =
     throw new Error(`Unknown related use case: ${story.relatedUseCase}`);
   }
   if (!story.result && !story.output) throw new Error("Story needs result or output.");
-  if (!story.xPostUrl || !tweetIdFromUrl(story.xPostUrl)) throw new Error("Story needs a real X permalink.");
+
+  const sourceUrl = canonicalSourceUrl(story.sourceUrl);
+  if (!sourceUrl) throw new Error("Story needs a real HTTP(S) source URL.");
+
+  if (story.xPostUrl) {
+    if (!tweetIdFromUrl(story.xPostUrl)) throw new Error("xPostUrl must be a real X permalink.");
+  } else if (tweetIdFromUrl(story.sourceUrl)) {
+    throw new Error("X sources must set xPostUrl.");
+  }
+
+  const duplicateSource = stories.some((item) => {
+    const candidates = [item.sourceUrl, item.xPostUrl].filter(Boolean) as string[];
+    return candidates.some((candidate) => canonicalSourceUrl(candidate) === sourceUrl);
+  });
+  if (duplicateSource) throw new Error(`Duplicate source: ${story.sourceUrl}`);
 }

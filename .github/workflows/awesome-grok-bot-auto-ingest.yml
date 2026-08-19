@@ -9,6 +9,8 @@ on:
     paths:
       - "scripts/sync-awesome-grok-bot.mjs"
       - "scripts/ingest-awesome-grok-bot.ts"
+      - "lib/ingest/fetch-source-metadata.ts"
+      - "lib/ingest/validate.ts"
       - ".github/workflows/awesome-grok-bot-auto-ingest.yml"
 
 permissions:
@@ -40,10 +42,10 @@ jobs:
       - name: Sync Field Cases source feed
         run: node scripts/sync-awesome-grok-bot.mjs
 
-      - name: Auto-ingest X candidates
+      - name: Auto-ingest Field Case candidates
         run: npx tsx scripts/ingest-awesome-grok-bot.ts
         env:
-          SOURCE_INGEST_LIMIT: "10"
+          SOURCE_INGEST_LIMIT: "20"
           SOURCE_INGEST_MAX_ATTEMPTS: "3"
 
       - name: Refresh source status after ingest
