@@ -19,8 +19,9 @@ export function Header({ stars }: { stars?: number | null }) {
   const pathname = usePathname();
   const path = stripLocalePrefix(pathname);
   const { slugs } = useSaved();
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [open, setOpen] = useState(false);
+  const communityLabel = locale === "zh-hk" ? "社群" : locale === "zh-cn" ? "社区" : "Community";
 
   const nav = [
     {
@@ -34,6 +35,7 @@ export function Header({ stars }: { stars?: number | null }) {
       label: t("nav.integrations"),
       match: (current: string) => current.startsWith("/integrations") || current.startsWith("/apps"),
     },
+    { href: "/community", label: communityLabel },
     { href: "/submit", label: t("nav.submitShort") },
     { href: "/learn/what-is-grok-bot", label: t("nav.about"), match: (current: string) => current.startsWith("/learn") },
   ];
