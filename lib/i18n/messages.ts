@@ -246,10 +246,6 @@ export const messages = {
       link: "Website / X (optional)",
       send: "Submit",
     },
-    footer: {
-      disclaimer:
-        "UseGrokBot.com is an independent resource and is not affiliated with xAI. Grok is a trademark of its respective owner.",
-    },
   },
   "zh-Hant": {
     lang: { label: "語言" },
@@ -493,10 +489,6 @@ export const messages = {
       link: "網站 / X（可選）",
       send: "提交",
     },
-    footer: {
-      disclaimer:
-        "UseGrokBot.com 為獨立資源，與 xAI 並無關係。Grok 為其權利人的商標。",
-    },
   },
   "zh-Hans": {
     lang: { label: "语言" },
@@ -739,10 +731,6 @@ export const messages = {
       author: "你的名字",
       link: "网站 / X（可选）",
       send: "提交",
-    },
-    footer: {
-      disclaimer:
-        "UseGrokBot.com 为独立资源，与 xAI 并无关联。Grok 为其权利人的商标。",
     },
   },
 } as const;

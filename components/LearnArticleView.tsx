@@ -77,7 +77,6 @@ export function LearnArticleView({ article }: { article: LearnArticle }) {
             ))}
           </p>
         ) : null}
-        <p className="mt-2">{t("footer.disclaimer")}</p>
       </footer>
     </article>
   );

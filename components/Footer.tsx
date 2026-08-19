@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="mt-auto border-t border-line">
-      <div className="mx-auto flex max-w-[1120px] flex-col gap-8 px-5 py-12 md:px-8">
+      <div className="mx-auto flex max-w-[1120px] flex-col px-5 py-12 md:px-8">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-mute">
           <LocaleLink href="/" className="flex items-center gap-2 text-ink">
             <BotFace size={18} color={botColorFor("usegrokbot")} />
@@ -37,7 +37,6 @@ export function Footer() {
             {t("nav.submitShort")}
           </LocaleLink>
         </div>
-        <p className="max-w-3xl text-[12px] leading-5 text-faint">{t("footer.disclaimer")}</p>
       </div>
     </footer>
   );
