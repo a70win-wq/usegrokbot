@@ -27,7 +27,19 @@ export type OutcomeSlug = (typeof outcomeSlugs)[number];
 
 export type DiscoverSourceKind = "official" | "community";
 
-export type DiscoverTab = "trending" | "latest" | "official" | "community";
+export type DiscoverTab = "trending" | "latest" | "official" | "tested" | "community";
+
+export const discoverTabs: DiscoverTab[] = [
+  "trending",
+  "latest",
+  "official",
+  "tested",
+  "community",
+];
+
+export function isDiscoverTab(value: string | undefined): value is DiscoverTab {
+  return Boolean(value && (discoverTabs as string[]).includes(value));
+}
 
 export type DiscoverStory = {
   slug: string;
@@ -41,6 +53,7 @@ export type DiscoverStory = {
   usefulFor: string;
   quote?: string;
   result?: string;
+  output?: string;
   category: DiscoverCategorySlug;
   outcomes: OutcomeSlug[];
   apps: AppSlug[];
@@ -55,6 +68,8 @@ export type DiscoverStory = {
   sourceLabel: string;
   relatedUseCase?: string;
   trending?: boolean;
+  featured?: boolean;
+  tested?: boolean;
 };
 
 const XAI_INTRO = "https://x.ai/news/introducing-grok-bot";
@@ -101,6 +116,7 @@ export const discoverStories: DiscoverStory[] = [
     sourceLabel: "Elon Musk on X",
     relatedUseCase: "inbox-organizer",
     trending: true,
+    featured: true,
   },
   {
     slug: "week-of-hacks-nate-herk",
@@ -132,6 +148,7 @@ export const discoverStories: DiscoverStory[] = [
     sourceLabel: "Nate Herk on X",
     relatedUseCase: "daily-work-brief",
     trending: true,
+    featured: true,
   },
   {
     slug: "household-bots-blake-king",
@@ -180,6 +197,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Anyone evaluating Grok Bot", "Founders deciding whether to subscribe"],
     usefulFor: "Anyone new to Grok Bot",
     quote: "Introducing Grok Bot, now in early beta. Bots are AI teammates…",
+    output: "Early beta announcement",
     category: "operations",
     outcomes: ["automate-work"],
     apps: ["browser"],
@@ -225,6 +243,7 @@ export const discoverStories: DiscoverStory[] = [
     sourceLabel: "xAI: Introducing Grok Bot",
     relatedUseCase: "lead-researcher",
     trending: true,
+    featured: true,
   },
   {
     slug: "crm-notes-xai",
@@ -241,6 +260,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Account executives", "Sales ops", "Founders who are the CRM"],
     usefulFor: "Sales ops / AEs",
     quote: "a sales Bot updating the CRM with call transcript notes and drafting follow-ups",
+    output: "Structured CRM update",
     category: "sales",
     outcomes: ["grow-business", "automate-work"],
     apps: ["salesforce", "hubspot", "gmail"],
@@ -253,6 +273,7 @@ export const discoverStories: DiscoverStory[] = [
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
     relatedUseCase: "crm-updater",
+    featured: true,
   },
   {
     slug: "inbox-organizer-xai",
@@ -269,6 +290,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Founders", "Operators", "Anyone whose inbox is the job"],
     usefulFor: "Operators / Founders",
     quote: "A chief of staff sits on top, with a specialist for each lane: inbox management, expenses, recruiting…",
+    output: "Triaged inbox",
     category: "operations",
     outcomes: ["save-time", "automate-work"],
     apps: ["gmail"],
@@ -297,6 +319,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Founders", "Office managers", "Small finance teams"],
     usefulFor: "Ops / Finance",
     quote: "an ops Bot seating new hires and processing invoices received in Gmail",
+    output: "Receipts filed from Gmail",
     category: "operations",
     outcomes: ["save-time", "automate-work"],
     apps: ["gmail", "google-sheets"],
@@ -325,6 +348,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Engineers", "QA", "Founders who are also support"],
     usefulFor: "Engineering / QA",
     quote: "reproducing a bug in the product UI, filing the ticket, and handing the fix off to a debugging Bot",
+    output: "Bug reproduced and ticketed",
     category: "coding",
     outcomes: ["build-software", "save-time"],
     apps: ["browser", "github"],
@@ -353,6 +377,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Founders", "Ops leads", "Anyone who buys software or services"],
     usefulFor: "Founders / Ops",
     quote: "negotiate with vendors in their voice",
+    output: "Vendor thread in your voice",
     category: "operations",
     outcomes: ["make-money", "save-time"],
     apps: ["gmail", "browser"],
@@ -381,6 +406,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Shopify-style founders", "Support leads", "Solo operators"],
     usefulFor: "Support / Founders",
     quote: "manage support for their online store",
+    output: "Support queue drafts",
     category: "operations",
     outcomes: ["save-time", "grow-business"],
     apps: ["gmail", "browser"],
@@ -408,6 +434,7 @@ export const discoverStories: DiscoverStory[] = [
       "This is a public community write-up, not an xAI screenshot. We turned the job into a card and a copyable workflow — we did not re-run his Bot here.",
     whoShouldTry: ["Founders", "Marketers", "Indie hackers"],
     usefulFor: "Marketing / Founders",
+    output: "Thread list + draft comments",
     category: "marketing",
     outcomes: ["grow-business", "research"],
     apps: ["reddit", "browser"],
@@ -435,6 +462,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Busy professionals", "Families", "Anyone who hates 40-tab research"],
     usefulFor: "Anyone planning a trip",
     quote: "Others took travel planning, exercise, and contact research.",
+    output: "Day-by-day trip brief",
     category: "personal",
     outcomes: ["save-time", "research"],
     apps: ["browser", "google-calendar"],
@@ -462,6 +490,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Creators", "Educators", "Product marketers"],
     usefulFor: "Creators / Content",
     quote: "I had Gordon … start replying to my YouTube comments.",
+    output: "Draft YouTube replies",
     category: "content",
     outcomes: ["create-content", "save-time"],
     apps: ["youtube"],
@@ -489,6 +518,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Newsletter writers", "Founders who post", "Content leads"],
     usefulFor: "Content / Founders",
     quote: "I had Gordon repurpose last week’s newsletter across X and LinkedIn",
+    output: "X and LinkedIn drafts",
     category: "content",
     outcomes: ["create-content", "grow-business"],
     apps: ["x", "linkedin"],
@@ -516,6 +546,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Marketing managers", "Founders", "Agency leads"],
     usefulFor: "Marketing / Founders",
     quote: "The output is a filled-in summary waiting when you open your laptop, not another dashboard to visit.",
+    output: "One-page Monday brief",
     category: "marketing",
     outcomes: ["grow-business", "save-time"],
     apps: ["browser", "slack"],
@@ -543,6 +574,7 @@ export const discoverStories: DiscoverStory[] = [
     whoShouldTry: ["Founders", "Marketing teams", "Product marketers"],
     usefulFor: "Marketing / Founders",
     quote: "Ad libraries, review sites, and competitor changelogs are exactly the shape Grok Bot is built for",
+    output: "Weekly competitor deltas",
     category: "research",
     outcomes: ["research", "grow-business"],
     apps: ["browser"],
@@ -561,6 +593,10 @@ const bySlug = new Map(discoverStories.map((story) => [story.slug, story]));
 
 export function getDiscoverStory(slug: string) {
   return bySlug.get(slug);
+}
+
+export function getFeaturedDiscoverStories(limit = 4) {
+  return discoverStories.filter((story) => story.featured).slice(0, limit);
 }
 
 export function getRelatedUseCase(story: DiscoverStory) {
@@ -607,6 +643,7 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
 
   if (filters.tab === "official") next = next.filter((item) => item.source === "official");
   if (filters.tab === "community") next = next.filter((item) => item.source === "community");
+  if (filters.tab === "tested") next = next.filter((item) => item.tested);
 
   const category = filters.category;
   const outcome = filters.outcome;

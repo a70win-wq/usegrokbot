@@ -1,29 +1,35 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Heart, Menu, X } from "lucide-react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { Heart, Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
 import { BotFace, botColorFor } from "./BotFace";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
+import { SearchBar } from "./SearchBar";
 import { useSaved } from "./saved";
 
 export function Header() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const path = stripLocalePrefix(pathname);
   const { slugs } = useSaved();
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
+  const officialOpen = path.startsWith("/discover") && searchParams.get("tab") === "official";
 
   const nav = [
-    { href: "/", label: t("nav.discover"), match: (current: string) => current === "/" || current.startsWith("/discover") },
-    { href: "/use-cases", label: t("nav.useCases") },
-    { href: "/prompts", label: t("nav.prompts") },
-    { href: "/categories", label: t("nav.categories") },
-    { href: "/learn", label: t("nav.learn") },
+    {
+      href: "/",
+      label: t("nav.discover"),
+      match: (current: string) => current === "/" || (current.startsWith("/discover") && !officialOpen),
+    },
+    { href: "/use-cases", label: t("nav.workflows") },
+    { href: "/discover?tab=official", label: t("nav.official"), match: () => officialOpen },
+    { href: "/learn/what-is-grok-bot", label: t("nav.about"), match: (current: string) => current.startsWith("/learn") },
   ];
 
   return (
@@ -55,6 +61,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-1">
+          <HeaderSearch />
           <LanguageSwitch />
           <LocaleLink
             href="/saved"
@@ -102,5 +109,38 @@ export function Header() {
         </div>
       ) : null}
     </header>
+  );
+}
+
+function HeaderSearch() {
+  const { t } = useI18n();
+  const [open, setOpen] = useState(false);
+  const boxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function onDoc(event: MouseEvent) {
+      if (!boxRef.current?.contains(event.target as Node)) setOpen(false);
+    }
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, []);
+
+  return (
+    <div ref={boxRef} className="relative">
+      <button
+        type="button"
+        aria-expanded={open}
+        aria-label={t("search.label")}
+        onClick={() => setOpen((value) => !value)}
+        className="inline-flex size-9 items-center justify-center rounded-lg text-mute hover:text-ink"
+      >
+        <Search className="size-3.5" strokeWidth={1.75} />
+      </button>
+      {open ? (
+        <div className="absolute top-[calc(100%+8px)] right-0 z-50 w-[min(calc(100vw-2rem),20rem)]">
+          <SearchBar variant="inline" destination="discover" autoFocus />
+        </div>
+      ) : null}
+    </div>
   );
 }

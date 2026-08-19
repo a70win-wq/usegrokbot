@@ -5,10 +5,19 @@ import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { DiscoverStory } from "@/data/discover";
-import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
+import { LAST_REVIEWED, formatVerifiedDate, type TrustStatus } from "@/data/verification";
 import { cn } from "@/lib/cn";
 import { formatCardDate } from "@/lib/format";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
+
+export function discoverTrust(
+  story: DiscoverStory,
+  t: (path: string) => string,
+): { status: TrustStatus; label: string } {
+  if (story.tested) return { status: "tested", label: `🧪 ${t("trust.tested")}` };
+  if (story.source === "official") return { status: "official", label: `✅ ${t("discover.officialBadge")}` };
+  return { status: "community", label: `👥 ${t("discover.communityBadge")}` };
+}
 
 export function DiscoverCard({
   story,
@@ -19,7 +28,7 @@ export function DiscoverCard({
 }) {
   const { locale, t } = useI18n();
   const item = localizeDiscoverStory(story, locale);
-  const sourceLabel = story.source === "official" ? t("discover.officialBadge") : t("discover.communityBadge");
+  const trust = discoverTrust(story, t);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
@@ -35,7 +44,7 @@ export function DiscoverCard({
     <article
       className={cn(
         "spring-lift group relative flex h-full flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong",
-        featured && "featured-glow sm:col-span-2",
+        featured && "featured-glow",
       )}
     >
       {featured ? (
@@ -53,7 +62,7 @@ export function DiscoverCard({
             <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
           </div>
         </div>
-        <StatusBadge status={story.source} label={sourceLabel} />
+        <StatusBadge status={trust.status} label={trust.label} />
       </div>
 
       <p className="mt-4 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
@@ -73,14 +82,21 @@ export function DiscoverCard({
         {featured ? item.whatTheyDid : item.headline}
       </p>
 
-      {item.result ? (
+      {item.result || item.output ? (
         <div className="relative mt-4 rounded-[12px] border border-line bg-elevated px-3 py-3">
-          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">{t("discover.result")}</p>
-          <p className="mt-1 text-[13px] leading-5 text-ink">{item.result}</p>
+          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
+            {item.result ? t("discover.result") : t("discover.output")}
+          </p>
+          <p className="mt-1 text-[13px] leading-5 text-ink">{item.result ?? item.output}</p>
         </div>
       ) : null}
 
-      <div className="relative mt-4">
+      <p className="relative mt-4 text-[12px] leading-5 text-mute">
+        <span className="text-faint">{t("discover.usefulFor")}: </span>
+        {item.usefulFor}
+      </p>
+
+      <div className="relative mt-3">
         <AppNamePills apps={story.apps} />
       </div>
       <p className="relative mt-3 text-[11px] text-faint">{checkLabel}</p>

@@ -12,9 +12,11 @@ import { StatusBadge } from "./StatusBadge";
 export function UseCaseCard({
   useCase,
   highlightApp,
+  cta = "view",
 }: {
   useCase: UseCase;
   highlightApp?: AppSlug;
+  cta?: "view" | "build";
 }) {
   const { locale, t } = useI18n();
   const item = localizeUseCase(useCase, locale);
@@ -46,7 +48,9 @@ export function UseCaseCard({
         {t("meta.setup", { n: useCase.setupTime.replace(" min", "") })}
       </p>
       <div className="relative mt-auto flex items-end justify-between pt-5">
-        <span className="text-[13px] text-accent">{t("pages.viewUseCase")}</span>
+        <span className="text-[13px] text-accent">
+          {cta === "build" ? `${t("discover.buildWorkflow")} →` : t("pages.viewUseCase")}
+        </span>
         <span className="text-[11px] text-faint">
           {t("trust.verified", { date: formatVerifiedDate(trust.lastVerified, localeTag) })}
         </span>

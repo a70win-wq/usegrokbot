@@ -20,8 +20,8 @@ export async function generateMetadata({
   if (!story) return {};
   const item = localizeDiscoverStory(story, locale);
   return pageMeta({
-    title: `${item.title} — ${item.authorName}`,
-    description: item.headline,
+    title: item.title,
+    description: `${item.headline} Source: ${story.sourceLabel}.`,
     path: `/discover/${story.slug}`,
     urlLocale,
   });

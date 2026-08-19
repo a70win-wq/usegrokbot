@@ -19,7 +19,7 @@ export function Footer() {
             {t("nav.discover")}
           </LocaleLink>
           <LocaleLink href="/use-cases" className="hover:text-ink">
-            {t("nav.useCases")}
+            {t("nav.workflows")}
           </LocaleLink>
           <LocaleLink href="/categories" className="hover:text-ink">
             {t("nav.categories")}

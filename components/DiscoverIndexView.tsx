@@ -4,18 +4,25 @@ import { useEffect, useState } from "react";
 import { DiscoverFeed } from "@/components/DiscoverFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { SearchBar } from "@/components/SearchBar";
-import { discoverStories } from "@/data/discover";
+import { discoverStories, type DiscoverTab } from "@/data/discover";
 import { useI18n } from "@/lib/i18n";
 
-export function DiscoverIndexView({ initialQuery = "" }: { initialQuery?: string }) {
+export function DiscoverIndexView({
+  initialQuery = "",
+  initialTab = "trending",
+}: {
+  initialQuery?: string;
+  initialTab?: DiscoverTab;
+}) {
   const { t, absoluteHref } = useI18n();
   const [query, setQuery] = useState(initialQuery);
 
   useEffect(() => {
-    const next = query.trim()
-      ? `${window.location.pathname}?q=${encodeURIComponent(query.trim())}`
-      : window.location.pathname;
-    window.history.replaceState(null, "", next);
+    const params = new URLSearchParams(window.location.search);
+    if (query.trim()) params.set("q", query.trim());
+    else params.delete("q");
+    const qs = params.toString();
+    window.history.replaceState(null, "", qs ? `${window.location.pathname}?${qs}` : window.location.pathname);
   }, [query]);
 
   return (
@@ -36,7 +43,7 @@ export function DiscoverIndexView({ initialQuery = "" }: { initialQuery?: string
         <SearchBar variant="inline" initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
       </div>
       <div className="mt-10">
-        <DiscoverFeed query={query} />
+        <DiscoverFeed query={query} initialTab={initialTab} />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -75,7 +76,9 @@ export default async function LocaleLayout({
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
         <Providers>
-          <Header />
+          <Suspense fallback={<div className="h-12 border-b border-line bg-canvas/90" />}>
+            <Header />
+          </Suspense>
           <main className="flex-1">{children}</main>
           <Footer />
         </Providers>

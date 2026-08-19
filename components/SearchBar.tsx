@@ -16,6 +16,7 @@ type SearchBarProps = {
   onQueryChange?: (value: string) => void;
   autoFocus?: boolean;
   stayOnPage?: boolean;
+  destination?: "discover" | "use-cases";
 };
 
 export function SearchBar({
@@ -24,6 +25,7 @@ export function SearchBar({
   onQueryChange,
   autoFocus,
   stayOnPage = false,
+  destination = "use-cases",
 }: SearchBarProps) {
   const router = useRouter();
   const { locale, t, list, localizeHref } = useI18n();
@@ -92,6 +94,10 @@ export function SearchBar({
   }, [query, locale]);
 
   const trimmed = query.trim();
+  function resultsPath(value: string) {
+    const q = encodeURIComponent(value);
+    return destination === "discover" ? `/discover?q=${q}` : `/use-cases?q=${q}`;
+  }
   const showResults = variant === "hero" && open && trimmed.length > 0;
   const showSuggestions = variant === "hero" && open && trimmed.length === 0;
   const menuItems = showResults
@@ -109,7 +115,7 @@ export function SearchBar({
       ]
     : showSuggestions
       ? suggestions.map((item) => ({
-          href: stayOnPage ? "/" : `/use-cases?q=${encodeURIComponent(item)}`,
+          href: stayOnPage ? "/" : resultsPath(item),
           title: item,
           detail: "",
         }))
@@ -128,7 +134,7 @@ export function SearchBar({
       setOpen(false);
       return;
     }
-    router.push(localizeHref(`/use-cases?q=${encodeURIComponent(value)}`));
+    router.push(localizeHref(resultsPath(value)));
     setOpen(false);
   }
 
@@ -256,7 +262,7 @@ export function SearchBar({
               </button>
             ) : (
               <LocaleLink
-                href={`/use-cases?q=${encodeURIComponent(trimmed)}`}
+                href={resultsPath(trimmed)}
                 className="block border-t border-line px-4 py-2.5 text-[13px] text-ink"
                 onClick={() => setOpen(false)}
               >

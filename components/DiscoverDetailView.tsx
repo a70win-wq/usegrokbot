@@ -3,7 +3,7 @@
 import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { DiscoverCard } from "@/components/DiscoverCard";
+import { DiscoverCard, discoverTrust } from "@/components/DiscoverCard";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -23,7 +23,7 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
   const related = getRelatedUseCase(story);
   const relatedTitle = related ? localizeUseCase(related, locale).title : undefined;
   const more = getRelatedDiscoverStories(story, 3);
-  const sourceLabel = story.source === "official" ? t("discover.officialBadge") : t("discover.communityBadge");
+  const trust = discoverTrust(story, t);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOriginalX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
@@ -48,7 +48,16 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           dateModified: LAST_REVIEWED,
           author: { "@type": "Organization", name: site.name, url: site.url },
           publisher: { "@type": "Organization", name: site.name, url: site.url },
-          isBasedOn: story.sourceUrl,
+          isBasedOn: {
+            "@type": "CreativeWork",
+            name: story.sourceLabel,
+            url: story.sourceUrl,
+            author: {
+              "@type": sourceAuthorType,
+              name: story.authorName,
+              ...(story.handle ? { url: `https://x.com/${story.handle}` } : {}),
+            },
+          },
           citation: {
             "@type": "CreativeWork",
             name: story.sourceLabel,
@@ -76,7 +85,7 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       <Breadcrumbs items={[{ href: "/", label: t("nav.discover") }, { label: item.title }]} />
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
-        <StatusBadge status={story.source} label={sourceLabel} />
+        <StatusBadge status={trust.status} label={trust.label} />
         <span className="rounded-full border border-line px-2.5 py-1 text-[12px] text-mute">
           {t(`discover.cat${story.category.charAt(0).toUpperCase()}${story.category.slice(1)}`)}
         </span>
@@ -93,10 +102,12 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       </div>
       <h1 className="mt-2 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p>
-      {item.result ? (
+      {item.result || item.output ? (
         <div className="mt-6 rounded-[12px] border border-line bg-elevated px-4 py-3">
-          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">{t("discover.result")}</p>
-          <p className="mt-1 text-[15px] text-ink">{item.result}</p>
+          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
+            {item.result ? t("discover.result") : t("discover.output")}
+          </p>
+          <p className="mt-1 text-[15px] text-ink">{item.result ?? item.output}</p>
         </div>
       ) : null}
 

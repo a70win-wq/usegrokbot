@@ -12,6 +12,7 @@ export type DiscoverStoryI18n = {
   usefulFor: string;
   quote?: string;
   result?: string;
+  output?: string;
 };
 
 const hant: Record<string, DiscoverStoryI18n> = {
@@ -70,6 +71,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["正在評估 Grok Bot 的人", "決定要不要訂閱的創辦人"],
     usefulFor: "剛接觸 Grok Bot 的人",
     quote: "Introducing Grok Bot, now in early beta. Bots are AI teammates…",
+    output: "早期測試宣布",
   },
   "overnight-sales-xai": {
     title: "通宵銷售外展",
@@ -94,6 +96,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["客戶經理", "銷售營運", "自己兼 CRM 的創辦人"],
     usefulFor: "銷售營運 / 客戶經理",
     quote: "a sales Bot updating the CRM with call transcript notes and drafting follow-ups",
+    output: "結構化 CRM 更新",
   },
   "inbox-organizer-xai": {
     title: "收件箱管家",
@@ -105,6 +108,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["創辦人", "營運", "收件箱等於工作的人"],
     usefulFor: "營運 / 創辦人",
     quote: "A chief of staff sits on top, with a specialist for each lane: inbox management, expenses, recruiting…",
+    output: "已分類的收件箱",
   },
   "expense-manager-xai": {
     title: "開支管家",
@@ -116,6 +120,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["創辦人", "辦公室主任", "小型財務團隊"],
     usefulFor: "營運 / 財務",
     quote: "an ops Bot seating new hires and processing invoices received in Gmail",
+    output: "從 Gmail 入帳收據",
   },
   "bug-reproduction-xai": {
     title: "重現 Bug",
@@ -127,6 +132,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["工程師", "QA", "兼做支援的創辦人"],
     usefulFor: "工程 / QA",
     quote: "reproducing a bug in the product UI, filing the ticket, and handing the fix off to a debugging Bot",
+    output: "重現 bug 並入票",
   },
   "vendor-negotiation-xai": {
     title: "供應商議價",
@@ -139,6 +145,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["創辦人", "營運主管", "要買軟件或服務的人"],
     usefulFor: "創辦人 / 營運",
     quote: "negotiate with vendors in their voice",
+    output: "用你語氣寫的供應商對話",
   },
   "store-support-xai": {
     title: "網店客服隊列",
@@ -150,6 +157,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["網店創辦人", "支援主管", "一個人撐場的營運者"],
     usefulFor: "支援 / 創辦人",
     quote: "manage support for their online store",
+    output: "客服隊列草稿",
   },
   "reddit-thread-scout-axel": {
     title: "Reddit 討論串偵察",
@@ -161,6 +169,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whyItMatters: "這是公開的社群文章，不是 xAI 截圖。我們整理成卡片同可複製流程——冇喺度重跑他的 Bot。",
     whoShouldTry: ["創辦人", "市場人員", "獨立開發者"],
     usefulFor: "市場 / 創辦人",
+    output: "討論串清單 + 評論草稿",
   },
   "travel-concierge-nate": {
     title: "旅行管家",
@@ -172,6 +181,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["忙的專業人士", "家庭", "討厭 40 個分頁研究的人"],
     usefulFor: "要計劃旅行的人",
     quote: "Others took travel planning, exercise, and contact research.",
+    output: "一日一日的行程簡報",
   },
   "youtube-comments-remy": {
     title: "YouTube 留言台",
@@ -183,6 +193,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["創作者", "教育者", "產品行銷"],
     usefulFor: "創作者 / 內容",
     quote: "I had Gordon … start replying to my YouTube comments.",
+    output: "YouTube 回覆草稿",
   },
   "newsletter-to-social-remy": {
     title: "電子報轉社交",
@@ -194,6 +205,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["寫電子報的人", "會發帖的創辦人", "內容主管"],
     usefulFor: "內容 / 創辦人",
     quote: "I had Gordon repurpose last week’s newsletter across X and LinkedIn",
+    output: "X 同 LinkedIn 草稿",
   },
   "monday-marketing-report-jellypod": {
     title: "星期一市場報告",
@@ -206,6 +218,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["市場經理", "創辦人", "代理公司負責人"],
     usefulFor: "市場 / 創辦人",
     quote: "The output is a filled-in summary waiting when you open your laptop, not another dashboard to visit.",
+    output: "一頁星期一簡報",
   },
   "competitor-monitor-jellypod": {
     title: "對手監察",
@@ -218,6 +231,7 @@ const hant: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["創辦人", "市場團隊", "產品行銷"],
     usefulFor: "市場 / 創辦人",
     quote: "Ad libraries, review sites, and competitor changelogs are exactly the shape Grok Bot is built for",
+    output: "每週對手差額",
   },
 };
 
@@ -277,6 +291,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["正在评估 Grok Bot 的人", "决定要不要订阅的创始人"],
     usefulFor: "刚接触 Grok Bot 的人",
     quote: "Introducing Grok Bot, now in early beta. Bots are AI teammates…",
+    output: "早期测试宣布",
   },
   "overnight-sales-xai": {
     title: "通宵销售外展",
@@ -301,6 +316,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["客户经理", "销售运营", "自己兼 CRM 的创始人"],
     usefulFor: "销售运营 / 客户经理",
     quote: "a sales Bot updating the CRM with call transcript notes and drafting follow-ups",
+    output: "结构化 CRM 更新",
   },
   "inbox-organizer-xai": {
     title: "收件箱管家",
@@ -312,6 +328,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["创始人", "运营", "收件箱等于工作的人"],
     usefulFor: "运营 / 创始人",
     quote: "A chief of staff sits on top, with a specialist for each lane: inbox management, expenses, recruiting…",
+    output: "已分类的收件箱",
   },
   "expense-manager-xai": {
     title: "开支管家",
@@ -323,6 +340,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["创始人", "办公室主任", "小型财务团队"],
     usefulFor: "运营 / 财务",
     quote: "an ops Bot seating new hires and processing invoices received in Gmail",
+    output: "从 Gmail 入账收据",
   },
   "bug-reproduction-xai": {
     title: "复现 Bug",
@@ -334,6 +352,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["工程师", "QA", "兼做支持的创始人"],
     usefulFor: "工程 / QA",
     quote: "reproducing a bug in the product UI, filing the ticket, and handing the fix off to a debugging Bot",
+    output: "复现 bug 并提单",
   },
   "vendor-negotiation-xai": {
     title: "供应商议价",
@@ -346,6 +365,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["创始人", "运营主管", "要买软件或服务的人"],
     usefulFor: "创始人 / 运营",
     quote: "negotiate with vendors in their voice",
+    output: "用你语气写的供应商对话",
   },
   "store-support-xai": {
     title: "网店客服队列",
@@ -357,6 +377,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["网店创始人", "支持主管", "一个人撑场的运营者"],
     usefulFor: "支持 / 创始人",
     quote: "manage support for their online store",
+    output: "客服队列草稿",
   },
   "reddit-thread-scout-axel": {
     title: "Reddit 帖子侦察",
@@ -368,6 +389,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whyItMatters: "这是公开的社群文章，不是 xAI 截图。我们整理成卡片和可复制流程——没有在这里重跑他的 Bot。",
     whoShouldTry: ["创始人", "市场人员", "独立开发者"],
     usefulFor: "市场 / 创始人",
+    output: "帖子清单 + 评论草稿",
   },
   "travel-concierge-nate": {
     title: "旅行管家",
@@ -379,6 +401,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["忙的专业人士", "家庭", "讨厌 40 个标签页研究的人"],
     usefulFor: "要计划旅行的人",
     quote: "Others took travel planning, exercise, and contact research.",
+    output: "一天一天的行程简报",
   },
   "youtube-comments-remy": {
     title: "YouTube 评论台",
@@ -390,6 +413,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["创作者", "教育者", "产品营销"],
     usefulFor: "创作者 / 内容",
     quote: "I had Gordon … start replying to my YouTube comments.",
+    output: "YouTube 回复草稿",
   },
   "newsletter-to-social-remy": {
     title: "通讯转社交",
@@ -401,6 +425,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["写通讯的人", "会发帖的创始人", "内容主管"],
     usefulFor: "内容 / 创始人",
     quote: "I had Gordon repurpose last week’s newsletter across X and LinkedIn",
+    output: "X 和 LinkedIn 草稿",
   },
   "monday-marketing-report-jellypod": {
     title: "星期一市场报告",
@@ -413,6 +438,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["市场经理", "创始人", "代理公司负责人"],
     usefulFor: "市场 / 创始人",
     quote: "The output is a filled-in summary waiting when you open your laptop, not another dashboard to visit.",
+    output: "一页星期一简报",
   },
   "competitor-monitor-jellypod": {
     title: "竞品监控",
@@ -425,6 +451,7 @@ const hans: Record<string, DiscoverStoryI18n> = {
     whoShouldTry: ["创始人", "市场团队", "产品营销"],
     usefulFor: "市场 / 创始人",
     quote: "Ad libraries, review sites, and competitor changelogs are exactly the shape Grok Bot is built for",
+    output: "每周竞品差额",
   },
 };
 

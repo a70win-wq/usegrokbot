@@ -1,4 +1,5 @@
 import { DiscoverIndexView } from "@/components/DiscoverIndexView";
+import { isDiscoverTab } from "@/data/discover";
 import { messageMeta } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -13,8 +14,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function DiscoverPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; tab?: string }>;
 }) {
-  const { q } = await searchParams;
-  return <DiscoverIndexView initialQuery={q ?? ""} />;
+  const { q, tab } = await searchParams;
+  return <DiscoverIndexView initialQuery={q ?? ""} initialTab={isDiscoverTab(tab) ? tab : "trending"} />;
 }
