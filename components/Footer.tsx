@@ -2,6 +2,7 @@
 
 import { useI18n } from "@/lib/i18n";
 import { BotFace, botColorFor } from "./BotFace";
+import { GetGrokBot } from "./GetGrokBot";
 import { GitHubStar } from "./GitHubStar";
 import { LocaleLink } from "./LocaleLink";
 
@@ -37,6 +38,7 @@ export function Footer({ stars }: { stars?: number | null }) {
           <LocaleLink href="/submit" className="hover:text-ink">
             {t("nav.submitShort")}
           </LocaleLink>
+          <GetGrokBot variant="link" />
           <GitHubStar stars={stars} label="always" />
         </div>
         <p className="mt-6 text-[12px] text-faint">

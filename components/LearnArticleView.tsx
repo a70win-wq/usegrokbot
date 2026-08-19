@@ -1,6 +1,7 @@
 "use client";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { GetGrokBot } from "@/components/GetGrokBot";
 import { JsonLd } from "@/components/JsonLd";
 import type { LearnArticle } from "@/data/learn";
 import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
@@ -57,6 +58,10 @@ export function LearnArticleView({ article }: { article: LearnArticle }) {
             </ol>
           );
         })}
+      </div>
+      <div className="mt-10">
+        <GetGrokBot variant="accent" />
+        <p className="mt-2 text-[12px] text-faint">{t("official.downloadHint")}</p>
       </div>
       <footer className="mt-12 border-t border-line pt-6 text-[13px] leading-6 text-faint">
         <p>

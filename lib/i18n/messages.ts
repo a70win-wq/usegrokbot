@@ -17,6 +17,11 @@ export const messages = {
       star: "Star",
       starAria: "Star UseGrokBot on GitHub",
     },
+    official: {
+      download: "Download Grok Bot",
+      downloadAria: "Download Grok Bot from the official xAI site",
+      downloadHint: "Official download on x.ai/bot",
+    },
     nav: {
       discover: "Discover",
       useCases: "Use Cases",
@@ -348,6 +353,11 @@ export const messages = {
       star: "星星",
       starAria: "喺 GitHub 畀 UseGrokBot 星星",
     },
+    official: {
+      download: "下載 Grok Bot",
+      downloadAria: "去 xAI 官網下載 Grok Bot",
+      downloadHint: "官方下載：x.ai/bot",
+    },
     nav: {
       discover: "發現",
       useCases: "使用案例",
@@ -675,6 +685,11 @@ export const messages = {
     github: {
       star: "点星",
       starAria: "在 GitHub 给 UseGrokBot 点星",
+    },
+    official: {
+      download: "下载 Grok Bot",
+      downloadAria: "去 xAI 官网下载 Grok Bot",
+      downloadHint: "官方下载：x.ai/bot",
     },
     nav: {
       discover: "发现",

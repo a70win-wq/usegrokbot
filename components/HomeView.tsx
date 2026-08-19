@@ -6,6 +6,7 @@ import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/compone
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { PopularIntegrations } from "@/components/PopularIntegrations";
+import { GetGrokBot } from "@/components/GetGrokBot";
 import { HeroBot } from "@/components/HeroBot";
 import { SearchBar } from "@/components/SearchBar";
 import { UseCaseCard } from "@/components/UseCaseCard";
@@ -64,6 +65,10 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
                   stayOnPage
                   destination="discover"
                 />
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <GetGrokBot variant="accent" />
+                <p className="text-[12px] text-faint">{t("official.downloadHint")}</p>
               </div>
               <p className="mt-4 text-[12px] text-faint">
                 {t("home.proof", { n: useCases.length })}
