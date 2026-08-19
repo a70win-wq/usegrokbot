@@ -1,10 +1,21 @@
 import { readFile, writeFile } from "node:fs/promises";
-import { ingestUseCase } from "../lib/ingest/pipeline";
+import { discoverStories, type DiscoverStory } from "../data/discover";
+import { publishStory } from "../lib/ingest/publish";
+import { assertStorySafe } from "../lib/ingest/validate";
+import { site } from "../lib/site";
 
 const FEED_PATH = "data/source-feeds/awesome-grok-bot-field-cases.json";
-const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "12"));
+const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "6"));
 const MAX_ATTEMPTS = Math.max(1, Number(process.env.SOURCE_INGEST_MAX_ATTEMPTS ?? "3"));
-const RETRYABLE = new Set(["source_unreadable", "extract_failed", "publish_failed", "publish_not_configured", "unexpected_error"]);
+const RETRYABLE = new Set([
+  "source_unreadable",
+  "extract_failed",
+  "publish_failed",
+  "publish_not_configured",
+  "site_extract_failed",
+  "rate_limited",
+  "unexpected_error",
+]);
 
 type IngestState = {
   status: "pending" | "retry" | "published" | "queued" | "skipped" | "source-only";
@@ -30,6 +41,14 @@ type Feed = {
   cases: SourceCase[];
 };
 
+type ExtractResponse = {
+  status: "published" | "queued" | "extracted" | "skipped";
+  story?: DiscoverStory;
+  confidence?: number;
+  code?: string;
+  reason?: string;
+};
+
 async function save(feed: Feed) {
   await writeFile(FEED_PATH, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
 }
@@ -40,13 +59,52 @@ function shouldProcess(item: SourceCase) {
   return (item.ingest.attempts ?? 0) < MAX_ATTEMPTS;
 }
 
-function markSkipped(item: SourceCase, code: string, reason: string, attempts: number): IngestState {
+function markSkipped(code: string, reason: string, attempts: number): IngestState {
   const retry = RETRYABLE.has(code) && attempts < MAX_ATTEMPTS;
   return {
     status: retry ? "retry" : "skipped",
     attempts,
     code,
     reason,
+  };
+}
+
+async function extractViaLiveSite(item: SourceCase): Promise<DiscoverStory> {
+  const response = await fetch(`${site.url}/api/ingest`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-ingest-mode": "extract",
+      "User-Agent": "UseGrokBot-awesome-source-ingest",
+    },
+    body: JSON.stringify({
+      xUrl: item.url,
+      phase: "extract",
+      notes: `Discovered via RongleCat/awesome-grok-bot Field Cases. Source-index summary: ${item.sourceSummary}`,
+    }),
+  });
+
+  let data: ExtractResponse;
+  try {
+    data = (await response.json()) as ExtractResponse;
+  } catch {
+    throw new Error(`site_extract_failed:${response.status}:invalid_json`);
+  }
+
+  if (data.status === "extracted" && data.story) return data.story;
+
+  const code = data.code || (response.status === 429 ? "rate_limited" : "site_extract_failed");
+  const reason = data.reason || `Live extraction returned ${response.status}`;
+  throw new Error(`${code}:${reason}`);
+}
+
+function parseFailure(error: unknown) {
+  const raw = error instanceof Error ? error.message : String(error);
+  const separator = raw.indexOf(":");
+  if (separator <= 0) return { code: "unexpected_error", reason: raw };
+  return {
+    code: raw.slice(0, separator),
+    reason: raw.slice(separator + 1),
   };
 }
 
@@ -59,7 +117,7 @@ async function main() {
     return;
   }
 
-  console.log(`Auto-ingesting ${queue.length} X Field Cases from awesome-grok-bot.`);
+  console.log(`Auto-ingesting ${queue.length} X Field Cases from awesome-grok-bot via ${site.url}.`);
 
   for (const candidate of queue) {
     const item = feed.cases.find((entry) => entry.url === candidate.url)!;
@@ -67,33 +125,24 @@ async function main() {
     console.log(`\n[${attempts}/${MAX_ATTEMPTS}] ${item.title}\n${item.url}`);
 
     try {
-      const result = await ingestUseCase({
-        xUrl: item.url,
-        notes: `Discovered via RongleCat/awesome-grok-bot Field Cases. Source-index summary: ${item.sourceSummary}`,
-      });
+      const story = await extractViaLiveSite(item);
+      assertStorySafe(
+        story,
+        discoverStories.filter((existing) => existing.slug !== story.slug),
+      );
 
-      if (result.status === "published") {
-        item.ingest = { status: "published", attempts };
-        console.log(`published: ${result.slug}`);
-      } else if (result.status === "queued") {
-        item.ingest = { status: "queued", attempts, reason: result.prUrl };
-        console.log(`queued: ${result.prUrl}`);
-      } else if (result.status === "extracted") {
-        item.ingest = markSkipped(
-          item,
-          "publish_not_configured",
-          "Case extracted successfully but no GitHub publishing token was available.",
-          attempts,
-        );
-        console.log("extracted but not published");
+      const published = await publishStory(story);
+      if (published.merged) {
+        item.ingest = { status: "published", attempts, reason: published.prUrl };
+        console.log(`published: ${story.slug}`);
       } else {
-        item.ingest = markSkipped(item, result.code, result.reason, attempts);
-        console.log(`${item.ingest.status}: ${result.code} — ${result.reason}`);
+        item.ingest = { status: "queued", attempts, reason: published.prUrl };
+        console.log(`queued: ${published.prUrl}`);
       }
     } catch (error) {
-      const reason = error instanceof Error ? error.message : String(error);
-      item.ingest = markSkipped(item, "unexpected_error", reason, attempts);
-      console.error(`unexpected error: ${reason}`);
+      const failure = parseFailure(error);
+      item.ingest = markSkipped(failure.code, failure.reason, attempts);
+      console.error(`${item.ingest.status}: ${failure.code} — ${failure.reason}`);
     }
 
     await save(feed);
