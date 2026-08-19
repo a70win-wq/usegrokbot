@@ -87,6 +87,8 @@ const MILES_GUIDE = "https://x.com/milesdeutscher/status/2089800752156025272";
 const BEN_LANG_TIPS = "https://x.com/benln/status/2089699901567340808";
 const TESLACONOMICS_CEO = "https://x.com/Teslaconomics/status/2088355513482596607";
 const ALEX_FINN_LOOPS = "https://x.com/AlexFinn/status/2089038594690408891";
+const ALEX_FINN_WALKTHROUGH = "https://x.com/AlexFinn/status/2089505950470459659";
+const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126";
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const DIGITAL_TRENDS =
   "https://www.digitaltrends.com/computing/grok-bot-wants-to-take-work-off-your-plate-not-just-answer-your-queries/";
@@ -255,6 +257,36 @@ const curatedStories: DiscoverStory[] = [
     trending: true,
   },
   {
+    slug: "3d-game-roundtable-space",
+    title: "3D Game, Then Post It",
+    headline: "0xMarioNawfal posted that Grok @bot built a 3D game, autoplayed it, and uploaded the video to X",
+    whatTheyDid:
+      "On 19 Aug 2026 0xMarioNawfal (@RoundtableSpace) wrote that Grok @bot can create an entire 3D game, screen-record itself autoplaying, edit the video, and upload it to X — all by itself. The attached clip is from Dan (@Daniel_Farinax).",
+    howItWorks:
+      "Mario amplified a public recording. We keep his permalink. We did not re-run the game or the upload.",
+    whyUseful:
+      "This is the computer-use job people point at: not a chat answer — a built game plus a finished X video.",
+    whyItMatters:
+      "Same-day community amplification of a concrete Bot job. The clip is Dan’s; the post is Mario’s. Both stay attributed.",
+    whoShouldTry: ["Builders", "Game makers", "Creators who want the Bot to ship a clip"],
+    usefulFor: "Builders / Creators",
+    quote: "It knows how to screen record, auto-play the game, edit the video, and upload the video all by itself",
+    result: "3D game · record, edit, upload to X",
+    category: "coding",
+    outcomes: ["build-software", "create-content"],
+    apps: ["browser", "x"],
+    difficulty: "advanced",
+    schedule: "one-time",
+    source: "community",
+    authorName: "0xMarioNawfal",
+    handle: "RoundtableSpace",
+    publishedAt: "2026-08-19",
+    xPostUrl: MARIO_3D_GAME,
+    sourceUrl: MARIO_3D_GAME,
+    sourceLabel: "0xMarioNawfal on X",
+    trending: true,
+  },
+  {
     slug: "five-bots-peter-yang",
     title: "Five Practical Bots",
     headline: "Peter Yang published a tutorial for five Grok Bots — advisor, YouTube, X, inbox, trips",
@@ -403,6 +435,36 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: ALEX_FINN_LOOPS,
     sourceUrl: ALEX_FINN_LOOPS,
     sourceLabel: "Alex Finn on X",
+  },
+  {
+    slug: "grok-bot-walkthrough-alex-finn",
+    title: "Setup Walkthrough",
+    headline: "Alex Finn posted a video walkthrough — setting up Grok Bot, use cases, plugins",
+    whatTheyDid:
+      "On 18 Aug 2026 Alex Finn (@AlexFinn) posted a different Grok Bot piece from his five-minute loops note: a video covering how to set up Grok Bot, use cases, plugins, and what makes it work if you configure it. He called it an army of agents that can work around the clock.",
+    howItWorks:
+      "This is a public setup walkthrough, not a named customer screenshot. We keep Alex’s permalink. We did not re-run his desk or re-cut the video.",
+    whyUseful:
+      "If you want one video that starts at setup — not another five-minute loop recipe — this is the one people were watching.",
+    whyItMatters:
+      "Highest-attention community Grok Bot walkthrough this week. Separate post from his loops card. Community; we did not mark it tested.",
+    whoShouldTry: ["People setting up a first Bot", "Operators", "Creators"],
+    usefulFor: "Operators / Creators",
+    quote: "In this video I cover setting up Grok Bot, use cases, plugins, and what makes Grok Bot so good",
+    result: "Video walkthrough · setup, use cases, plugins",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "community",
+    authorName: "Alex Finn",
+    handle: "AlexFinn",
+    publishedAt: "2026-08-18",
+    xPostUrl: ALEX_FINN_WALKTHROUGH,
+    sourceUrl: ALEX_FINN_WALKTHROUGH,
+    sourceLabel: "Alex Finn on X",
+    trending: true,
   },
   {
     slug: "firstmate-kun-chen",
