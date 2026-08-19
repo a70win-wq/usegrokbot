@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "kettlebelldan-arduino-updates-from-a-bot",
+    "title": "Arduino updates from a Bot",
+    "headline": "Bot pushes hardware updates so the human can stay off X.",
+    "whatTheyDid": "Bot pushes hardware updates so the human can stay off X.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Bot pushes hardware updates so the human can stay off X.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Dan",
+    "handle": "KettlebellDan",
+    "publishedAt": "2026-08-19",
+    "xPostUrl": "https://x.com/KettlebellDan/status/2089920364419874937",
+    "sourceUrl": "https://x.com/KettlebellDan/status/2089920364419874937",
+    "sourceLabel": "Dan on X"
+  }
+]
