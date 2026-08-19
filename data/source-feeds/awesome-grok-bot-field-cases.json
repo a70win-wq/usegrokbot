@@ -25,8 +25,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
@@ -38,8 +40,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
@@ -77,8 +81,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
@@ -90,8 +96,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
@@ -103,8 +111,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
@@ -116,8 +126,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "retry",
+        "attempts": 1,
+        "code": "extract_failed",
+        "reason": "Could not parse this post."
       }
     },
     {
