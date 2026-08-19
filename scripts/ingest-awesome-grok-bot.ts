@@ -1,5 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { discoverStories, type DiscoverStory } from "../data/discover";
+import { fetchGenericSourceMetadata, type GenericSourceType } from "../lib/ingest/fetch-source-metadata";
 import { fetchXPost, type FetchedPost } from "../lib/ingest/fetch-post";
 import { makeStorySlug } from "../lib/ingest/slug";
 import { assertStorySafe } from "../lib/ingest/validate";
@@ -7,7 +8,7 @@ import { site } from "../lib/site";
 
 const FEED_PATH = "data/source-feeds/awesome-grok-bot-field-cases.json";
 const INGESTED_PATH = "data/discover/ingested.json";
-const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "10"));
+const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "20"));
 const MAX_ATTEMPTS = Math.max(1, Number(process.env.SOURCE_INGEST_MAX_ATTEMPTS ?? "3"));
 const RETRYABLE = new Set([
   "source_unreadable",
@@ -48,6 +49,18 @@ type ExtractResponse = {
   reason?: string;
 };
 
+const GENERIC_SOURCE_TYPES = new Set<GenericSourceType>([
+  "article",
+  "newsletter",
+  "youtube",
+  "github",
+  "note",
+]);
+
+function isGenericSourceType(value: string): value is GenericSourceType {
+  return GENERIC_SOURCE_TYPES.has(value as GenericSourceType);
+}
+
 async function saveFeed(feed: Feed) {
   await writeFile(FEED_PATH, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
 }
@@ -57,9 +70,13 @@ async function saveIngested(stories: DiscoverStory[]) {
 }
 
 function shouldProcess(item: SourceCase) {
-  if (item.sourceType !== "x" || item.sourceStatus !== "candidate") return false;
+  if (item.sourceStatus !== "candidate") return false;
+  if (item.sourceType !== "x" && !isGenericSourceType(item.sourceType)) return false;
   const recoverOldPermissionFailure = item.ingest.status === "skipped" && item.ingest.code === "github_403";
-  if (!["pending", "retry"].includes(item.ingest.status) && !recoverOldPermissionFailure) return false;
+  const legacySourceOnly = item.ingest.status === "source-only";
+  if (!["pending", "retry"].includes(item.ingest.status) && !recoverOldPermissionFailure && !legacySourceOnly) {
+    return false;
+  }
   return (item.ingest.attempts ?? 0) < MAX_ATTEMPTS;
 }
 
@@ -111,7 +128,8 @@ function fallbackTitle(item: SourceCase) {
 function fallbackCategory(text: string): DiscoverStory["category"] {
   const value = text.toLowerCase();
   if (/wordpress|arduino|engineering|\bpr\b|databricks|developer|technical|code|software/.test(value)) return "coding";
-  if (/market|research|brief|scan|reconcile|credit/.test(value)) return "research";
+  if (/support|helpdesk|customer[- ]service/.test(value)) return "operations";
+  if (/market|research|brief|scan|reconcile|credit|field notes/.test(value)) return "research";
   if (/calendar|reservation|travel|shopping|flights|beer|personal/.test(value)) return "personal";
   if (/sales|buyer|lead|customer/.test(value)) return "sales";
   if (/content|image|write|video|post/.test(value)) return "content";
@@ -145,7 +163,7 @@ function fallbackApps(text: string): DiscoverStory["apps"] {
   if (/\blinkedin\b/.test(value)) add("linkedin");
   if (/\breddit\b/.test(value)) add("reddit");
   if (/\byoutube\b/.test(value)) add("youtube");
-  if (/\bbrowser\b|website|site\b/.test(value)) add("browser");
+  if (/\bbrowser\b|website|site\b|airline/.test(value)) add("browser");
   if (/\bx\b|twitter/.test(value)) add("x");
 
   return apps;
@@ -178,7 +196,7 @@ function audienceFor(category: DiscoverStory["category"]) {
   }
 }
 
-function buildSafeFallback(item: SourceCase, post: FetchedPost, existingStories: DiscoverStory[]): DiscoverStory {
+function buildSafeXFallback(item: SourceCase, post: FetchedPost, existingStories: DiscoverStory[]): DiscoverStory {
   const title = fallbackTitle(item);
   const combined = `${item.title}\n${item.sourceSummary}\n${post.sourceText}`;
   const category = fallbackCategory(combined);
@@ -214,9 +232,65 @@ function buildSafeFallback(item: SourceCase, post: FetchedPost, existingStories:
   };
 }
 
-async function safeFallback(item: SourceCase, existingStories: DiscoverStory[]) {
+async function safeXFallback(item: SourceCase, existingStories: DiscoverStory[]) {
   const post = await fetchXPost(item.url);
-  return buildSafeFallback(item, post, existingStories);
+  return buildSafeXFallback(item, post, existingStories);
+}
+
+function sourceTypeLabel(type: GenericSourceType) {
+  switch (type) {
+    case "youtube":
+      return "YouTube";
+    case "github":
+      return "GitHub";
+    case "newsletter":
+      return "Newsletter";
+    case "note":
+      return "Article";
+    default:
+      return "Article";
+  }
+}
+
+async function buildGenericSourceStory(item: SourceCase, existingStories: DiscoverStory[]): Promise<DiscoverStory> {
+  if (!isGenericSourceType(item.sourceType)) throw new Error(`unsupported_source:${item.sourceType}`);
+
+  const metadata = await fetchGenericSourceMetadata(item.url, item.sourceType, item.title);
+  const title = fallbackTitle(item);
+  const combined = `${item.title}\n${item.sourceSummary}\n${metadata.pageTitle ?? ""}`;
+  const category = fallbackCategory(combined);
+  const whoShouldTry = audienceFor(category);
+  const sourceKind = sourceTypeLabel(item.sourceType);
+  const slug = makeStorySlug(metadata.authorName, title, new Set(existingStories.map((story) => story.slug)));
+  const dateNote = metadata.dateFromSource
+    ? "The publication date comes from machine-readable metadata on the original source."
+    : "The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.";
+
+  return {
+    slug,
+    title,
+    headline: item.sourceSummary,
+    whatTheyDid: item.sourceSummary,
+    howItWorks:
+      `This public ${sourceKind.toLowerCase()} was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. ${dateNote}`,
+    whyUseful:
+      "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    whyItMatters:
+      "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    whoShouldTry,
+    usefulFor: whoShouldTry.join(" / "),
+    output: item.sourceSummary,
+    category,
+    outcomes: fallbackOutcomes(category),
+    apps: fallbackApps(combined),
+    difficulty: "medium",
+    schedule: fallbackSchedule(combined),
+    source: "community",
+    authorName: metadata.authorName,
+    publishedAt: metadata.publishedAt,
+    sourceUrl: item.url,
+    sourceLabel: `${metadata.authorName} · ${metadata.siteName || sourceKind}`,
+  };
 }
 
 function parseFailure(error: unknown) {
@@ -229,11 +303,10 @@ function parseFailure(error: unknown) {
   };
 }
 
-async function getStory(item: SourceCase, existingStories: DiscoverStory[]) {
-  // These entries already reached the publish step, so do not burn another AI call.
+async function getXStory(item: SourceCase, existingStories: DiscoverStory[]) {
   if (["extract_failed", "github_403"].includes(item.ingest.code ?? "")) {
-    console.log("Using safe source-index fallback for a previously attempted case.");
-    return safeFallback(item, existingStories);
+    console.log("Using safe source-index fallback for a previously attempted X case.");
+    return safeXFallback(item, existingStories);
   }
 
   try {
@@ -242,10 +315,15 @@ async function getStory(item: SourceCase, existingStories: DiscoverStory[]) {
     const failure = parseFailure(error);
     if (["extract_failed", "site_extract_failed", "rate_limited"].includes(failure.code)) {
       console.log(`${failure.code}; using safe source-index fallback.`);
-      return safeFallback(item, existingStories);
+      return safeXFallback(item, existingStories);
     }
     throw error;
   }
+}
+
+async function getStory(item: SourceCase, existingStories: DiscoverStory[]) {
+  if (item.sourceType === "x") return getXStory(item, existingStories);
+  return buildGenericSourceStory(item, existingStories);
 }
 
 async function main() {
@@ -255,16 +333,16 @@ async function main() {
   const queue = feed.cases.filter(shouldProcess).slice(0, MAX_PER_RUN);
 
   if (!queue.length) {
-    console.log("No new X Field Cases to ingest.");
+    console.log("No new Field Cases to ingest.");
     return;
   }
 
-  console.log(`Auto-ingesting ${queue.length} X Field Cases from awesome-grok-bot.`);
+  console.log(`Auto-ingesting ${queue.length} Field Cases from awesome-grok-bot.`);
 
   for (const candidate of queue) {
     const item = feed.cases.find((entry) => entry.url === candidate.url)!;
     const attempts = (item.ingest.attempts ?? 0) + 1;
-    console.log(`\n[${attempts}/${MAX_ATTEMPTS}] ${item.title}\n${item.url}`);
+    console.log(`\n[${attempts}/${MAX_ATTEMPTS}] [${item.sourceType}] ${item.title}\n${item.url}`);
 
     try {
       if (workingStories.some((story) => story.xPostUrl === item.url || story.sourceUrl === item.url)) {
