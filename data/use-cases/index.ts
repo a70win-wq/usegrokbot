@@ -1,13 +1,16 @@
 import type { UseCase } from "../types";
+import { verificationFor } from "../verification";
 import { contentUseCases } from "./content";
 import { marketingUseCases } from "./marketing";
 import { operationsUseCases } from "./operations";
+import { publicDemoUseCases } from "./public-demos";
 import { researchUseCases } from "./research";
 import { restUseCases } from "./rest";
 import { salesUseCases } from "./sales";
 import { supportHrUseCases } from "./support-hr";
 
 export const useCases: UseCase[] = [
+  ...publicDemoUseCases,
   ...salesUseCases,
   ...marketingUseCases,
   ...contentUseCases,
@@ -38,8 +41,13 @@ export function getPopularUseCases(limit = 9) {
     .slice(0, limit);
 }
 
+export function getCommunityUseCases(limit = 6) {
+  return useCases.filter((useCase) => verificationFor(useCase.slug).status === "community").slice(0, limit);
+}
+
 export function getNewUseCases(limit = 6) {
   return [...useCases]
+    .filter((useCase) => verificationFor(useCase.slug).status !== "community")
     .sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
     .slice(0, limit);
 }

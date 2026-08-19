@@ -1,0 +1,31 @@
+# UseGrokBot
+
+> A searchable library of Grok Bot use cases and ready-to-copy prompts.
+
+Site: https://usegrokbot.com
+Locales: /en /zh-hk /zh-cn
+
+## Start here
+
+- https://usegrokbot.com/en
+- https://usegrokbot.com/en/use-cases
+- https://usegrokbot.com/en/learn/what-is-grok-bot
+- https://usegrokbot.com/sitemap.xml
+
+## Priority use cases
+
+- https://usegrokbot.com/en/use-cases/lead-researcher
+- https://usegrokbot.com/en/use-cases/competitor-monitor
+- https://usegrokbot.com/en/use-cases/daily-ai-news-brief
+- https://usegrokbot.com/en/use-cases/inbox-organizer
+- https://usegrokbot.com/en/use-cases/reddit-thread-scout
+- https://usegrokbot.com/en/use-cases/travel-concierge
+- https://usegrokbot.com/en/use-cases/youtube-comment-desk
+- https://usegrokbot.com/en/use-cases/x-viral-scout
+- https://usegrokbot.com/en/use-cases/monday-marketing-report
+
+## Categories
+
+- https://usegrokbot.com/en/categories/sales
+- https://usegrokbot.com/en/categories/marketing
+- https://usegrokbot.com/en/categories/research

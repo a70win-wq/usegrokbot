@@ -16,7 +16,22 @@ function detectUrlLocale(request: NextRequest): UrlLocale {
   return detectUrlLocaleFromHeader(request.headers.get("accept-language"));
 }
 
+const CANONICAL_HOST = "usegrokbot.com";
+
+function apexRedirect(request: NextRequest) {
+  const host = request.headers.get("host")?.split(":")[0] ?? "";
+  if (host !== `www.${CANONICAL_HOST}`) return null;
+  const url = request.nextUrl.clone();
+  url.hostname = CANONICAL_HOST;
+  url.protocol = "https";
+  url.port = "";
+  return NextResponse.redirect(url, 301);
+}
+
 export function proxy(request: NextRequest) {
+  const hostRedirect = apexRedirect(request);
+  if (hostRedirect) return hostRedirect;
+
   const { pathname } = request.nextUrl;
   const last = pathname.split("/").filter(Boolean).pop() ?? "";
 

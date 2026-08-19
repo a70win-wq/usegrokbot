@@ -8,7 +8,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { homeApps } from "@/data/apps";
 import { categories, categoriesBySlug } from "@/data/categories";
-import { getNewUseCases, getPopularUseCases, getUseCasesByApp, useCases } from "@/data/use-cases";
+import { getCommunityUseCases, getNewUseCases, getPopularUseCases, getUseCasesByApp, useCases } from "@/data/use-cases";
 import { isOfficial } from "@/data/verification";
 import { localizeCategory, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -17,6 +17,7 @@ export function HomeView() {
   const { locale, t, absoluteHref } = useI18n();
   const popular = getPopularUseCases(9);
   const newest = getNewUseCases(6);
+  const demos = getCommunityUseCases(6);
   const officialCount = useCases.filter(isOfficial).length;
 
   const chips = [
@@ -151,6 +152,18 @@ export function HomeView() {
           </div>
         </div>
       </section>
+
+      {demos.length ? (
+        <section className="mx-auto max-w-[1120px] px-5 py-16 md:px-8 md:py-20">
+          <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{t("home.publicDemos")}</h2>
+          <p className="mt-3 max-w-2xl text-sm text-mute">{t("home.publicDemosBody")}</p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {demos.map((item) => (
+              <UseCaseCard key={item.slug} useCase={item} />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mx-auto max-w-[1120px] px-5 py-16 md:px-8 md:py-20">
         <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.newest")}</h2>

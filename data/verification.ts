@@ -39,6 +39,29 @@ const official: Record<string, string> = {
   "github-issue-researcher": "Engineering",
 };
 
+const community: Record<string, { label: string; url: string }> = {
+  "reddit-thread-scout": {
+    label: "Axel Schapmann: Grok Bot for Reddit marketing",
+    url: "https://www.linkedin.com/posts/axel-schapmann_how-to-use-grok-bot-for-reddit-marketing-activity-7494004829774688256-L40s",
+  },
+  "travel-concierge": {
+    label: "Nate’s Newsletter: Grok Bot review",
+    url: "https://natesnewsletter.substack.com/p/grok-bot-review",
+  },
+  "youtube-comment-desk": {
+    label: "Remy: what I’m actually using Grok Bot for",
+    url: "https://aiwithremy.beehiiv.com/p/what-i-m-actually-using-grok-bot-for",
+  },
+  "x-viral-scout": {
+    label: "Remy: content Bot across X and LinkedIn",
+    url: "https://aiwithremy.beehiiv.com/p/what-i-m-actually-using-grok-bot-for",
+  },
+  "monday-marketing-report": {
+    label: "Jellypod: How to use Grok Bot for marketing",
+    url: "https://www.jellypod.com/workflows/how-to-use-grok-bot-for-marketing",
+  },
+};
+
 export function verificationFor(slug: string): Verification {
   const job = official[slug];
   if (job) {
@@ -46,6 +69,14 @@ export function verificationFor(slug: string): Verification {
       status: "official",
       lastVerified: LAST_REVIEWED,
       source: { label: `xAI: ${job}`, url: XAI_INTRO.url },
+    };
+  }
+  const report = community[slug];
+  if (report) {
+    return {
+      status: "community",
+      lastVerified: LAST_REVIEWED,
+      source: report,
     };
   }
   return { status: "library", lastVerified: LAST_REVIEWED };
