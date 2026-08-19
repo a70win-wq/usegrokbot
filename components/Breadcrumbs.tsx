@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 
 export type Crumb = { href?: string; label: string };
 
@@ -10,9 +10,9 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           <li key={`${item.label}-${index}`} className="flex items-center gap-2">
             {index > 0 ? <span aria-hidden>→</span> : null}
             {item.href ? (
-              <Link href={item.href} className="hover:text-ink">
+              <LocaleLink href={item.href} className="hover:text-ink">
                 {item.label}
-              </Link>
+              </LocaleLink>
             ) : (
               <span className="text-mute">{item.label}</span>
             )}

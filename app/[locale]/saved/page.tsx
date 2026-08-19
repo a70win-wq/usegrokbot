@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { useSaved } from "@/components/saved";
 import { getUseCase } from "@/data/use-cases";
@@ -20,12 +20,12 @@ export default function SavedPage() {
       ) : items.length === 0 ? (
         <div className="mt-12 rounded-[14px] border border-line bg-card px-6 py-16 text-center">
           <p className="text-ink">{t("pages.savedEmpty")}</p>
-          <Link
+          <LocaleLink
             href="/use-cases"
             className="accent-gradient mt-6 inline-flex h-11 items-center rounded-[10px] px-5 text-sm font-medium text-inverse"
           >
             {t("pages.explore")}
-          </Link>
+          </LocaleLink>
         </div>
       ) : (
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">

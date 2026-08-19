@@ -1,17 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Heart, Menu, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
+import { stripLocalePrefix } from "@/lib/i18n/paths";
 import { BotFace, botColorFor } from "./BotFace";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { LocaleLink } from "./LocaleLink";
 import { useSaved } from "./saved";
 
 export function Header() {
   const pathname = usePathname();
+  const path = stripLocalePrefix(pathname);
   const { slugs } = useSaved();
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
@@ -27,16 +29,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-canvas/90 backdrop-blur-md">
       <div className="mx-auto flex h-12 max-w-[1120px] items-center justify-between px-5 md:px-8">
-        <Link href="/" className="flex items-center gap-2 text-[15px] font-medium tracking-tight text-ink">
+        <LocaleLink href="/" className="flex items-center gap-2 text-[15px] font-medium tracking-tight text-ink">
           <BotFace size={18} color={botColorFor("usegrokbot")} />
           UseGrokBot
-        </Link>
+        </LocaleLink>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+            const active = path === item.href || path.startsWith(`${item.href}/`);
             return (
-              <Link
+              <LocaleLink
                 key={item.href}
                 href={item.href}
                 className={cn(
@@ -45,27 +47,27 @@ export function Header() {
                 )}
               >
                 {item.label}
-              </Link>
+              </LocaleLink>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-1">
           <LanguageSwitch />
-          <Link
+          <LocaleLink
             href="/saved"
             className="inline-flex h-9 items-center gap-1.5 rounded-lg px-2.5 text-[13px] text-mute hover:text-ink"
           >
             <Heart className="size-3.5" strokeWidth={1.75} />
             <span className="hidden sm:inline">{t("nav.saved")}</span>
             {slugs.length > 0 ? <span className="font-mono text-[11px] text-faint">{slugs.length}</span> : null}
-          </Link>
-          <Link
+          </LocaleLink>
+          <LocaleLink
             href="/submit"
             className="hidden h-9 items-center rounded-lg border border-line px-3 text-[13px] text-mute hover:border-line-strong hover:text-ink sm:inline-flex"
           >
             {t("nav.submit")}
-          </Link>
+          </LocaleLink>
           <button
             type="button"
             className="inline-flex size-9 items-center justify-center rounded-lg text-mute lg:hidden"
@@ -82,18 +84,18 @@ export function Header() {
         <div className="border-t border-line bg-elevated px-5 py-4 lg:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {nav.map((item) => (
-              <Link
+              <LocaleLink
                 key={item.href}
                 href={item.href}
                 className="rounded-lg px-3 py-3 text-sm text-ink"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
-              </Link>
+              </LocaleLink>
             ))}
-            <Link href="/submit" className="rounded-lg px-3 py-3 text-sm text-ink" onClick={() => setOpen(false)}>
+            <LocaleLink href="/submit" className="rounded-lg px-3 py-3 text-sm text-ink" onClick={() => setOpen(false)}>
               {t("nav.submit")}
-            </Link>
+            </LocaleLink>
           </nav>
         </div>
       ) : null}

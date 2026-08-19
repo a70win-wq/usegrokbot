@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CopyButton } from "@/components/CopyButton";
 import { CustomizePrompt } from "@/components/CustomizePrompt";
@@ -16,7 +16,6 @@ import { StatusBadge } from "@/components/StatusBadge";
 import type { UseCase } from "@/data/types";
 import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 export function UseCaseDetailView({
   useCase,
@@ -25,7 +24,7 @@ export function UseCaseDetailView({
   useCase: UseCase;
   related: UseCase[];
 }) {
-  const { locale, t } = useI18n();
+  const { locale, t, absoluteHref } = useI18n();
   const item = localizeUseCase(useCase, locale);
   const category = categoryFor(useCase.category, locale);
   const setupMins = useCase.setupTime.replace(" min", "");
@@ -40,7 +39,7 @@ export function UseCaseDetailView({
           "@type": "Article",
           headline: `${useCase.title} Grok Bot Workflow`,
           description: useCase.description,
-          mainEntityOfPage: `${site.url}/use-cases/${useCase.slug}`,
+          mainEntityOfPage: absoluteHref(`/use-cases/${useCase.slug}`),
         }}
       />
       <JsonLd
@@ -48,12 +47,12 @@ export function UseCaseDetailView({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Use Cases", item: `${site.url}/use-cases` },
+            { "@type": "ListItem", position: 1, name: "Use Cases", item: absoluteHref("/use-cases") },
             {
               "@type": "ListItem",
               position: 2,
               name: category.name,
-              item: `${site.url}/categories/${category.slug}`,
+              item: absoluteHref(`/categories/${category.slug}`),
             },
             { "@type": "ListItem", position: 3, name: item.title },
           ],
@@ -171,9 +170,9 @@ export function UseCaseDetailView({
         </div>
         <p className="mt-8 text-sm text-faint">
           {t("detail.moreIn", { name: category.name })}{" "}
-          <Link href={`/categories/${category.slug}`} className="text-accent">
+          <LocaleLink href={`/categories/${category.slug}`} className="text-accent">
             {t("detail.seeList")}
-          </Link>
+          </LocaleLink>
           .
         </p>
       </section>

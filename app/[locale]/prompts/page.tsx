@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { CopyButton } from "@/components/CopyButton";
 import { categories } from "@/data/categories";
 import { useCases } from "@/data/use-cases";
@@ -71,13 +71,13 @@ export default function PromptsPage() {
                 {localizeCategory(categories.find((category) => category.slug === item.category)!, locale).name}
               </div>
               <h2 className="mt-2 text-lg font-medium text-ink">
-                <Link href={`/use-cases/${item.slug}`}>{item.title}</Link>
+                <LocaleLink href={`/use-cases/${item.slug}`}>{item.title}</LocaleLink>
               </h2>
               <p className="mt-2 line-clamp-3 font-mono text-[12px] leading-5 text-mute">{source.prompt}</p>
               <div className="mt-4 flex items-center justify-between">
-                <Link href={`/use-cases/${item.slug}`} className="text-[13px] text-accent">
+                <LocaleLink href={`/use-cases/${item.slug}`} className="text-[13px] text-accent">
                   {t("pages.viewUseCase")}
-                </Link>
+                </LocaleLink>
                 <CopyButton text={source.prompt} />
               </div>
             </article>

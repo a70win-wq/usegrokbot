@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import type { Category } from "@/data/types";
 import { localizeCategory, useI18n } from "@/lib/i18n";
 import { BotFace, botColorFor } from "./BotFace";
@@ -10,7 +10,7 @@ export function CategoryCard({ category, count }: { category: Category; count: n
   const item = localizeCategory(category, locale);
 
   return (
-    <Link
+    <LocaleLink
       href={`/categories/${category.slug}`}
       className="spring-lift rounded-[14px] border border-line bg-card p-5 hover:border-line-strong hover:bg-card-hover"
     >
@@ -18,6 +18,6 @@ export function CategoryCard({ category, count }: { category: Category; count: n
       <h3 className="mt-4 text-[16px] font-medium text-ink">{item.name}</h3>
       <p className="mt-2 text-sm leading-6 text-mute">{item.description}</p>
       <p className="mt-3 text-[12px] text-faint">{t("count.useCases", { n: count })}</p>
-    </Link>
+    </LocaleLink>
   );
 }

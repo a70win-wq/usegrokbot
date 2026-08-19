@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { AppCard } from "@/components/AppCard";
 import { BotFace, botColorFor } from "@/components/BotFace";
 import { JsonLd } from "@/components/JsonLd";
@@ -14,7 +14,7 @@ import { localizeCategory, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
 export function HomeView() {
-  const { locale, t } = useI18n();
+  const { locale, t, absoluteHref } = useI18n();
   const popular = getPopularUseCases(9);
   const newest = getNewUseCases(6);
   const officialCount = useCases.filter(isOfficial).length;
@@ -43,11 +43,11 @@ export function HomeView() {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: site.name,
-          url: site.url,
+          url: absoluteHref("/"),
           description: site.description,
           potentialAction: {
             "@type": "SearchAction",
-            target: `${site.url}/use-cases?q={search_term_string}`,
+            target: absoluteHref("/use-cases?q={search_term_string}"),
             "query-input": "required name=search_term_string",
           },
         }}
@@ -80,13 +80,13 @@ export function HomeView() {
           </p>
           <div className="mt-5 flex gap-2 overflow-x-auto pb-1 [mask-image:linear-gradient(90deg,#000_92%,transparent)]">
             {chips.map((chip) => (
-              <Link
+              <LocaleLink
                 key={chip.href}
                 href={chip.href}
                 className="inline-flex h-8 shrink-0 items-center rounded-full border border-line px-3 text-[13px] text-mute transition hover:border-line-strong hover:text-ink"
               >
                 {chip.label}
-              </Link>
+              </LocaleLink>
             ))}
           </div>
         </div>
@@ -96,13 +96,13 @@ export function HomeView() {
         <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{t("home.intentTitle")}</h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {intents.map((intent) => (
-            <Link
+            <LocaleLink
               key={intent.href}
               href={intent.href}
               className="spring-lift rounded-[16px] border border-line bg-card px-4 py-4 text-[15px] font-medium text-ink hover:border-line-strong"
             >
               {intent.label}
-            </Link>
+            </LocaleLink>
           ))}
         </div>
       </section>
@@ -110,9 +110,9 @@ export function HomeView() {
       <section className="mx-auto max-w-[1120px] px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{t("home.popular")}</h2>
-          <Link href="/use-cases" className="shrink-0 text-sm text-mute hover:text-ink">
+          <LocaleLink href="/use-cases" className="shrink-0 text-sm text-mute hover:text-ink">
             {t("home.viewAll")}
-          </Link>
+          </LocaleLink>
         </div>
         <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {popular.map((item) => (
@@ -127,7 +127,7 @@ export function HomeView() {
           {categories.map((category) => {
             const item = localizeCategory(category, locale);
             return (
-              <Link
+              <LocaleLink
                 key={category.slug}
                 href={`/categories/${category.slug}`}
                 className="spring-lift rounded-[16px] border border-line bg-card p-4 hover:border-line-strong"
@@ -135,7 +135,7 @@ export function HomeView() {
                 <BotFace size={36} color={botColorFor(category.slug)} />
                 <div className="mt-3 text-[15px] font-medium text-ink">{item.name}</div>
                 <p className="mt-1 text-[13px] leading-5 text-mute">{item.description}</p>
-              </Link>
+              </LocaleLink>
             );
           })}
         </div>
@@ -184,18 +184,18 @@ export function HomeView() {
         <div className="rounded-[18px] border border-line bg-elevated px-6 py-12 text-center md:px-12">
           <h2 className="text-[28px] font-medium tracking-tight text-ink">{t("home.ctaTitle")}</h2>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
+            <LocaleLink
               href="/use-cases"
               className="accent-gradient spring-press inline-flex h-11 items-center rounded-[10px] px-5 text-sm font-medium text-inverse"
             >
               {t("home.browse")}
-            </Link>
-            <Link
+            </LocaleLink>
+            <LocaleLink
               href="/submit"
               className="spring-press inline-flex h-11 items-center rounded-[10px] border border-line px-5 text-sm text-ink"
             >
               {t("home.submit")}
-            </Link>
+            </LocaleLink>
           </div>
         </div>
       </section>

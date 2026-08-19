@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import type { AppSlug, UseCase } from "@/data/types";
 import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
@@ -33,9 +33,9 @@ export function UseCaseCard({
       </div>
       <p className="mt-4 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">{category.name}</p>
       <h3 className="mt-1 text-[16px] leading-snug font-medium tracking-tight text-ink">
-        <Link href={`/use-cases/${useCase.slug}`} className="after:absolute after:inset-0">
+        <LocaleLink href={`/use-cases/${useCase.slug}`} className="after:absolute after:inset-0">
           {item.title}
-        </Link>
+        </LocaleLink>
       </h3>
       <p className="relative mt-2 line-clamp-2 text-[13px] leading-6 text-mute">{item.shortDescription}</p>
       <div className="relative mt-4">

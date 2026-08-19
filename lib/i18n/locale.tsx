@@ -1,34 +1,34 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { createContext, useCallback, useContext, useEffect, useMemo } from "react";
 import { messages, type Messages } from "./messages";
-import { STORAGE_KEY, localeHtml, type Locale } from "./types";
+import {
+  DEFAULT_URL_LOCALE,
+  LOCALE_COOKIE,
+  absoluteUrl,
+  localeToUrl,
+  urlLocaleFromPath,
+  urlToLocale,
+  withLocale,
+  type UrlLocale,
+} from "./paths";
+import { STORAGE_KEY, type Locale } from "./types";
 
 type Vars = Record<string, string | number>;
 
 type I18nValue = {
   locale: Locale;
+  urlLocale: UrlLocale;
   setLocale: (locale: Locale) => void;
+  localizeHref: (path: string) => string;
+  absoluteHref: (path: string) => string;
   t: (path: string, vars?: Vars) => string;
   list: (path: string) => readonly string[];
   messages: Messages;
 };
 
 const I18nContext = createContext<I18nValue | null>(null);
-
-function isLocale(value: string | null): value is Locale {
-  return value === "en" || value === "zh-Hant" || value === "zh-Hans";
-}
-
-export function detectLocale(): Locale {
-  if (typeof window === "undefined") return "en";
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (isLocale(stored)) return stored;
-  const language = window.navigator.language || "";
-  if (/zh[-_](HK|TW|MO|Hant)/i.test(language)) return "zh-Hant";
-  if (/^zh/i.test(language)) return "zh-Hans";
-  return "en";
-}
 
 function lookup(source: unknown, path: string): unknown {
   return path.split(".").reduce<unknown>((current, key) => {
@@ -47,27 +47,35 @@ function interpolate(template: string, vars?: Vars) {
 }
 
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>("en");
+  const pathname = usePathname();
+  const router = useRouter();
+  const urlLocale = urlLocaleFromPath(pathname) ?? DEFAULT_URL_LOCALE;
+  const locale = urlToLocale[urlLocale];
 
   useEffect(() => {
-    setLocaleState(detectLocale());
-  }, []);
+    document.documentElement.lang = urlLocale === "en" ? "en" : urlLocale === "zh-hk" ? "zh-HK" : "zh-CN";
+    document.cookie = `${LOCALE_COOKIE}=${urlLocale}; path=/; max-age=31536000; samesite=lax`;
+    window.localStorage.setItem(STORAGE_KEY, locale);
+  }, [locale, urlLocale]);
 
-  useEffect(() => {
-    document.documentElement.lang = localeHtml[locale];
-  }, [locale]);
-
-  const setLocale = useCallback((next: Locale) => {
-    setLocaleState(next);
-    window.localStorage.setItem(STORAGE_KEY, next);
-    document.documentElement.lang = localeHtml[next];
-  }, []);
+  const setLocale = useCallback(
+    (next: Locale) => {
+      const nextUrl = localeToUrl[next];
+      window.localStorage.setItem(STORAGE_KEY, next);
+      document.cookie = `${LOCALE_COOKIE}=${nextUrl}; path=/; max-age=31536000; samesite=lax`;
+      router.push(withLocale(`${pathname}${window.location.search}`, nextUrl));
+    },
+    [pathname, router],
+  );
 
   const value = useMemo<I18nValue>(() => {
     const pack = messages[locale];
     return {
       locale,
+      urlLocale,
       setLocale,
+      localizeHref: (path) => withLocale(path, urlLocale),
+      absoluteHref: (path) => absoluteUrl(path, urlLocale),
       messages: pack,
       t(path, vars) {
         const found = lookup(pack, path);
@@ -82,7 +90,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
         return Array.isArray(fallback) ? (fallback as readonly string[]) : [];
       },
     };
-  }, [locale, setLocale]);
+  }, [locale, setLocale, urlLocale]);
 
   return <I18nContext.Provider value={value}>{children}</I18nContext.Provider>;
 }

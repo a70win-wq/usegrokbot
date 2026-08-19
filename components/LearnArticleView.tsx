@@ -5,10 +5,9 @@ import { JsonLd } from "@/components/JsonLd";
 import type { LearnArticle } from "@/data/learn";
 import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { localizeLearnArticle, useI18n } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 export function LearnArticleView({ article }: { article: LearnArticle }) {
-  const { locale, t } = useI18n();
+  const { locale, t, absoluteHref } = useI18n();
   const item = localizeLearnArticle(article, locale);
 
   return (
@@ -19,7 +18,7 @@ export function LearnArticleView({ article }: { article: LearnArticle }) {
           "@type": "Article",
           headline: article.title,
           description: article.description,
-          mainEntityOfPage: `${site.url}/learn/${article.slug}`,
+          mainEntityOfPage: absoluteHref(`/learn/${article.slug}`),
         }}
       />
       <Breadcrumbs items={[{ href: "/learn", label: t("nav.learn") }, { label: item.title }]} />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import Link from "next/link";
+import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { useCases } from "@/data/use-cases";
@@ -23,7 +23,7 @@ export function SearchBar({
   autoFocus,
 }: SearchBarProps) {
   const router = useRouter();
-  const { locale, t, list } = useI18n();
+  const { locale, t, list, localizeHref } = useI18n();
   const suggestions = list("searchSuggestions");
   const [query, setQuery] = useState(initialQuery);
   const [open, setOpen] = useState(false);
@@ -105,7 +105,7 @@ export function SearchBar({
   }
 
   function goToQuery(value = trimmed) {
-    router.push(`/use-cases?q=${encodeURIComponent(value)}`);
+    router.push(localizeHref(`/use-cases?q=${encodeURIComponent(value)}`));
     setOpen(false);
   }
 
@@ -130,7 +130,7 @@ export function SearchBar({
       const selected = menuItems[activeIndex];
       if (selected) {
         event.preventDefault();
-        router.push(selected.href);
+        router.push(localizeHref(selected.href));
         setOpen(false);
         return;
       }
@@ -178,7 +178,7 @@ export function SearchBar({
             <ul>
               {menuItems.map((item, index) => (
                 <li key={item.href + item.title}>
-                  <Link
+                  <LocaleLink
                     href={item.href}
                     className={cn(
                       "block px-4 py-3 transition hover:bg-card-hover",
@@ -190,19 +190,19 @@ export function SearchBar({
                     {item.detail ? (
                       <div className="mt-0.5 line-clamp-1 text-[13px] text-mute">{item.detail}</div>
                     ) : null}
-                  </Link>
+                  </LocaleLink>
                 </li>
               ))}
             </ul>
           )}
           {showResults ? (
-            <Link
+            <LocaleLink
               href={`/use-cases?q=${encodeURIComponent(trimmed)}`}
               className="block border-t border-line px-4 py-2.5 text-[13px] text-ink"
               onClick={() => setOpen(false)}
             >
               {t("search.seeAll")}
-            </Link>
+            </LocaleLink>
           ) : null}
         </div>
       ) : null}
