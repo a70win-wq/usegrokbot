@@ -90,6 +90,12 @@ const ALEX_FINN_LOOPS = "https://x.com/AlexFinn/status/2089038594690408891";
 const ALEX_FINN_WALKTHROUGH = "https://x.com/AlexFinn/status/2089505950470459659";
 const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126";
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
+const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
+const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
+const YUNTA_PARENTS = "https://x.com/yunta_tsai/status/2089927285113803053";
+const ERIC_EIGHT = "https://x.com/ericzakariasson/status/2089993578248618316";
+const ERIC_TEACH = "https://x.com/ericzakariasson/status/2087916871727354302";
+const SCOTTY_EMPLOYEES = "https://x.com/ScottyBeamIO/status/2089632542433374351";
 const DIGITAL_TRENDS =
   "https://www.digitaltrends.com/computing/grok-bot-wants-to-take-work-off-your-plate-not-just-answer-your-queries/";
 const NATE = "https://natesnewsletter.substack.com/p/grok-bot-review";
@@ -223,6 +229,39 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: RAHUL_COMPANY,
     sourceUrl: RAHUL_COMPANY,
     sourceLabel: "Rahul on X",
+    trending: true,
+    featured: true,
+  },
+  {
+    slug: "calendar-booking-yunta-tsai",
+    title: "Calendar, Then Book It",
+    headline:
+      "Yun-Ta Tsai told Grok Bot, in mixed Chinese and English, to find leftover reservations and book a slot — while walking to his car",
+    whatTheyDid:
+      "On 12 Aug 2026 Yun-Ta Tsai (@yunta_tsai) wrote that Grok Bot went through his calendars, found anything he still needed to reserve beforehand, picked the best time, and navigated the reservation on a website. He was talking to it in mixed Chinese and English while walking through the parking lot to his cars.",
+    howItWorks:
+      "Voice in, calendar scan, then the Bot works the booking site. We keep Yun-Ta’s permalink. We did not re-run the reservation.",
+    whyUseful:
+      "This is the personal-ops job people point at: not a chat summary — a calendar that still needed a booking, handled on the way to the car.",
+    whyItMatters:
+      "Public computer-use example from the week Grok Bot launched. Community; we did not mark it tested.",
+    whoShouldTry: ["Busy professionals", "Anyone whose calendar still needs bookings", "People who want to talk, not type"],
+    usefulFor: "Personal / Operations",
+    quote:
+      "While I was walking in the parking lot before getting to my cars, I was talking to it in mixed Chinese and English.",
+    result: "Calendar scan · reservation on the website",
+    category: "personal",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["google-calendar", "browser"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "community",
+    authorName: "Yun-Ta Tsai",
+    handle: "yunta_tsai",
+    publishedAt: "2026-08-12",
+    xPostUrl: YUNTA_CALENDAR,
+    sourceUrl: YUNTA_CALENDAR,
+    sourceLabel: "Yun-Ta Tsai on X",
     trending: true,
     featured: true,
   },
@@ -495,6 +534,157 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: KUN_FIRSTMATE,
     sourceLabel: "Kun Chen on X",
     relatedUseCase: "daily-work-brief",
+  },
+  {
+    slug: "parents-bot-yunta-tsai",
+    title: "First Bot for His Parents",
+    headline:
+      "Yun-Ta Tsai stood up the first Grok Bot for his parents — and says it speaks Chinese without the plugin maze",
+    whatTheyDid:
+      "On 19 Aug 2026 Yun-Ta Tsai (@yunta_tsai) wrote that Grok Bot is the first AI product he would recommend for senior parents. They already know chat. They do not want skills, plugins, or MCPs. They want to ask and get the work done. He quote-tweeted his own note: the first Bot for his parents, labeled 乖兒子 — good son.",
+    howItWorks:
+      "The follow-up is the argument: natural, seamless, perfect Chinese, so elderly people can get most things done without relying on others. We keep this permalink. We did not set up the parents’ Bot.",
+    whyUseful:
+      "If the user is a parent who will never configure MCP, this is the public case for “just ask.”",
+    whyItMatters:
+      "Same person as the calendar booking. A different job: a Bot for someone who should not have to learn the stack.",
+    whoShouldTry: ["Adult children setting up a Bot for parents", "Anyone who will not touch plugins", "Chinese-speaking families"],
+    usefulFor: "Personal / Family",
+    quote: "Grok @bot is probably the first AI product I would recommend for senior parents.",
+    result: "First Bot for his parents · Chinese",
+    category: "personal",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Yun-Ta Tsai",
+    handle: "yunta_tsai",
+    publishedAt: "2026-08-19",
+    xPostUrl: YUNTA_PARENTS,
+    sourceUrl: YUNTA_PARENTS,
+    sourceLabel: "Yun-Ta Tsai on X",
+  },
+  {
+    slug: "eight-use-cases-eric-zakariasson",
+    title: "Eight Use Cases This Week",
+    headline:
+      "eric zakariasson posted eight Grok Bot jobs from this week — starting with a robot vacuum you can text",
+    whatTheyDid:
+      "On 19 Aug 2026 eric zakariasson (@ericzakariasson) posted a thread: eight really interesting Grok Bot use cases from the week. The first is wiring the Bot to a vacuum robot and texting Grok where to clean — quoting Yun-Ta Tsai’s Matic hookup.",
+    howItWorks:
+      "The rest of the thread points at other public jobs: Google’s “I’m not a robot” test, a full Mac as a human workspace, a 3D game, a plumbing-company office manager, chasing merchants who never refunded, hiring plus leftover subscriptions, and a night shift across five businesses. We summarize Eric’s roundup — we did not re-run any of the eight.",
+    whyUseful:
+      "One thread, eight concrete jobs. If you want a menu of what people actually posted this week, start here.",
+    whyItMatters:
+      "This is a community roundup, not Eric’s own vacuum. The vacuum job is Yun-Ta’s; the list is Eric’s. Both stay attributed.",
+    whoShouldTry: ["People collecting first jobs", "Operators", "Anyone scanning this week’s public cases"],
+    usefulFor: "Operators",
+    quote: "here are 8 really interesting grok bot use cases from this week!",
+    result: "8 public jobs · starts with a robot vacuum",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser", "gmail"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "eric zakariasson",
+    handle: "ericzakariasson",
+    publishedAt: "2026-08-19",
+    xPostUrl: ERIC_EIGHT,
+    sourceUrl: ERIC_EIGHT,
+    sourceLabel: "eric zakariasson on X",
+  },
+  {
+    slug: "three-employees-scotty-beam",
+    title: "Gustavo, Walter, Jesse",
+    headline:
+      "SCOTTY BEAM posted three named Grok Bot employees — Gustavo on Notion, Walter on DocuSign, Jesse on ManyChat",
+    whatTheyDid:
+      "On 18 Aug 2026 SCOTTY BEAM (@ScottyBeamIO) wrote that someone taught Grok Bot to run the business by performing each task while the Bot watched. Three named employees: Gustavo on operations (Notion client hub, onboarding forms, prep before the first call); Walter on sales (agreements through DocuSign until the client signs and pays); Jesse on leads (ManyChat DMs into Notion, alert when someone asks about pricing).",
+    howItWorks:
+      "Scotty says they share a cloud computer and logins. This is a different post from the unworn-clothes job. We keep this permalink. We did not re-run Gustavo, Walter, or Jesse.",
+    whyUseful:
+      "Named jobs, named tools. If you want a first sales-ops roster, copy the three lanes.",
+    whyItMatters:
+      "Modest reach, concrete desks. Community amplification of someone else’s team — we keep Scotty’s post and do not invent the founder.",
+    whoShouldTry: ["Solo operators", "Small sales teams", "Anyone teaching a Bot by demo"],
+    usefulFor: "Operations / Sales",
+    quote: "he performed each task while the bot watched, then told it to do the same thing.",
+    result: "Gustavo · Walter · Jesse",
+    category: "operations",
+    outcomes: ["automate-work", "make-money"],
+    apps: ["notion", "browser"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "SCOTTY BEAM",
+    handle: "ScottyBeamIO",
+    publishedAt: "2026-08-18",
+    xPostUrl: SCOTTY_EMPLOYEES,
+    sourceUrl: SCOTTY_EMPLOYEES,
+    sourceLabel: "SCOTTY BEAM on X",
+  },
+  {
+    slug: "math-explainer-yunta-tsai",
+    title: "Math Video for His Kid",
+    headline:
+      "Yun-Ta Tsai asked Grok Bot to make a math explainer video — cheerful voice via the Grok voice API",
+    whatTheyDid:
+      "On 16 Aug 2026 Yun-Ta Tsai (@yunta_tsai) wrote that his kid was stuck breaking a number into power sums and he could not find a good explainer. He asked Grok Bot to make one. The Bot implemented the idea and left it for review — including a cheerful voice using the Grok voice API.",
+    howItWorks:
+      "He says you can throw a backburner idea at the Bot and it implements it, waiting for review. We keep the permalink and the attached video. We did not remake the explainer.",
+    whyUseful:
+      "A one-off teaching video is the kind of chore you keep postponing. Hand it off, review the cut.",
+    whyItMatters:
+      "Named person, named job, attached video. Community; we did not mark it tested.",
+    whoShouldTry: ["Parents", "Teachers", "Creators who need a one-off explainer"],
+    usefulFor: "Content / Personal",
+    quote: "I asked the @bot to make one. It even made a cheerful voice using the @grok voice API.",
+    result: "Math explainer video · Grok voice API",
+    category: "content",
+    outcomes: ["create-content", "save-time"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "community",
+    authorName: "Yun-Ta Tsai",
+    handle: "yunta_tsai",
+    publishedAt: "2026-08-16",
+    xPostUrl: YUNTA_MATH,
+    sourceUrl: YUNTA_MATH,
+    sourceLabel: "Yun-Ta Tsai on X",
+  },
+  {
+    slug: "teach-a-task-eric-zakariasson",
+    title: "Teach a Task Once",
+    headline:
+      "eric zakariasson showed how to teach Grok Bot a task — hit +, record the browser, the Bot does it again",
+    whatTheyDid:
+      "On 13 Aug 2026 eric zakariasson (@ericzakariasson) posted a short how-to: hit + in the chat, record yourself doing the job in the browser, and the Bot watches so it can do it again. He says most tasks it can finish by itself — use this when it is struggling.",
+    howItWorks:
+      "This is a feature walkthrough with a clip, not a named customer screenshot. His bio says he is tinkering at SpaceXAI; the post is still his personal account, so we keep the community badge.",
+    whyUseful:
+      "When the Bot keeps missing a click path, showing it once is faster than rewriting the prompt.",
+    whyItMatters:
+      "Concrete steps, not a teaser. Community; we did not mark it official or tested.",
+    whoShouldTry: ["People whose Bot keeps missing a path", "Operators teaching a routine", "Non-engineers"],
+    usefulFor: "Operators",
+    quote:
+      "hit + in the chat and record yourself doing it in the browser. the bot watches, then it can do it again.",
+    result: "Record once · Bot repeats the path",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "community",
+    authorName: "eric zakariasson",
+    handle: "ericzakariasson",
+    publishedAt: "2026-08-13",
+    xPostUrl: ERIC_TEACH,
+    sourceUrl: ERIC_TEACH,
+    sourceLabel: "eric zakariasson on X",
   },
   {
     slug: "grok-bot-launch-bot",
