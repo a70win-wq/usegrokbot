@@ -90,6 +90,7 @@ const ALEX_FINN_LOOPS = "https://x.com/AlexFinn/status/2089038594690408891";
 const ALEX_FINN_WALKTHROUGH = "https://x.com/AlexFinn/status/2089505950470459659";
 const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126";
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
+const GERGELY_REFUNDS = "https://x.com/GergelyOrosz/status/2090085668768694562";
 const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
 const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
 const YUNTA_PARENTS = "https://x.com/yunta_tsai/status/2089927285113803053";
@@ -231,6 +232,43 @@ const curatedStories: DiscoverStory[] = [
     sourceLabel: "Rahul on X",
     trending: true,
     featured: true,
+  },
+  {
+    slug: "support-refunds-gergely-orosz",
+    title: "Support Inbox, Then Refund",
+    headline:
+      "Gergely Orosz hooked Grok Bot to his customer-support inbox — and connected Stripe for routine refunds",
+    whatTheyDid:
+      "On 19 Aug 2026 Gergely Orosz (@GergelyOrosz) wrote that he hooked Grok Bot to his customer-support emails. The Bot can connect to Stripe via API for agentic operations — routine refunds as the example. The attached screenshot is Stripe’s agent auth screen: “Agent is now authorised to continue.”",
+    howItWorks:
+      "Support mail in, Stripe API out. He is impressed Stripe already built the agentic flow. We keep Gergely’s permalink. We did not re-run his inbox or issue a refund.",
+    whyUseful:
+      "Support plus refunds is the job people actually run a shop for. This is a named person showing the Bot in the live inbox and the payment API, not a generic “try agents” thread.",
+    whyItMatters:
+      "Same-day community case: a real support inbox, a real Stripe authorize screen. Community; we did not mark it tested.",
+    whoShouldTry: [
+      "Founders doing their own support",
+      "Ops who already refund in Stripe",
+      "Anyone whose support queue is also the billing queue",
+    ],
+    usefulFor: "Support / Operations",
+    quote:
+      "Hooked up Grok Bot to my customer support emails... and it can connect to Stripe, via API, for agentic operations, e.g. routine refunds.",
+    result: "Support inbox · Stripe API refunds",
+    category: "operations",
+    outcomes: ["automate-work", "save-time"],
+    apps: ["gmail", "browser"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Gergely Orosz",
+    handle: "GergelyOrosz",
+    publishedAt: "2026-08-19",
+    xPostUrl: GERGELY_REFUNDS,
+    sourceUrl: GERGELY_REFUNDS,
+    sourceLabel: "Gergely Orosz on X",
+    relatedUseCase: "support-email-assistant",
+    trending: true,
   },
   {
     slug: "calendar-booking-yunta-tsai",

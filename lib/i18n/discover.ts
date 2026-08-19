@@ -456,6 +456,22 @@ const hant: Record<string, DiscoverStoryI18n> = {
       "hit + in the chat and record yourself doing it in the browser. the bot watches, then it can do it again.",
     result: "錄一次 · Bot 再行同一條路",
   },
+  "support-refunds-gergely-orosz": {
+    title: "客服收件箱，再退款",
+    headline: "Gergely Orosz 把 Grok Bot 駁去客服電郵——再經 Stripe API 做例行退款",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Gergely Orosz（@GergelyOrosz）寫他把 Grok Bot 駁去自己的客服電郵。Bot 可以經 API 連 Stripe，做 agentic 操作——例子是例行退款。附件截圖是 Stripe 的 agent 授權畫面：「Agent is now authorised to continue。」",
+    howItWorks:
+      "客服郵件入、Stripe API 出。他讚 Stripe 已經砌好呢條 agentic 流程。我們保留 Gergely 原帖。沒有重跑他的收件箱，也沒有代發退款。",
+    whyUseful:
+      "客服加退款就是開店的人實際在做的工。這是具名的人，把 Bot 放進真正的收件箱同付款 API，不是空泛「試試 agent」。",
+    whyItMatters: "即日社群例子：真正的客服收件箱，真正的 Stripe 授權畫面。社群；沒有標已測試。",
+    whoShouldTry: ["自己兼客服的創辦人", "已經在 Stripe 退款的營運", "客服隊列同時是帳務隊列的人"],
+    usefulFor: "支援 / 營運",
+    quote:
+      "Hooked up Grok Bot to my customer support emails... and it can connect to Stripe, via API, for agentic operations, e.g. routine refunds.",
+    result: "客服收件箱 · Stripe API 退款",
+  },
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
@@ -898,6 +914,22 @@ const hans: Record<string, DiscoverStoryI18n> = {
     quote:
       "hit + in the chat and record yourself doing it in the browser. the bot watches, then it can do it again.",
     result: "录一次 · Bot 再走同一条路",
+  },
+  "support-refunds-gergely-orosz": {
+    title: "客服收件箱，再退款",
+    headline: "Gergely Orosz 把 Grok Bot 接到客服邮件——再经 Stripe API 做例行退款",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Gergely Orosz（@GergelyOrosz）写他把 Grok Bot 接到自己的客服邮件。Bot 可以经 API 连 Stripe，做 agentic 操作——例子是例行退款。附件截图是 Stripe 的 agent 授权画面：「Agent is now authorised to continue。」",
+    howItWorks:
+      "客服邮件入、Stripe API 出。他赞 Stripe 已经砌好这条 agentic 流程。我们保留 Gergely 原帖。没有重跑他的收件箱，也没有代发退款。",
+    whyUseful:
+      "客服加退款就是开店的人实际在做的工。这是具名的人，把 Bot 放进真正的收件箱和付款 API，不是空泛「试试 agent」。",
+    whyItMatters: "当日社区例子：真正的客服收件箱，真正的 Stripe 授权画面。社区；没有标已测试。",
+    whoShouldTry: ["自己兼客服的创始人", "已经在 Stripe 退款的运营", "客服队列同时也是账务队列的人"],
+    usefulFor: "支持 / 运营",
+    quote:
+      "Hooked up Grok Bot to my customer support emails... and it can connect to Stripe, via API, for agentic operations, e.g. routine refunds.",
+    result: "客服收件箱 · Stripe API 退款",
   },
 };
 
