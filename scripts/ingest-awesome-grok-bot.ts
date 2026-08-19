@@ -1,15 +1,16 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { discoverStories, type DiscoverStory } from "../data/discover";
+import { fetchXPost, type FetchedPost } from "../lib/ingest/fetch-post";
 import { publishStory } from "../lib/ingest/publish";
+import { makeStorySlug } from "../lib/ingest/slug";
 import { assertStorySafe } from "../lib/ingest/validate";
 import { site } from "../lib/site";
 
 const FEED_PATH = "data/source-feeds/awesome-grok-bot-field-cases.json";
-const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "6"));
+const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "10"));
 const MAX_ATTEMPTS = Math.max(1, Number(process.env.SOURCE_INGEST_MAX_ATTEMPTS ?? "3"));
 const RETRYABLE = new Set([
   "source_unreadable",
-  "extract_failed",
   "publish_failed",
   "publish_not_configured",
   "site_extract_failed",
@@ -98,6 +99,123 @@ async function extractViaLiveSite(item: SourceCase): Promise<DiscoverStory> {
   throw new Error(`${code}:${reason}`);
 }
 
+function fallbackTitle(item: SourceCase) {
+  const colon = item.title.indexOf(":");
+  const value = colon >= 0 ? item.title.slice(colon + 1).trim() : item.title.trim();
+  return value || item.title;
+}
+
+function fallbackCategory(text: string): DiscoverStory["category"] {
+  const value = text.toLowerCase();
+  if (/wordpress|arduino|engineering|\bpr\b|databricks|developer|technical|code|software/.test(value)) return "coding";
+  if (/market|research|brief|scan|reconcile|credit/.test(value)) return "research";
+  if (/calendar|reservation|travel|shopping|flights|beer|personal/.test(value)) return "personal";
+  if (/sales|buyer|lead|customer/.test(value)) return "sales";
+  if (/content|image|write|video|post/.test(value)) return "content";
+  if (/marketing|seo|campaign/.test(value)) return "marketing";
+  return "operations";
+}
+
+function fallbackOutcomes(category: DiscoverStory["category"]): DiscoverStory["outcomes"] {
+  if (category === "coding") return ["build-software", "automate-work"];
+  if (category === "research") return ["research", "save-time"];
+  if (category === "sales" || category === "marketing") return ["grow-business", "automate-work"];
+  if (category === "content") return ["create-content", "save-time"];
+  return ["automate-work", "save-time"];
+}
+
+function fallbackApps(text: string): DiscoverStory["apps"] {
+  const value = text.toLowerCase();
+  const apps: DiscoverStory["apps"] = [];
+  const add = (app: DiscoverStory["apps"][number]) => {
+    if (!apps.includes(app)) apps.push(app);
+  };
+
+  if (/\bgmail\b/.test(value)) add("gmail");
+  if (/google sheets|\bsheets\b/.test(value)) add("google-sheets");
+  if (/google calendar/.test(value)) add("google-calendar");
+  if (/\bslack\b/.test(value)) add("slack");
+  if (/\bnotion\b/.test(value)) add("notion");
+  if (/\bgithub\b/.test(value)) add("github");
+  if (/\bsalesforce\b/.test(value)) add("salesforce");
+  if (/\bhubspot\b/.test(value)) add("hubspot");
+  if (/\blinkedin\b/.test(value)) add("linkedin");
+  if (/\breddit\b/.test(value)) add("reddit");
+  if (/\byoutube\b/.test(value)) add("youtube");
+  if (/\bbrowser\b|website|site\b/.test(value)) add("browser");
+  if (/\bx\b|twitter/.test(value)) add("x");
+
+  return apps;
+}
+
+function fallbackSchedule(text: string): DiscoverStory["schedule"] {
+  const value = text.toLowerCase();
+  if (/always[- ]on|24\/7|continuous/.test(value)) return "always-on";
+  if (/daily|every day|morning/.test(value)) return "daily";
+  if (/weekly|every week/.test(value)) return "weekly";
+  return "one-time";
+}
+
+function audienceFor(category: DiscoverStory["category"]) {
+  switch (category) {
+    case "coding":
+      return ["Developers", "Engineering teams"];
+    case "research":
+      return ["Researchers", "Operators"];
+    case "sales":
+      return ["Sales teams", "Founders"];
+    case "marketing":
+      return ["Marketers", "Founders"];
+    case "content":
+      return ["Creators", "Content teams"];
+    case "personal":
+      return ["People exploring personal automation", "Grok Bot users"];
+    default:
+      return ["Operators", "Grok Bot users"];
+  }
+}
+
+function buildSafeFallback(item: SourceCase, post: FetchedPost): DiscoverStory {
+  const title = fallbackTitle(item);
+  const combined = `${item.title}\n${item.sourceSummary}\n${post.sourceText}`;
+  const category = fallbackCategory(combined);
+  const whoShouldTry = audienceFor(category);
+  const slug = makeStorySlug(post.handle, title, new Set(discoverStories.map((story) => story.slug)));
+
+  return {
+    slug,
+    title,
+    headline: item.sourceSummary,
+    whatTheyDid: item.sourceSummary,
+    howItWorks:
+      "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    whyUseful:
+      "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    whyItMatters:
+      "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    whoShouldTry,
+    usefulFor: whoShouldTry.join(" / "),
+    output: item.sourceSummary,
+    category,
+    outcomes: fallbackOutcomes(category),
+    apps: fallbackApps(combined),
+    difficulty: "medium",
+    schedule: fallbackSchedule(combined),
+    source: "community",
+    authorName: post.authorName,
+    handle: post.handle,
+    publishedAt: post.publishedAt,
+    xPostUrl: item.url,
+    sourceUrl: item.url,
+    sourceLabel: `${post.authorName} on X`,
+  };
+}
+
+async function safeFallback(item: SourceCase) {
+  const post = await fetchXPost(item.url);
+  return buildSafeFallback(item, post);
+}
+
 function parseFailure(error: unknown) {
   const raw = error instanceof Error ? error.message : String(error);
   const separator = raw.indexOf(":");
@@ -106,6 +224,26 @@ function parseFailure(error: unknown) {
     code: raw.slice(0, separator),
     reason: raw.slice(separator + 1),
   };
+}
+
+async function getStory(item: SourceCase) {
+  // Retry items already proved that AI extraction is unavailable. Do not burn another
+  // live API request: use the CC0 source-index summary + real X metadata directly.
+  if (item.ingest.code === "extract_failed") {
+    console.log("AI extraction previously failed; using safe source-index fallback.");
+    return safeFallback(item);
+  }
+
+  try {
+    return await extractViaLiveSite(item);
+  } catch (error) {
+    const failure = parseFailure(error);
+    if (["extract_failed", "site_extract_failed", "rate_limited"].includes(failure.code)) {
+      console.log(`${failure.code}; using safe source-index fallback.`);
+      return safeFallback(item);
+    }
+    throw error;
+  }
 }
 
 async function main() {
@@ -117,7 +255,7 @@ async function main() {
     return;
   }
 
-  console.log(`Auto-ingesting ${queue.length} X Field Cases from awesome-grok-bot via ${site.url}.`);
+  console.log(`Auto-ingesting ${queue.length} X Field Cases from awesome-grok-bot.`);
 
   for (const candidate of queue) {
     const item = feed.cases.find((entry) => entry.url === candidate.url)!;
@@ -125,7 +263,7 @@ async function main() {
     console.log(`\n[${attempts}/${MAX_ATTEMPTS}] ${item.title}\n${item.url}`);
 
     try {
-      const story = await extractViaLiveSite(item);
+      const story = await getStory(item);
       assertStorySafe(
         story,
         discoverStories.filter((existing) => existing.slug !== story.slug),
