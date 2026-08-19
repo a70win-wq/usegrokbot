@@ -16,6 +16,7 @@ The long-term goal is simple:
 - [x] Submission page
 - [x] Open-source repository
 - [x] MIT license
+- [x] Automatic source feed: `awesome-grok-bot` Field Cases, synced every 6 hours
 - [ ] Improve discover cards with stronger Result / Output presentation
 - [ ] Improve mobile filter density and touch targets
 - [ ] Expand trust labels: Official / Tested / Community
@@ -47,13 +48,15 @@ Publish
 
 Planned work:
 
-- [ ] Monitor public Grok Bot sources for candidate cases
+- [x] Monitor a public Grok Bot source for candidate cases (`awesome-grok-bot` Field Cases)
+- [ ] Add more source indexes / feeds
 - [ ] Parse X mentions / submitted public URLs
 - [ ] Extract author, handle, date, integrations, category, and outcome
-- [ ] Detect duplicates automatically
+- [x] Mark source URLs already present in `data/discover.ts`
+- [ ] Detect semantic duplicates automatically
 - [ ] Separate verified numeric `Result` from non-numeric `Output`
 - [ ] Reject unsupported claims automatically
-- [ ] Generate structured content files
+- [ ] Generate structured DiscoverStory content files
 - [ ] Add automated CI content validation
 - [ ] Auto-publish cases that pass validation
 - [ ] Keep failed cases in an error / retry queue instead of blocking the pipeline
