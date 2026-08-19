@@ -1,18 +1,16 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { discoverStories, type DiscoverStory } from "../data/discover";
 import { fetchXPost, type FetchedPost } from "../lib/ingest/fetch-post";
-import { publishStory } from "../lib/ingest/publish";
 import { makeStorySlug } from "../lib/ingest/slug";
 import { assertStorySafe } from "../lib/ingest/validate";
 import { site } from "../lib/site";
 
 const FEED_PATH = "data/source-feeds/awesome-grok-bot-field-cases.json";
+const INGESTED_PATH = "data/discover/ingested.json";
 const MAX_PER_RUN = Math.max(1, Number(process.env.SOURCE_INGEST_LIMIT ?? "10"));
 const MAX_ATTEMPTS = Math.max(1, Number(process.env.SOURCE_INGEST_MAX_ATTEMPTS ?? "3"));
 const RETRYABLE = new Set([
   "source_unreadable",
-  "publish_failed",
-  "publish_not_configured",
   "site_extract_failed",
   "rate_limited",
   "unexpected_error",
@@ -50,13 +48,18 @@ type ExtractResponse = {
   reason?: string;
 };
 
-async function save(feed: Feed) {
+async function saveFeed(feed: Feed) {
   await writeFile(FEED_PATH, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
+}
+
+async function saveIngested(stories: DiscoverStory[]) {
+  await writeFile(INGESTED_PATH, `${JSON.stringify(stories, null, 2)}\n`, "utf8");
 }
 
 function shouldProcess(item: SourceCase) {
   if (item.sourceType !== "x" || item.sourceStatus !== "candidate") return false;
-  if (!["pending", "retry"].includes(item.ingest.status)) return false;
+  const recoverOldPermissionFailure = item.ingest.status === "skipped" && item.ingest.code === "github_403";
+  if (!["pending", "retry"].includes(item.ingest.status) && !recoverOldPermissionFailure) return false;
   return (item.ingest.attempts ?? 0) < MAX_ATTEMPTS;
 }
 
@@ -175,12 +178,12 @@ function audienceFor(category: DiscoverStory["category"]) {
   }
 }
 
-function buildSafeFallback(item: SourceCase, post: FetchedPost): DiscoverStory {
+function buildSafeFallback(item: SourceCase, post: FetchedPost, existingStories: DiscoverStory[]): DiscoverStory {
   const title = fallbackTitle(item);
   const combined = `${item.title}\n${item.sourceSummary}\n${post.sourceText}`;
   const category = fallbackCategory(combined);
   const whoShouldTry = audienceFor(category);
-  const slug = makeStorySlug(post.handle, title, new Set(discoverStories.map((story) => story.slug)));
+  const slug = makeStorySlug(post.handle, title, new Set(existingStories.map((story) => story.slug)));
 
   return {
     slug,
@@ -211,9 +214,9 @@ function buildSafeFallback(item: SourceCase, post: FetchedPost): DiscoverStory {
   };
 }
 
-async function safeFallback(item: SourceCase) {
+async function safeFallback(item: SourceCase, existingStories: DiscoverStory[]) {
   const post = await fetchXPost(item.url);
-  return buildSafeFallback(item, post);
+  return buildSafeFallback(item, post, existingStories);
 }
 
 function parseFailure(error: unknown) {
@@ -226,12 +229,11 @@ function parseFailure(error: unknown) {
   };
 }
 
-async function getStory(item: SourceCase) {
-  // Retry items already proved that AI extraction is unavailable. Do not burn another
-  // live API request: use the CC0 source-index summary + real X metadata directly.
-  if (item.ingest.code === "extract_failed") {
-    console.log("AI extraction previously failed; using safe source-index fallback.");
-    return safeFallback(item);
+async function getStory(item: SourceCase, existingStories: DiscoverStory[]) {
+  // These entries already reached the publish step, so do not burn another AI call.
+  if (["extract_failed", "github_403"].includes(item.ingest.code ?? "")) {
+    console.log("Using safe source-index fallback for a previously attempted case.");
+    return safeFallback(item, existingStories);
   }
 
   try {
@@ -240,7 +242,7 @@ async function getStory(item: SourceCase) {
     const failure = parseFailure(error);
     if (["extract_failed", "site_extract_failed", "rate_limited"].includes(failure.code)) {
       console.log(`${failure.code}; using safe source-index fallback.`);
-      return safeFallback(item);
+      return safeFallback(item, existingStories);
     }
     throw error;
   }
@@ -248,6 +250,8 @@ async function getStory(item: SourceCase) {
 
 async function main() {
   const feed = JSON.parse(await readFile(FEED_PATH, "utf8")) as Feed;
+  const ingested = JSON.parse(await readFile(INGESTED_PATH, "utf8")) as DiscoverStory[];
+  const workingStories = [...discoverStories];
   const queue = feed.cases.filter(shouldProcess).slice(0, MAX_PER_RUN);
 
   if (!queue.length) {
@@ -263,27 +267,29 @@ async function main() {
     console.log(`\n[${attempts}/${MAX_ATTEMPTS}] ${item.title}\n${item.url}`);
 
     try {
-      const story = await getStory(item);
-      assertStorySafe(
-        story,
-        discoverStories.filter((existing) => existing.slug !== story.slug),
-      );
-
-      const published = await publishStory(story);
-      if (published.merged) {
-        item.ingest = { status: "published", attempts, reason: published.prUrl };
-        console.log(`published: ${story.slug}`);
-      } else {
-        item.ingest = { status: "queued", attempts, reason: published.prUrl };
-        console.log(`queued: ${published.prUrl}`);
+      if (workingStories.some((story) => story.xPostUrl === item.url || story.sourceUrl === item.url)) {
+        item.ingest = { status: "published", attempts, reason: "already present in Discover" };
+        console.log("already published");
+        await saveFeed(feed);
+        continue;
       }
+
+      const story = await getStory(item, workingStories);
+      assertStorySafe(story, workingStories);
+
+      ingested.push(story);
+      workingStories.push(story);
+      await saveIngested(ingested);
+
+      item.ingest = { status: "published", attempts, reason: "direct GitHub Actions commit" };
+      await saveFeed(feed);
+      console.log(`published locally: ${story.slug}`);
     } catch (error) {
       const failure = parseFailure(error);
       item.ingest = markSkipped(failure.code, failure.reason, attempts);
+      await saveFeed(feed);
       console.error(`${item.ingest.status}: ${failure.code} — ${failure.reason}`);
     }
-
-    await save(feed);
   }
 
   const states = feed.cases.reduce<Record<string, number>>((acc, item) => {
