@@ -1,7 +1,9 @@
 "use client";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SeoGuide } from "@/components/SeoGuide";
 import { UseCasesExplorer } from "@/components/UseCasesExplorer";
+import { seoForApp } from "@/data/seo";
 import type { App, UseCase } from "@/data/types";
 import { localizeApp, useI18n } from "@/lib/i18n";
 
@@ -19,6 +21,7 @@ export function AppDetailView({ app, items }: { app: App; items: UseCase[] }) {
       <div className="mt-8">
         <UseCasesExplorer items={items} lockedApp={app.slug} />
       </div>
+      {seoForApp(app.slug) ? <SeoGuide guide={seoForApp(app.slug)!} /> : null}
     </div>
   );
 }

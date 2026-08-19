@@ -58,6 +58,7 @@ export type UseCase = {
   category: CategorySlug;
   tags: string[];
   apps: AppSlug[];
+  alsoUses?: AppSlug[];
   difficulty: Difficulty;
   schedule: Schedule;
   setupTime: string;

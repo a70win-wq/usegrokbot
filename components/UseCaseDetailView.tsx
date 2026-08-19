@@ -10,8 +10,11 @@ import { PromptBox } from "@/components/PromptBox";
 import { SaveButton } from "@/components/SaveButton";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
-import { appsBySlug } from "@/data/apps";
+import { AppPills } from "@/components/AppPills";
+import { CapabilityRow } from "@/components/CapabilityRow";
+import { StatusBadge } from "@/components/StatusBadge";
 import type { UseCase } from "@/data/types";
+import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
@@ -26,6 +29,8 @@ export function UseCaseDetailView({
   const item = localizeUseCase(useCase, locale);
   const category = categoryFor(useCase.category, locale);
   const setupMins = useCase.setupTime.replace(" min", "");
+  const trust = verificationFor(useCase.slug);
+  const localeTag = locale === "en" ? "en" : locale;
 
   return (
     <article className="mx-auto max-w-[800px] px-5 py-10 md:px-8 md:py-16">
@@ -63,7 +68,14 @@ export function UseCaseDetailView({
         ]}
       />
 
-      <h1 className="mt-6 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
+      <div className="mt-6 flex flex-wrap items-center gap-2">
+        <StatusBadge status={trust.status} label={t(`trust.${trust.status}`)} />
+        <span className="text-[12px] text-faint">
+          {t("trust.verified", { date: formatVerifiedDate(trust.lastVerified, localeTag) })}
+        </span>
+      </div>
+
+      <h1 className="mt-4 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.description}</p>
 
       <div className="mt-6 flex flex-wrap gap-2 text-[12px] text-mute">
@@ -71,13 +83,39 @@ export function UseCaseDetailView({
           t(`difficulty.${useCase.difficulty}`),
           t("meta.setup", { n: setupMins }),
           t(`schedule.${useCase.schedule}`),
-          ...useCase.apps.map((app) => appsBySlug[app].name),
         ].map((chip) => (
           <span key={chip} className="rounded-full border border-line px-2.5 py-1">
             {chip}
           </span>
         ))}
       </div>
+      <div className="mt-3">
+        <AppPills useCase={useCase} />
+      </div>
+      <div className="mt-4">
+        <CapabilityRow
+          useCase={useCase}
+          labels={{
+            browser: t("trust.needsBrowser"),
+            login: t("trust.login"),
+            loginYes: t("trust.loginYes"),
+            loginMaybe: t("trust.loginMaybe"),
+            loginNo: t("trust.loginNo"),
+            routine: t("trust.routine"),
+            approval: t("trust.approval"),
+            approvalRecommended: t("trust.approvalRecommended"),
+            approvalOptional: t("trust.approvalOptional"),
+          }}
+        />
+      </div>
+      {trust.source ? (
+        <p className="mt-4 text-[13px] text-mute">
+          {t("trust.source")}{" "}
+          <a href={trust.source.url} className="text-accent" target="_blank" rel="noreferrer">
+            {trust.source.label}
+          </a>
+        </p>
+      ) : null}
 
       <div className="mt-8 flex flex-wrap items-center gap-3">
         <CopyButton text={useCase.prompt} variant="solid" />

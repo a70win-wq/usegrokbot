@@ -18,6 +18,7 @@ const sortKeys: SortKey[] = ["popular", "newest", "az"];
 type ExplorerProps = {
   items: UseCase[];
   initialQuery?: string;
+  initialOfficial?: boolean;
   lockedCategory?: CategorySlug;
   lockedApp?: AppSlug;
 };
@@ -26,10 +27,17 @@ function toggleValue<T>(list: T[], value: T) {
   return list.includes(value) ? list.filter((item) => item !== value) : [...list, value];
 }
 
-export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, lockedApp }: ExplorerProps) {
+export function UseCasesExplorer({
+  items,
+  initialQuery = "",
+  initialOfficial = false,
+  lockedCategory,
+  lockedApp,
+}: ExplorerProps) {
   const { locale, t, list } = useI18n();
   const suggestions = list("searchSuggestions");
   const [query, setQuery] = useState(initialQuery);
+  const [officialOnly, setOfficialOnly] = useState(initialOfficial);
   const [selectedCategories, setSelectedCategories] = useState<CategorySlug[]>(
     lockedCategory ? [lockedCategory] : [],
   );
@@ -54,6 +62,7 @@ export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, loc
           difficulties: selectedDifficulties,
           schedules: selectedSchedules,
           apps: selectedApps,
+          officialOnly,
           sort,
           locale,
         },
@@ -67,6 +76,7 @@ export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, loc
       selectedCategories,
       selectedDifficulties,
       selectedSchedules,
+      officialOnly,
       sort,
       locale,
     ],
@@ -76,13 +86,15 @@ export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, loc
     selectedDifficulties.length +
     selectedSchedules.length +
     (lockedCategory ? 0 : selectedCategories.length) +
-    (lockedApp ? 0 : selectedApps.length);
+    (lockedApp ? 0 : selectedApps.length) +
+    Number(officialOnly);
 
   function clear() {
     if (!lockedCategory) setSelectedCategories([]);
     if (!lockedApp) setSelectedApps([]);
     setSelectedDifficulties([]);
     setSelectedSchedules([]);
+    setOfficialOnly(false);
   }
 
   const filters = (
@@ -165,6 +177,16 @@ export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, loc
           ))}
           <button
             type="button"
+            onClick={() => setOfficialOnly((value) => !value)}
+            className={cn(
+              "h-9 whitespace-nowrap rounded-full border px-3.5 text-[13px] transition",
+              officialOnly ? "border-ok/40 bg-ok/10 text-ok" : "border-line text-mute hover:text-ink",
+            )}
+          >
+            {t("trust.official")}
+          </button>
+          <button
+            type="button"
             className="inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 text-[13px] text-mute lg:hidden"
             onClick={() => setFiltersOpen(true)}
           >
@@ -203,7 +225,7 @@ export function UseCasesExplorer({ items, initialQuery = "", lockedCategory, loc
           ) : (
             <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
               {results.map((item) => (
-                <UseCaseCard key={item.slug} useCase={item} />
+                <UseCaseCard key={item.slug} useCase={item} highlightApp={lockedApp} />
               ))}
             </div>
           )}

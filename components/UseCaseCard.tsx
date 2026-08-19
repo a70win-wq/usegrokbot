@@ -1,42 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { appsBySlug } from "@/data/apps";
-import type { UseCase } from "@/data/types";
+import type { AppSlug, UseCase } from "@/data/types";
+import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
+import { AppPills } from "./AppPills";
 import { BotFace, botColorFor } from "./BotFace";
-import { CopyButton } from "./CopyButton";
 import { SaveButton } from "./SaveButton";
+import { StatusBadge } from "./StatusBadge";
 
-export function UseCaseCard({ useCase }: { useCase: UseCase }) {
+export function UseCaseCard({
+  useCase,
+  highlightApp,
+}: {
+  useCase: UseCase;
+  highlightApp?: AppSlug;
+}) {
   const { locale, t } = useI18n();
   const item = localizeUseCase(useCase, locale);
   const category = categoryFor(item.category, locale);
+  const trust = verificationFor(useCase.slug);
+  const localeTag = locale === "en" ? "en" : locale;
 
   return (
     <article className="spring-lift group relative flex h-full flex-col rounded-[16px] border border-line bg-card p-5 shadow-[0_1px_2px_rgb(0_0_0/0.04)] hover:border-line-strong hover:shadow-[0_10px_28px_rgb(0_0_0/0.06)]">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex items-start justify-between gap-3">
         <BotFace size={28} color={botColorFor(useCase.slug)} />
-        <span className="rounded-full border border-line px-2 py-0.5 text-[11px] text-faint">{category.name}</span>
+        <div className="relative z-10 flex items-center gap-1">
+          <StatusBadge status={trust.status} label={t(`trust.${trust.status}`)} />
+          <SaveButton slug={useCase.slug} title={item.title} />
+        </div>
       </div>
-      <h3 className="mt-4 text-[16px] leading-snug font-medium tracking-tight text-ink">
+      <p className="mt-4 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">{category.name}</p>
+      <h3 className="mt-1 text-[16px] leading-snug font-medium tracking-tight text-ink">
         <Link href={`/use-cases/${useCase.slug}`} className="after:absolute after:inset-0">
           {item.title}
         </Link>
       </h3>
       <p className="relative mt-2 line-clamp-2 text-[13px] leading-6 text-mute">{item.shortDescription}</p>
-      <div className="relative mt-4 flex flex-wrap items-center gap-1.5 text-[11px] text-faint">
-        {useCase.apps.slice(0, 2).map((app) => (
-          <span key={app} className="rounded-full bg-elevated px-2 py-0.5">
-            {appsBySlug[app].name}
-          </span>
-        ))}
-        <span className="rounded-full bg-elevated px-2 py-0.5">{t(`difficulty.${useCase.difficulty}`)}</span>
-        <span className="rounded-full bg-elevated px-2 py-0.5">{t(`schedule.${useCase.schedule}`)}</span>
+      <div className="relative mt-4">
+        <AppPills useCase={useCase} highlight={highlightApp} />
       </div>
-      <div className="relative z-10 mt-auto flex items-center justify-between pt-5">
-        <SaveButton slug={useCase.slug} title={item.title} />
-        <CopyButton text={useCase.prompt} />
+      <p className="relative mt-3 text-[12px] text-faint">
+        {t(`difficulty.${useCase.difficulty}`)} · {t(`schedule.${useCase.schedule}`)} ·{" "}
+        {t("meta.setup", { n: useCase.setupTime.replace(" min", "") })}
+      </p>
+      <div className="relative mt-auto flex items-end justify-between pt-5">
+        <span className="text-[13px] text-accent">{t("pages.viewUseCase")}</span>
+        <span className="text-[11px] text-faint">
+          {t("trust.verified", { date: formatVerifiedDate(trust.lastVerified, localeTag) })}
+        </span>
       </div>
     </article>
   );

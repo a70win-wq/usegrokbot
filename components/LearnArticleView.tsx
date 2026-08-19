@@ -3,6 +3,7 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import type { LearnArticle } from "@/data/learn";
+import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { localizeLearnArticle, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
@@ -58,6 +59,27 @@ export function LearnArticleView({ article }: { article: LearnArticle }) {
           );
         })}
       </div>
+      <footer className="mt-12 border-t border-line pt-6 text-[13px] leading-6 text-faint">
+        <p>
+          {t("trust.verified", {
+            date: formatVerifiedDate(article.verifiedAt ?? LAST_REVIEWED, locale === "en" ? "en" : locale),
+          })}
+        </p>
+        {article.sources?.length ? (
+          <p className="mt-2">
+            {t("trust.source")}{" "}
+            {article.sources.map((source, index) => (
+              <span key={source.url}>
+                {index > 0 ? ", " : ""}
+                <a href={source.url} className="text-accent" target="_blank" rel="noreferrer">
+                  {source.label}
+                </a>
+              </span>
+            ))}
+          </p>
+        ) : null}
+        <p className="mt-2">{t("footer.disclaimer")}</p>
+      </footer>
     </article>
   );
 }

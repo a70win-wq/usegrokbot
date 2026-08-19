@@ -11,8 +11,8 @@ export const metadata = pageMeta({
 export default async function UseCasesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string }>;
+  searchParams: Promise<{ q?: string; status?: string }>;
 }) {
-  const { q = "" } = await searchParams;
-  return <UseCasesPageView initialQuery={q} />;
+  const { q = "", status } = await searchParams;
+  return <UseCasesPageView initialQuery={q} initialOfficial={status === "official"} />;
 }

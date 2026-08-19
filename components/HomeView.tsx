@@ -9,6 +9,7 @@ import { UseCaseCard } from "@/components/UseCaseCard";
 import { homeApps } from "@/data/apps";
 import { categories, categoriesBySlug } from "@/data/categories";
 import { getNewUseCases, getPopularUseCases, getUseCasesByApp, useCases } from "@/data/use-cases";
+import { isOfficial } from "@/data/verification";
 import { localizeCategory, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
@@ -16,15 +17,23 @@ export function HomeView() {
   const { locale, t } = useI18n();
   const popular = getPopularUseCases(9);
   const newest = getNewUseCases(6);
+  const officialCount = useCases.filter(isOfficial).length;
 
   const chips = [
     { href: "/use-cases", label: t("home.chipPopular") },
+    { href: "/use-cases?status=official", label: t("home.chipVerified") },
     { href: "/categories/sales", label: localizeCategory(categoriesBySlug.sales, locale).shortName },
     { href: "/categories/marketing", label: localizeCategory(categoriesBySlug.marketing, locale).shortName },
     { href: "/categories/research", label: localizeCategory(categoriesBySlug.research, locale).shortName },
-    { href: "/categories/content", label: localizeCategory(categoriesBySlug.content, locale).shortName },
-    { href: "/categories/operations", label: localizeCategory(categoriesBySlug.operations, locale).shortName },
-    { href: "/categories/coding", label: localizeCategory(categoriesBySlug.coding, locale).shortName },
+  ];
+
+  const intents = [
+    { href: "/categories/sales", label: t("home.intentCustomers") },
+    { href: "/use-cases?q=research", label: t("home.intentResearch") },
+    { href: "/apps/gmail", label: t("home.intentEmail") },
+    { href: "/use-cases?q=monitor", label: t("home.intentWatch") },
+    { href: "/categories/content", label: t("home.intentContent") },
+    { href: "/categories/coding", label: t("home.intentCoding") },
   ];
 
   return (
@@ -54,6 +63,21 @@ export function HomeView() {
           <div className="mt-8">
             <SearchBar />
           </div>
+          <dl className="mt-8 grid max-w-xl grid-cols-3 gap-3">
+            {[
+              { n: `${useCases.length}+`, label: t("home.statCases") },
+              { n: t("home.statCopyValue"), label: t("home.statCopy") },
+              { n: t("home.statCodeValue"), label: t("home.statCode") },
+            ].map((stat) => (
+              <div key={stat.label} className="rounded-[14px] border border-line bg-elevated px-3 py-3">
+                <dt className="text-[11px] text-faint">{stat.label}</dt>
+                <dd className="mt-1 text-[15px] font-medium tracking-tight text-ink">{stat.n}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-3 text-[12px] text-faint">
+            {t("home.officialCount", { n: officialCount })}
+          </p>
           <div className="mt-5 flex gap-2 overflow-x-auto pb-1 [mask-image:linear-gradient(90deg,#000_92%,transparent)]">
             {chips.map((chip) => (
               <Link
@@ -65,6 +89,21 @@ export function HomeView() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1120px] px-5 pb-8 md:px-8">
+        <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{t("home.intentTitle")}</h2>
+        <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {intents.map((intent) => (
+            <Link
+              key={intent.href}
+              href={intent.href}
+              className="spring-lift rounded-[16px] border border-line bg-card px-4 py-4 text-[15px] font-medium text-ink hover:border-line-strong"
+            >
+              {intent.label}
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -159,7 +198,6 @@ export function HomeView() {
             </Link>
           </div>
         </div>
-        <p className="sr-only">{useCases.length} use cases in the library.</p>
       </section>
     </>
   );

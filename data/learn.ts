@@ -10,6 +10,8 @@ export type LearnArticle = {
   description: string;
   kicker: string;
   blocks: LearnBlock[];
+  verifiedAt?: string;
+  sources?: { label: string; url: string }[];
 };
 
 export const learnArticles: LearnArticle[] = [
@@ -45,8 +47,28 @@ export const learnArticles: LearnArticle[] = [
       },
       {
         type: "p",
-        text: "UseGrokBot is an independent guide. We are not affiliated with xAI. We collect the jobs people actually want to give a Bot, and we write the instructions in language a non-technical person can paste and use.",
+        text: "UseGrokBot is an independent guide. We are not affiliated with xAI. Official pages show Bots with their own cloud computer, logins to your apps, routines, and human approvals. We map library jobs to those public examples and say so when we cannot.",
       },
+      { type: "h2", text: "Who can use it" },
+      {
+        type: "p",
+        text: "Grok Bot is in early beta. Public materials say it is available on desktop and iOS for SuperGrok Heavy, Cursor Ultra, and Cursor Teams Premium subscribers. Enterprise access is a waitlist. Plans change. Check the official site before you pay.",
+      },
+      { type: "h2", text: "What it can and cannot do" },
+      {
+        type: "ul",
+        items: [
+          "It can sign into tools and finish a job in the real app, not only in a chat window.",
+          "It can run on a schedule after you show it the path once.",
+          "It should not make legal, money, or customer-apology decisions without you.",
+          "A vague prompt still produces vague work.",
+        ],
+      },
+    ],
+    verifiedAt: "2026-08-19",
+    sources: [
+      { label: "Introducing Grok Bot", url: "https://x.ai/news/introducing-grok-bot" },
+      { label: "Get started", url: "https://docs.x.ai/grok-bot/get-started" },
     ],
   },
   {
@@ -87,6 +109,44 @@ export const learnArticles: LearnArticle[] = [
         type: "p",
         text: "The first runs are for teaching. If a competitor brief includes a redesign as “news”, tell it to ignore design. If a follow-up email sounds like a template, paste a sentence you actually sent and say “more like this”. The prompt on this site is a start, not a cage.",
       },
+      { type: "h2", text: "How much it costs" },
+      {
+        type: "p",
+        text: "Access is bundled with listed xAI and Cursor plans, not sold as a separate “prompt pack” from this site. We do not reprint prices here because they move. See x.ai/bot for the current list.",
+      },
+      { type: "h2", text: "How to install" },
+      {
+        type: "ol",
+        items: [
+          "Open x.ai/bot or the official Grok Bot docs.",
+          "Sign in with a SuperGrok Heavy, Cursor Ultra, or Cursor Teams Premium account.",
+          "Install the desktop or iOS app.",
+          "Create your first Bot and connect only the tools that job needs.",
+        ],
+      },
+      { type: "h2", text: "Three beginner jobs" },
+      {
+        type: "ul",
+        items: [
+          "Competitor Monitor: four URLs, a morning Slack note only when something changed.",
+          "Inbox Organizer: drafts, not sends, for one label in Gmail.",
+          "Daily Sales Brief: calendar plus leftover follow-ups, three actions before 9:00.",
+        ],
+      },
+      { type: "h2", text: "FAQ" },
+      {
+        type: "ul",
+        items: [
+          "Do I need to code? No. You brief a Bot in plain language.",
+          "Can it send email alone? It can draft. Approve the first week.",
+          "Is UseGrokBot official? No. We link official sources on every Official case.",
+        ],
+      },
+    ],
+    verifiedAt: "2026-08-19",
+    sources: [
+      { label: "Get started", url: "https://docs.x.ai/grok-bot/get-started" },
+      { label: "Grok Bot product page", url: "https://x.ai/bot" },
     ],
   },
   {
@@ -135,6 +195,8 @@ export const learnArticles: LearnArticle[] = [
         text: "If you get stuck, start from a use case on this site and only change the parts that are yours. That is faster than a blank page.",
       },
     ],
+    verifiedAt: "2026-08-19",
+    sources: [{ label: "Get started", url: "https://docs.x.ai/grok-bot/get-started" }],
   },
   {
     slug: "grok-bot-examples",
@@ -172,6 +234,8 @@ export const learnArticles: LearnArticle[] = [
         text: "Browse the library, copy a prompt, and run one job this week. That is the whole idea.",
       },
     ],
+    verifiedAt: "2026-08-19",
+    sources: [{ label: "Introducing Grok Bot", url: "https://x.ai/news/introducing-grok-bot" }],
   },
 ];
 

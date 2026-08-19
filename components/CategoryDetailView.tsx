@@ -1,7 +1,9 @@
 "use client";
 
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SeoGuide } from "@/components/SeoGuide";
 import { UseCasesExplorer } from "@/components/UseCasesExplorer";
+import { seoForCategory } from "@/data/seo";
 import type { Category } from "@/data/types";
 import type { UseCase } from "@/data/types";
 import { localizeCategory, useI18n } from "@/lib/i18n";
@@ -20,6 +22,7 @@ export function CategoryDetailView({ category, items }: { category: Category; it
       <div className="mt-8">
         <UseCasesExplorer items={items} lockedCategory={category.slug} />
       </div>
+      {seoForCategory(category.slug) ? <SeoGuide guide={seoForCategory(category.slug)!} /> : null}
     </div>
   );
 }

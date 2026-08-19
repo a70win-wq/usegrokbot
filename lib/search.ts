@@ -1,4 +1,5 @@
 import type { AppSlug, CategorySlug, Difficulty, Schedule, UseCase } from "@/data/types";
+import { isOfficial } from "@/data/verification";
 import type { Locale } from "@/lib/i18n/types";
 
 export type SortKey = "popular" | "newest" | "az";
@@ -9,6 +10,7 @@ export type UseCaseFilters = {
   difficulties?: Difficulty[];
   schedules?: Schedule[];
   apps?: AppSlug[];
+  officialOnly?: boolean;
   sort?: SortKey;
   locale?: Locale;
 };
@@ -24,6 +26,7 @@ function haystack(useCase: UseCase, original?: UseCase) {
     useCase.difficulty,
     ...useCase.tags,
     ...useCase.apps,
+    ...(useCase.alsoUses ?? []),
   ];
   if (original && original !== useCase) {
     parts.push(original.title, original.shortDescription, original.description, original.problem);
@@ -58,6 +61,9 @@ export function filterUseCases(list: UseCase[], filters: UseCaseFilters, origina
   }
   if (filters.apps?.length) {
     next = next.filter((item) => item.apps.some((app) => filters.apps!.includes(app)));
+  }
+  if (filters.officialOnly) {
+    next = next.filter(isOfficial);
   }
 
   return sortUseCases(next, filters.sort ?? "popular", filters.locale ?? "en");

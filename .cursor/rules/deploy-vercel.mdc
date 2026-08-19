@@ -9,14 +9,22 @@ When you finish a user-requested change that should go live (UI, copy, pages, co
 
 ## How
 
-This repo is linked to Vercel project `usegrokbot` (team `aipost`) via `.vercel/project.json`. There is no git remote. Use the CLI, not git push:
+This repo is linked to Vercel project `usegrokbot` (team `aipost`). GitHub `a70win-wq/usegrokbot` is connected; `main` is the production branch.
+
+Preferred: commit the finished work (only when the user asked to ship, or after a requested site update) and push `main`. That triggers a production deploy.
+
+```bash
+git push -u origin HEAD
+```
+
+If git is unavailable, fall back to the CLI:
 
 ```bash
 vercel deploy --prod -y --no-wait --scope aipost
 vercel inspect <deployment-url>
 ```
 
-Then give the user the production URL (`https://usegrokbot.com` and the deployment URL).
+Then give the user https://usegrokbot.com and the deployment URL.
 
 ## Do not
 

@@ -6,7 +6,13 @@ import { useCases } from "@/data/use-cases";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-export function UseCasesPageView({ initialQuery }: { initialQuery: string }) {
+export function UseCasesPageView({
+  initialQuery,
+  initialOfficial = false,
+}: {
+  initialQuery: string;
+  initialOfficial?: boolean;
+}) {
   const { t } = useI18n();
 
   return (
@@ -32,7 +38,7 @@ export function UseCasesPageView({ initialQuery }: { initialQuery: string }) {
         {t("pages.useCasesBody", { n: useCases.length })}
       </p>
       <div className="mt-8">
-        <UseCasesExplorer items={useCases} initialQuery={initialQuery} />
+        <UseCasesExplorer items={useCases} initialQuery={initialQuery} initialOfficial={initialOfficial} />
       </div>
     </div>
   );
