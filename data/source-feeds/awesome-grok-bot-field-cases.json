@@ -25,10 +25,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -40,10 +40,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -81,10 +81,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -96,10 +96,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -111,10 +111,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -126,10 +126,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 1,
-        "code": "extract_failed",
-        "reason": "Could not parse this post."
+        "status": "skipped",
+        "attempts": 2,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -141,8 +141,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "skipped",
+        "attempts": 1,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -180,8 +182,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "skipped",
+        "attempts": 1,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -193,8 +197,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "skipped",
+        "attempts": 1,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
@@ -206,8 +212,10 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "pending",
-        "attempts": 0
+        "status": "skipped",
+        "attempts": 1,
+        "code": "github_403",
+        "reason": "{\"message\":\"GitHub Actions is not permitted to create or approve pull requests.\",\"documentation_url\":\"https://docs.github.com/rest/pulls/pulls#create-a-pull-request\",\"status\":\"403\"}"
       }
     },
     {
