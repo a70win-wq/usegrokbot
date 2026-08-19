@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "loganjastremski-the-unlock-is-the-computer-not-4-6",
+    "title": "the unlock is the computer, not 4.6",
+    "headline": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "whatTheyDid": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "No API, no MCP, no hosted browser — the Bot just uses software like a person.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Logan Jastremski",
+    "handle": "LoganJastremski",
+    "publishedAt": "2026-08-19",
+    "xPostUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
+    "sourceUrl": "https://x.com/LoganJastremski/status/2089903051557491092",
+    "sourceLabel": "Logan Jastremski on X"
+  }
+]
