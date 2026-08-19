@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "slug": "yunta-tsai-calendar-reservations-while-walking",
+    "title": "calendar + reservations while walking",
+    "headline": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "whatTheyDid": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "howItWorks": "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",
+    "whyUseful": "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.",
+    "whyItMatters": "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Mixed Chinese/English voice, Bot scans calendars and books a table.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Yun-Ta Tsai",
+    "handle": "yunta_tsai",
+    "publishedAt": "2026-08-12",
+    "xPostUrl": "https://x.com/yunta_tsai/status/2087415205756391461",
+    "sourceUrl": "https://x.com/yunta_tsai/status/2087415205756391461",
+    "sourceLabel": "Yun-Ta Tsai on X"
+  }
+]
