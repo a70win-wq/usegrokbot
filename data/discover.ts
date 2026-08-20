@@ -91,6 +91,7 @@ const ALEX_FINN_WALKTHROUGH = "https://x.com/AlexFinn/status/2089505950470459659
 const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126";
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const GERGELY_REFUNDS = "https://x.com/GergelyOrosz/status/2090085668768694562";
+const SAWYER_MOWER = "https://x.com/SawyerMerritt/status/2090179852171174211";
 const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
 const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
 const YUNTA_PARENTS = "https://x.com/yunta_tsai/status/2089927285113803053";
@@ -268,6 +269,41 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: GERGELY_REFUNDS,
     sourceLabel: "Gergely Orosz on X",
     relatedUseCase: "support-email-assistant",
+    trending: true,
+  },
+  {
+    slug: "remote-mower-sawyer-merritt",
+    title: "Remote the Lawn Mower",
+    headline:
+      "Sawyer Merritt set up Grok Bot to remotely control his autonomous robot lawn mower — 50 miles away",
+    whatTheyDid:
+      "On 19 Aug 2026 Sawyer Merritt (@SawyerMerritt) wrote that he set up Grok Bot to remotely control his autonomous robot lawn mower 50 miles away. Setup took two minutes. He told it to start mowing; it started three seconds later. Then he had it dock itself. He says he will set up his vacuum next, and have a Grok Bot dedicated to controlling and managing all of his autonomous robots. The attached screenshot is an Engineer Bot chat: linked to a Navimow X450, then “Start mowing now” and “Go dock.” The clip is the Navimow X450 map.",
+    howItWorks:
+      "Chat in, mower out. We keep Sawyer’s permalink. We did not re-run the mower or the dock.",
+    whyUseful:
+      "Remote start and dock is the job people get: not a chat summary — a machine 50 miles away, told to mow, then sent home.",
+    whyItMatters:
+      "Same-day community case: a named person, a live mower, an Engineer Bot screenshot. Community; we did not mark it tested.",
+    whoShouldTry: [
+      "Anyone with a robot mower",
+      "People who leave home and still need the yard done",
+      "Anyone collecting household robots under one Bot",
+    ],
+    usefulFor: "Personal / Household",
+    quote: "I told it to start mowing and it started 3 seconds later. Then I had it dock itself.",
+    result: "Remote mower start · dock",
+    category: "personal",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "one-time",
+    source: "community",
+    authorName: "Sawyer Merritt",
+    handle: "SawyerMerritt",
+    publishedAt: "2026-08-19",
+    xPostUrl: SAWYER_MOWER,
+    sourceUrl: SAWYER_MOWER,
+    sourceLabel: "Sawyer Merritt on X",
     trending: true,
   },
   {
