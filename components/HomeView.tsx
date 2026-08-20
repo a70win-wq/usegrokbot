@@ -68,7 +68,6 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
               </div>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <GetGrokBot variant="accent" />
-                <p className="text-[12px] text-faint">{t("official.downloadHint")}</p>
               </div>
               <p className="mt-4 text-[12px] text-faint">
                 {t("home.proof", { n: useCases.length })}
