@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { BlobatarAvatar } from "@/components/BlobatarAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
+import { celebrate } from "@/lib/celebrate";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
@@ -93,6 +94,7 @@ export default function SubmitPage() {
         return;
       }
       setDone(data);
+      void celebrate("submit");
     } catch {
       setError(t("submit.failed"));
     } finally {
