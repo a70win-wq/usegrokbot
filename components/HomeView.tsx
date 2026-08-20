@@ -80,7 +80,6 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
           <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">
             {t("home.featuredTitle")}
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-mute">{t("home.featuredBody")}</p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
             {featured.map((story) => (
               <DiscoverCard key={story.slug} story={story} featured />
