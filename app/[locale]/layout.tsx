@@ -43,6 +43,9 @@ export async function generateMetadata({
     },
     description: messages[locale].home.subtitle,
     applicationName: site.name,
+    other: {
+      "apple-itunes-app": `app-id=${site.grokBotAppId}`,
+    },
     openGraph: {
       siteName: site.name,
       type: "website",

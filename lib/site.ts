@@ -8,5 +8,7 @@ export const site = {
   brandLine: "See how people are actually using Grok Bot — then build it yourself.",
   githubRepo: "a70win-wq/usegrokbot",
   githubUrl: "https://github.com/a70win-wq/usegrokbot",
-  xaiBotUrl: "https://grok.com/",
+  grokBotDesktopUrl: "https://cursor.com/bot/onboarding",
+  grokBotIosUrl: "https://apps.apple.com/app/grok-bot/id6794501026",
+  grokBotAppId: "6794501026",
 } as const;
