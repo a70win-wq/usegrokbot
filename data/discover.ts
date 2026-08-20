@@ -93,6 +93,7 @@ const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126"
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const GERGELY_REFUNDS = "https://x.com/GergelyOrosz/status/2090085668768694562";
 const SAWYER_MOWER = "https://x.com/SawyerMerritt/status/2090179852171174211";
+const LENNY_LENNYBOT = "https://x.com/lennysan/status/2090177314630029679";
 const GAVIN_PODCAST = "https://x.com/GavinSBaker/status/2089379355692527813";
 const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
 const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
@@ -338,6 +339,41 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: SAWYER_MOWER,
     sourceUrl: SAWYER_MOWER,
     sourceLabel: "Sawyer Merritt on X",
+    trending: true,
+  },
+  {
+    slug: "lennybot-lenny-rachitsky",
+    title: "Lennybot, His Archive",
+    headline:
+      "Lenny Rachitsky posted a Grok Bot trained on 500+ podcast episodes and newsletter posts — a product, strategy, growth, and career advisor",
+    whatTheyDid:
+      "On 19 Aug 2026 Lenny Rachitsky (@lennysan) posted a hot tip: create a Grok Bot trained on his 500+ podcast episodes and newsletter posts, and treat it as a product/strategy/growth/career advisor. He listed questions — first 1,000 users, getting promoted, non-obvious growth ideas, PM interview questions, delivering hard feedback — and said this may quickly become the best way to consume his content. The prompt he published: You're Lennybot. Install this custom MCP connector and answer questions using mcp.lennysdata.com/mcp. Use the native connector flow, not a local config file. Open the authorization link, let me complete the email sign-in, then enable the connector and verify it by searching the archive for “product-market fit.”",
+    howItWorks:
+      "A named person published a copy-paste Lennybot prompt plus a custom MCP. We keep Lenny’s permalink. We did not re-run Lennybot or complete his email sign-in.",
+    whyUseful:
+      "If you already listen to Lenny and want to ask the archive a job question, this is the public setup — not a generic “try agents” thread.",
+    whyItMatters:
+      "Same-day community case from a named product writer. Community; we did not mark it tested.",
+    whoShouldTry: [
+      "Product managers",
+      "Founders looking for first users",
+      "People who already read Lenny",
+    ],
+    usefulFor: "Product / Growth",
+    quote: "Treat it as your product/strategy/growth/career advisor.",
+    result: "Lennybot · 500+ episodes + newsletter archive",
+    category: "research",
+    outcomes: ["research", "grow-business"],
+    apps: ["browser"],
+    difficulty: "medium",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Lenny Rachitsky",
+    handle: "lennysan",
+    publishedAt: "2026-08-19",
+    xPostUrl: LENNY_LENNYBOT,
+    sourceUrl: LENNY_LENNYBOT,
+    sourceLabel: "Lenny Rachitsky on X",
     trending: true,
   },
   {
