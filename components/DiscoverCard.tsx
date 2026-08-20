@@ -27,10 +27,6 @@ export function DiscoverCard({
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
-  const viewsLabel =
-    typeof views === "number" && views > 0
-      ? t("discover.xViews", { n: formatViewCount(views, locale) })
-      : null;
 
   return (
     <article
@@ -43,18 +39,30 @@ export function DiscoverCard({
         <p className="text-[11px] font-medium tracking-[0.12em] text-accent uppercase">{t("discover.featured")}</p>
       ) : null}
 
-      <div className={cn("flex min-w-0 items-center gap-3", featured && "mt-3")}>
-        <AuthorAvatar name={item.authorName} handle={story.handle} size={featured ? 48 : 40} />
-        <div className="min-w-0">
-          <p className="truncate text-[13px] font-medium text-ink">
-            {item.authorName}
-            {story.handle ? <span className="ml-1 font-normal text-mute">@{story.handle}</span> : null}
-          </p>
-          <p className="mt-0.5 text-[12px] text-faint">
-            {formatCardDate(story.publishedAt, locale)}
-            {viewsLabel ? ` · ${viewsLabel}` : null}
-          </p>
+      <div className={cn("flex min-w-0 items-start justify-between gap-3", featured && "mt-3")}>
+        <div className="flex min-w-0 items-center gap-3">
+          <AuthorAvatar name={item.authorName} handle={story.handle} size={featured ? 48 : 40} />
+          <div className="min-w-0">
+            <p className="truncate text-[13px] font-medium text-ink">
+              {item.authorName}
+              {story.handle ? <span className="ml-1 font-normal text-mute">@{story.handle}</span> : null}
+            </p>
+            <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
+          </div>
         </div>
+        {views != null && views > 0 ? (
+          <div className="shrink-0 pt-0.5 text-right">
+            <p
+              className={cn(
+                "font-medium tabular-nums tracking-tight text-ink",
+                featured ? "text-[22px] leading-none md:text-[26px]" : "text-[18px] leading-none",
+              )}
+            >
+              {formatViewCount(views, locale)}
+            </p>
+            <p className="mt-1 text-[11px] text-mute">{t("pages.rankingsViews")}</p>
+          </div>
+        ) : null}
       </div>
       <h3
         className={cn(
