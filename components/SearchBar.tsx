@@ -4,12 +4,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
-import { appSearchText, apps } from "@/data/apps";
 import { searchDiscoverStories } from "@/data/discover";
-import { useCases } from "@/data/use-cases";
+import { topicMessageKey, topics } from "@/data/topics";
 import { cn } from "@/lib/cn";
-import { localizeDiscoverStory, localizeUseCase, useI18n } from "@/lib/i18n";
-import { searchUseCases } from "@/lib/search";
+import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
 
 type SearchBarProps = {
   variant?: "hero" | "inline";
@@ -17,7 +15,6 @@ type SearchBarProps = {
   onQueryChange?: (value: string) => void;
   autoFocus?: boolean;
   stayOnPage?: boolean;
-  destination?: "discover" | "use-cases";
 };
 
 export function SearchBar({
@@ -26,7 +23,6 @@ export function SearchBar({
   onQueryChange,
   autoFocus,
   stayOnPage = false,
-  destination = "use-cases",
 }: SearchBarProps) {
   const router = useRouter();
   const { locale, t, list, localizeHref } = useI18n();
@@ -86,43 +82,48 @@ export function SearchBar({
   }, []);
 
   const stories = useMemo(() => {
-    return searchDiscoverStories(query, 4).map((item) => localizeDiscoverStory(item, locale));
+    return searchDiscoverStories(query, 6).map((item) => ({
+      localized: localizeDiscoverStory(item, locale),
+      href: item.xPostUrl ?? item.sourceUrl,
+      external: true,
+    }));
   }, [query, locale]);
 
-  const results = useMemo(() => {
-    const localized = useCases.map((item) => localizeUseCase(item, locale));
-    return searchUseCases(localized, query, useCases).slice(0, 4);
-  }, [query, locale]);
-
-  const integrations = useMemo(() => {
+  const matchingTopics = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
-    return apps.filter((app) => appSearchText(app.slug).includes(q) || app.name.toLowerCase().includes(q)).slice(0, 3);
-  }, [query]);
+    return topics
+      .filter((topic) => {
+        const name = t(topicMessageKey(topic.slug));
+        return (
+          topic.slug.includes(q) ||
+          name.toLowerCase().includes(q) ||
+          topic.name.toLowerCase().includes(q) ||
+          topic.description.toLowerCase().includes(q)
+        );
+      })
+      .slice(0, 3);
+  }, [query, t]);
 
   const trimmed = query.trim();
   function resultsPath(value: string) {
-    const q = encodeURIComponent(value);
-    return destination === "discover" ? `/discover?q=${q}` : `/use-cases?q=${q}`;
+    return `/?q=${encodeURIComponent(value)}`;
   }
   const showResults = variant === "hero" && open && trimmed.length > 0;
   const showSuggestions = variant === "hero" && open && trimmed.length === 0;
   const menuItems = showResults
     ? [
+        ...matchingTopics.map((topic) => ({
+          href: `/categories/${topic.slug}`,
+          title: t(topicMessageKey(topic.slug)),
+          detail: t("nav.categories"),
+          external: false,
+        })),
         ...stories.map((item) => ({
-          href: `/discover/${item.slug}`,
-          title: item.title,
-          detail: item.headline,
-        })),
-        ...integrations.map((item) => ({
-          href: `/integrations/${item.slug}`,
-          title: item.name,
-          detail: t("search.integration"),
-        })),
-        ...results.map((item) => ({
-          href: `/use-cases/${item.slug}`,
-          title: item.title,
-          detail: item.shortDescription,
+          href: item.href,
+          title: item.localized.title,
+          detail: item.localized.headline,
+          external: true,
         })),
       ]
     : showSuggestions
@@ -130,6 +131,7 @@ export function SearchBar({
           href: stayOnPage ? "/" : resultsPath(item),
           title: item,
           detail: "",
+          external: false,
         }))
       : [];
 
@@ -177,7 +179,11 @@ export function SearchBar({
           setOpen(false);
           return;
         }
-        router.push(localizeHref(selected.href));
+        if (selected.external) {
+          window.open(selected.href, "_blank", "noopener,noreferrer");
+        } else {
+          router.push(localizeHref(selected.href));
+        }
         setOpen(false);
         return;
       }
@@ -216,7 +222,7 @@ export function SearchBar({
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
-          {showResults && stories.length === 0 && results.length === 0 && integrations.length === 0 ? (
+          {showResults && stories.length === 0 && matchingTopics.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}
               <p className="mt-1 text-faint">{t("search.emptyHint")}</p>
@@ -243,6 +249,19 @@ export function SearchBar({
                       >
                         <div className="text-sm font-medium text-ink">{item.title}</div>
                       </button>
+                    ) : item.external ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={className}
+                        onClick={() => setOpen(false)}
+                      >
+                        <div className="text-sm font-medium text-ink">{item.title}</div>
+                        {item.detail ? (
+                          <div className="mt-0.5 line-clamp-1 text-[13px] text-mute">{item.detail}</div>
+                        ) : null}
+                      </a>
                     ) : (
                       <LocaleLink
                         href={item.href}

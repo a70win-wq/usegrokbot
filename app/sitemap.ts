@@ -1,10 +1,8 @@
 import type { MetadataRoute } from "next";
-import { apps } from "@/data/apps";
-import { categories } from "@/data/categories";
 import { discoverStories } from "@/data/discover";
 import { learnArticles } from "@/data/learn";
-import { useCases } from "@/data/use-cases";
-import { LAST_REVIEWED, verificationFor } from "@/data/verification";
+import { topics } from "@/data/topics";
+import { LAST_REVIEWED } from "@/data/verification";
 import { URL_LOCALES, absoluteUrl, languageAlternates } from "@/lib/i18n/paths";
 
 function entries(
@@ -25,52 +23,25 @@ function day(iso: string) {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const reviewed = day(LAST_REVIEWED);
   const latestStory = discoverStories.reduce(
     (latest, item) => (item.publishedAt > latest ? item.publishedAt : latest),
     discoverStories[0]?.publishedAt ?? LAST_REVIEWED,
   );
-  const communityHandles = [...new Set(
-    discoverStories
-      .filter((item) => item.source === "community" && item.handle)
-      .map((item) => item.handle!.toLowerCase()),
-  )];
 
   return [
-    ...entries("/", { changeFrequency: "weekly", priority: 1 }, day(latestStory)),
-    ...entries("/discover", { changeFrequency: "weekly", priority: 0.9 }, day(latestStory)),
-    ...discoverStories.flatMap((item) =>
-      entries(`/discover/${item.slug}`, { changeFrequency: "weekly", priority: 0.8 }, day(item.publishedAt)),
+    ...entries("/", { changeFrequency: "daily", priority: 1 }, day(latestStory)),
+    ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
+    ...topics.flatMap((item) =>
+      entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),
     ),
-    ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/integrations", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/community", { changeFrequency: "weekly", priority: 0.6 }, day(latestStory)),
-    ...communityHandles.flatMap((handle) =>
-      entries(`/community/${handle}`, { changeFrequency: "weekly", priority: 0.5 }, day(latestStory)),
-    ),
-    ...entries("/prompts", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/learn", { changeFrequency: "weekly", priority: 0.8 }, reviewed),
-    ...entries("/submit", { changeFrequency: "monthly", priority: 0.5 }, reviewed),
-    ...useCases.flatMap((item) =>
-      entries(
-        `/use-cases/${item.slug}`,
-        { changeFrequency: "weekly", priority: 0.7 },
-        day(verificationFor(item.slug).lastVerified),
-      ),
-    ),
-    ...categories.flatMap((item) =>
-      entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.6 }, reviewed),
-    ),
-    ...apps.flatMap((item) =>
-      entries(`/integrations/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, reviewed),
-    ),
+    ...entries("/learn", { changeFrequency: "weekly", priority: 0.5 }, day(LAST_REVIEWED)),
     ...learnArticles.flatMap((item) =>
       entries(
         `/learn/${item.slug}`,
-        { changeFrequency: "monthly", priority: 0.6 },
+        { changeFrequency: "monthly", priority: 0.4 },
         item.verifiedAt ? day(item.verifiedAt) : undefined,
       ),
     ),
+    ...entries("/submit", { changeFrequency: "monthly", priority: 0.4 }, day(LAST_REVIEWED)),
   ];
 }

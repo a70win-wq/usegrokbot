@@ -22,6 +22,51 @@ const nextConfig: NextConfig = {
         destination: "/:locale/integrations/:slug",
         permanent: true,
       },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/use-cases",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/use-cases/:slug",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/prompts",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/saved",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/discover",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/categories/customer-support",
+        destination: "/:locale/categories/operations",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/categories/hr",
+        destination: "/:locale/categories/operations",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/categories/finance",
+        destination: "/:locale/categories/operations",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/categories/productivity",
+        destination: "/:locale/categories/personal",
+        permanent: true,
+      },
     ];
   },
 };

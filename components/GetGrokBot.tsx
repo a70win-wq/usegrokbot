@@ -38,6 +38,8 @@ export function GetGrokBot({
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={aria}
       title={aria}
       className={cn(

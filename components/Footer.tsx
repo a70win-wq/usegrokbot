@@ -7,8 +7,7 @@ import { GitHubStar } from "./GitHubStar";
 import { LocaleLink } from "./LocaleLink";
 
 export function Footer({ stars }: { stars?: number | null }) {
-  const { t, locale } = useI18n();
-  const communityLabel = locale === "zh-Hant" ? "社群" : locale === "zh-Hans" ? "社区" : "Community";
+  const { t } = useI18n();
 
   return (
     <footer className="mt-auto border-t border-line">
@@ -18,23 +17,11 @@ export function Footer({ stars }: { stars?: number | null }) {
             <BotFace size={18} color={botColorFor("usegrokbot")} />
             UseGrokBot
           </LocaleLink>
-          <LocaleLink href="/discover" className="hover:text-ink">
+          <LocaleLink href="/" className="hover:text-ink">
             {t("nav.discover")}
-          </LocaleLink>
-          <LocaleLink href="/use-cases" className="hover:text-ink">
-            {t("nav.workflows")}
           </LocaleLink>
           <LocaleLink href="/categories" className="hover:text-ink">
             {t("nav.categories")}
-          </LocaleLink>
-          <LocaleLink href="/integrations" className="hover:text-ink">
-            {t("nav.integrations")}
-          </LocaleLink>
-          <LocaleLink href="/community" className="hover:text-ink">
-            {communityLabel}
-          </LocaleLink>
-          <LocaleLink href="/prompts" className="hover:text-ink">
-            {t("nav.prompts")}
           </LocaleLink>
           <LocaleLink href="/learn" className="hover:text-ink">
             {t("nav.learn")}

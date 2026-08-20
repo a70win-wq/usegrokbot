@@ -6,6 +6,7 @@ import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { DiscoverStory } from "@/data/discover";
+import { topicsForStory } from "@/data/topics";
 import { LAST_REVIEWED, formatVerifiedDate, type TrustStatus } from "@/data/verification";
 import { cn } from "@/lib/cn";
 import { formatCardDate } from "@/lib/format";
@@ -34,8 +35,7 @@ export function DiscoverCard({
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
-  const buildHref = story.relatedUseCase ? `/use-cases/${story.relatedUseCase}` : `/discover/${story.slug}`;
-  const buildLabel = story.relatedUseCase ? t("discover.buildWorkflow") : t("discover.readCase");
+  const labels = topicsForStory(story);
 
   return (
     <article
@@ -59,12 +59,7 @@ export function DiscoverCard({
             <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
           </div>
         </div>
-        <div className="flex shrink-0 flex-col items-end gap-1">
-          <StatusBadge status={trust.status} label={trust.label} />
-          <p className="text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
-            {t(`discover.cat${capitalize(story.category)}`)}
-          </p>
-        </div>
+        <StatusBadge status={trust.status} label={trust.label} />
       </div>
       <h3
         className={cn(
@@ -72,9 +67,9 @@ export function DiscoverCard({
           featured ? "text-[22px] leading-snug md:text-[26px]" : "text-[16px] leading-snug",
         )}
       >
-        <LocaleLink href={`/discover/${story.slug}`} className="after:absolute after:inset-0">
+        <a href={originalHref} target="_blank" rel="noreferrer" className="after:absolute after:inset-0">
           {featured ? item.headline : item.title}
-        </LocaleLink>
+        </a>
       </h3>
       <p className={cn("relative mt-2 text-[13px] leading-6 text-mute", featured ? "line-clamp-4" : "line-clamp-3")}>
         {featured ? item.whatTheyDid : item.headline}
@@ -91,26 +86,24 @@ export function DiscoverCard({
         </div>
       ) : null}
 
-      <p className="relative mt-4 text-[12px] leading-5 text-mute">
-        <span className="text-faint">{t("discover.usefulFor")}: </span>
-        {item.usefulFor}
-      </p>
+      <div className="relative z-10 mt-4 flex flex-wrap gap-1.5">
+        {labels.map((topic) => (
+          <LocaleLink
+            key={topic.slug}
+            href={`/categories/${topic.slug}`}
+            className="rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium text-mute hover:border-line-strong hover:text-ink"
+          >
+            {t(`discover.cat${topic.slug.charAt(0).toUpperCase()}${topic.slug.slice(1)}`)}
+          </LocaleLink>
+        ))}
+      </div>
 
       <div className="relative mt-3">
-        <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
-          {t("discover.integrations")}
-        </p>
         <AppNamePills apps={story.apps} />
       </div>
       <p className="relative mt-3 text-[11px] text-faint">{t("discover.lastVerified", { date: checked })}</p>
 
-      <div className="relative z-10 mt-auto flex flex-col gap-2 pt-5 sm:flex-row-reverse sm:items-center sm:justify-end">
-        <LocaleLink
-          href={buildHref}
-          className="accent-gradient spring-press inline-flex h-11 items-center justify-center rounded-[10px] px-4 text-[13px] font-medium sm:h-9"
-        >
-          {buildLabel} →
-        </LocaleLink>
+      <div className="relative z-10 mt-auto pt-5">
         <a
           href={originalHref}
           target="_blank"
@@ -122,8 +115,4 @@ export function DiscoverCard({
       </div>
     </article>
   );
-}
-
-function capitalize(value: string) {
-  return value.charAt(0).toUpperCase() + value.slice(1);
 }

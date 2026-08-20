@@ -1,21 +1,7 @@
-import { DiscoverIndexView } from "@/components/DiscoverIndexView";
-import { isDiscoverTab } from "@/data/discover";
-import { messageMeta } from "@/lib/seo";
+import { redirect } from "next/navigation";
+import { localeFromParams } from "@/lib/i18n/paths";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  return messageMeta(locale, {
-    path: "/discover",
-    title: "discover.title",
-    description: "discover.body",
-  });
-}
-
-export default async function DiscoverPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string; tab?: string }>;
-}) {
-  const { q, tab } = await searchParams;
-  return <DiscoverIndexView initialQuery={q ?? ""} initialTab={isDiscoverTab(tab) ? tab : "trending"} />;
+export default async function DiscoverPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { urlLocale } = localeFromParams((await params).locale);
+  redirect(`/${urlLocale}`);
 }

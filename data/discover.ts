@@ -1,6 +1,7 @@
 import ingestedStories from "./discover/ingested.json";
 import { appSearchText } from "./apps";
 import type { AppSlug, Difficulty, Schedule } from "./types";
+import { storyMatchesTopic, type TopicSlug } from "./topics";
 import { getUseCase } from "./use-cases";
 
 export const discoverCategorySlugs = [
@@ -1227,7 +1228,7 @@ export function getRelatedDiscoverStories(story: DiscoverStory, limit = 3) {
 export type DiscoverFilters = {
   query?: string;
   tab?: DiscoverTab;
-  category?: DiscoverCategorySlug | "all";
+  category?: TopicSlug | DiscoverCategorySlug | "all";
   outcome?: OutcomeSlug | "all";
   app?: AppSlug | "all";
 };
@@ -1269,7 +1270,7 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   const outcome = filters.outcome;
   const app = filters.app;
   if (category && category !== "all") {
-    next = next.filter((item) => item.category === category);
+    next = next.filter((item) => storyMatchesTopic(item, category as TopicSlug));
   }
   if (outcome && outcome !== "all") {
     next = next.filter((item) => item.outcomes.includes(outcome));
@@ -1297,6 +1298,10 @@ export function searchDiscoverStories(query: string, limit = 5) {
 
 export function getDiscoverStoriesByApp(app: AppSlug) {
   return discoverStories.filter((item) => item.apps.includes(app));
+}
+
+export function storiesForTopic(slug: TopicSlug) {
+  return discoverStories.filter((story) => storyMatchesTopic(story, slug));
 }
 
 export function getDiscoverStoryForUseCase(slug: string) {

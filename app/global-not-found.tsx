@@ -32,10 +32,10 @@ export default function GlobalNotFound() {
           <h1 className="text-3xl font-medium tracking-tight text-ink">Page not found</h1>
           <p className="mt-3 text-mute">That URL is not in the library.</p>
           <Link
-            href="/en/use-cases"
+            href="/en"
             className="accent-gradient mt-8 inline-flex h-11 items-center rounded-[10px] px-5 text-sm font-medium text-inverse"
           >
-            Browse use cases
+            Browse posts
           </Link>
         </div>
       </body>

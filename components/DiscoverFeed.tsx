@@ -7,29 +7,18 @@ import { LocaleLink } from "@/components/LocaleLink";
 import { NamedIcon } from "@/components/icons";
 import { appsBySlug, popularIntegrationSlugs } from "@/data/apps";
 import {
-  discoverCategorySlugs,
   discoverTabs,
   filterDiscoverStories,
   outcomeSlugs,
-  type DiscoverCategorySlug,
   type DiscoverTab,
   type OutcomeSlug,
 } from "@/data/discover";
+import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
 import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
 const mobileTabs: DiscoverTab[] = ["trending", "latest", "official"];
-
-const categoryKeys: Record<DiscoverCategorySlug, string> = {
-  sales: "discover.catSales",
-  marketing: "discover.catMarketing",
-  research: "discover.catResearch",
-  content: "discover.catContent",
-  coding: "discover.catCoding",
-  operations: "discover.catOperations",
-  personal: "discover.catPersonal",
-};
 
 const outcomeKeys: Record<OutcomeSlug, string> = {
   "make-money": "discover.outcomeMakeMoney",
@@ -64,8 +53,8 @@ const PAGE_SIZE = 12;
 export type DiscoverFilterState = {
   tab: DiscoverTab;
   setTab: (tab: DiscoverTab) => void;
-  category: DiscoverCategorySlug | "all";
-  setCategory: (category: DiscoverCategorySlug | "all") => void;
+  category: TopicSlug | "all";
+  setCategory: (category: TopicSlug | "all") => void;
   outcome: OutcomeSlug | "all";
   setOutcome: (outcome: OutcomeSlug | "all") => void;
   app: AppSlug | "all";
@@ -74,7 +63,7 @@ export type DiscoverFilterState = {
 
 export function useDiscoverFilterState(initialTab: DiscoverTab = "trending"): DiscoverFilterState {
   const [tab, setTab] = useState<DiscoverTab>(initialTab);
-  const [category, setCategory] = useState<DiscoverCategorySlug | "all">("all");
+  const [category, setCategory] = useState<TopicSlug | "all">("all");
   const [outcome, setOutcome] = useState<OutcomeSlug | "all">("all");
   const [app, setApp] = useState<AppSlug | "all">("all");
   return { tab, setTab, category, setCategory, outcome, setOutcome, app, setApp };
@@ -140,12 +129,12 @@ export function DiscoverFilters({
 
       <div className="mt-4 hidden gap-2 overflow-x-auto pb-1 md:flex">
         <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
-        {discoverCategorySlugs.map((item) => (
+        {topicSlugs.map((item) => (
           <Chip
             key={item}
             active={category === item}
             onClick={() => setCategory(item)}
-            label={t(categoryKeys[item])}
+            label={t(topicMessageKey(item))}
           />
         ))}
       </div>
@@ -182,12 +171,12 @@ export function DiscoverFilters({
             onClick={() => setTab("tested")}
           />
           <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
-          {discoverCategorySlugs.map((item) => (
+          {topicSlugs.map((item) => (
             <Chip
               key={item}
               active={category === item}
               onClick={() => setCategory(item)}
-              label={t(categoryKeys[item])}
+              label={t(topicMessageKey(item))}
             />
           ))}
         </div>

@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { IntegrationDetailView } from "@/components/IntegrationDetailView";
 import { apps, appsBySlug } from "@/data/apps";
 import { getDiscoverStoriesByApp } from "@/data/discover";
-import { getUseCasesByApp } from "@/data/use-cases";
 import { localizeApp } from "@/lib/i18n";
 import { localeFromParams } from "@/lib/i18n/paths";
 import { pageMeta, translateMeta } from "@/lib/seo";
@@ -37,11 +36,5 @@ export default async function IntegrationPage({
   const { slug } = await params;
   const app = appsBySlug[slug as keyof typeof appsBySlug];
   if (!app) notFound();
-  return (
-    <IntegrationDetailView
-      app={app}
-      stories={getDiscoverStoriesByApp(app.slug)}
-      items={getUseCasesByApp(app.slug)}
-    />
-  );
+  return <IntegrationDetailView app={app} stories={getDiscoverStoriesByApp(app.slug)} />;
 }

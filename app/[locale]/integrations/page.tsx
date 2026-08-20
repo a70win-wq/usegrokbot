@@ -2,7 +2,7 @@
 
 import { AppCard } from "@/components/AppCard";
 import { apps } from "@/data/apps";
-import { getUseCasesByApp } from "@/data/use-cases";
+import { getDiscoverStoriesByApp } from "@/data/discover";
 import { localizeApp, useI18n } from "@/lib/i18n";
 
 export default function IntegrationsPage() {
@@ -16,7 +16,7 @@ export default function IntegrationsPage() {
       <p className="mt-3 max-w-2xl text-base text-mute">{t("pages.integrationsBody")}</p>
       <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {apps.map((app) => (
-          <AppCard key={app.slug} app={localizeApp(app, locale)} count={getUseCasesByApp(app.slug).length} />
+          <AppCard key={app.slug} app={localizeApp(app, locale)} count={getDiscoverStoriesByApp(app.slug).length} />
         ))}
       </div>
     </div>

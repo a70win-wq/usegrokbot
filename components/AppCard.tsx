@@ -18,7 +18,7 @@ export function AppCard({ app, count }: { app: App; count: number }) {
       </div>
       <div>
         <div className="text-sm font-medium text-ink">{app.name}</div>
-        <div className="text-[12px] text-faint">{t("count.workflows", { n: count })}</div>
+        <div className="text-[12px] text-faint">{t("count.posts", { n: count })}</div>
       </div>
     </LocaleLink>
   );

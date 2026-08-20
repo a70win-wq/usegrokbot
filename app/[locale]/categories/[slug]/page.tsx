@@ -1,13 +1,12 @@
 import { notFound } from "next/navigation";
 import { CategoryDetailView } from "@/components/CategoryDetailView";
-import { categories, categoriesBySlug } from "@/data/categories";
-import { getUseCasesByCategory } from "@/data/use-cases";
-import { localizeCategory } from "@/lib/i18n";
+import { storiesForTopic } from "@/data/discover";
+import { isTopicSlug, topicDescription, topicMessageKey, topics, topicsBySlug } from "@/data/topics";
 import { localeFromParams } from "@/lib/i18n/paths";
 import { pageMeta, translateMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
-  return categories.map((item) => ({ slug: item.slug }));
+  return topics.map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({
@@ -16,14 +15,14 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale: raw, slug } = await params;
-  const { locale, urlLocale } = localeFromParams(raw);
-  const category = categoriesBySlug[slug as keyof typeof categoriesBySlug];
-  if (!category) return {};
-  const item = localizeCategory(category, locale);
+  const { urlLocale, locale } = localeFromParams(raw);
+  if (!isTopicSlug(slug)) return {};
+  const topic = topicsBySlug[slug];
+  const name = translateMeta(urlLocale, topicMessageKey(slug));
   return pageMeta({
-    title: translateMeta(urlLocale, "pages.categoryHeading", { name: item.name }),
-    description: item.description,
-    path: `/categories/${category.slug}`,
+    title: translateMeta(urlLocale, "pages.categoryHeading", { name }),
+    description: topicDescription(topic, locale),
+    path: `/categories/${topic.slug}`,
     urlLocale,
   });
 }
@@ -34,7 +33,6 @@ export default async function CategoryPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { slug } = await params;
-  const category = categoriesBySlug[slug as keyof typeof categoriesBySlug];
-  if (!category) notFound();
-  return <CategoryDetailView category={category} items={getUseCasesByCategory(category.slug)} />;
+  if (!isTopicSlug(slug)) notFound();
+  return <CategoryDetailView topic={topicsBySlug[slug]} stories={storiesForTopic(slug)} />;
 }

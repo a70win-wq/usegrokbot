@@ -13,15 +13,12 @@ import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
 import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
-import { useSaved } from "./saved";
 
 export function Header({ stars }: { stars?: number | null }) {
   const pathname = usePathname();
   const path = stripLocalePrefix(pathname);
-  const { slugs } = useSaved();
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const [open, setOpen] = useState(false);
-  const communityLabel = locale === "zh-Hant" ? "社群" : locale === "zh-Hans" ? "社区" : "Community";
 
   const nav = [
     {
@@ -29,13 +26,11 @@ export function Header({ stars }: { stars?: number | null }) {
       label: t("nav.discover"),
       match: (current: string) => current === "/" || current.startsWith("/discover"),
     },
-    { href: "/use-cases", label: t("nav.workflows") },
     {
-      href: "/integrations",
-      label: t("nav.integrations"),
-      match: (current: string) => current.startsWith("/integrations") || current.startsWith("/apps"),
+      href: "/categories",
+      label: t("nav.categories"),
+      match: (current: string) => current.startsWith("/categories"),
     },
-    { href: "/community", label: communityLabel },
     { href: "/submit", label: t("nav.submitShort") },
     { href: "/learn/what-is-grok-bot", label: t("nav.about"), match: (current: string) => current.startsWith("/learn") },
   ];
@@ -101,10 +96,6 @@ export function Header({ stars }: { stars?: number | null }) {
                 {item.label}
               </LocaleLink>
             ))}
-            <LocaleLink href="/saved" className="rounded-lg px-3 py-3 text-sm text-ink" onClick={() => setOpen(false)}>
-              {t("nav.saved")}
-              {slugs.length > 0 ? <span className="ml-2 font-mono text-[11px] text-faint">{slugs.length}</span> : null}
-            </LocaleLink>
             <div className="px-3 py-3">
               <GetGrokBot variant="link" />
             </div>
@@ -144,7 +135,7 @@ function HeaderSearch() {
       </button>
       {open ? (
         <div className="absolute top-[calc(100%+8px)] right-0 z-50 w-[min(calc(100vw-2rem),20rem)]">
-          <SearchBar variant="inline" destination="discover" autoFocus />
+          <SearchBar variant="inline" autoFocus />
         </div>
       ) : null}
     </div>

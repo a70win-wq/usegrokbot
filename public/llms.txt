@@ -1,6 +1,6 @@
 # UseGrokBot
 
-> The Grok Bot Discovery Hub. Real workflows from X and official examples, then copy the setup yourself.
+> Real public Grok Bot posts from X, grouped so you can see how people are actually using it.
 
 Site: https://usegrokbot.com
 Locales: /en /zh-hk /zh-cn
@@ -8,28 +8,18 @@ Locales: /en /zh-hk /zh-cn
 ## Start here
 
 - https://usegrokbot.com/en
-- https://usegrokbot.com/en/discover
-- https://usegrokbot.com/en/discover/clear-email-elon
-- https://usegrokbot.com/en/discover/week-of-hacks-nate-herk
-- https://usegrokbot.com/en/discover/household-bots-blake-king
-- https://usegrokbot.com/en/use-cases
+- https://usegrokbot.com/en/categories
+- https://usegrokbot.com/en/categories/email
 - https://usegrokbot.com/en/learn/what-is-grok-bot
 - https://usegrokbot.com/sitemap.xml
 
-## Priority use cases
-
-- https://usegrokbot.com/en/use-cases/lead-researcher
-- https://usegrokbot.com/en/use-cases/competitor-monitor
-- https://usegrokbot.com/en/use-cases/daily-ai-news-brief
-- https://usegrokbot.com/en/use-cases/inbox-organizer
-- https://usegrokbot.com/en/use-cases/reddit-thread-scout
-- https://usegrokbot.com/en/use-cases/travel-concierge
-- https://usegrokbot.com/en/use-cases/youtube-comment-desk
-- https://usegrokbot.com/en/use-cases/x-viral-scout
-- https://usegrokbot.com/en/use-cases/monday-marketing-report
-
 ## Categories
 
+- https://usegrokbot.com/en/categories/email
 - https://usegrokbot.com/en/categories/sales
 - https://usegrokbot.com/en/categories/marketing
 - https://usegrokbot.com/en/categories/research
+- https://usegrokbot.com/en/categories/content
+- https://usegrokbot.com/en/categories/coding
+- https://usegrokbot.com/en/categories/operations
+- https://usegrokbot.com/en/categories/personal
