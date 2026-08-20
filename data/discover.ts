@@ -87,6 +87,9 @@ const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const GERGELY_REFUNDS = "https://x.com/GergelyOrosz/status/2090085668768694562";
 const SAWYER_MOWER = "https://x.com/SawyerMerritt/status/2090179852171174211";
 const LENNY_LENNYBOT = "https://x.com/lennysan/status/2090177314630029679";
+const DJ_TAXES = "https://x.com/congressdj/status/2090093942079447451";
+const YUKAI_SPAM = "https://x.com/yukaichou/status/2090288085125013553";
+const RAY_CTO = "https://x.com/RayFernando1337/status/2090195841822998888";
 const GAVIN_PODCAST = "https://x.com/GavinSBaker/status/2089379355692527813";
 const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
 const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
@@ -229,6 +232,98 @@ const curatedStories: DiscoverStory[] = [
     sourceLabel: "Rahul on X",
     trending: true,
     featured: true,
+  },
+  {
+    slug: "taxes-japan-congressdj",
+    title: "Taxes, Then Japan Tickets",
+    headline:
+      "DJ handed Grok Bot 40,000 emails — it did his taxes and found first-class Japan tickets; Elon said try @Grok @Bot",
+    whatTheyDid:
+      "On 19 Aug 2026 DJ (@congressdj) wrote he is not a coder and barely uses AI beyond a super-Google. He connected Grok Bot; it read 40,000 emails. He asked it to do his taxes — it found the docs in email and did them. He asked it to find first-class award tickets to Japan. It logged into his airline accounts (with permission) and found 3 first-class tickets for 60K points. He stopped it before booking because he was not sure of the dates. He also stood up agents for an hourly political update, Gmail cleanup, taxes, and a check-with-me rule on deletes. On 20 Aug 2026 Elon quote-tweeted: “Try @Grok @Bot.”",
+    howItWorks:
+      "A named non-engineer showing live inbox, tax docs, and airline logins. We keep DJ’s permalink. We did not re-run his taxes or book the tickets.",
+    whyUseful:
+      "Taxes and award tickets are jobs people already dread. This is the public case from someone who does not live in CRM.",
+    whyItMatters:
+      "Elon pointed at this one. The work is DJ’s; the heat is Elon’s. Both stay attributed. Community; we did not mark it tested.",
+    whoShouldTry: ["Non-engineers", "Anyone dreading taxes", "People sitting on airline points"],
+    usefulFor: "Personal / Operations",
+    quote: "It found all the docs needed in my email and did my taxes.",
+    result: "40,000 emails · taxes · 3 first-class Japan tickets found",
+    category: "personal",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["gmail", "browser"],
+    difficulty: "easy",
+    schedule: "always-on",
+    source: "community",
+    authorName: "DJ",
+    handle: "congressdj",
+    publishedAt: "2026-08-19",
+    xPostUrl: DJ_TAXES,
+    sourceUrl: DJ_TAXES,
+    sourceLabel: "DJ on X",
+    trending: true,
+  },
+  {
+    slug: "spam-slack-yu-kai-chou",
+    title: "150,000 Junk Emails",
+    headline:
+      "Yu-kai Chou had Grok Bot clean 150,000 junk emails and watch 5 inboxes plus 6 Slack servers — Elon said try Grok @Bot",
+    whatTheyDid:
+      "On 20 Aug 2026 Yu-kai Chou (@yukaichou) wrote he had started to try Grok Bot. It cleaned up all his 150,000 junk emails and unsubscribed the mail he never read. It informs him of any message from his 5 email addresses and 6 Slack servers that needs his attention, and keeps him organized. The same morning Elon quote-tweeted: “Try Grok @Bot and Build.”",
+    howItWorks:
+      "A named person showing a live inbox purge plus multi-inbox and Slack watch. We keep Yu-kai’s permalink. We did not re-run the 150,000-email pass.",
+    whyUseful:
+      "Unsubscribe-and-watch is the job people already understand if five inboxes and six Slacks are the workday.",
+    whyItMatters:
+      "Elon pointed at this one the same morning. The work is Yu-kai’s; the heat is Elon’s. Community; we did not mark it tested.",
+    whoShouldTry: ["Anyone with a wrecked inbox", "People living in Slack", "Operators"],
+    usefulFor: "Operations / Inbox",
+    quote: "It cleaned up all my 150,000 junk emails and unsubscribed to all the emails I never read.",
+    result: "150,000 junk emails · 5 inboxes · 6 Slack servers",
+    category: "operations",
+    outcomes: ["save-time", "automate-work"],
+    apps: ["gmail", "slack"],
+    difficulty: "easy",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Yu-kai Chou",
+    handle: "yukaichou",
+    publishedAt: "2026-08-20",
+    xPostUrl: YUKAI_SPAM,
+    sourceUrl: YUKAI_SPAM,
+    sourceLabel: "Yu-kai Chou on X",
+    relatedUseCase: "inbox-organizer",
+    trending: true,
+  },
+  {
+    slug: "repo-cto-ray-fernando",
+    title: "Make the Bot the CTO",
+    headline: "Ray Fernando made a Grok Bot the boss of his repo — it recruited more Bots, two prompts plus pstack",
+    whatTheyDid:
+      "On 19 Aug 2026 Ray Fernando (@RayFernando1337) posted “Turn Grok Bot Into Your CTO.” He wrote he was the bottleneck, so he made a Grok Bot the boss of his repo. From there it recruited more Grok Bots. He says all of this with two prompts plus pstack, and warns the workflow can give you “AI Psychosis.”",
+    howItWorks:
+      "A named engineer published the short recipe and a longer article. We keep Ray’s permalink. We did not re-run his repo boss.",
+    whyUseful:
+      "If you are the middleman between a repo and a pile of chores, this is the public case for making one Bot the boss.",
+    whyItMatters: "High-attention community coding case this week. Community; we did not mark it tested.",
+    whoShouldTry: ["Builders", "Solo engineers", "Anyone who is the bottleneck on their own repo"],
+    usefulFor: "Builders / Engineering",
+    quote: "I was the bottleneck. So I made a Grok Bot the boss of my repo.",
+    result: "Repo boss · two prompts + pstack",
+    category: "coding",
+    outcomes: ["build-software", "automate-work"],
+    apps: ["github", "browser"],
+    difficulty: "advanced",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Ray Fernando",
+    handle: "RayFernando1337",
+    publishedAt: "2026-08-19",
+    xPostUrl: RAY_CTO,
+    sourceUrl: RAY_CTO,
+    sourceLabel: "Ray Fernando on X",
+    trending: true,
   },
   {
     slug: "podcast-summarizer-gavin-baker",
