@@ -1,6 +1,6 @@
 "use client";
 
-import { Download } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
@@ -12,14 +12,14 @@ export function GetGrokBot({
   className?: string;
   variant?: "quiet" | "accent" | "link";
 }) {
-  const { t } = useI18n();
+  const { locale } = useI18n();
+  const copy = openGrokCopy(locale);
 
   return (
     <a
       href={site.xaiBotUrl}
-      target="_blank"
-      rel="noreferrer"
-      aria-label={t("official.downloadAria")}
+      aria-label={copy.aria}
+      title={copy.aria}
       className={cn(
         variant === "accent" &&
           "accent-gradient spring-press inline-flex h-11 items-center gap-2 rounded-[10px] px-5 text-sm font-medium",
@@ -29,8 +29,27 @@ export function GetGrokBot({
         className,
       )}
     >
-      {variant === "link" ? null : <Download className="size-3.5" strokeWidth={1.75} />}
-      <span className={variant === "quiet" ? "hidden sm:inline" : undefined}>{t("official.download")}</span>
+      {variant === "link" ? null : <ExternalLink className="size-3.5" strokeWidth={1.75} />}
+      <span className={variant === "quiet" ? "hidden sm:inline" : undefined}>{copy.label}</span>
     </a>
   );
+}
+
+function openGrokCopy(locale: string) {
+  if (locale === "zh-Hant") {
+    return {
+      label: "打開 Grok",
+      aria: "打開 Grok；手機已安裝 Grok app 時會優先用 app 開啟",
+    };
+  }
+  if (locale === "zh-Hans") {
+    return {
+      label: "打开 Grok",
+      aria: "打开 Grok；手机已安装 Grok app 时会优先用 app 打开",
+    };
+  }
+  return {
+    label: "Open Grok",
+    aria: "Open Grok; on mobile, the installed Grok app can handle this link",
+  };
 }
