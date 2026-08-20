@@ -28,17 +28,18 @@ declare global {
 const SCRIPT_ID = "usegrokbot-canvas-confetti";
 const SCRIPT_SRC = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js";
 
-export async function celebrate(kind: "copy" | "submit" = "copy") {
+export async function celebrate(kind: "copy" | "submit" | "rare" = "copy") {
   if (typeof window === "undefined") return;
   if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return;
 
   const confetti = await loadConfetti();
   if (!confetti) return;
 
-  const scalar = kind === "submit" ? 1.05 : 0.9;
+  const scalar = kind === "rare" ? 1.15 : kind === "submit" ? 1.05 : 0.9;
   const robot = confetti.shapeFromText?.({ text: "🤖", scalar });
-  const star = confetti.shapeFromText?.({ text: "⭐", scalar });
-  const shapes = [robot, star].filter(Boolean) as ConfettiShape[];
+  const star = confetti.shapeFromText?.({ text: kind === "rare" ? "✨" : "⭐", scalar });
+  const crown = kind === "rare" ? confetti.shapeFromText?.({ text: "👑", scalar }) : undefined;
+  const shapes = [robot, star, crown].filter(Boolean) as ConfettiShape[];
   const common: ConfettiOptions = {
     disableForReducedMotion: true,
     scalar,
@@ -46,6 +47,26 @@ export async function celebrate(kind: "copy" | "submit" = "copy") {
     ticks: 130,
     shapes: shapes.length ? shapes : undefined,
   };
+
+  if (kind === "rare") {
+    confetti({
+      ...common,
+      particleCount: 54,
+      spread: 82,
+      startVelocity: 32,
+      origin: { x: 0.5, y: 0.62 },
+    });
+    window.setTimeout(() => {
+      confetti({
+        ...common,
+        particleCount: 28,
+        spread: 56,
+        startVelocity: 25,
+        origin: { x: 0.5, y: 0.7 },
+      });
+    }, 160);
+    return;
+  }
 
   if (kind === "submit") {
     confetti({

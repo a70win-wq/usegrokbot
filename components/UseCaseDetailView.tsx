@@ -1,23 +1,23 @@
 "use client";
 
-import { LocaleLink } from "@/components/LocaleLink";
+import { AppPills } from "@/components/AppPills";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CapabilityRow } from "@/components/CapabilityRow";
 import { CopyButton } from "@/components/CopyButton";
-import { CustomizePrompt } from "@/components/CustomizePrompt";
 import { ExampleOutput } from "@/components/ExampleOutput";
 import { JsonLd } from "@/components/JsonLd";
+import { LocaleLink } from "@/components/LocaleLink";
 import { PromptBox } from "@/components/PromptBox";
 import { SaveButton } from "@/components/SaveButton";
-import { UseCaseCard } from "@/components/UseCaseCard";
-import { WorkflowSteps } from "@/components/WorkflowSteps";
-import { WorkflowIntegrationMap } from "@/components/WorkflowIntegrationMap";
-import { AppPills } from "@/components/AppPills";
-import { CapabilityRow } from "@/components/CapabilityRow";
 import { StatusBadge } from "@/components/StatusBadge";
+import { UseCaseCard } from "@/components/UseCaseCard";
+import { WorkflowIntegrationMap } from "@/components/WorkflowIntegrationMap";
+import { WorkflowSteps } from "@/components/WorkflowSteps";
 import { getDiscoverStoryForUseCase } from "@/data/discover";
 import type { UseCase } from "@/data/types";
 import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
 export function UseCaseDetailView({
   useCase,
@@ -33,6 +33,7 @@ export function UseCaseDetailView({
   const trust = verificationFor(useCase.slug);
   const localeTag = locale === "en" ? "en" : locale;
   const inspired = getDiscoverStoryForUseCase(useCase.slug);
+  const quick = promptFirstCopy(locale);
 
   return (
     <article className="mx-auto max-w-[800px] px-5 py-10 md:px-8 md:py-16">
@@ -78,62 +79,92 @@ export function UseCaseDetailView({
       </div>
 
       <h1 className="mt-4 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
-      <p className="mt-4 text-lg leading-8 text-mute">{item.description}</p>
 
-      <div className="mt-6 flex flex-wrap gap-2 text-[12px] text-mute">
-        {[
-          t(`difficulty.${useCase.difficulty}`),
-          t("meta.setup", { n: setupMins }),
-          t(`schedule.${useCase.schedule}`),
-        ].map((chip) => (
-          <span key={chip} className="rounded-full border border-line px-2.5 py-1">
-            {chip}
-          </span>
-        ))}
-      </div>
-      <div className="mt-3">
-        <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
-          {t("detail.integrations")}
-        </p>
-        <AppPills useCase={useCase} />
-        <WorkflowIntegrationMap useCase={useCase} label={t("detail.integrations")} />
-      </div>
-      {inspired ? (
-        <p className="mt-4 text-[13px] text-mute">
-          {inspired.handle
-            ? t("detail.inspiredByHandle", { handle: inspired.handle })
-            : t("detail.inspiredByName", { name: inspired.authorName })}
-        </p>
-      ) : null}
-      <div className="mt-4">
-        <CapabilityRow
-          useCase={useCase}
-          labels={{
-            browser: t("trust.needsBrowser"),
-            login: t("trust.login"),
-            loginYes: t("trust.loginYes"),
-            loginMaybe: t("trust.loginMaybe"),
-            loginNo: t("trust.loginNo"),
-            routine: t("trust.routine"),
-            approval: t("trust.approval"),
-            approvalRecommended: t("trust.approvalRecommended"),
-            approvalOptional: t("trust.approvalOptional"),
-          }}
-        />
-      </div>
-      {trust.source ? (
-        <p className="mt-4 text-[13px] text-mute">
-          {t("trust.source")}{" "}
-          <a href={trust.source.url} className="text-accent" target="_blank" rel="noreferrer">
-            {trust.source.label}
+      <section className="mt-7">
+        <div className="mb-3 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-[11px] font-medium tracking-[0.11em] text-accent uppercase">{quick.kicker}</p>
+            <p className="mt-1 text-[15px] font-medium text-ink">{quick.lead}</p>
+          </div>
+          <span className="hidden shrink-0 text-[12px] text-faint sm:inline">{quick.noSetup}</span>
+        </div>
+
+        <PromptBox prompt={useCase.prompt} />
+
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <CopyButton text={useCase.prompt} label={quick.copy} variant="solid" />
+          <a
+            href={site.xaiBotUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="spring-press inline-flex h-11 items-center rounded-[10px] border border-line px-4 text-sm font-medium text-ink hover:border-line-strong"
+          >
+            {quick.open} ↗
           </a>
-        </p>
-      ) : null}
+          <SaveButton slug={useCase.slug} title={item.title} withLabel className="h-11 px-3" />
+        </div>
+        <p className="mt-3 text-[12px] text-faint">{quick.afterCopy}</p>
+      </section>
 
-      <div className="mt-8 flex flex-wrap items-center gap-3">
-        <CopyButton text={useCase.prompt} variant="solid" />
-        <SaveButton slug={useCase.slug} title={item.title} withLabel className="h-11 px-3" />
-      </div>
+      <section className="mt-14 border-t border-line pt-12">
+        <p className="text-[11px] font-medium tracking-[0.11em] text-faint uppercase">{quick.explainKicker}</p>
+        <h2 className="mt-2 text-2xl font-medium tracking-tight text-ink">{quick.explainTitle}</h2>
+        <p className="mt-4 text-[17px] leading-7 text-mute">{item.description}</p>
+
+        <div className="mt-6 flex flex-wrap gap-2 text-[12px] text-mute">
+          {[
+            t(`difficulty.${useCase.difficulty}`),
+            t("meta.setup", { n: setupMins }),
+            t(`schedule.${useCase.schedule}`),
+          ].map((chip) => (
+            <span key={chip} className="rounded-full border border-line px-2.5 py-1">
+              {chip}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-6">
+          <p className="mb-1.5 text-[11px] font-medium tracking-[0.08em] text-faint uppercase">
+            {t("detail.integrations")}
+          </p>
+          <AppPills useCase={useCase} />
+          <WorkflowIntegrationMap useCase={useCase} label={t("detail.integrations")} />
+        </div>
+
+        {inspired ? (
+          <p className="mt-5 text-[13px] text-mute">
+            {inspired.handle
+              ? t("detail.inspiredByHandle", { handle: inspired.handle })
+              : t("detail.inspiredByName", { name: inspired.authorName })}
+          </p>
+        ) : null}
+
+        <div className="mt-5">
+          <CapabilityRow
+            useCase={useCase}
+            labels={{
+              browser: t("trust.needsBrowser"),
+              login: t("trust.login"),
+              loginYes: t("trust.loginYes"),
+              loginMaybe: t("trust.loginMaybe"),
+              loginNo: t("trust.loginNo"),
+              routine: t("trust.routine"),
+              approval: t("trust.approval"),
+              approvalRecommended: t("trust.approvalRecommended"),
+              approvalOptional: t("trust.approvalOptional"),
+            }}
+          />
+        </div>
+
+        {trust.source ? (
+          <p className="mt-5 text-[13px] text-mute">
+            {t("trust.source")}{" "}
+            <a href={trust.source.url} className="text-accent" target="_blank" rel="noreferrer">
+              {trust.source.label}
+            </a>
+          </p>
+        ) : null}
+      </section>
 
       <section className="mt-16">
         <h2 className="text-2xl font-medium tracking-tight text-ink">{t("detail.what")}</h2>
@@ -151,21 +182,6 @@ export function UseCaseDetailView({
             </li>
           ))}
         </ul>
-      </section>
-
-      <section className="mt-16">
-        <h2 className="text-2xl font-medium tracking-tight text-ink">{t("detail.copyPrompt")}</h2>
-        <div className="mt-6">
-          <PromptBox prompt={useCase.prompt} />
-        </div>
-      </section>
-
-      <section className="mt-16">
-        <h2 className="text-2xl font-medium tracking-tight text-ink">{t("detail.yours")}</h2>
-        <p className="mt-3 text-sm text-mute">{t("detail.yoursBody")}</p>
-        <div className="mt-6">
-          <CustomizePrompt useCase={useCase} />
-        </div>
       </section>
 
       <section className="mt-16">
@@ -192,4 +208,41 @@ export function UseCaseDetailView({
       </section>
     </article>
   );
+}
+
+function promptFirstCopy(locale: string) {
+  if (locale === "zh-Hant") {
+    return {
+      kicker: "即拎即用",
+      lead: "Copy 呢段提示詞，貼落 Grok Bot 就可以開始。",
+      noSetup: "唔使填資料 · 唔使先設定",
+      copy: "Copy 提示詞",
+      open: "Open Grok Bot",
+      afterCopy: "Copy → 貼去 Grok Bot → 用。想了解原理，再向下睇。",
+      explainKicker: "想知先睇",
+      explainTitle: "呢段提示詞會幫你做啲乜？",
+    };
+  }
+  if (locale === "zh-Hans") {
+    return {
+      kicker: "复制即用",
+      lead: "复制这段提示词，粘贴到 Grok Bot 就可以开始。",
+      noSetup: "不用填资料 · 不用先设置",
+      copy: "复制提示词",
+      open: "打开 Grok Bot",
+      afterCopy: "复制 → 粘贴到 Grok Bot → 使用。想了解原理，再往下看。",
+      explainKicker: "想了解再看",
+      explainTitle: "这段提示词会帮你做什么？",
+    };
+  }
+  return {
+    kicker: "COPY & RUN",
+    lead: "Copy this prompt, paste it into Grok Bot, and go.",
+    noSetup: "No form · No setup first",
+    copy: "Copy prompt",
+    open: "Open Grok Bot",
+    afterCopy: "Copy → paste into Grok Bot → use it. Read on only if you want the explanation.",
+    explainKicker: "OPTIONAL EXPLANATION",
+    explainTitle: "What will this prompt do for you?",
+  };
 }
