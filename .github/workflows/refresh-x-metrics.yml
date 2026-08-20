@@ -3,7 +3,8 @@ name: Refresh X view counts
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 2,14 * * *"
+    # 07:00 and 19:00 Hong Kong time
+    - cron: "0 23,11 * * *"
 
 permissions:
   contents: write
