@@ -10,6 +10,7 @@ import { PromptBox } from "@/components/PromptBox";
 import { SaveButton } from "@/components/SaveButton";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
+import { WorkflowIntegrationMap } from "@/components/WorkflowIntegrationMap";
 import { AppPills } from "@/components/AppPills";
 import { CapabilityRow } from "@/components/CapabilityRow";
 import { StatusBadge } from "@/components/StatusBadge";
@@ -95,6 +96,7 @@ export function UseCaseDetailView({
           {t("detail.integrations")}
         </p>
         <AppPills useCase={useCase} />
+        <WorkflowIntegrationMap useCase={useCase} label={t("detail.integrations")} />
       </div>
       {inspired ? (
         <p className="mt-4 text-[13px] text-mute">

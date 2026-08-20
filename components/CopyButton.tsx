@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Check, Copy } from "lucide-react";
+import { celebrate } from "@/lib/celebrate";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
@@ -11,6 +12,8 @@ type CopyButtonProps = {
   className?: string;
   variant?: "ghost" | "solid" | "inline";
 };
+
+const COPY_CELEBRATION_KEY = "usegrokbot:copy-celebrated";
 
 export function CopyButton({ text, label, className, variant = "ghost" }: CopyButtonProps) {
   const { t } = useI18n();
@@ -29,6 +32,14 @@ export function CopyButton({ text, label, className, variant = "ghost" }: CopyBu
       area.remove();
     }
     setCopied(true);
+    try {
+      if (!window.sessionStorage.getItem(COPY_CELEBRATION_KEY)) {
+        window.sessionStorage.setItem(COPY_CELEBRATION_KEY, "1");
+        void celebrate("copy");
+      }
+    } catch {
+      // Copying still works if sessionStorage is unavailable.
+    }
     window.setTimeout(() => setCopied(false), 1400);
   }
 
