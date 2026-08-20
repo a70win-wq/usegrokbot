@@ -7,6 +7,8 @@ labels: ["use-case"]
 
 ## X post URL
 
+One public X post URL, or several URLs (one per line). Max 15.
+
 https://x.com/
 
 ## Prompt

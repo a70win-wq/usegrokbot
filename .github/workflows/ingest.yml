@@ -7,7 +7,10 @@ on:
     inputs:
       url:
         description: Public X post URL
-        required: true
+        required: false
+      urls:
+        description: Extra X post URLs, one per line
+        required: false
 
 permissions:
   contents: write
@@ -16,7 +19,7 @@ permissions:
 
 jobs:
   ingest:
-    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'Ingest use case:') }}
+    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'Ingest use case:') || startsWith(github.event.issue.title, 'Ingest posts:') || startsWith(github.event.issue.title, 'Ingest batch:') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,10 +35,15 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
           INGEST_URL: ${{ github.event.inputs.url }}
+          INGEST_URLS: ${{ github.event.inputs.urls }}
       - if: ${{ failure() && github.event.issue.number }}
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            const extra = fs.existsSync('ingest-results.md')
+              ? `\n\n${fs.readFileSync('ingest-results.md', 'utf8')}`
+              : '';
             await github.rest.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -46,12 +54,22 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: 'Ingest failed. This issue is in the error queue.',
+              body: `Ingest failed. This issue is in the error queue.${extra}`,
             });
       - if: ${{ success() && github.event.issue.number }}
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            const body = fs.existsSync('ingest-results.md')
+              ? fs.readFileSync('ingest-results.md', 'utf8')
+              : 'Ingest finished.';
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
             await github.rest.issues.update({
               owner: context.repo.owner,
               repo: context.repo.repo,

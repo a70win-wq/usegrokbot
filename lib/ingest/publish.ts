@@ -117,6 +117,21 @@ export async function publishStory(story: DiscoverStory): Promise<{ prUrl: strin
   }
 }
 
+export async function queueIngestIssue(urls: string[]) {
+  const { owner, name } = repo();
+  const unique = [...new Set(urls)].slice(0, 15);
+  if (unique.length === 0) throw new Error("no_urls");
+  const issue = await gh<{ html_url: string; number: number }>(`/repos/${owner}/${name}/issues`, {
+    method: "POST",
+    body: JSON.stringify({
+      title: "Ingest posts:",
+      labels: ["use-case"],
+      body: ["Queued by the UseGrokBot ingest API.", "", "## X post URLs", "", ...unique].join("\n"),
+    }),
+  });
+  return { issueUrl: issue.html_url, count: unique.length };
+}
+
 export async function fileIngestError(input: { url: string; code: string; reason: string }) {
   if (!canPublish()) return;
   const { owner, name } = repo();

@@ -26,3 +26,20 @@ export function parseXUrl(raw: string): ParsedXUrl | null {
 export function tweetIdFromUrl(url: string) {
   return parseXUrl(url)?.id;
 }
+
+const X_URL_RE = /https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[^\s<>"'`)\]|]+/gi;
+
+export function collectXUrls(text: string, limit = 15): string[] {
+  const found = new Map<string, string>();
+  for (const raw of text.match(X_URL_RE) ?? []) {
+    const parsed = parseXUrl(raw.replace(/[.,;:!?]+$/, ""));
+    if (!parsed || found.has(parsed.id)) continue;
+    found.set(parsed.id, parsed.url);
+    if (found.size >= limit) break;
+  }
+  return [...found.values()];
+}
+
+export function isIngestIssueTitle(title: string) {
+  return /^Ingest (use case|posts|batch):/i.test(title.trim());
+}
