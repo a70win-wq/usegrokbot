@@ -472,6 +472,19 @@ const hant: Record<string, DiscoverStoryI18n> = {
       "Hooked up Grok Bot to my customer support emails... and it can connect to Stripe, via API, for agentic operations, e.g. routine refunds.",
     result: "客服收件箱 · Stripe API 退款",
   },
+  "remote-mower-sawyer-merritt": {
+    title: "遠程開割草機",
+    headline: "Sawyer Merritt 設定 Grok Bot，遠程控制五十哩外的自動割草機械人",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Sawyer Merritt（@SawyerMerritt）寫他把 Grok Bot 設成可以遠程控制五十哩外的自動割草機械人。設定用了兩分鐘。他叫它開始割草，三秒後就動了。然後叫它自己回充電座。他話下一步會駁吸塵機，再專用一隻 Grok Bot 管所有自動機械人。附件截圖是 Engineer Bot 對話：已連 Navimow X450，再「Start mowing now」同「Go dock」。片段是 Navimow X450 地圖。",
+    howItWorks: "聊天入、割草機出。我們保留 Sawyer 原帖。沒有重跑那次開割或回座。",
+    whyUseful: "遠程開同回座就是人人都明的工：不是聊天摘要——係五十哩外的機器，叫它割，再叫它回家。",
+    whyItMatters: "即日社群例子：具名的人、在用的割草機、Engineer Bot 截圖。社群；沒有標已測試。",
+    whoShouldTry: ["有割草機械人的人", "出門了但草地仲要割的人", "想用一隻 Bot 管家用機械人的人"],
+    usefulFor: "個人 / 家庭",
+    quote: "I told it to start mowing and it started 3 seconds later. Then I had it dock itself.",
+    result: "遠程開割草 · 回座",
+  },
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
@@ -930,6 +943,19 @@ const hans: Record<string, DiscoverStoryI18n> = {
     quote:
       "Hooked up Grok Bot to my customer support emails... and it can connect to Stripe, via API, for agentic operations, e.g. routine refunds.",
     result: "客服收件箱 · Stripe API 退款",
+  },
+  "remote-mower-sawyer-merritt": {
+    title: "远程开割草机",
+    headline: "Sawyer Merritt 设置 Grok Bot，远程控制五十英里外的自动割草机器人",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Sawyer Merritt（@SawyerMerritt）写他把 Grok Bot 设成可以远程控制五十英里外的自动割草机器人。设置用了两分钟。他叫它开始割草，三秒后就动了。然后叫它自己回充电座。他说下一步会接吸尘器，再专用一只 Grok Bot 管所有自动机器人。附件截图是 Engineer Bot 对话：已连 Navimow X450，再「Start mowing now」和「Go dock」。片段是 Navimow X450 地图。",
+    howItWorks: "聊天进、割草机出。我们保留 Sawyer 原帖。没有重跑那次开割或回座。",
+    whyUseful: "远程开和回座就是人人都懂的工：不是聊天摘要——是五十英里外的机器，叫它割，再叫它回家。",
+    whyItMatters: "当日社区例子：具名的人、在用的割草机、Engineer Bot 截图。社区；没有标已测试。",
+    whoShouldTry: ["有割草机器人的人", "出门了但草地还要割的人", "想用一只 Bot 管家用机器人的人"],
+    usefulFor: "个人 / 家庭",
+    quote: "I told it to start mowing and it started 3 seconds later. Then I had it dock itself.",
+    result: "远程开割草 · 回座",
   },
 };
 
