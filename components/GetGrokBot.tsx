@@ -19,7 +19,7 @@ export function GetGrokBot({
 }) {
   const { locale } = useI18n();
   const copy = grokBotCopy(locale);
-  const [href, setHref] = useState(site.grokBotDesktopUrl);
+  const [href, setHref] = useState<string>(site.grokBotDesktopUrl);
   const [destination, setDestination] = useState<"desktop" | "ios">("desktop");
 
   useEffect(() => {
