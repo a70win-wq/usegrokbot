@@ -92,6 +92,7 @@ const MARIO_3D_GAME = "https://x.com/RoundtableSpace/status/2090117840091419126"
 const KUN_FIRSTMATE = "https://x.com/kunchenguid/status/2089792928092963234";
 const GERGELY_REFUNDS = "https://x.com/GergelyOrosz/status/2090085668768694562";
 const SAWYER_MOWER = "https://x.com/SawyerMerritt/status/2090179852171174211";
+const GAVIN_PODCAST = "https://x.com/GavinSBaker/status/2089379355692527813";
 const YUNTA_CALENDAR = "https://x.com/yunta_tsai/status/2087415205756391461";
 const YUNTA_MATH = "https://x.com/yunta_tsai/status/2088832993108590853";
 const YUNTA_PARENTS = "https://x.com/yunta_tsai/status/2089927285113803053";
@@ -233,6 +234,38 @@ const curatedStories: DiscoverStory[] = [
     sourceLabel: "Rahul on X",
     trending: true,
     featured: true,
+  },
+  {
+    slug: "podcast-summarizer-gavin-baker",
+    title: "Podcast Summarizer in 15 Seconds",
+    headline:
+      "Gavin Baker built a podcast summarizer in Grok Bot in about 15 seconds — and said it beat what he had",
+    whatTheyDid:
+      "On 17 Aug 2026 Gavin Baker (@GavinSBaker) wrote that @bot is another “Claude Code” moment for AI, and that his personal AI usage is up something like 100x. The concrete job: people had asked him how to build a podcast summarizer. In Grok Bot it took him about 15 seconds, and it was better than what he had before.",
+    howItWorks:
+      "This is a named investor showing a real first job, not a launch demo. We keep Gavin’s permalink. We did not re-run his summarizer.",
+    whyUseful:
+      "A daily podcast pile is the job investors and operators already have. This is the public case for handing it to a Bot instead of another custom tool.",
+    whyItMatters:
+      "One of the highest-attention community Grok Bot use-case posts this week. Community; we did not mark it tested.",
+    whoShouldTry: ["Investors", "Operators who listen more than they have time for", "Anyone who has been meaning to build a summarizer"],
+    usefulFor: "Research / Operators",
+    quote:
+      "And for everyone who reached out about how to build a “podcast summarizer” it took me about 15 seconds in Grok Bot and is better than what I had before.",
+    result: "Podcast summarizer · about 15 seconds",
+    category: "research",
+    outcomes: ["research", "save-time"],
+    apps: ["browser"],
+    difficulty: "easy",
+    schedule: "always-on",
+    source: "community",
+    authorName: "Gavin Baker",
+    handle: "GavinSBaker",
+    publishedAt: "2026-08-17",
+    xPostUrl: GAVIN_PODCAST,
+    sourceUrl: GAVIN_PODCAST,
+    sourceLabel: "Gavin Baker on X",
+    trending: true,
   },
   {
     slug: "support-refunds-gergely-orosz",
