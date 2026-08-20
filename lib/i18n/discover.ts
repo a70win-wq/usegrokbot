@@ -247,6 +247,20 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "You find the leads. Write the outreach. Make the images. Answer the replies. Count the week.",
     result: "六隻起步 Bot · 一人公司",
   },
+  "podcast-summarizer-gavin-baker": {
+    title: "十五秒做出 Podcast 摘要",
+    headline: "Gavin Baker 用大約十五秒在 Grok Bot 砌了 Podcast 摘要工具——話比舊那套更好",
+    whatTheyDid:
+      "2026 年 8 月 17 日，Gavin Baker（@GavinSBaker）寫 @bot 是 AI 的另一個 “Claude Code” moment，個人 AI 用量大概增加了 100 倍。具體的工：之前有人問他怎樣做 Podcast summarizer。在 Grok Bot 裡大約十五秒就做好，而且比他之前用的更好。",
+    howItWorks: "這是具名投資人交出的第一份真工，不是發布示範。我們保留 Gavin 原帖。沒有重跑他的摘要工具。",
+    whyUseful: "每天一堆 Podcast，是投資人和營運已經有的工。這就是公開例子：交給 Bot，而不是再砌一套自己的工具。",
+    whyItMatters: "這週最受注意的社群 Grok Bot 用例帖之一。社群；沒有標已測試。",
+    whoShouldTry: ["投資人", "聽的比時間多的營運", "一直想做摘要工具的人"],
+    usefulFor: "研究 / 營運",
+    quote:
+      "And for everyone who reached out about how to build a “podcast summarizer” it took me about 15 seconds in Grok Bot and is better than what I had before.",
+    result: "Podcast 摘要 · 大約十五秒",
+  },
   "clothes-resale-scotty-beam": {
     title: "賣掉未着過的衫",
     headline: "SCOTTY BEAM 寫 Cursor 同事把妹妹未着過的衫交給 Grok Bot",
@@ -718,6 +732,20 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "一人创始人 / 运营",
     quote: "You find the leads. Write the outreach. Make the images. Answer the replies. Count the week.",
     result: "六只起步 Bot · 一人公司",
+  },
+  "podcast-summarizer-gavin-baker": {
+    title: "十五秒做出 Podcast 摘要",
+    headline: "Gavin Baker 用大约十五秒在 Grok Bot 做了 Podcast 摘要工具——说比旧那套更好",
+    whatTheyDid:
+      "2026 年 8 月 17 日，Gavin Baker（@GavinSBaker）写 @bot 是 AI 的另一个 “Claude Code” moment，个人 AI 用量大概增加了 100 倍。具体的活：之前有人问他怎么做 Podcast summarizer。在 Grok Bot 里大约十五秒就做好，而且比他之前用的更好。",
+    howItWorks: "这是具名投资人交出的第一份真活，不是发布演示。我们保留 Gavin 原帖。没有重跑他的摘要工具。",
+    whyUseful: "每天一堆 Podcast，是投资人和运营已经有的活。这就是公开例子：交给 Bot，而不是再做一套自己的工具。",
+    whyItMatters: "这周最受注意的社区 Grok Bot 用例帖之一。社区；没有标已测试。",
+    whoShouldTry: ["投资人", "听的比时间多的运营", "一直想做摘要工具的人"],
+    usefulFor: "研究 / 运营",
+    quote:
+      "And for everyone who reached out about how to build a “podcast summarizer” it took me about 15 seconds in Grok Bot and is better than what I had before.",
+    result: "Podcast 摘要 · 大约十五秒",
   },
   "clothes-resale-scotty-beam": {
     title: "卖掉没穿过的衣服",
