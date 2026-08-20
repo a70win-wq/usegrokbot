@@ -4,7 +4,7 @@ import { displayApps } from "@/lib/capabilities";
 import { BotFace, botColorFor } from "./BotFace";
 import { NamedIcon } from "./icons";
 
-export function WorkflowIntegrationMap({ useCase }: { useCase: UseCase }) {
+export function WorkflowIntegrationMap({ useCase, label }: { useCase: UseCase; label: string }) {
   const apps = displayApps(useCase).slice(0, 6);
   if (apps.length < 2) return null;
 
@@ -12,10 +12,10 @@ export function WorkflowIntegrationMap({ useCase }: { useCase: UseCase }) {
     <div
       className="relative mt-4 h-[210px] overflow-hidden rounded-2xl border border-line bg-elevated"
       role="img"
-      aria-label="Animated map of apps connected through Grok Bot"
+      aria-label={`${label}: apps connected through Grok Bot`}
     >
       <div className="absolute inset-x-0 top-3 text-center text-[10px] font-medium tracking-[0.12em] text-faint uppercase">
-        Workflow map
+        {label}
       </div>
 
       <svg
