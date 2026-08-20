@@ -5,7 +5,6 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CapabilityRow } from "@/components/CapabilityRow";
 import { CopyButton } from "@/components/CopyButton";
 import { ExampleOutput } from "@/components/ExampleOutput";
-import { GetGrokBot } from "@/components/GetGrokBot";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { PromptBox } from "@/components/PromptBox";
@@ -18,6 +17,7 @@ import { getDiscoverStoryForUseCase } from "@/data/discover";
 import type { UseCase } from "@/data/types";
 import { formatVerifiedDate, verificationFor } from "@/data/verification";
 import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
+import { site } from "@/lib/site";
 
 export function UseCaseDetailView({
   useCase,
@@ -93,7 +93,14 @@ export function UseCaseDetailView({
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <CopyButton text={useCase.prompt} label={quick.copy} variant="solid" />
-          <GetGrokBot variant="quiet" className="h-11 px-3" />
+          <a
+            href={site.xaiBotUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="spring-press inline-flex h-11 items-center rounded-[10px] border border-line px-4 text-sm font-medium text-ink hover:border-line-strong"
+          >
+            {quick.open} ↗
+          </a>
           <SaveButton slug={useCase.slug} title={item.title} withLabel className="h-11 px-3" />
         </div>
         <p className="mt-3 text-[12px] text-faint">{quick.afterCopy}</p>
@@ -210,6 +217,7 @@ function promptFirstCopy(locale: string) {
       lead: "Copy 呢段提示詞，貼落 Grok Bot 就可以開始。",
       noSetup: "唔使填資料 · 唔使先設定",
       copy: "Copy 提示詞",
+      open: "Open Grok Bot",
       afterCopy: "Copy → 貼去 Grok Bot → 用。想了解原理，再向下睇。",
       explainKicker: "想知先睇",
       explainTitle: "呢段提示詞會幫你做啲乜？",
@@ -221,6 +229,7 @@ function promptFirstCopy(locale: string) {
       lead: "复制这段提示词，粘贴到 Grok Bot 就可以开始。",
       noSetup: "不用填资料 · 不用先设置",
       copy: "复制提示词",
+      open: "打开 Grok Bot",
       afterCopy: "复制 → 粘贴到 Grok Bot → 使用。想了解原理，再往下看。",
       explainKicker: "想了解再看",
       explainTitle: "这段提示词会帮你做什么？",
@@ -231,6 +240,7 @@ function promptFirstCopy(locale: string) {
     lead: "Copy this prompt, paste it into Grok Bot, and go.",
     noSetup: "No form · No setup first",
     copy: "Copy prompt",
+    open: "Open Grok Bot",
     afterCopy: "Copy → paste into Grok Bot → use it. Read on only if you want the explanation.",
     explainKicker: "OPTIONAL EXPLANATION",
     explainTitle: "What will this prompt do for you?",
