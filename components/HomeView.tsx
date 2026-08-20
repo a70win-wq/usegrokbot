@@ -65,9 +65,6 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <GetGrokBot variant="accent" />
               </div>
-              <p className="mt-4 text-[12px] text-faint">
-                {t("home.proof", { n: discoverStories.length })}
-              </p>
             </div>
             <HeroBot />
           </div>
