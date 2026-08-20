@@ -55,7 +55,6 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
               <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
                 {t("home.title")}
               </h1>
-              <p className="mt-5 max-w-xl text-[17px] leading-7 text-mute">{t("home.subtitle")}</p>
               <div className="mt-8">
                 <SearchBar
                   initialQuery={initialQuery}
