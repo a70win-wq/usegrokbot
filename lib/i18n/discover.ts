@@ -499,6 +499,22 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "I told it to start mowing and it started 3 seconds later. Then I had it dock itself.",
     result: "遠程開割草 · 回座",
   },
+  "lennybot-lenny-rachitsky": {
+    title: "Lennybot，他自己的檔案庫",
+    headline:
+      "Lenny Rachitsky 發了用 500 多集 podcast 同電子報訓練的 Grok Bot——當產品、策略、增長、事業顧問",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Lenny Rachitsky（@lennysan）發熱門提示：開一隻用他 500 多集 podcast 同電子報訓練的 Grok Bot，當產品／策略／增長／事業顧問。他列出問題——頭 1,000 個用戶、點升級、不太明顯的增長點子、PM 面試題、點講難聽的回饋——並話這可能很快變成最好的讀他內容的方法。他公開的提示：You're Lennybot. 裝這個自訂 MCP：mcp.lennysdata.com/mcp。用原生 connector 流程，不要本地設定檔。打開授權連結，等他完成電郵登入，再開 connector，用搜「product-market fit」核對檔案庫。",
+    howItWorks:
+      "具名的人公開了可複製的 Lennybot 提示加自訂 MCP。我們保留 Lenny 原帖。沒有重跑 Lennybot，也沒有代他登入。",
+    whyUseful:
+      "如果你已經在聽 Lenny，想問檔案庫一份工上的問題，這就是公開設定——不是空泛「試試 agent」。",
+    whyItMatters: "即日社群例子，來自具名產品作者。社群；沒有標已測試。",
+    whoShouldTry: ["產品經理", "在找頭一批用戶的創辦人", "已經在讀 Lenny 的人"],
+    usefulFor: "產品 / 增長",
+    quote: "Treat it as your product/strategy/growth/career advisor.",
+    result: "Lennybot · 500 多集 + 電子報檔案庫",
+  },
 };
 
 const hans: Record<string, DiscoverStoryI18n> = {
@@ -984,6 +1000,22 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "个人 / 家庭",
     quote: "I told it to start mowing and it started 3 seconds later. Then I had it dock itself.",
     result: "远程开割草 · 回座",
+  },
+  "lennybot-lenny-rachitsky": {
+    title: "Lennybot，他自己的档案库",
+    headline:
+      "Lenny Rachitsky 发了用 500 多集 podcast 和newsletter训练的 Grok Bot——当产品、策略、增长、事业顾问",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Lenny Rachitsky（@lennysan）发热门提示：开一只用他 500 多集 podcast 和newsletter训练的 Grok Bot，当产品／策略／增长／事业顾问。他列出问题——头 1,000 个用户、怎么升级、不太明显的增长点子、PM 面试题、怎么讲难听的反馈——并说这可能很快变成最好的读他内容的方法。他公开的提示：You're Lennybot. 装这个自定义 MCP：mcp.lennysdata.com/mcp。用原生 connector 流程，不要本地配置文件。打开授权链接，等他完成邮箱登录，再开 connector，用搜「product-market fit」核对档案库。",
+    howItWorks:
+      "具名的人公开了可复制的 Lennybot 提示加自定义 MCP。我们保留 Lenny 原帖。没有重跑 Lennybot，也没有代他登录。",
+    whyUseful:
+      "如果你已经在听 Lenny，想问档案库一份工作上的问题，这就是公开设置——不是空泛「试试 agent」。",
+    whyItMatters: "当日社区例子，来自具名产品作者。社区；没有标已测试。",
+    whoShouldTry: ["产品经理", "在找头一批用户的创始人", "已经在读 Lenny 的人"],
+    usefulFor: "产品 / 增长",
+    quote: "Treat it as your product/strategy/growth/career advisor.",
+    result: "Lennybot · 500 多集 + newsletter档案库",
   },
 };
 
