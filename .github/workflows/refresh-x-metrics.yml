@@ -1,0 +1,62 @@
+name: Refresh X view counts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2,14 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-x-metrics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh public X view counts
+        run: npm run refresh:x-metrics
+
+      - name: Commit metrics only when the snapshot changed
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          node -e "
+            const data = require('./data/discover/x-metrics.json');
+            const count = Object.keys(data.posts || {}).length;
+            if (count === 0) {
+              console.log('Refresh produced 0 view counts; not committing.');
+              process.exit(2);
+            }
+          " || {
+            git checkout -- data/discover/x-metrics.json
+            exit 0
+          }
+
+          git add data/discover/x-metrics.json
+
+          if git diff --cached --quiet; then
+            echo "No X view-count changes to publish."
+            exit 0
+          fi
+
+          git commit -m "chore: refresh X view counts"
+          git push origin HEAD:main

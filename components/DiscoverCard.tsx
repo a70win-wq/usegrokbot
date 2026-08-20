@@ -10,6 +10,7 @@ import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { cn } from "@/lib/cn";
 import { formatCardDate } from "@/lib/format";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
+import { formatViewCount, metricForStory } from "@/lib/x-metrics";
 
 export function DiscoverCard({
   story,
@@ -25,6 +26,11 @@ export function DiscoverCard({
   const localeTag = locale === "en" ? "en" : locale;
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
   const labels = topicsForStory(story);
+  const views = metricForStory(story)?.views;
+  const viewsLabel =
+    typeof views === "number" && views > 0
+      ? t("discover.xViews", { n: formatViewCount(views, locale) })
+      : null;
 
   return (
     <article
@@ -44,7 +50,10 @@ export function DiscoverCard({
             {item.authorName}
             {story.handle ? <span className="ml-1 font-normal text-mute">@{story.handle}</span> : null}
           </p>
-          <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
+          <p className="mt-0.5 text-[12px] text-faint">
+            {formatCardDate(story.publishedAt, locale)}
+            {viewsLabel ? ` · ${viewsLabel}` : null}
+          </p>
         </div>
       </div>
       <h3

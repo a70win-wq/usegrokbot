@@ -23,6 +23,9 @@ export function Footer({ stars }: { stars?: number | null }) {
           <LocaleLink href="/categories" className="hover:text-ink">
             {t("nav.categories")}
           </LocaleLink>
+          <LocaleLink href="/rankings" className="hover:text-ink">
+            {t("nav.rankings")}
+          </LocaleLink>
           <LocaleLink href="/learn" className="hover:text-ink">
             {t("nav.learn")}
           </LocaleLink>
