@@ -95,8 +95,7 @@ export function UseCaseDetailView({
           <CopyButton text={useCase.prompt} label={quick.copy} variant="solid" />
           <a
             href={site.xaiBotUrl}
-            target="_blank"
-            rel="noreferrer"
+            aria-label={quick.openAria}
             className="spring-press inline-flex h-11 items-center rounded-[10px] border border-line px-4 text-sm font-medium text-ink hover:border-line-strong"
           >
             {quick.open} ↗
@@ -217,8 +216,9 @@ function promptFirstCopy(locale: string) {
       lead: "Copy 呢段提示詞，貼落 Grok Bot 就可以開始。",
       noSetup: "唔使填資料 · 唔使先設定",
       copy: "Copy 提示詞",
-      open: "Open Grok Bot",
-      afterCopy: "Copy → 貼去 Grok Bot → 用。想了解原理，再向下睇。",
+      open: "打開 Grok",
+      openAria: "打開 Grok；手機已安裝 Grok app 時會優先用 app 開啟",
+      afterCopy: "Copy → 貼去 Grok → 用。想了解原理，再向下睇。",
       explainKicker: "想知先睇",
       explainTitle: "呢段提示詞會幫你做啲乜？",
     };
@@ -229,8 +229,9 @@ function promptFirstCopy(locale: string) {
       lead: "复制这段提示词，粘贴到 Grok Bot 就可以开始。",
       noSetup: "不用填资料 · 不用先设置",
       copy: "复制提示词",
-      open: "打开 Grok Bot",
-      afterCopy: "复制 → 粘贴到 Grok Bot → 使用。想了解原理，再往下看。",
+      open: "打开 Grok",
+      openAria: "打开 Grok；手机已安装 Grok app 时会优先用 app 打开",
+      afterCopy: "复制 → 粘贴到 Grok → 使用。想了解原理，再往下看。",
       explainKicker: "想了解再看",
       explainTitle: "这段提示词会帮你做什么？",
     };
@@ -240,8 +241,9 @@ function promptFirstCopy(locale: string) {
     lead: "Copy this prompt, paste it into Grok Bot, and go.",
     noSetup: "No form · No setup first",
     copy: "Copy prompt",
-    open: "Open Grok Bot",
-    afterCopy: "Copy → paste into Grok Bot → use it. Read on only if you want the explanation.",
+    open: "Open Grok",
+    openAria: "Open Grok; on mobile, the installed Grok app can handle this link",
+    afterCopy: "Copy → paste into Grok → use it. Read on only if you want the explanation.",
     explainKicker: "OPTIONAL EXPLANATION",
     explainTitle: "What will this prompt do for you?",
   };
