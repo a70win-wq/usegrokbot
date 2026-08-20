@@ -18,7 +18,6 @@ const sortKeys: SortKey[] = ["popular", "newest", "az"];
 type ExplorerProps = {
   items: UseCase[];
   initialQuery?: string;
-  initialOfficial?: boolean;
   lockedCategory?: CategorySlug;
   lockedApp?: AppSlug;
 };
@@ -30,14 +29,12 @@ function toggleValue<T>(list: T[], value: T) {
 export function UseCasesExplorer({
   items,
   initialQuery = "",
-  initialOfficial = false,
   lockedCategory,
   lockedApp,
 }: ExplorerProps) {
   const { locale, t, list } = useI18n();
   const suggestions = list("searchSuggestions");
   const [query, setQuery] = useState(initialQuery);
-  const [officialOnly, setOfficialOnly] = useState(initialOfficial);
   const [selectedCategories, setSelectedCategories] = useState<CategorySlug[]>(
     lockedCategory ? [lockedCategory] : [],
   );
@@ -62,7 +59,6 @@ export function UseCasesExplorer({
           difficulties: selectedDifficulties,
           schedules: selectedSchedules,
           apps: selectedApps,
-          officialOnly,
           sort,
           locale,
         },
@@ -76,7 +72,6 @@ export function UseCasesExplorer({
       selectedCategories,
       selectedDifficulties,
       selectedSchedules,
-      officialOnly,
       sort,
       locale,
     ],
@@ -86,15 +81,13 @@ export function UseCasesExplorer({
     selectedDifficulties.length +
     selectedSchedules.length +
     (lockedCategory ? 0 : selectedCategories.length) +
-    (lockedApp ? 0 : selectedApps.length) +
-    Number(officialOnly);
+    (lockedApp ? 0 : selectedApps.length);
 
   function clear() {
     if (!lockedCategory) setSelectedCategories([]);
     if (!lockedApp) setSelectedApps([]);
     setSelectedDifficulties([]);
     setSelectedSchedules([]);
-    setOfficialOnly(false);
   }
 
   const filters = (
@@ -175,16 +168,6 @@ export function UseCasesExplorer({
               {t(`sort.${key}`)}
             </button>
           ))}
-          <button
-            type="button"
-            onClick={() => setOfficialOnly((value) => !value)}
-            className={cn(
-              "h-9 whitespace-nowrap rounded-full border px-3.5 text-[13px] transition",
-              officialOnly ? "border-ok/40 bg-ok/10 text-ok" : "border-line text-mute hover:text-ink",
-            )}
-          >
-            {t("trust.official")}
-          </button>
           <button
             type="button"
             className="inline-flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 text-[13px] text-mute lg:hidden"

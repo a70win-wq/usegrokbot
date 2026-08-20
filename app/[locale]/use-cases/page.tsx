@@ -15,8 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function UseCasesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ q?: string; status?: string }>;
+  searchParams: Promise<{ q?: string }>;
 }) {
-  const { q = "", status } = await searchParams;
-  return <UseCasesPageView initialQuery={q} initialOfficial={status === "official"} />;
+  const { q = "" } = await searchParams;
+  return <UseCasesPageView initialQuery={q} />;
 }

@@ -11,7 +11,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { PromptBox } from "@/components/PromptBox";
 import { SaveButton } from "@/components/SaveButton";
-import { StatusBadge } from "@/components/StatusBadge";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { WorkflowIntegrationMap } from "@/components/WorkflowIntegrationMap";
 import { WorkflowSteps } from "@/components/WorkflowSteps";
@@ -74,7 +73,6 @@ export function UseCaseDetailView({
         />
 
         <div className="mt-6 flex flex-wrap items-center gap-2">
-          <StatusBadge status={trust.status} label={t(`trust.${trust.status}`)} />
           <span className="text-[12px] text-faint">
             {t("trust.verified", { date: formatVerifiedDate(trust.lastVerified, localeTag) })}
           </span>
@@ -222,16 +220,16 @@ function DetailDisclosure({ title, children }: { title: string; children: React.
 function promptFirstCopy(locale: string) {
   if (locale === "zh-Hant") {
     return {
-      kicker: "即拎即用",
-      lead: "Copy 呢段提示詞，貼落 Grok Bot 就可以開始。",
-      noSetup: "唔使填資料 · 唔使先設定",
-      copy: "Copy 提示詞",
+      kicker: "複製即用",
+      lead: "複製這段提示詞，貼到 Grok Bot 就可以開始。",
+      noSetup: "不用填資料 · 不用先設置",
+      copy: "複製提示詞",
       open: "打開 Grok Bot",
-      afterCopy: "Copy → 貼去 Grok Bot → 用。",
-      resultKicker: "睇結果",
+      afterCopy: "複製 → 貼到 Grok Bot → 使用。",
+      resultKicker: "查看結果",
       resultTitle: "你會得到",
       moreTitle: "想了解更多？",
-      moreHint: "有需要先打開，唔影響你直接 Copy & Paste。",
+      moreHint: "有需要再展開，不影響你直接複製貼上。",
       howTitle: "它會怎樣工作？",
       whoTitle: "適合誰使用？",
       detailsTitle: "Apps、權限與來源",

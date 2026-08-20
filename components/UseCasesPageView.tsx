@@ -7,10 +7,8 @@ import { useI18n } from "@/lib/i18n";
 
 export function UseCasesPageView({
   initialQuery,
-  initialOfficial = false,
 }: {
   initialQuery: string;
-  initialOfficial?: boolean;
 }) {
   const { t, absoluteHref } = useI18n();
 
@@ -37,7 +35,7 @@ export function UseCasesPageView({
         {t("pages.useCasesBody", { n: useCases.length })}
       </p>
       <div className="mt-8">
-        <UseCasesExplorer items={useCases} initialQuery={initialQuery} initialOfficial={initialOfficial} />
+        <UseCasesExplorer items={useCases} initialQuery={initialQuery} />
       </div>
     </div>
   );

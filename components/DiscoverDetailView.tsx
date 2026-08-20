@@ -3,10 +3,9 @@
 import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { DiscoverCard, discoverTrust } from "@/components/DiscoverCard";
+import { DiscoverCard } from "@/components/DiscoverCard";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
-import { StatusBadge } from "@/components/StatusBadge";
 import { UseCaseCard } from "@/components/UseCaseCard";
 import { XPostEmbed } from "@/components/XPostEmbed";
 import type { DiscoverStory } from "@/data/discover";
@@ -23,15 +22,10 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
   const related = getRelatedUseCase(story);
   const relatedTitle = related ? localizeUseCase(related, locale).title : undefined;
   const more = getRelatedDiscoverStories(story, 3);
-  const trust = discoverTrust(story, t);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOriginalX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
-  const checkLabel =
-    story.source === "official"
-      ? t("discover.verifiedOfficial", { date: checked })
-      : t("discover.sourceChecked", { date: checked });
   const sourceAuthorType = story.handle === "xai" || story.handle === "bot" || story.authorName === "xAI" || story.authorName === "Jellypod"
     ? "Organization"
     : "Person";
@@ -85,12 +79,11 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       <Breadcrumbs items={[{ href: "/", label: t("nav.discover") }, { label: item.title }]} />
 
       <div className="mt-6 flex flex-wrap items-center gap-2">
-        <StatusBadge status={trust.status} label={trust.label} />
         <span className="rounded-full border border-line px-2.5 py-1 text-[12px] text-mute">
           {t(`discover.cat${story.category.charAt(0).toUpperCase()}${story.category.slice(1)}`)}
         </span>
         <span className="text-[12px] text-faint">{formatStoryDate(story.publishedAt, locale)}</span>
-        <span className="text-[12px] text-faint">{checkLabel}</span>
+        <span className="text-[12px] text-faint">{t("discover.lastVerified", { date: checked })}</span>
       </div>
 
       <div className="mt-5 flex items-center gap-3">

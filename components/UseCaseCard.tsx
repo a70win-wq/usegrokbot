@@ -7,7 +7,6 @@ import { categoryFor, localizeUseCase, useI18n } from "@/lib/i18n";
 import { AppPills } from "./AppPills";
 import { BotFace, botColorFor } from "./BotFace";
 import { SaveButton } from "./SaveButton";
-import { StatusBadge } from "./StatusBadge";
 
 export function UseCaseCard({
   useCase,
@@ -29,7 +28,6 @@ export function UseCaseCard({
       <div className="flex items-start justify-between gap-3">
         <BotFace size={28} color={botColorFor(useCase.slug)} paper="var(--card)" />
         <div className="relative z-10 flex items-center gap-1">
-          <StatusBadge status={trust.status} label={t(`trust.${trust.status}`)} />
           <SaveButton slug={useCase.slug} title={item.title} />
         </div>
       </div>

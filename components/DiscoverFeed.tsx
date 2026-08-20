@@ -18,7 +18,7 @@ import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
-const mobileTabs: DiscoverTab[] = ["trending", "latest", "official"];
+const mobileTabs: DiscoverTab[] = ["trending", "latest", "featured"];
 
 const outcomeKeys: Record<OutcomeSlug, string> = {
   "make-money": "discover.outcomeMakeMoney",
@@ -30,22 +30,16 @@ const outcomeKeys: Record<OutcomeSlug, string> = {
   "build-software": "discover.outcomeBuildSoftware",
 };
 
-const tabKeys: Record<DiscoverTab, string> = {
+const tabKeys: Record<(typeof discoverTabs)[number], string> = {
   trending: "discover.tabTrending",
   latest: "discover.tabLatest",
   featured: "discover.tabFeatured",
-  official: "discover.tabOfficial",
-  tested: "discover.tabTested",
-  community: "discover.tabCommunity",
 };
 
-const tabIcons: Record<DiscoverTab, string> = {
+const tabIcons: Record<(typeof discoverTabs)[number], string> = {
   trending: "🔥",
   latest: "🆕",
   featured: "⭐",
-  official: "✅",
-  tested: "🧪",
-  community: "👥",
 };
 
 const PAGE_SIZE = 12;
@@ -82,13 +76,7 @@ export function DiscoverFilters({
 }: DiscoverFilterState & { showOutcomes?: boolean }) {
   const { t } = useI18n();
   const [moreOpen, setMoreOpen] = useState(false);
-  const extraActive =
-    tab === "community" ||
-    tab === "tested" ||
-    tab === "featured" ||
-    category !== "all" ||
-    outcome !== "all" ||
-    app !== "all";
+  const extraActive = category !== "all" || outcome !== "all" || app !== "all";
   const showMore = moreOpen || extraActive;
 
   return (
@@ -119,9 +107,6 @@ export function DiscoverFilters({
       </div>
       {tab === "trending" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabTrendingHint")}</p>
-      ) : null}
-      {tab === "tested" ? (
-        <p className="mt-2 text-[12px] text-faint">{t("discover.tabTestedHint")}</p>
       ) : null}
       {tab === "featured" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabFeaturedHint")}</p>
@@ -154,22 +139,6 @@ export function DiscoverFilters({
 
       <div className={cn("mt-3", showMore ? "block" : "hidden", showOutcomes ? "md:block" : "md:hidden")}>
         <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
-          <p className="sr-only">{t("discover.byTrust")}</p>
-          <TabChip
-            active={tab === "featured"}
-            label={`${tabIcons.featured} ${t(tabKeys.featured)}`}
-            onClick={() => setTab("featured")}
-          />
-          <TabChip
-            active={tab === "community"}
-            label={`${tabIcons.community} ${t(tabKeys.community)}`}
-            onClick={() => setTab("community")}
-          />
-          <TabChip
-            active={tab === "tested"}
-            label={`${tabIcons.tested} ${t(tabKeys.tested)}`}
-            onClick={() => setTab("tested")}
-          />
           <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
           {topicSlugs.map((item) => (
             <Chip
@@ -252,9 +221,6 @@ export function DiscoverFeed({
       {hideFilters ? null : <DiscoverFilters {...filters} showOutcomes={showOutcomes} />}
 
       <p className="mt-6 text-[13px] text-faint">{t("discover.count", { n: stories.length })}</p>
-      {tab === "community" ? (
-        <p className="mt-1 text-[12px] text-faint">{t("discover.communityNote")}</p>
-      ) : null}
 
       {stories.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-line bg-elevated px-5 py-10 text-center">
@@ -264,12 +230,8 @@ export function DiscoverFeed({
             expression="thinking"
             className="mx-auto mb-4"
           />
-          <p className="text-sm text-ink">
-            {tab === "tested" ? t("discover.testedEmpty") : t("discover.empty")}
-          </p>
-          <p className="mt-2 text-[13px] text-mute">
-            {tab === "tested" ? t("discover.testedEmptyHint") : t("discover.emptyHint")}
-          </p>
+          <p className="text-sm text-ink">{t("discover.empty")}</p>
+          <p className="mt-2 text-[13px] text-mute">{t("discover.emptyHint")}</p>
         </div>
       ) : (
         <>

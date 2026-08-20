@@ -4,22 +4,12 @@ import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
-import { StatusBadge } from "@/components/StatusBadge";
 import type { DiscoverStory } from "@/data/discover";
 import { topicsForStory } from "@/data/topics";
-import { LAST_REVIEWED, formatVerifiedDate, type TrustStatus } from "@/data/verification";
+import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { cn } from "@/lib/cn";
 import { formatCardDate } from "@/lib/format";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
-
-export function discoverTrust(
-  story: DiscoverStory,
-  t: (path: string) => string,
-): { status: TrustStatus; label: string } {
-  if (story.tested) return { status: "tested", label: `🧪 ${t("trust.tested")}` };
-  if (story.source === "official") return { status: "official", label: `✅ ${t("discover.officialBadge")}` };
-  return { status: "community", label: `👥 ${t("discover.communityBadge")}` };
-}
 
 export function DiscoverCard({
   story,
@@ -30,7 +20,6 @@ export function DiscoverCard({
 }) {
   const { locale, t } = useI18n();
   const item = localizeDiscoverStory(story, locale);
-  const trust = discoverTrust(story, t);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
@@ -48,18 +37,15 @@ export function DiscoverCard({
         <p className="text-[11px] font-medium tracking-[0.12em] text-accent uppercase">{t("discover.featured")}</p>
       ) : null}
 
-      <div className={cn("flex items-start justify-between gap-3", featured && "mt-3")}>
-        <div className="flex min-w-0 items-center gap-3">
-          <AuthorAvatar name={item.authorName} handle={story.handle} size={featured ? 48 : 40} />
-          <div className="min-w-0">
-            <p className="truncate text-[13px] font-medium text-ink">
-              {item.authorName}
-              {story.handle ? <span className="ml-1 font-normal text-mute">@{story.handle}</span> : null}
-            </p>
-            <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
-          </div>
+      <div className={cn("flex min-w-0 items-center gap-3", featured && "mt-3")}>
+        <AuthorAvatar name={item.authorName} handle={story.handle} size={featured ? 48 : 40} />
+        <div className="min-w-0">
+          <p className="truncate text-[13px] font-medium text-ink">
+            {item.authorName}
+            {story.handle ? <span className="ml-1 font-normal text-mute">@{story.handle}</span> : null}
+          </p>
+          <p className="mt-0.5 text-[12px] text-faint">{formatCardDate(story.publishedAt, locale)}</p>
         </div>
-        <StatusBadge status={trust.status} label={trust.label} />
       </div>
       <h3
         className={cn(
