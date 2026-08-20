@@ -3,6 +3,7 @@
 import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
+import { SketchUnderline } from "@/components/SketchUnderline";
 import { StatusBadge } from "@/components/StatusBadge";
 import type { DiscoverStory } from "@/data/discover";
 import { LAST_REVIEWED, formatVerifiedDate, type TrustStatus } from "@/data/verification";
@@ -84,7 +85,9 @@ export function DiscoverCard({
           <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
             {item.result ? t("discover.result") : t("discover.output")}
           </p>
-          <p className="mt-1 text-[13px] leading-5 text-ink">{item.result ?? item.output}</p>
+          <p className="mt-1 text-[13px] leading-5 text-ink">
+            <SketchUnderline active={featured}>{item.result ?? item.output}</SketchUnderline>
+          </p>
         </div>
       ) : null}
 
