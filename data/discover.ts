@@ -32,10 +32,10 @@ export type DiscoverSourceKind = "official" | "community";
 
 export type DiscoverTab = "trending" | "latest" | "featured" | "official" | "tested" | "community";
 
-export const discoverTabs: DiscoverTab[] = ["trending", "latest", "featured"];
+export const discoverTabs = ["trending", "latest", "featured"] as const;
 
 export function isDiscoverTab(value: string | undefined): value is DiscoverTab {
-  return Boolean(value && (discoverTabs as string[]).includes(value));
+  return Boolean(value && (discoverTabs as readonly string[]).includes(value));
 }
 
 export type DiscoverStory = {
