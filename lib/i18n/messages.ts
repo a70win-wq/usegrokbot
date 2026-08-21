@@ -16,8 +16,8 @@ export const messages = {
       credit: "Bot avatar from bloub",
     },
     github: {
-      star: "Star",
-      starAria: "Star UseGrokBot on GitHub",
+      star: "GitHub",
+      starAria: "Open UseGrokBot on GitHub",
     },
     official: {
       download: "Download Grok Bot",
@@ -370,8 +370,8 @@ export const messages = {
       credit: "機器人頭像來自 bloub",
     },
     github: {
-      star: "點星",
-      starAria: "在 GitHub 給 UseGrokBot 點星",
+      star: "GitHub",
+      starAria: "在 GitHub 打開 UseGrokBot",
     },
     official: {
       download: "下載 Grok Bot",
@@ -721,8 +721,8 @@ export const messages = {
       credit: "机器人头像来自 bloub",
     },
     github: {
-      star: "点星",
-      starAria: "在 GitHub 给 UseGrokBot 点星",
+      star: "GitHub",
+      starAria: "在 GitHub 打开 UseGrokBot",
     },
     official: {
       download: "下载 Grok Bot",

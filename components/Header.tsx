@@ -8,13 +8,12 @@ import { useI18n } from "@/lib/i18n";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
 import { BotFace, botColorFor } from "./BotFace";
 import { GetGrokBot } from "./GetGrokBot";
-import { GitHubStar } from "./GitHubStar";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
 import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
 
-export function Header({ stars }: { stars?: number | null }) {
+export function Header() {
   const pathname = usePathname();
   const path = stripLocalePrefix(pathname);
   const { t } = useI18n();
@@ -75,7 +74,6 @@ export function Header({ stars }: { stars?: number | null }) {
         <div className="flex items-center gap-1">
           <HeaderSearch />
           <GetGrokBot />
-          <GitHubStar stars={stars} />
           <ThemeToggle />
           <div className="hidden lg:block">
             <LanguageSwitch />

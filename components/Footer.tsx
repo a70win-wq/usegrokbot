@@ -36,7 +36,7 @@ export function Footer({ stars }: { stars?: number | null }) {
             {t("nav.submitShort")}
           </LocaleLink>
           <GetGrokBot variant="link" />
-          <GitHubStar stars={stars} label="always" />
+          <GitHubStar stars={stars} />
         </div>
         <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-[12px] text-faint">
           <a href="https://github.com/jeremy-prt/bloub" className="hover:text-mute" rel="noreferrer">

@@ -5,6 +5,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
+import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
 import { SearchBar } from "@/components/SearchBar";
 import { discoverStories, storiesForTopic } from "@/data/discover";
@@ -12,7 +13,13 @@ import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
+export function HomeView({
+  initialQuery = "",
+  stars,
+}: {
+  initialQuery?: string;
+  stars?: number | null;
+}) {
   const { t, absoluteHref } = useI18n();
   const [query, setQuery] = useState(initialQuery);
   const filters = useDiscoverFilterState();
@@ -51,12 +58,15 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
               <p className="text-[13px] font-medium tracking-[0.14em] text-mute uppercase">
                 {t("home.kicker")}
               </p>
-              <LocaleLink
-                href="/how-we-built"
-                className="mt-2 inline-flex text-[13px] text-ink underline decoration-line underline-offset-[5px] hover:text-accent"
-              >
-                {t("nav.built")}
-              </LocaleLink>
+              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                <LocaleLink
+                  href="/how-we-built"
+                  className="inline-flex text-[13px] text-ink underline decoration-line underline-offset-[5px] hover:text-accent"
+                >
+                  {t("nav.built")}
+                </LocaleLink>
+                <GitHubStar stars={stars} />
+              </div>
               <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
                 {t("home.title")}
               </h1>

@@ -1,4 +1,5 @@
 import { HomeView } from "@/components/HomeView";
+import { getGithubStars } from "@/lib/github";
 import { messageMeta, translateMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -20,5 +21,6 @@ export default async function HomePage({
   searchParams: Promise<{ q?: string }>;
 }) {
   const { q } = await searchParams;
-  return <HomeView initialQuery={q ?? ""} />;
+  const stars = await getGithubStars();
+  return <HomeView initialQuery={q ?? ""} stars={stars} />;
 }
