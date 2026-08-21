@@ -290,21 +290,8 @@ export const messages = {
       groupWriting: "Writing",
       viewUseCase: "View use case",
       builtTitle: "How we used Grok Bot to build this site",
-      builtBody: "Grok Bot finds and files public X posts. People and Cursor build the site.",
-      builtBotTitle: "What Grok Bot does",
-      builtBotBody:
-        "We use Grok Bot to search X for public posts about Grok Bot, then file them as ingest issues. That is the find-and-file lane — not the website build.",
-      builtHumanTitle: "What people and Cursor do",
-      builtHumanBody:
-        "The pages, filters, copy, and deploys are built by people in Cursor. We do not claim Grok Bot wrote this Next.js app.",
-      builtLoopTitle: "The daily loop",
-      builtLoop1: "Search X for public Grok Bot posts.",
-      builtLoop2: "File an ingest issue.",
-      builtLoop3: "Add the posts to the catalog.",
-      builtElonTitle: "The Elon liked tab",
-      builtElonBody:
-        "That list is original posts Elon Musk reposted or quoted, collected by Grok Bot on X. Cards open the original author, not Elon's repost. The first sweep covers 11–21 August 2026. X search never shows everything, so it is the full set we found, not a claim that nothing was missed.",
-      builtNote: "Grok Bot is how we find and file posts. The site itself is a human and Cursor build.",
+      builtBody: "Copy this prompt into Grok Bot. It installs Grok Build, searches X for Grok Bot posts, and builds this catalog.",
+      builtCopy: "Copy prompt",
     },
     detail: {
       what: "What this Grok Bot does",
@@ -653,21 +640,8 @@ export const messages = {
       groupWriting: "寫作",
       viewUseCase: "查看場景",
       builtTitle: "我們怎樣用 Grok Bot 建這個站",
-      builtBody: "Grok Bot 負責找帖、入庫。人和 Cursor 負責建網站。",
-      builtBotTitle: "Grok Bot 做什麼",
-      builtBotBody:
-        "我們用 Grok Bot 在 X 上搜尋公開的 Grok Bot 帖，再把它們寫成入庫 issue。這是查找和入庫這條線，不是建網站。",
-      builtHumanTitle: "人和 Cursor 做什麼",
-      builtHumanBody:
-        "頁面、篩選、文案和部署，由人在 Cursor 裡完成。我們不會說 Grok Bot 寫了這個 Next.js 應用。",
-      builtLoopTitle: "每日循環",
-      builtLoop1: "在 X 上搜尋公開的 Grok Bot 帖。",
-      builtLoop2: "開一條入庫 issue。",
-      builtLoop3: "把帖寫進目錄。",
-      builtElonTitle: "Elon 讚過",
-      builtElonBody:
-        "這個標籤是 Elon 轉發或引用過的原帖，由 Grok Bot 在 X 上搜出來。卡片打開原作者，不是 Elon 那條。第一批覆蓋 2026 年 8 月 11 日至 21 日。X 搜尋每次只顯示一部分，所以這是我們找到的全部，不是聲稱一條都沒漏。",
-      builtNote: "Grok Bot 負責找帖和入庫。網站本身是人和 Cursor 建的。",
+      builtBody: "複製這段提示詞，貼進 Grok Bot。它會安裝 Grok Build、在 X 搜尋 Grok Bot 帖，並建出這個目錄。",
+      builtCopy: "複製提示詞",
     },
     detail: {
       what: "這隻 Grok Bot 會做什麼",
@@ -1015,21 +989,8 @@ export const messages = {
       groupWriting: "写作",
       viewUseCase: "查看场景",
       builtTitle: "我们怎样用 Grok Bot 建这个站",
-      builtBody: "Grok Bot 负责找帖、入库。人和 Cursor 负责建网站。",
-      builtBotTitle: "Grok Bot 做什么",
-      builtBotBody:
-        "我们用 Grok Bot 在 X 上搜索公开的 Grok Bot 帖，再把它们写成入库 issue。这是查找和入库这条线，不是建网站。",
-      builtHumanTitle: "人和 Cursor 做什么",
-      builtHumanBody:
-        "页面、筛选、文案和部署，由人在 Cursor 里完成。我们不会说 Grok Bot 写了这个 Next.js 应用。",
-      builtLoopTitle: "每日循环",
-      builtLoop1: "在 X 上搜索公开的 Grok Bot 帖。",
-      builtLoop2: "开一条入库 issue。",
-      builtLoop3: "把帖写进目录。",
-      builtElonTitle: "Elon 赞过",
-      builtElonBody:
-        "这个标签是 Elon 转发或引用过的原帖，由 Grok Bot 在 X 上搜出来。卡片打开原作者，不是 Elon 那条。第一批覆盖 2026 年 8 月 11 日至 21 日。X 搜索每次只显示一部分，所以这是我们找到的全部，不是声称一条都没漏。",
-      builtNote: "Grok Bot 负责找帖和入库。网站本身是人和 Cursor 建的。",
+      builtBody: "复制这段提示词，贴进 Grok Bot。它会安装 Grok Build、在 X 搜索 Grok Bot 帖，并建出这个目录。",
+      builtCopy: "复制提示词",
     },
     detail: {
       what: "这只 Grok Bot 会做什么",
