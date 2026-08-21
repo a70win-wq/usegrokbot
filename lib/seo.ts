@@ -43,11 +43,10 @@ export function pageMeta({
   const url = absoluteUrl(path, locale);
   const image = {
     url: site.shareImage,
-    secureUrl: site.shareImage,
     width: 1200,
     height: 630,
     alt: `${site.name} — ${title}`,
-    type: "image/jpeg",
+    type: "image/png",
   };
   return {
     title,
@@ -73,7 +72,7 @@ export function pageMeta({
       card: "summary_large_image",
       title: title.includes(site.name) ? title : `${title} | ${site.name}`,
       description,
-      images: [image],
+      images: site.shareImage,
     },
   };
 }

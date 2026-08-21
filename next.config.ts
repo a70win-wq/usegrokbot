@@ -13,6 +13,14 @@ const nextConfig: NextConfig = {
           { key: "Content-Type", value: "image/jpeg" },
         ],
       },
+      {
+        source: "/poster.png",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, s-maxage=86400" },
+          { key: "Content-Type", value: "image/png" },
+          { key: "Content-Disposition", value: "inline" },
+        ],
+      },
     ];
   },
   async redirects() {
