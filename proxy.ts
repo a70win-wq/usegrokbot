@@ -18,7 +18,15 @@ const SKIP = new Set([
   "twitter-image",
 ]);
 
+const SOCIAL_CRAWLER =
+  /Twitterbot|facebookexternalhit|Facebot|LinkedInBot|Slackbot|WhatsApp|TelegramBot|Discordbot|Iframely|Embedly|redditbot|Pinterest|Googlebot/i;
+
+function isSocialCrawler(request: NextRequest) {
+  return SOCIAL_CRAWLER.test(request.headers.get("user-agent") ?? "");
+}
+
 function detectUrlLocale(request: NextRequest): UrlLocale {
+  if (isSocialCrawler(request)) return DEFAULT_URL_LOCALE;
   const cookie = request.cookies.get(LOCALE_COOKIE)?.value;
   if (cookie && isUrlLocale(cookie)) return cookie;
   return detectUrlLocaleFromHeader(request.headers.get("accept-language"));
@@ -63,6 +71,14 @@ export function proxy(request: NextRequest) {
   const locale = detectUrlLocale(request);
   const url = request.nextUrl.clone();
   url.pathname = pathname === "/" ? `/${locale}` : `/${locale}${pathname}`;
+
+  // Crawlers often skip 307s and never see og:image. Serve the locale page in place.
+  if (isSocialCrawler(request)) {
+    const headers = new Headers(request.headers);
+    headers.set("x-url-locale", locale);
+    return NextResponse.rewrite(url, { request: { headers } });
+  }
+
   const response = NextResponse.redirect(url, 307);
   response.cookies.set(LOCALE_COOKIE, locale, {
     path: "/",

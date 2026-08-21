@@ -47,6 +47,7 @@ export async function generateMetadata({
       "apple-itunes-app": `app-id=${site.grokBotAppId}`,
     },
     openGraph: {
+      title: `${messages[locale].home.title} | ${site.name}`,
       siteName: site.name,
       type: "website",
       locale: ogLocale[raw],
@@ -61,11 +62,13 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      title: `${messages[locale].home.title} | ${site.name}`,
       images: [`${site.url}/og.png`],
     },
     robots: {
       index: true,
       follow: true,
+      "max-image-preview": "large",
     },
   };
 }

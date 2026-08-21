@@ -50,13 +50,15 @@ export function pageMeta({
   return {
     title,
     description,
-    robots: index ? { index: true, follow: true } : { index: false, follow: false },
+    robots: index
+      ? { index: true, follow: true, "max-image-preview": "large" }
+      : { index: false, follow: false },
     alternates: {
       canonical: url,
       languages: languageAlternates(path),
     },
     openGraph: {
-      title,
+      title: title.includes(site.name) ? title : `${title} | ${site.name}`,
       description,
       url,
       siteName: site.name,
@@ -67,7 +69,7 @@ export function pageMeta({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: title.includes(site.name) ? title : `${title} | ${site.name}`,
       description,
       images: [image],
     },
