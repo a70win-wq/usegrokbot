@@ -133,6 +133,7 @@ export function toDiscoverStory(
     xPostUrl: post.url,
     sourceUrl: post.url,
     sourceLabel: `${post.authorName} on X`,
+    format: extracted.format === "article" || post.isArticle ? "article" : undefined,
   };
 }
 

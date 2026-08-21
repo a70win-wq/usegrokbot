@@ -9,6 +9,7 @@ export const PRIORITY_PATHS = [
   "/",
   "/categories",
   "/rankings",
+  "/articles",
   "/categories/email",
   "/categories/sales",
   "/categories/marketing",
@@ -17,7 +18,6 @@ export const PRIORITY_PATHS = [
   "/categories/coding",
   "/categories/operations",
   "/categories/personal",
-  "/learn/what-is-grok-bot",
 ] as const;
 
 export function indexNowUrls(paths: readonly string[] = PRIORITY_PATHS) {

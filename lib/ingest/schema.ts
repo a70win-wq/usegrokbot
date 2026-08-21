@@ -22,6 +22,7 @@ export const extractSchema = z.object({
   apps: z.array(z.enum(appSlugs)).min(1).max(5),
   difficulty: z.enum(["easy", "medium", "advanced"]),
   schedule: z.enum(["one-time", "daily", "weekly", "always-on"]),
+  format: z.enum(["post", "article"]).optional(),
 });
 
 export type ExtractedCase = z.infer<typeof extractSchema>;

@@ -21,6 +21,7 @@ import {
 } from "@/lib/bloub";
 import { clamp } from "@/lib/bloub/math";
 import { RAYON } from "@/lib/bloub";
+import { cn } from "@/lib/cn";
 
 export type BloubBotProps = {
   size?: number;
@@ -155,12 +156,10 @@ export function BloubBot({
         const box = boxRef.current?.getBoundingClientRect();
         const pointer = pointerRef.current;
         if (box && box.width > 0 && box.height > 0) {
-          const nx = pointer
-            ? clamp((pointer.x - (box.left + box.width / 2)) / Math.max(1, window.innerWidth / 2), -1, 1)
-            : 0;
-          const ny = pointer
-            ? clamp((pointer.y - (box.top + box.height / 2)) / Math.max(1, window.innerHeight / 2), -1, 1)
-            : 0;
+          const aimX = pointer?.x ?? window.innerWidth / 2;
+          const aimY = pointer?.y ?? window.innerHeight / 2;
+          const nx = clamp((aimX - (box.left + box.width / 2)) / Math.max(1, window.innerWidth / 2), -1, 1);
+          const ny = clamp((aimY - (box.top + box.height / 2)) / Math.max(1, window.innerHeight / 2), -1, 1);
           engine.setLook(siteLook(nx, ny, pointer !== null), now);
           aimingRef.current = true;
         }
@@ -194,7 +193,10 @@ export function BloubBot({
   }, [follow, frozen, reduceMotion]);
 
   return (
-    <span ref={boxRef} className="inline-flex h-full w-full">
+    <span
+      ref={boxRef}
+      className={cn("inline-flex shrink-0", scene === "scene" && "h-full w-full")}
+    >
       <BloubSvg
         frame={frozen || reduceMotion ? stillFrame : frame}
         size={size}

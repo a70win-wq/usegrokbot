@@ -7,6 +7,9 @@ import { BloubBot } from "@/components/BloubBot";
 const SIZE = 72;
 const OFFSET_X = 18;
 const OFFSET_Y = 20;
+const EDGE_X = 8;
+const TOP_PAD = 64;
+const BOTTOM_PAD = 88;
 
 export function CursorBot() {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -15,19 +18,16 @@ export function CursorBot() {
     const wrap = wrapRef.current;
     if (!wrap) return;
 
-    const fine = window.matchMedia("(pointer: fine)").matches;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!fine) {
-      wrap.style.display = "none";
-      return;
-    }
-
+    const fineMq = window.matchMedia("(pointer: fine)");
+    const reduceMq = window.matchMedia("(prefers-reduced-motion: reduce)");
     const pos = { x: -100, y: -100 };
     const target = { x: pos.x, y: pos.y };
     let frame = 0;
     let disposed = false;
+    let mode: "mouse" | "scroll" = "mouse";
 
     const onMove = (event: PointerEvent) => {
+      if (mode !== "mouse") return;
       if (event.pointerType && event.pointerType !== "mouse") return;
       target.x = event.clientX + OFFSET_X;
       target.y = event.clientY + OFFSET_Y;
@@ -35,16 +35,42 @@ export function CursorBot() {
     };
 
     const onLeave = () => {
+      if (mode !== "mouse") return;
       wrap.style.opacity = "0";
     };
 
+    const placeFromScroll = () => {
+      if (mode !== "scroll") return;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
+      const travel = Math.max(0, window.innerHeight - SIZE - TOP_PAD - BOTTOM_PAD);
+      target.x = EDGE_X;
+      target.y = TOP_PAD + travel * progress;
+      wrap.style.opacity = "1";
+    };
+
+    const applyMode = () => {
+      mode = fineMq.matches ? "mouse" : "scroll";
+      wrap.style.display = "";
+      if (mode === "scroll") {
+        placeFromScroll();
+        return;
+      }
+      wrap.style.opacity = "0";
+    };
+
+    applyMode();
+
     window.addEventListener("pointermove", onMove, { passive: true });
     document.documentElement.addEventListener("mouseleave", onLeave);
+    window.addEventListener("scroll", placeFromScroll, { passive: true });
+    window.addEventListener("resize", placeFromScroll);
+    fineMq.addEventListener("change", applyMode);
 
     const tick = () => {
       if (disposed) return;
       frame = window.requestAnimationFrame(tick);
-      const ease = reduce ? 1 : 0.4;
+      const ease = reduceMq.matches ? 1 : mode === "scroll" ? 0.16 : 0.4;
       pos.x += (target.x - pos.x) * ease;
       pos.y += (target.y - pos.y) * ease;
       wrap.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
@@ -56,6 +82,9 @@ export function CursorBot() {
       window.cancelAnimationFrame(frame);
       window.removeEventListener("pointermove", onMove);
       document.documentElement.removeEventListener("mouseleave", onLeave);
+      window.removeEventListener("scroll", placeFromScroll);
+      window.removeEventListener("resize", placeFromScroll);
+      fineMq.removeEventListener("change", applyMode);
     };
   }, []);
 

@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
               letterSpacing: "-0.02em",
             }}
           >
-            See what people are actually building with Grok Bot.
+            How people use Grok Bot.
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { discoverStories } from "@/data/discover";
-import { learnArticles } from "@/data/learn";
 import { topics } from "@/data/topics";
 import { LAST_REVIEWED } from "@/data/verification";
 import { URL_LOCALES, absoluteUrl, languageAlternates } from "@/lib/i18n/paths";
@@ -32,16 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/", { changeFrequency: "daily", priority: 1 }, day(latestStory)),
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ...entries("/rankings", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
+    ...entries("/articles", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...topics.flatMap((item) =>
       entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),
-    ),
-    ...entries("/learn", { changeFrequency: "weekly", priority: 0.5 }, day(LAST_REVIEWED)),
-    ...learnArticles.flatMap((item) =>
-      entries(
-        `/learn/${item.slug}`,
-        { changeFrequency: "monthly", priority: 0.4 },
-        item.verifiedAt ? day(item.verifiedAt) : undefined,
-      ),
     ),
     ...entries("/submit", { changeFrequency: "monthly", priority: 0.4 }, day(LAST_REVIEWED)),
   ];

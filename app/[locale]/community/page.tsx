@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = locale === "zh-hk" ? "社群" : locale === "zh-cn" ? "社区" : "Community";
   const description =
     locale === "zh-hk"
-      ? "認識分享 Grok Bot 真實案例嘅社群，同埋幫手改善 UseGrokBot 嘅開源 Contributor。"
+      ? "認識分享 Grok Bot 真實案例的社群，以及幫助改善 UseGrokBot 的開源 Contributor。"
       : locale === "zh-cn"
         ? "认识分享 Grok Bot 真实案例的社区，以及帮助改善 UseGrokBot 的开源 Contributor。"
         : "Meet the community sharing real Grok Bot examples and the open-source contributors improving UseGrokBot.";

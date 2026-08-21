@@ -10,7 +10,7 @@ Locales: /en /zh-hk /zh-cn
 - https://usegrokbot.com/en
 - https://usegrokbot.com/en/categories
 - https://usegrokbot.com/en/categories/email
-- https://usegrokbot.com/en/learn/what-is-grok-bot
+- https://usegrokbot.com/en/articles
 - https://usegrokbot.com/sitemap.xml
 
 ## Categories

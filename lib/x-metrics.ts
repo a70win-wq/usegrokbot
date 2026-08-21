@@ -1,5 +1,5 @@
 import metrics from "@/data/discover/x-metrics.json";
-import { discoverStories, type DiscoverStory } from "@/data/discover";
+import { articleStories, discoverStories, type DiscoverStory } from "@/data/discover";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
 
 export type XMetric = {
@@ -47,4 +47,13 @@ export function storiesByXViews() {
     .map((story) => ({ story, views: metricForStory(story)?.views ?? 0, checkedAt: metricForStory(story)?.checkedAt }))
     .filter((item) => item.views > 0)
     .sort((a, b) => b.views - a.views);
+}
+
+export function articleStoriesByViews() {
+  return articleStories()
+    .map((story) => ({ story, views: metricForStory(story)?.views ?? 0, checkedAt: metricForStory(story)?.checkedAt }))
+    .sort((a, b) => {
+      if (a.views !== b.views) return b.views - a.views;
+      return a.story.publishedAt < b.story.publishedAt ? 1 : -1;
+    });
 }

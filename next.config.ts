@@ -48,6 +48,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/:locale(en|zh-hk|zh-cn)/learn",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
+        source: "/:locale(en|zh-hk|zh-cn)/learn/:slug",
+        destination: "/:locale",
+        permanent: true,
+      },
+      {
         source: "/:locale(en|zh-hk|zh-cn)/categories/customer-support",
         destination: "/:locale/categories/operations",
         permanent: true,

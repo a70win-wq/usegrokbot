@@ -1,4 +1,4 @@
-import { parseXUrl } from "./x-url";
+import { hasXArticleLink, parseXUrl } from "./x-url";
 
 export type FetchedPost = {
   url: string;
@@ -9,6 +9,8 @@ export type FetchedPost = {
   quotedText?: string;
   publishedAt: string;
   sourceText: string;
+  isNoteTweet?: boolean;
+  isArticle?: boolean;
 };
 
 function isoDay(value: string | number) {
@@ -43,6 +45,7 @@ async function fromFxTwitter(id: string): Promise<FetchedPost | null> {
       created_timestamp?: number;
       author?: { screen_name?: string; name?: string };
       quote?: { text?: string; author?: { screen_name?: string; name?: string } };
+      is_note_tweet?: boolean;
     };
   };
   const tweet = data.tweet;
@@ -57,8 +60,10 @@ async function fromFxTwitter(id: string): Promise<FetchedPost | null> {
     ? `${tweet.quote.author?.name ?? ""} @${tweet.quote.author?.screen_name ?? ""}: ${tweet.quote.text}`.trim()
     : undefined;
   const text = tweet.text.trim();
+  const url = tweet.url ?? `https://x.com/${tweet.author.screen_name}/status/${id}`;
+  const isNoteTweet = Boolean(tweet.is_note_tweet);
   return {
-    url: tweet.url ?? `https://x.com/${tweet.author.screen_name}/status/${id}`,
+    url,
     id,
     handle: tweet.author.screen_name,
     authorName: tweet.author.name,
@@ -66,6 +71,8 @@ async function fromFxTwitter(id: string): Promise<FetchedPost | null> {
     quotedText: quoted,
     publishedAt,
     sourceText: quoted ? `${text}\n\n${quoted}` : text,
+    isNoteTweet,
+    isArticle: isLongFormXPost({ url, text, isNoteTweet }),
   };
 }
 
@@ -92,6 +99,12 @@ async function fromOEmbed(url: string, id: string): Promise<FetchedPost | null> 
     publishedAt: new Date().toISOString().slice(0, 10),
     sourceText: text,
   };
+}
+
+export function isLongFormXPost(post: { url: string; text: string; isNoteTweet?: boolean }) {
+  if (hasXArticleLink(post.url) || hasXArticleLink(post.text)) return true;
+  if (post.isNoteTweet && post.text.trim().length >= 600) return true;
+  return false;
 }
 
 export async function fetchXPost(rawUrl: string): Promise<FetchedPost> {

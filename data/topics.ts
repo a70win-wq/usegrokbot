@@ -110,14 +110,14 @@ export function topicsForStory(story: DiscoverStory) {
 
 export const topicCopy: Record<"zh-Hant" | "zh-Hans", Record<TopicSlug, string>> = {
   "zh-Hant": {
-    email: "收件箱、Gmail、回覆、退款、支援電郵。",
-    sales: "找客、外展、CRM、一人公司賣嘢。",
-    marketing: "Reddit、對手監察、每週市場報告。",
-    research: "Podcast、簡報、監察同其他查資料工作。",
-    content: "YouTube 留言、newsletter、短片同貼文。",
+    email: "收件箱、Gmail、回覆、退款、支持郵件。",
+    sales: "找客戶、外展、CRM、一人公司賣東西。",
+    marketing: "Reddit、競品監控、每週市場報告。",
+    research: "播客、簡報、監控和其他查資料工作。",
+    content: "YouTube 評論、newsletter、短視頻和帖子。",
     coding: "Bug、GitHub、WordPress、Arduino、builder loops。",
-    operations: "辦公室、開支、設定教學、打理一張檯。",
-    personal: "屋企、日曆、旅行、父母、日常。",
+    operations: "辦公室、開支、設置教程、打理一張桌子。",
+    personal: "家裡、日曆、旅行、父母、日常。",
   },
   "zh-Hans": {
     email: "收件箱、Gmail、回复、退款、支持邮件。",

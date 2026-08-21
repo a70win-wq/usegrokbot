@@ -76,7 +76,7 @@ function profileCopy(locale: string, count: number) {
       identity: "Community Blob Identity",
       count: `${count} 個公開案例`,
       xProfile: "X Profile",
-      body: "呢頁集合呢位作者喺 UseGrokBot 出現過嘅公開 Grok Bot 案例。Blob 只係社群身份；每個案例仍然保留原始來源同作者 attribution。",
+      body: "這個頁面集合該作者在 UseGrokBot 出現過的公開 Grok Bot 案例。Blob 只是社群身份；每個案例仍然保留原始來源和作者 attribution。",
     };
   }
   if (locale === "zh-cn") {

@@ -229,6 +229,7 @@ function buildSafeXFallback(item: SourceCase, post: FetchedPost, existingStories
     xPostUrl: item.url,
     sourceUrl: item.url,
     sourceLabel: `${post.authorName} on X`,
+    format: post.isArticle ? "article" : undefined,
   };
 }
 

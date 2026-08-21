@@ -24,5 +24,4 @@ export {
   categoryFor,
   appFor,
 } from "./catalog";
-export { localizeLearnArticle, learnArticleFor } from "./learn";
 export { localizeDiscoverStory, getDiscoverStoryI18n } from "./discover";

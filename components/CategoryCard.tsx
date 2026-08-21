@@ -12,7 +12,7 @@ export function CategoryCard({ topic, count }: { topic: PostTopic; count: number
   return (
     <LocaleLink
       href={`/categories/${topic.slug}`}
-      className="spring-lift rounded-[14px] border border-line bg-card p-5 hover:border-line-strong hover:bg-card-hover"
+      className="spring-lift flex flex-col rounded-[14px] border border-line bg-card p-5 hover:border-line-strong hover:bg-card-hover"
     >
       <BotFace size={28} color={botColorFor(topic.slug)} paper="var(--card)" />
       <h3 className="mt-4 text-[16px] font-medium text-ink">{name}</h3>

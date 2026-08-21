@@ -196,9 +196,9 @@ export default function SubmitPage() {
 function identityCopy(locale: string) {
   if (locale === "zh-Hant") {
     return {
-      title: "你嘅 UseGrokBot 身份",
-      body: "貼上 X URL，就會即時生成你嘅社群 Blob。同一個 handle 永遠係同一隻。",
-      placeholderName: "你嘅 Grok Bot",
+      title: "你的 UseGrokBot 身份",
+      body: "貼上 X URL，就會即時生成你的社群 Blob。同一個 handle 永遠是同一隻。",
+      placeholderName: "你的 Grok Bot",
     };
   }
   if (locale === "zh-Hans") {

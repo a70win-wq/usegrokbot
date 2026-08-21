@@ -67,6 +67,7 @@ export type DiscoverStory = {
   trending?: boolean;
   featured?: boolean;
   tested?: boolean;
+  format?: "post" | "article";
 };
 
 const XAI_INTRO = "https://x.ai/news/introducing-grok-bot";
@@ -166,6 +167,7 @@ const curatedStories: DiscoverStory[] = [
     relatedUseCase: "daily-work-brief",
     trending: true,
     featured: true,
+    format: "article",
   },
   {
     slug: "household-bots-blake-king",
@@ -229,6 +231,7 @@ const curatedStories: DiscoverStory[] = [
     sourceLabel: "Rahul on X",
     trending: true,
     featured: true,
+    format: "article",
   },
   {
     slug: "podcast-summarizer-gavin-baker",
@@ -491,6 +494,7 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: PETER_YANG_FIVE,
     sourceLabel: "Peter Yang on X",
     trending: true,
+    format: "article",
   },
   {
     slug: "ultimate-guide-miles-deutscher",
@@ -521,6 +525,7 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: MILES_GUIDE,
     sourceLabel: "Miles Deutscher on X",
     trending: true,
+    format: "article",
   },
   {
     slug: "bot-team-tips-ben-lang",
@@ -551,6 +556,7 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: BEN_LANG_TIPS,
     sourceLabel: "Ben Lang on X",
     relatedUseCase: "daily-work-brief",
+    format: "article",
   },
   {
     slug: "ceo-desk-teslaconomics",
@@ -581,6 +587,7 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: TESLACONOMICS_CEO,
     sourceLabel: "Teslaconomics on X",
     relatedUseCase: "daily-work-brief",
+    format: "article",
   },
   {
     slug: "agent-loops-alex-finn",
@@ -611,6 +618,7 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: ALEX_FINN_LOOPS,
     sourceUrl: ALEX_FINN_LOOPS,
     sourceLabel: "Alex Finn on X",
+    format: "article",
   },
   {
     slug: "grok-bot-walkthrough-alex-finn",
@@ -671,6 +679,7 @@ const curatedStories: DiscoverStory[] = [
     sourceUrl: KUN_FIRSTMATE,
     sourceLabel: "Kun Chen on X",
     relatedUseCase: "daily-work-brief",
+    format: "article",
   },
   {
     slug: "parents-bot-yunta-tsai",
@@ -761,6 +770,7 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: SCOTTY_EMPLOYEES,
     sourceUrl: SCOTTY_EMPLOYEES,
     sourceLabel: "SCOTTY BEAM on X",
+    format: "article",
   },
   {
     slug: "math-explainer-yunta-tsai",
@@ -1331,6 +1341,27 @@ export function getDiscoverStoriesByApp(app: AppSlug) {
 
 export function storiesForTopic(slug: TopicSlug) {
   return discoverStories.filter((story) => storyMatchesTopic(story, slug));
+}
+
+export function isArticleStory(story: DiscoverStory) {
+  if (story.format === "article") return true;
+  if (story.format === "post") return false;
+  return looksLikeXArticleUrl(story.xPostUrl) || looksLikeXArticleUrl(story.sourceUrl);
+}
+
+export function articleStories() {
+  return discoverStories.filter(isArticleStory);
+}
+
+export function looksLikeXArticleUrl(url?: string) {
+  if (!url) return false;
+  try {
+    const parsed = new URL(url);
+    if (!/^(www\.)?(x\.com|twitter\.com)$/i.test(parsed.hostname)) return false;
+    return /\/(?:i\/)?article\//i.test(parsed.pathname);
+  } catch {
+    return /(?:x\.com|twitter\.com)\/(?:i\/)?[^/\s]+\/article\//i.test(url);
+  }
 }
 
 export function getDiscoverStoryForUseCase(slug: string) {

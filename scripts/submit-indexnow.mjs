@@ -23,7 +23,6 @@ const PATHS = [
   "/categories/sales",
   "/categories/marketing",
   "/categories/research",
-  "/learn/what-is-grok-bot",
 ];
 
 const LOCALES = ["en", "zh-hk", "zh-cn"];

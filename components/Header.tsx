@@ -36,8 +36,12 @@ export function Header({ stars }: { stars?: number | null }) {
       label: t("nav.rankings"),
       match: (current: string) => current.startsWith("/rankings"),
     },
+    {
+      href: "/articles",
+      label: t("nav.articles"),
+      match: (current: string) => current.startsWith("/articles"),
+    },
     { href: "/submit", label: t("nav.submitShort") },
-    { href: "/learn/what-is-grok-bot", label: t("nav.about"), match: (current: string) => current.startsWith("/learn") },
   ];
 
   return (

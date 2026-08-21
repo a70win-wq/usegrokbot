@@ -64,7 +64,7 @@ function grokBotCopy(locale: string) {
     return {
       label: "Grok Bot app",
       iosAria: "打開或安裝 Grok Bot iPhone app",
-      desktopAria: "打開 Grok Bot 官方電腦版登入及下載頁",
+      desktopAria: "打開 Grok Bot 官方電腦版登錄及下載頁",
     };
   }
   if (locale === "zh-Hans") {

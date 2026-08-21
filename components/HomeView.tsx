@@ -6,7 +6,6 @@ import { DiscoverCard } from "@/components/DiscoverCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
-import { GetGrokBot } from "@/components/GetGrokBot";
 import { HeroBot } from "@/components/HeroBot";
 import { SearchBar } from "@/components/SearchBar";
 import { discoverStories, getFeaturedDiscoverStories, storiesForTopic } from "@/data/discover";
@@ -61,9 +60,6 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
                   onQueryChange={setQuery}
                   stayOnPage
                 />
-              </div>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <GetGrokBot variant="accent" />
               </div>
             </div>
             <HeroBot />

@@ -27,6 +27,16 @@ export function tweetIdFromUrl(url: string) {
   return parseXUrl(url)?.id;
 }
 
+const X_ARTICLE_RE = /https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/(?:i\/|[^/\s]+\/)article\/(\d+)/i;
+
+export function xArticleIdFromText(text: string) {
+  return text.match(X_ARTICLE_RE)?.[1];
+}
+
+export function hasXArticleLink(text: string) {
+  return X_ARTICLE_RE.test(text) || /(?:x\.com|twitter\.com)\/(?:i\/)?article\//i.test(text);
+}
+
 const X_URL_RE = /https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[^\s<>"'`)\]|]+/gi;
 
 export function collectXUrls(text: string, limit = 15): string[] {
