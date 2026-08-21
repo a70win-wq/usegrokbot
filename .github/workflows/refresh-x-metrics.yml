@@ -3,8 +3,8 @@ name: Refresh X view counts
 on:
   workflow_dispatch:
   schedule:
-    # 07:00 and 19:00 Hong Kong time
-    - cron: "0 23,11 * * *"
+    # Every 6 hours (offset from awesome-grok-bot ingest at :17)
+    - cron: "47 */6 * * *"
 
 permissions:
   contents: write

@@ -11,6 +11,7 @@ export const messages = {
     bot: {
       aria: "Grok Bot avatar",
       nextColor: "Change bot color",
+      play: "Move the Grok Bot. Drag to place it anywhere. Drop to change color.",
       credit: "Bot avatar from bloub",
     },
     github: {
@@ -238,7 +239,7 @@ export const messages = {
       communityBadge: "Community",
       verifiedOfficial: "Official xAI · Verified {date}",
       sourceChecked: "Community · Source checked {date}",
-      count: "{n} posts",
+      count: "{n} posts · Updated every 6 hours",
       communityNote: "Community cards come from public write-ups. We did not re-run those Bots here.",
     },
     trust: {
@@ -363,6 +364,7 @@ export const messages = {
     bot: {
       aria: "Grok Bot 頭像",
       nextColor: "換機器人顏色",
+      play: "移動 Grok Bot。拖去邊就放邊，放手可換色。",
       credit: "機器人頭像來自 bloub",
     },
     github: {
@@ -588,7 +590,7 @@ export const messages = {
       communityBadge: "社群",
       verifiedOfficial: "官方 · 已核對 {date}",
       sourceChecked: "社群 · 來源已查 {date}",
-      count: "{n} 條帖",
+      count: "{n} 條帖 · 每 6 小時更新",
       communityNote: "社群卡片來自公開文章。我們沒有在這裡重跑那些 Bot。",
     },
     trust: {
@@ -712,6 +714,7 @@ export const messages = {
     bot: {
       aria: "Grok Bot 头像",
       nextColor: "换机器人颜色",
+      play: "移动 Grok Bot。拖去哪就放哪，放手可换色。",
       credit: "机器人头像来自 bloub",
     },
     github: {
@@ -937,7 +940,7 @@ export const messages = {
       communityBadge: "社群",
       verifiedOfficial: "官方 · 已核对 {date}",
       sourceChecked: "社群 · 来源已查 {date}",
-      count: "{n} 条帖",
+      count: "{n} 条帖 · 每 6 小时更新",
       communityNote: "社群卡片来自公开文章。我们没有在这里重跑那些 Bot。",
     },
     trust: {

@@ -101,6 +101,7 @@ export function BloubBot({
   const blockStartRef = useRef(0);
   const pointerRef = useRef<{ x: number; y: number } | null>(null);
   const aimingRef = useRef(false);
+  const lookAimRef = useRef<{ nx: number; ny: number; pointer: boolean } | null>(null);
   const [frame, setFrame] = useState<BotFrame>(stillFrame);
 
   if (engineRef.current === null) {
@@ -158,14 +159,30 @@ export function BloubBot({
         if (box && box.width > 0 && box.height > 0) {
           const aimX = pointer?.x ?? window.innerWidth / 2;
           const aimY = pointer?.y ?? window.innerHeight / 2;
-          const nx = clamp((aimX - (box.left + box.width / 2)) / Math.max(1, window.innerWidth / 2), -1, 1);
-          const ny = clamp((aimY - (box.top + box.height / 2)) / Math.max(1, window.innerHeight / 2), -1, 1);
-          engine.setLook(siteLook(nx, ny, pointer !== null), now);
+          const cx = box.left + box.width / 2;
+          const cy = box.top + box.height / 2;
+          // Face-relative, not viewport-relative: full yaw/pitch at the rim.
+          const reach = Math.max(box.width, box.height) / 2;
+          const nx = clamp((aimX - cx) / Math.max(1, reach), -1, 1);
+          const ny = clamp((aimY - cy) / Math.max(1, reach), -1, 1);
+          const hasPointer = pointer !== null;
+          const prev = lookAimRef.current;
+          if (
+            !aimingRef.current ||
+            !prev ||
+            Math.abs(prev.nx - nx) > 0.002 ||
+            Math.abs(prev.ny - ny) > 0.002 ||
+            prev.pointer !== hasPointer
+          ) {
+            engine.setLook(siteLook(nx, ny, hasPointer), now);
+            lookAimRef.current = { nx, ny, pointer: hasPointer };
+          }
           aimingRef.current = true;
         }
       } else if (aimingRef.current) {
         engine.setLook(null, now);
         aimingRef.current = false;
+        lookAimRef.current = null;
       }
 
       setFrame(engine.sample(now));

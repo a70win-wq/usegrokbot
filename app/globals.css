@@ -177,6 +177,10 @@ html[data-theme="dark"] .featured-glow {
   }
 }
 
+html[data-hero-hold] [data-cursor-bot] {
+  opacity: 0 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .bot-eyes {
     animation: none !important;

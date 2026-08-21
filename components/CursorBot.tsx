@@ -92,6 +92,7 @@ export function CursorBot() {
     <div
       ref={wrapRef}
       aria-hidden
+      data-cursor-bot
       className="pointer-events-none fixed top-0 left-0 z-[200] opacity-0"
       style={{ willChange: "transform" }}
     >
