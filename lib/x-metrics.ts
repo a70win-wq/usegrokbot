@@ -57,3 +57,9 @@ export function articleStoriesByViews() {
       return a.story.publishedAt < b.story.publishedAt ? 1 : -1;
     });
 }
+
+export function learnFeedStories(limit = 5) {
+  return articleStoriesByViews()
+    .slice(0, limit)
+    .map((item) => item.story);
+}

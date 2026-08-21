@@ -17,8 +17,9 @@ import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
 import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
+import { learnFeedStories } from "@/lib/x-metrics";
 
-const mobileTabs: DiscoverTab[] = ["latest", "featured"];
+const mobileTabs: DiscoverTab[] = ["latest", "featured", "learn"];
 
 const outcomeKeys: Record<OutcomeSlug, string> = {
   "make-money": "discover.outcomeMakeMoney",
@@ -33,11 +34,13 @@ const outcomeKeys: Record<OutcomeSlug, string> = {
 const tabKeys: Record<(typeof discoverTabs)[number], string> = {
   latest: "discover.tabLatest",
   featured: "discover.tabFeatured",
+  learn: "discover.tabLearn",
 };
 
 const tabIcons: Record<(typeof discoverTabs)[number], string> = {
   latest: "🆕",
   featured: "⭐",
+  learn: "📘",
 };
 
 const PAGE_SIZE = 12;
@@ -108,6 +111,9 @@ export function DiscoverFilters({
       ) : null}
       {tab === "featured" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabFeaturedHint")}</p>
+      ) : null}
+      {tab === "learn" ? (
+        <p className="mt-2 text-[12px] text-faint">{t("discover.tabLearnHint")}</p>
       ) : null}
 
       <div className="mt-4 hidden gap-2 overflow-x-auto pb-1 md:flex">
@@ -198,10 +204,16 @@ export function DiscoverFeed({
   const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
-  const stories = useMemo(
-    () => filterDiscoverStories({ query, tab, category, outcome, app }),
-    [query, tab, category, outcome, app],
-  );
+  const stories = useMemo(() => {
+    if (tab === "learn") {
+      const ranked = learnFeedStories(5);
+      const allowed = new Set(
+        filterDiscoverStories({ query, tab: "latest", category, outcome, app }).map((item) => item.slug),
+      );
+      return ranked.filter((item) => allowed.has(item.slug));
+    }
+    return filterDiscoverStories({ query, tab, category, outcome, app });
+  }, [query, tab, category, outcome, app]);
 
   const shown = stories.slice(0, visible);
 
@@ -210,7 +222,13 @@ export function DiscoverFeed({
       {showIntro ? (
         <div className="mb-6">
           <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">
-            {t(tab === "featured" ? "discover.feedTitleFeatured" : "discover.feedTitle")}
+            {t(
+              tab === "featured"
+                ? "discover.feedTitleFeatured"
+                : tab === "learn"
+                  ? "discover.feedTitleLearn"
+                  : "discover.feedTitle",
+            )}
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-mute">{t("discover.feedBody")}</p>
         </div>

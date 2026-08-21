@@ -30,9 +30,9 @@ export type OutcomeSlug = (typeof outcomeSlugs)[number];
 
 export type DiscoverSourceKind = "official" | "community";
 
-export type DiscoverTab = "trending" | "latest" | "featured" | "official" | "tested" | "community";
+export type DiscoverTab = "trending" | "latest" | "featured" | "learn" | "official" | "tested" | "community";
 
-export const discoverTabs = ["latest", "featured"] as const;
+export const discoverTabs = ["latest", "featured", "learn"] as const;
 
 export function isDiscoverTab(value: string | undefined): value is DiscoverTab {
   return Boolean(value && (discoverTabs as readonly string[]).includes(value));

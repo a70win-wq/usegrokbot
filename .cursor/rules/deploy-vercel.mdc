@@ -1,33 +1,35 @@
 ---
-description: After finishing site updates, deploy them to Vercel production
+description: Preview first; do not ship to production until the user has tested
 alwaysApply: true
 ---
 
-# Deploy to Vercel after updates
+# Do not deploy to production until the user tests
 
-When you finish a user-requested change that should go live (UI, copy, pages, content, styles), deploy it to Vercel production before you stop. Do not wait for the user to ask again.
+The user asked: after each change, let them test first. Do not push `main` or `vercel deploy --prod` unless they explicitly say to ship / go live.
 
 ## How
 
 This repo is linked to Vercel project `usegrokbot` (team `aipost`). GitHub `a70win-wq/usegrokbot` is connected; `main` is the production branch.
 
-Preferred: commit the finished work (only when the user asked to ship, or after a requested site update) and push `main`. That triggers a production deploy.
+Preferred: commit on the current working branch (not `main`) and `git push -u origin HEAD`. That creates a Vercel **preview**. Give the user the preview URL so they can test.
+
+If they later say to ship:
 
 ```bash
-git push -u origin HEAD
+git push origin HEAD:main
 ```
 
-If git is unavailable, fall back to the CLI:
+or, if git is unavailable:
 
 ```bash
 vercel deploy --prod -y --no-wait --scope aipost
 vercel inspect <deployment-url>
 ```
 
-Then give the user https://usegrokbot.com and the deployment URL.
+Then give https://usegrokbot.com and the deployment URL.
 
 ## Do not
 
-- Deploy unrelated local experiments or half-finished work
+- Push `main` or production-deploy as part of finishing a normal UI/copy change
 - Change Vercel env vars, domains, or project settings as part of a normal deploy
-- Skip deploy because the change looks small. If it is on the live site, ship it.
+- Skip the preview URL. They need something to test.
