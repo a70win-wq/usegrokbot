@@ -17,9 +17,8 @@ import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
 import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
-import { metricForStory } from "@/lib/x-metrics";
 
-const mobileTabs: DiscoverTab[] = ["trending", "latest", "featured"];
+const mobileTabs: DiscoverTab[] = ["latest", "featured"];
 
 const outcomeKeys: Record<OutcomeSlug, string> = {
   "make-money": "discover.outcomeMakeMoney",
@@ -32,13 +31,11 @@ const outcomeKeys: Record<OutcomeSlug, string> = {
 };
 
 const tabKeys: Record<(typeof discoverTabs)[number], string> = {
-  trending: "discover.tabTrending",
   latest: "discover.tabLatest",
   featured: "discover.tabFeatured",
 };
 
 const tabIcons: Record<(typeof discoverTabs)[number], string> = {
-  trending: "🔥",
   latest: "🆕",
   featured: "⭐",
 };
@@ -106,8 +103,8 @@ export function DiscoverFilters({
           {t("discover.filters")}
         </button>
       </div>
-      {tab === "trending" ? (
-        <p className="mt-2 text-[12px] text-faint">{t("discover.tabTrendingHint")}</p>
+      {tab === "latest" ? (
+        <p className="mt-2 text-[12px] text-faint">{t("discover.tabLatestHint")}</p>
       ) : null}
       {tab === "featured" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabFeaturedHint")}</p>
@@ -201,16 +198,10 @@ export function DiscoverFeed({
   const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
-  const stories = useMemo(() => {
-    const list = filterDiscoverStories({ query, tab, category, outcome, app });
-    if (tab !== "trending") return list;
-    return [...list].sort((a, b) => {
-      const viewsA = metricForStory(a)?.views ?? 0;
-      const viewsB = metricForStory(b)?.views ?? 0;
-      if (viewsA !== viewsB) return viewsB - viewsA;
-      return a.publishedAt < b.publishedAt ? 1 : -1;
-    });
-  }, [query, tab, category, outcome, app]);
+  const stories = useMemo(
+    () => filterDiscoverStories({ query, tab, category, outcome, app }),
+    [query, tab, category, outcome, app],
+  );
 
   const shown = stories.slice(0, visible);
 
@@ -219,13 +210,7 @@ export function DiscoverFeed({
       {showIntro ? (
         <div className="mb-6">
           <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">
-            {t(
-              tab === "trending"
-                ? "discover.feedTitleTrending"
-                : tab === "featured"
-                  ? "discover.feedTitleFeatured"
-                  : "discover.feedTitle",
-            )}
+            {t(tab === "featured" ? "discover.feedTitleFeatured" : "discover.feedTitle")}
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-mute">{t("discover.feedBody")}</p>
         </div>

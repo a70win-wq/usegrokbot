@@ -32,7 +32,7 @@ export type DiscoverSourceKind = "official" | "community";
 
 export type DiscoverTab = "trending" | "latest" | "featured" | "official" | "tested" | "community";
 
-export const discoverTabs = ["trending", "latest", "featured"] as const;
+export const discoverTabs = ["latest", "featured"] as const;
 
 export function isDiscoverTab(value: string | undefined): value is DiscoverTab {
   return Boolean(value && (discoverTabs as readonly string[]).includes(value));
@@ -1247,10 +1247,6 @@ const bySlug = new Map(discoverStories.map((story) => [story.slug, story]));
 
 export function getDiscoverStory(slug: string) {
   return bySlug.get(slug);
-}
-
-export function getFeaturedDiscoverStories(limit = 4) {
-  return discoverStories.filter((story) => story.featured).slice(0, limit);
 }
 
 export function getRelatedUseCase(story: DiscoverStory) {

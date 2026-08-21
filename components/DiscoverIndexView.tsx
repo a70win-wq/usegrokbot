@@ -9,7 +9,7 @@ import { useI18n } from "@/lib/i18n";
 
 export function DiscoverIndexView({
   initialQuery = "",
-  initialTab = "trending",
+  initialTab = "latest",
 }: {
   initialQuery?: string;
   initialTab?: DiscoverTab;
