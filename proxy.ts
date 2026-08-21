@@ -19,7 +19,7 @@ const SKIP = new Set([
 ]);
 
 const SOCIAL_CRAWLER =
-  /Twitterbot|facebookexternalhit|Facebot|LinkedInBot|Slackbot|WhatsApp|TelegramBot|Discordbot|Iframely|Embedly|redditbot|Pinterest|Googlebot/i;
+  /Twitterbot|facebookexternalhit|Facebot|LinkedInBot|Slackbot|WhatsApp|TelegramBot|Discordbot|Iframely|Embedly|redditbot|Pinterest|Googlebot|bingbot|Applebot|SkypeUriPreview/i;
 
 function isSocialCrawler(request: NextRequest) {
   return SOCIAL_CRAWLER.test(request.headers.get("user-agent") ?? "");

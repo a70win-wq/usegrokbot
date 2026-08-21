@@ -41,6 +41,7 @@ export function pageMeta({
 }): Metadata {
   const locale = parseUrlLocale(urlLocale);
   const url = absoluteUrl(path, locale);
+  const shareUrl = path === "/" ? site.url : url;
   const image = {
     url: site.shareImage,
     width: 1200,
@@ -61,7 +62,7 @@ export function pageMeta({
     openGraph: {
       title: title.includes(site.name) ? title : `${title} | ${site.name}`,
       description,
-      url,
+      url: shareUrl,
       siteName: site.name,
       type: "website",
       locale: ogLocale[locale],
