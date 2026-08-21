@@ -12,6 +12,7 @@ export const messages = {
       aria: "Grok Bot avatar",
       nextColor: "Change bot color",
       play: "Move the Grok Bot. Drag to place it anywhere. Drop to change color.",
+      boot: "Loading UseGrokBot",
       credit: "Bot avatar from bloub",
     },
     github: {
@@ -365,6 +366,7 @@ export const messages = {
       aria: "Grok Bot 頭像",
       nextColor: "換機器人顏色",
       play: "移動 Grok Bot。拖去邊就放邊，放手可換色。",
+      boot: "正在載入 UseGrokBot",
       credit: "機器人頭像來自 bloub",
     },
     github: {
@@ -715,6 +717,7 @@ export const messages = {
       aria: "Grok Bot 头像",
       nextColor: "换机器人颜色",
       play: "移动 Grok Bot。拖去哪就放哪，放手可换色。",
+      boot: "正在加载 UseGrokBot",
       credit: "机器人头像来自 bloub",
     },
     github: {
