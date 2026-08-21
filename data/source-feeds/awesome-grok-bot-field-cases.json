@@ -10,10 +10,10 @@
   },
   "stats": {
     "total": 15,
-    "candidates": 0,
+    "candidates": 4,
     "xCandidates": 0,
-    "nonXCandidates": 0,
-    "alreadyIngested": 15,
+    "nonXCandidates": 4,
+    "alreadyIngested": 11,
     "pending": 0
   },
   "cases": [
@@ -50,7 +50,7 @@
       "sourceSummary": "Honest near-miss: the Bot can drive the airline site, the last click still needs you.",
       "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "already-ingested",
+      "sourceStatus": "candidate",
       "ingest": {
         "status": "published",
         "attempts": 1
@@ -63,7 +63,7 @@
       "sourceSummary": "CoS shopping run — the fun case that shows computer-use, not chat.",
       "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "already-ingested",
+      "sourceStatus": "candidate",
       "ingest": {
         "status": "published",
         "attempts": 1
@@ -154,7 +154,7 @@
       "sourceSummary": "Customer-support Bot built on a routine, not a helpdesk rewrite.",
       "sourceType": "youtube",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "already-ingested",
+      "sourceStatus": "candidate",
       "ingest": {
         "status": "published",
         "attempts": 1
@@ -206,7 +206,7 @@
       "sourceSummary": "Hands-on JP writeup of living on the shared VM for a week.",
       "sourceType": "note",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
-      "sourceStatus": "already-ingested",
+      "sourceStatus": "candidate",
       "ingest": {
         "status": "published",
         "attempts": 1
