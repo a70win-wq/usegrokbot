@@ -48,7 +48,12 @@ export function HomeView({ initialQuery = "" }: { initialQuery?: string }) {
         <div className="mx-auto max-w-[1240px] px-5 pt-20 pb-12 md:px-8 md:pt-[104px] md:pb-16">
           <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
             <div className="min-w-0">
-              <p className="text-[13px] font-medium tracking-[0.14em] text-mute uppercase">{t("home.kicker")}</p>
+              <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[13px] text-mute">
+                <span className="font-medium tracking-[0.14em] uppercase">{t("home.kicker")}</span>
+                <LocaleLink href="/how-we-built" className="hover:text-ink">
+                  {t("pages.builtTitle")} →
+                </LocaleLink>
+              </p>
               <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
                 {t("home.title")}
               </h1>
