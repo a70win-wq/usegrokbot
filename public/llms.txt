@@ -11,6 +11,7 @@ Locales: /en /zh-hk /zh-cn
 - https://usegrokbot.com/en/categories
 - https://usegrokbot.com/en/categories/email
 - https://usegrokbot.com/en/articles
+- https://usegrokbot.com/en/how-we-built
 - https://usegrokbot.com/sitemap.xml
 
 ## Categories

@@ -23,6 +23,7 @@ export const extractSchema = z.object({
   difficulty: z.enum(["easy", "medium", "advanced"]),
   schedule: z.enum(["one-time", "daily", "weekly", "always-on"]),
   format: z.enum(["post", "article"]).optional(),
+  elonLiked: z.boolean().optional(),
 });
 
 export type ExtractedCase = z.infer<typeof extractSchema>;

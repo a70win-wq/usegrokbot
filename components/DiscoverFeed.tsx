@@ -39,7 +39,7 @@ const tabKeys: Record<(typeof discoverTabs)[number], string> = {
 
 const tabIcons: Record<(typeof discoverTabs)[number], string> = {
   latest: "🆕",
-  featured: "⭐",
+  featured: "♥",
   learn: "📘",
 };
 
@@ -246,8 +246,12 @@ export function DiscoverFeed({
             expression="thinking"
             className="mx-auto mb-4"
           />
-          <p className="text-sm text-ink">{t("discover.empty")}</p>
-          <p className="mt-2 text-[13px] text-mute">{t("discover.emptyHint")}</p>
+          <p className="text-sm text-ink">
+            {t(tab === "featured" ? "discover.emptyElonLiked" : "discover.empty")}
+          </p>
+          <p className="mt-2 text-[13px] text-mute">
+            {t(tab === "featured" ? "discover.emptyElonLikedHint" : "discover.emptyHint")}
+          </p>
         </div>
       ) : (
         <>

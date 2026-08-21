@@ -48,7 +48,7 @@ export async function ingestUseCase(input: IngestInput): Promise<IngestResult> {
   }
 
   const slug = makeStorySlug(post.handle, checked.extracted.title, existingStoryKeys().slugs);
-  const story = toDiscoverStory(post, checked.extracted, slug);
+  const story = toDiscoverStory(post, checked.extracted, slug, { notes: input.notes });
 
   if (input.phase === "extract") {
     return { status: "extracted", story, confidence: checked.confidence };

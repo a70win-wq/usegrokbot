@@ -23,7 +23,10 @@ function readIssue() {
   const story = jsonMatch ? (JSON.parse(jsonMatch[1]) as DiscoverStory) : null;
   const prompt = pickSection(body, "Prompt");
   const notes = pickSection(body, "Notes");
-  return { urls, story, prompt, notes };
+  const elonLikedIds = new Set(
+    collectXUrls(pickSection(body, "Elon liked") ?? "").map((url) => tweetIdFromUrl(url)).filter(Boolean),
+  );
+  return { urls, story, prompt, notes, elonLikedIds };
 }
 
 function pickSection(body: string, heading: string) {
@@ -135,7 +138,11 @@ async function main() {
       continue;
     }
     try {
-      const row = await ingestUrl(xUrl, issue.prompt, issue.notes);
+      const liked = Boolean(id && issue.elonLikedIds.has(id));
+      const notes = liked
+        ? [issue.notes, "Elon liked this post."].filter(Boolean).join("\n")
+        : issue.notes;
+      const row = await ingestUrl(xUrl, issue.prompt, notes);
       rows.push(row);
       if ((row.status === "published" || row.status === "queued") && id) seen.add(id);
     } catch (error) {

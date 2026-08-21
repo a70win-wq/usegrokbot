@@ -103,10 +103,15 @@ export function validateExtractedCase(
   };
 }
 
+export function notesSayElonLiked(notes?: string) {
+  return Boolean(notes && /elon\s+liked/i.test(notes));
+}
+
 export function toDiscoverStory(
   post: FetchedPost,
   extracted: ExtractedCase,
   slug: string,
+  extras: { notes?: string } = {},
 ): DiscoverStory {
   return {
     slug,
@@ -134,6 +139,7 @@ export function toDiscoverStory(
     sourceUrl: post.url,
     sourceLabel: `${post.authorName} on X`,
     format: extracted.format === "article" || post.isArticle ? "article" : undefined,
+    elonLiked: extracted.elonLiked || notesSayElonLiked(extras.notes) || undefined,
   };
 }
 

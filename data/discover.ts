@@ -1,8 +1,10 @@
 import ingestedStories from "./discover/ingested.json";
+import elonLikedFile from "./discover/elon-liked.json";
 import { appSearchText } from "./apps";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { storyMatchesTopic, type TopicSlug } from "./topics";
 import { getUseCase } from "./use-cases";
+import { tweetIdFromUrl } from "@/lib/ingest/x-url";
 
 export const discoverCategorySlugs = [
   "sales",
@@ -68,6 +70,7 @@ export type DiscoverStory = {
   featured?: boolean;
   tested?: boolean;
   format?: "post" | "article";
+  elonLiked?: boolean;
 };
 
 const XAI_INTRO = "https://x.ai/news/introducing-grok-bot";
@@ -1299,7 +1302,7 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   if (filters.tab === "official") next = next.filter((item) => item.source === "official");
   if (filters.tab === "community") next = next.filter((item) => item.source === "community");
   if (filters.tab === "tested") next = next.filter((item) => item.tested);
-  if (filters.tab === "featured") next = next.filter((item) => item.featured);
+  if (filters.tab === "featured") next = next.filter((item) => isElonLiked(item));
 
   const category = filters.category;
   const outcome = filters.outcome;
@@ -1344,6 +1347,14 @@ export function isArticleStory(story: DiscoverStory) {
 
 export function articleStories() {
   return discoverStories.filter(isArticleStory);
+}
+
+const elonLikedIds = new Set((elonLikedFile as { tweetIds?: string[] }).tweetIds ?? []);
+
+export function isElonLiked(story: DiscoverStory) {
+  if (story.elonLiked) return true;
+  const id = tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? "");
+  return Boolean(id && elonLikedIds.has(id));
 }
 
 export function looksLikeXArticleUrl(url?: string) {
