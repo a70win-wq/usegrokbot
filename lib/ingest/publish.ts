@@ -133,6 +133,7 @@ export async function queueIngestIssue(urls: string[]) {
 }
 
 export async function fileIngestError(input: { url: string; code: string; reason: string }) {
+  if (process.env.INGEST_ERROR_ISSUES !== "1") return;
   if (!canPublish()) return;
   const { owner, name } = repo();
   await gh(`/repos/${owner}/${name}/issues`, {

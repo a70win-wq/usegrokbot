@@ -1,10 +1,12 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { ingestUseCase } from "../lib/ingest/pipeline";
-import { publishStory } from "../lib/ingest/publish";
 import { assertStorySafe } from "../lib/ingest/validate";
 import { collectXUrls, isIngestIssueTitle, tweetIdFromUrl } from "../lib/ingest/x-url";
 import { discoverStories, type DiscoverStory } from "../data/discover";
 import { site } from "../lib/site";
+
+const INGESTED_PATH = "data/discover/ingested.json";
+const MAX_URLS = 200;
 
 type Row = {
   url: string;
@@ -13,20 +15,19 @@ type Row = {
   detail?: string;
 };
 
-function readIssue() {
-  const title = process.env.ISSUE_TITLE ?? "";
-  const body = process.env.ISSUE_BODY ?? "";
-  const urls = collectXUrls(
-    [title, body, process.env.INGEST_URL ?? "", process.env.INGEST_URLS ?? ""].join("\n"),
-  );
-  const jsonMatch = body.match(/```json\s*([\s\S]*?)```/);
-  const story = jsonMatch ? (JSON.parse(jsonMatch[1]) as DiscoverStory) : null;
-  const prompt = pickSection(body, "Prompt");
-  const notes = pickSection(body, "Notes");
-  const elonLikedIds = new Set(
-    collectXUrls(pickSection(body, "Elon liked") ?? "").map((url) => tweetIdFromUrl(url)).filter(Boolean),
-  );
-  return { urls, story, prompt, notes, elonLikedIds };
+type GitHubIssue = {
+  number: number;
+  title: string;
+  body?: string | null;
+  pull_request?: unknown;
+};
+
+function readIngested() {
+  return JSON.parse(readFileSync(INGESTED_PATH, "utf8")) as DiscoverStory[];
+}
+
+function writeIngested(stories: DiscoverStory[]) {
+  writeFileSync(INGESTED_PATH, `${JSON.stringify(stories, null, 2)}\n`);
 }
 
 function pickSection(body: string, heading: string) {
@@ -36,53 +37,71 @@ function pickSection(body: string, heading: string) {
   return value;
 }
 
-async function extractViaSite(xUrl: string, prompt?: string, notes?: string) {
-  const response = await fetch(`${site.url}/api/ingest`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-ingest-mode": "extract",
-    },
-    body: JSON.stringify({ xUrl, prompt, notes, phase: "extract" }),
-  });
-  const data = (await response.json()) as { status: string; story?: DiscoverStory; reason?: string };
-  if (data.status !== "extracted" || !data.story) {
-    throw new Error(data.reason || "extract_via_site_failed");
-  }
-  return data.story;
+function parseIssue(title: string, body: string) {
+  const urls = collectXUrls([title, body, process.env.INGEST_URL ?? "", process.env.INGEST_URLS ?? ""].join("\n"), MAX_URLS);
+  const jsonMatch = body.match(/```json\s*([\s\S]*?)```/);
+  const story = jsonMatch ? (JSON.parse(jsonMatch[1]) as DiscoverStory) : null;
+  const prompt = pickSection(body, "Prompt");
+  const notes = pickSection(body, "Notes");
+  const elonLikedIds = new Set(
+    collectXUrls(pickSection(body, "Elon liked") ?? "", MAX_URLS)
+      .map((url) => tweetIdFromUrl(url))
+      .filter((id): id is string => Boolean(id)),
+  );
+  return { urls, story, prompt, notes, elonLikedIds };
 }
 
-async function ingestUrl(xUrl: string, prompt?: string, notes?: string): Promise<Row> {
-  const result = await ingestUseCase({ xUrl, prompt, notes });
-  if (result.status === "published" || result.status === "queued") {
-    return { url: xUrl, status: result.status, detail: result.prUrl };
+async function githubApi<T>(path: string, init?: RequestInit): Promise<T> {
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error("missing_github_token");
+  const response = await fetch(`https://api.github.com${path}`, {
+    ...init,
+    headers: {
+      Accept: "application/vnd.github+json",
+      Authorization: `Bearer ${token}`,
+      "User-Agent": "usegrokbot.com",
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(init?.body ? { "Content-Type": "application/json" } : {}),
+      ...init?.headers,
+    },
+  });
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`github_${response.status}:${body.slice(0, 240)}`);
   }
-  if (result.status === "extracted") {
-    assertStorySafe(
-      result.story,
-      discoverStories.filter((item) => item.slug !== result.story.slug),
+  if (response.status === 204) return undefined as T;
+  return (await response.json()) as T;
+}
+
+async function listOpenIngestIssues() {
+  const [owner, name] = site.githubRepo.split("/");
+  const issues: GitHubIssue[] = [];
+  for (let page = 1; page <= 10; page += 1) {
+    const batch = await githubApi<GitHubIssue[]>(
+      `/repos/${owner}/${name}/issues?state=open&per_page=100&page=${page}`,
     );
-    const published = await publishStory(result.story);
-    return {
-      url: xUrl,
-      status: published.merged ? "published" : "queued",
-      detail: published.prUrl,
-    };
+    issues.push(...batch.filter((issue) => isIngestIssueTitle(issue.title) && !issue.pull_request));
+    if (batch.length < 100) break;
   }
-  if (result.status === "skipped" && result.code === "extract_failed") {
-    const story = await extractViaSite(xUrl, prompt, notes);
-    assertStorySafe(
-      story,
-      discoverStories.filter((item) => item.slug !== story.slug),
-    );
-    const published = await publishStory(story);
-    return {
-      url: xUrl,
-      status: published.merged ? "published" : "queued",
-      detail: published.prUrl,
-    };
+  return issues;
+}
+
+async function closeProcessedIssues(issues: GitHubIssue[], body: string) {
+  const [owner, name] = site.githubRepo.split("/");
+  for (const issue of issues) {
+    try {
+      await githubApi(`/repos/${owner}/${name}/issues/${issue.number}/comments`, {
+        method: "POST",
+        body: JSON.stringify({ body }),
+      });
+      await githubApi(`/repos/${owner}/${name}/issues/${issue.number}`, {
+        method: "PATCH",
+        body: JSON.stringify({ state: "closed", state_reason: "completed" }),
+      });
+    } catch (error) {
+      console.warn(`Could not close issue #${issue.number}:`, error);
+    }
   }
-  return { url: xUrl, status: "skipped", code: result.code, detail: result.reason };
 }
 
 function writeSummary(rows: Row[]) {
@@ -97,19 +116,70 @@ function writeSummary(rows: Row[]) {
   const text = `${lines.join("\n")}\n`;
   writeFileSync("ingest-results.md", text);
   console.log(text);
+  return text;
+}
+
+async function ingestUrl(
+  xUrl: string,
+  extras: { prompt?: string; notes?: string },
+  catalog: DiscoverStory[],
+): Promise<{ row: Row; story?: DiscoverStory }> {
+  const result = await ingestUseCase({
+    xUrl,
+    prompt: extras.prompt,
+    notes: extras.notes,
+    phase: "extract",
+    catalog,
+  });
+  if (result.status === "extracted") {
+    assertStorySafe(
+      result.story,
+      catalog.filter((item) => item.slug !== result.story.slug),
+    );
+    return {
+      row: { url: xUrl, status: "published", detail: result.story.slug },
+      story: result.story,
+    };
+  }
+  if (result.status === "skipped") {
+    return { row: { url: xUrl, status: "skipped", code: result.code, detail: result.reason } };
+  }
+  return { row: { url: xUrl, status: result.status, detail: result.prUrl } };
 }
 
 async function main() {
+  const eventName = process.env.GITHUB_EVENT_NAME ?? "";
   const title = process.env.ISSUE_TITLE ?? "";
-  if (!isIngestIssueTitle(title) && !process.env.INGEST_URL && !process.env.INGEST_URLS) {
+  const body = process.env.ISSUE_BODY ?? "";
+  const directUrls = collectXUrls([process.env.INGEST_URL ?? "", process.env.INGEST_URLS ?? ""].join("\n"), MAX_URLS);
+
+  let issue = parseIssue(title, body);
+  let drained: GitHubIssue[] = [];
+
+  if (issue.urls.length === 0 && !issue.story && (eventName === "schedule" || (eventName === "workflow_dispatch" && directUrls.length === 0))) {
+    drained = await listOpenIngestIssues();
+    const combined = drained.map((item) => item.body ?? "").join("\n");
+    const elon = drained.flatMap((item) => collectXUrls(pickSection(item.body ?? "", "Elon liked") ?? "", MAX_URLS));
+    issue = {
+      urls: collectXUrls(combined, MAX_URLS),
+      story: null,
+      prompt: undefined,
+      notes: drained.map((item) => pickSection(item.body ?? "", "Notes")).filter(Boolean).join("\n") || undefined,
+      elonLikedIds: new Set(elon.map((url) => tweetIdFromUrl(url)).filter((id): id is string => Boolean(id))),
+    };
+    console.log(`Draining ${drained.length} open ingest issues (${issue.urls.length} URLs).`);
+  }
+
+  if (!isIngestIssueTitle(title) && !issue.urls.length && !issue.story && !directUrls.length && !drained.length) {
     console.log("skip: not an ingest issue");
     return;
   }
 
-  const issue = readIssue();
+  const working = [...discoverStories];
+  const ingested = readIngested();
   const seen = new Set(
-    discoverStories.flatMap((item) =>
-      [item.xPostUrl, item.sourceUrl].map((url) => tweetIdFromUrl(url ?? "")).filter(Boolean),
+    working.flatMap((item) =>
+      [item.xPostUrl, item.sourceUrl].map((url) => tweetIdFromUrl(url ?? "")).filter((id): id is string => Boolean(id)),
     ),
   );
   const rows: Row[] = [];
@@ -117,15 +187,18 @@ async function main() {
   if (issue.story?.slug && issue.urls.length === 0) {
     assertStorySafe(
       issue.story,
-      discoverStories.filter((item) => item.slug !== issue.story!.slug),
+      working.filter((item) => item.slug !== issue.story!.slug),
     );
-    const published = await publishStory(issue.story);
+    ingested.push(issue.story);
+    working.push(issue.story);
+    writeIngested(ingested);
     rows.push({
       url: issue.story.xPostUrl ?? issue.story.sourceUrl,
-      status: published.merged ? "published" : "queued",
-      detail: published.prUrl,
+      status: "published",
+      detail: issue.story.slug,
     });
-    writeSummary(rows);
+    const summary = writeSummary(rows);
+    if (drained.length) await closeProcessedIssues(drained, summary);
     return;
   }
 
@@ -139,12 +212,16 @@ async function main() {
     }
     try {
       const liked = Boolean(id && issue.elonLikedIds.has(id));
-      const notes = liked
-        ? [issue.notes, "Elon liked this post."].filter(Boolean).join("\n")
-        : issue.notes;
-      const row = await ingestUrl(xUrl, issue.prompt, notes);
+      const notes = liked ? [issue.notes, "Elon liked this post."].filter(Boolean).join("\n") : issue.notes;
+      const { row, story } = await ingestUrl(xUrl, { prompt: issue.prompt, notes }, working);
       rows.push(row);
-      if ((row.status === "published" || row.status === "queued") && id) seen.add(id);
+      if (story) {
+        ingested.push(story);
+        working.push(story);
+        writeIngested(ingested);
+        if (id) seen.add(id);
+      }
+      await new Promise((resolve) => setTimeout(resolve, 150));
     } catch (error) {
       rows.push({
         url: xUrl,
@@ -155,11 +232,8 @@ async function main() {
     }
   }
 
-  writeSummary(rows);
-  const usable = rows.filter(
-    (row) => row.status === "published" || row.status === "queued" || row.code === "duplicate",
-  );
-  if (usable.length === 0) throw new Error("All URLs failed ingest.");
+  const summary = writeSummary(rows);
+  if (drained.length) await closeProcessedIssues(drained, summary);
 }
 
 main().catch((error) => {

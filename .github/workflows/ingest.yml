@@ -2,7 +2,9 @@ name: Ingest use case
 
 on:
   issues:
-    types: [opened]
+    types: [opened, reopened]
+  schedule:
+    - cron: "12 */3 * * *"
   workflow_dispatch:
     inputs:
       url:
@@ -17,15 +19,22 @@ permissions:
   pull-requests: write
   issues: write
 
+concurrency:
+  group: ingest-use-case
+  cancel-in-progress: false
+
 jobs:
   ingest:
-    if: ${{ github.event_name == 'workflow_dispatch' || startsWith(github.event.issue.title, 'Ingest use case:') || startsWith(github.event.issue.title, 'Ingest posts:') || startsWith(github.event.issue.title, 'Ingest batch:') }}
+    if: ${{ github.event_name != 'issues' || startsWith(github.event.issue.title, 'Ingest use case:') || startsWith(github.event.issue.title, 'Ingest posts:') || startsWith(github.event.issue.title, 'Ingest batch:') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - run: npx tsx scripts/ingest-issue.ts
@@ -36,6 +45,21 @@ jobs:
           ISSUE_BODY: ${{ github.event.issue.body }}
           INGEST_URL: ${{ github.event.inputs.url }}
           INGEST_URLS: ${{ github.event.inputs.urls }}
+      - run: npm run validate:discover
+      - name: Publish ingested stories
+        if: success()
+        shell: bash
+        run: |
+          git config user.name "usegrokbot-source-bot"
+          git config user.email "usegrokbot-source-bot@users.noreply.github.com"
+          git add data/discover/ingested.json
+          if git diff --cached --quiet; then
+            echo "No new stories to publish."
+            exit 0
+          fi
+          git commit -m "chore: ingest X posts from Grok Bot"
+          git pull --rebase origin main
+          git push origin HEAD:main
       - if: ${{ failure() && github.event.issue.number }}
         uses: actions/github-script@v7
         with:

@@ -77,27 +77,67 @@ async function fromFxTwitter(id: string): Promise<FetchedPost | null> {
 }
 
 async function fromOEmbed(url: string, id: string): Promise<FetchedPost | null> {
-  const response = await fetch(
+  const endpoints = [
+    `https://publish.x.com/oembed?url=${encodeURIComponent(url)}&omit_script=true`,
     `https://publish.twitter.com/oembed?url=${encodeURIComponent(url)}&omit_script=true`,
-    { headers: { "User-Agent": "usegrokbot.com" } },
+  ];
+  for (const endpoint of endpoints) {
+    const response = await fetch(endpoint, { headers: { "User-Agent": "usegrokbot.com" } });
+    if (!response.ok) continue;
+    const data = (await response.json()) as {
+      author_name?: string;
+      author_url?: string;
+      html?: string;
+    };
+    const text = data.html ? stripHtml(data.html) : "";
+    const handle = data.author_url?.split("/").filter(Boolean).pop();
+    if (!data.author_name || !handle || text.length < 8) continue;
+    return {
+      url,
+      id,
+      handle,
+      authorName: data.author_name,
+      text,
+      publishedAt: new Date().toISOString().slice(0, 10),
+      sourceText: text,
+    };
+  }
+  return null;
+}
+
+async function fromSyndication(id: string): Promise<FetchedPost | null> {
+  const response = await fetch(
+    `https://cdn.syndication.twimg.com/tweet-result?id=${id}&lang=en&token=0`,
+    { headers: { "User-Agent": "Mozilla/5.0" } },
   );
   if (!response.ok) return null;
   const data = (await response.json()) as {
-    author_name?: string;
-    author_url?: string;
-    html?: string;
+    __typename?: string;
+    text?: string;
+    created_at?: string;
+    user?: { name?: string; screen_name?: string };
+    quoted_tweet?: { text?: string; user?: { name?: string; screen_name?: string } };
   };
-  const text = data.html ? stripHtml(data.html) : "";
-  const handle = data.author_url?.split("/").filter(Boolean).pop();
-  if (!data.author_name || !handle || text.length < 8) return null;
+  if (data.__typename === "TweetTombstone") return null;
+  const text = data.text?.trim() ?? "";
+  const handle = data.user?.screen_name;
+  const authorName = data.user?.name;
+  if (!text || !handle || !authorName) return null;
+  const publishedAt = data.created_at ? isoDay(data.created_at) : null;
+  if (!publishedAt) return null;
+  const quoted = data.quoted_tweet?.text
+    ? `${data.quoted_tweet.user?.name ?? ""} @${data.quoted_tweet.user?.screen_name ?? ""}: ${data.quoted_tweet.text}`.trim()
+    : undefined;
   return {
-    url,
+    url: `https://x.com/${handle}/status/${id}`,
     id,
     handle,
-    authorName: data.author_name,
+    authorName,
     text,
-    publishedAt: new Date().toISOString().slice(0, 10),
-    sourceText: text,
+    quotedText: quoted,
+    publishedAt,
+    sourceText: quoted ? `${text}\n\n${quoted}` : text,
+    isArticle: isLongFormXPost({ url: `https://x.com/${handle}/status/${id}`, text }),
   };
 }
 
@@ -107,12 +147,21 @@ export function isLongFormXPost(post: { url: string; text: string; isNoteTweet?:
   return false;
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export async function fetchXPost(rawUrl: string): Promise<FetchedPost> {
   const parsed = parseXUrl(rawUrl);
   if (!parsed) throw new Error("invalid_x_url");
-  const fx = await fromFxTwitter(parsed.id);
-  if (fx) return fx;
+  for (const attempt of [0, 1]) {
+    const fx = await fromFxTwitter(parsed.id);
+    if (fx) return fx;
+    if (attempt === 0) await sleep(800);
+  }
   const embed = await fromOEmbed(parsed.url, parsed.id);
   if (embed) return embed;
+  const syndication = await fromSyndication(parsed.id);
+  if (syndication) return syndication;
   throw new Error("source_unreadable");
 }

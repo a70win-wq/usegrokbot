@@ -1,5 +1,6 @@
 import { discoverStories, type DiscoverStory } from "@/data/discover";
 import { extractCase } from "./extract";
+import { fallbackExtract } from "./fallback";
 import { fetchXPost } from "./fetch-post";
 import { canPublish, fileIngestError, publishStory } from "./publish";
 import { makeStorySlug } from "./slug";
@@ -11,6 +12,7 @@ export type IngestInput = {
   prompt?: string;
   notes?: string;
   phase?: "full" | "extract";
+  catalog?: DiscoverStory[];
 };
 
 export type IngestResult =
@@ -19,7 +21,12 @@ export type IngestResult =
   | { status: "extracted"; story: DiscoverStory; confidence: number }
   | { status: "skipped"; code: string; reason: string };
 
+function canExtractWithAi() {
+  return Boolean(process.env.AI_GATEWAY_API_KEY);
+}
+
 export async function ingestUseCase(input: IngestInput): Promise<IngestResult> {
+  const catalog = input.catalog ?? discoverStories;
   const parsed = parseXUrl(input.xUrl);
   if (!parsed) return { status: "skipped", code: "invalid_x_url", reason: "Use a public x.com or twitter.com post URL." };
 
@@ -33,21 +40,25 @@ export async function ingestUseCase(input: IngestInput): Promise<IngestResult> {
   }
 
   let extracted;
-  try {
-    extracted = await extractCase(post, { prompt: input.prompt, notes: input.notes });
-  } catch {
-    const result = { status: "skipped" as const, code: "extract_failed", reason: "Could not parse this post." };
-    await fileIngestError({ url: post.url, code: result.code, reason: result.reason });
-    return result;
+  if (canExtractWithAi()) {
+    try {
+      extracted = await extractCase(post, { prompt: input.prompt, notes: input.notes });
+    } catch (error) {
+      const detail = error instanceof Error ? error.message : "extract_failed";
+      console.warn(`AI extract failed for ${post.url}; using source fallback. ${detail}`);
+      extracted = fallbackExtract(post, { prompt: input.prompt, notes: input.notes });
+    }
+  } else {
+    extracted = fallbackExtract(post, { prompt: input.prompt, notes: input.notes });
   }
 
-  const checked = validateExtractedCase(post, extracted, { prompt: input.prompt }, discoverStories);
+  const checked = validateExtractedCase(post, extracted, { prompt: input.prompt }, catalog);
   if (!checked.ok) {
     await fileIngestError({ url: post.url, code: checked.code, reason: checked.reason });
     return { status: "skipped", code: checked.code, reason: checked.reason };
   }
 
-  const slug = makeStorySlug(post.handle, checked.extracted.title, existingStoryKeys().slugs);
+  const slug = makeStorySlug(post.handle, checked.extracted.title, existingStoryKeys(catalog).slugs);
   const story = toDiscoverStory(post, checked.extracted, slug, { notes: input.notes });
 
   if (input.phase === "extract") {
