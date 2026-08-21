@@ -1325,9 +1325,6 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   }
 
   const byDate = (a: DiscoverStory, b: DiscoverStory) => (a.publishedAt < b.publishedAt ? 1 : -1);
-  if (filters.tab === "trending") {
-    return [...next].sort((a, b) => Number(Boolean(b.trending)) - Number(Boolean(a.trending)) || byDate(a, b));
-  }
   return [...next].sort(byDate);
 }
 
