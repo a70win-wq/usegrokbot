@@ -54,6 +54,7 @@ export async function generateMetadata({
       images: [
         {
           url: site.shareImage,
+          secureUrl: site.shareImage,
           width: 1200,
           height: 630,
           alt: `${site.name} — ${messages[locale].home.title}`,
@@ -64,7 +65,16 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: `${messages[locale].home.title} | ${site.name}`,
-      images: [site.shareImage],
+      images: [
+        {
+          url: site.shareImage,
+          secureUrl: site.shareImage,
+          width: 1200,
+          height: 630,
+          alt: `${site.name} — ${messages[locale].home.title}`,
+          type: "image/jpeg",
+        },
+      ],
     },
     robots: {
       index: true,
