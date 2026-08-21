@@ -4,7 +4,7 @@ import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
-import type { DiscoverStory } from "@/data/discover";
+import { isElonLiked, type DiscoverStory } from "@/data/discover";
 import { topicsForStory } from "@/data/topics";
 import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { cn } from "@/lib/cn";
@@ -35,11 +35,11 @@ export function DiscoverCard({
         featured && "featured-glow",
       )}
     >
-      {featured ? (
+      {featured || isElonLiked(story) ? (
         <p className="text-[11px] font-medium tracking-[0.12em] text-accent uppercase">{t("discover.featured")}</p>
       ) : null}
 
-      <div className={cn("flex min-w-0 items-start justify-between gap-3", featured && "mt-3")}>
+      <div className={cn("flex min-w-0 items-start justify-between gap-3", (featured || isElonLiked(story)) && "mt-3")}>
         <div className="flex min-w-0 items-center gap-3">
           <AuthorAvatar name={item.authorName} handle={story.handle} size={featured ? 48 : 40} />
           <div className="min-w-0">

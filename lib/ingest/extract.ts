@@ -23,7 +23,7 @@ export async function extractCase(
       "howItWorks must say we did not re-run this Bot.",
       "Keep each text field to 1-3 sentences. No hype.",
       "Set format to article if this is an X Article, a long-form note, a tutorial, or a guide. Set format to post for short demos, screenshots, or one-off results.",
-      "Set elonLiked=true only if SUBMITTER NOTES or SOURCE TEXT clearly say Elon Musk liked this post. Do not guess.",
+      "Set elonLiked=true only if SUBMITTER NOTES or SOURCE TEXT clearly say Elon Musk liked, reposted, or quoted this post. Do not guess.",
       "",
       `AUTHOR: ${post.authorName} @${post.handle}`,
       `DATE: ${post.publishedAt}`,

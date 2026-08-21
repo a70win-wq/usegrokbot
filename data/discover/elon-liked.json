@@ -1,4 +1,480 @@
 {
-  "updatedAt": "",
-  "tweetIds": []
+  "updatedAt": "2026-08-21",
+  "sourceNote": "Grok Build search of Elon Musk (@elonmusk) reposts and quotes of Grok Bot posts, 2026-08-11 to 2026-08-21. Cards use the original tweet, not Elon's repost.",
+  "tweetIds": [
+    "2090603356649562522",
+    "2090489024125509907",
+    "2090568508069572975",
+    "2090497355649008059",
+    "2090516140304761228",
+    "2090452168037831119",
+    "2090422774825202020",
+    "2090482777628324348",
+    "2090484253071151424",
+    "2090168861912170972",
+    "2090413962189754641",
+    "2090450591688360033",
+    "2090174525468033116",
+    "2090138832511324179",
+    "2090355235751379002",
+    "2090222739328053353",
+    "2090366905169379554",
+    "2090368200693440841",
+    "2090197165448769689",
+    "2090326196034695560",
+    "2090093942079447451",
+    "2090016937770402275",
+    "2090274598856052843",
+    "2090135151871189220",
+    "2090141038774243522",
+    "2090288085125013553",
+    "2090303103434408184",
+    "2090195841822998888",
+    "2090044078897742207",
+    "2087891600345010323",
+    "2089995692874068433",
+    "2089913996711198870",
+    "2089879632929554498",
+    "2089881822884692399",
+    "2089943313210036358",
+    "2089896096298627248",
+    "2089781171060179338",
+    "2089777127201608150",
+    "2089747957545410816",
+    "2089505950470459659",
+    "2089802845239587150",
+    "2089401696946634801",
+    "2089461344332394994",
+    "2089379355692527813",
+    "2089223114416898288",
+    "2089190230645432329",
+    "2089111464921501985",
+    "2088740832266306033",
+    "2088468642438521212",
+    "2088666462819082645",
+    "2087832375526920381",
+    "2087988529787736575",
+    "2087642719447609374",
+    "2087685264617406963",
+    "2087415205756391461",
+    "2087537837050597741",
+    "2087255832677253435",
+    "2087340859138224540",
+    "2087224798078517251"
+  ],
+  "posts": [
+    {
+      "originalId": "2090603356649562522",
+      "originalUrl": "https://x.com/DavidCarbutt_/status/2090603356649562522",
+      "elonId": "2090613489307943198",
+      "elonUrl": "https://x.com/elonmusk/status/2090613489307943198",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090489024125509907",
+      "originalUrl": "https://x.com/BrianNorgard/status/2090489024125509907",
+      "elonId": "2090595520301400261",
+      "elonUrl": "https://x.com/elonmusk/status/2090595520301400261",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090568508069572975",
+      "originalUrl": "https://x.com/KanekoaTheGreat/status/2090568508069572975",
+      "elonId": "2090582703968010284",
+      "elonUrl": "https://x.com/elonmusk/status/2090582703968010284",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090497355649008059",
+      "originalUrl": "https://x.com/naval/status/2090497355649008059",
+      "elonId": "2090582691016028525",
+      "elonUrl": "https://x.com/elonmusk/status/2090582691016028525",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090516140304761228",
+      "originalUrl": "https://x.com/rewind02/status/2090516140304761228",
+      "elonId": "2090549541338534116",
+      "elonUrl": "https://x.com/elonmusk/status/2090549541338534116",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090452168037831119",
+      "originalUrl": "https://x.com/joehansen/status/2090452168037831119",
+      "elonId": "2090498775714259233",
+      "elonUrl": "https://x.com/elonmusk/status/2090498775714259233",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090422774825202020",
+      "originalUrl": "https://x.com/mikepat711/status/2090422774825202020",
+      "elonId": "2090496958498562126",
+      "elonUrl": "https://x.com/elonmusk/status/2090496958498562126",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090482777628324348",
+      "originalUrl": "https://x.com/mattyp/status/2090482777628324348",
+      "elonId": "2090496877015744721",
+      "elonUrl": "https://x.com/elonmusk/status/2090496877015744721",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090484253071151424",
+      "originalUrl": "https://x.com/yunta_tsai/status/2090484253071151424",
+      "elonId": "2090492504223170671",
+      "elonUrl": "https://x.com/elonmusk/status/2090492504223170671",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090168861912170972",
+      "originalUrl": "https://x.com/bot/status/2090168861912170972",
+      "elonId": "2090489998382375423",
+      "elonUrl": "https://x.com/elonmusk/status/2090489998382375423",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090413962189754641",
+      "originalUrl": "https://x.com/ryancarson/status/2090413962189754641",
+      "elonId": "2090472194946080795",
+      "elonUrl": "https://x.com/elonmusk/status/2090472194946080795",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090450591688360033",
+      "originalUrl": "https://x.com/startupstella/status/2090450591688360033",
+      "elonId": "2090471974313001026",
+      "elonUrl": "https://x.com/elonmusk/status/2090471974313001026",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090174525468033116",
+      "originalUrl": "https://x.com/ScottyBeamIO/status/2090174525468033116",
+      "elonId": "2090400832126640405",
+      "elonUrl": "https://x.com/elonmusk/status/2090400832126640405",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090138832511324179",
+      "originalUrl": "https://x.com/ridark_eth/status/2090138832511324179",
+      "elonId": "2090400553427714495",
+      "elonUrl": "https://x.com/elonmusk/status/2090400553427714495",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090355235751379002",
+      "originalUrl": "https://x.com/liam_fallen/status/2090355235751379002",
+      "elonId": "2090398269318758570",
+      "elonUrl": "https://x.com/elonmusk/status/2090398269318758570",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090222739328053353",
+      "originalUrl": "https://x.com/LaceyPresley/status/2090222739328053353",
+      "elonId": "2090395176401256541",
+      "elonUrl": "https://x.com/elonmusk/status/2090395176401256541",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090366905169379554",
+      "originalUrl": "https://x.com/Av1dlive/status/2090366905169379554",
+      "elonId": "2090394799228506293",
+      "elonUrl": "https://x.com/elonmusk/status/2090394799228506293",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090368200693440841",
+      "originalUrl": "https://x.com/_avichawla/status/2090368200693440841",
+      "elonId": "2090393510956401073",
+      "elonUrl": "https://x.com/elonmusk/status/2090393510956401073",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090197165448769689",
+      "originalUrl": "https://x.com/milesdeutscher/status/2090197165448769689",
+      "elonId": "2090391649444634987",
+      "elonUrl": "https://x.com/elonmusk/status/2090391649444634987",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090326196034695560",
+      "originalUrl": "https://x.com/ArthurMacwaters/status/2090326196034695560",
+      "elonId": "2090390238958903722",
+      "elonUrl": "https://x.com/elonmusk/status/2090390238958903722",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090093942079447451",
+      "originalUrl": "https://x.com/congressdj/status/2090093942079447451",
+      "elonId": "2090311312228360406",
+      "elonUrl": "https://x.com/elonmusk/status/2090311312228360406",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090016937770402275",
+      "originalUrl": "https://x.com/sairahul1/status/2090016937770402275",
+      "elonId": "2090310081086980426",
+      "elonUrl": "https://x.com/elonmusk/status/2090310081086980426",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090274598856052843",
+      "originalUrl": "https://x.com/minchoi/status/2090274598856052843",
+      "elonId": "2090309977646960765",
+      "elonUrl": "https://x.com/elonmusk/status/2090309977646960765",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090135151871189220",
+      "originalUrl": "https://x.com/liam_fallen/status/2090135151871189220",
+      "elonId": "2090309420806983880",
+      "elonUrl": "https://x.com/elonmusk/status/2090309420806983880",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090141038774243522",
+      "originalUrl": "https://x.com/MarsHomestead/status/2090141038774243522",
+      "elonId": "2090308195545993355",
+      "elonUrl": "https://x.com/elonmusk/status/2090308195545993355",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090288085125013553",
+      "originalUrl": "https://x.com/yukaichou/status/2090288085125013553",
+      "elonId": "2090307531952525787",
+      "elonUrl": "https://x.com/elonmusk/status/2090307531952525787",
+      "action": "quote"
+    },
+    {
+      "originalId": "2090303103434408184",
+      "originalUrl": "https://x.com/KanekoaTheGreat/status/2090303103434408184",
+      "elonId": "2090306627157315698",
+      "elonUrl": "https://x.com/elonmusk/status/2090306627157315698",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090195841822998888",
+      "originalUrl": "https://x.com/RayFernando1337/status/2090195841822998888",
+      "elonId": "2090288416378466439",
+      "elonUrl": "https://x.com/elonmusk/status/2090288416378466439",
+      "action": "repost"
+    },
+    {
+      "originalId": "2090044078897742207",
+      "originalUrl": "https://x.com/karanC_12/status/2090044078897742207",
+      "elonId": "2090079706402164857",
+      "elonUrl": "https://x.com/elonmusk/status/2090079706402164857",
+      "action": "quote"
+    },
+    {
+      "originalId": "2087891600345010323",
+      "originalUrl": "https://x.com/XFreeze/status/2087891600345010323",
+      "elonId": "2090079231783120975",
+      "elonUrl": "https://x.com/elonmusk/status/2090079231783120975",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089995692874068433",
+      "originalUrl": "https://x.com/sairahul1/status/2089995692874068433",
+      "elonId": "2090078663312347334",
+      "elonUrl": "https://x.com/elonmusk/status/2090078663312347334",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089913996711198870",
+      "originalUrl": "https://x.com/RoundtableSpace/status/2089913996711198870",
+      "elonId": "2089999360692310080",
+      "elonUrl": "https://x.com/elonmusk/status/2089999360692310080",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089879632929554498",
+      "originalUrl": "https://x.com/mikepat711/status/2089879632929554498",
+      "elonId": "2089950078429782061",
+      "elonUrl": "https://x.com/elonmusk/status/2089950078429782061",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089881822884692399",
+      "originalUrl": "https://x.com/BlakeKing777/status/2089881822884692399",
+      "elonId": "2089947107050573925",
+      "elonUrl": "https://x.com/elonmusk/status/2089947107050573925",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089943313210036358",
+      "originalUrl": "https://x.com/farzyness/status/2089943313210036358",
+      "elonId": "2089946833430905079",
+      "elonUrl": "https://x.com/elonmusk/status/2089946833430905079",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089896096298627248",
+      "originalUrl": "https://x.com/toddsaunders/status/2089896096298627248",
+      "elonId": "2089929799364124993",
+      "elonUrl": "https://x.com/elonmusk/status/2089929799364124993",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089781171060179338",
+      "originalUrl": "https://x.com/NWischoff/status/2089781171060179338",
+      "elonId": "2089823712388452648",
+      "elonUrl": "https://x.com/elonmusk/status/2089823712388452648",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089777127201608150",
+      "originalUrl": "https://x.com/austin_rief/status/2089777127201608150",
+      "elonId": "2089821351091798283",
+      "elonUrl": "https://x.com/elonmusk/status/2089821351091798283",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089747957545410816",
+      "originalUrl": "https://x.com/ScottyBeamIO/status/2089747957545410816",
+      "elonId": "2089820868654538884",
+      "elonUrl": "https://x.com/elonmusk/status/2089820868654538884",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089505950470459659",
+      "originalUrl": "https://x.com/AlexFinn/status/2089505950470459659",
+      "elonId": "2089812910243709326",
+      "elonUrl": "https://x.com/elonmusk/status/2089812910243709326",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089802845239587150",
+      "originalUrl": "https://x.com/bot/status/2089802845239587150",
+      "elonId": "2089803729293996295",
+      "elonUrl": "https://x.com/elonmusk/status/2089803729293996295",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089401696946634801",
+      "originalUrl": "https://x.com/petergyang/status/2089401696946634801",
+      "elonId": "2089578400734167260",
+      "elonUrl": "https://x.com/elonmusk/status/2089578400734167260",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089461344332394994",
+      "originalUrl": "https://x.com/aaronburnett/status/2089461344332394994",
+      "elonId": "2089501147027374185",
+      "elonUrl": "https://x.com/elonmusk/status/2089501147027374185",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089379355692527813",
+      "originalUrl": "https://x.com/GavinSBaker/status/2089379355692527813",
+      "elonId": "2089388021154283625",
+      "elonUrl": "https://x.com/elonmusk/status/2089388021154283625",
+      "action": "quote"
+    },
+    {
+      "originalId": "2089223114416898288",
+      "originalUrl": "https://x.com/yunta_tsai/status/2089223114416898288",
+      "elonId": "2089226389308498067",
+      "elonUrl": "https://x.com/elonmusk/status/2089226389308498067",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089190230645432329",
+      "originalUrl": "https://x.com/minchoi/status/2089190230645432329",
+      "elonId": "2089225952517828934",
+      "elonUrl": "https://x.com/elonmusk/status/2089225952517828934",
+      "action": "repost"
+    },
+    {
+      "originalId": "2089111464921501985",
+      "originalUrl": "https://x.com/amuse/status/2089111464921501985",
+      "elonId": "2089148540039901185",
+      "elonUrl": "https://x.com/elonmusk/status/2089148540039901185",
+      "action": "quote"
+    },
+    {
+      "originalId": "2088740832266306033",
+      "originalUrl": "https://x.com/mvanhorn/status/2088740832266306033",
+      "elonId": "2088786270424313955",
+      "elonUrl": "https://x.com/elonmusk/status/2088786270424313955",
+      "action": "repost"
+    },
+    {
+      "originalId": "2088468642438521212",
+      "originalUrl": "https://x.com/keven_ink/status/2088468642438521212",
+      "elonId": "2088786101486182418",
+      "elonUrl": "https://x.com/elonmusk/status/2088786101486182418",
+      "action": "repost"
+    },
+    {
+      "originalId": "2088666462819082645",
+      "originalUrl": "https://x.com/AlexFinn/status/2088666462819082645",
+      "elonId": "2088735769871724942",
+      "elonUrl": "https://x.com/elonmusk/status/2088735769871724942",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087832375526920381",
+      "originalUrl": "https://x.com/debs_obrien/status/2087832375526920381",
+      "elonId": "2088149393731981516",
+      "elonUrl": "https://x.com/elonmusk/status/2088149393731981516",
+      "action": "quote"
+    },
+    {
+      "originalId": "2087988529787736575",
+      "originalUrl": "https://x.com/naoufal_elh/status/2087988529787736575",
+      "elonId": "2088019180465303606",
+      "elonUrl": "https://x.com/elonmusk/status/2088019180465303606",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087642719447609374",
+      "originalUrl": "https://x.com/AlexFinn/status/2087642719447609374",
+      "elonId": "2087912258856788133",
+      "elonUrl": "https://x.com/elonmusk/status/2087912258856788133",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087685264617406963",
+      "originalUrl": "https://x.com/Austen/status/2087685264617406963",
+      "elonId": "2087768706193789006",
+      "elonUrl": "https://x.com/elonmusk/status/2087768706193789006",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087415205756391461",
+      "originalUrl": "https://x.com/yunta_tsai/status/2087415205756391461",
+      "elonId": "2087602469778166195",
+      "elonUrl": "https://x.com/elonmusk/status/2087602469778166195",
+      "action": "quote"
+    },
+    {
+      "originalId": "2087537837050597741",
+      "originalUrl": "https://x.com/XFreeze/status/2087537837050597741",
+      "elonId": "2087565463467565526",
+      "elonUrl": "https://x.com/elonmusk/status/2087565463467565526",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087255832677253435",
+      "originalUrl": "https://x.com/KettlebellDan/status/2087255832677253435",
+      "elonId": "2087409610022084718",
+      "elonUrl": "https://x.com/elonmusk/status/2087409610022084718",
+      "action": "repost"
+    },
+    {
+      "originalId": "2087340859138224540",
+      "originalUrl": "https://x.com/farzyness/status/2087340859138224540",
+      "elonId": "2087409427888603229",
+      "elonUrl": "https://x.com/elonmusk/status/2087409427888603229",
+      "action": "quote"
+    },
+    {
+      "originalId": "2087224798078517251",
+      "originalUrl": "https://x.com/bot/status/2087224798078517251",
+      "elonId": "2087233507370147920",
+      "elonUrl": "https://x.com/elonmusk/status/2087233507370147920",
+      "action": "quote"
+    }
+  ]
 }

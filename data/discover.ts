@@ -1324,6 +1324,13 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   }
 
   const byDate = (a: DiscoverStory, b: DiscoverStory) => (a.publishedAt < b.publishedAt ? 1 : -1);
+  if (filters.tab === "featured") {
+    return [...next].sort((a, b) => {
+      const boost = elonBoostRank(b) - elonBoostRank(a);
+      if (boost !== 0) return boost;
+      return byDate(a, b);
+    });
+  }
   return [...next].sort(byDate);
 }
 
@@ -1349,12 +1356,27 @@ export function articleStories() {
   return discoverStories.filter(isArticleStory);
 }
 
-const elonLikedIds = new Set((elonLikedFile as { tweetIds?: string[] }).tweetIds ?? []);
+type ElonLikedFile = {
+  tweetIds?: string[];
+  posts?: { originalId: string; elonId: string }[];
+};
+
+const elonLikedData = elonLikedFile as ElonLikedFile;
+const elonLikedIds = new Set(elonLikedData.tweetIds ?? []);
+const elonBoostByOriginal = new Map(
+  (elonLikedData.posts ?? []).map((item) => [item.originalId, item.elonId]),
+);
 
 export function isElonLiked(story: DiscoverStory) {
   if (story.elonLiked) return true;
   const id = tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? "");
   return Boolean(id && elonLikedIds.has(id));
+}
+
+function elonBoostRank(story: DiscoverStory) {
+  const id = tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? "");
+  const elonId = id ? elonBoostByOriginal.get(id) : undefined;
+  return elonId ? Number(BigInt(elonId)) : 0;
 }
 
 export function looksLikeXArticleUrl(url?: string) {

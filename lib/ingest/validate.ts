@@ -104,7 +104,7 @@ export function validateExtractedCase(
 }
 
 export function notesSayElonLiked(notes?: string) {
-  return Boolean(notes && /elon\s+liked/i.test(notes));
+  return Boolean(notes && /elon\s+(liked|reposted|quoted)/i.test(notes));
 }
 
 export function toDiscoverStory(
