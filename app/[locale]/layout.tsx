@@ -53,17 +53,18 @@ export async function generateMetadata({
       locale: ogLocale[raw],
       images: [
         {
-          url: `${site.url}/og.png`,
+          url: site.shareImage,
           width: 1200,
           height: 630,
           alt: `${site.name} — ${messages[locale].home.title}`,
+          type: "image/jpeg",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
       title: `${messages[locale].home.title} | ${site.name}`,
-      images: [`${site.url}/og.png`],
+      images: [site.shareImage],
     },
     robots: {
       index: true,
@@ -94,7 +95,7 @@ export default async function LocaleLayout({
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <Providers>
-          <Header stars={stars} />
+          <Header />
           <main className="flex-1">{children}</main>
           <Footer stars={stars} />
         </Providers>

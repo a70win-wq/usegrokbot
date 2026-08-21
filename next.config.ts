@@ -4,6 +4,17 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
+  async headers() {
+    return [
+      {
+        source: "/card.jpg",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=86400, s-maxage=86400" },
+          { key: "Content-Type", value: "image/jpeg" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       {
