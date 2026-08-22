@@ -515,6 +515,46 @@ const hant: Record<string, DiscoverStoryI18n> = {
     quote: "Treat it as your product/strategy/growth/career advisor.",
     result: "Lennybot · 500 多集 + 電子報檔案庫",
   },
+  "taxes-japan-congressdj": {
+    title: "稅務，然後日本機票",
+    headline: "DJ 把四萬封電郵交給 Grok Bot——它幫佢做稅，又找到頭等日本機票；Elon 話試 @Grok @Bot",
+    whatTheyDid:
+      "2026 年 8 月 19 日，DJ（@congressdj）寫他不是 coder，AI 只用到超級 Google 那級。他駁上 Grok Bot；它讀了四萬封電郵。他叫它做稅——它在電郵裡找齊文件就做了。又叫它找頭等日本獎勵機票。它登入他的航空公司帳戶（有允許），找到 3 張頭等機票，用 6 萬分。他未訂位，因為日期還不肯定。他還開了每小時政治更新、清 Gmail、稅務，同刪信前要問他的 Bot。2026 年 8 月 20 日 Elon 引用：「Try @Grok @Bot。」",
+    howItWorks: "具名非工程師，真正的收件箱、稅單、航空公司登入。我們保留 DJ 原帖。沒有重跑稅務，也沒有代訂機票。",
+    whyUseful: "稅務同獎勵機票就是人會拖的工。這是不活在 CRM 裡的人的公開例子。",
+    whyItMatters: "Elon 指住這條。工是 DJ 的；熱度是 Elon 的。兩邊都寫清楚。社群；沒有標已測試。",
+    whoShouldTry: ["非工程師", "怕做稅的人", "堆住航空公司積分的人"],
+    usefulFor: "個人 / 營運",
+    quote: "It found all the docs needed in my email and did my taxes.",
+    result: "四萬封電郵 · 稅務 · 找到 3 張頭等日本機票",
+  },
+  "spam-slack-yu-kai-chou": {
+    title: "十五萬封垃圾電郵",
+    headline: "Yu-kai Chou 讓 Grok Bot 清了十五萬封垃圾電郵，再看住五個收件箱加六個 Slack——Elon 話試 Grok @Bot",
+    whatTheyDid:
+      "2026 年 8 月 20 日，Yu-kai Chou（@yukaichou）寫他開始試 Grok Bot。它清走他全部十五萬封垃圾電郵，再退訂他從來不讀的郵件。它會通知他五個電郵地址同六個 Slack 伺服器裡任何需要他注意的訊息，並幫他保持整齊。同一個早上 Elon 引用：「Try Grok @Bot and Build。」",
+    howItWorks:
+      "具名的人交出真正的收件箱大掃除，再加多收件箱同 Slack 監看。我們保留 Yu-kai 原帖。沒有重跑那十五萬封。",
+    whyUseful: "退訂再看住，就是五個收件箱加六個 Slack 的人已經明的工。",
+    whyItMatters: "Elon 同一個早上指住這條。工是 Yu-kai 的；熱度是 Elon 的。社群；沒有標已測試。",
+    whoShouldTry: ["收件箱炸掉的人", "活在 Slack 的人", "營運"],
+    usefulFor: "營運 / 收件箱",
+    quote: "It cleaned up all my 150,000 junk emails and unsubscribed to all the emails I never read.",
+    result: "十五萬封垃圾電郵 · 五個收件箱 · 六個 Slack",
+  },
+  "repo-cto-ray-fernando": {
+    title: "讓 Bot 做 CTO",
+    headline: "Ray Fernando 讓一隻 Grok Bot 管他的 repo——它再請多幾隻，兩段提示詞加 pstack",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Ray Fernando（@RayFernando1337）發了「Turn Grok Bot Into Your CTO。」他寫自己係樽頸，於是讓一隻 Grok Bot 做 repo 老闆。由那裡它再請多幾隻 Grok Bot。他話全部只用兩段提示詞加 pstack，並警告呢個流程會令人「AI Psychosis」。",
+    howItWorks: "具名工程師公開了短做法同較長的文章。我們保留 Ray 原帖。沒有重跑他的 repo 老闆。",
+    whyUseful: "如果你係 repo 同一堆雜務之間的中間人，這就是讓一隻 Bot 做老闆的公開例子。",
+    whyItMatters: "這週高關注的社群寫 code 例子。社群；沒有標已測試。",
+    whoShouldTry: ["建造者", "一人工程師", "自己 repo 的樽頸"],
+    usefulFor: "建造者 / 工程",
+    quote: "I was the bottleneck. So I made a Grok Bot the boss of my repo.",
+    result: "Repo 老闆 · 兩段提示詞 + pstack",
+  },
 };
 const hans: Record<string, DiscoverStoryI18n> = {
   "clear-email-elon": {
@@ -1015,6 +1055,46 @@ const hans: Record<string, DiscoverStoryI18n> = {
     usefulFor: "产品 / 增长",
     quote: "Treat it as your product/strategy/growth/career advisor.",
     result: "Lennybot · 500 多集 + newsletter档案库",
+  },
+  "taxes-japan-congressdj": {
+    title: "税务，然后日本机票",
+    headline: "DJ 把四万封邮件交给 Grok Bot——它帮他做税，又找到头等日本机票；Elon 说试 @Grok @Bot",
+    whatTheyDid:
+      "2026 年 8 月 19 日，DJ（@congressdj）写他不是 coder，AI 只用到超级 Google 那级。他接上 Grok Bot；它读了四万封邮件。他叫它做税——它在邮件里找齐文件就做了。又叫它找头等日本奖励机票。它登录他的航空公司账户（有允许），找到 3 张头等机票，用 6 万分。他没订位，因为日期还不肯定。他还开了每小时政治更新、清 Gmail、税务，和删信前要问他的 Bot。2026 年 8 月 20 日 Elon 引用：「Try @Grok @Bot。」",
+    howItWorks: "具名非工程师，真正的收件箱、税单、航空公司登录。我们保留 DJ 原帖。没有重跑税务，也没有代订机票。",
+    whyUseful: "税务和奖励机票就是人会拖的活。这是不活在 CRM 里的人的公开例子。",
+    whyItMatters: "Elon 指着这条。活是 DJ 的；热度是 Elon 的。两边都写清楚。社区；没有标已测试。",
+    whoShouldTry: ["非工程师", "怕做税的人", "堆着航空公司积分的人"],
+    usefulFor: "个人 / 运营",
+    quote: "It found all the docs needed in my email and did my taxes.",
+    result: "四万封邮件 · 税务 · 找到 3 张头等日本机票",
+  },
+  "spam-slack-yu-kai-chou": {
+    title: "十五万封垃圾邮件",
+    headline: "Yu-kai Chou 让 Grok Bot 清了十五万封垃圾邮件，再看着五个收件箱加六个 Slack——Elon 说试 Grok @Bot",
+    whatTheyDid:
+      "2026 年 8 月 20 日，Yu-kai Chou（@yukaichou）写他开始试 Grok Bot。它清掉他全部十五万封垃圾邮件，再退订他从来不读的邮件。它会通知他五个邮箱和六个 Slack 服务器里任何需要他注意的消息，并帮他保持整齐。同一个早上 Elon 引用：「Try Grok @Bot and Build。」",
+    howItWorks:
+      "具名的人交出真正的收件箱大扫除，再加多收件箱和 Slack 监看。我们保留 Yu-kai 原帖。没有重跑那十五万封。",
+    whyUseful: "退订再看着，就是五个收件箱加六个 Slack 的人已经懂的活。",
+    whyItMatters: "Elon 同一个早上指着这条。活是 Yu-kai 的；热度是 Elon 的。社区；没有标已测试。",
+    whoShouldTry: ["收件箱炸掉的人", "活在 Slack 的人", "运营"],
+    usefulFor: "运营 / 收件箱",
+    quote: "It cleaned up all my 150,000 junk emails and unsubscribed to all the emails I never read.",
+    result: "十五万封垃圾邮件 · 五个收件箱 · 六个 Slack",
+  },
+  "repo-cto-ray-fernando": {
+    title: "让 Bot 做 CTO",
+    headline: "Ray Fernando 让一只 Grok Bot 管他的 repo——它再请多几只，两段提示词加 pstack",
+    whatTheyDid:
+      "2026 年 8 月 19 日，Ray Fernando（@RayFernando1337）发了「Turn Grok Bot Into Your CTO。」他写自己是瓶颈，于是让一只 Grok Bot 做 repo 老板。从那里它再请多几只 Grok Bot。他说全部只用两段提示词加 pstack，并警告这个流程会让人「AI Psychosis」。",
+    howItWorks: "具名工程师公开了短做法和较长的文章。我们保留 Ray 原帖。没有重跑他的 repo 老板。",
+    whyUseful: "如果你是 repo 和一堆杂务之间的中间人，这就是让一只 Bot 做老板的公开例子。",
+    whyItMatters: "这周高关注的社区写 code 例子。社区；没有标已测试。",
+    whoShouldTry: ["建造者", "一人工程师", "自己 repo 的瓶颈"],
+    usefulFor: "建造者 / 工程",
+    quote: "I was the bottleneck. So I made a Grok Bot the boss of my repo.",
+    result: "Repo 老板 · 两段提示词 + pstack",
   },
 };
 
