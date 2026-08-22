@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 15,
+    "total": 29,
     "candidates": 4,
     "xCandidates": 0,
     "nonXCandidates": 4,
-    "alreadyIngested": 11,
+    "alreadyIngested": 25,
     "pending": 0
   },
   "cases": [
@@ -207,6 +207,188 @@
       "sourceType": "note",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "peter-yang-marie-kondo-declutter-bot",
+      "title": "Peter Yang: Marie Kondo declutter Bot",
+      "url": "https://x.com/petergyang/status/2089724101070086482",
+      "sourceSummary": "Prompt-and-demo: audit email, Drive, and paid subs, then wait for approval before anything is deleted.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "gergely-orosz-stripe-support-refunds",
+      "title": "Gergely Orosz: Stripe support refunds",
+      "url": "https://x.com/GergelyOrosz/status/2090085668768694562",
+      "sourceSummary": "Hooks Grok Bot to support mail and Stripe agentic refunds, with a human confirm before money moves.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "mike-p-90-000-email-purge",
+      "title": "Mike P: 90,000-email purge",
+      "url": "https://x.com/mikepat711/status/2089879632929554498",
+      "sourceSummary": "Lets a Bot walk two Gmail accounts and throw out junk the owner never wanted to touch.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "yun-ta-text-a-matic-vacuum-from-grok-bot",
+      "title": "Yun-Ta: text a Matic vacuum from Grok Bot",
+      "url": "https://x.com/yunta_tsai/status/2089223114416898288",
+      "sourceSummary": "Chief Engineer Bot talks to @maticrobots so he can text the vacuum from anywhere.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "wayne-sutton-site-domain-and-cloudflare-in-two-phone-prompts",
+      "title": "Wayne Sutton: site, domain, and Cloudflare in two phone prompts",
+      "url": "https://x.com/waynesutton/status/2088416215203295346",
+      "sourceSummary": "Convex + Cloudflare plugins, a live demo at tryground.dev, domain and redirects bought from the phone.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "danny-limanseta-74-game-art-assets-in-two-hours",
+      "title": "Danny Limanseta: 74 game art assets in two hours",
+      "url": "https://x.com/DannyLimanseta/status/2087228218797617404",
+      "sourceSummary": "Bot reads the codebase, hits his art-gen page, crops transparent PNGs, and wires 74 card assets back into the game.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "jon-oneill-plumbing-shop-office-manager",
+      "title": "Jon ONeill: plumbing-shop office manager",
+      "url": "https://x.com/HouseHackerJon/status/2087635639701573962",
+      "sourceSummary": "Drain-and-sewer shop owner handing office-manager work to a Bot in the first 24 hours.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "ben-lang-internal-grok-bot-job-list",
+      "title": "Ben Lang: internal Grok Bot job list",
+      "url": "https://x.com/benln/status/2087929147406299313",
+      "sourceSummary": "Starlink-biased flights, recipe-to-Whole Foods, film-scan EXIF, contractor quotes, and more internal jobs.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "gavin-baker-podcast-summarizer-in-15-seconds",
+      "title": "Gavin Baker: podcast summarizer in 15 seconds",
+      "url": "https://x.com/GavinSBaker/status/2089379355692527813",
+      "sourceSummary": "Calls Grok Bot another Claude Code moment and stands up a podcast summarizer in about 15 seconds.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "krista-letz-grok-bot-for-enterprise-gtm",
+      "title": "Krista Letz: Grok Bot for enterprise GTM",
+      "url": "https://x.com/kristaletz/status/2089103618121314689",
+      "sourceSummary": "SpaceXAI enterprise seller's roster: CoS, prospecting overnight, per-account experts, live slide updates.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 0
+      }
+    },
+    {
+      "id": "peter-yang-commander-keen-on-the-cloud-computer",
+      "title": "Peter Yang: Commander Keen on the cloud computer",
+      "url": "https://x.com/petergyang/status/2089502606079197347",
+      "sourceSummary": "Installs and plays Commander Keen on Grok Bot's cloud desktop, lag and all.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "kiara-bot-sits-in-on-a-missed-meeting",
+      "title": "Kiara: Bot sits in on a missed meeting",
+      "url": "https://x.com/kiaraplds/status/2088321112073547835",
+      "sourceSummary": "SpaceXAI field engineer has a Bot join a meeting she misses, announce itself, and take notes.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "kettlebelldan-arduino-led-stock-ticker",
+      "title": "KettlebellDan: Arduino LED stock ticker",
+      "url": "https://x.com/KettlebellDan/status/2089387837204693202",
+      "sourceSummary": "Bot talks to his Arduino so the LED marquee scrolls SPCX price, a sparkline, and SpaceX news.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "darian-shirazi-chase-five-merchant-refunds",
+      "title": "Darian Shirazi: chase five merchant refunds",
+      "url": "https://x.com/darian314/status/2089381004524093752",
+      "sourceSummary": "Bot hunts unrefunded returns in email, writes five merchants, and earns back more than the monthly fee.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
       "ingest": {
         "status": "published",
         "attempts": 1
