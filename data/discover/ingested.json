@@ -13364,5 +13364,294 @@
     "xPostUrl": "https://x.com/nulldevpi/status/2091197278002577732",
     "sourceUrl": "https://x.com/nulldevpi/status/2091197278002577732",
     "sourceLabel": "NULL on X"
+  },
+  {
+    "slug": "chadholder-jumped-into-grok-bot-and-created-an-ai-qa-engine",
+    "title": "Jumped into Grok @bot and created an AI QA engineer",
+    "headline": "Jumped into Grok @bot and created an AI QA engineer.",
+    "whatTheyDid": "Jumped into Grok @bot and created an AI QA engineer.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Jumped into Grok @bot and created an AI QA engineer.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Chad Holder",
+    "handle": "chadholder_",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/chadholder_/status/2091278187032711493",
+    "sourceUrl": "https://x.com/chadholder_/status/2091278187032711493",
+    "sourceLabel": "Chad Holder on X"
+  },
+  {
+    "slug": "thatretireddude-i-used-my-entire-grok-bot-allotment-for-the-week",
+    "title": "I used my entire Grok Bot allotment for the week in 7 hours and 45...",
+    "headline": "I used my entire Grok Bot allotment for the week in 7 hours and 45 minutes.",
+    "whatTheyDid": "I used my entire Grok Bot allotment for the week in 7 hours and 45 minutes.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I used my entire Grok Bot allotment for the week in 7 hours and 45 minutes.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jared Maxwell",
+    "handle": "ThatRetiredDude",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/ThatRetiredDude/status/2091275289766539757",
+    "sourceUrl": "https://x.com/ThatRetiredDude/status/2091275289766539757",
+    "sourceLabel": "Jared Maxwell on X"
+  },
+  {
+    "slug": "martin-adams-okay-grok-bot-is-kinda-a-big-deal",
+    "title": "Okay, Grok Bot is kinda a big deal",
+    "headline": "Okay, Grok Bot is kinda a big deal.",
+    "whatTheyDid": "Okay, Grok Bot is kinda a big deal.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Okay, Grok Bot is kinda a big deal.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Martin Adams | Building Flowtelic",
+    "handle": "Martin_Adams",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/Martin_Adams/status/2091268254903709869",
+    "sourceUrl": "https://x.com/Martin_Adams/status/2091268254903709869",
+    "sourceLabel": "Martin Adams | Building Flowtelic on X"
+  },
+  {
+    "slug": "ravsau-i-tested-hermes-bot-and-grok-bot-on-the-exact-sa",
+    "title": "I tested Hermes Bot and Grok Bot on the exact same task: helping me...",
+    "headline": "I tested Hermes Bot and Grok Bot on the exact same task: helping me manage a livestream chat.",
+    "whatTheyDid": "I tested Hermes Bot and Grok Bot on the exact same task: helping me manage a livestream chat.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I tested Hermes Bot and Grok Bot on the exact same task: helping me manage a livestream chat.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "youtube",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Saurav | CloudYeti",
+    "handle": "ravsau",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/ravsau/status/2091260811721203807",
+    "sourceUrl": "https://x.com/ravsau/status/2091260811721203807",
+    "sourceLabel": "Saurav | CloudYeti on X"
+  },
+  {
+    "slug": "orange-boy-grok-bot-use-case-register-my-teammate-to-hackat",
+    "title": "Grok bot use case Register my teammate to hackathon i'm already...",
+    "headline": "Grok bot use case Register my teammate to hackathon i'm already registered at particular date.",
+    "whatTheyDid": "Grok bot use case Register my teammate to hackathon i'm already registered at particular date.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok bot use case Register my teammate to hackathon i'm already registered at particular date.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Vlad P",
+    "handle": "orange_boy",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/orange_boy/status/2091258703194513877",
+    "sourceUrl": "https://x.com/orange_boy/status/2091258703194513877",
+    "sourceLabel": "Vlad P on X"
+  },
+  {
+    "slug": "rimusz-i-got-tired-of-cloud-agents-pretending-they-can",
+    "title": "I got tired of cloud agents pretending they can build Mac apps",
+    "headline": "I got tired of cloud agents pretending they can build Mac apps.",
+    "whatTheyDid": "I got tired of cloud agents pretending they can build Mac apps.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I got tired of cloud agents pretending they can build Mac apps.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Rimas (rimusz)",
+    "handle": "Rimusz",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/Rimusz/status/2091251072539017318",
+    "sourceUrl": "https://x.com/Rimusz/status/2091251072539017318",
+    "sourceLabel": "Rimas (rimusz) on X"
+  },
+  {
+    "slug": "thatretireddude-holy-shit",
+    "title": "Holy shit!",
+    "headline": "Holy shit!",
+    "whatTheyDid": "Holy shit!",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Holy shit!",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jared Maxwell",
+    "handle": "ThatRetiredDude",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/ThatRetiredDude/status/2091250177340317841",
+    "sourceUrl": "https://x.com/ThatRetiredDude/status/2091250177340317841",
+    "sourceLabel": "Jared Maxwell on X"
+  },
+  {
+    "slug": "thatretireddude-i-didnt-run-the-mail-cutover",
+    "title": "I didn’t run the mail cutover",
+    "headline": "I didn’t run the mail cutover.",
+    "whatTheyDid": "I didn’t run the mail cutover.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I didn’t run the mail cutover.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jared Maxwell",
+    "handle": "ThatRetiredDude",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/ThatRetiredDude/status/2091247655678578976",
+    "sourceUrl": "https://x.com/ThatRetiredDude/status/2091247655678578976",
+    "sourceLabel": "Jared Maxwell on X"
+  },
+  {
+    "slug": "paulballen-new-grok-bot-alex-named-for-alex-haley",
+    "title": "New Grok Bot: Alex, named for Alex Haley",
+    "headline": "New Grok Bot: Alex, named for Alex Haley.",
+    "whatTheyDid": "New Grok Bot: Alex, named for Alex Haley.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "New Grok Bot: Alex, named for Alex Haley.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Paul Allen (co-founder Ancestry & SOAR AI Studio)",
+    "handle": "paulballen",
+    "publishedAt": "2026-08-22",
+    "xPostUrl": "https://x.com/paulballen/status/2091244768638431611",
+    "sourceUrl": "https://x.com/paulballen/status/2091244768638431611",
+    "sourceLabel": "Paul Allen (co-founder Ancestry & SOAR AI Studio) on X"
   }
 ]
