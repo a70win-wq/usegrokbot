@@ -15647,5 +15647,263 @@
     "sourceUrl": "https://x.com/puneetiitm/status/2091424688853663983",
     "sourceLabel": "Puneet Kumar on X",
     "format": "article"
+  },
+  {
+    "slug": "sabialab-openclaw-hermes-grok-bot-9-57",
+    "title": "合上电脑出门，活在云上接着干——我把龙虾（OpenClaw）和 Hermes 换成了 Grok Bot。 昨晚 9:57...",
+    "headline": "合上电脑出门，活在云上接着干——我把龙虾（OpenClaw）和 Hermes 换成了 Grok Bot。 昨晚 9:57 手机派活，10:09 收到 234 行对照稿，头一回出门不惦记电脑；录两分多钟屏学成 5 步流程；邮件只进草稿箱。 不做：换模型、进飞书、数据留本地。 你出门前最怕哪只睡死：龙虾还是 Hermes？",
+    "whatTheyDid": "合上电脑出门，活在云上接着干——我把龙虾（OpenClaw）和 Hermes 换成了 Grok Bot。 昨晚 9:57 手机派活，10:09 收到 234 行对照稿，头一回出门不惦记电脑；录两分多钟屏学成 5 步流程；邮件只进草稿箱。 不做：换模型、进飞书、数据留本地。 你出门前最怕哪只睡死：龙虾还是 Hermes？",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "合上电脑出门，活在云上接着干——我把龙虾（OpenClaw）和 Hermes 换成了 Grok Bot。 昨晚 9:57 手机派活，10:09 收到 234 行对照稿，头一回出门不惦记电脑；录两分多钟屏学成 5 步流程；邮件只进草稿箱。 不做：换模型、进飞书、数据留本地。 你出门前最怕哪只睡死：龙虾还是 Hermes？",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Skillabs",
+    "handle": "sabialab",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/sabialab/status/2091510777848934779",
+    "sourceUrl": "https://x.com/sabialab/status/2091510777848934779",
+    "sourceLabel": "Skillabs on X"
+  },
+  {
+    "slug": "daniel-mac8-grok-bot-case-from-daniel-mac8",
+    "title": "Grok Bot case from @daniel_mac8",
+    "headline": "Eureka!",
+    "whatTheyDid": "Eureka!",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Eureka!",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Dan McAteer",
+    "handle": "daniel_mac8",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/daniel_mac8/status/2091506005771264509",
+    "sourceUrl": "https://x.com/daniel_mac8/status/2091506005771264509",
+    "sourceLabel": "Dan McAteer on X"
+  },
+  {
+    "slug": "imedrichards-im-currently-deep-into-testing-organic-social-ug",
+    "title": "I’m currently deep into testing organic social ugc for Budgey",
+    "headline": "I’m currently deep into testing organic social ugc for Budgey.",
+    "whatTheyDid": "I’m currently deep into testing organic social ugc for Budgey.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "I’m currently deep into testing organic social ugc for Budgey.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Ed Richards",
+    "handle": "imedrichards",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/imedrichards/status/2091502729927471307",
+    "sourceUrl": "https://x.com/imedrichards/status/2091502729927471307",
+    "sourceLabel": "Ed Richards on X"
+  },
+  {
+    "slug": "thereal-bcm-decided-to-test-grok-build-after-i-thought-every",
+    "title": "Decided to test @grok build after I thought everything was done",
+    "headline": "Decided to test @grok build after I thought everything was done.",
+    "whatTheyDid": "Decided to test @grok build after I thought everything was done.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Decided to test @grok build after I thought everything was done.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "BlueCollarMillionaire",
+    "handle": "TheReal_BCM",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/TheReal_BCM/status/2091492959111815529",
+    "sourceUrl": "https://x.com/TheReal_BCM/status/2091492959111815529",
+    "sourceLabel": "BlueCollarMillionaire on X"
+  },
+  {
+    "slug": "kelvinhtat-i-created-confluence-space-have-my-grok-bot-to-d",
+    "title": "i created confluence space, have my grok bot to do research, write a...",
+    "headline": "i created confluence space, have my grok bot to do research, write a detailed project scope and business plan.",
+    "whatTheyDid": "i created confluence space, have my grok bot to do research, write a detailed project scope and business plan.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "i created confluence space, have my grok bot to do research, write a detailed project scope and business plan.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "⚡️ Kelvin Htat",
+    "handle": "kelvinhtat",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/kelvinhtat/status/2091491619828793603",
+    "sourceUrl": "https://x.com/kelvinhtat/status/2091491619828793603",
+    "sourceLabel": "⚡️ Kelvin Htat on X"
+  },
+  {
+    "slug": "mikepat711-i-asked-my-grok-bot-to-shop-for-new-rapha-cyclin",
+    "title": "I asked my Grok Bot to shop for new Rapha cycling gear deals",
+    "headline": "I asked my Grok Bot to shop for new Rapha cycling gear deals.",
+    "whatTheyDid": "I asked my Grok Bot to shop for new Rapha cycling gear deals.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I asked my Grok Bot to shop for new Rapha cycling gear deals.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Mike P",
+    "handle": "mikepat711",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/mikepat711/status/2091487956955492861",
+    "sourceUrl": "https://x.com/mikepat711/status/2091487956955492861",
+    "sourceLabel": "Mike P on X"
+  },
+  {
+    "slug": "gergelyorosz-i-am-hooked-on-the-cool-things-i-can-do-with-gro",
+    "title": "I am hooked on the cool things I can do with Grok Bot, that was not...",
+    "headline": "I am hooked on the cool things I can do with Grok Bot, that was not possible to automate before easily.",
+    "whatTheyDid": "I am hooked on the cool things I can do with Grok Bot, that was not possible to automate before easily.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I am hooked on the cool things I can do with Grok Bot, that was not possible to automate before easily.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Gergely Orosz",
+    "handle": "GergelyOrosz",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/GergelyOrosz/status/2091476557399237015",
+    "sourceUrl": "https://x.com/GergelyOrosz/status/2091476557399237015",
+    "sourceLabel": "Gergely Orosz on X"
+  },
+  {
+    "slug": "ambarnes68-im-experimenting-with-grok-bot-for-electronic-pr",
+    "title": "I’m experimenting with Grok @bot for electronic product design",
+    "headline": "I’m experimenting with Grok @bot for electronic product design.",
+    "whatTheyDid": "I’m experimenting with Grok @bot for electronic product design.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I’m experimenting with Grok @bot for electronic product design.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Adam Barnes",
+    "handle": "ambarnes68",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/ambarnes68/status/2091471224236806358",
+    "sourceUrl": "https://x.com/ambarnes68/status/2091471224236806358",
+    "sourceLabel": "Adam Barnes on X",
+    "format": "article"
   }
 ]
