@@ -15905,5 +15905,198 @@
     "sourceUrl": "https://x.com/ambarnes68/status/2091471224236806358",
     "sourceLabel": "Adam Barnes on X",
     "format": "article"
+  },
+  {
+    "slug": "kyle-kim-tg-1-i-wired-my-exchange-stock-broker-apis-into-gro",
+    "title": "1/ I wired my exchange + stock broker APIs into Grok Bot so my AI...",
+    "headline": "1/ I wired my exchange + stock broker APIs into Grok Bot so my AI agents can read the book without me pasting screenshots every day.",
+    "whatTheyDid": "1/ I wired my exchange + stock broker APIs into Grok Bot so my AI agents can read the book without me pasting screenshots every day.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "1/ I wired my exchange + stock broker APIs into Grok Bot so my AI agents can read the book without me pasting screenshots every day.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Kyle Kim",
+    "handle": "kyle_kim_tg",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/kyle_kim_tg/status/2091554529557000318",
+    "sourceUrl": "https://x.com/kyle_kim_tg/status/2091554529557000318",
+    "sourceLabel": "Kyle Kim on X"
+  },
+  {
+    "slug": "qpro4khdr-grok-bot",
+    "title": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？...",
+    "headline": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
+    "whatTheyDid": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Bogon",
+    "handle": "QPRO4KHDR",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/QPRO4KHDR/status/2091551890026934400",
+    "sourceUrl": "https://x.com/QPRO4KHDR/status/2091551890026934400",
+    "sourceLabel": "Bogon on X"
+  },
+  {
+    "slug": "thecyberfam-okay-ive-been-using-grok-bot-for-5-minutes-now-a",
+    "title": "Okay, I've been using Grok Bot for 5 minutes now and it already saved...",
+    "headline": "Okay, I've been using Grok Bot for 5 minutes now and it already saved me $2350.",
+    "whatTheyDid": "Okay, I've been using Grok Bot for 5 minutes now and it already saved me $2350.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Okay, I've been using Grok Bot for 5 minutes now and it already saved me $2350.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "CybertruckFamily",
+    "handle": "thecyberfam",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/thecyberfam/status/2091549225918042236",
+    "sourceUrl": "https://x.com/thecyberfam/status/2091549225918042236",
+    "sourceLabel": "CybertruckFamily on X"
+  },
+  {
+    "slug": "gaetanoz-grok-bot-personale-ops",
+    "title": "Grok Bot personale: Ops",
+    "headline": "Grok Bot personale: Ops.",
+    "whatTheyDid": "Grok Bot personale: Ops.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Grok Bot personale: Ops.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Gaetano Zappulla 🎩",
+    "handle": "gaetanoz",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/gaetanoz/status/2091541513054368078",
+    "sourceUrl": "https://x.com/gaetanoz/status/2091541513054368078",
+    "sourceLabel": "Gaetano Zappulla 🎩 on X"
+  },
+  {
+    "slug": "handy-4ndy-grok-bot-is-very-interesting-after-a-few-prompts",
+    "title": "Grok Bot is very interesting, after a few prompts I set it the task of...",
+    "headline": "Grok Bot is very interesting, after a few prompts I set it the task of creating a 3d mini game with three.js.",
+    "whatTheyDid": "Grok Bot is very interesting, after a few prompts I set it the task of creating a 3d mini game with three.js.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Bot is very interesting, after a few prompts I set it the task of creating a 3d mini game with three.js.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Handy Andy {X} 🪝 𝗫▸",
+    "handle": "Handy_4ndy",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/Handy_4ndy/status/2091540022574858534",
+    "sourceUrl": "https://x.com/Handy_4ndy/status/2091540022574858534",
+    "sourceLabel": "Handy Andy {X} 🪝 𝗫▸ on X"
+  },
+  {
+    "slug": "webjuice-ie-we-put-grok-bot-and-hermes-on-one-obsidian-brain",
+    "title": "We put Grok @bot and Hermes on one Obsidian brain",
+    "headline": "We put Grok @bot and Hermes on one Obsidian brain.",
+    "whatTheyDid": "We put Grok @bot and Hermes on one Obsidian brain.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "We put Grok @bot and Hermes on one Obsidian brain.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Michal Barus",
+    "handle": "webjuice_ie",
+    "publishedAt": "2026-08-23",
+    "xPostUrl": "https://x.com/webjuice_ie/status/2091538385139548419",
+    "sourceUrl": "https://x.com/webjuice_ie/status/2091538385139548419",
+    "sourceLabel": "Michal Barus on X",
+    "format": "article"
   }
 ]
