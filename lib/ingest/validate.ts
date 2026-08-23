@@ -1,5 +1,4 @@
 import { discoverStories, type DiscoverStory } from "@/data/discover";
-import { getUseCase } from "@/data/use-cases";
 import type { FetchedPost } from "./fetch-post";
 import type { ExtractedCase } from "./schema";
 import { tweetIdFromUrl } from "./x-url";
@@ -153,9 +152,6 @@ export function assertStorySafe(story: DiscoverStory, stories: DiscoverStory[] =
   if (story.source !== "community") throw new Error("Ingested stories must be community.");
   if (story.tested) throw new Error("Do not mark ingested stories Tested.");
   if (story.featured || story.trending) throw new Error("Do not mark ingested stories Featured or Trending.");
-  if (story.relatedUseCase && !getUseCase(story.relatedUseCase)) {
-    throw new Error(`Unknown related use case: ${story.relatedUseCase}`);
-  }
   if (!story.result && !story.output) throw new Error("Story needs result or output.");
 
   const sourceUrl = canonicalSourceUrl(story.sourceUrl);

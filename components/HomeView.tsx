@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
+import { PostCensus } from "@/components/PostCensus";
 import { SearchBar } from "@/components/SearchBar";
 import { discoverStories, storiesForTopic } from "@/data/discover";
 import { topics } from "@/data/topics";
@@ -70,6 +71,7 @@ export function HomeView({
               <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
                 {t("home.title")}
               </h1>
+              <PostCensus total={discoverStories.length} />
               <div className="mt-8">
                 <SearchBar
                   initialQuery={initialQuery}

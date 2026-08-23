@@ -27,6 +27,11 @@ export function DiscoverCard({
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
+  const trustLabel = story.tested
+    ? t("discover.tabTested")
+    : story.source === "official"
+      ? t("discover.tabOfficial")
+      : t("discover.tabCommunity");
 
   return (
     <article
@@ -70,9 +75,9 @@ export function DiscoverCard({
           featured ? "text-[22px] leading-snug md:text-[26px]" : "text-[16px] leading-snug",
         )}
       >
-        <a href={originalHref} target="_blank" rel="noreferrer" className="after:absolute after:inset-0">
+        <LocaleLink href={`/discover/${story.slug}`} className="after:absolute after:inset-0">
           {featured ? item.headline : item.title}
-        </a>
+        </LocaleLink>
       </h3>
       <p className={cn("relative mt-2 text-[13px] leading-6 text-mute", featured ? "line-clamp-4" : "line-clamp-3")}>
         {featured ? item.whatTheyDid : item.headline}
@@ -104,9 +109,18 @@ export function DiscoverCard({
       <div className="relative mt-3">
         <AppNamePills apps={story.apps} />
       </div>
-      <p className="relative mt-3 text-[11px] text-faint">{t("discover.lastVerified", { date: checked })}</p>
+      <div className="relative mt-3 flex flex-wrap items-center gap-2 text-[11px] text-faint">
+        <span className="rounded-full border border-line px-2 py-0.5 text-mute">{trustLabel}</span>
+        <span>{t("discover.lastVerified", { date: checked })}</span>
+      </div>
 
-      <div className="relative z-10 mt-auto pt-5">
+      <div className="relative z-10 mt-auto flex flex-col gap-2 pt-5 sm:flex-row">
+        <LocaleLink
+          href={`/discover/${story.slug}`}
+          className="accent-gradient spring-press inline-flex h-11 items-center justify-center rounded-[10px] px-4 text-[13px] font-medium sm:h-9"
+        >
+          {t("discover.turnIntoPrompt")} →
+        </LocaleLink>
         <a
           href={originalHref}
           target="_blank"

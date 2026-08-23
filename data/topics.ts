@@ -95,7 +95,7 @@ export function topicMessageKey(slug: TopicSlug) {
 
 export function isEmailStory(story: DiscoverStory) {
   if (story.apps.includes("gmail")) return true;
-  const hay = [story.slug, story.title, story.headline, story.relatedUseCase ?? ""].join(" ");
+  const hay = [story.slug, story.title, story.headline].join(" ");
   return /email|gmail|refund/i.test(hay);
 }
 

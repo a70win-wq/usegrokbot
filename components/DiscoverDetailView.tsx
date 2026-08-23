@@ -3,29 +3,36 @@
 import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { CasePromptBuilder } from "@/components/CasePromptBuilder";
 import { DiscoverCard } from "@/components/DiscoverCard";
 import { JsonLd } from "@/components/JsonLd";
-import { LocaleLink } from "@/components/LocaleLink";
-import { UseCaseCard } from "@/components/UseCaseCard";
 import { XPostEmbed } from "@/components/XPostEmbed";
 import type { DiscoverStory } from "@/data/discover";
-import { getRelatedDiscoverStories, getRelatedUseCase } from "@/data/discover";
-import type { UseCase } from "@/data/types";
 import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { formatStoryDate } from "@/lib/format";
-import { localizeDiscoverStory, localizeUseCase, useI18n } from "@/lib/i18n";
+import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
 import { site } from "@/lib/site";
 
-export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
+export function DiscoverDetailView({
+  story,
+  more,
+  appNames,
+}: {
+  story: DiscoverStory;
+  more: DiscoverStory[];
+  appNames: string[];
+}) {
   const { locale, t, absoluteHref } = useI18n();
   const item = localizeDiscoverStory(story, locale);
-  const related = getRelatedUseCase(story);
-  const relatedTitle = related ? localizeUseCase(related, locale).title : undefined;
-  const more = getRelatedDiscoverStories(story, 3);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOriginalX") : t("discover.viewOriginal");
   const localeTag = locale === "en" ? "en" : locale;
   const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
+  const trustLabel = story.tested
+    ? t("discover.tabTested")
+    : story.source === "official"
+      ? t("discover.tabOfficial")
+      : t("discover.tabCommunity");
   const sourceAuthorType = story.handle === "xai" || story.handle === "bot" || story.authorName === "xAI" || story.authorName === "Jellypod"
     ? "Organization"
     : "Person";
@@ -82,6 +89,9 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
         <span className="rounded-full border border-line px-2.5 py-1 text-[12px] text-mute">
           {t(`discover.cat${story.category.charAt(0).toUpperCase()}${story.category.slice(1)}`)}
         </span>
+        <span className="rounded-full border border-line px-2.5 py-1 text-[12px] text-mute">
+          {trustLabel}
+        </span>
         <span className="text-[12px] text-faint">{formatStoryDate(story.publishedAt, locale)}</span>
         <span className="text-[12px] text-faint">{t("discover.lastVerified", { date: checked })}</span>
       </div>
@@ -95,11 +105,21 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
       </div>
       <h1 className="mt-2 text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{item.title}</h1>
       <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p>
-      <p className="mt-3 text-[13px] text-faint">
-        {story.handle
-          ? t("discover.basedOn", { handle: story.handle })
-          : t("discover.basedOnNamed", { name: story.authorName })}
-      </p>
+      <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px]">
+        <p className="text-faint">
+          {story.handle
+            ? t("discover.basedOn", { handle: story.handle })
+            : t("discover.basedOnNamed", { name: story.authorName })}
+        </p>
+        <a
+          href={originalHref}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-accent hover:underline"
+        >
+          {originalLabel} ↗
+        </a>
+      </div>
       {item.result || item.output ? (
         <div className="mt-6 rounded-[12px] border border-line bg-elevated px-4 py-3">
           <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
@@ -108,6 +128,12 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           <p className="mt-1 text-[15px] text-ink">{item.result ?? item.output}</p>
         </div>
       ) : null}
+
+      <CasePromptBuilder
+        key={story.slug}
+        story={item}
+        appNames={appNames}
+      />
 
       <section className="mt-10">
         <h2 className="text-[13px] font-medium tracking-[0.08em] text-faint uppercase">{t("discover.whatTheyDid")}</h2>
@@ -158,15 +184,7 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
         <AppNamePills apps={story.apps} />
       </div>
 
-      <div className="mt-8 flex flex-col gap-2 sm:flex-row-reverse sm:items-center sm:justify-end">
-        {related ? (
-          <LocaleLink
-            href={`/use-cases/${related.slug}`}
-            className="accent-gradient spring-press inline-flex h-11 items-center justify-center rounded-[10px] px-4 text-sm font-medium"
-          >
-            {t("discover.buildWorkflow")} →
-          </LocaleLink>
-        ) : null}
+      <div className="mt-8">
         <a
           href={originalHref}
           target="_blank"
@@ -184,22 +202,6 @@ export function DiscoverDetailView({ story }: { story: DiscoverStory }) {
           <p className="mt-2 text-[13px] leading-6 text-faint">{t("discover.embedNote")}</p>
           <div className="mt-4">
             <XPostEmbed url={story.xPostUrl} />
-          </div>
-        </section>
-      ) : null}
-
-      {related ? (
-        <section className="mt-12 rounded-[16px] border border-line bg-elevated px-5 py-6">
-          <h2 className="text-[20px] font-medium tracking-tight text-ink">{t("discover.wantToBuild")}</h2>
-          <p className="mt-2 text-sm text-mute">{t("discover.relatedWorkflow")}</p>
-          <LocaleLink
-            href={`/use-cases/${related.slug}`}
-            className="accent-gradient spring-press mt-4 inline-flex h-11 items-center rounded-[10px] px-4 text-sm font-medium"
-          >
-            {t("discover.viewGuide", { title: relatedTitle ?? related.title })} →
-          </LocaleLink>
-          <div className="mt-6">
-            <UseCaseCard useCase={related as UseCase} />
           </div>
         </section>
       ) : null}

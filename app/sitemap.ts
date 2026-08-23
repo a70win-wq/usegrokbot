@@ -33,6 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/rankings", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...entries("/articles", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...entries("/how-we-built", { changeFrequency: "monthly", priority: 0.5 }, day(LAST_REVIEWED)),
+    ...discoverStories.flatMap((story) =>
+      entries(`/discover/${story.slug}`, { changeFrequency: "monthly", priority: 0.6 }, day(story.publishedAt)),
+    ),
     ...topics.flatMap((item) =>
       entries(`/categories/${item.slug}`, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),
     ),

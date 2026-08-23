@@ -17,11 +17,5 @@ export {
   localeFromParams,
   type UrlLocale,
 } from "./paths";
-export {
-  localizeUseCase,
-  localizeCategory,
-  localizeApp,
-  categoryFor,
-  appFor,
-} from "./catalog";
+export { localizeApp, appFor } from "./catalog";
 export { localizeDiscoverStory, getDiscoverStoryI18n } from "./discover";

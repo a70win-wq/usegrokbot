@@ -3,7 +3,6 @@ import elonLikedFile from "./discover/elon-liked.json";
 import { appSearchText } from "./apps";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { storyMatchesTopic, type TopicSlug } from "./topics";
-import { getUseCase } from "./use-cases";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
 
 export const discoverCategorySlugs = [
@@ -65,7 +64,6 @@ export type DiscoverStory = {
   xPostUrl?: string;
   sourceUrl: string;
   sourceLabel: string;
-  relatedUseCase?: string;
   trending?: boolean;
   featured?: boolean;
   tested?: boolean;
@@ -135,7 +133,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: ELON_INBOX,
     sourceUrl: ELON_INBOX,
     sourceLabel: "Elon Musk on X",
-    relatedUseCase: "inbox-organizer",
     trending: true,
     featured: true,
   },
@@ -167,7 +164,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: NATE_HERK_HACKS,
     sourceUrl: NATE_HERK_HACKS,
     sourceLabel: "Nate Herk on X",
-    relatedUseCase: "daily-work-brief",
     trending: true,
     featured: true,
     format: "article",
@@ -201,7 +197,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: BLAKE_KING_BOTS,
     sourceUrl: BLAKE_KING_BOTS,
     sourceLabel: "Blake King on X",
-    relatedUseCase: "daily-ai-news-brief",
     trending: true,
   },
   {
@@ -302,7 +297,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: GERGELY_REFUNDS,
     sourceUrl: GERGELY_REFUNDS,
     sourceLabel: "Gergely Orosz on X",
-    relatedUseCase: "support-email-assistant",
     trending: true,
   },
   {
@@ -558,7 +552,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: BEN_LANG_TIPS,
     sourceUrl: BEN_LANG_TIPS,
     sourceLabel: "Ben Lang on X",
-    relatedUseCase: "daily-work-brief",
     format: "article",
   },
   {
@@ -589,7 +582,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: TESLACONOMICS_CEO,
     sourceUrl: TESLACONOMICS_CEO,
     sourceLabel: "Teslaconomics on X",
-    relatedUseCase: "daily-work-brief",
     format: "article",
   },
   {
@@ -681,7 +673,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: KUN_FIRSTMATE,
     sourceUrl: KUN_FIRSTMATE,
     sourceLabel: "Kun Chen on X",
-    relatedUseCase: "daily-work-brief",
     format: "article",
   },
   {
@@ -864,7 +855,6 @@ const curatedStories: DiscoverStory[] = [
     xPostUrl: BOT_LAUNCH,
     sourceUrl: BOT_LAUNCH,
     sourceLabel: "Official post on X",
-    relatedUseCase: "lead-researcher",
   },
   {
     slug: "overnight-sales-xai",
@@ -894,7 +884,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
-    relatedUseCase: "lead-researcher",
     featured: true,
   },
   {
@@ -924,7 +913,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
-    relatedUseCase: "crm-updater",
     featured: true,
   },
   {
@@ -954,7 +942,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
-    relatedUseCase: "inbox-organizer",
   },
   {
     slug: "expense-manager-xai",
@@ -983,7 +970,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
-    relatedUseCase: "expense-report-organizer",
   },
   {
     slug: "bug-reproduction-xai",
@@ -1012,7 +998,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: XAI_INTRO,
     sourceLabel: "xAI: Introducing Grok Bot",
-    relatedUseCase: "bug-reproduction-assistant",
   },
   {
     slug: "vendor-negotiation-xai",
@@ -1041,7 +1026,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: DIGITAL_TRENDS,
     sourceLabel: "Digital Trends, quoting the Grok Bot team",
-    relatedUseCase: "follow-up-email-writer",
   },
   {
     slug: "store-support-xai",
@@ -1070,7 +1054,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-11",
     sourceUrl: DIGITAL_TRENDS,
     sourceLabel: "Digital Trends, quoting the Grok Bot team",
-    relatedUseCase: "support-email-assistant",
   },
   {
     slug: "reddit-thread-scout-axel",
@@ -1097,7 +1080,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-19",
     sourceUrl: AXEL,
     sourceLabel: "Axel Schapmann on LinkedIn",
-    relatedUseCase: "reddit-thread-scout",
   },
   {
     slug: "travel-concierge-nate",
@@ -1125,7 +1107,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-14",
     sourceUrl: NATE,
     sourceLabel: "Nate’s Newsletter: Grok Bot review",
-    relatedUseCase: "travel-concierge",
   },
   {
     slug: "youtube-comments-remy",
@@ -1153,7 +1134,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-15",
     sourceUrl: REMY,
     sourceLabel: "Remy: what I’m actually using Grok Bot for",
-    relatedUseCase: "youtube-comment-desk",
   },
   {
     slug: "newsletter-to-social-remy",
@@ -1181,7 +1161,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-15",
     sourceUrl: REMY,
     sourceLabel: "Remy: what I’m actually using Grok Bot for",
-    relatedUseCase: "content-repurposing-bot",
   },
   {
     slug: "monday-marketing-report-jellypod",
@@ -1209,7 +1188,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-16",
     sourceUrl: JELLYPOD,
     sourceLabel: "Jellypod: How to use Grok Bot for marketing",
-    relatedUseCase: "monday-marketing-report",
   },
   {
     slug: "competitor-monitor-jellypod",
@@ -1237,7 +1215,6 @@ const curatedStories: DiscoverStory[] = [
     publishedAt: "2026-08-16",
     sourceUrl: JELLYPOD,
     sourceLabel: "Jellypod: How to use Grok Bot for marketing",
-    relatedUseCase: "competitor-monitor",
   },
 ];
 
@@ -1250,10 +1227,6 @@ const bySlug = new Map(discoverStories.map((story) => [story.slug, story]));
 
 export function getDiscoverStory(slug: string) {
   return bySlug.get(slug);
-}
-
-export function getRelatedUseCase(story: DiscoverStory) {
-  return story.relatedUseCase ? getUseCase(story.relatedUseCase) : undefined;
 }
 
 export function getRelatedDiscoverStories(story: DiscoverStory, limit = 3) {
@@ -1388,10 +1361,6 @@ export function looksLikeXArticleUrl(url?: string) {
   } catch {
     return /(?:x\.com|twitter\.com)\/(?:i\/)?[^/\s]+\/article\//i.test(url);
   }
-}
-
-export function getDiscoverStoryForUseCase(slug: string) {
-  return discoverStories.find((item) => item.relatedUseCase === slug);
 }
 
 export function assertUniqueDiscoverSlugs() {
