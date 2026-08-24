@@ -43,6 +43,8 @@ export type DiscoverStory = {
   slug: string;
   title: string;
   headline: string;
+  /** Original X post text. Optional on older curated stories. */
+  body?: string;
   whatTheyDid: string;
   howItWorks: string;
   whyUseful: string;

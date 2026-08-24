@@ -116,6 +116,7 @@ export function toDiscoverStory(
     slug,
     title: extracted.title.trim(),
     headline: extracted.headline.trim(),
+    body: post.text.trim() || undefined,
     whatTheyDid: extracted.whatTheyDid.trim(),
     howItWorks: extracted.howItWorks.trim(),
     whyUseful: extracted.whyUseful.trim(),

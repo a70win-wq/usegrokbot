@@ -3,9 +3,6 @@
 import { useMemo, useState } from "react";
 import { BlobatarAvatar } from "@/components/BlobatarAvatar";
 import { DiscoverCard } from "@/components/DiscoverCard";
-import { LocaleLink } from "@/components/LocaleLink";
-import { NamedIcon } from "@/components/icons";
-import { appsBySlug, popularIntegrationSlugs } from "@/data/apps";
 import {
   discoverTabs,
   filterDiscoverStories,
@@ -14,7 +11,6 @@ import {
   type OutcomeSlug,
 } from "@/data/discover";
 import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
-import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { learnFeedStories } from "@/lib/x-metrics";
@@ -52,16 +48,13 @@ export type DiscoverFilterState = {
   setCategory: (category: TopicSlug | "all") => void;
   outcome: OutcomeSlug | "all";
   setOutcome: (outcome: OutcomeSlug | "all") => void;
-  app: AppSlug | "all";
-  setApp: (app: AppSlug | "all") => void;
 };
 
 export function useDiscoverFilterState(initialTab: DiscoverTab = "latest"): DiscoverFilterState {
   const [tab, setTab] = useState<DiscoverTab>(initialTab);
   const [category, setCategory] = useState<TopicSlug | "all">("all");
   const [outcome, setOutcome] = useState<OutcomeSlug | "all">("all");
-  const [app, setApp] = useState<AppSlug | "all">("all");
-  return { tab, setTab, category, setCategory, outcome, setOutcome, app, setApp };
+  return { tab, setTab, category, setCategory, outcome, setOutcome };
 }
 
 export function DiscoverFilters({
@@ -71,18 +64,16 @@ export function DiscoverFilters({
   setCategory,
   outcome,
   setOutcome,
-  app,
-  setApp,
   showOutcomes = true,
 }: DiscoverFilterState & { showOutcomes?: boolean }) {
   const { t } = useI18n();
   const [moreOpen, setMoreOpen] = useState(false);
-  const extraActive = category !== "all" || outcome !== "all" || app !== "all";
+  const extraActive = category !== "all" || outcome !== "all";
   const showMore = moreOpen || extraActive;
 
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-1 [mask-image:linear-gradient(90deg,#000_92%,transparent)]">
+      <div className="flex gap-2 overflow-x-auto pb-1">
         {discoverTabs.map((item) => (
           <TabChip
             key={item}
@@ -92,19 +83,21 @@ export function DiscoverFilters({
             onClick={() => setTab(item)}
           />
         ))}
-        <button
-          type="button"
-          onClick={() => setMoreOpen((value) => !value)}
-          aria-expanded={showMore}
-          className={cn(
-            "inline-flex h-11 shrink-0 items-center rounded-full border px-3.5 text-[13px] transition md:hidden",
-            showMore || extraActive
-              ? "border-accent text-ink"
-              : "border-line text-mute hover:border-line-strong hover:text-ink",
-          )}
-        >
-          {t("discover.filters")}
-        </button>
+        {showOutcomes ? (
+          <button
+            type="button"
+            onClick={() => setMoreOpen((value) => !value)}
+            aria-expanded={showMore}
+            className={cn(
+              "inline-flex h-11 shrink-0 items-center rounded-full border px-3.5 text-[13px] transition md:hidden",
+              showMore || extraActive
+                ? "border-accent text-ink"
+                : "border-line text-mute hover:border-line-strong hover:text-ink",
+            )}
+          >
+            {t("discover.filters")}
+          </button>
+        ) : null}
       </div>
       {tab === "latest" ? (
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabLatestHint")}</p>
@@ -116,7 +109,7 @@ export function DiscoverFilters({
         <p className="mt-2 text-[12px] text-faint">{t("discover.tabLearnHint")}</p>
       ) : null}
 
-      <div className="mt-4 hidden gap-2 overflow-x-auto pb-1 md:flex">
+      <div className="mt-4 flex flex-wrap gap-2">
         <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
         {topicSlugs.map((item) => (
           <Chip
@@ -128,55 +121,22 @@ export function DiscoverFilters({
         ))}
       </div>
 
-      <div className="mt-3 hidden gap-2 overflow-x-auto pb-1 md:flex">
-        <Chip active={app === "all"} onClick={() => setApp("all")} label={t("discover.catAll")} />
-        {popularIntegrationSlugs.map((item) => (
-          <IntegrationChip key={item} slug={item} active={app === item} onClick={() => setApp(item)} />
-        ))}
-        <LocaleLink
-          href="/integrations"
-          className="inline-flex h-8 shrink-0 items-center rounded-full border border-line px-3 text-[13px] text-mute hover:border-line-strong hover:text-ink"
-        >
-          {t("discover.moreIntegrations")}
-        </LocaleLink>
-      </div>
-
-      <div className={cn("mt-3", showMore ? "block" : "hidden", showOutcomes ? "md:block" : "md:hidden")}>
-        <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
-          <Chip active={category === "all"} onClick={() => setCategory("all")} label={t("discover.catAll")} />
-          {topicSlugs.map((item) => (
-            <Chip
-              key={item}
-              active={category === item}
-              onClick={() => setCategory(item)}
-              label={t(topicMessageKey(item))}
-            />
-          ))}
+      {showOutcomes ? (
+        <div className={cn("mt-3", showMore ? "block" : "hidden md:block")}>
+          <p className="text-[12px] text-faint">{t("discover.byOutcome")}</p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Chip active={outcome === "all"} onClick={() => setOutcome("all")} label={t("discover.catAll")} />
+            {outcomeSlugs.map((item) => (
+              <Chip
+                key={item}
+                active={outcome === item}
+                onClick={() => setOutcome(item)}
+                label={t(outcomeKeys[item])}
+              />
+            ))}
+          </div>
         </div>
-        <p className="mb-2 text-[12px] text-faint md:hidden">{t("discover.integrations")}</p>
-        <div className="mb-3 flex gap-2 overflow-x-auto pb-1 md:hidden">
-          <Chip active={app === "all"} onClick={() => setApp("all")} label={t("discover.catAll")} />
-          {popularIntegrationSlugs.map((item) => (
-            <IntegrationChip key={item} slug={item} active={app === item} onClick={() => setApp(item)} />
-          ))}
-        </div>
-        {showOutcomes ? (
-          <>
-            <p className="text-[12px] text-faint">{t("discover.byOutcome")}</p>
-            <div className="mt-2 flex gap-2 overflow-x-auto pb-1">
-              <Chip active={outcome === "all"} onClick={() => setOutcome("all")} label={t("discover.catAll")} />
-              {outcomeSlugs.map((item) => (
-                <Chip
-                  key={item}
-                  active={outcome === item}
-                  onClick={() => setOutcome(item)}
-                  label={t(outcomeKeys[item])}
-                />
-              ))}
-            </div>
-          </>
-        ) : null}
-      </div>
+      ) : null}
     </div>
   );
 }
@@ -199,8 +159,8 @@ export function DiscoverFeed({
   const { t } = useI18n();
   const internal = useDiscoverFilterState(initialTab);
   const filters = filterState ?? internal;
-  const { tab, category, outcome, app } = filters;
-  const resetKey = `${query}\0${tab}\0${category}\0${outcome}\0${app}`;
+  const { tab, category, outcome } = filters;
+  const resetKey = `${query}\0${tab}\0${category}\0${outcome}`;
   const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
@@ -208,12 +168,12 @@ export function DiscoverFeed({
     if (tab === "learn") {
       const ranked = learnFeedStories(5);
       const allowed = new Set(
-        filterDiscoverStories({ query, tab: "latest", category, outcome, app }).map((item) => item.slug),
+        filterDiscoverStories({ query, tab: "latest", category, outcome, app: "all" }).map((item) => item.slug),
       );
       return ranked.filter((item) => allowed.has(item.slug));
     }
-    return filterDiscoverStories({ query, tab, category, outcome, app });
-  }, [query, tab, category, outcome, app]);
+    return filterDiscoverStories({ query, tab, category, outcome, app: "all" });
+  }, [query, tab, category, outcome]);
 
   const shown = stories.slice(0, visible);
 
@@ -230,18 +190,19 @@ export function DiscoverFeed({
                   : "discover.feedTitle",
             )}
           </h2>
-          <p className="mt-2 max-w-2xl text-sm text-mute">{t("discover.feedBody")}</p>
         </div>
       ) : null}
 
       {hideFilters ? null : <DiscoverFilters {...filters} showOutcomes={showOutcomes} />}
 
-      <p className="mt-6 text-[13px] text-faint">{t("discover.count", { n: stories.length })}</p>
+      {showIntro ? null : (
+        <p className="mt-6 text-[13px] text-faint">{t("discover.count", { n: stories.length })}</p>
+      )}
 
       {stories.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-line bg-elevated px-5 py-10 text-center">
           <BlobatarAvatar
-            name={`empty:${query || tab}:${category}:${outcome}:${app}`}
+            name={`empty:${query || tab}:${category}:${outcome}`}
             size={72}
             expression="thinking"
             className="mx-auto mb-4"
@@ -274,32 +235,6 @@ export function DiscoverFeed({
         </>
       )}
     </div>
-  );
-}
-
-function IntegrationChip({
-  slug,
-  active,
-  onClick,
-}: {
-  slug: AppSlug;
-  active: boolean;
-  onClick: () => void;
-}) {
-  const app = appsBySlug[slug];
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={cn(
-        "inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border px-3 text-[13px] transition md:h-8",
-        active ? "border-accent text-ink" : "border-line text-mute hover:border-line-strong hover:text-ink",
-      )}
-    >
-      <NamedIcon name={app.icon} className="size-3.5" />
-      {app.name}
-    </button>
   );
 }
 
@@ -347,7 +282,7 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "inline-flex h-11 shrink-0 items-center rounded-full border px-3 text-[13px] transition md:h-8",
+        "inline-flex h-8 shrink-0 items-center rounded-full border px-3 text-[13px] transition",
         active ? "border-accent text-ink" : "border-line text-mute hover:border-line-strong hover:text-ink",
       )}
     >

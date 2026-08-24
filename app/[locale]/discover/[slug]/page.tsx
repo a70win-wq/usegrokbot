@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { DiscoverDetailView } from "@/components/DiscoverDetailView";
-import { appsBySlug } from "@/data/apps";
 import {
   discoverStories,
   getDiscoverStory,
@@ -44,11 +43,7 @@ export default async function DiscoverStoryPage({
   const story = getDiscoverStory(slug);
   if (!story) notFound();
   return (
-    <DiscoverDetailView
-      story={story}
-      more={getRelatedDiscoverStories(story, 3)}
-      appNames={story.apps.map((app) => appsBySlug[app].name)}
-    />
+    <DiscoverDetailView story={story} more={getRelatedDiscoverStories(story, 3)} />
   );
 }
 

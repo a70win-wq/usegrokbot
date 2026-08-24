@@ -44,3 +44,12 @@ export function formatCardDate(isoDate: string, locale: Locale, now = new Date()
   if (days >= 30) return exact;
   return `${formatRelativeTime(isoDate, locale, now)} · ${exact}`;
 }
+
+export function sameCopy(a?: string, b?: string) {
+  if (!a || !b) return false;
+  const normalize = (value: string) =>
+    value.toLowerCase().replace(/[.\s]+$/g, "").replace(/\s+/g, " ").trim();
+  const left = normalize(a);
+  const right = normalize(b);
+  return left === right || left.startsWith(right) || right.startsWith(left);
+}

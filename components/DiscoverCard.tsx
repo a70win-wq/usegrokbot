@@ -1,15 +1,15 @@
 "use client";
 
-import { AppNamePills } from "@/components/AppPills";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
+import { ExpandablePost } from "@/components/ExpandablePost";
 import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
 import { isElonLiked, type DiscoverStory } from "@/data/discover";
 import { topicsForStory } from "@/data/topics";
-import { LAST_REVIEWED, formatVerifiedDate } from "@/data/verification";
 import { cn } from "@/lib/cn";
-import { formatCardDate } from "@/lib/format";
+import { formatCardDate, sameCopy } from "@/lib/format";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
+import { openExternalUrl } from "@/lib/open-external";
 import { formatViewCount, metricForStory } from "@/lib/x-metrics";
 
 export function DiscoverCard({
@@ -23,15 +23,18 @@ export function DiscoverCard({
   const item = localizeDiscoverStory(story, locale);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
-  const localeTag = locale === "en" ? "en" : locale;
-  const checked = formatVerifiedDate(LAST_REVIEWED, localeTag);
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
+  const heading = featured ? item.headline : item.title;
+  const postText = item.body || (featured ? item.whatTheyDid : item.headline);
+  const showHeading = Boolean(heading) && !sameCopy(heading, postText);
+  const outcome = item.result;
+  const showOutcome = Boolean(outcome) && !sameCopy(outcome, heading) && !sameCopy(outcome, postText);
   const trustLabel = story.tested
     ? t("discover.tabTested")
     : story.source === "official"
       ? t("discover.tabOfficial")
-      : t("discover.tabCommunity");
+      : null;
 
   return (
     <article
@@ -69,32 +72,30 @@ export function DiscoverCard({
           </div>
         ) : null}
       </div>
-      <h3
-        className={cn(
-          "mt-1 font-medium tracking-tight text-ink",
-          featured ? "text-[22px] leading-snug md:text-[26px]" : "text-[16px] leading-snug",
-        )}
-      >
-        <LocaleLink href={`/discover/${story.slug}`} className="after:absolute after:inset-0">
-          {featured ? item.headline : item.title}
-        </LocaleLink>
-      </h3>
-      <p className={cn("relative mt-2 text-[13px] leading-6 text-mute", featured ? "line-clamp-4" : "line-clamp-3")}>
-        {featured ? item.whatTheyDid : item.headline}
-      </p>
+      {showHeading ? (
+        <h3
+          className={cn(
+            "mt-2 font-medium tracking-tight text-ink",
+            featured ? "text-[22px] leading-snug md:text-[26px]" : "text-[16px] leading-snug",
+          )}
+        >
+          <LocaleLink href={`/discover/${story.slug}`}>{heading}</LocaleLink>
+        </h3>
+      ) : (
+        <h3 className="sr-only">{item.title}</h3>
+      )}
+      {postText ? <ExpandablePost text={postText} className="mt-2" /> : null}
 
-      {item.result || item.output ? (
-        <div className="relative mt-4 rounded-[12px] border border-line bg-elevated px-3 py-3">
-          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">
-            {item.result ? t("discover.result") : t("discover.output")}
-          </p>
+      {showOutcome ? (
+        <div className="mt-4 rounded-[12px] border border-line bg-elevated px-3 py-3">
+          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">{t("discover.result")}</p>
           <p className="mt-1 text-[13px] leading-5 text-ink">
-            <SketchUnderline active={featured}>{item.result ?? item.output}</SketchUnderline>
+            <SketchUnderline active={featured}>{outcome}</SketchUnderline>
           </p>
         </div>
       ) : null}
 
-      <div className="relative z-10 mt-4 flex flex-wrap gap-1.5">
+      <div className="relative mt-4 flex flex-wrap gap-1.5">
         {labels.map((topic) => (
           <LocaleLink
             key={topic.slug}
@@ -105,26 +106,18 @@ export function DiscoverCard({
           </LocaleLink>
         ))}
       </div>
+      {trustLabel ? (
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-faint">
+          <span className="rounded-full border border-line px-2 py-0.5 text-mute">{trustLabel}</span>
+        </div>
+      ) : null}
 
-      <div className="relative mt-3">
-        <AppNamePills apps={story.apps} />
-      </div>
-      <div className="relative mt-3 flex flex-wrap items-center gap-2 text-[11px] text-faint">
-        <span className="rounded-full border border-line px-2 py-0.5 text-mute">{trustLabel}</span>
-        <span>{t("discover.lastVerified", { date: checked })}</span>
-      </div>
-
-      <div className="relative z-10 mt-auto flex flex-col gap-2 pt-5 sm:flex-row">
-        <LocaleLink
-          href={`/discover/${story.slug}`}
-          className="accent-gradient spring-press inline-flex h-11 items-center justify-center rounded-[10px] px-4 text-[13px] font-medium sm:h-9"
-        >
-          {t("discover.turnIntoPrompt")} →
-        </LocaleLink>
+      <div className="relative z-10 mt-auto pt-5">
         <a
           href={originalHref}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
+          onClick={(event) => openExternalUrl(originalHref, event)}
           className="inline-flex h-11 items-center justify-center rounded-[10px] border border-line px-4 text-[13px] text-mute hover:border-line-strong hover:text-ink sm:h-9"
         >
           {originalLabel} ↗
