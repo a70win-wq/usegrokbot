@@ -15939,38 +15939,6 @@
     "sourceLabel": "Kyle Kim on X"
   },
   {
-    "slug": "qpro4khdr-grok-bot",
-    "title": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？...",
-    "headline": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
-    "whatTheyDid": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
-    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
-    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
-    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
-    "whoShouldTry": [
-      "Operators",
-      "Grok Bot users"
-    ],
-    "usefulFor": "Operators / Grok Bot users",
-    "output": "Grok @bot 是不是有点过于要求拟人了，我让他去写稿子发帖，结果这文章是这家伙一个字一个字打上去的，而且中途还漏掉一个字？？？ 有这个必要吗？直接复制粘贴不好吗？😅",
-    "category": "operations",
-    "outcomes": [
-      "automate-work",
-      "save-time"
-    ],
-    "apps": [
-      "x"
-    ],
-    "difficulty": "medium",
-    "schedule": "one-time",
-    "source": "community",
-    "authorName": "Bogon",
-    "handle": "QPRO4KHDR",
-    "publishedAt": "2026-08-23",
-    "xPostUrl": "https://x.com/QPRO4KHDR/status/2091551890026934400",
-    "sourceUrl": "https://x.com/QPRO4KHDR/status/2091551890026934400",
-    "sourceLabel": "Bogon on X"
-  },
-  {
     "slug": "thecyberfam-okay-ive-been-using-grok-bot-for-5-minutes-now-a",
     "title": "Okay, I've been using Grok Bot for 5 minutes now and it already saved...",
     "headline": "Okay, I've been using Grok Bot for 5 minutes now and it already saved me $2350.",
