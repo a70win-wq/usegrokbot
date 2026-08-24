@@ -207,6 +207,7 @@ function buildSafeXFallback(item: SourceCase, post: FetchedPost, existingStories
     slug,
     title,
     headline: item.sourceSummary,
+    body: post.text.trim() || undefined,
     whatTheyDid: item.sourceSummary,
     howItWorks:
       "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.",

@@ -26,7 +26,7 @@ export function DiscoverCard({
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
   const heading = featured ? item.headline : item.title;
-  const postText = item.body || (featured ? item.whatTheyDid : item.headline);
+  const postText = item.body || item.whatTheyDid || item.headline;
   const showHeading = Boolean(heading) && !sameCopy(heading, postText);
   const outcome = item.result;
   const showOutcome = Boolean(outcome) && !sameCopy(outcome, heading) && !sameCopy(outcome, postText);
@@ -39,7 +39,7 @@ export function DiscoverCard({
   return (
     <article
       className={cn(
-        "spring-lift group relative flex h-full flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong",
+        "spring-lift group relative flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong",
         featured && "featured-glow",
       )}
     >

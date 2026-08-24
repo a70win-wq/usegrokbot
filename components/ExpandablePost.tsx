@@ -1,10 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef, useState } from "react";
-import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
-
-const LINE_HEIGHT_REM = 1.5;
 
 export function ExpandablePost({
   text,
@@ -19,7 +16,6 @@ export function ExpandablePost({
   const ref = useRef<HTMLParagraphElement>(null);
   const [overflows, setOverflows] = useState(false);
   const [open, setOpen] = useState(false);
-  const maxHeight = `${lines * LINE_HEIGHT_REM}rem`;
 
   useLayoutEffect(() => {
     const el = ref.current;
@@ -37,8 +33,8 @@ export function ExpandablePost({
     <div className={className}>
       <p
         ref={ref}
-        className="overflow-hidden text-[15px] leading-6 whitespace-pre-wrap text-ink"
-        style={open ? undefined : { maxHeight }}
+        className="min-w-0 overflow-hidden text-[15px] leading-6 wrap-break-word whitespace-pre-wrap text-ink"
+        style={open ? undefined : { maxHeight: `calc(${lines} * 1lh)` }}
       >
         {text}
       </p>

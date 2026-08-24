@@ -30,7 +30,7 @@ export function DiscoverDetailView({
     : story.source === "official"
       ? t("discover.tabOfficial")
       : null;
-  const postText = item.body || item.headline;
+  const postText = item.body || item.whatTheyDid || item.headline;
   const showTitle = Boolean(item.title) && !sameCopy(item.title, postText);
   const showHeadline =
     Boolean(item.headline) && !sameCopy(item.headline, postText) && !sameCopy(item.title, item.headline);
