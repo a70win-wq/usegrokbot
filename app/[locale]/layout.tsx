@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Providers } from "@/components/Providers";
+import { SponsorStrip } from "@/components/SponsorStrip";
 import { getGithubStars } from "@/lib/github";
 import { messages } from "@/lib/i18n/messages";
 import { URL_LOCALES, htmlLang, isUrlLocale, ogLocale, urlToLocale } from "@/lib/i18n/paths";
@@ -97,6 +98,7 @@ export default async function LocaleLayout({
         <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
         <Providers>
           <Header />
+          <SponsorStrip />
           <main className="flex-1">{children}</main>
           <Footer stars={stars} />
         </Providers>
