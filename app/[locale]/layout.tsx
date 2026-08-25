@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Providers } from "@/components/Providers";
@@ -99,6 +100,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <Footer stars={stars} />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
