@@ -24,6 +24,13 @@ export const messages = {
       downloadAria: "Download Grok Bot from the official xAI site",
       downloadHint: "Official download on x.ai/bot",
     },
+    sponsor: {
+      label: "Sponsored",
+      name: "Grok App",
+      tagline: "Open-source desktop GUI for Grok Build CLI",
+      cta: "Visit Grok App",
+      aria: "Sponsored by Grok App. Opens in a new tab.",
+    },
     nav: {
       discover: "Discover",
       useCases: "Use Cases",
@@ -392,6 +399,13 @@ export const messages = {
       downloadAria: "去 xAI 官網下載 Grok Bot",
       downloadHint: "官方下載：x.ai/bot",
     },
+    sponsor: {
+      label: "贊助",
+      name: "Grok App",
+      tagline: "為 Grok Build CLI 打造的開源桌面 GUI",
+      cta: "前往 Grok App",
+      aria: "由 Grok App 贊助，在新分頁打開。",
+    },
     nav: {
       discover: "發現",
       useCases: "使用場景",
@@ -756,6 +770,13 @@ export const messages = {
       download: "下载 Grok Bot",
       downloadAria: "去 xAI 官网下载 Grok Bot",
       downloadHint: "官方下载：x.ai/bot",
+    },
+    sponsor: {
+      label: "赞助",
+      name: "Grok App",
+      tagline: "为 Grok Build CLI 打造的开源桌面 GUI",
+      cta: "前往 Grok App",
+      aria: "由 Grok App 赞助，在新标签页打开。",
     },
     nav: {
       discover: "发现",
