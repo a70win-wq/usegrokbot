@@ -7,7 +7,7 @@ labels: ["use-case"]
 
 ## X post URL
 
-One public X post URL, or several URLs (one per line). Max 15.
+One public X post URL, or several URLs (one per line). Max 1000.
 
 https://x.com/
 

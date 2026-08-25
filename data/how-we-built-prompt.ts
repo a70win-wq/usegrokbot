@@ -41,7 +41,7 @@ For each post save:
 File GitHub issues on a70win-wq/usegrokbot.
 
 Title must be exactly: Ingest posts:
-Max 15 original URLs per issue. More posts = more issues.
+Max 1000 original URLs per issue. More posts = more issues.
 
 Body:
 
