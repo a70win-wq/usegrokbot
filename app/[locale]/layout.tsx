@@ -41,16 +41,16 @@ export async function generateMetadata({
   return {
     metadataBase: new URL(site.url),
     title: {
-      default: `${site.name} — ${messages[locale].home.title}`,
+      default: `${site.name} — ${messages[locale].home.metaTitle}`,
       template: `%s | ${site.name}`,
     },
-    description: messages[locale].home.subtitle,
+    description: messages[locale].home.metaDescription,
     applicationName: site.name,
     other: {
       "apple-itunes-app": `app-id=${site.grokBotAppId}`,
     },
     openGraph: {
-      title: `${messages[locale].home.title} | ${site.name}`,
+      title: `${messages[locale].home.metaTitle} | ${site.name}`,
       siteName: site.name,
       type: "website",
       locale: ogLocale[raw],
@@ -59,14 +59,14 @@ export async function generateMetadata({
           url: site.shareImage,
           width: 1200,
           height: 630,
-          alt: `${site.name} — ${messages[locale].home.title}`,
+          alt: `${site.name} — ${messages[locale].home.metaTitle}`,
           type: "image/png",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${messages[locale].home.title} | ${site.name}`,
+      title: `${messages[locale].home.metaTitle} | ${site.name}`,
       images: site.shareImage,
     },
     robots: {

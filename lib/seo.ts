@@ -32,12 +32,14 @@ export function pageMeta({
   path,
   urlLocale,
   index = true,
+  follow,
 }: {
   title: string;
   description: string;
   path: string;
   urlLocale: string | UrlLocale;
   index?: boolean;
+  follow?: boolean;
 }): Metadata {
   const locale = parseUrlLocale(urlLocale);
   const url = absoluteUrl(path, locale);
@@ -51,9 +53,11 @@ export function pageMeta({
   return {
     title,
     description,
-    robots: index
-      ? { index: true, follow: true, "max-image-preview": "large" }
-      : { index: false, follow: false },
+    robots: {
+      index,
+      follow: follow ?? true,
+      "max-image-preview": "large",
+    },
     alternates: {
       canonical: url,
       languages: languageAlternates(path),
@@ -89,12 +93,14 @@ export function messageMeta(
     description,
     vars,
     index,
+    follow,
   }: {
     path: string;
     title: string;
     description: string;
     vars?: Record<string, string | number>;
     index?: boolean;
+    follow?: boolean;
   },
 ): Metadata {
   const parsed = parseUrlLocale(urlLocale);
@@ -105,6 +111,7 @@ export function messageMeta(
     path,
     urlLocale: parsed,
     index,
+    follow,
   });
 }
 

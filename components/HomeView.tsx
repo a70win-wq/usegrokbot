@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { CategoryCard } from "@/components/CategoryCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
-import { JsonLd } from "@/components/JsonLd";
 import { LocaleLink } from "@/components/LocaleLink";
 import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
@@ -12,7 +11,6 @@ import { SearchBar } from "@/components/SearchBar";
 import { discoverStories, storiesForTopic } from "@/data/discover";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 export function HomeView({
   initialQuery = "",
@@ -21,7 +19,7 @@ export function HomeView({
   initialQuery?: string;
   stars?: number | null;
 }) {
-  const { t, absoluteHref } = useI18n();
+  const { t } = useI18n();
   const [query, setQuery] = useState(initialQuery);
   const filters = useDiscoverFilterState();
 
@@ -32,31 +30,6 @@ export function HomeView({
 
   return (
     <>
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: site.name,
-          url: absoluteHref("/"),
-          description: site.description,
-          potentialAction: {
-            "@type": "SearchAction",
-            target: absoluteHref("/?q={search_term_string}"),
-            "query-input": "required name=search_term_string",
-          },
-        }}
-      />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: t("home.title"),
-          description: t("home.subtitle"),
-          url: absoluteHref("/"),
-          numberOfItems: discoverStories.length,
-        }}
-      />
-
       <section>
         <div className="mx-auto max-w-[1240px] px-5 pt-20 pb-12 md:px-8 md:pt-[104px] md:pb-16">
           <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between md:gap-12">

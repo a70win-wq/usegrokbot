@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Search } from "lucide-react";
 import { BotFace, botColorFor } from "@/components/BotFace";
 import { CopyButton } from "@/components/CopyButton";
-import { JsonLd } from "@/components/JsonLd";
 import {
   OFFICIAL_DOCS_URL,
   OFFICIAL_SOURCE_URL,
@@ -16,7 +15,6 @@ import {
 } from "@/data/official-use-cases";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 const categoryKeys: Record<OfficialCategory, string> = {
   general: "officialPage.catGeneral",
@@ -31,7 +29,7 @@ const categoryKeys: Record<OfficialCategory, string> = {
 };
 
 export function OfficialView() {
-  const { t, absoluteHref } = useI18n();
+  const { t } = useI18n();
   const [category, setCategory] = useState<OfficialCategory | "all">("all");
   const [query, setQuery] = useState("");
   const [selectedSlug, setSelectedSlug] = useState(officialUseCases[0]?.slug ?? "");
@@ -80,19 +78,6 @@ export function OfficialView() {
 
   return (
     <div className="mx-auto max-w-[1240px] px-5 py-8 md:px-8 md:py-10">
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: t("officialPage.title"),
-          description: t("officialPage.body"),
-          url: absoluteHref("/roles"),
-          numberOfItems: officialUseCases.length,
-          isBasedOn: [OFFICIAL_SOURCE_URL, OFFICIAL_DOCS_URL],
-          publisher: { "@type": "Organization", name: site.name, url: site.url },
-        }}
-      />
-
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
           <h1 className="text-[20px] font-medium tracking-tight text-ink">{t("officialPage.title")}</h1>

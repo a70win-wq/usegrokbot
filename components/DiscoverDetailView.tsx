@@ -5,14 +5,11 @@ import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { DiscoverCard } from "@/components/DiscoverCard";
 import { ExpandablePost } from "@/components/ExpandablePost";
-import { JsonLd } from "@/components/JsonLd";
 import { XPostEmbed } from "@/components/XPostEmbed";
 import type { DiscoverStory } from "@/data/discover";
-import { LAST_REVIEWED } from "@/data/verification";
 import { formatStoryDate, sameCopy } from "@/lib/format";
 import { openExternalUrl } from "@/lib/open-external";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
-import { site } from "@/lib/site";
 
 export function DiscoverDetailView({
   story,
@@ -21,7 +18,7 @@ export function DiscoverDetailView({
   story: DiscoverStory;
   more: DiscoverStory[];
 }) {
-  const { locale, t, absoluteHref } = useI18n();
+  const { locale, t } = useI18n();
   const item = localizeDiscoverStory(story, locale);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOriginalX") : t("discover.viewOriginal");
@@ -37,56 +34,9 @@ export function DiscoverDetailView({
   const outcome = item.result;
   const showOutcome =
     Boolean(outcome) && !sameCopy(outcome, item.title) && !sameCopy(outcome, postText);
-  const sourceAuthorType = story.handle === "xai" || story.handle === "bot" || story.authorName === "xAI" || story.authorName === "Jellypod"
-    ? "Organization"
-    : "Person";
 
   return (
     <article className="mx-auto max-w-[800px] px-5 py-10 md:px-8 md:py-16">
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Article",
-          headline: item.title,
-          description: item.headline,
-          datePublished: story.publishedAt,
-          dateModified: LAST_REVIEWED,
-          author: { "@type": "Organization", name: site.name, url: site.url },
-          publisher: { "@type": "Organization", name: site.name, url: site.url },
-          isBasedOn: {
-            "@type": "CreativeWork",
-            name: story.sourceLabel,
-            url: story.sourceUrl,
-            author: {
-              "@type": sourceAuthorType,
-              name: story.authorName,
-              ...(story.handle ? { url: `https://x.com/${story.handle}` } : {}),
-            },
-          },
-          citation: {
-            "@type": "CreativeWork",
-            name: story.sourceLabel,
-            url: story.sourceUrl,
-            author: {
-              "@type": sourceAuthorType,
-              name: story.authorName,
-              ...(story.handle ? { url: `https://x.com/${story.handle}` } : {}),
-            },
-          },
-          mainEntityOfPage: absoluteHref(`/discover/${story.slug}`),
-        }}
-      />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: t("nav.discover"), item: absoluteHref("/") },
-            { "@type": "ListItem", position: 2, name: item.title },
-          ],
-        }}
-      />
-
       <Breadcrumbs items={[{ href: "/", label: t("nav.discover") }, { label: item.title }]} />
 
       <div className="mt-6 flex flex-wrap items-center gap-2">

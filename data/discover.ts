@@ -1220,6 +1220,8 @@ const curatedStories: DiscoverStory[] = [
   },
 ];
 
+const curatedSlugs = new Set(curatedStories.map((story) => story.slug));
+
 export const discoverStories: DiscoverStory[] = [
   ...curatedStories,
   ...(ingestedStories as DiscoverStory[]),
@@ -1346,6 +1348,27 @@ export function isElonLiked(story: DiscoverStory) {
   if (story.elonLiked) return true;
   const id = tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? "");
   return Boolean(id && elonLikedIds.has(id));
+}
+
+const THIN_COPY_MARKERS = [
+  "surfaced through the awesome-grok-bot Field Cases index",
+  "It is a concrete public example of work being handed to Grok Bot",
+  "A public example of someone handing work to Grok Bot, kept here with attribution",
+  "This fallback deliberately avoids adding claims",
+  "UseGrokBot ingested this public X post",
+  "It is a public field example of Grok Bot being used for a real task",
+] as const;
+
+export function isThinDiscoverStory(story: DiscoverStory) {
+  const blob = `${story.howItWorks}\n${story.whyUseful}\n${story.whyItMatters}`;
+  return THIN_COPY_MARKERS.some((marker) => blob.includes(marker));
+}
+
+export function shouldIndexDiscoverStory(story: DiscoverStory) {
+  if (curatedSlugs.has(story.slug)) return true;
+  if (story.featured || story.tested || story.source === "official") return true;
+  if (isElonLiked(story)) return true;
+  return !isThinDiscoverStory(story);
 }
 
 function elonBoostRank(story: DiscoverStory) {

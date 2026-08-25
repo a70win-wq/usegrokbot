@@ -1,13 +1,17 @@
 import { notFound } from "next/navigation";
 import { DiscoverDetailView } from "@/components/DiscoverDetailView";
+import { JsonLd } from "@/components/JsonLd";
 import {
   discoverStories,
   getDiscoverStory,
   getRelatedDiscoverStories,
+  shouldIndexDiscoverStory,
 } from "@/data/discover";
-import { localizeDiscoverStory, type Locale } from "@/lib/i18n";
-import { localeFromParams } from "@/lib/i18n/paths";
+import { LAST_REVIEWED } from "@/data/verification";
+import { localizeDiscoverStory, messages, type Locale } from "@/lib/i18n";
+import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
 import { pageMeta } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export function generateStaticParams() {
   return discoverStories.map((story) => ({ slug: story.slug }));
@@ -31,6 +35,8 @@ export async function generateMetadata({
     description: copy.description,
     path: `/discover/${story.slug}`,
     urlLocale,
+    index: shouldIndexDiscoverStory(story),
+    follow: true,
   });
 }
 
@@ -39,11 +45,56 @@ export default async function DiscoverStoryPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
-  const { slug } = await params;
+  const { locale: raw, slug } = await params;
   const story = getDiscoverStory(slug);
   if (!story) notFound();
+  const { urlLocale, locale } = localeFromParams(raw);
+  const item = localizeDiscoverStory(story, locale);
+  const pageUrl = absoluteUrl(`/discover/${story.slug}`, urlLocale);
+  const sourceAuthorType =
+    story.handle === "xai" || story.handle === "bot" || story.authorName === "xAI" || story.authorName === "Jellypod"
+      ? "Organization"
+      : "Person";
+  const source = {
+    "@type": "CreativeWork",
+    name: story.sourceLabel,
+    url: story.sourceUrl,
+    author: {
+      "@type": sourceAuthorType,
+      name: story.authorName,
+      ...(story.handle ? { url: `https://x.com/${story.handle}` } : {}),
+    },
+  };
+
   return (
-    <DiscoverDetailView story={story} more={getRelatedDiscoverStories(story, 3)} />
+    <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: item.title,
+          description: item.headline,
+          datePublished: story.publishedAt,
+          dateModified: LAST_REVIEWED,
+          author: { "@type": "Organization", name: site.name, url: site.url },
+          publisher: { "@type": "Organization", name: site.name, url: site.url },
+          isBasedOn: source,
+          citation: source,
+          mainEntityOfPage: pageUrl,
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: messages[locale].nav.discover, item: absoluteUrl("/", urlLocale) },
+            { "@type": "ListItem", position: 2, name: item.title },
+          ],
+        }}
+      />
+      <DiscoverDetailView story={story} more={getRelatedDiscoverStories(story, 3)} />
+    </>
   );
 }
 
