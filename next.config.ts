@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/:locale(en|zh-hk|zh-cn)/official",
+        destination: "/:locale/roles",
+        permanent: true,
+      },
+      {
         source: "/:locale(en|zh-hk|zh-cn)/apps",
         destination: "/:locale/integrations",
         permanent: true,

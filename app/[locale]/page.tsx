@@ -15,12 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function HomePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
-  const { q } = await searchParams;
+export default async function HomePage() {
   const stars = await getGithubStars();
-  return <HomeView initialQuery={q ?? ""} stars={stars} />;
+  return <HomeView stars={stars} />;
 }

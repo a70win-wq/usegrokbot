@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...entries("/", { changeFrequency: "daily", priority: 1 }, day(latestStory)),
+    ...entries("/roles", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ...entries("/rankings", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...entries("/articles", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),

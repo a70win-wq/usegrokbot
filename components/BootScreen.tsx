@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BloubBot } from "@/components/BloubBot";
+import { BOOT_MAX_MS } from "@/lib/boot-script";
 import { COLORS, type Block } from "@/lib/bloub";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
@@ -12,54 +13,63 @@ declare global {
   }
 }
 
-const MIN_MS = 800;
-const FADE_MS = 300;
+const FADE_MS = 200;
 const BLUE = COLORS.find((item) => item.id === "bleu")?.hex ?? "#3b93f0";
 
 const BOOT_CYCLE: Block[] = [
-  { state: "idle", duration: 0.6 },
-  { state: "egg", duration: 0.6 },
-  { state: "exclaim", duration: 0.7 },
-  { state: "wink", duration: 0.6 },
-  { state: "idle", duration: 0.6 },
+  { state: "idle", duration: 0.4 },
+  { state: "wink", duration: 0.4 },
 ];
+
+function bootAttr() {
+  return document.documentElement.getAttribute("data-boot");
+}
 
 export function BootScreen() {
   const { t } = useI18n();
-  const [open, setOpen] = useState(() => typeof window === "undefined" || !window.__ugbBootDone);
+  const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
 
   useEffect(() => {
-    if (window.__ugbBootDone) return;
+    if (window.__ugbBootDone && bootAttr() === "skip") {
+      setOpen(false);
+      return;
+    }
 
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    document.documentElement.dataset.boot = "1";
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    const started = performance.now();
-    let fadeAt = 0;
     let hideAt = 0;
+    let finished = false;
 
-    const finish = () => {
-      const hold = reduce ? 0 : Math.max(0, MIN_MS - (performance.now() - started));
-      fadeAt = window.setTimeout(() => setLeaving(true), hold);
-      hideAt = window.setTimeout(() => {
-        window.__ugbBootDone = true;
-        delete document.documentElement.dataset.boot;
-        document.body.style.overflow = prevOverflow;
+    const hide = () => {
+      if (finished) return;
+      finished = true;
+      window.__ugbBootDone = true;
+      if (bootAttr() === "skip") {
         setOpen(false);
-      }, hold + FADE_MS);
+        return;
+      }
+      setLeaving(true);
+      hideAt = window.setTimeout(() => setOpen(false), FADE_MS);
     };
 
-    if (document.readyState === "complete") finish();
-    else window.addEventListener("load", finish, { once: true });
+    const onAttr = () => {
+      const value = bootAttr();
+      if (value === "off" || value === "skip") hide();
+    };
+
+    onAttr();
+    const observer = new MutationObserver(onAttr);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-boot"] });
+    const cap = window.setTimeout(() => {
+      if (bootAttr() === "1" || !bootAttr()) {
+        document.documentElement.setAttribute("data-boot", "off");
+      }
+      hide();
+    }, BOOT_MAX_MS + FADE_MS);
 
     return () => {
-      window.removeEventListener("load", finish);
-      window.clearTimeout(fadeAt);
+      observer.disconnect();
+      window.clearTimeout(cap);
       window.clearTimeout(hideAt);
-      delete document.documentElement.dataset.boot;
-      document.body.style.overflow = prevOverflow;
     };
   }, []);
 
@@ -67,6 +77,7 @@ export function BootScreen() {
 
   return (
     <div
+      data-boot-screen=""
       suppressHydrationWarning
       aria-busy="true"
       aria-label={t("bot.boot")}

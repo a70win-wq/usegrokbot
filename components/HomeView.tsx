@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CategoryCard } from "@/components/CategoryCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { JsonLd } from "@/components/JsonLd";
@@ -24,6 +24,11 @@ export function HomeView({
   const { t, absoluteHref } = useI18n();
   const [query, setQuery] = useState(initialQuery);
   const filters = useDiscoverFilterState();
+
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q") ?? "";
+    if (q && q !== initialQuery) setQuery(q);
+  }, [initialQuery]);
 
   return (
     <>

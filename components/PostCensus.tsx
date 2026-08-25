@@ -14,8 +14,8 @@ export function PostCensus({ total }: { total: number }) {
     let frame = 0;
     let observer: MutationObserver | undefined;
 
-    const run = () => {
-      if (media.matches) {
+    const run = (instant = false) => {
+      if (media.matches || instant) {
         setValue(total);
         setDone(true);
         return;
@@ -40,11 +40,16 @@ export function PostCensus({ total }: { total: number }) {
       frame = window.requestAnimationFrame(tick);
     };
 
-    if (window.__ugbBootDone || !document.documentElement.dataset.boot) {
-      run();
+    const bootReady = () => {
+      const boot = document.documentElement.getAttribute("data-boot");
+      return window.__ugbBootDone || boot !== "1";
+    };
+
+    if (bootReady()) {
+      run(document.documentElement.getAttribute("data-boot") === "skip");
     } else {
       observer = new MutationObserver(() => {
-        if (!document.documentElement.dataset.boot) {
+        if (bootReady()) {
           observer?.disconnect();
           run();
         }

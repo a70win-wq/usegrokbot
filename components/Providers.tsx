@@ -9,9 +9,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
       <LocaleProvider>
+        <BootScreen />
         {children}
         <CursorBot />
-        <BootScreen />
       </LocaleProvider>
     </ThemeProvider>
   );

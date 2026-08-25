@@ -27,6 +27,8 @@ export function AuthorAvatar({
         alt=""
         width={size}
         height={size}
+        decoding="async"
+        loading="lazy"
         className={cn(box, "shrink-0 rounded-full bg-elevated object-cover", className)}
         onError={() => setFailed(true)}
       />

@@ -204,8 +204,25 @@ html[data-theme="dark"] .featured-glow {
 }
 
 html[data-hero-hold] [data-cursor-bot],
-html[data-boot] [data-cursor-bot] {
+html[data-boot="1"] [data-cursor-bot] {
   opacity: 0 !important;
+}
+
+html[data-boot="1"] {
+  overflow: hidden;
+}
+
+[data-boot-screen] {
+  transition: opacity 200ms ease-out;
+}
+
+html[data-boot="off"] [data-boot-screen] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+html[data-boot="skip"] [data-boot-screen] {
+  display: none;
 }
 
 @keyframes boot-wander {

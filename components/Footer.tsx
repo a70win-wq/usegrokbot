@@ -9,36 +9,49 @@ import { LocaleLink } from "./LocaleLink";
 export function Footer({ stars }: { stars?: number | null }) {
   const { t } = useI18n();
 
+  const links = [
+    { href: "/", label: t("nav.discover") },
+    { href: "/roles", label: t("nav.official") },
+    { href: "/categories", label: t("nav.categories") },
+    { href: "/rankings", label: t("nav.rankings") },
+    { href: "/articles", label: t("nav.articles") },
+    { href: "/how-we-built", label: t("nav.built") },
+    { href: "/submit", label: t("nav.submitShort") },
+  ];
+
   return (
     <footer className="mt-auto border-t border-line">
-      <div className="mx-auto flex max-w-[1240px] flex-col px-5 py-12 md:px-8">
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-mute">
-          <LocaleLink href="/" className="flex items-center gap-2 text-ink">
-            <BotFace size={18} color={botColorFor("usegrokbot")} />
-            UseGrokBot
-          </LocaleLink>
-          <LocaleLink href="/" className="hover:text-ink">
-            {t("nav.discover")}
-          </LocaleLink>
-          <LocaleLink href="/categories" className="hover:text-ink">
-            {t("nav.categories")}
-          </LocaleLink>
-          <LocaleLink href="/rankings" className="hover:text-ink">
-            {t("nav.rankings")}
-          </LocaleLink>
-          <LocaleLink href="/articles" className="hover:text-ink">
-            {t("nav.articles")}
-          </LocaleLink>
-          <LocaleLink href="/how-we-built" className="hover:text-ink">
-            {t("nav.built")}
-          </LocaleLink>
-          <LocaleLink href="/submit" className="hover:text-ink">
-            {t("nav.submitShort")}
-          </LocaleLink>
-          <GetGrokBot variant="link" />
-          <GitHubStar stars={stars} />
+      <div className="mx-auto max-w-[1240px] px-5 py-10 md:px-8 md:py-12">
+        <LocaleLink href="/" className="inline-flex items-center gap-2 text-sm font-medium text-ink">
+          <BotFace size={18} color={botColorFor("usegrokbot")} />
+          UseGrokBot
+        </LocaleLink>
+
+        <nav
+          className="mt-5 grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-mute sm:flex sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3"
+          aria-label="Footer"
+        >
+          {links.map((item) => (
+            <LocaleLink
+              key={item.href}
+              href={item.href}
+              className="flex min-h-10 items-center hover:text-ink sm:min-h-0"
+            >
+              {item.label}
+            </LocaleLink>
+          ))}
+        </nav>
+
+        <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-1 text-sm text-mute sm:mt-5">
+          <span className="flex min-h-10 items-center sm:min-h-0">
+            <GetGrokBot variant="link" />
+          </span>
+          <span className="flex min-h-10 items-center sm:min-h-0">
+            <GitHubStar stars={stars} />
+          </span>
         </div>
-        <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-[12px] text-faint">
+
+        <div className="mt-8 flex flex-col gap-2 text-[12px] leading-5 text-faint sm:flex-row sm:flex-wrap sm:gap-x-4">
           <a href="https://github.com/jeremy-prt/bloub" className="hover:text-mute" rel="noreferrer">
             {t("bot.credit")}
           </a>

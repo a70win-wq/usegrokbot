@@ -10,7 +10,7 @@ type CopyButtonProps = {
   text: string;
   label?: string;
   className?: string;
-  variant?: "ghost" | "solid" | "inline";
+  variant?: "ghost" | "solid" | "inline" | "inverse";
 };
 
 const COPY_CELEBRATION_KEY = "usegrokbot:copy-celebrated";
@@ -53,6 +53,7 @@ export function CopyButton({ text, label, className, variant = "ghost" }: CopyBu
           "border border-line bg-transparent text-mute hover:border-line-strong hover:text-ink",
         variant === "solid" && "h-11 bg-ink px-5 text-sm text-inverse hover:opacity-90",
         variant === "inline" && "h-8 px-2.5 text-mute hover:text-ink",
+        variant === "inverse" && "h-8 px-2.5 text-inverse/80 hover:text-inverse",
         className,
       )}
     >

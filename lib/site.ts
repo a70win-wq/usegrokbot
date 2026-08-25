@@ -11,5 +11,6 @@ export const site = {
   grokBotDesktopUrl: "https://cursor.com/bot/onboarding",
   grokBotIosUrl: "https://apps.apple.com/app/grok-bot/id6794501026",
   grokBotAppId: "6794501026",
+  officialUseCasesUrl: "https://x.ai/bot/use-cases",
   shareImage: "https://usegrokbot.com/poster.png",
 } as const;

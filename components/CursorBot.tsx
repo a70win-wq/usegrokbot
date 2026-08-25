@@ -7,9 +7,6 @@ import { BloubBot } from "@/components/BloubBot";
 const SIZE = 72;
 const OFFSET_X = 18;
 const OFFSET_Y = 20;
-const EDGE_X = 8;
-const TOP_PAD = 64;
-const BOTTOM_PAD = 88;
 
 export function CursorBot() {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -24,7 +21,7 @@ export function CursorBot() {
     const target = { x: pos.x, y: pos.y };
     let frame = 0;
     let disposed = false;
-    let mode: "mouse" | "scroll" = "mouse";
+    let mode: "mouse" | "hidden" = "hidden";
 
     const onMove = (event: PointerEvent) => {
       if (mode !== "mouse") return;
@@ -39,51 +36,49 @@ export function CursorBot() {
       wrap.style.opacity = "0";
     };
 
-    const placeFromScroll = () => {
-      if (mode !== "scroll") return;
-      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? Math.min(1, Math.max(0, window.scrollY / maxScroll)) : 0;
-      const travel = Math.max(0, window.innerHeight - SIZE - TOP_PAD - BOTTOM_PAD);
-      target.x = EDGE_X;
-      target.y = TOP_PAD + travel * progress;
-      wrap.style.opacity = "1";
+    const stopTick = () => {
+      if (frame) {
+        window.cancelAnimationFrame(frame);
+        frame = 0;
+      }
+    };
+
+    const tick = () => {
+      if (disposed || mode !== "mouse") return;
+      frame = window.requestAnimationFrame(tick);
+      const ease = reduceMq.matches ? 1 : 0.4;
+      pos.x += (target.x - pos.x) * ease;
+      pos.y += (target.y - pos.y) * ease;
+      wrap.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
     };
 
     const applyMode = () => {
-      mode = fineMq.matches ? "mouse" : "scroll";
-      wrap.style.display = "";
-      if (mode === "scroll") {
-        placeFromScroll();
+      // Touch phones have no cursor. Do not walk the bot down the page —
+      // it parks on the footer and covers the links.
+      if (!fineMq.matches) {
+        mode = "hidden";
+        stopTick();
+        wrap.style.display = "none";
+        wrap.style.opacity = "0";
         return;
       }
+      mode = "mouse";
+      wrap.style.display = "";
       wrap.style.opacity = "0";
+      if (!frame) frame = window.requestAnimationFrame(tick);
     };
 
     applyMode();
 
     window.addEventListener("pointermove", onMove, { passive: true });
     document.documentElement.addEventListener("mouseleave", onLeave);
-    window.addEventListener("scroll", placeFromScroll, { passive: true });
-    window.addEventListener("resize", placeFromScroll);
     fineMq.addEventListener("change", applyMode);
-
-    const tick = () => {
-      if (disposed) return;
-      frame = window.requestAnimationFrame(tick);
-      const ease = reduceMq.matches ? 1 : mode === "scroll" ? 0.16 : 0.4;
-      pos.x += (target.x - pos.x) * ease;
-      pos.y += (target.y - pos.y) * ease;
-      wrap.style.transform = `translate3d(${pos.x}px, ${pos.y}px, 0)`;
-    };
-    frame = window.requestAnimationFrame(tick);
 
     return () => {
       disposed = true;
-      window.cancelAnimationFrame(frame);
+      stopTick();
       window.removeEventListener("pointermove", onMove);
       document.documentElement.removeEventListener("mouseleave", onLeave);
-      window.removeEventListener("scroll", placeFromScroll);
-      window.removeEventListener("resize", placeFromScroll);
       fineMq.removeEventListener("change", applyMode);
     };
   }, []);

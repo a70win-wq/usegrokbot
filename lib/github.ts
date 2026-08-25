@@ -16,6 +16,7 @@ export async function getGithubStars(): Promise<number | null> {
     const response = await fetch(GITHUB_API, {
       headers,
       next: { revalidate: REVALIDATE_SECONDS, tags: ["github-stars"] },
+      signal: AbortSignal.timeout(2000),
     });
     if (!response.ok) return null;
 

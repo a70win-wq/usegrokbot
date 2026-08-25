@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Verify in ego after UI work
+
+After any UI change, open the page in ego-browser yourself. Click through it. If the Next.js N badge shows an issue, open it and fix it. Do not ask Chris to check. Never use overflow-x-auto for catalogs, chip rows, or nav lists.
