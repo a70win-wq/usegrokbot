@@ -1,12 +1,12 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { ingestUseCase } from "../lib/ingest/pipeline";
 import { assertStorySafe } from "../lib/ingest/validate";
-import { collectXUrls, isIngestIssueTitle, tweetIdFromUrl } from "../lib/ingest/x-url";
+import { collectXUrls, INGEST_URL_LIMIT, isIngestIssueTitle, tweetIdFromUrl } from "../lib/ingest/x-url";
 import { discoverStories, type DiscoverStory } from "../data/discover";
 import { site } from "../lib/site";
 
 const INGESTED_PATH = "data/discover/ingested.json";
-const MAX_URLS = 200;
+const MAX_URLS = INGEST_URL_LIMIT;
 
 type Row = {
   url: string;
@@ -71,6 +71,19 @@ async function githubApi<T>(path: string, init?: RequestInit): Promise<T> {
   }
   if (response.status === 204) return undefined as T;
   return (await response.json()) as T;
+}
+
+async function loadOpenedIssue() {
+  const number = process.env.ISSUE_NUMBER;
+  if (number && process.env.GITHUB_TOKEN) {
+    const [owner, name] = site.githubRepo.split("/");
+    const issue = await githubApi<GitHubIssue>(`/repos/${owner}/${name}/issues/${number}`);
+    return { title: issue.title, body: issue.body ?? "" };
+  }
+  return {
+    title: process.env.ISSUE_TITLE ?? "",
+    body: process.env.ISSUE_BODY ?? "",
+  };
 }
 
 async function listOpenIngestIssues() {
@@ -149,8 +162,7 @@ async function ingestUrl(
 
 async function main() {
   const eventName = process.env.GITHUB_EVENT_NAME ?? "";
-  const title = process.env.ISSUE_TITLE ?? "";
-  const body = process.env.ISSUE_BODY ?? "";
+  const { title, body } = await loadOpenedIssue();
   const directUrls = collectXUrls([process.env.INGEST_URL ?? "", process.env.INGEST_URLS ?? ""].join("\n"), MAX_URLS);
 
   let issue = parseIssue(title, body);

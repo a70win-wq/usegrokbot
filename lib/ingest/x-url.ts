@@ -39,7 +39,9 @@ export function hasXArticleLink(text: string) {
 
 const X_URL_RE = /https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/[^\s<>"'`)\]|]+/gi;
 
-export function collectXUrls(text: string, limit = 15): string[] {
+export const INGEST_URL_LIMIT = 1000;
+
+export function collectXUrls(text: string, limit = INGEST_URL_LIMIT): string[] {
   const found = new Map<string, string>();
   for (const raw of text.match(X_URL_RE) ?? []) {
     const parsed = parseXUrl(raw.replace(/[.,;:!?]+$/, ""));

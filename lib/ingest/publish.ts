@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import type { DiscoverStory } from "@/data/discover";
+import { INGEST_URL_LIMIT } from "./x-url";
 
 const FILE_PATH = "data/discover/ingested.json";
 
@@ -119,7 +120,7 @@ export async function publishStory(story: DiscoverStory): Promise<{ prUrl: strin
 
 export async function queueIngestIssue(urls: string[]) {
   const { owner, name } = repo();
-  const unique = [...new Set(urls)].slice(0, 15);
+  const unique = [...new Set(urls)].slice(0, INGEST_URL_LIMIT);
   if (unique.length === 0) throw new Error("no_urls");
   const issue = await gh<{ html_url: string; number: number }>(`/repos/${owner}/${name}/issues`, {
     method: "POST",

@@ -5,7 +5,7 @@ title: "Ingest posts:"
 labels: ["use-case"]
 ---
 
-Paste one public X post URL per line. Max 15.
+Paste one public X post URL per line. Max 1000.
 
 https://x.com/
 

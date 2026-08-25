@@ -1,4 +1,4 @@
-import { collectXUrls, ingestUseCase, queueIngestIssue } from "@/lib/ingest";
+import { collectXUrls, INGEST_URL_LIMIT, ingestUseCase, queueIngestIssue } from "@/lib/ingest";
 import { rateLimit } from "@/lib/ingest/rate-limit";
 
 export const maxDuration = 60;
@@ -24,6 +24,7 @@ function isIngestBot(request: Request) {
 function urlsFromBody(body: Body) {
   return collectXUrls(
     [body.xUrl ?? "", ...(Array.isArray(body.xUrls) ? body.xUrls : []), body.urls ?? ""].join("\n"),
+    INGEST_URL_LIMIT,
   );
 }
 
