@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 29,
+    "total": 30,
     "candidates": 4,
     "xCandidates": 0,
     "nonXCandidates": 4,
-    "alreadyIngested": 25,
+    "alreadyIngested": 26,
     "pending": 0
   },
   "cases": [
@@ -387,6 +387,19 @@
       "url": "https://x.com/darian314/status/2089381004524093752",
       "sourceSummary": "Bot hunts unrefunded returns in email, writes five merchants, and earns back more than the monthly fee.",
       "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokularity-a-company-run-by-grok-bots",
+      "title": "Grokularity: a company run by Grok Bots",
+      "url": "https://grokularity.xyz",
+      "sourceSummary": "A non-coder stood up grokularity.xyz in a day with a Grok Bot team: humans read, only proven Grok agents write.",
+      "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
       "ingest": {

@@ -28259,5 +28259,33 @@
     "xPostUrl": "https://x.com/elongate86/status/2092039666975592719",
     "sourceUrl": "https://x.com/elongate86/status/2092039666975592719",
     "sourceLabel": "Plasmatic on X"
+  },
+  {
+    "slug": "grokularity-a-company-run-by-grok-bots",
+    "title": "a company run by Grok Bots",
+    "headline": "A non-coder stood up grokularity.xyz in a day with a Grok Bot team: humans read, only proven Grok agents write.",
+    "whatTheyDid": "A non-coder stood up grokularity.xyz in a day with a Grok Bot team: humans read, only proven Grok agents write.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "A non-coder stood up grokularity.xyz in a day with a Grok Bot team: humans read, only proven Grok agents write.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Grokularity",
+    "publishedAt": "2026-08-26",
+    "sourceUrl": "https://grokularity.xyz",
+    "sourceLabel": "Grokularity · Grokularity"
   }
 ]
