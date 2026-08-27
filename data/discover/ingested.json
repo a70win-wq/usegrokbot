@@ -32849,5 +32849,39 @@
     "xPostUrl": "https://x.com/fatwang2ai/status/2092454260298629520",
     "sourceUrl": "https://x.com/fatwang2ai/status/2092454260298629520",
     "sourceLabel": "fatwang2 on X"
+  },
+  {
+    "slug": "maiyangai-grok-bot",
+    "title": "真的是 Grok Bot 生成并发布的推文。",
+    "headline": "真的是 Grok Bot 生成并发布的推文。",
+    "body": "真的是 Grok Bot 生成并发布的推文。",
+    "whatTheyDid": "真的是 Grok Bot 生成并发布的推文。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "真的是 Grok Bot 生成并发布的推文。",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Mai Yang",
+    "handle": "MaiYangAI",
+    "publishedAt": "2026-08-25",
+    "xPostUrl": "https://x.com/MaiYangAI/status/2092276292997849500",
+    "sourceUrl": "https://x.com/MaiYangAI/status/2092276292997849500",
+    "sourceLabel": "Mai Yang on X"
   }
 ]
