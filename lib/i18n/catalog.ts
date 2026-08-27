@@ -5,7 +5,7 @@ import type { Locale } from "./types";
 const appCopy: Record<Exclude<Locale, "en">, Record<AppSlug, string>> = {
   "zh-Hant": {
     browser: "瀏覽網站、比較頁面、收集公開資訊。",
-    gmail: "整理收件箱、草擬回覆、跟進電郵。",
+    gmail: "整理收件匣、草擬回覆、跟進電子郵件。",
     "google-sheets": "保存名單、追蹤潛在客戶、更新簡單報告。",
     "google-calendar": "準備會議，把一週安排好。",
     slack: "把簡報送到團隊已經在用的地方。",
@@ -16,7 +16,7 @@ const appCopy: Record<Exclude<Locale, "en">, Record<AppSlug, string>> = {
     linkedin: "研究人物、公司與貼文靈感。",
     x: "追蹤對話、提及與熱門話題。",
     reddit: "找出真實顧客用語與新冒出的問題。",
-    youtube: "收集影片靈感、留言與對手上載。",
+    youtube: "收集影片靈感、留言與競爭對手上傳。",
   },
   "zh-Hans": {
     browser: "浏览网站、比较页面、收集公开信息。",

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --hostname 0.0.0.0 --port 3000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
@@ -11,7 +11,8 @@
     "validate:prompts": "tsx scripts/validate-prompts.ts",
     "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs",
     "ingest:awesome-grok-bot": "tsx scripts/ingest-awesome-grok-bot.ts",
-    "refresh:x-metrics": "tsx scripts/refresh-x-metrics.ts"
+    "refresh:x-metrics": "tsx scripts/refresh-x-metrics.ts",
+    "translate:discover": "tsx scripts/merge-discover-zh.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

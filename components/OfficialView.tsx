@@ -15,6 +15,7 @@ import {
 } from "@/data/official-use-cases";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
+import { localizeOfficial } from "@/lib/i18n/official";
 
 const categoryKeys: Record<OfficialCategory, string> = {
   general: "officialPage.catGeneral",
@@ -29,29 +30,36 @@ const categoryKeys: Record<OfficialCategory, string> = {
 };
 
 export function OfficialView() {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const [category, setCategory] = useState<OfficialCategory | "all">("all");
   const [query, setQuery] = useState("");
   const [selectedSlug, setSelectedSlug] = useState(officialUseCases[0]?.slug ?? "");
+  const catalog = useMemo(
+    () => officialUseCases.map((item) => localizeOfficial(item, locale)),
+    [locale],
+  );
 
   const items = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    return officialUseCases.filter((item) => {
+    return catalog.filter((item) => {
       if (category !== "all" && item.category !== category) return false;
       if (!needle) return true;
+      const source = officialUseCases.find((entry) => entry.slug === item.slug);
       const haystack = [
         item.title,
         item.role,
         item.guide?.owns,
         item.guide?.connect,
         item.guide?.startWith,
+        source?.title,
+        source?.role,
       ]
         .filter(Boolean)
         .join(" ")
         .toLowerCase();
       return haystack.includes(needle);
     });
-  }, [category, query]);
+  }, [catalog, category, query]);
 
   const selected: OfficialUseCase | undefined =
     items.find((item) => item.slug === selectedSlug) ?? items[0];

@@ -64,7 +64,13 @@ export function DiscoverDetailView({
         <h1 className="sr-only">{item.title}</h1>
       )}
       {showHeadline ? <p className="mt-4 text-lg leading-8 text-mute">{item.headline}</p> : null}
-      {postText ? <ExpandablePost text={postText} className="mt-4" /> : null}
+      {postText ? (
+        <ExpandablePost
+          text={postText}
+          original={locale !== "en" ? story.body || story.whatTheyDid : undefined}
+          className="mt-4"
+        />
+      ) : null}
       <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px]">
         <p className="text-faint">
           {story.handle
@@ -120,8 +126,14 @@ export function DiscoverDetailView({
       </section>
 
       {item.quote ? (
-        <blockquote className="mt-8 border-l-2 border-line pl-4 text-[15px] leading-7 text-mute">
-          “{item.quote}”
+        <blockquote className="mt-8 border-l-2 border-line pl-4">
+          <p className="text-[11px] font-medium tracking-[0.08em] text-faint uppercase">{t("discover.quoteCaption")}</p>
+          <p className="mt-2 text-[15px] leading-7 text-mute">“{item.quote}”</p>
+          {locale !== "en" && story.quote && story.quote !== item.quote ? (
+            <p className="mt-2 text-[13px] leading-6 text-faint">
+              {t("discover.quoteOriginal")}：{story.quote}
+            </p>
+          ) : null}
         </blockquote>
       ) : null}
 

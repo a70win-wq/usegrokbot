@@ -40,3 +40,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated translation scratch
+/data/discover/zh-parts/
+/data/discover/translate-queue.json

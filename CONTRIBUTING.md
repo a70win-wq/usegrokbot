@@ -100,12 +100,47 @@ Do not treat an index as permission to republish every linked work. Follow the o
 
 ## Translations
 
-English is the source copy.
+English is the source copy. Keep keys aligned with `lib/i18n/messages.ts`.
 
-- `zh-Hant` → `zh-hk`
-- `zh-Hans` → `zh-cn`
+- `zh-Hant` → Taiwan written Chinese, served at `/zh-hk`
+- `zh-Hans` → Mainland written Chinese, served at `/zh-cn`
 
-Keep translation keys aligned with `lib/i18n/messages.ts`.
+Hong Kong readers use the same written form as Taiwan. Do not write Cantonese particles into product copy. Traditional → Simplified conversion is fine **after** the glossary pass.
+
+Keep in English: Grok Bot, X, @handles, GitHub issue / pull request, CRM, listing, app names, Place Order, 1-Click.
+
+Translate `quote` fields (the excerpt on the story page). Keep the original English on the English locale and in the X embed.
+
+Ingested X post bodies, titles, and headlines live in `data/discover/zh.json`. Curated copy in `lib/i18n/discover.ts` wins if both exist. After adding `data/discover/zh-parts/part-*.json`, run `npx tsx scripts/merge-discover-zh.ts`.
+
+### Glossary
+
+| English | zh-Hant | zh-Hans |
+|---|---|---|
+| use case | 使用案例 | 使用场景 |
+| workflow | 工作流程 | 工作流 |
+| integration | 整合 | 集成 |
+| prompt | 提示詞 | 提示词 |
+| post | 貼文 | 帖子 |
+| email | 電子郵件 | 邮件 |
+| inbox | 收件匣 | 收件箱 |
+| software | 軟體 | 软件 |
+| information | 資訊 | 信息 |
+| video | 影片 | 视频 |
+| login | 登入 | 登录 |
+| settings | 設定 | 设置 |
+| search | 搜尋 | 搜索 |
+| load | 載入 | 加载 |
+| menu | 選單 | 菜单 |
+| account | 帳號 | 账号 |
+| competitor | 競爭對手 | 竞品 |
+| marketing | 行銷 | 营销 |
+| operations | 營運 | 运营 |
+| support | 支援 | 支持 |
+| founder | 創辦人 | 创始人 |
+| community | 社群 | 社区 |
+| hardware | 硬體 | 硬件 |
+| default | 預設 | 默认 |
 
 ## Pull requests
 

@@ -5,10 +5,12 @@ import { useI18n } from "@/lib/i18n";
 
 export function ExpandablePost({
   text,
+  original,
   lines = 6,
   className,
 }: {
   text: string;
+  original?: string;
   lines?: number;
   className?: string;
 }) {
@@ -50,6 +52,11 @@ export function ExpandablePost({
         >
           {open ? t("discover.showLess") : t("discover.showMore")}
         </button>
+      ) : null}
+      {original && original !== text ? (
+        <p className="mt-2 text-[13px] leading-6 text-faint whitespace-pre-wrap">
+          {t("discover.quoteOriginal")}：{original}
+        </p>
       ) : null}
     </div>
   );

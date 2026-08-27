@@ -59,7 +59,7 @@ export function XPostEmbed({ url }: { url: string }) {
   return (
     <div className="min-h-[120px]">
       <blockquote className="twitter-tweet">
-        <a href={url}>View original post on X</a>
+        <a href={url}>{t("discover.viewOriginalX")}</a>
       </blockquote>
     </div>
   );

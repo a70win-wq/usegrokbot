@@ -208,22 +208,22 @@ export function topicsForStory(story: DiscoverStory) {
 
 export const topicCopy: Record<"zh-Hant" | "zh-Hans", Record<TopicSlug, string>> = {
   "zh-Hant": {
-    email: "收件箱、回覆、退訂、郵件工作。",
+    email: "收件匣、回覆、退訂、電子郵件工作。",
     calendar: "會議、行程、日曆。",
     stock: "行情簡報、券商、交易 Bot。",
     finance: "會計、發票、開支、管錢。",
     shopping: "優惠、補貨、代買。",
     travel: "機票、酒店、行程。",
     sales: "找客戶、外展、CRM、一人公司賣東西。",
-    marketing: "Reddit、競品監控、每週市場報告。",
+    marketing: "Reddit、競爭對手監控、每週行銷報告。",
     research: "播客、簡報、監控和其他查資料工作。",
-    content: "YouTube 評論、newsletter、短視頻和帖子。",
+    content: "YouTube 留言、newsletter、短影片和貼文。",
     notes: "Obsidian、Notion、wiki、第二大腦。",
     coding: "Bug、GitHub、WordPress、builder loops。",
     hardware: "Arduino、ESP32、同 Bot 對接的裝置。",
     games: "Roblox、Three.js、叫 Bot 做的遊戲。",
     support: "客服、退款、Intercom、helpdesk。",
-    operations: "辦公室、設置教程、打理一張桌子。",
+    operations: "辦公室、設定教學、打理一張桌子。",
     personal: "家裡、父母、日常。",
   },
   "zh-Hans": {
