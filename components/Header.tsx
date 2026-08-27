@@ -26,6 +26,11 @@ export function Header() {
       match: (current: string) => current === "/" || current.startsWith("/discover"),
     },
     {
+      href: "/use-cases",
+      label: t("nav.useCases"),
+      match: (current: string) => current.startsWith("/use-cases"),
+    },
+    {
       href: "/roles",
       label: t("nav.official"),
       match: (current: string) => current.startsWith("/roles"),
@@ -56,7 +61,7 @@ export function Header() {
           UseGrokBot
         </LocaleLink>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
           {nav.map((item) => {
             const active = "match" in item && item.match
               ? item.match(path)
@@ -80,12 +85,12 @@ export function Header() {
           <HeaderSearch />
           <GetGrokBot />
           <ThemeToggle />
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <LanguageSwitch />
           </div>
           <button
             type="button"
-            className="inline-flex size-9 items-center justify-center rounded-lg text-mute lg:hidden"
+            className="inline-flex size-9 items-center justify-center rounded-lg text-mute xl:hidden"
             aria-expanded={open}
             aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
             onClick={() => setOpen((value) => !value)}
@@ -96,7 +101,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-elevated px-5 py-4 lg:hidden">
+        <div className="border-t border-line bg-elevated px-5 py-4 xl:hidden">
           <nav className="flex flex-col gap-1" aria-label="Mobile">
             {nav.map((item) => (
               <LocaleLink

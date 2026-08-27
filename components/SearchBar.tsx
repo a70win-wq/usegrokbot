@@ -5,9 +5,10 @@ import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { searchDiscoverStories } from "@/data/discover";
+import { scenarios } from "@/data/scenarios";
 import { topicMessageKey, topics } from "@/data/topics";
 import { cn } from "@/lib/cn";
-import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
+import { localizeDiscoverStory, localizeScenario, useI18n } from "@/lib/i18n";
 
 type SearchBarProps = {
   variant?: "hero" | "inline";
@@ -105,6 +106,32 @@ export function SearchBar({
       .slice(0, 3);
   }, [query, t]);
 
+  const matchingScenarios = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return scenarios
+      .map((item) => localizeScenario(item, locale))
+      .filter((item) => {
+        const source = scenarios.find((entry) => entry.slug === item.slug);
+        const haystack = [
+          item.slug,
+          item.title,
+          item.short,
+          item.oneLiner,
+          item.does,
+          item.who,
+          source?.title,
+          source?.short,
+          source?.oneLiner,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(q);
+      })
+      .slice(0, 3);
+  }, [query, locale]);
+
   const trimmed = query.trim();
   function resultsPath(value: string) {
     return `/?q=${encodeURIComponent(value)}`;
@@ -113,6 +140,12 @@ export function SearchBar({
   const showSuggestions = variant === "hero" && open && trimmed.length === 0;
   const menuItems = showResults
     ? [
+        ...matchingScenarios.map((item) => ({
+          href: `/use-cases/${item.slug}`,
+          title: item.title,
+          detail: t("nav.useCases"),
+          external: false,
+        })),
         ...matchingTopics.map((topic) => ({
           href: `/categories/${topic.slug}`,
           title: t(topicMessageKey(topic.slug)),
@@ -222,7 +255,7 @@ export function SearchBar({
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
-          {showResults && stories.length === 0 && matchingTopics.length === 0 ? (
+          {showResults && stories.length === 0 && matchingTopics.length === 0 && matchingScenarios.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}
               <p className="mt-1 text-faint">{t("search.emptyHint")}</p>

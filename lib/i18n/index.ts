@@ -20,3 +20,4 @@ export {
 export { localizeApp, appFor } from "./catalog";
 export { localizeDiscoverStory, getDiscoverStoryI18n } from "./discover";
 export { localizeOfficial } from "./official";
+export { localizeScenario } from "./scenarios";

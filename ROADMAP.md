@@ -97,6 +97,7 @@ Next ingestion work:
 - [ ] Recently added
 - [ ] Recently verified
 - [ ] Better search across use cases, outcomes, and integrations
+- [x] Ten starting jobs on `/use-cases`
 - [ ] Collections such as “Grok Bot for Sales” and “Grok Bot for Founders”
 - [ ] True trending signals when reliable engagement data is available
 

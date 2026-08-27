@@ -8,6 +8,7 @@ import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
 import { PostCensus } from "@/components/PostCensus";
 import { SearchBar } from "@/components/SearchBar";
+import { UseCaseList } from "@/components/UseCaseList";
 import { discoverStories, storiesForTopic } from "@/data/discover";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
@@ -60,6 +61,23 @@ export function HomeView({
             </div>
             <HeroBot />
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1240px] px-5 pb-16 md:px-8 md:pb-20">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-[32px] font-medium tracking-tight text-ink">
+              {t("useCases.title")}
+            </h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-mute">{t("useCases.body")}</p>
+          </div>
+          <LocaleLink href="/use-cases" className="shrink-0 text-sm text-mute hover:text-ink">
+            {t("useCases.viewAll")}
+          </LocaleLink>
+        </div>
+        <div className="mt-10">
+          <UseCaseList compact />
         </div>
       </section>
 

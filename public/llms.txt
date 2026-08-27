@@ -8,11 +8,27 @@ Locales: /en /zh-hk /zh-cn
 ## Start here
 
 - https://usegrokbot.com/en
+- https://usegrokbot.com/en/use-cases
+- https://usegrokbot.com/en/use-cases/inbox
 - https://usegrokbot.com/en/categories
 - https://usegrokbot.com/en/categories/email
 - https://usegrokbot.com/en/articles
 - https://usegrokbot.com/en/how-we-built
 - https://usegrokbot.com/sitemap.xml
+
+## Ten use cases
+
+- https://usegrokbot.com/en/use-cases
+- https://usegrokbot.com/en/use-cases/inbox
+- https://usegrokbot.com/en/use-cases/briefing
+- https://usegrokbot.com/en/use-cases/meetings
+- https://usegrokbot.com/en/use-cases/sales
+- https://usegrokbot.com/en/use-cases/competitors
+- https://usegrokbot.com/en/use-cases/content
+- https://usegrokbot.com/en/use-cases/coding
+- https://usegrokbot.com/en/use-cases/travel
+- https://usegrokbot.com/en/use-cases/expenses
+- https://usegrokbot.com/en/use-cases/life
 
 ## Categories
 
