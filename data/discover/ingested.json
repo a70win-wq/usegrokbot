@@ -35115,5 +35115,39 @@
     "xPostUrl": "https://x.com/crazyox/status/2092868501510009006",
     "sourceUrl": "https://x.com/crazyox/status/2092868501510009006",
     "sourceLabel": "Crazyox on X"
+  },
+  {
+    "slug": "drbinaryai-stood-up-a-grok-bot-bot-for-reverse-engineering",
+    "title": "Stood up a Grok bot @bot for reverse engineering",
+    "headline": "Stood up a Grok bot @bot for reverse engineering.",
+    "body": "Stood up a Grok bot  @bot  for reverse engineering.\n\nAdd the MCP server: https://mcp.drbinary.ai/mcp It's OAuth. Sign in once.\nAfter that the bot can do the RE work: upload a sample, Rizin triage, Ghidra or the sandbox.\n\nIf the model skips the tools, you get a skim. That's the whole recipe.  \n@elonmusk \n#GrokBot #RE #malware #vulnerability #firmware",
+    "whatTheyDid": "Stood up a Grok bot @bot for reverse engineering.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Stood up a Grok bot @bot for reverse engineering.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Dr. Binary",
+    "handle": "drbinaryai",
+    "publishedAt": "2026-08-24",
+    "xPostUrl": "https://x.com/drbinaryai/status/2091945760472588723",
+    "sourceUrl": "https://x.com/drbinaryai/status/2091945760472588723",
+    "sourceLabel": "Dr. Binary on X"
   }
 ]
