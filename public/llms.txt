@@ -16,19 +16,33 @@ Locales: /en /zh-hk /zh-cn
 - https://usegrokbot.com/en/how-we-built
 - https://usegrokbot.com/sitemap.xml
 
-## Ten use cases
+## Use cases
 
 - https://usegrokbot.com/en/use-cases
 - https://usegrokbot.com/en/use-cases/inbox
 - https://usegrokbot.com/en/use-cases/briefing
-- https://usegrokbot.com/en/use-cases/meetings
-- https://usegrokbot.com/en/use-cases/sales
-- https://usegrokbot.com/en/use-cases/competitors
-- https://usegrokbot.com/en/use-cases/content
 - https://usegrokbot.com/en/use-cases/coding
-- https://usegrokbot.com/en/use-cases/travel
+- https://usegrokbot.com/en/use-cases/meetings
+- https://usegrokbot.com/en/use-cases/content
+- https://usegrokbot.com/en/use-cases/sales
+- https://usegrokbot.com/en/use-cases/research
+- https://usegrokbot.com/en/use-cases/shopping
 - https://usegrokbot.com/en/use-cases/expenses
+- https://usegrokbot.com/en/use-cases/recruiting
+- https://usegrokbot.com/en/use-cases/support
+- https://usegrokbot.com/en/use-cases/hardware
+- https://usegrokbot.com/en/use-cases/notes
+- https://usegrokbot.com/en/use-cases/stock
 - https://usegrokbot.com/en/use-cases/life
+- https://usegrokbot.com/en/use-cases/family
+- https://usegrokbot.com/en/use-cases/travel
+- https://usegrokbot.com/en/use-cases/competitors
+- https://usegrokbot.com/en/use-cases/games
+- https://usegrokbot.com/en/use-cases/decks
+- https://usegrokbot.com/en/use-cases/vendor
+- https://usegrokbot.com/en/use-cases/subscriptions
+- https://usegrokbot.com/en/use-cases/seo
+- https://usegrokbot.com/en/use-cases/product
 
 ## Categories
 

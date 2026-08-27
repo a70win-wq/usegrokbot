@@ -140,7 +140,7 @@ export function UseCaseDetailView({ scenario }: { scenario: Scenario }) {
           </ul>
           <p className="mt-8">
             <LocaleLink href="/use-cases" className="text-sm text-mute hover:text-ink">
-              {t("useCases.viewAll")} →
+              {t("useCases.viewAll", { n: scenarios.length })} →
             </LocaleLink>
           </p>
         </section>

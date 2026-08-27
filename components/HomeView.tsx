@@ -10,6 +10,7 @@ import { PostCensus } from "@/components/PostCensus";
 import { SearchBar } from "@/components/SearchBar";
 import { UseCaseList } from "@/components/UseCaseList";
 import { discoverStories, storiesForTopic } from "@/data/discover";
+import { scenarios, topScenarios } from "@/data/scenarios";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
 
@@ -73,11 +74,11 @@ export function HomeView({
             <p className="mt-3 max-w-2xl text-base leading-7 text-mute">{t("useCases.body")}</p>
           </div>
           <LocaleLink href="/use-cases" className="shrink-0 text-sm text-mute hover:text-ink">
-            {t("useCases.viewAll")}
+            {t("useCases.viewAll", { n: scenarios.length })}
           </LocaleLink>
         </div>
         <div className="mt-10">
-          <UseCaseList compact />
+          <UseCaseList compact items={topScenarios()} />
         </div>
       </section>
 

@@ -1,16 +1,22 @@
 "use client";
 
 import { LocaleLink } from "@/components/LocaleLink";
-import { rankLabel, scenarios } from "@/data/scenarios";
+import { rankLabel, scenarios, type Scenario } from "@/data/scenarios";
 import { cn } from "@/lib/cn";
 import { localizeScenario, useI18n } from "@/lib/i18n";
 
-export function UseCaseList({ compact = false }: { compact?: boolean }) {
+export function UseCaseList({
+  items = scenarios,
+  compact = false,
+}: {
+  items?: readonly Scenario[];
+  compact?: boolean;
+}) {
   const { locale, t } = useI18n();
 
   return (
     <ol className={cn(compact ? "grid gap-x-12 gap-y-8 sm:grid-cols-2" : "divide-y divide-line border-y border-line")}>
-      {scenarios.map((item) => {
+      {items.map((item) => {
         const scenario = localizeScenario(item, locale);
         if (compact) {
           return (

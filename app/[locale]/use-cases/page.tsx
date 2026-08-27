@@ -9,6 +9,7 @@ export default async function UseCasesPage({ params }: { params: Promise<{ local
   const { urlLocale, locale } = localeFromParams((await params).locale);
   const copy = messages[locale].useCases;
   const items = scenarios.map((item) => localizeScenario(item, locale));
+  const description = copy.allBody.replace("{n}", String(scenarios.length));
 
   return (
     <>
@@ -16,8 +17,8 @@ export default async function UseCasesPage({ params }: { params: Promise<{ local
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: copy.title,
-          description: copy.body,
+          name: copy.allTitle,
+          description,
           url: absoluteUrl("/use-cases", urlLocale),
           numberOfItems: scenarios.length,
           publisher: { "@type": "Organization", name: site.name, url: site.url },
