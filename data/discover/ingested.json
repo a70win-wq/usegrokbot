@@ -36488,5 +36488,40 @@
     "xPostUrl": "https://x.com/ashebytes/status/2092940724379537627",
     "sourceUrl": "https://x.com/ashebytes/status/2092940724379537627",
     "sourceLabel": "ashe on X"
+  },
+  {
+    "slug": "myphonely-not-ai-on-your-phone",
+    "title": "Not AI on your phone",
+    "headline": "Not AI on your phone.",
+    "body": "Not AI on your phone.  A phone for your AI.\nhttps://myphonely.ai  gives Claude, ChatGPT, Gemini or Grok @bot a phone of its own. Ask in plain English and it taps, types, and scrolls through your real apps — from your real accounts, on a real device.",
+    "whatTheyDid": "Not AI on your phone.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Not AI on your phone.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "linkedin",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "myphonely",
+    "handle": "myphonely",
+    "publishedAt": "2026-08-28",
+    "xPostUrl": "https://x.com/myphonely/status/2093130636433449071",
+    "sourceUrl": "https://x.com/myphonely/status/2093130636433449071",
+    "sourceLabel": "myphonely on X"
   }
 ]
