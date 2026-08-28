@@ -36523,5 +36523,40 @@
     "xPostUrl": "https://x.com/myphonely/status/2093130636433449071",
     "sourceUrl": "https://x.com/myphonely/status/2093130636433449071",
     "sourceLabel": "myphonely on X"
+  },
+  {
+    "slug": "vista8-grok-bot-github-trend",
+    "title": "感觉Grok Bot最佳场景之一是各种榜单监控，自动化测试。 比如让它监控Github Trend，给项目写摘要，自动安装运行给报告。...",
+    "headline": "感觉Grok Bot最佳场景之一是各种榜单监控，自动化测试。 比如让它监控Github Trend，给项目写摘要，自动安装运行给报告。 让它每天自动访问 Producthunt，发现好的产品，自动注册测试，每天9点发昨天的体验报告。 它能一直运行，登录你给的各种账号，超级的Computer Use。 群聊协作目前还没感觉到特别大的必要性。",
+    "body": "感觉Grok Bot最佳场景之一是各种榜单监控，自动化测试。\n\n比如让它监控Github Trend，给项目写摘要，自动安装运行给报告。\n\n让它每天自动访问 Producthunt，发现好的产品，自动注册测试，每天9点发昨天的体验报告。\n\n它能一直运行，登录你给的各种账号，超级的Computer Use。\n\n群聊协作目前还没感觉到特别大的必要性。",
+    "whatTheyDid": "感觉Grok Bot最佳场景之一是各种榜单监控，自动化测试。 比如让它监控Github Trend，给项目写摘要，自动安装运行给报告。 让它每天自动访问 Producthunt，发现好的产品，自动注册测试，每天9点发昨天的体验报告。 它能一直运行，登录你给的各种账号，超级的Computer Use。 群聊协作目前还没感觉到特别大的必要性。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "感觉Grok Bot最佳场景之一是各种榜单监控，自动化测试。 比如让它监控Github Trend，给项目写摘要，自动安装运行给报告。 让它每天自动访问 Producthunt，发现好的产品，自动注册测试，每天9点发昨天的体验报告。 它能一直运行，登录你给的各种账号，超级的Computer Use。 群聊协作目前还没感觉到特别大的必要性。",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "github",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "向阳乔木",
+    "handle": "vista8",
+    "publishedAt": "2026-08-28",
+    "xPostUrl": "https://x.com/vista8/status/2093161568154575272",
+    "sourceUrl": "https://x.com/vista8/status/2093161568154575272",
+    "sourceLabel": "向阳乔木 on X"
   }
 ]
