@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CategoryCard } from "@/components/CategoryCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { LocaleLink } from "@/components/LocaleLink";
@@ -8,9 +8,9 @@ import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
 import { PostCensus } from "@/components/PostCensus";
 import { SearchBar } from "@/components/SearchBar";
-import { UseCaseList } from "@/components/UseCaseList";
+import { TemplateList } from "@/components/TemplateList";
 import { discoverStories, storiesForTopic } from "@/data/discover";
-import { scenarios, topScenarios } from "@/data/scenarios";
+import { starterTemplates, templates } from "@/data/templates";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
 
@@ -24,6 +24,7 @@ export function HomeView({
   const { t } = useI18n();
   const [query, setQuery] = useState(initialQuery);
   const filters = useDiscoverFilterState();
+  const featured = useMemo(() => starterTemplates(), []);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search).get("q") ?? "";
@@ -34,21 +35,15 @@ export function HomeView({
     <>
       <section>
         <div className="mx-auto max-w-[1240px] px-5 pt-20 pb-12 md:px-8 md:pt-[104px] md:pb-16">
-          <div className="flex flex-col-reverse gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
-            <div className="min-w-0">
-              <p className="text-[13px] font-medium tracking-[0.14em] text-mute uppercase">
+          <div className="flex flex-col md:grid md:grid-cols-[minmax(0,1fr)_auto] md:grid-rows-[auto_auto] md:items-start md:gap-x-12">
+            <div className="order-2 flex items-center gap-3 md:col-span-2 md:row-start-1">
+              <p className="whitespace-nowrap text-[13px] font-medium tracking-[0.08em] text-mute uppercase sm:tracking-[0.14em]">
                 {t("home.kicker")}
               </p>
-              <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
-                <LocaleLink
-                  href="/how-we-built"
-                  className="inline-flex text-[13px] text-ink underline decoration-line underline-offset-[5px] hover:text-accent"
-                >
-                  {t("nav.built")}
-                </LocaleLink>
-                <GitHubStar stars={stars} />
-              </div>
-              <h1 className="mt-5 max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
+              <GitHubStar stars={stars} className="h-7 shrink-0 px-2.5" />
+            </div>
+            <div className="order-3 mt-5 min-w-0 md:col-start-1 md:row-start-2">
+              <h1 className="max-w-3xl text-[clamp(32px,8vw,64px)] leading-[1.04] font-medium tracking-[-0.045em] text-ink">
                 {t("home.title")}
               </h1>
               <PostCensus total={discoverStories.length} />
@@ -60,7 +55,9 @@ export function HomeView({
                 />
               </div>
             </div>
-            <HeroBot />
+            <div className="order-1 mx-auto mb-5 md:col-start-2 md:row-start-2 md:mx-0 md:mb-0">
+              <HeroBot />
+            </div>
           </div>
         </div>
       </section>
@@ -69,16 +66,15 @@ export function HomeView({
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="text-[32px] font-medium tracking-tight text-ink">
-              {t("useCases.title")}
+              {t("templates.homeTitle")}
             </h2>
-            <p className="mt-3 max-w-2xl text-base leading-7 text-mute">{t("useCases.body")}</p>
           </div>
-          <LocaleLink href="/use-cases" className="shrink-0 text-sm text-mute hover:text-ink">
-            {t("useCases.viewAll", { n: scenarios.length })}
+          <LocaleLink href="/templates" className="shrink-0 text-base font-medium text-mute hover:text-ink">
+            {t("templates.viewAll", { n: templates.length })}
           </LocaleLink>
         </div>
         <div className="mt-10">
-          <UseCaseList compact items={topScenarios()} />
+          <TemplateList items={featured} pager={false} heading="h3" />
         </div>
       </section>
 

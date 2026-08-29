@@ -4,8 +4,16 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 
-export function PostCensus({ total }: { total: number }) {
-  const { locale, t } = useI18n();
+export function CensusNumber({
+  total,
+  className,
+  accessible = false,
+}: {
+  total: number;
+  className?: string;
+  accessible?: boolean;
+}) {
+  const { locale } = useI18n();
   const [value, setValue] = useState(total);
   const [done, setDone] = useState(false);
 
@@ -68,24 +76,31 @@ export function PostCensus({ total }: { total: number }) {
   }, [total]);
 
   const format = (n: number) => new Intl.NumberFormat(locale === "en" ? "en-US" : locale).format(n);
-  const formatted = format(value);
-  const formattedTotal = format(total);
+
+  return (
+    <span
+      aria-hidden={accessible ? undefined : true}
+      className={cn(
+        "post-census-number inline-block font-medium tracking-tight text-accent tabular-nums",
+        done && "post-census-number-done",
+        className,
+      )}
+    >
+      {format(value)}
+    </span>
+  );
+}
+
+export function PostCensus({ total }: { total: number }) {
+  const { locale, t } = useI18n();
+  const formattedTotal = new Intl.NumberFormat(locale === "en" ? "en-US" : locale).format(total);
 
   return (
     <p className="mt-4 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-[15px] text-mute sm:text-[16px]">
       <span className="sr-only">
         {formattedTotal} {t("home.censusPosts")}
       </span>
-      <span
-        aria-hidden="true"
-        className={cn(
-          "post-census-number inline-block font-medium tracking-tight text-accent tabular-nums",
-          "text-[clamp(40px,8vw,64px)] leading-none",
-          done && "post-census-number-done",
-        )}
-      >
-        {formatted}
-      </span>
+      <CensusNumber total={total} className="text-[clamp(40px,8vw,64px)] leading-none" />
       <span aria-hidden="true" className="pb-1.5">
         {t("home.censusPosts")}
         <span className="text-faint"> · {t("home.censusRefresh")}</span>

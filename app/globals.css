@@ -151,6 +151,34 @@ html[data-theme="dark"] .featured-glow {
   transform: scale(0.98);
 }
 
+@keyframes tap-pop {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(79 124 255 / 0.42);
+  }
+  35% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 4px rgb(79 124 255 / 0.28);
+  }
+  70% {
+    transform: scale(1.07);
+    box-shadow: 0 0 0 8px rgb(79 124 255 / 0.12);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 12px rgb(79 124 255 / 0);
+  }
+}
+
+.tap-feedback {
+  animation: tap-pop 360ms var(--ease-spring);
+}
+
+.expand-copy {
+  overflow: hidden;
+  transition: max-height 380ms var(--ease-out);
+}
+
 .spring-pop {
   transition: transform 280ms var(--ease-spring);
 }
@@ -283,5 +311,13 @@ html[data-boot="skip"] [data-boot-screen] {
   .spring-press:active,
   .spring-pop {
     transform: none;
+  }
+
+  .tap-feedback {
+    animation: none;
+  }
+
+  .expand-copy {
+    transition: none;
   }
 }

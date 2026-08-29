@@ -21,12 +21,14 @@ export function GitHubStar({
       target="_blank"
       rel="noreferrer"
       aria-label={t("github.starAria")}
-      className={cn("group inline-flex items-center gap-1.5 text-[13px] text-ink", className)}
+      className={cn(
+        "spring-press inline-flex h-8 items-center gap-1.5 rounded-[10px] border border-line bg-card px-3 text-[13px] font-medium text-ink",
+        "hover:border-line-strong hover:bg-accent-soft",
+        className,
+      )}
     >
-      <GitHubMark className="size-3.5 shrink-0 text-mute transition group-hover:text-ink" />
-      <span className="underline decoration-line underline-offset-[5px] transition group-hover:text-accent group-hover:decoration-accent">
-        {t("github.star")}
-      </span>
+      <GitHubMark className="size-3.5 shrink-0" />
+      <span>{t("github.star")}</span>
       {count ? (
         <span className="inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-md bg-accent-soft px-1 font-mono text-[11px] font-medium text-accent tabular-nums">
           {count}

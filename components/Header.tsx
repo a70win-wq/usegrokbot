@@ -31,6 +31,11 @@ export function Header() {
       match: (current: string) => current.startsWith("/use-cases"),
     },
     {
+      href: "/templates",
+      label: t("nav.templates"),
+      match: (current: string) => current.startsWith("/templates"),
+    },
+    {
       href: "/roles",
       label: t("nav.official"),
       match: (current: string) => current.startsWith("/roles"),

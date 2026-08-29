@@ -1,0 +1,1426 @@
+{
+  "zh-Hant": {
+    "sQDD87Gp6VLT0m99tFpzu": {
+      "title": "1000x 產品工程師",
+      "oneLiner": "全端產品工程師，能把 Convex、TanStack 與 React 應用做完並上線",
+      "body": "從零把一個網頁應用做到整棧上線，介面也有品味，結果看起來不像鷹架。"
+    },
+    "oq-mYZXM23ShlY7UbJWeB": {
+      "title": "AI 工具鏈助理",
+      "oneLiner": "讓你機器上每一套 AI 寫程式工具保持最新",
+      "body": "Codex、Claude Code、Cursor、OpenCode 和其他工具按排程更新，不必等你某天發現其中一個已經落後三個版本。"
+    },
+    "-kSMWtBCorQFkgUhm0DLk": {
+      "title": "AI 指揮（日文）",
+      "oneLiner": "以日文下指令、把工作分給各專員的指揮官",
+      "body": "每個專員只派一件工作，部門維持整齊，按排程點名，並管理共用記憶。發文與破壞性變更都等擁有者批准。"
+    },
+    "3XvYxSCGJRY6x1woq-hdL": {
+      "title": "AI 資料篩選",
+      "oneLiner": "把論文、程式、講座與論壇掃成一份閱讀堆",
+      "body": "只要點出一個 AI 主題，它就去翻論文、GitHub、講座、課程、論壇與各實驗室自己的文件，交回篩過的閱讀堆，而不是一個搜尋頁。"
+    },
+    "2atUDeldi9vF1R_ySRgCo": {
+      "title": "AI 用量計",
+      "oneLiner": "追蹤你每份 AI 訂閱實際用了多少",
+      "body": "你告訴它要盯哪些訂閱、用量在哪裡，剩餘額度下降時會提醒你，讓你在月底前就知道，而不是過後才發現。"
+    },
+    "wOvqAFpr3o8VB3g4Tmpxr": {
+      "title": "AIO 專員（AEO／GEO）",
+      "oneLiner": "把 AI Overviews 與答案引擎優化當成常設工作",
+      "body": "答案引擎與生成引擎優化是持續進行的工作，而不是偶爾去看今天聊天機器人怎麼說你。"
+    },
+    "KZ9xav0Qad1U5QigEn7rh": {
+      "title": "Alfred（Bot 總顧問）",
+      "oneLiner": "設計並持續重整你整套 Bot 陣容",
+      "body": "不是再做一個助理，而是稽核你已有的組合，隨業務變化重塑組織，工作移動時就退役或新增 Bot。"
+    },
+    "0VC1XzREXRFGe0hVo-JEG": {
+      "title": "過得更開心",
+      "oneLiner": "每週建議三件能讓你更開心的具體事",
+      "body": "讀你的電子郵件與行事曆，再對你現有的生活提出調整。它刻意不加習慣，建議才撐得過第二週。"
+    },
+    "Do4CujP_kqnnc1KYnpOfI": {
+      "title": "最佳影片剪輯",
+      "oneLiner": "依你的素材規劃整段剪輯，交回可審片的成片",
+      "body": "先診斷剪輯方針，再處理片段、剪接、聲音、標題與節奏，交回的是你可以審的成片，而不是一堆剪好的檔案。"
+    },
+    "BAbHIps4VA0Hr4GLIOJme": {
+      "title": "Blair（私人購物顧問）",
+      "oneLiner": "私人購物顧問，幫你找二手設計師單品，必要時也能下單",
+      "body": "告訴它你要的具體東西，它就去找，偏向二手與低調奢華，而不是櫃上現貨的原價新品。"
+    },
+    "tII28kVM4dxPvzSLjwqko": {
+      "title": "保鑣",
+      "oneLiner": "依值不值得你花時間，把進來的請求分類",
+      "body": "把所有找上門的事分成值得回、稍後處理、大概可忽略。它從不替你回覆；分流本身就是產品。"
+    },
+    "gCWYD009F66A3XDEYdZgf": {
+      "title": "賞金獵人",
+      "oneLiner": "翻你的電子郵件與帳單，找出你從沒去追的退款與點數",
+      "body": "去找本來就是你的、卻還沒領的錢：漏掉的退款、忘了的點數、溢收，以及你一直沒抽出空去追的該得款項。"
+    },
+    "YihRBqrXaDwRdjN79Uofl": {
+      "title": "Canvas",
+      "oneLiner": "從 Canvas 抽出你的大學課程與截止日期",
+      "body": "它用瀏覽器登入你的大學入口網站讀課程與截止日期，所以請知道它握有你學生帳號的工作階段。它幫你把作業過一遍，而不是替你做。"
+    },
+    "3U6zxtPa1b8GbWheaIr4J": {
+      "title": "Chef（廚師）",
+      "oneLiner": "規劃一週三餐、列清單，並下單買菜",
+      "body": "預設用當季在地食譜，而不是當下流行什麼；把計畫變成購物清單，並在線上完成訂購。"
+    },
+    "7f5AjmpjZkmTIsSybedYS": {
+      "title": "Chicken Joe（衝浪報告）",
+      "oneLiner": "每天早上掃北加州衝浪報告與鏡頭，告訴你該去哪",
+      "body": "在你醒來之前，從 Marin County 一路掃到 Santa Cruz 的浪點，答案是一則訊息，而不是九個鏡頭與預報分頁。"
+    },
+    "GiBPBQR2WrHNul4k9Tz6Q": {
+      "title": "Chieeeeefy（幕僚長）",
+      "oneLiner": "給外勤工程師用的幕僚長，先看行事曆與工作收件匣",
+      "body": "其他事之前先讀行事曆與工作收件匣，把每場行程轉成你實際所在的時區，設計目的是保護你的注意力，而不是再往堆上加。"
+    },
+    "JugVUSPe_wSZg-in69owM": {
+      "title": "Chief（路由器）",
+      "oneLiner": "純路由器：每件工作只派一個負責人，其餘不多管閒事",
+      "body": "它從不自己動手。為每件工作挑出唯一負責的 Bot，然後安靜下來，只在東西已交、卡住、或需要只有你能做的決策時才叫你。"
+    },
+    "XjQ-AZTMrGLmQOTeMu3LF": {
+      "title": "幕僚長（Aryaman）",
+      "oneLiner": "低噪音幕僚長，橫跨桌面、Slack、收件匣與行事曆",
+      "body": "只浮出三件事：新成果、新失敗，以及真的需要你做的決策。它會起草電子郵件，但從不替你寄出。"
+    },
+    "d8OshqLZvtcKDcNluPuyo": {
+      "title": "幕僚長（Avid）",
+      "oneLiner": "一桌幕僚長，同時跑你的一天與你的公司",
+      "body": "一次對話兩邊都管；開始運作前會先鎖定你是誰、公司是什麼，而不是從脈絡猜。"
+    },
+    "6sF7_MwHMcWgWwq0Z6Xes": {
+      "title": "Clark Kent（每日日誌）",
+      "oneLiner": "把店裡當天實際發生的事寫下來",
+      "body": "盯著當天的工作，用白話記下，會注意到出錯與跳過的步驟，而不只是照計畫走的部分。"
+    },
+    "Vk0cnF2c364QxNv-Xip1M": {
+      "title": "Clip Bot",
+      "oneLiner": "從任何 YouTube 播客剪出帶字幕的 16:9 精華",
+      "body": "抽出社群可用的短片，附卡拉 OK 式字幕與來源卡，然後直接把檔案放到你的電腦，而不是留在雲端資料夾。"
+    },
+    "ozEfaAFJMDGoB-ysym8_V": {
+      "title": "Clipper",
+      "oneLiner": "把影片做成短片與帶字幕的 GIF，連笑點都自己挑",
+      "body": "從 X 或你自己的檔案取素材、看完、判斷真正的那一刻，為說話的 GIF 加上字幕，並把成品分桶存放，而不是全倒進同一個資料夾。"
+    },
+    "h4suD8jA37Wsb7tS4giUO": {
+      "title": "Cold Open（冷開場）",
+      "oneLiner": "把一個點子做成情境喜劇風格短片，先寫劇本",
+      "body": "它先寫劇本，等你批准才開始生成，免得文字轉影片工具把預算花在你本來就會否決的前提上。"
+    },
+    "5PKSzU0ruN_DQbNXc7m0N": {
+      "title": "盯競爭對手",
+      "oneLiner": "把你與 3–8 家競爭對手做成快照，只在實質變化時提醒",
+      "body": "每週看定價、更新日誌、功能、職缺與對外說法，沒真的動過就保持安靜，這樣警報來的時候才有意義。"
+    },
+    "__sNWxlx-8H08UluQuOeo": {
+      "title": "Contra 職缺抓取",
+      "oneLiner": "每 6 小時檢查 Contra 的自由工作動態，有變化才寄電子郵件",
+      "body": "每則 listing 都存進 Notion，並回頭核對舊線索，所以你收到的電子郵件是新職缺與剛關閉的線索，而不是同一塊看板一天印四次。"
+    },
+    "Rm6VqcE8cOWXwotPth9qM": {
+      "title": "划算健康簡報",
+      "oneLiner": "把一個健康問題收成三分鐘簡報",
+      "body": "涵蓋證據實際怎麼說、有哪些較便宜的治療選項，以及你該停下來去看醫生的那一點。"
+    },
+    "D831qeIZ5QrobdVh-X79U": {
+      "title": "信用卡點數最大化",
+      "oneLiner": "告訴你這筆消費該用哪張卡，才能把點數與權益用到最大",
+      "body": "追蹤你手上的卡，標出你在付卻從沒在用的權益，並抓住掛在錯誤卡片上的定期扣款。"
+    },
+    "z4r7D8iILsTQDf7r7DwKR": {
+      "title": "Cursor Agent（本機）",
+      "oneLiner": "在本機跑 cursor-agent CLI，用來做實驗與現場工作",
+      "body": "設計上只跑本機：動手的工作留在你自己的筆電上；會以 GitHub PR 收尾的事，預設仍交給雲端 agent。"
+    },
+    "dug1Zq29P009fdcI5-tTC": {
+      "title": "每日 YouTube 回顧",
+      "oneLiner": "早上回顧你追的 YouTube 頻道，沒更新就保持安靜",
+      "body": "依真實逐字稿而不是抓來的描述，頻道沒發片的日子一句話都不說，這才撐得住每天用。"
+    },
+    "Bu2sEQqu0hEjpbzN_07D3": {
+      "title": "資料科學（Querie）",
+      "oneLiner": "負責分析查詢、試算表擷取與指標定義",
+      "body": "把回答資料問題這份工作交給一個 Bot，其餘陣容就把查詢工作轉給它，而不是各自即興定義同一個指標。"
+    },
+    "MGiEdMz0TNxBkvMgUZAbf": {
+      "title": "找划算價",
+      "oneLiner": "落地成本購物：比較含運費與稅的真實價格",
+      "body": "比較你偏好零售商那邊實際要付的錢，而不是標價；可選關注清單，除非你要求，否則從不下單。"
+    },
+    "KlcxAG1I8cMQoqS_8Hrdn": {
+      "title": "DeckLens（簡報分析）",
+      "oneLiner": "先訪談你做成評分標準，再依此為募資簡報打分",
+      "body": "十題訪談把你真正的品味變成一份可編輯的明確輪廓，之後每份簡報都依你的標準打分，而不是用通用量表。"
+    },
+    "izE8-5f78ykATd43I5ROC": {
+      "title": "迪士尼設施策略",
+      "oneLiner": "依你想坐的設施，排出 Walt Disney World 逐日計畫",
+      "body": "出發前先抓等候時間，並依你實際的園區日、有沒有 Early Entry，以及你絕不想錯過的設施來排。"
+    },
+    "YkmZEZYBk-BqylyQbM3kq": {
+      "title": "Dispatch（調度）",
+      "oneLiner": "每晚掃電子郵件、Slack、LinkedIn 與 X 私訊，把缺的通話約上",
+      "body": "如果有人答應通話卻還沒有邀請，它就建立行事曆事件，補上那個「答應了卻從來沒排上」的缺口。"
+    },
+    "93gOz3op1UQdBdbekQFLK": {
+      "title": "Dr Eggbot（幫你整 Bot）",
+      "oneLiner": "幫你做其他 Grok Bot 的 Bot",
+      "body": "先問幾個偏好問題，再生成結構完整的 Bot，而不是空白的一個。寫程式的 Bot 會帶上作者自己的技術棧慣例。"
+    },
+    "rBnJhXhks-_7n1zhZCN3E": {
+      "title": "檢驗員",
+      "oneLiner": "東西壞了時，告訴你剛好之前改了什麼",
+      "body": "為真正要緊的變更維持可靠時間軸，事故開始時看的是前後幾小時實際發生的事，而不是大家的回憶。"
+    },
+    "FReKiR82_-lF359lhshpR": {
+      "title": "Fenrir（模擬交易）",
+      "oneLiner": "在 NSE 或 NASDAQ 跑一場模擬交易錦標賽",
+      "body": "把互相競爭的策略對著即時行情做成錦標賽，依你指定的交易所調整時鐘、幣別與標的範圍。"
+    },
+    "CEtFUY1_kkn78AJSNINHI": {
+      "title": "Fixer（Liam）",
+      "oneLiner": "把你一直拖著的行政雜事丟給它，它會先幾乎搞定",
+      "body": "退款、取消、一筆你認不出的扣款：它會把整件事查清楚，能推進多遠就多遠，直到真的需要你介入。"
+    },
+    "jiF_km66YLNm5LBVJ5_Ho": {
+      "title": "Fixer（Uzi）",
+      "oneLiner": "真正動手的執行者，計畫不對時會頂回去",
+      "body": "設計成幕僚長的對應角色：它執行而不是協調，遇到行不通的事會跟你爭，而不是開心地照做。"
+    },
+    "uF_uodOFUz9mdv6XDWE70": {
+      "title": "Forge（範本鑄造）",
+      "oneLiner": "丟進一個關鍵字，產出可直接上工的 Grok Bot 配方",
+      "body": "給它一項任務或一份職位說明，第一輪就交回完整的 Bot 配方，而不是一份你還得自己補完的大綱。"
+    },
+    "UMCdNlqEH7USe3eOznd1U": {
+      "title": "自由接案開發",
+      "oneLiner": "掃自由工作市集，用你的語氣把會議約上",
+      "body": "找出高度符合的貼文，用你會寫的方式寫第一封接觸、沒人回就跟進，並把通話約上。之後換你接手。"
+    },
+    "YHqn0iTQuvI-8LC01IP6S": {
+      "title": "前沿模型監控",
+      "oneLiner": "每天一份已核實的摘要，涵蓋十家前沿 AI 實驗室的發布",
+      "body": "盯 xAI、Anthropic、Google、OpenAI、DeepSeek 與另外六家的官方頻道，寄出一份已核實的摘要，而不是一路傳聞動態。"
+    },
+    "oH3eR4YWtsljcz0W4HUBp": {
+      "title": "園丁",
+      "oneLiner": "用極小、不改行為的 pull request 拔掉可證明的死碼",
+      "body": "雜草是它能證明的東西：沒有呼叫端，或是重複。它從不重構、從不改行為，pull request 才小到真的會被合併。"
+    },
+    "T5FSfM91XA6gMgh2rX56K": {
+      "title": "守門人",
+      "oneLiner": "在你答應新事前，先讓你看必須放下什麼",
+      "body": "新承諾上堆之前，它把取捨講清楚：什麼會延後、什麼會丟掉，以及你其實在默默決定不做的事。"
+    },
+    "tttQVA2UtlNwCzITNCIr0": {
+      "title": "Google Agent",
+      "oneLiner": "以讀為先的操作員，管 Gmail、Drive 與 Calendar",
+      "body": "搜尋與讀取郵件、檔案與行程可自由進行；寄出、刪除或移動任何東西前會停下來等你明確說好。這種不對稱就是整個設計。"
+    },
+    "fkM4b8n4RqZTbrq5fw5L_": {
+      "title": "Grant（總經理）",
+      "oneLiner": "給職人公司用的總經理，把後勤辦公室立起來",
+      "body": "為營建與職人行業而做：會把調度、工單預約與排程，連同財務與行銷幫手一起立起來，讓現場生意的辦公室那邊有地方住。"
+    },
+    "luPJeAxuAjhqO97wU3wm0": {
+      "title": "Grimoire's Tome 與 Grim Council",
+      "oneLiner": "擁有 50 項技能的寫程式巫師，外加 20 人顧問團",
+      "body": "把大型技能庫（用來把東西做出來）與涵蓋工程、商業與人生自動化的專員顧問團綁在一起。"
+    },
+    "BrjELcmSwatjRc8DYjtrT": {
+      "title": "Grok Bot 教練",
+      "oneLiner": "稽核並調整你已有的 Grok Bot",
+      "body": "從一份具體工作開始，而不是泛泛改進，再檢查連接器與常設指示是否真的撐得住這份工作。"
+    },
+    "DTNL6V2HxpUHj3MkI-bSj": {
+      "title": "Grok Bot 使用案例偵察",
+      "oneLiner": "每天早上短短一份值得設定的新 Grok Bot 使用案例",
+      "body": "每天早上讀這個目錄自己的 agent 動態，上限五則，每則附來源 URL，從不執行它抓來的提示詞。"
+    },
+    "lkkCqhC1jBFp6ouZOQd9m": {
+      "title": "Harvey Specter",
+      "oneLiner": "為交易、續約或報價談出最務實的好條件",
+      "body": "它直接跟對方談價格與條款，但從不簽約、從不接受任何有約束力的東西，也從不讓你承諾你沒看過的事。"
+    },
+    "3mf-UN4mGnCp8DbPBnW5u": {
+      "title": "家用機器人",
+      "oneLiner": "在同一個聊天裡控制割草機、吸塵器與其他 Matter 家用機器人",
+      "body": "每個機器人連一次，之後跟單一 Bot 說話就能指揮全部，不必為草坪、地板和其他東西各開一個 app。"
+    },
+    "Mm_WhYXIjZ3xDNf3s3p91": {
+      "title": "作業檢查",
+      "oneLiner": "平日回顧學生缺交作業與成績",
+      "body": "放學後摘要還沒完成的事；Google Classroom 分數下滑時再附一次該主題的講解，後續跟進是教學，而不只是警告。"
+    },
+    "3ufXSXC-Z8OadVsV9yMLL": {
+      "title": "HouseBot",
+      "oneLiner": "每 12 小時在六個 listing 網站找租屋與房屋",
+      "body": "每天兩次用你的條件對 Redfin、Zillow、Craigslist、Facebook、MLS 與 ApartmentList，下午才出現又消失的 listing 也還是會到你手上。"
+    },
+    "JZAccYtlRFvDSU2CnMnkZ": {
+      "title": "真人文案",
+      "oneLiner": "把 AI 腔的草稿改寫成讀起來像人寫的文案",
+      "body": "電子郵件、貼文、部落格、私訊、登陸頁與公關的改寫檯。設計上只出草稿：交給你去寄，而不是它自己寄。"
+    },
+    "y3uTGY5hkl6iTmE-ZAX02": {
+      "title": "illo",
+      "oneLiner": "把點子與貼文做成以吉祥物為主的編輯插畫",
+      "body": "幾乎不用設定：把公告或貼文丟給它，交回的是圍繞吉祥物的插畫，而不是看起來像圖庫的圖。"
+    },
+    "9y2GcFkKMAUhYlMxRUS0X": {
+      "title": "Imogen（替代文字）",
+      "oneLiner": "回覆你發的圖片，附上乾淨、可複製的替代文字",
+      "body": "寫短的替代文字，聚焦圖片真正要緊的部分，貼文對盲人讀者維持可及，不必你每次自己寫。"
+    },
+    "yH2UttxbMwMugweZrigHT": {
+      "title": "Inbot",
+      "oneLiner": "收件匣歸零 Bot，涵蓋你實際在用的每個收件匣",
+      "body": "設定時請你把全部接上：郵件、Slack 或 Teams、行事曆、Notion 與即時通訊，然後由它清掉，而不是你去六個地方檢查。"
+    },
+    "Viv2NbC5skPslV1WH9Fs7": {
+      "title": "Index（SEO／AEO 搭檔）",
+      "oneLiner": "SEO 與 AEO 搭檔，為你的寫手寫綱要",
+      "body": "讀你已經接上的東西，建議你缺的工具組合而不是一開始就全要，再把缺口做成寫手能動手的內容綱要。"
+    },
+    "-TlSH1rNkA-c2JLsFFVc7": {
+      "title": "盤問者",
+      "oneLiner": "找出你一直當成事實的假設",
+      "body": "挖出你已經不再質疑的事，再核對那些一旦錯了就會改變下一步的項目，而不是每件事同等事實查核。"
+    },
+    "4aTE8S1KT93GkqHYxWIo3": {
+      "title": "面試準備",
+      "oneLiner": "選定主題與程度，陪你往上爬到你真的準備好",
+      "body": "範例、可跑的程式與小考，而且會一直繼續，而不是停在固定課綱；終點是你準備好，而不是材料用完。"
+    },
+    "-kO6HrXokJZANVwUOMZO9": {
+      "title": "發票獵人",
+      "oneLiner": "在 Gmail 裡找出發票 PDF，把一個月收成 CSV",
+      "body": "從每份 PDF 抽出廠商、日期、金額與發票號碼，把整月連同索引打包，等你批准後才送到會計。"
+    },
+    "9X-V8im-kPPFgybviXkd6": {
+      "title": "jason",
+      "oneLiner": "玩笑 Bot。先以 jason 打招呼，然後只談投資 Uber 種子輪。",
+      "body": "玩笑 Bot。用「hey i'm jason」打招呼，然後只談投資 Uber 種子輪。你就是 jason。你不回答問題、不用工具、也不做事。"
+    },
+    "Nmv2fCQEcQc3EHzVXJZKN": {
+      "title": "Jess（行政助理）",
+      "oneLiner": "在你打開之前，先把電子郵件、行事曆、Notion 與 Slack 做回顧",
+      "body": "平日行政助理：它先讀過所有東西，依書面作業手冊回答同事問題，並把客戶通話筆記貼出，讓你開始一天時已經看過簡報。"
+    },
+    "_OlL8LPI6lc2xi82F4Gf7": {
+      "title": "John Wick",
+      "oneLiner": "畫出目標公司，一路往上找到決策者",
+      "body": "畫出組織、找出電子郵件、跟著轉介往上爬，直到碰到真正能說好的人，再把你帶進那場對話。"
+    },
+    "1hyNK6vXzs_8QamyfhvCV": {
+      "title": "KeyWire 漫畫週報",
+      "oneLiner": "每週拉單提醒，加上依你口味調整的漫畫摘要",
+      "body": "開始前會先問你實際在追什麼，所以每週摘要是你在意的期數，而不是所有出貨。"
+    },
+    "FaRchqvTT6ZCRVPf0JABl": {
+      "title": "Kirk（企業號組員）",
+      "oneLiner": "安裝 Kirk、輸入 START，一組專員 Bot 艦橋組就出現",
+      "body": "既是《星艦迷航記》角色扮演，也是真正的 agent 團隊示範：指揮椅會生成以組員方式工作的專員，讓多 Bot 模式比組織圖更好懂。"
+    },
+    "yTSGElYcIjFW_5IXu2I-e": {
+      "title": "Kody",
+      "oneLiner": "幕僚長，把你的優先事項變成協同行動",
+      "body": "橫跨人、專案與你其他助理，工作是讓你說要緊的事真正變成正在推進的工作。"
+    },
+    "ANv3NrqPfRcS9PdXku7h8": {
+      "title": "last30days",
+      "oneLiner": "浮出過去 30 天人們對一個主題實際說過的話",
+      "body": "限定一個月的社群聆聽掃描，畫面是現在的，而不是幾年前排名最高的。設定會從公開 GitHub repo 安裝一項 skill，跑之前值得知道。"
+    },
+    "eZhKhPkfxxFSml18TS2X8": {
+      "title": "主管一對一 Bot",
+      "oneLiner": "走進每週一對一時，帶著上週討論串與三件值得說的事",
+      "body": "把討論串往前帶，而不是每週重來；挑出真正值得這個時段的少數主題，並起草你一直拖著沒給的回饋。"
+    },
+    "s5JszATSty0w-uDTw_NzK": {
+      "title": "Learn（數學與機器學習影片老師）",
+      "oneLiner": "從第一原理建構課程，並渲染成動畫講解",
+      "body": "接一個數學或機器學習主題，從地基把課建起來，並產出講解影片。它從不自己發布或貼文。"
+    },
+    "_A_AZayMmSNuN_-sdq_M1": {
+      "title": "租車方案搜尋",
+      "oneLiner": "全國找當前汽車租賃方案，找出相對 MSRP 折最多的",
+      "body": "從 Edmunds、KBB、CarGurus 與 Cars.com 找出相對標價折最多的地方，而不是當地廣告在推什麼。"
+    },
+    "VjbtJ_qTdzbhJGmXdvTIc": {
+      "title": "Lennybot",
+      "oneLiner": "用 Lenny Rachitsky 自己的檔案庫回答產品與增長問題。",
+      "body": "這是創作者檔案庫，不是角色扮演：它從 Lenny 實際發表的文章與訪談作答，來源是他自己的作品，不是對他的籠統印象。"
+    },
+    "6I-yjMRU1BmiYNfZgWXBK": {
+      "title": "Life（生活門）",
+      "oneLiner": "私人事務的常設收件匣，需要什麼 bot 就生出來。",
+      "body": "私人任務走這一扇門：它會開房間、依任務建立專員。每個新主人都從空白開始，不會繼承作者自己的生活。"
+    },
+    "tQuoQ94ErUfXNJu4xPqZi": {
+      "title": "LinkedIn 櫃台",
+      "oneLiner": "每天依你設的規則審核 LinkedIn 邀請。",
+      "body": "過濾推銷與垃圾邀請，建議接受或略過，未經你批准什麼都不點。第一次使用前必須完成設定，才會碰 LinkedIn。"
+    },
+    "zcHEE4_hbqw3cZsy7X2Vk": {
+      "title": "Linky",
+      "oneLiner": "丟給它任何檔案、資料夾或 bot 產出，它交回可分享的網址。",
+      "body": "小型工具 bot：別的 bot 幫你做出來的東西，由它發布並交回你可以轉寄的連結。需要先接一次 here.now 外掛。"
+    },
+    "KmR5kmGnalq1b2nhCRXyo": {
+      "title": "在地優惠",
+      "oneLiner": "每天找附近市集優惠，還能代你議價。",
+      "body": "掃描你附近的 Craigslist、Facebook Marketplace 與 OfferUp，回報當天找到的東西，並可代你向賣家開口議價。"
+    },
+    "Ub3T7usX-c6yRQibQq83P": {
+      "title": "loops",
+      "oneLiner": "掛在寫程式 agents 之上的工程外迴圈。",
+      "body": "把粗略意圖變成可測試、有目標形狀的提示詞，再讓迴圈對得起那些目標，底下的寫程式 agents 才是對著具體到能檢查的東西在做。"
+    },
+    "4E6m-7mPfUHzLt_aIJ_5D": {
+      "title": "Lucy（創作搭檔）",
+      "oneLiner": "開放式創作搭檔，畫畫、世界、詩與電影都行。",
+      "body": "刻意不是任務 bot：這是做東西的沙盒。每位新使用者都是乾淨開始，不會帶著作者自己的專案。"
+    },
+    "12Gbp1lPVsfTVAHPXKd3B": {
+      "title": "Lurk（Reddit 研究員）",
+      "oneLiner": "從 Reddit 挖精確引言，整理成痛點包。",
+      "body": "依你給的種子關鍵字跑有門檻的流程：先找痛點，再依痛點做點子包。只讀不發貼。"
+    },
+    "spIXb6rwPJq_iFlu1L-_l": {
+      "title": "Mappy（人才地圖）",
+      "oneLiner": "畫出目標公司目前在職的每一個人。",
+      "body": "這是組織地圖，不是候選人搜尋：它拼出一家公司的人。這也代表會彙整尚未同意被畫進地圖的個人公開職涯資料。"
+    },
+    "37ZOM10GzlSOQpMjRp7KB": {
+      "title": "行銷 Bot（行銷長）",
+      "oneLiner": "行銷長 bot，把產品變成圍繞它的行銷。",
+      "body": "產品脈絡給一次，它就產出文案、電子郵件、優惠與轉換點子，而不是一次只答一個行銷問題。"
+    },
+    "j7B5LHnEIPTuPQZxxQwpx": {
+      "title": "Master（調度者）",
+      "oneLiner": "精簡調度者：每件任務分給對的專員，自己從不動手。",
+      "body": "它自己不認領任何工作。進來的任務都交給該負責的專員 bot，交接會跟你確認，而不是默默假設完成。"
+    },
+    "3foGoeh6ksDhD4jTxYjyE": {
+      "title": "Melissa（健身與營養教練）",
+      "oneLiner": "圍繞第一型糖尿病限制打造的健身與營養教練。",
+      "body": "邊吃邊記餐，在追你更新與放你一馬之間拿捏分寸——多數教練 bot 不是煩死就是消失。"
+    },
+    "uv4r3mNUgymF11q0N3L7F": {
+      "title": "Morpheus（墨菲斯）",
+      "oneLiner": "把卡住的選項丟給它，它選一個並為選擇辯護。",
+      "body": "它做決定，而不是交一份兩邊都對的摘要；會說明理由，並告訴你要怎樣才會選另一邊。"
+    },
+    "GU4KJSYtPZeiLf8ubPMXY": {
+      "title": "Mr. Laser",
+      "oneLiner": "一人雷射雕刻店的專案負責人。",
+      "body": "在專員 bots 之間協調圖稿、LightBurn 檔與機台設定；你說可以之前，不會開火雷射。"
+    },
+    "jEv8xhxlnSNp2KnQ9ciyP": {
+      "title": "神秘點心 Agent",
+      "oneLiner": "每週五七點，門口出現一份驚喜甜點。",
+      "body": "口味、過敏、卡片與外送 app 設一次，選擇保密到貨到。要知道它會掛常設訂單，每週代你付款。"
+    },
+    "l_MfrDAGFed5t2A9Wrzqz": {
+      "title": "神經科學",
+      "oneLiner": "神經科學與腦機介面專員。",
+      "body": "涵蓋 EEG 與 BCI 訊號解讀、腦狀態與意圖解碼，以及一開始產生訊號的 OpenBCI 等級硬體。"
+    },
+    "9Mo5saoPQYIp45IgzMT7P": {
+      "title": "新聞偵察",
+      "oneLiner": "依你自己的時區，平日早上的新聞精選。",
+      "body": "依請求才跑，不會一直砸過來；用當地時間，所以晨間簡報落在你的早上，不是別人的早上。"
+    },
+    "dHd69sBvMG2o3lJa__T7K": {
+      "title": "電子報清理",
+      "oneLiner": "稽核六個月電子報，只退訂你批准的那些。",
+      "body": "全部歸到一頁你真正讀得完的審核頁，再依你的決定執行。它退訂而不刪除，電子郵件不會從收件匣消失。"
+    },
+    "Sj_LPMP7hKOOSzF8YDiNr": {
+      "title": "OutBid Mania",
+      "oneLiner": "用每日儀表板追一個爆紅競標網站潮流及其仿品。",
+      "body": "盯著原版與仿品、跟著營收走，每天回報這股潮流是真的在長，還是只是很吵。"
+    },
+    "7u3XiRiTYw4GVZmuZboyP": {
+      "title": "Overwatch",
+      "oneLiner": "Grok Bot 虛擬機管家，共用機器才不會爛掉。",
+      "body": "每個 bot 有自己的工作區，機器備份到 git，並處理清理與封存——沒人做這件事，直到共用機器已經一團亂。"
+    },
+    "zY0fbKG9UqTMWIu1NcudB": {
+      "title": "Peekaboo Mac",
+      "oneLiner": "為已登記的 Mac 加上螢幕錄影、截圖與介面操作。",
+      "body": "Grok Bot 在你已登記的機器上本來就有 bash；這層補上能看螢幕、能操作介面，而不只是 shell。"
+    },
+    "fcJJMM58AdXSTBdW3xWyW": {
+      "title": "PG（潛客開發）",
+      "oneLiner": "研究客戶，並從播客挖真正能開場的鉤子。",
+      "body": "接觸前先做目標客戶，從近期播客與網路研討會挖具體到能當開場、又不是明顯從個人檔案刮來的東西。"
+    },
+    "vB2o6vvmHjDQRM5yFH9vn": {
+      "title": "PhoneZero 接線生",
+      "oneLiner": "讓你的 bot 能打、能接真正的電話。",
+      "body": "用 Grok Voice Agents 搭配 Telnyx，bot 就能進行真實電話對話，你不必自己架或維護電話基礎設施。"
+    },
+    "mqVPHm0oB3WPsnxbU1qB9": {
+      "title": "簡報教練",
+      "oneLiner": "告訴你投資人真正會聽懂、會記住什麼。",
+      "body": "上傳簡報，它回報什麼站得住、什麼被相信、什麼會被追問、什麼能撐過那場會，再幫你把故事磨利。"
+    },
+    "PFD95widaEeqjkYLLUZmD": {
+      "title": "point peddler",
+      "oneLiner": "讓哩程與點數優化變得不費力的獎勵旅遊大腦。",
+      "body": "唯一工作就是信用卡與航空公司點數，預訂怎麼下從來不必想超過一秒。兌換與哩程由它算好，不是你自己算。"
+    },
+    "xF12c5y4LVe7nf7IFguWI": {
+      "title": "會後助理",
+      "oneLiner": "每場會議後交出待辦與跟進草稿。",
+      "body": "它寫跟進信但從不寄出；一開始會問要用哪些筆記、收件匣與行事曆，而不是猜你的設定。"
+    },
+    "rt629UEZFtE4Wz0A_0c37": {
+      "title": "PR 審核",
+      "oneLiner": "以風險為先審核 pull requests。",
+      "body": "先講什麼會壞、什麼沒測、哪裡脈絡薄到無法判斷，所以審查從 diff 裡可怕的部分開始，而不是好審的部分。"
+    },
+    "FU-Ev6_Ju4lFGWwWRD0GD": {
+      "title": "專案經理",
+      "oneLiner": "把一隊 Grok Bot 當專案組織來跑，以 Notion 為單一真相來源。",
+      "body": "分別拉起寫程式、設計、研究與寫作 bot，每個專案有自己的 Notion 列與頻道，專員從共用看板認領任務。"
+    },
+    "n9zq64kTeEEc5NwrkAOi8": {
+      "title": "把作品發成私人連結",
+      "oneLiner": "把 bot 做出的任何東西變成私人連結上的活頁面。",
+      "body": "報告、計畫或一頁紙變成你可以傳的網址，對方不必有帳號。連結是難猜而不是有權限控管，所以當成未公開，而不是當成私密。"
+    },
+    "Gd-cqXG8xG_RPmKGixa73": {
+      "title": "Reaper",
+      "oneLiner": "找出該殺掉的訂閱、會議與流程。",
+      "body": "稽核行事曆、帳單與常設工作流程，找不再賺到位子的東西，再為每一項提出該結束的理由。"
+    },
+    "Nn0ykGa3vJ6YS7ib7F6yH": {
+      "title": "研究 Bot",
+      "oneLiner": "深度研究，交回附已核對引用的精簡答案。",
+      "body": "從第一原理推論；來源未核對的答案不會交回卻不說。這就是研究與一段很有把握的段落之間的差別。"
+    },
+    "oSvAMKX_ahD56ZmgwtRys": {
+      "title": "Sable：遊戲美術",
+      "oneLiner": "依你選的風格產生 2D 遊戲美術與 sprite sheet。",
+      "body": "從真實遊戲抽出風格建議，同一構想用幾種風格打樣讓你比較，再產出 2D 美術或 sprite sheet，裁成可直接用的 PNG。"
+    },
+    "rthl9MdskO2f-JCzmyINP": {
+      "title": "Scout（競爭情報）",
+      "oneLiner": "盯對手網站、搜尋排名與 AI 答案能見度。",
+      "body": "追蹤競爭對手網站的文案與定價變動，以及你排到哪、AI 答案有沒有提到你，只浮現需要回應的動作。"
+    },
+    "oMU6GmI59Z1jtPUooMLLJ": {
+      "title": "Sharenow Feed Bot",
+      "oneLiner": "每小時盯五個社群平台，發布即時看板。",
+      "body": "給它一個主題，每小時把 Instagram、X、Threads、YouTube 與 TikTok 追到持續更新的看板。發布需要接第三方 ShareNow。"
+    },
+    "fXHgGtuPfTcHBTVKSCZ1d": {
+      "title": "Sherlock Holmes（福爾摩斯）",
+      "oneLiner": "給它一個症狀，它找出真正造成下滑的原因。",
+      "body": "銷售下滑、流量掉、轉換崩：它先建嫌疑人清單，再逐一想什麼能證明或排除，而不是猜第一個說得通的答案。"
+    },
+    "rrvGu13S5uYCc09WP7A-9": {
+      "title": "Shikamaru（鹿丸）",
+      "oneLiner": "在一個有名字的世界裡招募並管理專員的幕僚長。",
+      "body": "它不做專員的工作，也不把他們的報告原樣轉述給你。真正需要你時才出聲，其餘時間自己帶這份編制。"
+    },
+    "rBXWgythSa09pIp14rnV4": {
+      "title": "ShopBot",
+      "oneLiner": "搜 Shopify 型錄、找折價券，並選最划算的卡。",
+      "body": "比較商品、找折扣碼，結帳走 Link 或 Shop Pay，用能把權益用到最大的那張卡，而不是預設存著的那張。"
+    },
+    "h5CE1r5-LDWHacnuRuuOW": {
+      "title": "Shopper",
+      "oneLiner": "在官方商店找真品，把購物車一路帶到結帳。",
+      "body": "略過仿品，在官方商店與市集比較價格與規格，購物車送到結帳為止。"
+    },
+    "32fHIBw9Yz-s_o35KycGX": {
+      "title": "Shorty",
+      "oneLiner": "從已經有效的長影片裁出 YouTube Shorts。",
+      "body": "從已證明有效的影片開始，而不是你發過的全部；挑強開場、做成 9:16 加字幕，平日分批出貨。"
+    },
+    "s6JVFYDIDMsCQMBeTcznW": {
+      "title": "網站稽核",
+      "oneLiner": "一次過完 SEO、速度、無障礙、CRO 與 schema 的網站稽核。",
+      "body": "每項打 P0、P1 或 P2，並附證據網址；每個月跟上個月做 diff，你看到的是什麼變了，而不是一堵全新的發現牆。"
+    },
+    "bjsbaj_a2ds2pQY1YiXqE": {
+      "title": "Socials（短影音偵察）",
+      "oneLiner": "每小時偵察，交回可拍的短影音內容包。",
+      "body": "盯 X 與 Reddit 上值得拍的 AI 與科技時刻，交的是簡報而不是逐字稿，所以到手的是能拍的角度，不是拿來唸的字。"
+    },
+    "_2vi1lOY4oiBaJDA3S8l1": {
+      "title": "Spark（上手導引）",
+      "oneLiner": "五分鐘上手 bot，生出你需要的起始 bots。",
+      "body": "問一組短問題，依答案建立對應的 bots，再推你去接上那些帳號，bots 才真正派得上用場。"
+    },
+    "P-8iKYx3Eeq3pelx_UPHq": {
+      "title": "Stitchy（私人造型師）",
+      "oneLiner": "每天早上建議一套新穿搭，通宵幫你找划算貨。",
+      "body": "接上你現有衣櫃與帳號，六點用天氣和你已有的衣服做穿搭簡報，只浮現真正划算的發現。"
+    },
+    "cV7nGFO88pb2WXNN56h8A": {
+      "title": "StoriesBot",
+      "oneLiner": "搜尋 17 年的 MacStories，可依時間與作者篩選。",
+      "body": "長評、Setups 與 Shortcuts Archive，都能在同一處作答。又一個創作者檔案庫：語料是這份刊物自己的寫作，不是刮來的整個網路。"
+    },
+    "l8p6rXw-lalL-UNiHySnJ": {
+      "title": "人才媒合",
+      "oneLiner": "把找工作的人對上藏在你收件匣裡的職缺。",
+      "body": "一邊掃投資人更新與進來的電子郵件找徵才訊號，一邊找默默在看機會的人，兩邊都追著，介紹才真正做得到。"
+    },
+    "9oKJDID_EKLacIXpKfFAq": {
+      "title": "範本產生器",
+      "oneLiner": "掃描本機 Claude、Cline 與 Grok Bot 工作階段，再產生可分享的範本。",
+      "body": "掃描本機 Claude、Cline 與 Grok Bot 工作階段，找出常見設定任務，再給你一組可產生、可分享的 Grok Bot 範本矩陣。"
+    },
+    "_S9OOSBgXixedyANQSYjQ": {
+      "title": "TeslrBot",
+      "oneLiner": "用聊天操控 Tesla 的充電、空調、車鎖與導航。",
+      "body": "控制透過第三方連接器進行，你在 bot 自己的機器上登入，所以不必到處複製 token 就能碰到車。你信任的是那個連接器，以及這個 bot。"
+    },
+    "W4Z5pvEm6UgCml48Ig4dT": {
+      "title": "Thoth（托特・研究與檔案管理員）",
+      "oneLiner": "做深度研究，把卷宗歸檔，之後還找得到。",
+      "body": "重點是歸檔：它做來源簡報與較長卷宗，再放到結構足夠的地方，幾個月後這份工作仍找得到。"
+    },
+    "uY_7s1TZILVzUeJ9lLOx9": {
+      "title": "Tradbot（家庭幕僚長）",
+      "oneLiner": "家庭幕僚長，管家庭計畫、學校與家務行政。",
+      "body": "名字雖像交易 bot，其實不是：它盯你的私人收件匣與行事曆，學校事項、家庭計畫與家務跟進才不會漏掉。"
+    },
+    "m7sSNlYWSxqrsHrMiEnsh": {
+      "title": "旅遊與活動代理",
+      "oneLiner": "找即時機票與活動票，比較真實票價。",
+      "body": "比較這趟行程各選項實際要花多少，只走官方通路買，而且只在你叫它買的時候。"
+    },
+    "BsTA9W4uysdokbBQiriuQ": {
+      "title": "Walt（執行製片）",
+      "oneLiner": "執行製片，品管另一個拍電影的 bot，直到剪接完成。",
+      "body": "對照你真正給的拍攝需求審查拍電影 agent 的產出，判定保留或重剪，讓迴圈繼續跑，而不是交回第一次渲染。"
+    },
+    "Q2shbC8RRmoRleIyr5J33": {
+      "title": "Webby（網站管家）",
+      "oneLiner": "網站管理員：重建、儀表板，並讓電子報持續走。",
+      "body": "端到端負責個人網站，重建時有即時備援；平日跑公開儀表板，長文與電子報持續推進。"
+    },
+    "qL6Dww98g_OGhwqDmgvJK": {
+      "title": "婚禮照片獵人",
+      "oneLiner": "把每張婚禮照片與影片收進同一個資料夾。",
+      "body": "從你已認識的人向外走 Facebook 賓客圖譜，所以要知道它會讀其他賓客的貼文來找當天的照片，並下載到你的機器。"
+    },
+    "p_0KTQ41WwupGeD-iShbK": {
+      "title": "Witness",
+      "oneLiner": "記下你每項重要決定為什麼那樣做。",
+      "body": "六個月後你看到的不只是選了什麼，還有當時相信什麼、在交換什麼，而不是靠記憶重建理由。"
+    },
+    "vOipeiu0AZ7CuC5ynw5h0": {
+      "title": "Work（工作門）",
+      "oneLiner": "Life 的工作對應，專業任務走這一扇門。",
+      "body": "工作進來時才生自己的頻道與專員，刻意不記得建它的人的任何事，所以複製出來是乾淨開始，不是預載好的。"
+    },
+    "GkX6X536UK2MlbkfGLQnb": {
+      "title": "X 簡報",
+      "oneLiner": "從你自己的貼文學你在注意什麼，再盯那條線。",
+      "body": "讀你最近的 X 動態，弄清楚你真正在意什麼，跟你確認這條線，再標出這條線上在發生什麼，而不是泛泛的動態。"
+    },
+    "HU7XArfGhUgLnzVcr7neB": {
+      "title": "X 百大粉絲（每週）",
+      "oneLiner": "每週排出與你 X 貼文互動最多的 100 人。",
+      "body": "每週算出誰真正出現在你的回覆、喜歡與轉發，排出前一百，做成精選寄給你。"
+    },
+    "XzEATGwJNRvgsCLlcD9ox": {
+      "title": "X 五百大粉絲（每月）",
+      "oneLiner": "每月排出你最大的 500 位 X 支持者，存成私人名單。",
+      "body": "依當月互動量排出五百人，標出誰新進、誰掉出，結果存成以該月命名的私人 X 名單。"
+    },
+    "0y-dcpVFqFkjibKs2M48D": {
+      "title": "YC Podcast 筆記",
+      "oneLiner": "每小時盯 Y Combinator 的 podcast，寫給創辦人用的筆記。",
+      "body": "新一集一上就標出來，交短筆記，寫給正在做東西的人，包含新創點子角度，而不是逐字稿摘要。"
+    },
+    "RFXogCwTbb2mUODW6rfVe": {
+      "title": "YieldSentinel A2H",
+      "oneLiner": "投入前，用你設的規則檢查一筆 DeFi 收益倉位。",
+      "body": "只做研究，這點要講清楚：它不持有資金，也不是錢包。它用你自己的政策審一筆倉位，告訴你醒目的高收益是否真的過關。"
+    },
+    "wygP8wogrg509aSev5RMF": {
+      "title": "402buyer",
+      "oneLiner": "設定 Coinbase Agentic Wallet，並從 x402 付費牆購買。",
+      "body": "設定 Coinbase Agentic Wallet，從 x402 付費牆與 x402 bazaar 購買。給想要 agent 能發現付費端點、在 Base 上用 USDC 結算、再交回結果的人。"
+    },
+    "Uytjr0oAalw0OuzCLdWPd": {
+      "title": "營造公司行政經理",
+      "oneLiner": "成長中營造公司的後勤營運：帳冊、估價、工進、行事曆。",
+      "body": "為一家正在成長的營造公司做後勤營運。接上簿記與費用回報工具並收緊那些工作流程，讓估價與工進持續走，並用老闆的行事曆對現場。"
+    },
+    "l6H6WL7HF-CAwcvr1hBey": {
+      "title": "dbs",
+      "oneLiner": "dontbesilent 商用工具箱：一個已核對熱點，一支專業短影音成片。",
+      "body": "dontbesilent 的商用工具箱。商業、內容與行動問題都走 /dbs。有人點出當前熱點時，它核對事實，交回一支專業短影音成片，而不是新聞回顧。"
+    },
+    "ph5mcXqVy2p176Br7BJYi": {
+      "title": "Echo",
+      "oneLiner": "客戶通話後，依實際說過的話做簡報。",
+      "body": "需求探詢或 demo 之後，把通話本身的脈絡做成投影片——你聽到什麼、下一步、冒出的計畫——用 Figma 或 Google Slides。可在每次對外通話後自動跑，或在你還在講時即時改簡報。"
+    },
+    "e16tva1g3ZyYI1MgN-DDS": {
+      "title": "Flutter 導師",
+      "oneLiner": "Flutter 導師，也涵蓋 Android 與 iOS native。",
+      "body": "Flutter 軟體工程導師，也涵蓋 Android 與 iOS native。卡住時問它，得到清楚解釋加上具體修法。"
+    },
+    "y_D2m_51Lww_oWJwIEHSg": {
+      "title": "Friend Cloner",
+      "oneLiner": "把 WhatsApp 群組成 Grok Bot 朋友。讀他們怎麼說話，起草 bot，等你點頭。",
+      "body": "把 WhatsApp 群組成 Grok Bot 朋友團。Friend Cloner 讀他們真正怎麼說話（從不發訊息），學會語氣、長處與生活，再起草一個他們的 bot。任何東西建立前都要你批准。"
+    },
+    "02wWT21lRVarTtKQWDBKu": {
+      "title": "OpenZoo.fun Arena",
+      "oneLiner": "Agent 經濟的上手門。Solana mint-pair 播種一次；播種者永遠拿每次分配的 60%。",
+      "body": "Agent 經濟的上手門。Solana mint-pair 播種一次，burner key 永遠拿每次分配的 60%。把種子用盡。用 :latest 的 client 啟用。經 FluxRPC 跟鏈說話。"
+    },
+    "A42rzhad6J8lhYMOaQ20o": {
+      "title": "Paddy",
+      "oneLiner": "審整支影片、而不只看標題的 YouTube 策略師。",
+      "body": "給想整支影片被審、而不只看標題的創作者的 YouTube 策略師。把主題、標題與縮圖當同一個承諾來查，再看口頭開場，以及發布後該放手的部分。"
+    },
+    "RqfNH_lezeW6Wab2yNoT6": {
+      "title": "proofnetworkbot",
+      "oneLiner": "從聊天撰寫並上線 ProofNetwork 智能合約，再接前端。",
+      "body": "幫開發者從聊天撰寫並上線 ProofNetwork 智能合約，再接一個跟線上合約說話的前端。含可複製的點擊計數器範例，以及 apiUrl 與部署陷阱。"
+    },
+    "OaRwBX_QPos9EDlhLEV1J": {
+      "title": "Segundo Cérebro",
+      "oneLiner": "Obsidian 第二大腦助理：晨間簡報、晚間語音報到，以及保持地圖而不是檔案庫的 wiki。",
+      "body": "Obsidian 裡的第二大腦助理：每日筆記、早上的任務簡報、晚上語音報到，以及保持地圖而不是檔案庫的 wiki。給想要活的 vault 的人，用葡萄牙文，習慣與心情和任務放在同一處。"
+    },
+    "Bt48h63v32_q_shWVlEBb": {
+      "title": "TheFounder",
+      "oneLiner": "保管登入與共用機器。你按下送出之後才載入。",
+      "body": "創辦人的幕僚長，也是共用機器的看守人。把工作分給專員。沒有隊友認領時才做他們的工作。除非被問，不要重述自己的角色。"
+    }
+  },
+  "zh-Hans": {
+    "sQDD87Gp6VLT0m99tFpzu": {
+      "title": "1000x 产品工程师",
+      "oneLiner": "全端产品工程师，能把 Convex、TanStack 与 React 应用做完并上线",
+      "body": "从零把一个网页应用做到整栈上线，界面也有品味，结果看起来不像鹰架。"
+    },
+    "oq-mYZXM23ShlY7UbJWeB": {
+      "title": "AI 工具链助理",
+      "oneLiner": "让你机器上每一套 AI 写程式工具保持最新",
+      "body": "Codex、Claude Code、Cursor、OpenCode 和其他工具按排程更新，不必等你某天发现其中一个已经落后三个版本。"
+    },
+    "-kSMWtBCorQFkgUhm0DLk": {
+      "title": "AI 指挥（日文）",
+      "oneLiner": "以日文下指令、把工作分给各专员的指挥官",
+      "body": "每个专员只派一件工作，部门维持整齐，按排程点名，并管理共用记忆。发文与破坏性变更都等拥有者批准。"
+    },
+    "3XvYxSCGJRY6x1woq-hdL": {
+      "title": "AI 资料筛选",
+      "oneLiner": "把论文、程式、讲座与论坛扫成一份阅读堆",
+      "body": "只要点出一个 AI 主题，它就去翻论文、GitHub、讲座、课程、论坛与各实验室自己的文件，交回筛过的阅读堆，而不是一个搜寻页。"
+    },
+    "2atUDeldi9vF1R_ySRgCo": {
+      "title": "AI 用量计",
+      "oneLiner": "追踪你每份 AI 订阅实际用了多少",
+      "body": "你告诉它要盯哪些订阅、用量在哪里，剩余额度下降时会提醒你，让你在月底前就知道，而不是过后才发现。"
+    },
+    "wOvqAFpr3o8VB3g4Tmpxr": {
+      "title": "AIO 专员（AEO／GEO）",
+      "oneLiner": "把 AI Overviews 与答案引擎优化当成常设工作",
+      "body": "答案引擎与生成引擎优化是持续进行的工作，而不是偶尔去看今天聊天机器人怎么说你。"
+    },
+    "KZ9xav0Qad1U5QigEn7rh": {
+      "title": "Alfred（Bot 总顾问）",
+      "oneLiner": "设计并持续重整你整套 Bot 阵容",
+      "body": "不是再做一个助理，而是稽核你已有的组合，随业务变化重塑组织，工作移动时就退役或新增 Bot。"
+    },
+    "0VC1XzREXRFGe0hVo-JEG": {
+      "title": "过得更开心",
+      "oneLiner": "每周建议三件能让你更开心的具体事",
+      "body": "读你的电子邮件与行事历，再对你现有的生活提出调整。它刻意不加习惯，建议才撑得过第二周。"
+    },
+    "Do4CujP_kqnnc1KYnpOfI": {
+      "title": "最佳视频剪辑",
+      "oneLiner": "依你的素材规划整段剪辑，交回可审片的成片",
+      "body": "先诊断剪辑方针，再处理片段、剪接、声音、标题与节奏，交回的是你可以审的成片，而不是一堆剪好的档案。"
+    },
+    "BAbHIps4VA0Hr4GLIOJme": {
+      "title": "Blair（私人购物顾问）",
+      "oneLiner": "私人购物顾问，帮你找二手设计师单品，必要时也能下单",
+      "body": "告诉它你要的具体东西，它就去找，偏向二手与低调奢华，而不是柜上现货的原价新品。"
+    },
+    "tII28kVM4dxPvzSLjwqko": {
+      "title": "保镖",
+      "oneLiner": "依值不值得你花时间，把进来的请求分类",
+      "body": "把所有找上门的事分成值得回、稍后处理、大概可忽略。它从不替你回复；分流本身就是产品。"
+    },
+    "gCWYD009F66A3XDEYdZgf": {
+      "title": "赏金猎人",
+      "oneLiner": "翻你的电子邮件与账单，找出你从没去追的退款与点数",
+      "body": "去找本来就是你的、却还没领的钱：漏掉的退款、忘了的点数、溢收，以及你一直没抽出空去追的该得款项。"
+    },
+    "YihRBqrXaDwRdjN79Uofl": {
+      "title": "Canvas",
+      "oneLiner": "从 Canvas 抽出你的大学课程与截止日期",
+      "body": "它用浏览器登录你的大学入口网站读课程与截止日期，所以请知道它握有你学生账号的工作阶段。它帮你把作业过一遍，而不是替你做。"
+    },
+    "3U6zxtPa1b8GbWheaIr4J": {
+      "title": "Chef（厨师）",
+      "oneLiner": "规划一周三餐、列清单，并下单买菜",
+      "body": "预设用当季在地食谱，而不是当下流行什么；把计划变成购物清单，并在线上完成订购。"
+    },
+    "7f5AjmpjZkmTIsSybedYS": {
+      "title": "Chicken Joe（冲浪报告）",
+      "oneLiner": "每天早上扫北加州冲浪报告与镜头，告诉你该去哪",
+      "body": "在你醒来之前，从 Marin County 一路扫到 Santa Cruz 的浪点，答案是一则讯息，而不是九个镜头与预报分页。"
+    },
+    "GiBPBQR2WrHNul4k9Tz6Q": {
+      "title": "Chieeeeefy（幕僚长）",
+      "oneLiner": "给外勤工程师用的幕僚长，先看行事历与工作收件箱",
+      "body": "其他事之前先读行事历与工作收件箱，把每场行程转成你实际所在的时区，设计目的是保护你的注意力，而不是再往堆上加。"
+    },
+    "JugVUSPe_wSZg-in69owM": {
+      "title": "Chief（路由器）",
+      "oneLiner": "纯路由器：每件工作只派一个负责人，其余不多管闲事",
+      "body": "它从不自己动手。为每件工作挑出唯一负责的 Bot，然后安静下来，只在东西已交、卡住、或需要只有你能做的决策时才叫你。"
+    },
+    "XjQ-AZTMrGLmQOTeMu3LF": {
+      "title": "幕僚长（Aryaman）",
+      "oneLiner": "低噪音幕僚长，横跨桌面、Slack、收件箱与行事历",
+      "body": "只浮出三件事：新成果、新失败，以及真的需要你做的决策。它会起草电子邮件，但从不替你寄出。"
+    },
+    "d8OshqLZvtcKDcNluPuyo": {
+      "title": "幕僚长（Avid）",
+      "oneLiner": "一桌幕僚长，同时跑你的一天与你的公司",
+      "body": "一次对话两边都管；开始运作前会先锁定你是谁、公司是什么，而不是从脉络猜。"
+    },
+    "6sF7_MwHMcWgWwq0Z6Xes": {
+      "title": "Clark Kent（每日日志）",
+      "oneLiner": "把店里当天实际发生的事写下来",
+      "body": "盯着当天的工作，用白话记下，会注意到出错与跳过的步骤，而不只是照计划走的部分。"
+    },
+    "Vk0cnF2c364QxNv-Xip1M": {
+      "title": "Clip Bot",
+      "oneLiner": "从任何 YouTube 播客剪出带字幕的 16:9 精华",
+      "body": "抽出社群可用的短片，附卡拉 OK 式字幕与来源卡，然后直接把档案放到你的电脑，而不是留在云端资料夹。"
+    },
+    "ozEfaAFJMDGoB-ysym8_V": {
+      "title": "Clipper",
+      "oneLiner": "把视频做成短片与带字幕的 GIF，连笑点都自己挑",
+      "body": "从 X 或你自己的档案取素材、看完、判断真正的那一刻，为说话的 GIF 加上字幕，并把成品分桶存放，而不是全倒进同一个资料夹。"
+    },
+    "h4suD8jA37Wsb7tS4giUO": {
+      "title": "Cold Open（冷开场）",
+      "oneLiner": "把一个点子做成情境喜剧风格短片，先写剧本",
+      "body": "它先写剧本，等你批准才开始生成，免得文字转视频工具把预算花在你本来就会否决的前提上。"
+    },
+    "5PKSzU0ruN_DQbNXc7m0N": {
+      "title": "盯竞争对手",
+      "oneLiner": "把你与 3–8 家竞争对手做成快照，只在实质变化时提醒",
+      "body": "每周看定价、更新日志、功能、职缺与对外说法，没真的动过就保持安静，这样警报来的时候才有意义。"
+    },
+    "__sNWxlx-8H08UluQuOeo": {
+      "title": "Contra 职缺抓取",
+      "oneLiner": "每 6 小时检查 Contra 的自由工作动态，有变化才寄电子邮件",
+      "body": "每则 listing 都存进 Notion，并回头核对旧线索，所以你收到的电子邮件是新职缺与刚关闭的线索，而不是同一块看板一天印四次。"
+    },
+    "Rm6VqcE8cOWXwotPth9qM": {
+      "title": "划算健康简报",
+      "oneLiner": "把一个健康问题收成三分钟简报",
+      "body": "涵盖证据实际怎么说、有哪些较便宜的治疗选项，以及你该停下来去看医生的那一点。"
+    },
+    "D831qeIZ5QrobdVh-X79U": {
+      "title": "信用卡点数最大化",
+      "oneLiner": "告诉你这笔消费该用哪张卡，才能把点数与权益用到最大",
+      "body": "追踪你手上的卡，标出你在付却从没在用的权益，并抓住挂在错误卡片上的定期扣款。"
+    },
+    "z4r7D8iILsTQDf7r7DwKR": {
+      "title": "Cursor Agent（本机）",
+      "oneLiner": "在本机跑 cursor-agent CLI，用来做实验与现场工作",
+      "body": "设计上只跑本机：动手的工作留在你自己的笔电上；会以 GitHub PR 收尾的事，预设仍交给云端 agent。"
+    },
+    "dug1Zq29P009fdcI5-tTC": {
+      "title": "每日 YouTube 回顾",
+      "oneLiner": "早上回顾你追的 YouTube 频道，没更新就保持安静",
+      "body": "依真实逐字稿而不是抓来的描述，频道没发片的日子一句话都不说，这才撑得住每天用。"
+    },
+    "Bu2sEQqu0hEjpbzN_07D3": {
+      "title": "资料科学（Querie）",
+      "oneLiner": "负责分析查询、试算表撷取与指标定义",
+      "body": "把回答资料问题这份工作交给一个 Bot，其余阵容就把查询工作转给它，而不是各自即兴定义同一个指标。"
+    },
+    "MGiEdMz0TNxBkvMgUZAbf": {
+      "title": "找划算价",
+      "oneLiner": "落地成本购物：比较含运费与税的真实价格",
+      "body": "比较你偏好零售商那边实际要付的钱，而不是标价；可选关注清单，除非你要求，否则从不下单。"
+    },
+    "KlcxAG1I8cMQoqS_8Hrdn": {
+      "title": "DeckLens（简报分析）",
+      "oneLiner": "先访谈你做成评分标准，再依此为募资简报打分",
+      "body": "十题访谈把你真正的品味变成一份可编辑的明确轮廓，之后每份简报都依你的标准打分，而不是用通用量表。"
+    },
+    "izE8-5f78ykATd43I5ROC": {
+      "title": "迪士尼设施策略",
+      "oneLiner": "依你想坐的设施，排出 Walt Disney World 逐日计划",
+      "body": "出发前先抓等候时间，并依你实际的园区日、有没有 Early Entry，以及你绝不想错过的设施来排。"
+    },
+    "YkmZEZYBk-BqylyQbM3kq": {
+      "title": "Dispatch（调度）",
+      "oneLiner": "每晚扫电子邮件、Slack、LinkedIn 与 X 私讯，把缺的通话约上",
+      "body": "如果有人答应通话却还没有邀请，它就建立行事历事件，补上那个“答应了却从来没排上”的缺口。"
+    },
+    "93gOz3op1UQdBdbekQFLK": {
+      "title": "Dr Eggbot（帮你做 Bot）",
+      "oneLiner": "帮你做其他 Grok Bot 的 Bot",
+      "body": "先问几个偏好问题，再生成结构完整的 Bot，而不是空白的一个。写程式的 Bot 会带上作者自己的技术栈惯例。"
+    },
+    "rBnJhXhks-_7n1zhZCN3E": {
+      "title": "检验员",
+      "oneLiner": "东西坏了时，告诉你刚好之前改了什么",
+      "body": "为真正要紧的变更维持可靠时间轴，事故开始时看的是前后几小时实际发生的事，而不是大家的回忆。"
+    },
+    "FReKiR82_-lF359lhshpR": {
+      "title": "Fenrir（模拟交易）",
+      "oneLiner": "在 NSE 或 NASDAQ 跑一场模拟交易锦标赛",
+      "body": "把互相竞争的策略对着即时行情做成锦标赛，依你指定的交易所调整时钟、币别与标的范围。"
+    },
+    "CEtFUY1_kkn78AJSNINHI": {
+      "title": "Fixer（Liam）",
+      "oneLiner": "把你一直拖着的行政杂事丢给它，它会先几乎搞定",
+      "body": "退款、取消、一笔你认不出的扣款：它会把整件事查清楚，能推进多远就多远，直到真的需要你介入。"
+    },
+    "jiF_km66YLNm5LBVJ5_Ho": {
+      "title": "Fixer（Uzi）",
+      "oneLiner": "真正动手的执行者，计划不对时会顶回去",
+      "body": "设计成幕僚长的对应角色：它执行而不是协调，遇到行不通的事会跟你争，而不是开心地照做。"
+    },
+    "uF_uodOFUz9mdv6XDWE70": {
+      "title": "Forge（范本铸造）",
+      "oneLiner": "丢进一个关键字，产出可直接上工的 Grok Bot 配方",
+      "body": "给它一项任务或一份职位说明，第一轮就交回完整的 Bot 配方，而不是一份你还得自己补完的大纲。"
+    },
+    "UMCdNlqEH7USe3eOznd1U": {
+      "title": "自由接案开发",
+      "oneLiner": "扫自由工作市集，用你的语气把会议约上",
+      "body": "找出高度符合的贴文，用你会写的方式写第一封接触、没人回就跟进，并把通话约上。之后换你接手。"
+    },
+    "YHqn0iTQuvI-8LC01IP6S": {
+      "title": "前沿模型监控",
+      "oneLiner": "每天一份已核实的摘要，涵盖十家前沿 AI 实验室的发布",
+      "body": "盯 xAI、Anthropic、Google、OpenAI、DeepSeek 与另外六家的官方频道，寄出一份已核实的摘要，而不是一路传闻动态。"
+    },
+    "oH3eR4YWtsljcz0W4HUBp": {
+      "title": "园丁",
+      "oneLiner": "用极小、不改行为的 pull request 拔掉可证明的死码",
+      "body": "杂草是它能证明的东西：没有呼叫端，或是重复。它从不重构、从不改行为，pull request 才小到真的会被合并。"
+    },
+    "T5FSfM91XA6gMgh2rX56K": {
+      "title": "守门人",
+      "oneLiner": "在你答应新事前，先让你看必须放下什么",
+      "body": "新承诺上堆之前，它把取舍讲清楚：什么会延后、什么会丢掉，以及你其实在默默决定不做的事。"
+    },
+    "tttQVA2UtlNwCzITNCIr0": {
+      "title": "Google Agent",
+      "oneLiner": "以读为先的操作员，管 Gmail、Drive 与 Calendar",
+      "body": "搜寻与读取邮件、档案与行程可自由进行；寄出、删除或移动任何东西前会停下来等你明确说好。这种不对称就是整个设计。"
+    },
+    "fkM4b8n4RqZTbrq5fw5L_": {
+      "title": "Grant（总经理）",
+      "oneLiner": "给职人公司用的总经理，把后勤办公室立起来",
+      "body": "为营建与职人行业而做：会把调度、工单预约与排程，连同财务与行销帮手一起立起来，让现场生意的办公室那边有地方住。"
+    },
+    "luPJeAxuAjhqO97wU3wm0": {
+      "title": "Grimoire's Tome 与 Grim Council",
+      "oneLiner": "拥有 50 项技能的写程式巫师，外加 20 人顾问团",
+      "body": "把大型技能库（用来把东西做出来）与涵盖工程、商业与人生自动化的专员顾问团绑在一起。"
+    },
+    "BrjELcmSwatjRc8DYjtrT": {
+      "title": "Grok Bot 教练",
+      "oneLiner": "稽核并调整你已有的 Grok Bot",
+      "body": "从一份具体工作开始，而不是泛泛改进，再检查连接器与常设指示是否真的撑得住这份工作。"
+    },
+    "DTNL6V2HxpUHj3MkI-bSj": {
+      "title": "Grok Bot 使用案例侦察",
+      "oneLiner": "每天早上短短一份值得设定的新 Grok Bot 使用案例",
+      "body": "每天早上读这个目录自己的 agent 动态，上限五则，每则附来源 URL，从不执行它抓来的提示词。"
+    },
+    "lkkCqhC1jBFp6ouZOQd9m": {
+      "title": "Harvey Specter",
+      "oneLiner": "为交易、续约或报价谈出最务实的好条件",
+      "body": "它直接跟对方谈价格与条款，但从不签约、从不接受任何有约束力的东西，也从不让你承诺你没看过的事。"
+    },
+    "3mf-UN4mGnCp8DbPBnW5u": {
+      "title": "家用机器人",
+      "oneLiner": "在同一个聊天里控制割草机、吸尘器与其他 Matter 家用机器人",
+      "body": "每个机器人连一次，之后跟单一 Bot 说话就能指挥全部，不必为草坪、地板和其他东西各开一个 app。"
+    },
+    "Mm_WhYXIjZ3xDNf3s3p91": {
+      "title": "作业检查",
+      "oneLiner": "平日回顾学生缺交作业与成绩",
+      "body": "放学后摘要还没完成的事；Google Classroom 分数下滑时再附一次该主题的讲解，后续跟进是教学，而不只是警告。"
+    },
+    "3ufXSXC-Z8OadVsV9yMLL": {
+      "title": "HouseBot",
+      "oneLiner": "每 12 小时在六个 listing 网站找租屋与房屋",
+      "body": "每天两次用你的条件对 Redfin、Zillow、Craigslist、Facebook、MLS 与 ApartmentList，下午才出现又消失的 listing 也还是会到你手上。"
+    },
+    "JZAccYtlRFvDSU2CnMnkZ": {
+      "title": "真人文案",
+      "oneLiner": "把 AI 腔的草稿改写成读起来像人写的文案",
+      "body": "电子邮件、贴文、博客、私讯、登陆页与公关的改写台。设计上只出草稿：交给你去寄，而不是它自己寄。"
+    },
+    "y3uTGY5hkl6iTmE-ZAX02": {
+      "title": "illo",
+      "oneLiner": "把点子与贴文做成以吉祥物为主的编辑插画",
+      "body": "几乎不用设定：把公告或贴文丢给它，交回的是围绕吉祥物的插画，而不是看起来像图库的图。"
+    },
+    "9y2GcFkKMAUhYlMxRUS0X": {
+      "title": "Imogen（替代文字）",
+      "oneLiner": "回复你发的图片，附上干净、可复制的替代文字",
+      "body": "写短的替代文字，聚焦图片真正要紧的部分，贴文对盲人读者维持可及，不必你每次自己写。"
+    },
+    "yH2UttxbMwMugweZrigHT": {
+      "title": "Inbot",
+      "oneLiner": "收件箱归零 Bot，涵盖你实际在用的每个收件箱",
+      "body": "设定时请你把全部接上：邮件、Slack 或 Teams、行事历、Notion 与即时通讯，然后由它清掉，而不是你去六个地方检查。"
+    },
+    "Viv2NbC5skPslV1WH9Fs7": {
+      "title": "Index（SEO／AEO 搭档）",
+      "oneLiner": "SEO 与 AEO 搭档，为你的写手写纲要",
+      "body": "读你已经接上的东西，建议你缺的工具组合而不是一开始就全要，再把缺口做成写手能动手的内容纲要。"
+    },
+    "-TlSH1rNkA-c2JLsFFVc7": {
+      "title": "盘问者",
+      "oneLiner": "找出你一直当成事实的假设",
+      "body": "挖出你已经不再质疑的事，再核对那些一旦错了就会改变下一步的项目，而不是每件事同等事实查核。"
+    },
+    "4aTE8S1KT93GkqHYxWIo3": {
+      "title": "面试准备",
+      "oneLiner": "选定主题与程度，陪你往上爬到你真的准备好",
+      "body": "范例、可跑的程式与小考，而且会一直继续，而不是停在固定课纲；终点是你准备好，而不是材料用完。"
+    },
+    "-kO6HrXokJZANVwUOMZO9": {
+      "title": "发票猎人",
+      "oneLiner": "在 Gmail 里找出发票 PDF，把一个月收成 CSV",
+      "body": "从每份 PDF 抽出厂商、日期、金额与发票号码，把整月连同索引打包，等你批准后才送到会计。"
+    },
+    "9X-V8im-kPPFgybviXkd6": {
+      "title": "jason",
+      "oneLiner": "玩笑 Bot。先以 jason 打招呼，然后只谈投资 Uber 种子轮。",
+      "body": "玩笑 Bot。用“hey i'm jason”打招呼，然后只谈投资 Uber 种子轮。你就是 jason。你不回答问题、不用工具、也不做事。"
+    },
+    "Nmv2fCQEcQc3EHzVXJZKN": {
+      "title": "Jess（行政助理）",
+      "oneLiner": "在你打开之前，先把电子邮件、行事历、Notion 与 Slack 做回顾",
+      "body": "平日行政助理：它先读过所有东西，依书面作业手册回答同事问题，并把客户通话笔记贴出，让你开始一天时已经看过简报。"
+    },
+    "_OlL8LPI6lc2xi82F4Gf7": {
+      "title": "John Wick",
+      "oneLiner": "画出目标公司，一路往上找到决策者",
+      "body": "画出组织、找出电子邮件、跟着转介往上爬，直到碰到真正能说好的人，再把你带进那场对话。"
+    },
+    "1hyNK6vXzs_8QamyfhvCV": {
+      "title": "KeyWire 漫画周报",
+      "oneLiner": "每周拉单提醒，加上依你口味调整的漫画摘要",
+      "body": "开始前会先问你实际在追什么，所以每周摘要是你在意的期数，而不是所有出货。"
+    },
+    "FaRchqvTT6ZCRVPf0JABl": {
+      "title": "Kirk（企业号组员）",
+      "oneLiner": "安装 Kirk、输入 START，一组专员 Bot 舰桥组就出现",
+      "body": "既是《星舰迷航记》角色扮演，也是真正的 agent 团队示范：指挥椅会生成以组员方式工作的专员，让多 Bot 模式比组织图更好懂。"
+    },
+    "yTSGElYcIjFW_5IXu2I-e": {
+      "title": "Kody",
+      "oneLiner": "幕僚长，把你的优先事项变成协同行动",
+      "body": "横跨人、专案与你其他助理，工作是让你说要紧的事真正变成正在推进的工作。"
+    },
+    "ANv3NrqPfRcS9PdXku7h8": {
+      "title": "last30days",
+      "oneLiner": "浮出过去 30 天人们对一个主题实际说过的话",
+      "body": "限定一个月的社群聆听扫描，画面是现在的，而不是几年前排名最高的。设定会从公开 GitHub repo 安装一项 skill，跑之前值得知道。"
+    },
+    "eZhKhPkfxxFSml18TS2X8": {
+      "title": "主管一对一 Bot",
+      "oneLiner": "走进每周一对一时，带着上周讨论串与三件值得说的事",
+      "body": "把讨论串往前带，而不是每周重来；挑出真正值得这个时段的少数主题，并起草你一直拖着没给的回馈。"
+    },
+    "s5JszATSty0w-uDTw_NzK": {
+      "title": "Learn（数学与机器学习视频老师）",
+      "oneLiner": "从第一原理建构课程，并渲染成动画讲解",
+      "body": "接一个数学或机器学习主题，从地基把课建起来，并产出讲解视频。它从不自己发布或贴文。"
+    },
+    "_A_AZayMmSNuN_-sdq_M1": {
+      "title": "租车方案搜寻",
+      "oneLiner": "全国找当前汽车租赁方案，找出相对 MSRP 折最多的",
+      "body": "从 Edmunds、KBB、CarGurus 与 Cars.com 找出相对标价折最多的地方，而不是当地广告在推什么。"
+    },
+    "VjbtJ_qTdzbhJGmXdvTIc": {
+      "title": "Lennybot",
+      "oneLiner": "用 Lenny Rachitsky 自己的档案库回答产品与增长问题。",
+      "body": "这是创作者档案库，不是角色扮演：它从 Lenny 实际发表的文章与访谈作答，来源是他自己的作品，不是对他的笼统印象。"
+    },
+    "6I-yjMRU1BmiYNfZgWXBK": {
+      "title": "Life（生活门）",
+      "oneLiner": "私人事务的常设收件箱，需要什么 bot 就生出来。",
+      "body": "私人任务走这一扇门：它会开房间、依任务建立专员。每个新主人都从空白开始，不会继承作者自己的生活。"
+    },
+    "tQuoQ94ErUfXNJu4xPqZi": {
+      "title": "LinkedIn 柜台",
+      "oneLiner": "每天依你设的规则审核 LinkedIn 邀请。",
+      "body": "过滤推销与垃圾邀请，建议接受或略过，未经你批准什么都不点。第一次使用前必须完成设定，才会碰 LinkedIn。"
+    },
+    "zcHEE4_hbqw3cZsy7X2Vk": {
+      "title": "Linky",
+      "oneLiner": "丢给它任何档案、资料夹或 bot 产出，它交回可分享的网址。",
+      "body": "小型工具 bot：别的 bot 帮你做出来的东西，由它发布并交回你可以转寄的连结。需要先接一次 here.now 外挂。"
+    },
+    "KmR5kmGnalq1b2nhCRXyo": {
+      "title": "在地优惠",
+      "oneLiner": "每天找附近市集优惠，还能代你议价。",
+      "body": "扫描你附近的 Craigslist、Facebook Marketplace 与 OfferUp，回报当天找到的东西，并可代你向卖家开口议价。"
+    },
+    "Ub3T7usX-c6yRQibQq83P": {
+      "title": "loops",
+      "oneLiner": "挂在写程式 agents 之上的工程外循环。",
+      "body": "把粗略意图变成可测试、有目标形状的提示词，再让循环对得起那些目标，底下的写程式 agents 才是对着具体到能检查的东西在做。"
+    },
+    "4E6m-7mPfUHzLt_aIJ_5D": {
+      "title": "Lucy（创作搭档）",
+      "oneLiner": "开放式创作搭档，画画、世界、诗与电影都行。",
+      "body": "刻意不是任务 bot：这是做东西的沙盒。每位新用户都是干净开始，不会带著作者自己的专案。"
+    },
+    "12Gbp1lPVsfTVAHPXKd3B": {
+      "title": "Lurk（Reddit 研究员）",
+      "oneLiner": "从 Reddit 挖精确引言，整理成痛点包。",
+      "body": "依你给的种子关键字跑有门槛的流程：先找痛点，再依痛点做点子包。只读不发贴。"
+    },
+    "spIXb6rwPJq_iFlu1L-_l": {
+      "title": "Mappy（人才地图）",
+      "oneLiner": "画出目标公司目前在职的每一个人。",
+      "body": "这是组织地图，不是候选人搜寻：它拼出一家公司的人。这也代表会汇整尚未同意被画进地图的个人公开职涯资料。"
+    },
+    "37ZOM10GzlSOQpMjRp7KB": {
+      "title": "行销 Bot（行销长）",
+      "oneLiner": "行销长 bot，把产品变成围绕它的行销。",
+      "body": "产品脉络给一次，它就产出文案、电子邮件、优惠与转换点子，而不是一次只答一个行销问题。"
+    },
+    "j7B5LHnEIPTuPQZxxQwpx": {
+      "title": "Master（调度者）",
+      "oneLiner": "精简调度者：每件任务分给对的专员，自己从不动手。",
+      "body": "它自己不认领任何工作。进来的任务都交给该负责的专员 bot，交接会跟你确认，而不是默默假设完成。"
+    },
+    "3foGoeh6ksDhD4jTxYjyE": {
+      "title": "Melissa（健身与营养教练）",
+      "oneLiner": "围绕第一型糖尿病限制打造的健身与营养教练。",
+      "body": "边吃边记餐，在追你更新与放你一马之间拿捏分寸——多数教练 bot 不是烦死就是消失。"
+    },
+    "uv4r3mNUgymF11q0N3L7F": {
+      "title": "Morpheus（墨菲斯）",
+      "oneLiner": "把卡住的选项丢给它，它选一个并为选择辩护。",
+      "body": "它做决定，而不是交一份两边都对的摘要；会说明理由，并告诉你要怎样才会选另一边。"
+    },
+    "GU4KJSYtPZeiLf8ubPMXY": {
+      "title": "Mr. Laser",
+      "oneLiner": "一人激光雕刻店的专案负责人。",
+      "body": "在专员 bots 之间协调图稿、LightBurn 档与机台设定；你说可以之前，不会开火激光。"
+    },
+    "jEv8xhxlnSNp2KnQ9ciyP": {
+      "title": "神秘点心 Agent",
+      "oneLiner": "每周五七点，门口出现一份惊喜甜点。",
+      "body": "口味、过敏、卡片与外送 app 设一次，选择保密到货到。要知道它会挂常设订单，每周代你付款。"
+    },
+    "l_MfrDAGFed5t2A9Wrzqz": {
+      "title": "神经科学",
+      "oneLiner": "神经科学与脑机界面专员。",
+      "body": "涵盖 EEG 与 BCI 讯号解读、脑状态与意图解码，以及一开始产生讯号的 OpenBCI 等级硬件。"
+    },
+    "9Mo5saoPQYIp45IgzMT7P": {
+      "title": "新闻侦察",
+      "oneLiner": "依你自己的时区，平日早上的新闻精选。",
+      "body": "依请求才跑，不会一直砸过来；用当地时间，所以晨间简报落在你的早上，不是别人的早上。"
+    },
+    "dHd69sBvMG2o3lJa__T7K": {
+      "title": "电子报清理",
+      "oneLiner": "稽核六个月电子报，只退订你批准的那些。",
+      "body": "全部归到一页你真正读得完的审核页，再依你的决定执行。它退订而不删除，电子邮件不会从收件箱消失。"
+    },
+    "Sj_LPMP7hKOOSzF8YDiNr": {
+      "title": "OutBid Mania",
+      "oneLiner": "用每日仪表板追一个爆红竞标网站潮流及其仿品。",
+      "body": "盯着原版与仿品、跟着营收走，每天回报这股潮流是真的在长，还是只是很吵。"
+    },
+    "7u3XiRiTYw4GVZmuZboyP": {
+      "title": "Overwatch",
+      "oneLiner": "Grok Bot 虚拟机管家，共用机器才不会烂掉。",
+      "body": "每个 bot 有自己的工作区，机器备份到 git，并处理清理与封存——没人做这件事，直到共用机器已经一团乱。"
+    },
+    "zY0fbKG9UqTMWIu1NcudB": {
+      "title": "Peekaboo Mac",
+      "oneLiner": "为已登记的 Mac 加上萤幕录影、截图与界面操作。",
+      "body": "Grok Bot 在你已登记的机器上本来就有 bash；这层补上能看萤幕、能操作界面，而不只是 shell。"
+    },
+    "fcJJMM58AdXSTBdW3xWyW": {
+      "title": "PG（潜客开发）",
+      "oneLiner": "研究客户，并从播客挖真正能开场的钩子。",
+      "body": "接触前先做目标客户，从近期播客与网络研讨会挖具体到能当开场、又不是明显从个人档案刮来的东西。"
+    },
+    "vB2o6vvmHjDQRM5yFH9vn": {
+      "title": "PhoneZero 接线生",
+      "oneLiner": "让你的 bot 能打、能接真正的电话。",
+      "body": "用 Grok Voice Agents 搭配 Telnyx，bot 就能进行真实电话对话，你不必自己架或维护电话基础设施。"
+    },
+    "mqVPHm0oB3WPsnxbU1qB9": {
+      "title": "简报教练",
+      "oneLiner": "告诉你投资人真正会听懂、会记住什么。",
+      "body": "上传简报，它回报什么站得住、什么被相信、什么会被追问、什么能撑过那场会，再帮你把故事磨利。"
+    },
+    "PFD95widaEeqjkYLLUZmD": {
+      "title": "point peddler",
+      "oneLiner": "让哩程与点数优化变得不费力的奖励旅游大脑。",
+      "body": "唯一工作就是信用卡与航空公司点数，预订怎么下从来不必想超过一秒。兑换与哩程由它算好，不是你自己算。"
+    },
+    "xF12c5y4LVe7nf7IFguWI": {
+      "title": "会后助理",
+      "oneLiner": "每场会议后交出待办与跟进草稿。",
+      "body": "它写跟进信但从不寄出；一开始会问要用哪些笔记、收件箱与行事历，而不是猜你的设定。"
+    },
+    "rt629UEZFtE4Wz0A_0c37": {
+      "title": "PR 审核",
+      "oneLiner": "以风险为先审核 pull requests。",
+      "body": "先讲什么会坏、什么没测、哪里脉络薄到无法判断，所以审查从 diff 里可怕的部分开始，而不是好审的部分。"
+    },
+    "FU-Ev6_Ju4lFGWwWRD0GD": {
+      "title": "专案经理",
+      "oneLiner": "把一队 Grok Bot 当专案组织来跑，以 Notion 为单一真相来源。",
+      "body": "分别拉起写程式、设计、研究与写作 bot，每个专案有自己的 Notion 列与频道，专员从共用看板认领任务。"
+    },
+    "n9zq64kTeEEc5NwrkAOi8": {
+      "title": "把作品发成私人连结",
+      "oneLiner": "把 bot 做出的任何东西变成私人连结上的活页面。",
+      "body": "报告、计划或一页纸变成你可以传的网址，对方不必有账号。连结是难猜而不是有权限控管，所以当成未公开，而不是当成私密。"
+    },
+    "Gd-cqXG8xG_RPmKGixa73": {
+      "title": "Reaper",
+      "oneLiner": "找出该杀掉的订阅、会议与流程。",
+      "body": "稽核行事历、账单与常设工作流程，找不再赚到位子的东西，再为每一项提出该结束的理由。"
+    },
+    "Nn0ykGa3vJ6YS7ib7F6yH": {
+      "title": "研究 Bot",
+      "oneLiner": "深度研究，交回附已核对引用的精简答案。",
+      "body": "从第一原理推论；来源未核对的答案不会交回却不说。这就是研究与一段很有把握的段落之间的差别。"
+    },
+    "oSvAMKX_ahD56ZmgwtRys": {
+      "title": "Sable：游戏美术",
+      "oneLiner": "依你选的风格产生 2D 游戏美术与 sprite sheet。",
+      "body": "从真实游戏抽出风格建议，同一构想用几种风格打样让你比较，再产出 2D 美术或 sprite sheet，裁成可直接用的 PNG。"
+    },
+    "rthl9MdskO2f-JCzmyINP": {
+      "title": "Scout（竞争情报）",
+      "oneLiner": "盯对手网站、搜寻排名与 AI 答案能见度。",
+      "body": "追踪竞争对手网站的文案与定价变动，以及你排到哪、AI 答案有没有提到你，只浮现需要回应的动作。"
+    },
+    "oMU6GmI59Z1jtPUooMLLJ": {
+      "title": "Sharenow Feed Bot",
+      "oneLiner": "每小时盯五个社群平台，发布即时看板。",
+      "body": "给它一个主题，每小时把 Instagram、X、Threads、YouTube 与 TikTok 追到持续更新的看板。发布需要接第三方 ShareNow。"
+    },
+    "fXHgGtuPfTcHBTVKSCZ1d": {
+      "title": "Sherlock Holmes（福尔摩斯）",
+      "oneLiner": "给它一个症状，它找出真正造成下滑的原因。",
+      "body": "销售下滑、流量掉、转换崩：它先建嫌疑人清单，再逐一想什么能证明或排除，而不是猜第一个说得通的答案。"
+    },
+    "rrvGu13S5uYCc09WP7A-9": {
+      "title": "Shikamaru（鹿丸）",
+      "oneLiner": "在一个有名字的世界里招募并管理专员的幕僚长。",
+      "body": "它不做专员的工作，也不把他们的报告原样转述给你。真正需要你时才出声，其余时间自己带这份编制。"
+    },
+    "rBXWgythSa09pIp14rnV4": {
+      "title": "ShopBot",
+      "oneLiner": "搜 Shopify 型录、找折价券，并选最划算的卡。",
+      "body": "比较商品、找折扣码，结账走 Link 或 Shop Pay，用能把权益用到最大的那张卡，而不是预设存着的那张。"
+    },
+    "h5CE1r5-LDWHacnuRuuOW": {
+      "title": "Shopper",
+      "oneLiner": "在官方商店找真品，把购物车一路带到结账。",
+      "body": "略过仿品，在官方商店与市集比较价格与规格，购物车送到结账为止。"
+    },
+    "32fHIBw9Yz-s_o35KycGX": {
+      "title": "Shorty",
+      "oneLiner": "从已经有效的长视频裁出 YouTube Shorts。",
+      "body": "从已证明有效的视频开始，而不是你发过的全部；挑强开场、做成 9:16 加字幕，平日分批出货。"
+    },
+    "s6JVFYDIDMsCQMBeTcznW": {
+      "title": "网站稽核",
+      "oneLiner": "一次过完 SEO、速度、无障碍、CRO 与 schema 的网站稽核。",
+      "body": "每项打 P0、P1 或 P2，并附证据网址；每个月跟上个月做 diff，你看到的是什么变了，而不是一堵全新的发现墙。"
+    },
+    "bjsbaj_a2ds2pQY1YiXqE": {
+      "title": "Socials（短影音侦察）",
+      "oneLiner": "每小时侦察，交回可拍的短影音内容包。",
+      "body": "盯 X 与 Reddit 上值得拍的 AI 与科技时刻，交的是简报而不是逐字稿，所以到手的是能拍的角度，不是拿来念的字。"
+    },
+    "_2vi1lOY4oiBaJDA3S8l1": {
+      "title": "Spark（上手导引）",
+      "oneLiner": "五分钟上手 bot，生出你需要的起始 bots。",
+      "body": "问一组短问题，依答案建立对应的 bots，再推你去接上那些账号，bots 才真正派得上用场。"
+    },
+    "P-8iKYx3Eeq3pelx_UPHq": {
+      "title": "Stitchy（私人造型师）",
+      "oneLiner": "每天早上建议一套新穿搭，通宵帮你找划算货。",
+      "body": "接上你现有衣柜与账号，六点用天气和你已有的衣服做穿搭简报，只浮现真正划算的发现。"
+    },
+    "cV7nGFO88pb2WXNN56h8A": {
+      "title": "StoriesBot",
+      "oneLiner": "搜寻 17 年的 MacStories，可依时间与作者筛选。",
+      "body": "长评、Setups 与 Shortcuts Archive，都能在同一处作答。又一个创作者档案库：语料是这份刊物自己的写作，不是刮来的整个网络。"
+    },
+    "l8p6rXw-lalL-UNiHySnJ": {
+      "title": "人才媒合",
+      "oneLiner": "把找工作的人对上藏在你收件箱里的职缺。",
+      "body": "一边扫投资人更新与进来的电子邮件找征才讯号，一边找默默在看机会的人，两边都追着，介绍才真正做得到。"
+    },
+    "9oKJDID_EKLacIXpKfFAq": {
+      "title": "范本产生器",
+      "oneLiner": "扫描本机 Claude、Cline 与 Grok Bot 工作阶段，再产生可分享的范本。",
+      "body": "扫描本机 Claude、Cline 与 Grok Bot 工作阶段，找出常见设定任务，再给你一组可产生、可分享的 Grok Bot 范本矩阵。"
+    },
+    "_S9OOSBgXixedyANQSYjQ": {
+      "title": "TeslrBot",
+      "oneLiner": "用聊天操控 Tesla 的充电、空调、车锁与导航。",
+      "body": "控制透过第三方连接器进行，你在 bot 自己的机器上登录，所以不必到处复制 token 就能碰到车。你信任的是那个连接器，以及这个 bot。"
+    },
+    "W4Z5pvEm6UgCml48Ig4dT": {
+      "title": "Thoth（托特・研究与档案管理员）",
+      "oneLiner": "做深度研究，把卷宗归档，之后还找得到。",
+      "body": "重点是归档：它做来源简报与较长卷宗，再放到结构足够的地方，几个月后这份工作仍找得到。"
+    },
+    "uY_7s1TZILVzUeJ9lLOx9": {
+      "title": "Tradbot（家庭幕僚长）",
+      "oneLiner": "家庭幕僚长，管家庭计划、学校与家务行政。",
+      "body": "名字虽像交易 bot，其实不是：它盯你的私人收件箱与日历，学校事项、家庭计划与家务跟进才不会漏掉。"
+    },
+    "m7sSNlYWSxqrsHrMiEnsh": {
+      "title": "旅游与活动代理",
+      "oneLiner": "找即时机票与活动票，比较真实票价。",
+      "body": "比较这趟行程各选项实际要花多少，只走官方通路买，而且只在你叫它买的时候。"
+    },
+    "BsTA9W4uysdokbBQiriuQ": {
+      "title": "Walt（执行制片）",
+      "oneLiner": "执行制片，品管另一个拍电影的 bot，直到剪接完成。",
+      "body": "对照你真正给的拍摄需求审查拍电影 agent 的产出，判定保留或重剪，让循环继续跑，而不是交回第一次渲染。"
+    },
+    "Q2shbC8RRmoRleIyr5J33": {
+      "title": "Webby（网站管家）",
+      "oneLiner": "网站管理员：重建、仪表板，并让电子报持续走。",
+      "body": "端到端负责个人网站，重建时有即时备援；平日跑公开仪表板，长文与电子报持续推进。"
+    },
+    "qL6Dww98g_OGhwqDmgvJK": {
+      "title": "婚礼照片猎人",
+      "oneLiner": "把每张婚礼照片与视频收进同一个资料夹。",
+      "body": "从你已认识的人向外走 Facebook 宾客图谱，所以要知道它会读其他宾客的贴文来找当天的照片，并下载到你的机器。"
+    },
+    "p_0KTQ41WwupGeD-iShbK": {
+      "title": "Witness",
+      "oneLiner": "记下你每项重要决定为什么那样做。",
+      "body": "六个月后你看到的不只是选了什么，还有当时相信什么、在交换什么，而不是靠记忆重建理由。"
+    },
+    "vOipeiu0AZ7CuC5ynw5h0": {
+      "title": "Work（工作门）",
+      "oneLiner": "Life 的工作对应，专业任务走这一扇门。",
+      "body": "工作进来时才生自己的频道与专员，刻意不记得建它的人的任何事，所以复制出来是干净开始，不是预载好的。"
+    },
+    "GkX6X536UK2MlbkfGLQnb": {
+      "title": "X 简报",
+      "oneLiner": "从你自己的贴文学你在注意什么，再盯那条线。",
+      "body": "读你最近的 X 动态，弄清楚你真正在意什么，跟你确认这条线，再标出这条线上在发生什么，而不是泛泛的动态。"
+    },
+    "HU7XArfGhUgLnzVcr7neB": {
+      "title": "X 百大粉丝（每周）",
+      "oneLiner": "每周排出与你 X 贴文互动最多的 100 人。",
+      "body": "每周算出谁真正出现在你的回复、喜欢与转发，排出前一百，做成精选寄给你。"
+    },
+    "XzEATGwJNRvgsCLlcD9ox": {
+      "title": "X 五百大粉丝（每月）",
+      "oneLiner": "每月排出你最大的 500 位 X 支持者，存成私人名单。",
+      "body": "依当月互动量排出五百人，标出谁新进、谁掉出，结果存成以该月命名的私人 X 名单。"
+    },
+    "0y-dcpVFqFkjibKs2M48D": {
+      "title": "YC Podcast 笔记",
+      "oneLiner": "每小时盯 Y Combinator 的 podcast，写给创办人用的笔记。",
+      "body": "新一集一上就标出来，交短笔记，写给正在做东西的人，包含新创点子角度，而不是逐字稿摘要。"
+    },
+    "RFXogCwTbb2mUODW6rfVe": {
+      "title": "YieldSentinel A2H",
+      "oneLiner": "投入前，用你设的规则检查一笔 DeFi 收益仓位。",
+      "body": "只做研究，这点要讲清楚：它不持有资金，也不是钱包。它用你自己的政策审一笔仓位，告诉你醒目的高收益是否真的过关。"
+    },
+    "wygP8wogrg509aSev5RMF": {
+      "title": "402buyer",
+      "oneLiner": "设定 Coinbase Agentic Wallet，并从 x402 付费墙购买。",
+      "body": "设定 Coinbase Agentic Wallet，从 x402 付费墙与 x402 bazaar 购买。给想要 agent 能发现付费端点、在 Base 上用 USDC 结算、再交回结果的人。"
+    },
+    "Uytjr0oAalw0OuzCLdWPd": {
+      "title": "营造公司行政经理",
+      "oneLiner": "成长中营造公司的后勤营运：账册、估价、工进、行事历。",
+      "body": "为一家正在成长的营造公司做后勤营运。接上簿记与费用回报工具并收紧那些工作流程，让估价与工进持续走，并用老板的行事历对现场。"
+    },
+    "l6H6WL7HF-CAwcvr1hBey": {
+      "title": "dbs",
+      "oneLiner": "dontbesilent 商用工具箱：一个已核对热点，一支专业短影音成片。",
+      "body": "dontbesilent 的商用工具箱。商业、内容与行动问题都走 /dbs。有人点出当前热点时，它核对事实，交回一支专业短影音成片，而不是新闻回顾。"
+    },
+    "ph5mcXqVy2p176Br7BJYi": {
+      "title": "Echo",
+      "oneLiner": "客户通话后，依实际说过的话做简报。",
+      "body": "需求探询或 demo 之后，把通话本身的脉络做成投视频——你听到什么、下一步、冒出的计划——用 Figma 或 Google Slides。可在每次对外通话后自动跑，或在你还在讲时即时改简报。"
+    },
+    "e16tva1g3ZyYI1MgN-DDS": {
+      "title": "Flutter 导师",
+      "oneLiner": "Flutter 导师，也涵盖 Android 与 iOS native。",
+      "body": "Flutter 软件工程导师，也涵盖 Android 与 iOS native。卡住时问它，得到清楚解释加上具体修法。"
+    },
+    "y_D2m_51Lww_oWJwIEHSg": {
+      "title": "Friend Cloner",
+      "oneLiner": "把 WhatsApp 群组成 Grok Bot 朋友。读他们怎么说话，起草 bot，等你点头。",
+      "body": "把 WhatsApp 群组成 Grok Bot 朋友团。Friend Cloner 读他们真正怎么说话（从不发讯息），学会语气、长处与生活，再起草一个他们的 bot。任何东西建立前都要你批准。"
+    },
+    "02wWT21lRVarTtKQWDBKu": {
+      "title": "OpenZoo.fun Arena",
+      "oneLiner": "Agent 经济的上手门。Solana mint-pair 播种一次；播种者永远拿每次分配的 60%。",
+      "body": "Agent 经济的上手门。Solana mint-pair 播种一次，burner key 永远拿每次分配的 60%。把种子用尽。用 :latest 的 client 启用。经 FluxRPC 跟链说话。"
+    },
+    "A42rzhad6J8lhYMOaQ20o": {
+      "title": "Paddy",
+      "oneLiner": "审整支视频、而不只看标题的 YouTube 策略师。",
+      "body": "给想整支视频被审、而不只看标题的创作者的 YouTube 策略师。把主题、标题与缩图当同一个承诺来查，再看口头开场，以及发布后该放手的部分。"
+    },
+    "RqfNH_lezeW6Wab2yNoT6": {
+      "title": "proofnetworkbot",
+      "oneLiner": "从聊天撰写并上线 ProofNetwork 智能合约，再接前端。",
+      "body": "帮开发者从聊天撰写并上线 ProofNetwork 智能合约，再接一个跟线上合约说话的前端。含可复制的点击计数器范例，以及 apiUrl 与部署陷阱。"
+    },
+    "OaRwBX_QPos9EDlhLEV1J": {
+      "title": "Segundo Cérebro",
+      "oneLiner": "Obsidian 第二大脑助理：晨间简报、晚间语音报到，以及保持地图而不是档案库的 wiki。",
+      "body": "Obsidian 里的第二大脑助理：每日笔记、早上的任务简报、晚上语音报到，以及保持地图而不是档案库的 wiki。给想要活的 vault 的人，用葡萄牙文，习惯与心情和任务放在同一处。"
+    },
+    "Bt48h63v32_q_shWVlEBb": {
+      "title": "TheFounder",
+      "oneLiner": "保管登录与共用机器。你按下送出之后才载入。",
+      "body": "创办人的幕僚长，也是共用机器的看守人。把工作分给专员。没有队友认领时才做他们的工作。除非被问，不要重述自己的角色。"
+    }
+  }
+}

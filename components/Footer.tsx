@@ -12,11 +12,11 @@ export function Footer({ stars }: { stars?: number | null }) {
   const links = [
     { href: "/", label: t("nav.discover") },
     { href: "/use-cases", label: t("nav.useCases") },
+    { href: "/templates", label: t("nav.templates") },
     { href: "/roles", label: t("nav.official") },
     { href: "/categories", label: t("nav.categories") },
     { href: "/rankings", label: t("nav.rankings") },
     { href: "/articles", label: t("nav.articles") },
-    { href: "/how-we-built", label: t("nav.built") },
     { href: "/submit", label: t("nav.submitShort") },
   ];
 

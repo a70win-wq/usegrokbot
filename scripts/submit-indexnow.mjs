@@ -13,7 +13,6 @@ const PATHS = [
   "/categories/sales",
   "/categories/marketing",
   "/categories/research",
-  "/how-we-built",
 ];
 
 const LOCALES = ["en", "zh-hk", "zh-cn"];

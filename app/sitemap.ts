@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...entries("/", { changeFrequency: "daily", priority: 1 }, day(latestStory)),
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.85 }, day(latestStory)),
+    ...entries("/templates", { changeFrequency: "daily", priority: 0.8 }, day(latestStory)),
     ...scenarios.flatMap((item) =>
       entries(`/use-cases/${item.slug}`, { changeFrequency: "weekly", priority: 0.75 }, day(latestStory)),
     ),
@@ -38,7 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/categories", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ...entries("/rankings", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...entries("/articles", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
-    ...entries("/how-we-built", { changeFrequency: "monthly", priority: 0.5 }, day(LAST_REVIEWED)),
     ...discoverStories.filter(shouldIndexDiscoverStory).flatMap((story) =>
       entries(`/discover/${story.slug}`, { changeFrequency: "monthly", priority: 0.6 }, day(story.publishedAt)),
     ),

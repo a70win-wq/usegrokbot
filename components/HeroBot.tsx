@@ -213,9 +213,24 @@ export function HeroBot() {
       applyTransform();
     };
     stickToDock();
+    const boot = document.documentElement.getAttribute("data-boot");
+    let observer: MutationObserver | undefined;
+    let frame = 0;
+    if (boot === "1") {
+      observer = new MutationObserver(() => {
+        if (document.documentElement.getAttribute("data-boot") === "1") return;
+        observer?.disconnect();
+        frame = window.requestAnimationFrame(stickToDock);
+      });
+      observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-boot"] });
+    } else {
+      frame = window.requestAnimationFrame(stickToDock);
+    }
     window.addEventListener("scroll", stickToDock, { passive: true });
     window.addEventListener("resize", stickToDock);
     return () => {
+      observer?.disconnect();
+      window.cancelAnimationFrame(frame);
       window.removeEventListener("scroll", stickToDock);
       window.removeEventListener("resize", stickToDock);
     };
@@ -358,7 +373,7 @@ export function HeroBot() {
   return (
     <div
       ref={fieldRef}
-      className="pointer-events-none relative mx-auto size-[108px] shrink-0 md:mx-0 md:size-[160px]"
+      className="pointer-events-none relative mx-auto size-[160px] shrink-0 md:mx-0"
     >
       <button
         ref={btnRef}
@@ -369,11 +384,11 @@ export function HeroBot() {
         onDragStart={(event) => event.preventDefault()}
         aria-label={canHop ? t("bot.play") : t("bot.nextColor")}
         className={cn(
-          "pointer-events-auto block rounded-full select-none [&_svg]:pointer-events-none [&_svg]:[-webkit-user-drag:none]",
+          "pointer-events-auto block size-[160px] rounded-full select-none [&_svg]:pointer-events-none [&_svg]:[-webkit-user-drag:none]",
           "focus-visible:ring-2 focus-visible:ring-accent/40 focus-visible:outline-none",
           canHop
-            ? "fixed top-0 left-0 size-[160px] cursor-grab touch-none active:cursor-grabbing"
-            : "size-[108px] md:size-[160px]",
+            ? "fixed top-0 left-0 cursor-grab touch-none active:cursor-grabbing"
+            : "",
           canHop && (holding ? "z-[210]" : "z-30"),
         )}
       >

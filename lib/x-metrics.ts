@@ -24,6 +24,12 @@ export function metricForStory(story: DiscoverStory): XMetric | undefined {
   return id ? data.posts[id] : undefined;
 }
 
+export function metricForPostUrl(url?: string): XMetric | undefined {
+  if (!url) return undefined;
+  const id = tweetIdFromUrl(url);
+  return id ? data.posts[id] : undefined;
+}
+
 export function formatViewCount(views: number, locale: string) {
   if (locale === "zh-Hant") {
     if (views >= 10000) return `${trimNumber(views / 10000)} 萬`;

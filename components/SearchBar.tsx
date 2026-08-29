@@ -6,9 +6,10 @@ import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { searchDiscoverStories } from "@/data/discover";
 import { scenarios } from "@/data/scenarios";
+import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/templates";
 import { topicMessageKey, topics } from "@/data/topics";
 import { cn } from "@/lib/cn";
-import { localizeDiscoverStory, localizeScenario, useI18n } from "@/lib/i18n";
+import { localizeDiscoverStory, localizeScenario, localizeTemplateCopy, useI18n } from "@/lib/i18n";
 
 type SearchBarProps = {
   variant?: "hero" | "inline";
@@ -132,6 +133,39 @@ export function SearchBar({
       .slice(0, 3);
   }, [query, locale]);
 
+  const matchingTemplates = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return templates
+      .map((item) => {
+        const story = getTemplateStory(item);
+        const localized = story ? localizeDiscoverStory(story, locale) : undefined;
+        const english = templateCopy(item, localized ?? { title: item.authorName, headline: "", body: "" });
+        const copy = localizeTemplateCopy(item.id, locale, {
+          title: english.title,
+          oneLiner: english.oneLiner,
+          body: catalogEntry(item.id)?.body,
+        });
+        return { item, copy };
+      })
+      .filter(({ item, copy }) => {
+        const haystack = [
+          copy.title,
+          copy.oneLiner,
+          copy.body,
+          catalogEntry(item.id)?.body,
+          item.authorName,
+          item.handle,
+          item.id,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(q);
+      })
+      .slice(0, 3);
+  }, [query, locale]);
+
   const trimmed = query.trim();
   function resultsPath(value: string) {
     return `/?q=${encodeURIComponent(value)}`;
@@ -145,6 +179,12 @@ export function SearchBar({
           title: item.title,
           detail: t("nav.useCases"),
           external: false,
+        })),
+        ...matchingTemplates.map(({ item, copy }) => ({
+          href: item.templateUrl,
+          title: copy.title,
+          detail: t("nav.templates"),
+          external: true,
         })),
         ...matchingTopics.map((topic) => ({
           href: `/categories/${topic.slug}`,
@@ -255,7 +295,11 @@ export function SearchBar({
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
-          {showResults && stories.length === 0 && matchingTopics.length === 0 && matchingScenarios.length === 0 ? (
+          {showResults &&
+          stories.length === 0 &&
+          matchingTopics.length === 0 &&
+          matchingScenarios.length === 0 &&
+          matchingTemplates.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}
               <p className="mt-1 text-faint">{t("search.emptyHint")}</p>
