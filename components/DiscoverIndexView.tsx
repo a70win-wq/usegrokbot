@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SearchBar } from "@/components/SearchBar";
 import { discoverStories, type DiscoverTab } from "@/data/discover";
 import { useI18n } from "@/lib/i18n";
+import { SEARCH_UI_ENABLED } from "@/lib/search";
 
 export function DiscoverIndexView({
   initialQuery = "",
@@ -39,9 +40,11 @@ export function DiscoverIndexView({
       />
       <h1 className="text-[clamp(28px,4vw,40px)] font-medium tracking-tight text-ink">{t("discover.title")}</h1>
       <p className="mt-3 max-w-2xl text-base text-mute">{t("discover.body")}</p>
-      <div className="mt-8">
-        <SearchBar variant="inline" initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
-      </div>
+      {SEARCH_UI_ENABLED ? (
+        <div className="mt-8">
+          <SearchBar variant="inline" initialQuery={initialQuery} onQueryChange={setQuery} stayOnPage />
+        </div>
+      ) : null}
       <div className="mt-10">
         <DiscoverFeed query={query} initialTab={initialTab} />
       </div>

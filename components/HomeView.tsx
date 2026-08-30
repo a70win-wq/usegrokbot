@@ -13,6 +13,7 @@ import { discoverStories, storiesForTopic } from "@/data/discover";
 import { starterTemplates, templates } from "@/data/templates";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
+import { SEARCH_UI_ENABLED } from "@/lib/search";
 
 export function HomeView({
   initialQuery = "",
@@ -22,11 +23,12 @@ export function HomeView({
   stars?: number | null;
 }) {
   const { t } = useI18n();
-  const [query, setQuery] = useState(initialQuery);
+  const [query, setQuery] = useState(SEARCH_UI_ENABLED ? initialQuery : "");
   const filters = useDiscoverFilterState();
   const featured = useMemo(() => starterTemplates(), []);
 
   useEffect(() => {
+    if (!SEARCH_UI_ENABLED) return;
     const q = new URLSearchParams(window.location.search).get("q") ?? "";
     if (q && q !== initialQuery) setQuery(q);
   }, [initialQuery]);
@@ -47,13 +49,15 @@ export function HomeView({
                 {t("home.title")}
               </h1>
               <PostCensus total={discoverStories.length} />
-              <div className="mt-8">
-                <SearchBar
-                  initialQuery={initialQuery}
-                  onQueryChange={setQuery}
-                  stayOnPage
-                />
-              </div>
+              {SEARCH_UI_ENABLED ? (
+                <div className="mt-8">
+                  <SearchBar
+                    initialQuery={initialQuery}
+                    onQueryChange={setQuery}
+                    stayOnPage
+                  />
+                </div>
+              ) : null}
             </div>
             <div className="order-1 mx-auto mb-5 md:col-start-2 md:row-start-2 md:mx-0 md:mb-0">
               <HeroBot />

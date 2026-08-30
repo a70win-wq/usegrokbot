@@ -4,6 +4,7 @@ import { discoverStories } from "@/data/discover";
 import { getGithubStars } from "@/lib/github";
 import { messages } from "@/lib/i18n/messages";
 import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
+import { SEARCH_UI_ENABLED } from "@/lib/search";
 import { messageMeta, translateMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -34,11 +35,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           name: site.name,
           url,
           description: copy.metaDescription,
-          potentialAction: {
-            "@type": "SearchAction",
-            target: `${url}?q={search_term_string}`,
-            "query-input": "required name=search_term_string",
-          },
+          ...(SEARCH_UI_ENABLED
+            ? {
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: `${url}?q={search_term_string}`,
+                  "query-input": "required name=search_term_string",
+                },
+              }
+            : {}),
         }}
       />
       <JsonLd

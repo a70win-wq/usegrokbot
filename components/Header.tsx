@@ -10,6 +10,7 @@ import { BotFace, botColorFor } from "./BotFace";
 import { GetGrokBot } from "./GetGrokBot";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { LocaleLink } from "./LocaleLink";
+import { SEARCH_UI_ENABLED } from "@/lib/search";
 import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -87,7 +88,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-1">
-          <HeaderSearch />
+          {SEARCH_UI_ENABLED ? <HeaderSearch /> : null}
           <GetGrokBot />
           <ThemeToggle />
           <div className="hidden xl:block">
