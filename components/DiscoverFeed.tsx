@@ -12,7 +12,7 @@ import {
 } from "@/data/discover";
 import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
 import { cn } from "@/lib/cn";
-import { useI18n } from "@/lib/i18n";
+import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
 import { learnFeedStories } from "@/lib/x-metrics";
 
 const mobileTabs: DiscoverTab[] = ["latest", "featured", "learn"];
@@ -156,7 +156,7 @@ export function DiscoverFeed({
   showOutcomes?: boolean;
   filterState?: DiscoverFilterState;
 }) {
-  const { t } = useI18n();
+  const { locale, t } = useI18n();
   const internal = useDiscoverFilterState(initialTab);
   const filters = filterState ?? internal;
   const { tab, category, outcome } = filters;
@@ -165,15 +165,25 @@ export function DiscoverFeed({
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
   const stories = useMemo(() => {
+    const searchOptions = {
+      locale,
+      localize: (story: Parameters<typeof localizeDiscoverStory>[0]) => localizeDiscoverStory(story, locale),
+    };
     if (tab === "learn") {
       const ranked = learnFeedStories(5);
       const allowed = new Set(
-        filterDiscoverStories({ query, tab: "latest", category, outcome, app: "all" }).map((item) => item.slug),
+        filterDiscoverStories(
+          { query, tab: "latest", category, outcome, app: "all" },
+          searchOptions,
+        ).map((item) => item.slug),
       );
       return ranked.filter((item) => allowed.has(item.slug));
     }
-    return filterDiscoverStories({ query, tab, category, outcome, app: "all" });
-  }, [query, tab, category, outcome]);
+    return filterDiscoverStories(
+      { query, tab, category, outcome, app: "all" },
+      searchOptions,
+    );
+  }, [query, tab, category, outcome, locale]);
 
   const shown = stories.slice(0, visible);
 

@@ -17,4 +17,5 @@ jobs:
       - run: npm ci
       - run: npx tsc --noEmit
       - run: npx tsx scripts/validate-discover.ts
+      - run: npx tsx scripts/validate-search.ts
       - run: npx tsx scripts/validate-prompts.ts

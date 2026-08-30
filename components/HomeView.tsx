@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { CategoryCard } from "@/components/CategoryCard";
 import { DiscoverFeed, DiscoverFilters, useDiscoverFilterState } from "@/components/DiscoverFeed";
 import { LocaleLink } from "@/components/LocaleLink";
@@ -13,25 +14,54 @@ import { discoverStories, storiesForTopic } from "@/data/discover";
 import { starterTemplates, templates } from "@/data/templates";
 import { topics } from "@/data/topics";
 import { useI18n } from "@/lib/i18n";
-import { SEARCH_UI_ENABLED } from "@/lib/search";
+import { SEARCH_UI_ENABLED, withSearchQuery } from "@/lib/search";
 
 export function HomeView({
-  initialQuery = "",
   stars,
 }: {
-  initialQuery?: string;
   stars?: number | null;
 }) {
+  return (
+    <Suspense fallback={<HomeViewContent initialQuery="" stars={stars} syncUrl={false} />}>
+      <HomeViewFromUrl stars={stars} />
+    </Suspense>
+  );
+}
+
+function HomeViewFromUrl({ stars }: { stars?: number | null }) {
+  const searchParams = useSearchParams();
+  const initialQuery = searchParams.get("q")?.trim() ?? "";
+
+  return <HomeViewContent initialQuery={initialQuery} stars={stars} syncUrl />;
+}
+
+function HomeViewContent({
+  initialQuery,
+  stars,
+  syncUrl,
+}: {
+  initialQuery: string;
+  stars?: number | null;
+  syncUrl: boolean;
+}) {
   const { t } = useI18n();
-  const [query, setQuery] = useState(SEARCH_UI_ENABLED ? initialQuery : "");
+  const [queryState, setQueryState] = useState(() => ({ source: initialQuery, value: initialQuery }));
+  const query =
+    queryState.source === initialQuery || queryState.value.trim() === initialQuery
+      ? queryState.value
+      : initialQuery;
   const filters = useDiscoverFilterState();
   const featured = useMemo(() => starterTemplates(), []);
 
-  useEffect(() => {
-    if (!SEARCH_UI_ENABLED) return;
-    const q = new URLSearchParams(window.location.search).get("q") ?? "";
-    if (q && q !== initialQuery) setQuery(q);
-  }, [initialQuery]);
+  function updateQuery(value: string) {
+    setQueryState({ source: initialQuery, value });
+    if (!syncUrl) return;
+    window.history.replaceState(
+      null,
+      "",
+      withSearchQuery(window.location.pathname, window.location.search, value),
+    );
+  }
 
   return (
     <>
@@ -53,7 +83,7 @@ export function HomeView({
                 <div className="mt-8">
                   <SearchBar
                     initialQuery={initialQuery}
-                    onQueryChange={setQuery}
+                    onQueryChange={updateQuery}
                     stayOnPage
                   />
                 </div>
@@ -66,29 +96,42 @@ export function HomeView({
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1240px] px-5 pb-16 md:px-8 md:pb-20">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 className="text-[32px] font-medium tracking-tight text-ink">
-              {t("templates.homeTitle")}
-            </h2>
-          </div>
-          <LocaleLink href="/templates" className="shrink-0 text-base font-medium text-mute hover:text-ink">
-            {t("templates.viewAll", { n: templates.length })}
-          </LocaleLink>
-        </div>
-        <div className="mt-10">
-          <TemplateList items={featured} pager={false} heading="h3" />
-        </div>
-      </section>
+      {query.trim() ? (
+        <section id="search-results" className="mx-auto max-w-[1240px] px-5 pb-16 md:px-8 md:pb-20">
+          <DiscoverFeed
+            query={query}
+            showIntro
+            hideFilters
+            showOutcomes={false}
+          />
+        </section>
+      ) : (
+        <>
+          <section className="mx-auto max-w-[1240px] px-5 pb-16 md:px-8 md:pb-20">
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <h2 className="text-[32px] font-medium tracking-tight text-ink">
+                  {t("templates.homeTitle")}
+                </h2>
+              </div>
+              <LocaleLink href="/templates" className="shrink-0 text-base font-medium text-mute hover:text-ink">
+                {t("templates.viewAll", { n: templates.length })}
+              </LocaleLink>
+            </div>
+            <div className="mt-10">
+              <TemplateList items={featured} pager={false} heading="h3" />
+            </div>
+          </section>
 
-      <section className="mx-auto max-w-[1240px] px-5 pb-12 md:px-8">
-        <DiscoverFilters {...filters} showOutcomes={false} />
-      </section>
+          <section className="mx-auto max-w-[1240px] px-5 pb-12 md:px-8">
+            <DiscoverFilters {...filters} showOutcomes={false} />
+          </section>
 
-      <section className="mx-auto max-w-[1240px] px-5 pb-8 md:px-8">
-        <DiscoverFeed query={query} showIntro hideFilters showOutcomes={false} filterState={filters} />
-      </section>
+          <section className="mx-auto max-w-[1240px] px-5 pb-8 md:px-8">
+            <DiscoverFeed query="" showIntro hideFilters showOutcomes={false} filterState={filters} />
+          </section>
+        </>
+      )}
 
       <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">

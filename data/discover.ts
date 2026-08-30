@@ -1248,15 +1248,25 @@ export type DiscoverFilters = {
   app?: AppSlug | "all";
 };
 
+export type DiscoverSearchOptions = {
+  locale?: string;
+  localize?: (story: DiscoverStory) => DiscoverStory;
+};
+
 function haystack(story: DiscoverStory) {
   return [
+    story.slug.replace(/-/g, " "),
     story.title,
     story.headline,
+    story.body ?? "",
     story.whatTheyDid,
+    story.howItWorks,
     story.whyUseful,
+    story.whyItMatters,
     story.usefulFor,
     story.authorName,
     story.handle ?? "",
+    story.sourceLabel,
     story.category,
     story.quote ?? "",
     story.result ?? "",
@@ -1271,9 +1281,23 @@ function haystack(story: DiscoverStory) {
     .toLowerCase();
 }
 
-export function filterDiscoverStories(filters: DiscoverFilters = {}) {
+function searchTerms(query: string, locale = "en") {
+  const normalized = query.trim().toLowerCase();
+  if (!normalized) return [];
+
+  const segmented = [...new Intl.Segmenter(locale, { granularity: "word" }).segment(normalized)]
+    .filter((part) => part.isWordLike)
+    .map((part) => part.segment);
+
+  return segmented.length ? segmented : normalized.split(/\s+/).filter(Boolean);
+}
+
+export function filterDiscoverStories(
+  filters: DiscoverFilters = {},
+  searchOptions: DiscoverSearchOptions = {},
+) {
   const query = filters.query?.trim().toLowerCase() ?? "";
-  const words = query.split(/\s+/).filter(Boolean);
+  const words = searchTerms(query, searchOptions.locale);
   let next = discoverStories;
 
   if (filters.tab === "official") next = next.filter((item) => item.source === "official");
@@ -1295,7 +1319,10 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   }
   if (words.length) {
     next = next.filter((item) => {
-      const hay = haystack(item);
+      const localized = searchOptions.localize?.(item);
+      const hay = localized && localized !== item
+        ? `${haystack(item)} ${haystack(localized)}`
+        : haystack(item);
       return words.every((word) => hay.includes(word));
     });
   }
@@ -1311,8 +1338,12 @@ export function filterDiscoverStories(filters: DiscoverFilters = {}) {
   return [...next].sort(byDate);
 }
 
-export function searchDiscoverStories(query: string, limit = 5) {
-  return filterDiscoverStories({ query, tab: "latest" }).slice(0, limit);
+export function searchDiscoverStories(
+  query: string,
+  limit = 5,
+  searchOptions: DiscoverSearchOptions = {},
+) {
+  return filterDiscoverStories({ query, tab: "latest" }, searchOptions).slice(0, limit);
 }
 
 export function getDiscoverStoriesByApp(app: AppSlug) {

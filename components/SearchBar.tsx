@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
@@ -10,6 +10,7 @@ import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/
 import { topicMessageKey, topics } from "@/data/topics";
 import { cn } from "@/lib/cn";
 import { localizeDiscoverStory, localizeScenario, localizeTemplateCopy, useI18n } from "@/lib/i18n";
+import { searchResultsPath } from "@/lib/search";
 
 type SearchBarProps = {
   variant?: "hero" | "inline";
@@ -18,6 +19,10 @@ type SearchBarProps = {
   autoFocus?: boolean;
   stayOnPage?: boolean;
 };
+
+const subscribeToPlatform = () => () => {};
+const getClientModifierKey = () => (/Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl");
+const getServerModifierKey = () => "⌘";
 
 export function SearchBar({
   variant = "hero",
@@ -29,31 +34,37 @@ export function SearchBar({
   const router = useRouter();
   const { locale, t, list, localizeHref } = useI18n();
   const suggestions = list("searchSuggestions");
-  const [query, setQuery] = useState(initialQuery);
+  const firstSuggestion = suggestions[0] ?? "";
+  const [queryState, setQueryState] = useState(() => ({ source: initialQuery, value: initialQuery }));
+  const query =
+    queryState.source === initialQuery || queryState.value.trim() === initialQuery
+      ? queryState.value
+      : initialQuery;
   const [open, setOpen] = useState(false);
-  const [placeholder, setPlaceholder] = useState(suggestions[0] ?? "");
+  const [placeholderState, setPlaceholderState] = useState(() => ({
+    source: firstSuggestion,
+    value: firstSuggestion,
+  }));
+  const placeholder = placeholderState.source === firstSuggestion ? placeholderState.value : firstSuggestion;
   const [activeIndex, setActiveIndex] = useState(-1);
-  const [modKey, setModKey] = useState("⌘");
+  const modKey = useSyncExternalStore(subscribeToPlatform, getClientModifierKey, getServerModifierKey);
   const boxRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isComposingRef = useRef(false);
 
-  useEffect(() => {
-    setQuery(initialQuery);
-  }, [initialQuery]);
-
-  useEffect(() => {
-    setPlaceholder(suggestions[0] ?? "");
-  }, [locale, suggestions]);
+  function setQuery(value: string) {
+    setQueryState({ source: initialQuery, value });
+  }
 
   useEffect(() => {
     if (query) return;
     let index = 0;
     const id = window.setInterval(() => {
       index = (index + 1) % Math.max(suggestions.length, 1);
-      setPlaceholder(suggestions[index] ?? "");
+      setPlaceholderState({ source: firstSuggestion, value: suggestions[index] ?? "" });
     }, 4000);
     return () => window.clearInterval(id);
-  }, [query, suggestions]);
+  }, [firstSuggestion, query, suggestions]);
 
   useEffect(() => {
     function onDoc(event: MouseEvent) {
@@ -61,10 +72,6 @@ export function SearchBar({
     }
     document.addEventListener("mousedown", onDoc);
     return () => document.removeEventListener("mousedown", onDoc);
-  }, []);
-
-  useEffect(() => {
-    setModKey(/Mac|iPhone|iPad/.test(navigator.platform) ? "⌘" : "Ctrl");
   }, []);
 
   useEffect(() => {
@@ -84,10 +91,13 @@ export function SearchBar({
   }, []);
 
   const stories = useMemo(() => {
-    return searchDiscoverStories(query, 6).map((item) => ({
+    return searchDiscoverStories(query, 6, {
+      locale,
+      localize: (item) => localizeDiscoverStory(item, locale),
+    }).map((item) => ({
       localized: localizeDiscoverStory(item, locale),
-      href: item.xPostUrl ?? item.sourceUrl,
-      external: true,
+      href: `/discover/${item.slug}`,
+      external: false,
     }));
   }, [query, locale]);
 
@@ -168,10 +178,10 @@ export function SearchBar({
 
   const trimmed = query.trim();
   function resultsPath(value: string) {
-    return `/?q=${encodeURIComponent(value)}`;
+    return searchResultsPath(value);
   }
-  const showResults = variant === "hero" && open && trimmed.length > 0;
-  const showSuggestions = variant === "hero" && open && trimmed.length === 0;
+  const showResults = open && trimmed.length > 0;
+  const showSuggestions = open && trimmed.length === 0;
   const menuItems = showResults
     ? [
         ...matchingScenarios.map((item) => ({
@@ -196,7 +206,7 @@ export function SearchBar({
           href: item.href,
           title: item.localized.title,
           detail: item.localized.headline,
-          external: true,
+          external: item.external,
         })),
       ]
     : showSuggestions
@@ -208,9 +218,9 @@ export function SearchBar({
         }))
       : [];
 
-  function update(value: string) {
+  function update(value: string, syncUrl = true) {
     setQuery(value);
-    onQueryChange?.(value);
+    if (syncUrl) onQueryChange?.(value);
     setOpen(true);
     setActiveIndex(-1);
   }
@@ -226,6 +236,7 @@ export function SearchBar({
   }
 
   function onKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
+    if (event.nativeEvent.isComposing) return;
     if (event.key === "ArrowDown") {
       event.preventDefault();
       setOpen(true);
@@ -275,7 +286,14 @@ export function SearchBar({
         id={`search-${variant}`}
         value={query}
         autoFocus={autoFocus}
-        onChange={(event) => update(event.target.value)}
+        onChange={(event) => update(event.target.value, !isComposingRef.current)}
+        onCompositionStart={() => {
+          isComposingRef.current = true;
+        }}
+        onCompositionEnd={(event) => {
+          isComposingRef.current = false;
+          onQueryChange?.(event.currentTarget.value);
+        }}
         onFocus={() => setOpen(true)}
         onKeyDown={onKeyDown}
         placeholder={query ? undefined : placeholder}
@@ -291,7 +309,7 @@ export function SearchBar({
       </span>
 
       {showResults || showSuggestions ? (
-        <div className="search-menu absolute inset-x-0 top-[calc(100%+8px)] z-30 overflow-hidden rounded-2xl border border-line bg-card">
+        <div className="search-menu absolute inset-x-0 top-[calc(100%+8px)] z-30 max-h-[65dvh] overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl border border-line bg-card md:max-h-[min(70vh,36rem)]">
           {showSuggestions ? (
             <p className="px-4 pt-3 pb-1 text-[12px] text-faint">{t("search.try")}</p>
           ) : null}
