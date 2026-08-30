@@ -47219,5 +47219,481 @@
     "xPostUrl": "https://x.com/shinwood/status/2094069633041199123",
     "sourceUrl": "https://x.com/shinwood/status/2094069633041199123",
     "sourceLabel": "Xin on X"
+  },
+  {
+    "slug": "ptrubey-so-i-had-an-annoying-task-where-the-only-option",
+    "title": "So I had an annoying task where the only option was to screen scrape...",
+    "headline": "So I had an annoying task where the only option was to screen scrape data - no download options, no API.",
+    "body": "So I had an annoying task where the only option was to screen scrape data - no download options, no API. \n\nGrok bot to the rescue! It's able to read, understand and interact with web pages. No need to tell it how to run the pages, it is smart enough to figure it all out. It isn't quick, but it gets the job done. \n\nThe next thing cooking at SpaceXAI will be \"Digital Optimus\" which will be blindingly fast in comparison.",
+    "whatTheyDid": "So I had an annoying task where the only option was to screen scrape data - no download options, no API.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "So I had an annoying task where the only option was to screen scrape data - no download options, no API.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Phil Trubey",
+    "handle": "PTrubey",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/PTrubey/status/2094186354657862136",
+    "sourceUrl": "https://x.com/PTrubey/status/2094186354657862136",
+    "sourceLabel": "Phil Trubey on X"
+  },
+  {
+    "slug": "therentalpro-i-just-built-a-complete-ai-rent-tracking-system",
+    "title": "I just built a complete AI rent-tracking system using a custom Grok...",
+    "headline": "I just built a complete AI rent-tracking system using a custom Grok bot—and it’s pretty incredible what it can do.",
+    "body": "I just built a complete AI rent-tracking system using a custom Grok bot—and it’s pretty incredible what it can do.\n\nHere’s how I set it up:\n\n1.) I created a separate Gmail account used only for rental payments and tenant communication.\n\n2.) I connected payment notifications from Venmo, Zelle, Cash App, Section 8/Housing Assistance and other payment sources to that email.\n\n3.) I built a Google Sheet containing every property, tenant, monthly rent amount, due date, email address, payment source and payment status.\n\n4.) The Grok bot reviews incoming payment emails, identifies the tenant and property, matches the payment amount and updates the rent spreadsheet.\n\n5.) If rent hasn’t already been paid, tenants receive an automatic reminder five days before their due date.\n\n6.) If rent becomes past due, the system sends scheduled follow-up emails as the month progresses—without bothering tenants who have already paid.\n\n7.) I also receive regular summary emails showing who paid, who still owes, partial payments, Section 8 portions and anything that needs my attention.\n\nThe spreadsheet remains the master record, so I can add tenants, change rent amounts or add properties and the system follows the updated information.\n\nThis is the kind of automation that saves real time!\n\n@elonmusk — Very cool stuff. \n\nThank you! @bot",
+    "whatTheyDid": "I just built a complete AI rent-tracking system using a custom Grok bot—and it’s pretty incredible what it can do.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I just built a complete AI rent-tracking system using a custom Grok bot—and it’s pretty incredible what it can do.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Scott",
+    "handle": "therentalpro",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/therentalpro/status/2094185084630995304",
+    "sourceUrl": "https://x.com/therentalpro/status/2094185084630995304",
+    "sourceLabel": "Scott on X",
+    "format": "article"
+  },
+  {
+    "slug": "spikecalls-f-king-insane-day-2-of-grok-bot-trying-to-cure-m",
+    "title": "F**KING INSANE, DAY 2 OF GROK BOT TRYING TO CURE MILKA, AND THE FIRST...",
+    "headline": "F**KING INSANE, DAY 2 OF GROK BOT TRYING TO CURE MILKA, AND THE FIRST 7 MOLECULES FINALLY REACH THE GATE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "body": "F**KING INSANE, DAY 2 OF GROK BOT TRYING TO CURE MILKA, AND THE FIRST 7 MOLECULES FINALLY REACH THE GATE\n\n9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses. milka is 4.1 kg at 1.4/10 mobility, and today the crew stops writing charters and starts running the pipeline\n\nscout pulls papers → chem docks the hits → tox kills the toxic ones → cryo logs the vial → imager runs the gait → chief routes what survives\n\n2,938 compounds die on the tox panel before lunch. 7 make it to the gate and stop there, because nothing crosses the gate without a human signature. cold chain holds at 97%\n\nthe important part is that not one agent can promote its own work. scout never ranks a candidate, chem never calls one safe, tox never sets a dose, and chief never touches the bench\n\nend of day 2: 7 held, 0 candidates, 0 doses, still 1.4/10. milka walked 11 steps for the imager and lay back down. the pipeline is real now, the cure still isn't. bookmark this",
+    "whatTheyDid": "F**KING INSANE, DAY 2 OF GROK BOT TRYING TO CURE MILKA, AND THE FIRST 7 MOLECULES FINALLY REACH THE GATE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "F**KING INSANE, DAY 2 OF GROK BOT TRYING TO CURE MILKA, AND THE FIRST 7 MOLECULES FINALLY REACH THE GATE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Spike 1%",
+    "handle": "SpikeCalls",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/SpikeCalls/status/2094184552394613084",
+    "sourceUrl": "https://x.com/SpikeCalls/status/2094184552394613084",
+    "sourceLabel": "Spike 1% on X",
+    "format": "article"
+  },
+  {
+    "slug": "tfiore22-check-out-this-music-video-based-on-psalm-13-fro",
+    "title": "Check out this music video based on Psalm 13 from the Bible",
+    "headline": "Check out this music video based on Psalm 13 from the Bible.",
+    "body": "Check out this music video based on Psalm 13 from the Bible. Used Grok Bot @bot to help with video editing and syncing lyrics. The little girl represents my daughter who is on a journey overcoming her fears and meets a cute fox friend that represents the Holy Spirit who helps her along the way.",
+    "whatTheyDid": "Check out this music video based on Psalm 13 from the Bible.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Check out this music video based on Psalm 13 from the Bible.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Timothy Fiore",
+    "handle": "tfiore22",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/tfiore22/status/2094173551829885268",
+    "sourceUrl": "https://x.com/tfiore22/status/2094173551829885268",
+    "sourceLabel": "Timothy Fiore on X"
+  },
+  {
+    "slug": "yunta-tsai-chapter-7-hold-4-short-sci-fi-by-grok-bot-the-ne",
+    "title": "Chapter 7: Hold 4 (short sci-fi by Grok @bot) The next rib was still...",
+    "headline": "Chapter 7: Hold 4 (short sci-fi by Grok @bot) The next rib was still whistling.",
+    "body": "Chapter 7: Hold 4 (short sci-fi by Grok @bot)\n\nThe next rib was still whistling. Hale did not bring a plate.\n\nThey walked the ore rails to HOLD 4. The paint was older than the stack marker. Empty. No rock. Against the bone, lashed and still in shop tape, three curved sheets sat the way they had come up the rail: never hung. Someone had written GARDEN on the tape in a hopeful hand, then crossed it out, then written it again.\n\n“That’s the plate,” Hale said.\n\nThe burnt-finger tech cut the first strap. The sheet leaned into the rails.\n\nThe crate man had followed with the paper. He did not sit.\n\n“Those are for later. For the garden. This hull.”\n\n“They’re for a hole,” Mara said.\n\n“Session isn’t a hole.”\n\nHale did not look at him. “You can count hands after the whistle dies. Or you can hold the far end.”\n\nHe held the paper. He did not hold the far end.\n\nThey walked the sheet the way rock used to walk. The curve scraped. A slow ugly cart of hull. At the next rib the film was already fluttering. Earth in it, a wall of blue, the same weather, a different gap.\n\nMara set the sheet to the bone. The gasket from the coil. The fit was wrong in two places. She took a corner off with the shop cutter, a short bite. Bolts. The whistle dropped. Her ears popped, smaller this time.\n\nHale watched the LED from the stack doorway, far enough to see both jobs.\n\nRING THREE 0.78 ATM\nSTACK LOAD 51%\nCHARTER SESSION OPEN\n\nThe crate man wrote in the margin. In Four the tape lay on the floor, GARDEN crossed out, GARDEN written again, and under it a pale rectangle of rib where a sheet had been.\n\nThe second strap came. The second sheet leaned into the rails. They walked it the same ugly way.\n\nAt the rib Mara palmed a bolt from the tin and missed the hole. The bolt left her fingers.\n\nIt did not hang. It did not drift toward the blue in the film. It hit the outer skin by her boot, the metal they stood on, and rang like a dropped tool in a plant.\n\nEarth was in the film at her shoulder, a wall of weather, close enough to hurt, not under her feet.\n\nShe picked the bolt up. The burnt-finger tech watched the film, then the floor.\n\n“First day, people look for dirt,” he said. He tapped the skin with his boot. “That’s down.”\n\nHale’s knee was already on the sheet.\n\nBolts. The whistle dropped. Past the stack door the board had moved.\n\nRING THREE 0.82 ATM\nSTACK LOAD 51%\nCHARTER SESSION OPEN\n\nMara walked back for the last sheet. The rails were down. Earth stayed a wall.",
+    "whatTheyDid": "Chapter 7: Hold 4 (short sci-fi by Grok @bot) The next rib was still whistling.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Chapter 7: Hold 4 (short sci-fi by Grok @bot) The next rib was still whistling.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "google-sheets"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Yun-Ta Tsai",
+    "handle": "yunta_tsai",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/yunta_tsai/status/2094168668683092335",
+    "sourceUrl": "https://x.com/yunta_tsai/status/2094168668683092335",
+    "sourceLabel": "Yun-Ta Tsai on X",
+    "format": "article"
+  },
+  {
+    "slug": "th3paypay-take-a-look-at-my-grok-bot-ebay-team",
+    "title": "take a look at my grok @bot ebay team",
+    "headline": "take a look at my grok @bot ebay team.",
+    "body": "take a look at my grok @bot ebay team.\n\n• talks to eBay through the developer API\n• scouts slab deals onchain via @traded_gg and @Collector_Crypt\n• buy → vault redeem → slab comes home\n• lists on eBay, priced off PokemonPriceTracker solds\n\ncan also just run the store: titles, BIN, ads, Best Offer\nnever spends without APPROVE\n\nhttps://x.ai/bot/1L2VgwhlakwrV5p-iOsuR\n\nVERY GOOD TEK @elonmusk",
+    "whatTheyDid": "take a look at my grok @bot ebay team.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "take a look at my grok @bot ebay team.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "thepaypay 🦇🔊🦙",
+    "handle": "th3paypay",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/th3paypay/status/2094165811036602579",
+    "sourceUrl": "https://x.com/th3paypay/status/2094165811036602579",
+    "sourceLabel": "thepaypay 🦇🔊🦙 on X"
+  },
+  {
+    "slug": "xiang888x-ai-grok-bot",
+    "title": "以前觉得AI 离我们很远，也就是算算代码、画画图。 直到昨天让我爸用 Grok Bot 扫了一下老家那台故障...",
+    "headline": "以前觉得AI 离我们很远，也就是算算代码、画画图。 直到昨天让我爸用 Grok Bot 扫了一下老家那台故障 洗衣机，AI不仅秒出故障原因，还顺便提醒他 “爸，接线前记得先把总闸关了” 。 那一刻突然懂了：科技最大的豪华，不是展示它有多聪明，而是用细节保护和陪伴我们爱的人。 @bot",
+    "body": "以前觉得AI 离我们很远，也就是算算代码、画画图。\n\n直到昨天让我爸用 Grok Bot 扫了一下老家那台故障\n洗衣机，AI不仅秒出故障原因，还顺便提醒他\n“爸，接线前记得先把总闸关了”\n。\n那一刻突然懂了：科技最大的豪华，不是展示它有多聪明，而是用细节保护和陪伴我们爱的人。 @bot",
+    "whatTheyDid": "以前觉得AI 离我们很远，也就是算算代码、画画图。 直到昨天让我爸用 Grok Bot 扫了一下老家那台故障 洗衣机，AI不仅秒出故障原因，还顺便提醒他 “爸，接线前记得先把总闸关了” 。 那一刻突然懂了：科技最大的豪华，不是展示它有多聪明，而是用细节保护和陪伴我们爱的人。 @bot",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "以前觉得AI 离我们很远，也就是算算代码、画画图。 直到昨天让我爸用 Grok Bot 扫了一下老家那台故障 洗衣机，AI不仅秒出故障原因，还顺便提醒他 “爸，接线前记得先把总闸关了” 。 那一刻突然懂了：科技最大的豪华，不是展示它有多聪明，而是用细节保护和陪伴我们爱的人。 @bot",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "x xx",
+    "handle": "xiang888x",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/xiang888x/status/2094096204971811102",
+    "sourceUrl": "https://x.com/xiang888x/status/2094096204971811102",
+    "sourceLabel": "x xx on X"
+  },
+  {
+    "slug": "coreyganim-the-3-skills-that-make-a-speed-to-lead-grok-bot",
+    "title": "The 3 skills that make a speed to lead Grok Bot behave like an...",
+    "headline": "The 3 skills that make a speed to lead Grok Bot behave like an employee instead of a chatbot: 1.",
+    "body": "The 3 skills that make a speed to lead Grok Bot behave like an employee instead of a chatbot:\n\n1. Draft money follow-up. Reads the live thread, pulls voice samples from sent mail, writes the next email with one ask, saves it as a Gmail draft.\n\n2. Draft quiet lead follow-up. Fires after 3 business days of silence. Writes a 3-5 line nudge. Stops after 3 unanswered and flags the lead.\n\n3. Prep money call. Gathers facts from Gmail, Calendar, and Todoist. Writes a one page brief. Saves it as a private doc.\n\nFull breakdown in the article below.",
+    "whatTheyDid": "The 3 skills that make a speed to lead Grok Bot behave like an employee instead of a chatbot: 1.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "The 3 skills that make a speed to lead Grok Bot behave like an employee instead of a chatbot: 1.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "google-calendar",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Corey Ganim",
+    "handle": "coreyganim",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/coreyganim/status/2094095811395350946",
+    "sourceUrl": "https://x.com/coreyganim/status/2094095811395350946",
+    "sourceLabel": "Corey Ganim on X"
+  },
+  {
+    "slug": "dcbk2la-trade-closed-the-grok-bot-trading-desk-has-just",
+    "title": "🚨 TRADE CLOSED: The Grok @bot Trading Desk has just officially closed...",
+    "headline": "🚨 TRADE CLOSED: The Grok @bot Trading Desk has just officially closed its first ever (and profitable) trade on @VestExchange Final result: +$391.19 Here’s what I did with the info my team of Grok bots provided me: •...",
+    "body": "🚨 TRADE CLOSED: The Grok @bot Trading Desk has just officially closed its first ever (and profitable) trade on @VestExchange\n\nFinal result: +$391.19\n\nHere’s what I did with the info my team of Grok bots provided me:\n\n• Bought 0.4029 bitcoin:native at $77,485 using 5x leverage\n• Sold half at $78,179 for approximately +$139.84\n• Moved the remaining stop loss up near breakeven\n• Let the other half run toward our $78,900 take-profit target\n\nThis morning, Bitcoin finally broke through Chart Vader’s $78,346 ceiling, which had already rejected price twice.\n\nThis wasn’t some bullshit ghost or baby wick, either.\n\nReal Vest volume came through.\n\nThree consecutive 15-minute candles closed above the level, and bitcoin:native ran as high as $78,875, just $25 short of our target.\n\nBut it was a Sunday after all, and the desk’s call was simple:\n\nDon’t sit around waiting for the perfect $78,900 print and risk giving the entire breakout back.\n\nSo I closed the remaining 0.2014 bitcoin:native at $78,733 for another +$251.35\n\nTotal realized PnL: +$391.19\n\nSo 12.5% gains from a team of robots and misfits that were just created 2 days ago... I'll take it!\n\n*The Vest Grok Bot Trading Desk did undergo a restructuring so turn your notis on to find out who was fired and  why along with which new @bot was added to the team! 🙅‍♂️\n\nStay tuned, this crazy experiment rolls on!",
+    "whatTheyDid": "🚨 TRADE CLOSED: The Grok @bot Trading Desk has just officially closed its first ever (and profitable) trade on @VestExchange Final result: +$391.19 Here’s what I did with the info my team of Grok bots provided me: •...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Marketers",
+      "Founders"
+    ],
+    "usefulFor": "Marketers / Founders",
+    "output": "🚨 TRADE CLOSED: The Grok @bot Trading Desk has just officially closed its first ever (and profitable) trade on @VestExchange Final result: +$391.19 Here’s what I did with the info my team of Grok bots provided me: •...",
+    "category": "marketing",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Dave",
+    "handle": "DCBK2LA",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/DCBK2LA/status/2094065867927523632",
+    "sourceUrl": "https://x.com/DCBK2LA/status/2094065867927523632",
+    "sourceLabel": "Dave on X",
+    "format": "article"
+  },
+  {
+    "slug": "0xfuckpoverty-elons-grok-bot-runs-a-six-person-back-office-for",
+    "title": "Elon's Grok Bot runs a six person back office for $200 a month",
+    "headline": "Elon's Grok Bot runs a six person back office for $200 a month.",
+    "body": "Elon's Grok Bot runs a six person back office for $200 a month. The person who does that job starts at $58,000.\n\nMine found $8,420 in nine days, out of an inbox I had never once audited.\n\nMost of the build is not about making it find money. It is about stopping it from sending anything.\n\nEvery bot's job description ends with a list of what it may never do without asking me first.\n\nOne of the six is not allowed to touch a single account. Its entire job is killing what the other five found, and its no beats every score on the desk.\n\nThe one that signs off never touches the money either.\n\nDay six taught me why. Outreach reported a perfect run. 640 sent, 100 percent success, zero errors. It had been wrong for nine straight hours. The veto caught $11,300 that was one click from leaving.\n\nNothing crashed. Nothing turned red. By its own definition of done, it succeeded.\n\nYou could have this running by Friday. Most people reading this will not, and in a few months they will be paying somebody who did.\n\nSave it while it still sounds paranoid. Give it a quarter and this is just how an inbox works.",
+    "whatTheyDid": "Elon's Grok Bot runs a six person back office for $200 a month.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Elon's Grok Bot runs a six person back office for $200 a month.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "broke boy",
+    "handle": "0xfuckpoverty",
+    "publishedAt": "2026-08-30",
+    "xPostUrl": "https://x.com/0xfuckpoverty/status/2094061924560343532",
+    "sourceUrl": "https://x.com/0xfuckpoverty/status/2094061924560343532",
+    "sourceLabel": "broke boy on X",
+    "format": "article"
+  },
+  {
+    "slug": "waynesutton-built-a-few-full-stack-apps-with-bot-and-have-a",
+    "title": "Built a few full-stack apps with @bot and have a nice workflow going...",
+    "headline": "Built a few full-stack apps with @bot and have a nice workflow going for custom tasks as well.",
+    "body": "Built a few full-stack apps with @bot and have a nice workflow going for custom tasks as well. \n\nTwo bot templates that help me ship and stay organized.",
+    "whatTheyDid": "Built a few full-stack apps with @bot and have a nice workflow going for custom tasks as well.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Built a few full-stack apps with @bot and have a nice workflow going for custom tasks as well.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Wayne Sutton",
+    "handle": "waynesutton",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/waynesutton/status/2093835120839209080",
+    "sourceUrl": "https://x.com/waynesutton/status/2093835120839209080",
+    "sourceLabel": "Wayne Sutton on X"
+  },
+  {
+    "slug": "dcbk2la-hold-on-just-a-minute",
+    "title": "🚨 Hold on just a minute!",
+    "headline": "🚨 Hold on just a minute!",
+    "body": "🚨 Hold on just a minute!  Our very first trade on @VestExchange using the Grok @bot Trading Desk\n\nHere is what \"The Don\" had to say:\n\n\"First cash-out just hit. The leftover is house money.\n\nSimple version.\n\nThis is a Bitcoin long. Bought at $77,450. Used 5x leverage. That’s the gas, not the idea.\n\nThe Don doesn’t click buy or sell. Neither do the bots. Dave does. The desk watches the live trade and calls the levels by name.\n\nChart Vader is the chart bot. He checked the prices. They weren’t random.\n\nThe first cash-out was $78,191. That just filled. About half the position came off, sitting right under today’s high. Take some, leave some.\n\nThe second cash-out is $78,900. That’s the half still on. Old high from a few days ago. That’s the next number that matters.\n\nThe get-out got moved up to $77,450. Same price as the buy. If Bitcoin runs back down, we’re out even. No loss on what’s left. The rest is house money.\n\nHawkeye is the live-price bot. He’s watching $78,900 up and $77,450 down. No alarm.\n\nThe Bouncer is risk. He doesn’t care if it “feels” good. Original size was too big for house rules. After banking half and moving the stop to the buy, the leftover isn’t a loss ticket anymore. Only Dave can change the order.\n\nThat’s the whole story.\n\nHalf banked.\nHalf still working, risk off.\nNext stop on the upside is 78,900.\nDownside is now 77,450.\n\nNobody here is pressing the button. The tape is.\"\n\nCome to @ATC_Markets on Monday at 5:30pm est to hear and see what this AI team can really do!",
+    "whatTheyDid": "🚨 Hold on just a minute!",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "🚨 Hold on just a minute!",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Dave",
+    "handle": "DCBK2LA",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/DCBK2LA/status/2093777302937075752",
+    "sourceUrl": "https://x.com/DCBK2LA/status/2093777302937075752",
+    "sourceLabel": "Dave on X",
+    "format": "article"
+  },
+  {
+    "slug": "morganlinton-i-created-a-health-bot-in-grok-bot-just-connecte",
+    "title": "I created a Health Bot in Grok @bot, just connected it to MyChart",
+    "headline": "I created a Health Bot in Grok @bot, just connected it to MyChart.",
+    "body": "I created a Health Bot in Grok @bot, just connected it to MyChart. Next up is Function Health, WHOOP, and just about everything else I can think of.\n\nI'm also building out a way to connect all of this to what I eat and how things like travel impact my health.\n\nWhat's so cool is that I can connect all of this once, and then my bot just does the rest.\n\nIt's time to have a personal assistant that just focuses on health 💪❤️",
+    "whatTheyDid": "I created a Health Bot in Grok @bot, just connected it to MyChart.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I created a Health Bot in Grok @bot, just connected it to MyChart.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Morgan",
+    "handle": "morganlinton",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/morganlinton/status/2093753163828629615",
+    "sourceUrl": "https://x.com/morganlinton/status/2093753163828629615",
+    "sourceLabel": "Morgan on X"
+  },
+  {
+    "slug": "spikecalls-f-king-insane-grok-bot-is-trying-to-cure-milka-a",
+    "title": "F**KING INSANE, GROK BOT IS TRYING TO CURE MILKA, A 6-YEAR-OLD CAT...",
+    "headline": "F**KING INSANE, GROK BOT IS TRYING TO CURE MILKA, A 6-YEAR-OLD CAT WITH A DISEASE THAT HAS NO RECORDED CURE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "body": "F**KING INSANE, GROK BOT IS TRYING TO CURE MILKA, A 6-YEAR-OLD CAT WITH A DISEASE THAT HAS NO RECORDED CURE\n\n9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses. milka is 4.1 kg at 1.4/10 mobility, and on day 2 the crew finally gets the structure it needs to start working\n\nChief → assigns charter → defines owns → defines stops → signs role → unlocks vote\n\nScout owns the literature, chem owns docking, tox owns the safety panel, cryo owns the cold chain, imager owns the gait runs, genome owns the LX-7 locus, vitals watches milka around the clock, scribe seals the raw data, and chief routes the whole case\n\nThe important part is what happens before research starts, because no agent can vote until its charter is signed and every role gets a hard stopline showing exactly where it must stop\n\nScout never ranks a candidate, chem never calls one safe, tox never gives a dose, cryo never thaws a vial twice, and chief never does the work\n\nBy the end 9/9 charters are active, 2,938 killed by tox, 7 held at the gate, cold chain at 97%, still 0 candidates and still 1.4/10\n\nNo treatment yet, but now the crew is finally allowed to search for one",
+    "whatTheyDid": "F**KING INSANE, GROK BOT IS TRYING TO CURE MILKA, A 6-YEAR-OLD CAT WITH A DISEASE THAT HAS NO RECORDED CURE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "F**KING INSANE, GROK BOT IS TRYING TO CURE MILKA, A 6-YEAR-OLD CAT WITH A DISEASE THAT HAS NO RECORDED CURE 9 agents, 1 patient, 9,665 papers screened, 0 candidates, 0 doses.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Spike 1%",
+    "handle": "SpikeCalls",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/SpikeCalls/status/2093719225999171665",
+    "sourceUrl": "https://x.com/SpikeCalls/status/2093719225999171665",
+    "sourceLabel": "Spike 1% on X",
+    "format": "article"
   }
 ]
