@@ -429,6 +429,18 @@
     "publishedAt": "2026-08-28"
   },
   {
+    "id": "8dB3XPIA8XIopvQUIC73P",
+    "title": "Forge (Grokbot Studio)",
+    "oneLiner": "Add the Forge Head and it stands up a software studio, including a web-app builder",
+    "body": "One Head bot creates the rest of the Forge roster on your account. App Builder covers complete web and mobile apps; Frontend UI Developer implements UI. The human still merges.",
+    "templateUrl": "https://x.ai/bot/8dB3XPIA8XIopvQUIC73P",
+    "authorName": "Jonathan",
+    "handle": "Hexakin",
+    "xPostUrl": "https://x.com/Hexakin/status/2093794343396258045",
+    "publishedAt": "2026-08-29",
+    "category": "website"
+  },
+  {
     "id": "uF_uodOFUz9mdv6XDWE70",
     "title": "Forge (Template Foundry)",
     "oneLiner": "One keyword in, a production-ready Grok Bot recipe out",
@@ -482,6 +494,18 @@
     "handle": "liam_fallen",
     "xPostUrl": "https://x.com/liam_fallen/status/2093383132137279825",
     "publishedAt": "2026-08-28"
+  },
+  {
+    "id": "8vjjlI7z5W0HtpRcFQgJ4",
+    "title": "George",
+    "oneLiner": "A design atelier that ships a landing page in the same style as posters and slides",
+    "body": "One visual system for a poster, style sheet, hero image, landing page, product brief and slides, so the site does not look like it was made by a different team.",
+    "templateUrl": "https://x.ai/bot/8vjjlI7z5W0HtpRcFQgJ4",
+    "authorName": "arni",
+    "handle": "arni0x9053",
+    "xPostUrl": "https://x.com/arni0x9053/status/2093838719510053326",
+    "publishedAt": "2026-08-29",
+    "category": "website"
   },
   {
     "id": "tttQVA2UtlNwCzITNCIr0",
@@ -822,7 +846,8 @@
     "authorName": "adamludwin",
     "handle": "adamludwin",
     "xPostUrl": "https://x.com/adamludwin/status/2093402167394914392",
-    "publishedAt": "2026-08-28"
+    "publishedAt": "2026-08-28",
+    "category": "website"
   },
   {
     "id": "KmR5kmGnalq1b2nhCRXyo",
@@ -1097,7 +1122,20 @@
     "authorName": "stevy_smith",
     "handle": "stevy_smith",
     "xPostUrl": "https://x.com/stevy_smith/status/2093464213268127932",
-    "publishedAt": "2026-08-28"
+    "publishedAt": "2026-08-28",
+    "category": "website"
+  },
+  {
+    "id": "NQQjXITgX9V7WjaDh9Vzb",
+    "title": "Ralph",
+    "oneLiner": "Turns a resume into a live portfolio hiring managers can actually click through",
+    "body": "Builds a public site where each product is a demo, not a bullet on a PDF, then gives you a shareable bot that can do the same job for someone else.",
+    "templateUrl": "https://x.ai/bot/NQQjXITgX9V7WjaDh9Vzb",
+    "authorName": "Jon ONeill",
+    "handle": "HouseHackerJon",
+    "xPostUrl": "https://x.com/HouseHackerJon/status/2093832634191536558",
+    "publishedAt": "2026-08-29",
+    "category": "website"
   },
   {
     "id": "Gd-cqXG8xG_RPmKGixa73",
@@ -1218,7 +1256,8 @@
     "authorName": "scheemunai",
     "handle": "scheemunai",
     "xPostUrl": "https://x.com/scheemunai/status/2093397637487596019",
-    "publishedAt": "2026-08-28"
+    "publishedAt": "2026-08-28",
+    "category": "website"
   },
   {
     "id": "bjsbaj_a2ds2pQY1YiXqE",
@@ -1348,7 +1387,8 @@
     "authorName": "farzyness",
     "handle": "farzyness",
     "xPostUrl": "https://x.com/farzyness/status/2093485215150744014",
-    "publishedAt": "2026-08-28"
+    "publishedAt": "2026-08-28",
+    "category": "website"
   },
   {
     "id": "qL6Dww98g_OGhwqDmgvJK",

@@ -390,6 +390,8 @@ export const messages = {
       showMore: "Show more",
       showAll: "Show all",
       empty: "No public templates ingested yet.",
+      catAll: "All",
+      catWebsite: "Website",
     },
     detail: {
       what: "What this Grok Bot does",
@@ -835,6 +837,8 @@ export const messages = {
       showMore: "顯示更多",
       showAll: "顯示全部",
       empty: "還沒有收錄公開模板。",
+      catAll: "全部",
+      catWebsite: "網站",
     },
     detail: {
       what: "這個 Grok Bot 會做什麼",
@@ -1279,6 +1283,8 @@ export const messages = {
       showMore: "显示更多",
       showAll: "显示全部",
       empty: "还没有收录公开模板。",
+      catAll: "全部",
+      catWebsite: "网站",
     },
     detail: {
       what: "这个 Grok Bot 会做什么",

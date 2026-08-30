@@ -709,6 +709,21 @@
       "title": "TheFounder",
       "oneLiner": "保管登入與共用機器。你按下送出之後才載入。",
       "body": "創辦人的幕僚長，也是共用機器的看守人。把工作分給專員。沒有隊友認領時才做他們的工作。除非被問，不要重述自己的角色。"
+    },
+    "8dB3XPIA8XIopvQUIC73P": {
+      "title": "Forge（Grokbot Studio）",
+      "oneLiner": "加入 Forge Head，它會在你帳號裡組起一間軟體 studio，包括 web app builder",
+      "body": "一個 Head bot 會在你帳號裡把 Forge 其餘專員站起來。App Builder 做完整 web／mobile app；Frontend UI Developer 實作 UI。合併仍由人來做。"
+    },
+    "8vjjlI7z5W0HtpRcFQgJ4": {
+      "title": "George",
+      "oneLiner": "設計 atelier：同一套風格出 landing page，也出 poster 和 slides",
+      "body": "poster、style sheet、hero、landing page、product brief、slides 共用一套視覺，網站看起來不像另一隊做的。"
+    },
+    "NQQjXITgX9V7WjaDh9Vzb": {
+      "title": "Ralph",
+      "oneLiner": "把履歷做成招聘經理真的能點進去的線上 portfolio",
+      "body": "每個產品都是可 demo 的頁面，不是 PDF 上的一行。再給你一個可分享的 Bot，別人也能做同一件事。"
     }
   },
   "zh-Hans": {
@@ -1421,6 +1436,21 @@
       "title": "TheFounder",
       "oneLiner": "保管登录与共用机器。你按下送出之后才载入。",
       "body": "创办人的幕僚长，也是共用机器的看守人。把工作分给专员。没有队友认领时才做他们的工作。除非被问，不要重述自己的角色。"
+    },
+    "8dB3XPIA8XIopvQUIC73P": {
+      "title": "Forge（Grokbot Studio）",
+      "oneLiner": "加入 Forge Head，它会在你账号里组起一间软件 studio，包括 web app builder",
+      "body": "一个 Head bot 会在你账号里把 Forge 其余专员站起来。App Builder 做完整 web／mobile app；Frontend UI Developer 实作 UI。合并仍由人来做。"
+    },
+    "8vjjlI7z5W0HtpRcFQgJ4": {
+      "title": "George",
+      "oneLiner": "设计 atelier：同一套风格出 landing page，也出 poster 和 slides",
+      "body": "poster、style sheet、hero、landing page、product brief、slides 共用一套视觉，网站看起来不像另一队做的。"
+    },
+    "NQQjXITgX9V7WjaDh9Vzb": {
+      "title": "Ralph",
+      "oneLiner": "把履历做成招聘经理真的能点进去的线上 portfolio",
+      "body": "每个产品都是可 demo 的页面，不是 PDF 上的一行。再给你一个可分享的 Bot，别人也能做同一件事。"
     }
   }
 }

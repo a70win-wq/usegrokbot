@@ -45994,5 +45994,114 @@
     "sourceUrl": "https://x.com/N01ennn/status/2093794050562551926",
     "sourceLabel": "NO1ennn on X",
     "format": "article"
+  },
+  {
+    "slug": "househackerjon-ralph-resume-portfolio",
+    "title": "Ralph the Resume Builder",
+    "headline": "Jon used Grok Bot to turn a resume into a portfolio you can actually demo",
+    "body": "The hardest thing about a resume is showcasing the products you built to someone else (especially as a PM, designer, engineer)\n\nSo I used Grok @bot today to build an online portfolio that YOU can actually demo to others.\n\n🧵1/6 👇",
+    "whatTheyDid": "Jon used Grok Bot to build an online portfolio hiring managers can click through, then shared the Ralph Resume Builder template.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "PMs",
+      "Designers",
+      "Engineers on the job market"
+    ],
+    "usefulFor": "PMs / designers / engineers",
+    "quote": "So I used Grok @bot today to build an online portfolio that YOU can actually demo to others.",
+    "output": "Online portfolio plus Ralph template",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "create-content"
+    ],
+    "apps": [
+      "browser",
+      "linkedin",
+      "x"
+    ],
+    "difficulty": "advanced",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jon ONeill",
+    "handle": "HouseHackerJon",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/HouseHackerJon/status/2093832634191536558",
+    "sourceUrl": "https://x.com/HouseHackerJon/status/2093832634191536558",
+    "sourceLabel": "Jon ONeill on X",
+    "format": "post"
+  },
+  {
+    "slug": "arni0x9053-george-atelier-landing-page",
+    "title": "George the atelier",
+    "headline": "arni shared George, a Grok Bot that ships a landing page in the same style as posters and slides",
+    "body": "Sharing my creative asset @bot George. https://x.ai/bot/8vjjlI7z5W0HtpRcFQgJ4\n\nHe runs \"the atelier\" that can make you:\n\na poster\na style sheet\npictures for a post (any aspect ratio)\na newspaper you can print (low key love this one)\na hero image\na landing page\na product brief\nslides\n\nAll in cohesive style. Example outputs in thread.",
+    "whatTheyDid": "arni shared George, a creative-asset Grok Bot whose atelier includes a landing page, posters, a style sheet, hero image, product brief and slides.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Designers",
+      "Founders shipping a launch"
+    ],
+    "usefulFor": "Designers / founders",
+    "quote": "Sharing my creative asset @bot George.",
+    "output": "Atelier outputs including a landing page",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "build-software"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "arni",
+    "handle": "arni0x9053",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/arni0x9053/status/2093838719510053326",
+    "sourceUrl": "https://x.com/arni0x9053/status/2093838719510053326",
+    "sourceLabel": "arni on X",
+    "format": "post"
+  },
+  {
+    "slug": "hexakin-grokbot-studio-forge",
+    "title": "Grokbot Studio is live",
+    "headline": "Jonathan launched Grokbot Studio: eight studios and nearly 100 specialists you add by Head bot",
+    "body": "Every other Grok Bot template site (looking at you @GrokBotDev) gives you prompts or links to individual bots. Cool. What if you just want a whole fleet that gets the job done?\n\nGrokbot Studio is live.\n\nEight studios. Nearly 100 specialists.\n\nYou add the Head of each studio. They do the rest.\n\nHave a go. Feedback through the site, or shout at me on X.\n\nLink is below⬇️\n\nPS @GrokBotDev  I'm kidding, you guys are awesome",
+    "whatTheyDid": "Jonathan launched Grokbot Studio: add the Head of each studio and they stand up the rest. Eight studios, nearly 100 specialists.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People assembling a Bot team",
+      "Builders"
+    ],
+    "usefulFor": "Builders / operators",
+    "quote": "Grokbot Studio is live.",
+    "result": "Eight studios · nearly 100 specialists",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "github"
+    ],
+    "difficulty": "advanced",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Jonathan",
+    "handle": "Hexakin",
+    "publishedAt": "2026-08-29",
+    "xPostUrl": "https://x.com/Hexakin/status/2093794343396258045",
+    "sourceUrl": "https://x.com/Hexakin/status/2093794343396258045",
+    "sourceLabel": "Jonathan on X",
+    "format": "post"
   }
 ]

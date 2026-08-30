@@ -4,6 +4,9 @@ import catalogFile from "./templates-catalog.json";
 
 export const TOP_TEMPLATE_COUNT = 10;
 
+export const templateCategorySlugs = ["website"] as const;
+export type TemplateCategorySlug = (typeof templateCategorySlugs)[number];
+
 const BOT_URL = /https?:\/\/(?:www\.)?x\.ai\/bot\/([A-Za-z0-9_-]+)(?:\?[^\s)<"'\]>]*)?/gi;
 const PAGE_SLUGS = new Set(["use-cases", "onboarding", "download", "templates"]);
 
@@ -16,6 +19,7 @@ export type BotTemplate = {
   handle?: string;
   xPostUrl?: string;
   rank: number;
+  category?: TemplateCategorySlug;
 };
 
 export type TemplateCopy = {
@@ -33,6 +37,7 @@ export type TemplateCatalogEntry = {
   handle?: string;
   xPostUrl?: string;
   publishedAt: string;
+  category?: TemplateCategorySlug;
 };
 
 const catalog = catalogFile as TemplateCatalogEntry[];
@@ -246,6 +251,7 @@ function templatesFromCatalog(): Omit<BotTemplate, "rank">[] {
     authorName: item.authorName,
     handle: item.handle,
     xPostUrl: item.xPostUrl,
+    category: item.category,
   }));
 }
 
@@ -268,6 +274,7 @@ export function mergeTemplates(): BotTemplate[] {
       handle: item.handle || existing.handle,
       xPostUrl: item.xPostUrl || existing.xPostUrl,
       templateUrl: item.templateUrl || existing.templateUrl,
+      category: existing.category || item.category,
     });
   }
 
@@ -283,6 +290,11 @@ export function mergeTemplates(): BotTemplate[] {
 }
 
 export const templates: readonly BotTemplate[] = mergeTemplates();
+
+export function templatesForCategory(slug: TemplateCategorySlug | "all") {
+  const source = slug === "all" ? templates : templates.filter((item) => item.category === slug);
+  return source.map((item, index) => ({ ...item, rank: index + 1 }));
+}
 
 export function getTemplateStory(template: BotTemplate) {
   if (!template.storySlug) return undefined;
