@@ -49035,5 +49035,171 @@
     "xPostUrl": "https://x.com/RahillRuns/status/2094239731533938818",
     "sourceUrl": "https://x.com/RahillRuns/status/2094239731533938818",
     "sourceLabel": "Christopher Rahill on X"
+  },
+  {
+    "slug": "chuckcook-i-asked-grok-bot-to-audit-my-credit-cards",
+    "title": "I asked Grok @bot to audit my credit cards",
+    "headline": "I asked Grok @bot to audit my credit cards.",
+    "body": "I asked Grok @bot to audit my credit cards.\n\nNot “are these good cards.” The actual question: am I putting dining, Amazon, and travel on the right card, and am I using the card-specific benefits I already pay for. Sapphire travel credit and DoorDash. Platinum Resy and Lululemon. Amazon 5% at Amazon. Monthly and quarterly credits that disappear if nobody is watching.\n\nGrok @bot is the system. Captain is the front door, and the only agent who talks to me. I told him I wanted three things: charges on the wrong card, benefits I left on the table, and what I already did right. Card names, dollar amounts, no account numbers.\n\nCaptain does not pull the statements himself. Spendy does. Spendy is connected through Plaid, so he is reading posted transactions on Amazon, Sapphire, and Platinum.\n\nResearchy never sees the accounts. His job is the benefits sheet, because the offers move. We imported that research seat from Farzad. Researchy runs the Grok CLI, Grok 4.6 with live search, against the current Chase and Amex pages. Same CLI superpower Farzad showed. Groker uses it to build. Researchy uses it so we are not scoring this month against a 2023 blog post.\n\nCaptain waits for both, then writes the recap. Wrong card. Left on the table only if another card I already have would have paid more. Unused Resy, Lululemon, DoorDash, travel credit, called out by name. That runs monthly on Grok @bot: refresh the offers, then the spend, then the recap.\n\nThey do not post. They do not apply for a new card unless I say so. I still decide. I just am not the one refreshing the fine print.",
+    "whatTheyDid": "I asked Grok @bot to audit my credit cards.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I asked Grok @bot to audit my credit cards.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Chuck Cook",
+    "handle": "ChuckCook",
+    "publishedAt": "2026-08-31",
+    "xPostUrl": "https://x.com/ChuckCook/status/2094455257887617295",
+    "sourceUrl": "https://x.com/ChuckCook/status/2094455257887617295",
+    "sourceLabel": "Chuck Cook on X",
+    "format": "article"
+  },
+  {
+    "slug": "amanduhlovejoy-most-people-burn-grok-bot-on-coding",
+    "title": "Most people burn Grok Bot on coding",
+    "headline": "Most people burn Grok Bot on coding.",
+    "body": "Most people burn Grok Bot on coding.\n\nI installed Grok Build on the bot's computer and signed SuperGrok into the CLI. Default is grok-4.6.\n\nBot stays coordinator. Heavy work hits SuperGrok instead of the Grok Bot cap.\n\nThat's the whole trick.",
+    "whatTheyDid": "Most people burn Grok Bot on coding.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Most people burn Grok Bot on coding.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Amanduh Lovejoy",
+    "handle": "AmanduhLovejoy",
+    "publishedAt": "2026-08-31",
+    "xPostUrl": "https://x.com/AmanduhLovejoy/status/2094437573665923532",
+    "sourceUrl": "https://x.com/AmanduhLovejoy/status/2094437573665923532",
+    "sourceLabel": "Amanduh Lovejoy on X"
+  },
+  {
+    "slug": "lufzzliz-grok-bot-openclaw-2-0-8-16g",
+    "title": "grok bot 第一步：先装一只openclaw 2.0 ，这样就不用担心额度问题，还能爽用这台官方送的 8 核 / 16G 内存 /...",
+    "headline": "grok bot 第一步：先装一只openclaw 2.0 ，这样就不用担心额度问题，还能爽用这台官方送的 8 核 / 16G 内存 / 126G 盘的机器。 我让grok bot 先帮我搞一个免费的模型结果自己安装了个Ollama 拉了个小模型😄",
+    "body": "grok bot 第一步：先装一只openclaw 2.0 ，这样就不用担心额度问题，还能爽用这台官方送的 8 核 / 16G 内存 / 126G 盘的机器。\n\n我让grok bot 先帮我搞一个免费的模型结果自己安装了个Ollama 拉了个小模型😄",
+    "whatTheyDid": "grok bot 第一步：先装一只openclaw 2.0 ，这样就不用担心额度问题，还能爽用这台官方送的 8 核 / 16G 内存 / 126G 盘的机器。 我让grok bot 先帮我搞一个免费的模型结果自己安装了个Ollama 拉了个小模型😄",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "grok bot 第一步：先装一只openclaw 2.0 ，这样就不用担心额度问题，还能爽用这台官方送的 8 核 / 16G 内存 / 126G 盘的机器。 我让grok bot 先帮我搞一个免费的模型结果自己安装了个Ollama 拉了个小模型😄",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "岚叔",
+    "handle": "LufzzLiz",
+    "publishedAt": "2026-08-31",
+    "xPostUrl": "https://x.com/LufzzLiz/status/2094423360491139153",
+    "sourceUrl": "https://x.com/LufzzLiz/status/2094423360491139153",
+    "sourceLabel": "岚叔 on X"
+  },
+  {
+    "slug": "kzkhykw-grok-bot-gtm",
+    "title": "Grok Botにとりあえず全ツッコミしてていい感じ。 個人用エージェントたちに加え、個人開発プロダクトのGTMエージェントたちを拵えた",
+    "headline": "Grok Botにとりあえず全ツッコミしてていい感じ。 個人用エージェントたちに加え、個人開発プロダクトのGTMエージェントたちを拵えた",
+    "body": "Grok Botにとりあえず全ツッコミしてていい感じ。\n\n個人用エージェントたちに加え、個人開発プロダクトのGTMエージェントたちを拵えた",
+    "whatTheyDid": "Grok Botにとりあえず全ツッコミしてていい感じ。 個人用エージェントたちに加え、個人開発プロダクトのGTMエージェントたちを拵えた",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Botにとりあえず全ツッコミしてていい感じ。 個人用エージェントたちに加え、個人開発プロダクトのGTMエージェントたちを拵えた",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "notion"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "kazuki🄽Notion",
+    "handle": "kzkhykw",
+    "publishedAt": "2026-08-31",
+    "xPostUrl": "https://x.com/kzkhykw/status/2094415207770869833",
+    "sourceUrl": "https://x.com/kzkhykw/status/2094415207770869833",
+    "sourceLabel": "kazuki🄽Notion on X"
+  },
+  {
+    "slug": "nexteranoah-tried-grok-bot-this-week",
+    "title": "Tried Grok Bot this week",
+    "headline": "Tried Grok Bot this week.",
+    "body": "Tried Grok Bot this week.\n\nUsed it for email triage, research digests, and a couple multi step browser tasks.\n\nWhat stands out vs self hosted options is how little setup it needs. No VPS babysitting.\n\nThat’s why it’s picking up speed so fast, you can hand it real work on day one.",
+    "whatTheyDid": "Tried Grok Bot this week.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Tried Grok Bot this week.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Noah",
+    "handle": "nexteranoah",
+    "publishedAt": "2026-08-31",
+    "xPostUrl": "https://x.com/nexteranoah/status/2094286141537042849",
+    "sourceUrl": "https://x.com/nexteranoah/status/2094286141537042849",
+    "sourceLabel": "Noah on X"
   }
 ]
