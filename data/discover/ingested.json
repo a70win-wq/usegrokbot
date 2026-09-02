@@ -52703,5 +52703,33 @@
     "xPostUrl": "https://x.com/slash1sol/status/2094877901950992609",
     "sourceUrl": "https://x.com/slash1sol/status/2094877901950992609",
     "sourceLabel": "slash1s on X"
+  },
+  {
+    "slug": "thoughtpilot99-signal-outbound-grok-bot",
+    "title": "Signal outbound Grok Bot",
+    "headline": "Recipe for a Grok Bot that hunts live buyer signals, returns a ranked list, and drafts two outreach scripts while a human sends.",
+    "whatTheyDid": "Recipe for a Grok Bot that hunts live buyer signals, returns a ranked list, and drafts two outreach scripts while a human sends.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "Recipe for a Grok Bot that hunts live buyer signals, returns a ranked list, and drafts two outreach scripts while a human sends.",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "thoughtpilot99",
+    "publishedAt": "2026-09-01",
+    "sourceUrl": "https://github.com/thoughtpilot99/signal-outbound-grok-bot",
+    "sourceLabel": "thoughtpilot99 · GitHub"
   }
 ]

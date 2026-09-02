@@ -9,12 +9,12 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 30,
-    "candidates": 4,
+    "total": 32,
+    "candidates": 5,
     "xCandidates": 0,
-    "nonXCandidates": 4,
-    "alreadyIngested": 26,
-    "pending": 0
+    "nonXCandidates": 5,
+    "alreadyIngested": 27,
+    "pending": 1
   },
   "cases": [
     {
@@ -405,6 +405,34 @@
       "ingest": {
         "status": "published",
         "attempts": 1
+      }
+    },
+    {
+      "id": "signal-outbound-grok-bot",
+      "title": "Signal outbound Grok Bot",
+      "url": "https://github.com/thoughtpilot99/signal-outbound-grok-bot",
+      "sourceSummary": "Recipe for a Grok Bot that hunts live buyer signals, returns a ranked list, and drafts two outreach scripts while a human sends.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-fund",
+      "title": "Grok-Bot-Fund",
+      "url": "https://github.com/jjregier/Grok-Bot-Fund",
+      "sourceSummary": "Personal paper-to-live \"hedge fund\" desk run by three Grok Bot teammates on the cloud computer, with versioned playbooks merged only via human PRs.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "retry",
+        "attempts": 1,
+        "code": "source_unreadable",
+        "reason": "404"
       }
     }
   ]
