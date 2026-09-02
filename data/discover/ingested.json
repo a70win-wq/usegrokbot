@@ -53332,5 +53332,89 @@
     "xPostUrl": "https://x.com/PMbackttfuture/status/2094621568349446632",
     "sourceUrl": "https://x.com/PMbackttfuture/status/2094621568349446632",
     "sourceLabel": "AI产品黄叔 on X"
+  },
+  {
+    "slug": "webdevjasoncameron-exploregrokbot-market-desk",
+    "title": "ExploreGrokBot market desk",
+    "headline": "File-based Grok Bot market-research desk: company mission, analyst agent instructions, scored opportunities, and a decision log under one repo layout.",
+    "whatTheyDid": "File-based Grok Bot market-research desk: company mission, analyst agent instructions, scored opportunities, and a decision log under one repo layout.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "File-based Grok Bot market-research desk: company mission, analyst agent instructions, scored opportunities, and a decision log under one repo layout.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "WebDevJasonCameron",
+    "publishedAt": "2026-08-31",
+    "sourceUrl": "https://github.com/WebDevJasonCameron/ExploreGrokBot",
+    "sourceLabel": "WebDevJasonCameron · GitHub"
+  },
+  {
+    "slug": "mtrxdev-build-brief-grok-build-desk",
+    "title": "build-brief Grok Build desk",
+    "headline": "Reusable Grok Bot desk that grills a raw idea into a grounded Grok Build brief on Git (PROFILE + BOT-SKILL + inspect gate)—Print-first delivery you paste into local grok.",
+    "whatTheyDid": "Reusable Grok Bot desk that grills a raw idea into a grounded Grok Build brief on Git (PROFILE + BOT-SKILL + inspect gate)—Print-first delivery you paste into local grok.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Reusable Grok Bot desk that grills a raw idea into a grounded Grok Build brief on Git (PROFILE + BOT-SKILL + inspect gate)—Print-first delivery you paste into local grok.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mtrxdev",
+    "publishedAt": "2026-09-02",
+    "sourceUrl": "https://github.com/mtrxdev/build-brief",
+    "sourceLabel": "mtrxdev · GitHub"
+  },
+  {
+    "slug": "hammeredsmithy-bull-desk-webull-trading",
+    "title": "Bull Desk Webull trading",
+    "headline": "HyperGrok-style seven-agent trading desk ported to Webull OpenAPI for US users—research, size, approve-by-id execution and review Bots with paper sandbox before live keys.",
+    "whatTheyDid": "HyperGrok-style seven-agent trading desk ported to Webull OpenAPI for US users—research, size, approve-by-id execution and review Bots with paper sandbox before live keys.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "HyperGrok-style seven-agent trading desk ported to Webull OpenAPI for US users—research, size, approve-by-id execution and review Bots with paper sandbox before live keys.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "HammeredSmithy",
+    "publishedAt": "2026-08-26",
+    "sourceUrl": "https://github.com/HammeredSmithy/bull-trade",
+    "sourceLabel": "HammeredSmithy · GitHub"
   }
 ]

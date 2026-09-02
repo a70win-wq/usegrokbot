@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 32,
+    "total": 35,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 27,
+    "alreadyIngested": 30,
     "pending": 1
   },
   "cases": [
@@ -430,9 +430,48 @@
       "sourceStatus": "candidate",
       "ingest": {
         "status": "retry",
-        "attempts": 1,
+        "attempts": 2,
         "code": "source_unreadable",
         "reason": "404"
+      }
+    },
+    {
+      "id": "exploregrokbot-market-desk",
+      "title": "ExploreGrokBot market desk",
+      "url": "https://github.com/WebDevJasonCameron/ExploreGrokBot",
+      "sourceSummary": "File-based Grok Bot market-research desk: company mission, analyst agent instructions, scored opportunities, and a decision log under one repo layout.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "build-brief-grok-build-desk",
+      "title": "build-brief Grok Build desk",
+      "url": "https://github.com/mtrxdev/build-brief",
+      "sourceSummary": "Reusable Grok Bot desk that grills a raw idea into a grounded Grok Build brief on Git (PROFILE + BOT-SKILL + inspect gate)—Print-first delivery you paste into local grok.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "bull-desk-webull-trading",
+      "title": "Bull Desk Webull trading",
+      "url": "https://github.com/HammeredSmithy/bull-trade",
+      "sourceSummary": "HyperGrok-style seven-agent trading desk ported to Webull OpenAPI for US users—research, size, approve-by-id execution and review Bots with paper sandbox before live keys.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
       }
     }
   ]
