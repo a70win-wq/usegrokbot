@@ -53687,5 +53687,272 @@
     "xPostUrl": "https://x.com/Monica_5a/status/2094852449467306013",
     "sourceUrl": "https://x.com/Monica_5a/status/2094852449467306013",
     "sourceLabel": "乔老紫Monica on X"
+  },
+  {
+    "slug": "petergyang-which-ai-personal-agent-can-you-trust-with-your",
+    "title": "Which AI personal agent can you trust with your data?",
+    "headline": "Which AI personal agent can you trust with your data?",
+    "body": "Which AI personal agent can you trust with your data?\n\nIn my new tutorial, I compared Instinct, Grok Bot, ChatGPT, and Hermes to answer:\n\n1. What do their privacy policies actually say about how they're handling your data?\n\n2. How safe is it to log in and complete 2FA on a cloud computer?\n\n3. What’s the actual risk here, based on a real example?\n\nI also show how to use AI to audit and remove 3rd party apps connected to your Google Account. I had more than 80. 🥲\n\n📌 Watch the full video now: https://youtu.be/6Yeo6M8-W_8",
+    "whatTheyDid": "Which AI personal agent can you trust with your data?",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Which AI personal agent can you trust with your data?",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Peter Yang",
+    "handle": "petergyang",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/petergyang/status/2095178695552139625",
+    "sourceUrl": "https://x.com/petergyang/status/2095178695552139625",
+    "sourceLabel": "Peter Yang on X"
+  },
+  {
+    "slug": "davidtavenner-i-just-installed-grokbot-on-my-android",
+    "title": "I just installed Grokbot on my Android!",
+    "headline": "I just installed Grokbot on my Android!",
+    "body": "I just installed Grokbot on my Android! Now I can keep communication with and work with my team away from my desktop! It was possible to communicate with my Grok Bot but I had to email it an the application was limited.",
+    "whatTheyDid": "I just installed Grokbot on my Android!",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I just installed Grokbot on my Android!",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "David Tavenner",
+    "handle": "davidtavenner",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/davidtavenner/status/2095172063791354144",
+    "sourceUrl": "https://x.com/davidtavenner/status/2095172063791354144",
+    "sourceLabel": "David Tavenner on X"
+  },
+  {
+    "slug": "jackycufe-grok-bot-1",
+    "title": "如何用上 Grok Bot？ 1",
+    "headline": "如何用上 Grok Bot？ 1.",
+    "body": "如何用上 Grok Bot？\n\n1. X：\n•X Premium ≈ $8/月：普通 Grok 聊天，不能开 Grok Bot\n•X Premium+ ≈ $40/月：更好的 X + 更高 Grok 聊天限额；可以关联开 Grok Bot，额度中低\n\n2. Grok App：\n•SuperGrok Lite ≈ $10/月：不能开 Grok Bot\n•SuperGrok ≈ $30/月：可关联，Grok Bot 额度中低\n•SuperGrok Plus ≈ $100/月：可关联，额度中高\n•SuperGrok Heavy ≈ $300/月：可关联，额度最高档之一；官方还写可另领 X Premium+\n\n3. Cursor：\n•Hobby：免费，没有 Grok Bot\n•Cursor Pro：$20/月，Grok Bot 额度中\n•Cursor Pro+：$60/月，额度中高\n•Cursor Ultra：$200/月，额度最高档之一\n•Cursor Teams：$40/人/月，每人自带 Grok",
+    "whatTheyDid": "如何用上 Grok Bot？ 1.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "如何用上 Grok Bot？ 1.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jacky",
+    "handle": "JackyCufe",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/JackyCufe/status/2095020209962885373",
+    "sourceUrl": "https://x.com/JackyCufe/status/2095020209962885373",
+    "sourceLabel": "Jacky on X"
+  },
+  {
+    "slug": "pysimpom-vpn-vpn-vpn-vpn-play",
+    "title": "孩子们，你只需要先不开vpn去登录，登录的时候再开vpn，登录完立刻关vpn 只要vpn是关着的，它就不会跳转play商店",
+    "headline": "孩子们，你只需要先不开vpn去登录，登录的时候再开vpn，登录完立刻关vpn 只要vpn是关着的，它就不会跳转play商店......",
+    "body": "孩子们，你只需要先不开vpn去登录，登录的时候再开vpn，登录完立刻关vpn\n只要vpn是关着的，它就不会跳转play商店......\n最离谱的是，你不需要vpn就能用grok bot \n安装包我拿Apk mirror下的\n是的，安卓上的grok bot不需要vpn也能用......",
+    "whatTheyDid": "孩子们，你只需要先不开vpn去登录，登录的时候再开vpn，登录完立刻关vpn 只要vpn是关着的，它就不会跳转play商店......",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "孩子们，你只需要先不开vpn去登录，登录的时候再开vpn，登录完立刻关vpn 只要vpn是关着的，它就不会跳转play商店......",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "fake sensei",
+    "handle": "pysimpom",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/pysimpom/status/2095179739866775625",
+    "sourceUrl": "https://x.com/pysimpom/status/2095179739866775625",
+    "sourceLabel": "fake sensei on X"
+  },
+  {
+    "slug": "hyhongyu8-grok-bot-1",
+    "title": "普通人如何用 Grok Bot 赚钱？ 1",
+    "headline": "普通人如何用 Grok Bot 赚钱？ 1.",
+    "body": "普通人如何用 Grok Bot 赚钱？\n\n1. 出售 X 情报服务\n\n这是最适合 Grok Bot 的切入口。\n\n你可以选择一个垂直行业，例如：\n\nAI 工具\n跨境电商\n游戏\n独立开发\n消费品牌\n加密行业\n\n让 Bot 每天追踪：\n\n突然升温的话题\n竞品发布的新产品\n用户集中抱怨的问题\n高互动内容的共同结构\n潜在客户发布的需求\n值得参与的讨论\n\n最后交付一份“每日机会简报”，卖给创作者、品牌或创业团队。\n\n客户付费购买的不是新闻，而是经过筛选、可以采取行动的信息。\n\n2. 给创作者搭建内容工作台\n\n很多创作者不缺想法，缺的是稳定执行。\n\n可以用 Grok Bot 完成：\n\n热点追踪 → 素材收集 → 选题筛选 → 初稿整理 → 评论反馈汇总 → 数据复盘。\n\n你负责最终判断和内容质量，Bot 负责大量重复劳动。\n\n收费方式可以是：\n一次性搭建费＋月度维护费。\n\n3. 成为小公司的 AI 销售助理\n\n小团队通常没有专门的销售运营人员。\n\n你可以让 Bot：\n\n研究潜在客户\n判断客户是否匹配\n整理联系人背景\n准备个性化沟通草稿\n更新 CRM\n提醒长期没有推进的客户\n\n你卖的不是“AI 代发邮件”，而是一套稳定的销售跟进系统。\n\n4. 帮企业部署数字员工\n\n找到企业里每天重复发生的一项工作，让 Grok Bot 观察完整流程，再把它变成可以持续运行的 Routine。\n\n例如：\n\n每周竞品报告\n客户会议前的背景调查\n售后问题分类\n发票信息整理\n社媒评论汇总\n项目进度提醒\n\n交付内容包括账号配置、流程设计、权限控制、测试和维护。\n\n一个人不需要开发完整 SaaS，也可以通过“部署＋维护”获得持续收入。",
+    "whatTheyDid": "普通人如何用 Grok Bot 赚钱？ 1.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "普通人如何用 Grok Bot 赚钱？ 1.",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "红鱼",
+    "handle": "HYhongyu8",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/HYhongyu8/status/2095168214796001407",
+    "sourceUrl": "https://x.com/HYhongyu8/status/2095168214796001407",
+    "sourceLabel": "红鱼 on X",
+    "format": "article"
+  },
+  {
+    "slug": "im-morganwang-grok-bot-prompt",
+    "title": "用 Grok Bot 不是写 prompt 工程。是建一个有名字、有岗位的同事。 丢给它一件能做完的事：去哪个站，拿什么，做到哪一步停下来给你...",
+    "headline": "用 Grok Bot 不是写 prompt 工程。是建一个有名字、有岗位的同事。 丢给它一件能做完的事：去哪个站，拿什么，做到哪一步停下来给你批。登录密码它看不到，会把电脑交回给你自己填。 电脑在云上，你合上笔记本它还在干。同一件事做顺了，就存成定时任务。 你们第一件交给它的，是啥？",
+    "body": "用 Grok Bot 不是写 prompt 工程。是建一个有名字、有岗位的同事。\n\n丢给它一件能做完的事：去哪个站，拿什么，做到哪一步停下来给你批。登录密码它看不到，会把电脑交回给你自己填。\n\n电脑在云上，你合上笔记本它还在干。同一件事做顺了，就存成定时任务。\n\n你们第一件交给它的，是啥？",
+    "whatTheyDid": "用 Grok Bot 不是写 prompt 工程。是建一个有名字、有岗位的同事。 丢给它一件能做完的事：去哪个站，拿什么，做到哪一步停下来给你批。登录密码它看不到，会把电脑交回给你自己填。 电脑在云上，你合上笔记本它还在干。同一件事做顺了，就存成定时任务。 你们第一件交给它的，是啥？",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "用 Grok Bot 不是写 prompt 工程。是建一个有名字、有岗位的同事。 丢给它一件能做完的事：去哪个站，拿什么，做到哪一步停下来给你批。登录密码它看不到，会把电脑交回给你自己填。 电脑在云上，你合上笔记本它还在干。同一件事做顺了，就存成定时任务。 你们第一件交给它的，是啥？",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "MorganWang",
+    "handle": "im_morganwang",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/im_morganwang/status/2095165825871397159",
+    "sourceUrl": "https://x.com/im_morganwang/status/2095165825871397159",
+    "sourceLabel": "MorganWang on X"
+  },
+  {
+    "slug": "king1818888-grok-bot-7-agent-api-agent",
+    "title": "用 Grok Bot 搭内容团队： 先定策略，再拆成只干一件事的 7 个 Agent，最后用日历+API 发草稿、人只审批。 Agent...",
+    "headline": "用 Grok Bot 搭内容团队： 先定策略，再拆成只干一件事的 7 个 Agent，最后用日历+API 发草稿、人只审批。 Agent 修不好烂策略，只会更快执行烂策略。 少发、真事、一个观点，比凑满 12 篇重要",
+    "body": "用 Grok Bot 搭内容团队：\n先定策略，再拆成只干一件事的 7 个 Agent，最后用日历+API 发草稿、人只审批。\n\nAgent 修不好烂策略，只会更快执行烂策略。\n少发、真事、一个观点，比凑满 12 篇重要",
+    "whatTheyDid": "用 Grok Bot 搭内容团队： 先定策略，再拆成只干一件事的 7 个 Agent，最后用日历+API 发草稿、人只审批。 Agent 修不好烂策略，只会更快执行烂策略。 少发、真事、一个观点，比凑满 12 篇重要",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "用 Grok Bot 搭内容团队： 先定策略，再拆成只干一件事的 7 个 Agent，最后用日历+API 发草稿、人只审批。 Agent 修不好烂策略，只会更快执行烂策略。 少发、真事、一个观点，比凑满 12 篇重要",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Kimberly",
+    "handle": "king1818888",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/king1818888/status/2095145276235502023",
+    "sourceUrl": "https://x.com/king1818888/status/2095145276235502023",
+    "sourceLabel": "Kimberly on X"
+  },
+  {
+    "slug": "supermam88-grok-bot-8-16g-128g-debian",
+    "title": "有兄弟在用Grok bot还不知道背后送的是一台一直在线的云电脑 8 核 / 16G / 128G 盘 Debian，合上笔记本它还在跑。...",
+    "headline": "有兄弟在用Grok bot还不知道背后送的是一台一直在线的云电脑 8 核 / 16G / 128G 盘 Debian，合上笔记本它还在跑。 右上角那个显示器点开，就是这台机的屏幕。 能看它点浏览器、接管登录验证码，也能挂定时任务。 @elonmusk @X @grok @bot 马斯克老表真的给力。",
+    "body": "有兄弟在用Grok bot还不知道背后送的是一台一直在线的云电脑\n8 核 / 16G / 128G 盘\nDebian，合上笔记本它还在跑。\n右上角那个显示器点开，就是这台机的屏幕。 能看它点浏览器、接管登录验证码，也能挂定时任务。\n@elonmusk @X @grok @bot \n马斯克老表真的给力。",
+    "whatTheyDid": "有兄弟在用Grok bot还不知道背后送的是一台一直在线的云电脑 8 核 / 16G / 128G 盘 Debian，合上笔记本它还在跑。 右上角那个显示器点开，就是这台机的屏幕。 能看它点浏览器、接管登录验证码，也能挂定时任务。 @elonmusk @X @grok @bot 马斯克老表真的给力。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "有兄弟在用Grok bot还不知道背后送的是一台一直在线的云电脑 8 核 / 16G / 128G 盘 Debian，合上笔记本它还在跑。 右上角那个显示器点开，就是这台机的屏幕。 能看它点浏览器、接管登录验证码，也能挂定时任务。 @elonmusk @X @grok @bot 马斯克老表真的给力。",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "BTC钱多多🪂💰",
+    "handle": "superMam88",
+    "publishedAt": "2026-09-02",
+    "xPostUrl": "https://x.com/superMam88/status/2095125925356879899",
+    "sourceUrl": "https://x.com/superMam88/status/2095125925356879899",
+    "sourceLabel": "BTC钱多多🪂💰 on X"
   }
 ]
