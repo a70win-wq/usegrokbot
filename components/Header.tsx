@@ -74,7 +74,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="relative sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-xl">
       <div className="relative z-20 mx-auto flex h-14 max-w-[1240px] items-center justify-between px-5 md:px-8">
         <LocaleLink
           href="/"
