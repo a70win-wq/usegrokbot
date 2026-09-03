@@ -32,7 +32,7 @@ export const messages = {
       aria: "Sponsored by Grok App. Opens in a new tab.",
     },
     nav: {
-      discover: "Discover",
+      discover: "Home",
       useCases: "Use Cases",
       templates: "Templates",
       workflows: "Workflows",
@@ -487,7 +487,7 @@ export const messages = {
       aria: "由 Grok App 贊助，在新分頁開啟。",
     },
     nav: {
-      discover: "發現",
+      discover: "首頁",
       useCases: "使用場景",
       templates: "模板",
       workflows: "工作流程",
@@ -936,7 +936,7 @@ export const messages = {
       aria: "由 Grok App 赞助，在新标签页打开。",
     },
     nav: {
-      discover: "发现",
+      discover: "首页",
       useCases: "使用场景",
       templates: "模板",
       workflows: "工作流",
