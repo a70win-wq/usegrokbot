@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { IdentityMascot } from "@/components/IdentityMascot";
 import { TemplatesModeNav } from "@/components/TemplatesModeNav";
 import {
   identityClusters,
@@ -64,19 +65,22 @@ export function TemplatesIdentityIndex({
                         <h3 className="text-[18px] font-medium tracking-tight text-ink">
                           {localizeText(identity.name, locale)}
                         </h3>
-                        <span className="shrink-0 font-mono text-xs tabular-nums text-faint">
-                          {interpolateIdentityCopy(copy.templateCount, { n: count })}
-                        </span>
+                        <IdentityMascot slug={identity.slug} paper="var(--card)" />
                       </div>
                       <p className="mt-3 text-sm leading-6 text-mute">
                         {localizeText(identity.description, locale)}
                       </p>
-                      <span className="mt-auto flex items-center gap-1.5 pt-5 text-sm font-medium text-accent">
-                        {copy.openIdentity}
-                        <ArrowRight
-                          className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                          aria-hidden
-                        />
+                      <span className="mt-auto flex items-end justify-between gap-3 pt-5">
+                        <span className="flex items-center gap-1.5 text-sm font-medium text-accent">
+                          {copy.openIdentity}
+                          <ArrowRight
+                            className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                            aria-hidden
+                          />
+                        </span>
+                        <span className="shrink-0 font-mono text-xs tabular-nums text-faint">
+                          {interpolateIdentityCopy(copy.templateCount, { n: count })}
+                        </span>
                       </span>
                     </Link>
                   );
@@ -100,17 +104,22 @@ export function TemplatesIdentityIndex({
                 <Link
                   key={identity.slug}
                   href={withLocale("/templates/" + identity.slug, urlLocale)}
-                  className="group flex min-h-14 items-center justify-between gap-3 rounded-[12px] border border-line px-4 py-3 text-sm text-ink hover:border-line-strong hover:bg-card"
+                  className="group flex min-h-[76px] items-center gap-3 rounded-[12px] border border-line px-4 py-3 text-sm text-ink hover:border-line-strong hover:bg-card"
                   data-template-identity={identity.slug}
                 >
-                  <span>{localizeText(identity.name, locale)}</span>
-                  <span className="flex shrink-0 items-center gap-2 font-mono text-xs text-faint">
-                    {interpolateIdentityCopy(copy.templateCount, { n: count })}
-                    <ArrowRight
-                      className="size-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                      aria-hidden
-                    />
+                  <IdentityMascot slug={identity.slug} size={36} paper="var(--canvas)" />
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[15px] font-medium">
+                      {localizeText(identity.name, locale)}
+                    </span>
+                    <span className="mt-1 block font-mono text-xs text-faint">
+                      {interpolateIdentityCopy(copy.templateCount, { n: count })}
+                    </span>
                   </span>
+                  <ArrowRight
+                    className="size-3.5 shrink-0 text-faint transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-accent"
+                    aria-hidden
+                  />
                 </Link>
               );
             })}

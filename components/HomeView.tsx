@@ -8,6 +8,7 @@ import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { DiscoverFeed } from "@/components/DiscoverFeed";
 import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
+import { IdentityMascot } from "@/components/IdentityMascot";
 import { LocaleLink } from "@/components/LocaleLink";
 import { CensusNumber } from "@/components/PostCensus";
 import { getDiscoverStory } from "@/data/discover";
@@ -207,14 +208,17 @@ function HomeViewContent({
                 <h3 className="text-[19px] leading-6 font-medium tracking-[-0.02em] text-ink group-hover:text-accent">
                   {localizeText(identity.name, locale)}
                 </h3>
-                <ArrowUpRight aria-hidden className="mt-0.5 size-4 shrink-0 text-faint group-hover:text-accent" />
+                <IdentityMascot slug={identity.slug} paper="var(--card)" />
               </div>
               <p className="mt-3 text-[15px] leading-6 text-mute">
                 {localizeText(identity.description, locale)}
               </p>
-              <p className="mt-auto pt-5 font-mono text-[13px] font-medium text-faint">
-                {t("home.identityTemplateCount", { n: templateCountForIdentity(identity.slug) })}
-              </p>
+              <div className="mt-auto flex items-end justify-between gap-3 pt-5">
+                <p className="font-mono text-[13px] font-medium text-faint">
+                  {t("home.identityTemplateCount", { n: templateCountForIdentity(identity.slug) })}
+                </p>
+                <ArrowUpRight aria-hidden className="size-4 shrink-0 text-faint group-hover:text-accent" />
+              </div>
             </LocaleLink>
           ))}
         </div>

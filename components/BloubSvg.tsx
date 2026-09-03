@@ -79,9 +79,11 @@ export function BloubSvg({
       <defs>
         <mask id={maskId} maskUnits="userSpaceOnUse" x={-box} y={-box} width={box * 2} height={box * 2}>
           <path d={frame.bodyPath} fill="#fff" />
-          {frame.eyes.map((eye, index) => (
-            <path key={index} d={eye.d} transform={eye.matrix} opacity={eye.alpha} fill="#000" />
-          ))}
+          <g data-bot-eyes>
+            {frame.eyes.map((eye, index) => (
+              <path key={index} d={eye.d} transform={eye.matrix} opacity={eye.alpha} fill="#000" />
+            ))}
+          </g>
           {frame.notch ? <circle cx={frame.notch.x} cy={frame.notch.y} r={frame.notch.r} fill="#000" /> : null}
         </mask>
         {frame.arcs.map((arc) => (
@@ -122,7 +124,7 @@ export function BloubSvg({
         : null}
 
       <g opacity={frame.bodyAlpha}>
-        <path d={frame.bodyPath} fill={paper} />
+        <path data-bot-body d={frame.bodyPath} fill={paper} />
         <g mask={`url(#${maskId})`}>
           <rect x={-box} y={-box} width={box * 2} height={box * 2} fill={ink} />
         </g>

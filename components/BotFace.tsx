@@ -36,18 +36,24 @@ export function BotFace({
   className,
   look = "none",
   paper = "var(--canvas)",
+  shape,
+  expression,
 }: {
   color?: string;
   size?: number;
   className?: string;
   look?: "none" | "auto";
   paper?: string;
+  shape?: string;
+  expression?: string;
 }) {
   return (
     <BloubBot
       size={size}
       color={color}
       paper={paper}
+      shape={shape}
+      expression={expression}
       crop="icon"
       frozenAt={look === "auto" ? undefined : 1}
       className={className}
