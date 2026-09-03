@@ -101,7 +101,7 @@ function CategoryRadio({
       />
       <span
         className={cn(
-          "block min-h-[132px] rounded-2xl border p-5 text-left transition-colors peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent md:p-6",
+          "block min-h-[132px] rounded-2xl border p-5 text-left peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent md:p-6",
           checked
             ? "border-accent bg-accent-soft"
             : "border-line bg-elevated hover:border-line-strong",
