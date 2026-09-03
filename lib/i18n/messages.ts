@@ -48,6 +48,9 @@ export const messages = {
       submitShort: "Submit",
       openMenu: "Open menu",
       closeMenu: "Close menu",
+      menuLabel: "Main navigation",
+      exploreGroup: "Explore",
+      moreGroup: "More",
     },
     copy: {
       prompt: "Copy Prompt",
@@ -500,6 +503,9 @@ export const messages = {
       submitShort: "提交",
       openMenu: "開啟選單",
       closeMenu: "關閉選單",
+      menuLabel: "主選單",
+      exploreGroup: "開始探索",
+      moreGroup: "更多內容",
     },
     copy: {
       prompt: "複製提示詞",
@@ -946,6 +952,9 @@ export const messages = {
       submitShort: "提交",
       openMenu: "打开菜单",
       closeMenu: "关闭菜单",
+      menuLabel: "主菜单",
+      exploreGroup: "开始探索",
+      moreGroup: "更多内容",
     },
     copy: {
       prompt: "复制提示词",

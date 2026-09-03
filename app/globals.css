@@ -232,7 +232,8 @@ html[data-theme="dark"] .featured-glow {
 }
 
 html[data-hero-hold] [data-cursor-bot],
-html[data-boot="1"] [data-cursor-bot] {
+html[data-boot="1"] [data-cursor-bot],
+html:has(#mobile-navigation) [data-cursor-bot] {
   opacity: 0 !important;
 }
 

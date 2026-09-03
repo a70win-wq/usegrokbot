@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/Footer";
@@ -97,8 +98,12 @@ export default async function LocaleLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
-        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
-        <script dangerouslySetInnerHTML={{ __html: bootBootScript }} />
+        <Script id="usegrokbot-theme-boot" strategy="beforeInteractive">
+          {themeBootScript}
+        </Script>
+        <Script id="usegrokbot-boot" strategy="beforeInteractive">
+          {bootBootScript}
+        </Script>
         <Providers>
           <Header />
           <SponsorStrip />

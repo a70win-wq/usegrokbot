@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { Menu, Search, X } from "lucide-react";
+import { ArrowRight, Languages, Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
@@ -14,13 +14,25 @@ import { SEARCH_UI_ENABLED } from "@/lib/search";
 import { SearchBar } from "./SearchBar";
 import { ThemeToggle } from "./ThemeToggle";
 
+type NavItem = {
+  href: string;
+  label: string;
+  match?: (current: string) => boolean;
+};
+
+function isNavItemActive(item: NavItem, current: string) {
+  return item.match
+    ? item.match(current)
+    : current === item.href || current.startsWith(`${item.href}/`);
+}
+
 export function Header() {
   const pathname = usePathname();
   const path = stripLocalePrefix(pathname);
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
 
-  const nav = [
+  const nav: NavItem[] = [
     {
       href: "/",
       label: t("nav.discover"),
@@ -69,13 +81,12 @@ export function Header() {
 
         <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
           {nav.map((item) => {
-            const active = "match" in item && item.match
-              ? item.match(path)
-              : path === item.href || path.startsWith(`${item.href}/`);
+            const active = isNavItemActive(item, path);
             return (
               <LocaleLink
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={cn(
                   "rounded-lg px-3 py-1.5 text-[13px] text-mute transition hover:text-ink",
                   active && "text-ink",
@@ -98,6 +109,7 @@ export function Header() {
             type="button"
             className="inline-flex size-9 items-center justify-center rounded-lg text-mute xl:hidden"
             aria-expanded={open}
+            aria-controls="mobile-navigation"
             aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
             onClick={() => setOpen((value) => !value)}
           >
@@ -107,24 +119,79 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-elevated px-5 py-4 xl:hidden">
-          <nav className="flex flex-col gap-1" aria-label="Mobile">
-            {nav.map((item) => (
+        <div
+          id="mobile-navigation"
+          className="border-t border-line bg-elevated px-5 py-4 shadow-[var(--shadow-menu)] xl:hidden"
+        >
+          <nav aria-label={t("nav.menuLabel")}>
+            <div className="grid grid-cols-2 gap-x-6">
+              {[
+                { label: t("nav.exploreGroup"), items: nav.slice(0, 4), start: 1 },
+                { label: t("nav.moreGroup"), items: nav.slice(4, 7), start: 5 },
+              ].map((group) => (
+                <div key={group.label} className="min-w-0">
+                  <p className="mb-1 px-1 text-[11px] font-medium tracking-[0.12em] text-faint uppercase">
+                    {group.label}
+                  </p>
+                  <ul className="border-t border-line">
+                    {group.items.map((item, index) => {
+                      const active = isNavItemActive(item, path);
+                      return (
+                        <li key={item.href} className="border-b border-line">
+                          <LocaleLink
+                            href={item.href}
+                            aria-current={active ? "page" : undefined}
+                            className={cn(
+                              "flex min-h-11 items-center gap-2 px-1 text-[14px] transition-colors hover:text-accent",
+                              active ? "font-medium text-accent" : "text-ink",
+                            )}
+                            onClick={() => setOpen(false)}
+                          >
+                            <span
+                              aria-hidden="true"
+                              className={cn(
+                                "w-5 shrink-0 text-[10px] tabular-nums",
+                                active ? "text-accent" : "text-faint",
+                              )}
+                            >
+                              {String(group.start + index).padStart(2, "0")}
+                            </span>
+                            <span className="min-w-0">{item.label}</span>
+                            {active ? (
+                              <span aria-hidden="true" className="ml-auto size-1.5 shrink-0 rounded-full bg-accent" />
+                            ) : null}
+                          </LocaleLink>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 flex items-center gap-2">
               <LocaleLink
-                key={item.href}
-                href={item.href}
-                className="rounded-lg px-3 py-3 text-sm text-ink"
+                href="/submit"
+                aria-current={path.startsWith("/submit") ? "page" : undefined}
+                className="flex h-11 min-w-0 flex-1 items-center justify-between rounded-[10px] border border-line bg-card px-4 text-[13px] font-medium text-ink transition-colors hover:border-line-strong"
                 onClick={() => setOpen(false)}
               >
-                {item.label}
+                <span>{t("nav.submit")}</span>
+                <ArrowRight aria-hidden="true" className="size-3.5 shrink-0 text-mute" strokeWidth={1.75} />
               </LocaleLink>
-            ))}
-            <div className="px-3 py-3">
-              <GetGrokBot variant="link" />
+              <GetGrokBot
+                variant="outline"
+                className="min-w-0 flex-1 justify-center bg-card px-3 text-[13px]"
+              />
             </div>
           </nav>
-          <div className="mt-4">
-            <LanguageSwitch />
+
+          <div className="mt-3 flex items-center justify-between gap-3 border-t border-line pt-3">
+            <span className="inline-flex items-center gap-1.5 text-[12px] text-mute">
+              <Languages aria-hidden="true" className="size-3.5" strokeWidth={1.75} />
+              {t("lang.label")}
+            </span>
+            <LanguageSwitch variant="menu" onSelect={() => setOpen(false)} />
           </div>
         </div>
       ) : null}
