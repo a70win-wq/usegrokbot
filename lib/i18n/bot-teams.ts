@@ -1,14 +1,28 @@
-import type { BotTeam, BotTeamRoleId } from "@/data/bot-teams";
+import type {
+  BotTeam,
+  BotTeamCategory,
+  BotTeamCategorySlug,
+  BotTeamRoleId,
+} from "@/data/bot-teams";
+import { getDiscoverStory } from "@/data/discover";
+import { localizeDiscoverStory } from "./discover";
 import type { Locale } from "./types";
 
+export type LocalizedBotTeamCategory = BotTeamCategory & {
+  title: string;
+  description: string;
+};
+
 export type LocalizedBotTeamRole = {
-  id: BotTeamRoleId;
+  id: string;
+  roleId: BotTeamRoleId;
   name: string;
   action: string;
   handoff: string;
+  count: number;
 };
 
-export type LocalizedBotTeam = BotTeam & {
+export type LocalizedBotTeam = Omit<BotTeam, "title" | "roles"> & {
   title: string;
   summary: string;
   outcome: string;
@@ -21,15 +35,22 @@ export type BotTeamsPageCopy = {
   eyebrow: string;
   title: string;
   body: string;
-  count: string;
+  count: (teams: number, categories: number, sources: number, posts: number) => string;
+  filterLabel: string;
+  allFilter: string;
+  featuredFilter: string;
+  chooseTitle: string;
+  chooseBody: string;
+  showing: (count: number) => string;
   oneBotTitle: string;
   oneBotBody: string;
   teamTitle: string;
   teamBody: string;
-  chooseTitle: string;
-  chooseBody: string;
   bots: (count: number) => string;
   evidence: (count: number) => string;
+  verifiedSetup: string;
+  officialExample: string;
+  namedRoles: (named: number, total: number) => string;
   open: string;
   guideEyebrow: string;
   guideTitle: string;
@@ -53,556 +74,450 @@ export type BotTeamsPageCopy = {
   allTeams: string;
 };
 
-type TeamCopy = Omit<LocalizedBotTeam, keyof BotTeam> & {
-  roles: readonly LocalizedBotTeamRole[];
+type RoleCopy = { name: string; action: string };
+
+const enRoles: Record<BotTeamRoleId, RoleCopy> = {
+  coordinator: { name: "Coordinator Bot", action: "Routes the goal, keeps the shared context, and only interrupts you for a decision." },
+  manager: { name: "Manager Bot", action: "Owns one area, keeps its queue clear, and reports the few facts the team needs." },
+  researcher: { name: "Research Bot", action: "Finds relevant material, keeps the source, and marks anything it cannot verify." },
+  writer: { name: "Writer Bot", action: "Turns checked material into a draft that follows the requested voice and format." },
+  editor: { name: "Editor Bot", action: "Cuts weak lines, checks structure, and returns a tighter version without publishing it." },
+  designer: { name: "Design Bot", action: "Turns an approved brief into a consistent visual, page, or creative pack." },
+  publisher: { name: "Publisher Bot", action: "Prepares the final package and schedule, then waits at the publishing gate." },
+  scheduler: { name: "Scheduler Bot", action: "Owns timing and keeps approved items in the right order." },
+  analyst: { name: "Analysis Bot", action: "Compares the evidence, explains what changed, and highlights the next decision." },
+  auditor: { name: "Audit Bot", action: "Challenges claims, scopes, numbers, and anything that does not agree." },
+  archivist: { name: "Archive Bot", action: "Keeps durable context, decisions, and source material easy for the team to find again." },
+  operations: { name: "Operations Bot", action: "Keeps recurring admin, follow-ups, and exceptions moving in one visible queue." },
+  finance: { name: "Finance Bot", action: "Checks money records and prepares a clear exception list without moving funds." },
+  support: { name: "Support Bot", action: "Sorts customer questions, drafts answers, and escalates anything sensitive." },
+  inbox: { name: "Inbox Bot", action: "Finds the right messages, prepares drafts, and keeps risky actions behind approval." },
+  calendar: { name: "Calendar Bot", action: "Finds clashes, prepares reminders, and leaves booking changes for approval." },
+  community: { name: "Community Bot", action: "Monitors replies and requests, then separates useful conversations from noise." },
+  social: { name: "Social Bot", action: "Finds timely ideas and prepares channel-ready drafts without posting them early." },
+  marketing: { name: "Marketing Bot", action: "Connects the audience, message, channel, and success measure into one plan." },
+  seo: { name: "SEO Bot", action: "Finds search gaps, prepares fixes, and keeps the evidence behind every recommendation." },
+  ads: { name: "Ads Bot", action: "Reviews campaigns and prepares recommendations without changing live spend." },
+  "account-research": { name: "Account Research Bot", action: "Finds the right company, person, and a sourced reason to contact them." },
+  outreach: { name: "Outreach Bot", action: "Drafts a short, relevant message and hands it to a review queue." },
+  crm: { name: "CRM Bot", action: "Removes duplicates, records replies, and keeps the next step visible." },
+  recruiter: { name: "Recruiting Bot", action: "Finds candidates for one clear lane and keeps the match evidence attached." },
+  "product-manager": { name: "Product Manager Bot", action: "Turns the need into a small spec with a clear result and acceptance checks." },
+  "engineering-manager": { name: "Engineering Manager Bot", action: "Splits a build into owned parts and keeps dependencies in order." },
+  engineer: { name: "Engineer Bot", action: "Builds and tests one owned part, then returns a small change with evidence." },
+  devops: { name: "Delivery Bot", action: "Prepares the preview or release package and stops before production changes." },
+  reviewer: { name: "Review Bot", action: "Checks an output it did not create and sends weak work back with a reason." },
+  qa: { name: "QA Bot", action: "Reproduces issues, runs the checks, and records what passed or failed." },
+  data: { name: "Data Bot", action: "Pulls the named numbers, keeps definitions stable, and returns a compact table." },
+  security: { name: "Safety Bot", action: "Looks for dangerous conditions and blocks action when the evidence is not safe." },
+  risk: { name: "Risk Bot", action: "Applies hard limits and can reject an idea before any irreversible step." },
+  execution: { name: "Execution Bot", action: "Prepares the final action only after every required check has passed." },
+  credit: { name: "Credit Bot", action: "Reviews a flagged order and prepares the evidence needed for a decision." },
+  inventory: { name: "Inventory Bot", action: "Checks stock, incoming units, and whether demand can be fulfilled." },
+  returns: { name: "Returns Bot", action: "Separates product problems from traffic problems and shows the return pattern." },
+  shopping: { name: "Shopping Bot", action: "Compares real options and prices, then waits before buying." },
+  travel: { name: "Travel Bot", action: "Compares routes or stays against the stated dates, budget, and constraints." },
+  family: { name: "Family Bot", action: "Keeps household needs, plans, and open questions together without acting early." },
+  teacher: { name: "Teaching Bot", action: "Turns checked material into a clear lesson, practice set, or preparation guide." },
+  specialist: { name: "Specialist Bot", action: "Brings one narrow area of expertise into the shared result." },
 };
 
-const enRoles = {
-  executive: [
-    {
-      id: "coordinator",
-      name: "Chief of Staff",
-      action: "Turns your priorities into a shared queue and assigns each update to one owner.",
-      handoff: "Sends messages to the Inbox Bot and meetings to the Calendar Bot.",
-    },
-    {
-      id: "inbox",
-      name: "Inbox Bot",
-      action: "Sorts new messages, drafts replies, and flags anything that needs your judgment.",
-      handoff: "Adds urgent threads and reply drafts to the daily brief.",
-    },
-    {
-      id: "calendar",
-      name: "Calendar Bot",
-      action: "Finds conflicts and prepares the people, history, and agenda for each meeting.",
-      handoff: "Adds meeting packs and schedule changes to the daily brief.",
-    },
-    {
-      id: "briefing",
-      name: "Briefing Bot",
-      action: "Combines the team's updates into one short, sourced readout.",
-      handoff: "Returns one brief with only the decisions that need you.",
-    },
-  ],
-  content: [
-    {
-      id: "coordinator",
-      name: "Content Lead",
-      action: "Chooses the goal, keeps the voice consistent, and moves each piece through the team.",
-      handoff: "Gives a clear topic and success measure to the Research Bot.",
-    },
-    {
-      id: "researcher",
-      name: "Research Bot",
-      action: "Finds the angle, source material, and claims worth using.",
-      handoff: "Hands a sourced outline to the Writer Bot.",
-    },
-    {
-      id: "writer",
-      name: "Writer Bot",
-      action: "Turns the outline into a finished draft in your voice.",
-      handoff: "Hands approved copy and visual notes to the Visual Bot.",
-    },
-    {
-      id: "visual",
-      name: "Visual Bot",
-      action: "Builds the image or video package around the approved copy.",
-      handoff: "Sends a review-ready content pack to the Publisher Bot.",
-    },
-    {
-      id: "publisher",
-      name: "Publisher Bot",
-      action: "Checks the schedule and prepares the final post without sending it early.",
-      handoff: "Asks you for the final yes before anything is published.",
-    },
-  ],
-  sales: [
-    {
-      id: "coordinator",
-      name: "Sales Lead",
-      action: "Sets the ideal customer, offer, exclusions, and approval rules.",
-      handoff: "Gives the account list and research rules to the Account Research Bot.",
-    },
-    {
-      id: "account-research",
-      name: "Account Research Bot",
-      action: "Finds the right companies, people, and a real reason to contact them.",
-      handoff: "Hands qualified accounts and source links to the Outreach Bot.",
-    },
-    {
-      id: "outreach",
-      name: "Outreach Bot",
-      action: "Drafts a short, relevant first message for each qualified person.",
-      handoff: "Sends drafts to the CRM Bot as a review queue, not a live campaign.",
-    },
-    {
-      id: "crm",
-      name: "CRM Bot",
-      action: "Removes duplicates, records replies, and keeps the next step visible.",
-      handoff: "Returns one approval list before any message is sent.",
-    },
-  ],
-  product: [
-    {
-      id: "product-manager",
-      name: "Product Manager Bot",
-      action: "Turns a customer problem into a small spec with a clear result.",
-      handoff: "Gives the spec and acceptance checks to the Engineering Manager Bot.",
-    },
-    {
-      id: "engineering-manager",
-      name: "Engineering Manager Bot",
-      action: "Splits the spec into owned parts and keeps dependencies in order.",
-      handoff: "Assigns each part to the right Builder Bot.",
-    },
-    {
-      id: "builders",
-      name: "Builder Bots",
-      action: "Build, test, and return small changes with screenshots and notes.",
-      handoff: "Hand the completed change and test evidence to the Reviewer Bot.",
-    },
-    {
-      id: "reviewer",
-      name: "Reviewer Bot",
-      action: "Checks the result against the spec and looks for risk or missing tests.",
-      handoff: "Returns one review pack and waits for you before merge or release.",
-    },
-  ],
-  research: [
-    {
-      id: "coordinator",
-      name: "Research Chief",
-      action: "Defines the question, date range, source rules, and final format.",
-      handoff: "Splits the question into focused searches for the Scout Bots.",
-    },
-    {
-      id: "scouts",
-      name: "Scout Bots",
-      action: "Search different sources in parallel and save every useful link.",
-      handoff: "Give the evidence table to the Analyst Bot.",
-    },
-    {
-      id: "analyst",
-      name: "Source Auditor",
-      action: "Checks claims, dates, definitions, and numbers that do not agree.",
-      handoff: "Passes only supported findings to the Archivist Bot.",
-    },
-    {
-      id: "archivist",
-      name: "Research Archivist",
-      action: "Turns the checked evidence into a short brief you can find again.",
-      handoff: "Returns the brief with sources, gaps, and the next decision.",
-    },
-  ],
-  operations: [
-    {
-      id: "general-manager",
-      name: "General Manager Bot",
-      action: "Routes recurring company admin to one clear owner and watches exceptions.",
-      handoff: "Sends money questions to Finance and routine follow-ups to Operations.",
-    },
-    {
-      id: "finance",
-      name: "Finance Bot",
-      action: "Matches invoices and receipts, then flags missing details or policy issues.",
-      handoff: "Adds exceptions and draft follow-ups to the shared operations queue.",
-    },
-    {
-      id: "operations",
-      name: "Operations Bot",
-      action: "Keeps renewals, forms, schedules, and supplier follow-ups moving.",
-      handoff: "Passes customer-facing questions to Support and escalations to the manager.",
-    },
-    {
-      id: "support",
-      name: "Support Bot",
-      action: "Drafts routine replies and separates refunds, legal issues, and angry threads.",
-      handoff: "Returns one exception list for human approval.",
-    },
-  ],
-  personal: [
-    {
-      id: "life-door",
-      name: "Life Coordinator",
-      action: "Acts as one front door for family plans, errands, and things to remember.",
-      handoff: "Routes each request to Calendar, Shopping, or Travel.",
-    },
-    {
-      id: "family-calendar",
-      name: "Family Calendar Bot",
-      action: "Finds clashes, prepares reminders, and protects family time.",
-      handoff: "Adds approved plans and missing details to the family brief.",
-    },
-    {
-      id: "shopping",
-      name: "Shopping Bot",
-      action: "Compares prices, checks stock, and prepares a cart without buying.",
-      handoff: "Returns options with price, source, and what needs approval.",
-    },
-    {
-      id: "travel",
-      name: "Travel Bot",
-      action: "Compares routes and stays against the family's real rules.",
-      handoff: "Returns a shortlist and waits before booking or paying.",
-    },
-  ],
-} satisfies Record<string, readonly LocalizedBotTeamRole[]>;
+const hantRoles: Record<BotTeamRoleId, RoleCopy> = {
+  coordinator: { name: "統籌 Bot", action: "分配目標、保留共同背景，只在需要你決定時通知你。" },
+  manager: { name: "主管 Bot", action: "負責一個範圍，整理進度，再回報團隊真正需要的重點。" },
+  researcher: { name: "研究 Bot", action: "尋找相關資料、保留來源，無法核實的內容會清楚標示。" },
+  writer: { name: "寫作 Bot", action: "把核對過的資料整理成符合語氣和格式的草稿。" },
+  editor: { name: "編輯 Bot", action: "刪去薄弱內容、檢查結構，再交回更精簡的版本。" },
+  designer: { name: "設計 Bot", action: "把已確認的簡介製作成一致的視覺、頁面或素材包。" },
+  publisher: { name: "發布 Bot", action: "準備最後版本和時間，發布前停下來等你批准。" },
+  scheduler: { name: "排程 Bot", action: "管理時間，並把已批准的內容放到正確順序。" },
+  analyst: { name: "分析 Bot", action: "比較證據、說明變化，再標出下一個需要決定的事項。" },
+  auditor: { name: "核對 Bot", action: "檢查說法、範圍和數字，找出互相矛盾的內容。" },
+  archivist: { name: "歸檔 Bot", action: "保存長期背景、決定和來源，讓其他 Bot 可以再次找到。" },
+  operations: { name: "營運 Bot", action: "把例行行政、跟進和例外事項集中到清楚的清單。" },
+  finance: { name: "財務 Bot", action: "核對金錢紀錄並整理例外，不會自行移動資金。" },
+  support: { name: "客服 Bot", action: "分類客戶問題、起草回覆，敏感內容會交給你處理。" },
+  inbox: { name: "收件匣 Bot", action: "找出重要訊息、準備草稿，危險操作會留待批准。" },
+  calendar: { name: "行事曆 Bot", action: "找出時間衝突、準備提醒，變更預約前會先詢問。" },
+  community: { name: "社群 Bot", action: "查看回覆與請求，把有用對話和雜訊分開。" },
+  social: { name: "社群內容 Bot", action: "尋找及時題材並準備各平台草稿，不會提早發布。" },
+  marketing: { name: "行銷 Bot", action: "把受眾、訊息、渠道和衡量方式整理成一個計畫。" },
+  seo: { name: "SEO Bot", action: "找出搜尋缺口、準備改善方法，並保留每項建議的證據。" },
+  ads: { name: "廣告 Bot", action: "檢查活動並準備建議，不會自行改動真實預算。" },
+  "account-research": { name: "客戶研究 Bot", action: "找出合適公司、聯絡人，以及有來源的聯絡原因。" },
+  outreach: { name: "外展 Bot", action: "起草簡短而相關的訊息，再放入待審清單。" },
+  crm: { name: "CRM Bot", action: "移除重複資料、記錄回覆，並清楚保留下個步驟。" },
+  recruiter: { name: "招募 Bot", action: "為一個清楚範圍尋找人選，並保留匹配證據。" },
+  "product-manager": { name: "產品經理 Bot", action: "把需要整理成小型規格、清楚結果和驗收條件。" },
+  "engineering-manager": { name: "工程經理 Bot", action: "把製作內容拆成有人負責的小部分，並安排先後次序。" },
+  engineer: { name: "工程 Bot", action: "製作並測試一個清楚部分，再連同證據交回小型修改。" },
+  devops: { name: "交付 Bot", action: "準備預覽或發布包，修改正式環境前會停下來。" },
+  reviewer: { name: "審核 Bot", action: "檢查不是自己製作的內容，並把薄弱部分連同原因退回。" },
+  qa: { name: "QA Bot", action: "重現問題、執行檢查，再記錄通過或失敗的內容。" },
+  data: { name: "數據 Bot", action: "取得指定數字、保持定義一致，再交回精簡表格。" },
+  security: { name: "安全 Bot", action: "尋找危險情況，證據不足時會阻止下一步。" },
+  risk: { name: "風險 Bot", action: "套用明確限制，在任何不可還原步驟前可以拒絕方案。" },
+  execution: { name: "執行 Bot", action: "所有必要檢查通過後，才會準備最後操作。" },
+  credit: { name: "信貸 Bot", action: "檢查被標記的訂單，並準備決定所需的證據。" },
+  inventory: { name: "庫存 Bot", action: "檢查存貨、來貨和需求是否能夠供應。" },
+  returns: { name: "退貨 Bot", action: "分開產品問題和流量問題，並顯示退貨模式。" },
+  shopping: { name: "購物 Bot", action: "比較真實選項和價格，購買前會等待批准。" },
+  travel: { name: "旅行 Bot", action: "依照日期、預算和限制比較路線或住宿。" },
+  family: { name: "家庭 Bot", action: "集中家庭需要、計畫和未決問題，不會提早採取行動。" },
+  teacher: { name: "教學 Bot", action: "把核對過的資料整理成清楚課程、練習或準備指南。" },
+  specialist: { name: "專才 Bot", action: "把一個明確範圍的專業意見加入共同結果。" },
+};
 
-const copy: Record<Locale, Record<string, TeamCopy>> = {
+const categoryCopy: Record<"en" | "zh-Hant", Record<BotTeamCategorySlug, { title: string; description: string }>> = {
   en: {
-    "executive-team": {
-      title: "Executive Team",
-      summary: "Turn your inbox, calendar, and open decisions into one calm daily brief.",
-      outcome: "A daily plan with priorities, prepared replies, meeting notes, and only the decisions that need you.",
-      audience: "Founders and leaders whose day is spread across inboxes, meetings, and team updates.",
-      setupPrompt:
-        "Build an Executive Team with four clear roles: Chief of Staff, Inbox, Calendar, and Briefing. I will speak to the Chief of Staff. Route new messages to Inbox, meetings to Calendar, and combine their checked updates in one daily brief. Show sources and mark every item that needs my decision. Do not send messages, change meetings, delete anything, or spend money until I approve.",
-      roles: enRoles.executive,
-    },
-    "content-team": {
-      title: "Content Team",
-      summary: "Move from a sourced idea to a review-ready post without copying between chats.",
-      outcome: "A complete content pack with sources, finished copy, visuals, timing, and one final approval gate.",
-      audience: "Creators and small teams that need a repeatable publishing rhythm without losing their voice.",
-      setupPrompt:
-        "Build a Content Team with a Content Lead, Researcher, Writer, Visual, and Publisher. The Content Lead owns the outcome and passes each approved handoff forward. Research must keep source links. Writing must follow my examples. The Publisher may prepare the queue but must ask me before anything goes live. Return the finished copy, visual pack, source list, and planned time together.",
-      roles: enRoles.content,
-    },
-    "sales-team": {
-      title: "Sales Team",
-      summary: "Research the right accounts, draft relevant outreach, and keep every next step visible.",
-      outcome: "A clean review queue of qualified accounts, source-backed contact reasons, draft messages, and CRM next steps.",
-      audience: "Founders and small sales teams that need better preparation before sending more messages.",
-      setupPrompt:
-        "Build a Sales Team with a Sales Lead, Account Researcher, Outreach, and CRM Bot. Start from my ideal customer and exclusion list. Keep a source for every reason to contact someone. Draft one short message per qualified person, remove duplicates, and return everything as a review queue. Do not send, enroll, change CRM records, or book a meeting until I approve.",
-      roles: enRoles.sales,
-    },
-    "product-engineering-team": {
-      title: "Product & Engineering Team",
-      summary: "Turn a clear product problem into a tested change and one review pack.",
-      outcome: "A small implementation with test evidence, screenshots, review notes, and one decision before merge or release.",
-      audience: "Product teams and technical founders who want parallel progress without losing review control.",
-      setupPrompt:
-        "Build a Product and Engineering Team with a Product Manager, Engineering Manager, Builder Bots, and an independent Reviewer. The Product Manager writes a small spec and acceptance checks. The Engineering Manager assigns owned parts. Builders return small changes with tests and screenshots. The Reviewer checks work it did not write. Do not merge, deploy, message users, delete data, or spend money until I approve the final review pack.",
-      roles: enRoles.product,
-    },
-    "research-team": {
-      title: "Research Team",
-      summary: "Search in parallel, challenge the claims, and return one brief with sources.",
-      outcome: "A concise research brief that separates facts from judgment, shows conflicting numbers, and keeps every source.",
-      audience: "People making decisions from many sources who need an audit step before the summary.",
-      setupPrompt:
-        "Build a Research Team with a Research Chief, focused Scouts, a Source Auditor, and an Archivist. Define the question and date range first. Scouts must save links and quote only what the source supports. The Auditor checks definitions, dates, and conflicting numbers before the Archivist writes. Return one short brief with sources, disagreements, unknowns, and the next decision. Do not invent a fact or hide uncertainty.",
-      roles: enRoles.research,
-    },
-    "business-operations-team": {
-      title: "Business Operations Team",
-      summary: "Keep finance, admin, suppliers, and support moving through one exception queue.",
-      outcome: "A weekly operations pack with matched records, drafted follow-ups, open exceptions, and actions waiting for approval.",
-      audience: "Small companies where one person still carries finance, admin, and customer follow-up.",
-      setupPrompt:
-        "Build a Business Operations Team with a General Manager, Finance, Operations, and Support Bot. Give each role one lane and use a shared exception queue. Finance checks invoices and receipts. Operations tracks renewals and follow-ups. Support drafts routine replies and flags refunds or legal issues. The General Manager returns one weekly pack. Do not pay, refund, send, delete, or change a live system until I approve.",
-      roles: enRoles.operations,
-    },
-    "personal-family-team": {
-      title: "Personal & Family Team",
-      summary: "Coordinate the calendar, errands, shopping, and travel through one trusted helper.",
-      outcome: "One family brief with schedule clashes, prepared options, reminders, and nothing booked or bought without approval.",
-      audience: "Busy households that want one place for plans while keeping private actions under human control.",
-      setupPrompt:
-        "Build a Personal and Family Team with a Life Coordinator, Family Calendar, Shopping, and Travel Bot. I will speak to the Life Coordinator. Route each request to one specialist and return a short family brief with sources, prices, dates, and anything missing. Use only the accounts and files I approve. Do not message anyone, book, buy, pay, or change a calendar until I approve.",
-      roles: enRoles.personal,
-    },
+    operations: { title: "Operations", description: "Chiefs of staff, company rosters, briefs, and fleet care." },
+    content: { title: "Content", description: "Teams that research, write, edit, design, and prepare publishing." },
+    marketing: { title: "Marketing", description: "Growth, social, launch, agency, and SEO team setups." },
+    sales: { title: "Sales", description: "Prospecting, outreach, CRM, recruiting, and follow-up teams." },
+    engineering: { title: "Engineering", description: "Product, coding, review, QA, and delivery teams." },
+    research: { title: "Research", description: "Source checking, analysis rooms, and overnight intelligence desks." },
+    commerce: { title: "Commerce", description: "Ecommerce, finance review, order checks, and risk-gated desks." },
+    personal: { title: "Personal", description: "Household, family, travel, study, and personal office teams." },
   },
   "zh-Hant": {
-    "executive-team": {
-      title: "管理者團隊",
-      summary: "把收件匣、行事曆和待決定事項整理成一份清楚的每日簡報。",
-      outcome: "每天收到一份計畫，包含優先事項、回覆草稿、會議準備，以及真正需要你決定的項目。",
-      audience: "適合每天要處理大量訊息、會議和團隊更新的創辦人與管理者。",
-      setupPrompt:
-        "建立一組管理者 Bot 團隊，分成幕僚長、收件匣、行事曆和簡報四個角色。我只與幕僚長對話。新訊息交給收件匣 Bot，會議交給行事曆 Bot，再由簡報 Bot 合成每日摘要。每項內容都要保留來源，並標明哪些事項需要我決定。未經我批准，不得寄出訊息、變更會議、刪除資料或付款。",
-      roles: [
-        { id: "coordinator", name: "幕僚長 Bot", action: "把優先事項整理成共用清單，並為每項內容指定一位負責角色。", handoff: "訊息交給收件匣 Bot，會議交給行事曆 Bot。" },
-        { id: "inbox", name: "收件匣 Bot", action: "整理新訊息、起草回覆，並標出需要你判斷的內容。", handoff: "把緊急討論和回覆草稿加入每日簡報。" },
-        { id: "calendar", name: "行事曆 Bot", action: "找出時間衝突，並準備每場會議的人物、背景和議程。", handoff: "把會議準備和時間變更加入每日簡報。" },
-        { id: "briefing", name: "簡報 Bot", action: "把團隊更新合成一份有來源的短摘要。", handoff: "只把真正需要你決定的事項交給你。" },
-      ],
-    },
-    "content-team": {
-      title: "內容團隊",
-      summary: "由有來源的題目開始，一路交接成可以審核的完整內容。",
-      outcome: "一個完整內容包，包含來源、成稿、視覺、發佈時間，以及最後一次人工批准。",
-      audience: "適合需要穩定發佈內容，同時希望保留自己語氣的創作者與小團隊。",
-      setupPrompt:
-        "建立一組內容 Bot 團隊，分成內容主管、研究、寫作、視覺和發佈五個角色。內容主管負責最終結果，並把每個已確認的部分交給下一位。研究必須保留來源，寫作必須參考我的範例。發佈 Bot 可以準備排程，但上線前一定要問我。最後一起交回成稿、視覺檔、來源清單和建議時間。",
-      roles: [
-        { id: "coordinator", name: "內容主管 Bot", action: "決定目標、保持語氣一致，並推進每一份內容。", handoff: "把清楚的題目和成功標準交給研究 Bot。" },
-        { id: "researcher", name: "研究 Bot", action: "找出值得使用的角度、資料和論點。", handoff: "把有來源的大綱交給寫作 Bot。" },
-        { id: "writer", name: "寫作 Bot", action: "依照你的語氣，把大綱寫成完整草稿。", handoff: "把已確認的文案和視覺說明交給視覺 Bot。" },
-        { id: "visual", name: "視覺 Bot", action: "根據已確認的文案製作圖片或影片。", handoff: "把可審核的內容包交給發佈 Bot。" },
-        { id: "publisher", name: "發佈 Bot", action: "檢查時間並準備最後版本，不會提早送出。", handoff: "任何內容上線前，都要先取得你的批准。" },
-      ],
-    },
-    "sales-team": {
-      title: "銷售團隊",
-      summary: "研究合適的客戶、起草有關聯的訊息，並清楚記錄下一步。",
-      outcome: "一份可審核清單，包含合適客戶、聯絡原因與來源、訊息草稿和 CRM 下一步。",
-      audience: "適合希望先提高準備品質，再增加聯絡數量的創辦人與小型銷售團隊。",
-      setupPrompt:
-        "建立一組銷售 Bot 團隊，分成銷售主管、客戶研究、外展和 CRM 四個角色。先依我的理想客戶和排除清單篩選。每個聯絡原因都要保留來源。為每位合適的人起草一則簡短訊息，移除重複資料，再整理成待審清單。未經我批准，不得寄出、加入推廣序列、修改 CRM 或預約會議。",
-      roles: [
-        { id: "coordinator", name: "銷售主管 Bot", action: "設定理想客戶、方案、排除條件和批准規則。", handoff: "把客戶名單和研究規則交給客戶研究 Bot。" },
-        { id: "account-research", name: "客戶研究 Bot", action: "找出合適公司、聯絡人，以及真正值得聯絡的原因。", handoff: "把合格客戶和來源連結交給外展 Bot。" },
-        { id: "outreach", name: "外展 Bot", action: "為每位合適的人起草簡短而相關的第一則訊息。", handoff: "把草稿交給 CRM Bot，建立待審清單。" },
-        { id: "crm", name: "CRM Bot", action: "移除重複資料、記錄回覆，並清楚保留下一步。", handoff: "寄出任何訊息前，先交回一份批准清單。" },
-      ],
-    },
-    "product-engineering-team": {
-      title: "產品與工程團隊",
-      summary: "把清楚的產品問題變成已測試的修改和一份審核包。",
-      outcome: "一個小型實作，附測試結果、截圖、審核說明，以及合併或發佈前的一次決定。",
-      audience: "適合希望同時推進多個部分，又不想失去審核控制的產品團隊與技術創辦人。",
-      setupPrompt:
-        "建立一組產品與工程 Bot 團隊，分成產品經理、工程經理、開發和獨立審核四個角色。產品經理先寫小型規格和驗收條件。工程經理分配每個部分。開發 Bot 要交回小型修改、測試和截圖。審核 Bot 檢查不是自己寫的內容。未經我批准，不得合併、部署、通知用戶、刪除資料或付款。",
-      roles: [
-        { id: "product-manager", name: "產品經理 Bot", action: "把客戶問題整理成小型規格和清楚結果。", handoff: "把規格和驗收條件交給工程經理 Bot。" },
-        { id: "engineering-manager", name: "工程經理 Bot", action: "把規格拆成有人負責的小部分，並處理先後關係。", handoff: "把每個部分交給合適的開發 Bot。" },
-        { id: "builders", name: "開發 Bots", action: "製作、測試，再用截圖和說明交回小型修改。", handoff: "把修改和測試證據交給審核 Bot。" },
-        { id: "reviewer", name: "審核 Bot", action: "依規格檢查結果，找出風險或缺少的測試。", handoff: "交回一份審核包，等待你批准合併或發佈。" },
-      ],
-    },
-    "research-team": {
-      title: "研究團隊",
-      summary: "同時搜尋不同來源、檢查論點，再交回一份有來源的簡報。",
-      outcome: "一份精簡研究簡報，分開事實與判斷，列出互相衝突的數字，並保留全部來源。",
-      audience: "適合需要從大量資料做決定，而且希望摘要前先有人核對的人。",
-      setupPrompt:
-        "建立一組研究 Bot 團隊，分成研究主管、資料搜尋、來源核對和歸檔四個角色。先定義問題和日期範圍。搜尋 Bot 必須保存連結，只能引用來源真正支持的內容。來源核對 Bot 要檢查定義、日期和互相衝突的數字，之後才由歸檔 Bot 寫簡報。最後交回來源、分歧、未知事項和下一個決定。不得捏造事實或隱藏不確定性。",
-      roles: [
-        { id: "coordinator", name: "研究主管 Bot", action: "定義問題、日期範圍、來源規則和交付格式。", handoff: "把問題拆成幾個清楚方向，交給資料搜尋 Bots。" },
-        { id: "scouts", name: "資料搜尋 Bots", action: "同時搜尋不同來源，並保存每個有用連結。", handoff: "把證據表交給來源核對 Bot。" },
-        { id: "analyst", name: "來源核對 Bot", action: "檢查說法、日期、定義和互相衝突的數字。", handoff: "只把有足夠支持的發現交給歸檔 Bot。" },
-        { id: "archivist", name: "研究歸檔 Bot", action: "把核對過的證據整理成容易再次找到的短簡報。", handoff: "交回簡報、來源、缺口和下一個決定。" },
-      ],
-    },
-    "business-operations-team": {
-      title: "商務營運團隊",
-      summary: "把財務、行政、供應商和客服事項集中到一份例外清單。",
-      outcome: "每週收到一份營運包，包含已核對紀錄、跟進草稿、未解決例外和待批准行動。",
-      audience: "適合仍由一個人同時處理財務、行政和客戶跟進的小公司。",
-      setupPrompt:
-        "建立一組商務營運 Bot 團隊，分成總經理、財務、營運和客服四個角色。每個角色只負責一個範圍，並共用一份例外清單。財務核對發票和收據，營運追蹤續約與跟進，客服起草一般回覆並標出退款或法律問題。總經理每週交回一份完整摘要。未經我批准，不得付款、退款、寄出、刪除或修改正式系統。",
-      roles: [
-        { id: "general-manager", name: "總經理 Bot", action: "把重複行政事項交給一位清楚的負責角色，並留意例外。", handoff: "金錢問題交給財務 Bot，一般跟進交給營運 Bot。" },
-        { id: "finance", name: "財務 Bot", action: "核對發票和收據，標出缺少資料或不合規則的地方。", handoff: "把例外和跟進草稿加入共用清單。" },
-        { id: "operations", name: "營運 Bot", action: "持續處理續約、表格、時間表和供應商跟進。", handoff: "客戶問題交給客服 Bot，重要例外交給總經理。" },
-        { id: "support", name: "客服 Bot", action: "起草一般回覆，分開退款、法律問題和生氣的客戶。", handoff: "交回一份需要人工批准的例外清單。" },
-      ],
-    },
-    "personal-family-team": {
-      title: "個人與家庭團隊",
-      summary: "透過一位可信任的助手，協調行事曆、日常事項、購物和旅行。",
-      outcome: "一份家庭簡報，包含時間衝突、已準備選項和提醒；未經批准，不會預訂或購買。",
-      audience: "適合希望集中處理家庭計畫，同時保留私人行動控制權的忙碌家庭。",
-      setupPrompt:
-        "建立一組個人與家庭 Bot 團隊，分成生活協調、家庭行事曆、購物和旅行四個角色。我只與生活協調 Bot 對話。每項要求只交給一位專門角色，再用短簡報交回來源、價格、日期和缺少資料。只可使用我批准的帳戶和檔案。未經我批准，不得傳訊、預訂、購買、付款或修改行事曆。",
-      roles: [
-        { id: "life-door", name: "生活協調 Bot", action: "作為家庭計畫、日常事項和提醒的單一入口。", handoff: "把每項要求交給行事曆、購物或旅行 Bot。" },
-        { id: "family-calendar", name: "家庭行事曆 Bot", action: "找出時間衝突、準備提醒，並保留家庭時間。", handoff: "把已批准計畫和缺少資料加入家庭簡報。" },
-        { id: "shopping", name: "購物 Bot", action: "比較價格、檢查庫存，準備購物車但不會付款。", handoff: "交回選項、價格、來源和需要批准的內容。" },
-        { id: "travel", name: "旅行 Bot", action: "依家庭的真正條件比較路線和住宿。", handoff: "交回候選清單，預訂或付款前先等待批准。" },
-      ],
-    },
+    operations: { title: "營運管理", description: "幕僚長、公司編制、每日簡報和 Bot 艦隊維護。" },
+    content: { title: "內容製作", description: "由研究、寫作、編輯、設計到準備發布的團隊。" },
+    marketing: { title: "行銷與成長", description: "社群、產品發布、代理公司和 SEO 組隊方式。" },
+    sales: { title: "銷售", description: "潛在客戶、外展、CRM、招募和跟進團隊。" },
+    engineering: { title: "產品與工程", description: "產品、程式、審核、QA 和交付團隊。" },
+    research: { title: "研究與情報", description: "來源核對、協作分析和夜間情報團隊。" },
+    commerce: { title: "商務與交易", description: "電商、財務核對、訂單檢查和風險把關團隊。" },
+    personal: { title: "個人與家庭", description: "家庭、旅行、學習和個人事務團隊。" },
   },
-  "zh-Hans": {} as Record<string, TeamCopy>,
 };
 
-copy["zh-Hans"] = Object.fromEntries(
-  Object.entries(copy["zh-Hant"]).map(([slug, team]) => [
-    slug,
-    {
-      ...team,
-      title: toSimplified(team.title),
-      summary: toSimplified(team.summary),
-      outcome: toSimplified(team.outcome),
-      audience: toSimplified(team.audience),
-      setupPrompt: toSimplified(team.setupPrompt),
-      roles: team.roles.map((role) => ({
-        ...role,
-        name: toSimplified(role.name),
-        action: toSimplified(role.action),
-        handoff: toSimplified(role.handoff),
-      })),
-    },
-  ]),
-);
+const teamOutcomeCopy: Record<string, { en: string; "zh-Hant": string }> = {
+  "founder-org-chart": { en: "Assign through one chief instead of doing every lane yourself.", "zh-Hant": "你只吩咐幕僚長，其餘專才分頭做。" },
+  "executive-standup-team": { en: "Each executive drops one fact; the manager writes the daily plan.", "zh-Hant": "各主管交一件事實，再寫當日計畫。" },
+  "one-person-company-team": { en: "Split research, writing, outreach, support, and finance into owned lanes.", "zh-Hant": "一人公司各條線都有專才。" },
+  "agency-operations-fleet": { en: "One coordinator runs specialist seats; you keep send, spend, and merge.", "zh-Hant": "統籌調度專才，寄出與花費仍由你批。" },
+  "daily-revenue-brief-team": { en: "Chief requests yesterday's revenue brief; Builder returns a clean email.", "zh-Hant": "幕僚長要營收簡報，建造者交電郵。" },
+  "bot-fleet-care-team": { en: "Archive files, trim bloated bots, and recommend weekly fleet improvements.", "zh-Hant": "整理檔案、精簡 Bot，每週提出改善。" },
+  "seven-bot-content-team": { en: "Research, write, design, time, and publish through one chief of staff.", "zh-Hant": "研究到發布都由幕僚長分派。" },
+  "creator-dev-studio": { en: "One master routes web, shorts, articles, scripts, ideas, and coding.", "zh-Hant": "一個總管分派網頁、短片、文稿與程式。" },
+  "viral-content-factory": { en: "Trend finds the gap; idea, writer, and editor wait at your gate.", "zh-Hant": "找熱點、寫草稿，發布前等你批准。" },
+  "author-publishing-staff": { en: "Keep lore, edit manuscripts, and prepare query packages without re-explaining.", "zh-Hant": "記住世界觀，整理稿件與投稿資料。" },
+  "pinterest-content-team": { en: "Research trending pins, draft on-brand assets, and export a scheduler CSV.", "zh-Hant": "研究熱門 Pin，產出可批次上傳檔。" },
+  "training-material-room": { en: "Designer, teacher, and specialist draft training together in one room.", "zh-Hant": "設計、教學與專才同房製作教材。" },
+  "growth-engine-team": { en: "Split content, scheduling, engagement, and reporting under one orchestrator.", "zh-Hant": "內容、排程、互動與報告分開負責。" },
+  "social-content-queue": { en: "Morning scout scores ideas, then a draft and lead magnet wait.", "zh-Hant": "晨間找題材，草稿與資料包等你看。" },
+  "product-launch-team": { en: "One brief becomes a campaign after weak angles are killed.", "zh-Hant": "一份簡介過關後，才交出可批活動。" },
+  "full-marketing-agency": { en: "Strategy, creative, media, data, tech, and PR report to one chief.", "zh-Hant": "策略到公關都向一位幕僚長匯報。" },
+  "growth-deal-desk": { en: "X intel and growth feed a deal desk that unsticks follow-ups.", "zh-Hant": "情報與成長交給成交團隊，繼續跟進。" },
+  "seo-company-team": { en: "Scout the SERP gap, draft, audit claims, then ship last.", "zh-Hant": "找搜尋缺口、寫稿、核對後才發布。" },
+  "chief-crm-team": { en: "R2 runs calendar and mail; Lando runs outbound with R2.", "zh-Hant": "幕僚長管日程郵件，CRM 管外展。" },
+  "newsletter-sales-team": { en: "Recover inbound sponsors, price slots, and draft outreach for your send.", "zh-Hant": "找回贊助、定價，草稿等你寄出。" },
+  "recruiting-desk": { en: "Source candidates, draft first-touches, and queue screens for humans.", "zh-Hant": "找人選、起草聯絡，面試留給人。" },
+  "outbound-sales-department": { en: "Find intent, research accounts, and draft outreach that waits overnight.", "zh-Hant": "找意向、研究客戶，外展草稿等待審核。" },
+  "commission-sales-floor": { en: "Lead, outreach, conversation, handoff, and commission stay in one loop.", "zh-Hant": "線索到成交與佣金都在同一循環。" },
+  "product-engineering-org": { en: "Chief, eng manager, five engineers, data, and PM hand work through PRs.", "zh-Hant": "主管拆需求，工程與產品用 PR 交接。" },
+  "cto-specialist-team": { en: "Hand the repo to a CTO bot; PR, backend, and login report up.", "zh-Hant": "把程式庫交給 CTO，專才自行匯報。" },
+  "website-build-relay": { en: "Design, write, code, then DevOps deploys the finished site.", "zh-Hant": "設計、寫文、開發後，再交給上線。" },
+  "repo-fleet-team": { en: "One lead assigns repo bots; QA checks the finished changes.", "zh-Hant": "各程式庫有專才，完成後由 QA 檢查。" },
+  "overnight-software-team": { en: "Overnight, bots build, review, and preview; nothing irreversible ships.", "zh-Hant": "夜間建造與預覽，不可還原的操作先停。" },
+  "dual-review-engineering-team": { en: "Parallel builds pass rule and taste checks before a merge owner.", "zh-Hant": "平行建造，規則與品味都過才合併。" },
+  "overnight-bugfix-team": { en: "Reproduce the bug, file it, then a debugging bot prepares the fix.", "zh-Hant": "重現並開單，除錯 Bot 準備修正。" },
+  "gis-planning-team": { en: "Chief, zoning, and utilities persist real layers onto ArcGIS maps.", "zh-Hant": "把分區與公用設施做成真實地圖層。" },
+  "six-agent-architecture": { en: "Helm routes signal through research, build, independent review, then relay.", "zh-Hant": "從訊號研究、建造到獨立審核再交出。" },
+  "evidence-pipeline-team": { en: "Gather, check sources, analyse, compile, then Reed returns the report.", "zh-Hant": "蒐集、核對來源、分析後編成報告。" },
+  "research-audit-team": { en: "Research chief gathers sources; auditor checks claims and conflicting numbers.", "zh-Hant": "研究主管找資料，核對員查矛盾數字。" },
+  "market-news-desk": { en: "Watch, transcribe, extract, kill fakes, then send one checked line.", "zh-Hant": "監看新聞、剔除假訊，只送核對過的一行。" },
+  "market-coverage-team": { en: "Overnight filings, earnings, insider, flow, and macro land as one brief.", "zh-Hant": "夜間覆蓋財報與資金，清晨交一份簡報。" },
+  "collaborative-analysis-room": { en: "Leader, researcher, analyst, and reviewer challenge evidence in one group.", "zh-Hant": "研究與分析在同一房間互相質疑。" },
+  "math-review-panel": { en: "Subject experts check the math before the explainer video is edited.", "zh-Hant": "數學專才核對論證後，再改解說影片。" },
+  "netsuite-credit-team": { en: "Order chief flags a NetSuite order; credit reviews it without you.", "zh-Hant": "訂單主管把問題單交給信貸審查。" },
+  "five-agent-trading-desk": { en: "Scan, size, and fund-check a trade; exec acts only after risk.", "zh-Hant": "掃描、風控、資金核對後才可執行。" },
+  "risk-gated-trading-floor": { en: "Search, risk, whale, and rug checks can reject before any buy.", "zh-Hant": "搜尋與風控可否決，購買前先阻擋。" },
+  "finance-recovery-team": { en: "Sweep receipts, match charges, draft claims; veto can kill the send.", "zh-Hant": "對收據找漏帳，否決權可擋住寄出。" },
+  "ecommerce-operations-team": { en: "One morning screen for money, ads, stock, returns, and the decision.", "zh-Hant": "早會一屏看資金、廣告、庫存與退貨。" },
+  "household-manager-team": { en: "Calendar, shopping, research, and briefings route through one household chief.", "zh-Hant": "行程、購物與研究都交給家庭總管。" },
+  "family-office-team": { en: "House, finance, portfolio, family time, and news report to one manager.", "zh-Hant": "房屋、財務、家庭與新聞向總管匯報。" },
+  "travel-debate-team": { en: "Route and stay scouts debate options; booking still waits for you.", "zh-Hant": "路線與住宿互相辯論，預約仍等你。" },
+  "job-application-team": { en: "Find the résumé, score the posting, and prepare interview questions.", "zh-Hant": "找出履歷、對職位打分，並準備面試。" },
+  "personal-client-office": { en: "Clean newsletters, triage DMs, draft support, and summarize the day.", "zh-Hant": "清理訂閱與私訊，並交當日客戶摘要。" },
+  "personal-finance-board": { en: "Advisor, tax, and retirement pause for approval before touching accounts.", "zh-Hant": "財務、稅務與退休建議，動帳前先問你。" },
+};
 
-const pageCopy: Record<Locale, BotTeamsPageCopy> = {
+const pageCopy: Record<"en" | "zh-Hant", BotTeamsPageCopy> = {
   en: {
-    eyebrow: "CURATED FROM REAL GROK BOT SETUPS",
+    eyebrow: "REAL MULTI-BOT SETUPS",
     title: "Grok Bot Teams",
-    body: "Choose a real outcome, see which Bots own each part, and follow the handoffs from start to finish.",
-    count: "7 practical teams",
+    body: "Browse multi-Bot setups mapped to their public sources.",
+    count: (teams, _categories, sources, posts) => `${teams} teams · ${sources} sources · ${posts.toLocaleString("en-US")} posts reviewed`,
+    filterLabel: "Filter Bot Teams",
+    allFilter: "All teams",
+    featuredFilter: "Featured",
+    chooseTitle: "All Bot Teams",
+    chooseBody: "Start with the outcome, inspect the roles and handoffs, then open the original posts before you build it.",
+    showing: (count) => `${count} teams shown`,
     oneBotTitle: "Templates = one Bot",
-    oneBotBody: "Add a focused helper for one clear role.",
+    oneBotBody: "Choose one helper for one clear purpose.",
     teamTitle: "Bot Teams = Bots working together",
-    teamBody: "Combine specialists when an outcome needs repeatable handoffs.",
-    chooseTitle: "Choose the outcome",
-    chooseBody: "Each team is grounded in public Grok Bot setups from X. The source posts are kept on the team page.",
-    bots: (count) => `${count} ${count === 1 ? "Bot" : "Bots"}`,
-    evidence: (count) => `${count} ${count === 1 ? "real setup" : "real setups"}`,
-    open: "See team",
+    teamBody: "Choose a repeatable setup with clear roles, handoffs, and a human approval gate.",
+    bots: (count) => `${count} Bots`,
+    evidence: (count) => `${count} ${count === 1 ? "source" : "sources"}`,
+    verifiedSetup: "Public setup",
+    officialExample: "Includes official example",
+    namedRoles: (named, total) => named === total ? `${named} roles shown` : `${named} named roles shown · ${total} Bots in source`,
+    open: "View team",
     guideEyebrow: "START SMALL",
-    guideTitle: "Add structure only when the outcome needs it.",
-    guideBody: "xAI recommends starting with the smallest useful roster, then adding a specialist when a stable role appears.",
+    guideTitle: "When to add another Bot",
+    guideBody: "One Bot is enough for one stable outcome. Add a specialist when a separate lane repeats, then use a group when the handoff must stay visible.",
     guideSteps: [
-      { title: "Start with one Bot", body: "Give one Bot an end-to-end outcome and clear approval rules." },
-      { title: "Add a specialist", body: "Create a second Bot when one narrow role keeps repeating." },
-      { title: "Use a group chat", body: "Bring Bots together when the handoff should be visible to everyone." },
+      { title: "Start with one owner", body: "Give one Bot the result, source rules, and approval boundary." },
+      { title: "Split a repeated lane", body: "Add a specialist only when one part keeps needing its own context." },
+      { title: "Make the handoff visible", body: "Use a shared group, keep the source attached, and stop before irreversible actions." },
     ],
-    guideLink: "Read xAI's collaboration guide",
-    teamEyebrow: "GROK BOT TEAM",
+    guideLink: "Read the official Bot guide",
+    teamEyebrow: "BOT TEAM",
     outcomeLabel: "Outcome",
     audienceLabel: "Best for",
-    workflowTitle: "How the team works",
-    workflowBody: "The roles are the workflow. Each Bot owns one part and hands a clear result forward.",
+    workflowTitle: "Roles & handoffs",
+    workflowBody: "The role names come from the public setup when the source named them. The total Bot count follows the source post.",
     handoffLabel: "Handoff",
-    templatesTitle: "Bots you can add",
-    templatesBody: "These public templates already exist on x.ai. Add the ones that match your setup, then change their instructions to fit your rules.",
-    templateOpen: "Add on x.ai",
-    setupTitle: "Copy the team setup",
-    setupBody: "Paste this into your coordinator Bot, review the names and connected tools, then build the team one role at a time.",
-    examplesTitle: "Real setups from X",
-    examplesBody: "Public examples that show multiple Bots working together. We checked the source text but did not re-run these teams.",
-    otherTitle: "Other Bot Teams",
+    templatesTitle: "Matching Templates",
+    templatesBody: "Only real Templates already listed on UseGrokBot are linked here.",
+    templateOpen: "Open Template",
+    setupTitle: "Copy setup",
+    setupBody: "Use this as a safe starting point, then replace the examples with your own rules and approved tools.",
+    examplesTitle: "Source posts",
+    examplesBody: "Read the original posts, authors, dates, and available view counts before copying the setup.",
+    otherTitle: "More teams in this category",
     allTeams: "See all Bot Teams",
   },
   "zh-Hant": {
-    eyebrow: "根據真實 GROK BOT 設定整理",
+    eyebrow: "真實多 BOT 組隊",
     title: "Grok Bot 團隊",
-    body: "先選擇想要的結果，再看每隻 Bot 負責什麼，以及它們怎樣由開始一路交接到完成。",
-    count: "7 組實用團隊",
-    oneBotTitle: "Templates = 一隻 Bot",
-    oneBotBody: "加入一位專門處理清楚角色的助手。",
-    teamTitle: "Bot Teams = 多隻 Bot 一起完成",
-    teamBody: "當結果需要固定交接時，把不同專長的 Bot 組合起來。",
-    chooseTitle: "選擇想要的結果",
-    chooseBody: "每組團隊都根據 X 上公開的 Grok Bot 設定整理，來源貼文保留在團隊頁面。",
-    bots: (count) => `${count} 隻 Bot`,
-    evidence: (count) => `${count} 個真實設定`,
+    body: "瀏覽多 Bot 組隊方法，並直接查看公開來源。",
+    count: (teams, _categories, sources, posts) => `${teams} 隊 · ${sources} 篇來源 · 已查看 ${posts.toLocaleString("zh-Hant-HK")} 篇貼文`,
+    filterLabel: "篩選 Bot 團隊",
+    allFilter: "全部團隊",
+    featuredFilter: "精選",
+    chooseTitle: "全部 Bot 團隊",
+    chooseBody: "先看成果，再看角色和交接方式，建立前可以打開原貼文核對。",
+    showing: (count) => `顯示 ${count} 隊`,
+    oneBotTitle: "Templates = 一個 Bot",
+    oneBotBody: "為一個清楚目的選擇一個幫手。",
+    teamTitle: "Bot Teams = 多個 Bot 協作",
+    teamBody: "選擇一套有清楚角色、交接方式和人工批准關卡的組隊方法。",
+    bots: (count) => `${count} 個 Bot`,
+    evidence: (count) => `${count} 篇來源`,
+    verifiedSetup: "公開組隊案例",
+    officialExample: "包含官方例子",
+    namedRoles: (named, total) => named === total ? `顯示 ${named} 個角色` : `顯示 ${named} 個具名角色 · 來源共有 ${total} 個 Bot`,
     open: "查看團隊",
-    guideEyebrow: "由小開始",
-    guideTitle: "只在結果需要時，才增加團隊結構。",
-    guideBody: "xAI 建議先使用最小而有用的組合，當固定的專門角色出現時，再增加一隻 Bot。",
+    guideEyebrow: "從小隊開始",
+    guideTitle: "何時加入下一個 Bot",
+    guideBody: "一個穩定成果可先交給一個 Bot。當某個部分不斷重複，才加入專才；需要看清交接時，再使用群組。",
     guideSteps: [
-      { title: "先用一隻 Bot", body: "給它一個由開始到完成的清楚結果，並寫明批准規則。" },
-      { title: "再加專門角色", body: "當一個細分角色反覆出現時，才建立第二隻 Bot。" },
-      { title: "需要看見交接時開群組", body: "當所有 Bot 都要看見交接內容時，把它們加入同一個群組。" },
+      { title: "先選一位負責者", body: "把成果、來源規則和批准界線交給一個 Bot。" },
+      { title: "拆出重複部分", body: "只有某個部分經常需要獨立背景時，才加入專才。" },
+      { title: "讓交接可以看見", body: "使用共同群組、保留來源，任何不可還原操作前都要停下來。" },
     ],
-    guideLink: "閱讀 xAI 協作指南",
-    teamEyebrow: "GROK BOT 團隊",
-    outcomeLabel: "你會得到",
+    guideLink: "閱讀官方 Bot 指南",
+    teamEyebrow: "BOT 團隊",
+    outcomeLabel: "成果",
     audienceLabel: "適合",
-    workflowTitle: "這組 Bot 怎樣接力",
-    workflowBody: "角色就是流程。每隻 Bot 只負責一個部分，再把清楚結果交給下一位。",
+    workflowTitle: "角色與交接",
+    workflowBody: "如果公開來源有寫角色名稱，這裡會保留原名；Bot 總數以來源貼文為準。",
     handoffLabel: "交接",
-    templatesTitle: "可以加入的 Bots",
-    templatesBody: "這些公開模板已經存在於 x.ai。先加入符合需要的模板，再依你的規則修改說明。",
-    templateOpen: "在 x.ai 加入",
-    setupTitle: "複製團隊設定",
-    setupBody: "把這段內容貼給協調 Bot，先檢查名稱和已連接工具，再逐一建立角色。",
-    examplesTitle: "X 上的真實設定",
-    examplesBody: "這些公開例子顯示多隻 Bot 一起完成事情。我們核對了來源文字，但沒有重新執行這些團隊。",
-    otherTitle: "其他 Bot 團隊",
+    templatesTitle: "相符 Templates",
+    templatesBody: "這裡只會連結 UseGrokBot 已經收錄的真實 Templates。",
+    templateOpen: "打開 Template",
+    setupTitle: "複製組隊方法",
+    setupBody: "先把它當成安全起點，再換成你的規則和已批准工具。",
+    examplesTitle: "來源貼文",
+    examplesBody: "複製前，可以查看原貼文、作者、日期和已有觀看數據。",
+    otherTitle: "同分類的其他團隊",
     allTeams: "查看全部 Bot 團隊",
   },
-  "zh-Hans": {} as BotTeamsPageCopy,
-};
-
-pageCopy["zh-Hans"] = {
-  ...pageCopy["zh-Hant"],
-  eyebrow: toSimplified(pageCopy["zh-Hant"].eyebrow),
-  title: toSimplified(pageCopy["zh-Hant"].title),
-  body: toSimplified(pageCopy["zh-Hant"].body),
-  count: toSimplified(pageCopy["zh-Hant"].count),
-  oneBotTitle: toSimplified(pageCopy["zh-Hant"].oneBotTitle),
-  oneBotBody: toSimplified(pageCopy["zh-Hant"].oneBotBody),
-  teamTitle: toSimplified(pageCopy["zh-Hant"].teamTitle),
-  teamBody: toSimplified(pageCopy["zh-Hant"].teamBody),
-  chooseTitle: toSimplified(pageCopy["zh-Hant"].chooseTitle),
-  chooseBody: toSimplified(pageCopy["zh-Hant"].chooseBody),
-  bots: (count) => `${count} 只 Bot`,
-  evidence: (count) => `${count} 个真实设置`,
-  open: toSimplified(pageCopy["zh-Hant"].open),
-  guideEyebrow: toSimplified(pageCopy["zh-Hant"].guideEyebrow),
-  guideTitle: toSimplified(pageCopy["zh-Hant"].guideTitle),
-  guideBody: toSimplified(pageCopy["zh-Hant"].guideBody),
-  guideSteps: pageCopy["zh-Hant"].guideSteps.map((step) => ({
-    title: toSimplified(step.title),
-    body: toSimplified(step.body),
-  })),
-  guideLink: toSimplified(pageCopy["zh-Hant"].guideLink),
-  teamEyebrow: toSimplified(pageCopy["zh-Hant"].teamEyebrow),
-  outcomeLabel: toSimplified(pageCopy["zh-Hant"].outcomeLabel),
-  audienceLabel: toSimplified(pageCopy["zh-Hant"].audienceLabel),
-  workflowTitle: toSimplified(pageCopy["zh-Hant"].workflowTitle),
-  workflowBody: toSimplified(pageCopy["zh-Hant"].workflowBody),
-  handoffLabel: toSimplified(pageCopy["zh-Hant"].handoffLabel),
-  templatesTitle: toSimplified(pageCopy["zh-Hant"].templatesTitle),
-  templatesBody: toSimplified(pageCopy["zh-Hant"].templatesBody),
-  templateOpen: toSimplified(pageCopy["zh-Hant"].templateOpen),
-  setupTitle: toSimplified(pageCopy["zh-Hant"].setupTitle),
-  setupBody: toSimplified(pageCopy["zh-Hant"].setupBody),
-  examplesTitle: toSimplified(pageCopy["zh-Hant"].examplesTitle),
-  examplesBody: toSimplified(pageCopy["zh-Hant"].examplesBody),
-  otherTitle: toSimplified(pageCopy["zh-Hant"].otherTitle),
-  allTeams: toSimplified(pageCopy["zh-Hant"].allTeams),
 };
 
 function toSimplified(value: string) {
   const pairs = [
-    ["並", "并"], ["佈", "布"], ["併", "并"], ["來", "来"], ["係", "系"], ["個", "个"],
-    ["們", "们"], ["備", "备"], ["傳", "传"], ["價", "价"], ["優", "优"], ["內", "内"],
-    ["刪", "删"], ["則", "则"], ["創", "创"], ["動", "动"], ["務", "务"], ["協", "协"],
-    ["參", "参"], ["問", "问"], ["單", "单"], ["圍", "围"], ["圖", "图"], ["團", "团"],
-    ["執", "执"], ["報", "报"], ["場", "场"], ["夠", "够"], ["實", "实"], ["審", "审"],
-    ["寫", "写"], ["將", "将"], ["專", "专"], ["尋", "寻"], ["對", "对"], ["層", "层"],
-    ["帳", "帐"], ["幾", "几"], ["庫", "库"], ["廣", "广"], ["彙", "汇"], ["後", "后"],
-    ["從", "从"], ["應", "应"], ["戶", "户"], ["擇", "择"], ["據", "据"], ["數", "数"],
-    ["斷", "断"], ["於", "于"], ["時", "时"], ["曆", "历"], ["會", "会"], ["條", "条"],
-    ["構", "构"], ["標", "标"], ["樣", "样"], ["檔", "档"], ["檢", "检"], ["權", "权"],
-    ["歸", "归"], ["氣", "气"], ["決", "决"], ["沒", "没"], ["測", "测"], ["準", "准"],
-    ["為", "为"], ["營", "营"], ["獨", "独"], ["現", "现"], ["產", "产"], ["畫", "画"],
-    ["異", "异"], ["當", "当"], ["發", "发"], ["確", "确"], ["稱", "称"], ["穩", "稳"],
-    ["範", "范"], ["篩", "筛"], ["簡", "简"], ["紀", "纪"], ["約", "约"], ["細", "细"],
-    ["終", "终"], ["組", "组"], ["結", "结"], ["絡", "络"], ["給", "给"], ["統", "统"],
-    ["經", "经"], ["綱", "纲"], ["緊", "紧"], ["線", "线"], ["總", "总"], ["繫", "系"],
-    ["續", "续"], ["義", "义"], ["聯", "联"], ["與", "与"], ["處", "处"], ["號", "号"],
-    ["術", "术"], ["衝", "冲"], ["裡", "里"], ["製", "制"], ["複", "复"], ["見", "见"],
-    ["規", "规"], ["視", "视"], ["覺", "觉"], ["訂", "订"], ["計", "计"], ["訊", "讯"],
-    ["討", "讨"], ["記", "记"], ["設", "设"], ["試", "试"], ["話", "话"], ["該", "该"],
-    ["認", "认"], ["語", "语"], ["誤", "误"], ["說", "说"], ["調", "调"], ["論", "论"],
-    ["證", "证"], ["議", "议"], ["讀", "读"], ["變", "变"], ["讓", "让"], ["負", "负"],
-    ["財", "财"], ["責", "责"], ["買", "买"], ["貼", "贴"], ["資", "资"], ["質", "质"],
-    ["賬", "账"], ["購", "购"], ["蹤", "踪"], ["車", "车"], ["較", "较"], ["轉", "转"],
-    ["辦", "办"], ["這", "这"], ["連", "连"], ["週", "周"], ["進", "进"], ["運", "运"],
-    ["過", "过"], ["達", "达"], ["適", "适"], ["選", "选"], ["還", "还"], ["銷", "销"],
-    ["錄", "录"], ["錢", "钱"], ["錯", "错"], ["長", "长"], ["門", "门"], ["開", "开"],
-    ["間", "间"], ["閱", "阅"], ["關", "关"], ["隊", "队"], ["際", "际"], ["險", "险"],
-    ["隱", "隐"], ["隻", "只"], ["頁", "页"], ["項", "项"], ["須", "须"], ["預", "预"],
-    ["題", "题"], ["顯", "显"], ["風", "风"], ["驗", "验"], ["體", "体"], ["麼", "么"],
-    ["點", "点"],
+    ["與", "与"], ["個", "个"], ["隊", "队"], ["團", "团"], ["協", "协"], ["實", "实"], ["從", "从"],
+    ["類", "类"], ["選", "选"], ["這", "这"], ["裡", "里"], ["開", "开"], ["關", "关"], ["給", "给"],
+    ["為", "为"], ["員", "员"], ["總", "总"], ["數", "数"], ["據", "据"], ["來", "来"], ["發", "发"],
+    ["佈", "布"], ["寫", "写"], ["讓", "让"], ["會", "会"], ["見", "见"], ["還", "还"], ["過", "过"],
+    ["將", "将"], ["標", "标"], ["計", "计"], ["劃", "划"], ["時", "时"], ["資", "资"], ["訊", "讯"],
+    ["審", "审"], ["歸", "归"], ["檔", "档"], ["護", "护"], ["顧", "顾"], ["問", "问"], ["務", "务"],
+    ["庫", "库"], ["風", "风"], ["險", "险"], ["應", "应"], ["購", "购"], ["買", "买"], ["後", "后"],
+    ["長", "长"], ["動", "动"], ["復", "复"], ["練", "练"], ["準", "准"], ["備", "备"], ["篩", "筛"],
+    ["較", "较"], ["確", "确"], ["認", "认"], ["聲", "声"], ["聯", "联"], ["絡", "络"], ["戶", "户"],
+    ["營", "营"], ["銷", "销"], ["產", "产"], ["場", "场"], ["覽", "览"], ["優", "优"], ["繼", "继"],
+    ["續", "续"], ["萬", "万"], ["圍", "围"], ["專", "专"], ["業", "业"], ["進", "进"], ["傳", "传"],
+    ["統", "统"], ["籌", "筹"], ["匯", "汇"], ["報", "报"], ["異", "异"], ["議", "议"], ["導", "导"],
+    ["處", "处"], ["啟", "启"], ["題", "题"], ["觀", "观"], ["測", "测"], ["證", "证"], ["驗", "验"],
+    ["創", "创"], ["辦", "办"], ["組", "组"], ["織", "织"], ["圖", "图"], ["貼", "贴"], ["運", "运"],
+    ["內", "内"], ["製", "制"], ["餘", "余"], ["頭", "头"], ["調", "调"], ["電", "电"], ["郵", "邮"],
+    ["簡", "简"], ["輯", "辑"], ["覺", "觉"], ["學", "学"], ["顯", "显"], ["達", "达"], ["濾", "滤"],
+    ["當", "当"], ["際", "际"], ["現", "现"], ["間", "间"], ["經", "经"], ["體", "体"], ["獨", "独"],
+    ["層", "层"], ["軟", "软"], ["質", "质"], ["義", "义"], ["術", "术"], ["對", "对"], ["須", "须"],
+    ["權", "权"], ["擋", "挡"], ["帳", "账"], ["檢", "检"], ["視", "视"], ["網", "网"], ["頁", "页"],
+    ["錯", "错"], ["誤", "误"], ["說", "说"], ["變", "变"], ["節", "节"], ["錄", "录"], ["擬", "拟"],
+    ["則", "则"], ["項", "项"], ["樣", "样"], ["離", "离"], ["獲", "获"], ["尋", "寻"], ["觸", "触"],
+    ["屬", "属"], ["並", "并"], ["價", "价"], ["徑", "径"], ["殺", "杀"], ["該", "该"], ["輸", "输"],
+    ["轉", "转"], ["負", "负"], ["責", "责"], ["線", "线"], ["條", "条"], ["斷", "断"], ["範", "范"],
+    ["無", "无"], ["語", "语"], ["氣", "气"], ["刪", "删"], ["減", "减"], ["結", "结"], ["構", "构"],
+    ["釋", "释"], ["預", "预"], ["約", "约"], ["監", "监"], ["雜", "杂"], ["記", "记"], ["執", "执"],
+    ["環", "环"], ["絕", "绝"], ["驟", "骤"], ["訂", "订"], ["單", "单"], ["貨", "货"], ["課", "课"],
+    ["閱", "阅"], ["讀", "读"], ["換", "换"], ["規", "规"], ["領", "领"], ["職", "职"], ["碼", "码"],
+    ["決", "决"], ["點", "点"], ["編", "编"], ["設", "设"], ["順", "顺"], ["財", "财"], ["錢", "钱"],
+    ["紀", "纪"], ["曆", "历"], ["衝", "冲"], ["詢", "询"], ["請", "请"], ["話", "话"], ["眾", "众"],
+    ["畫", "画"], ["廣", "广"], ["適", "适"], ["試", "试"], ["連", "连"], ["敗", "败"], ["況", "况"],
+    ["貸", "贷"], ["夠", "够"], ["採", "采"], ["習", "习"], ["艦", "舰"], ["維", "维"], ["潛", "潜"],
+    ["費", "费"], ["週", "周"], ["熱", "热"], ["門", "门"], ["贊", "赞"], ["併", "并"], ["區", "区"],
+    ["號", "号"], ["蒐", "搜"], ["聞", "闻"], ["蓋", "盖"], ["論", "论"], ["掃", "扫"], ["辯", "辩"],
+    ["歷", "历"], ["稅", "税"], ["瀏", "浏"], ["擇", "择"], ["幫", "帮"], ["穩", "稳"], ["稱", "称"],
+    ["補", "补"], ["廠", "厂"], ["佇", "伫"], ["雙", "双"], ["討", "讨"],
   ] as const;
   const map = new Map<string, string>(pairs);
-  return [...value].map((char) => map.get(char) ?? char).join("");
+  return [...value]
+    .map((char) => map.get(char) ?? char)
+    .join("")
+    .replaceAll("营运", "运营")
+    .replaceAll("行销与成长", "营销与增长")
+    .replaceAll("计画", "计划")
+    .replaceAll("贴文", "帖子");
+}
+
+function forLocale<T>(locale: Locale, en: T, hant: T, simplify: (value: T) => T): T {
+  if (locale === "en") return en;
+  if (locale === "zh-Hans") return simplify(hant);
+  return hant;
+}
+
+function roleName(base: RoleCopy, sourceName: string | undefined, count: number) {
+  const sameName = sourceName?.toLowerCase() === base.name.replace(/ bot$/i, "").toLowerCase();
+  const name = sourceName && !sameName ? `${sourceName} · ${base.name}` : base.name;
+  return count > 1 ? `${name} ×${count}` : name;
 }
 
 export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam {
-  const localized = copy[locale][team.slug] ?? copy.en[team.slug];
-  return { ...team, ...localized };
+  const source = getDiscoverStory(team.exampleSlugs[0]);
+  const localizedSource = source ? localizeDiscoverStory(source, locale) : undefined;
+  const outcomeCopy = teamOutcomeCopy[team.slug];
+  if (!outcomeCopy) throw new Error(`Missing Bot Team outcome copy: ${team.slug}`);
+  const rolesForLocale = locale === "en" ? enRoles : hantRoles;
+  const leadIndex = Math.max(0, team.roles.findIndex((role) => role.id === "coordinator" || role.id === "manager"));
+  const preliminary = team.roles.map((role, index) => {
+    const base = rolesForLocale[role.id];
+    const count = role.count ?? 1;
+    const name = roleName(base, role.sourceName, count);
+    return {
+      id: `${role.id}-${index}`,
+      roleId: role.id,
+      name: locale === "zh-Hans" ? toSimplified(name) : name,
+      action: locale === "zh-Hans" ? toSimplified(base.action) : base.action,
+      count,
+    };
+  });
+  const leadName = preliminary[leadIndex]?.name ?? preliminary[0]?.name ?? "Coordinator";
+  const roles = preliminary.map((role, index): LocalizedBotTeamRole => {
+    const next = preliminary[index + 1]?.name;
+    let handoff: string;
+    if (locale === "en") {
+      handoff = team.pattern === "pipeline"
+        ? next ? `Passes the checked result to ${next}.` : "Returns one review pack and waits for human approval."
+        : team.pattern === "hub"
+          ? index === leadIndex ? "Assigns one clear lane to each specialist and holds the final approval queue." : `Returns the checked result to ${leadName}.`
+          : "Shares the evidence in the group so another Bot can challenge or extend it.";
+    } else {
+      handoff = team.pattern === "pipeline"
+        ? next ? `把核對過的結果交給 ${next}。` : "交回一份審核包，等待人工批准。"
+        : team.pattern === "hub"
+          ? index === leadIndex ? "為每位專才分配清楚範圍，並集中最後批准清單。" : `把核對過的結果交回 ${leadName}。`
+          : "在群組分享證據，讓另一個 Bot 可以補充或提出疑問。";
+    }
+    return { ...role, handoff: locale === "zh-Hans" ? toSimplified(handoff) : handoff };
+  });
+
+  const title = locale === "en" ? team.title : locale === "zh-Hans" ? toSimplified(team.titleZhHant) : team.titleZhHant;
+  const outcome = locale === "en"
+    ? outcomeCopy.en
+    : locale === "zh-Hans"
+      ? toSimplified(outcomeCopy["zh-Hant"])
+      : outcomeCopy["zh-Hant"];
+  const summary = outcome;
+  const audience = localizedSource?.usefulFor ?? localizedSource?.whoShouldTry?.join(" · ") ?? "Grok Bot users";
+  const roleList = roles.map((role) => role.name).join(locale === "en" ? ", " : "、");
+  const setupPrompt = locale === "en"
+    ? `Build a ${title} with ${team.botCount} Bots. Roles: ${roleList}. Keep sources with every handoff and ask me before any external action.`
+    : `建立「${title}」，共 ${team.botCount} 個 Bot。角色：${roleList}。每次交接保留來源；任何對外操作前先詢問我。`;
+
+  return {
+    ...team,
+    title,
+    summary,
+    outcome,
+    audience,
+    setupPrompt: locale === "zh-Hans" ? toSimplified(setupPrompt) : setupPrompt,
+    roles,
+  };
 }
 
-export function botTeamsPageCopy(locale: Locale) {
-  return pageCopy[locale];
+export function localizeBotTeamCategory(category: BotTeamCategory, locale: Locale): LocalizedBotTeamCategory {
+  const item = forLocale(
+    locale,
+    categoryCopy.en[category.slug],
+    categoryCopy["zh-Hant"][category.slug],
+    (value) => ({ title: toSimplified(value.title), description: toSimplified(value.description) }),
+  );
+  return { ...category, ...item };
+}
+
+export function botTeamsPageCopy(locale: Locale): BotTeamsPageCopy {
+  return forLocale(
+    locale,
+    pageCopy.en,
+    pageCopy["zh-Hant"],
+    (value) => ({
+      ...value,
+      count: (teams, categories, sources, posts) => toSimplified(value.count(teams, categories, sources, posts)),
+      eyebrow: toSimplified(value.eyebrow),
+      title: toSimplified(value.title),
+      body: toSimplified(value.body),
+      filterLabel: toSimplified(value.filterLabel),
+      allFilter: toSimplified(value.allFilter),
+      featuredFilter: toSimplified(value.featuredFilter),
+      chooseTitle: toSimplified(value.chooseTitle),
+      chooseBody: toSimplified(value.chooseBody),
+      showing: (count) => toSimplified(value.showing(count)),
+      oneBotTitle: toSimplified(value.oneBotTitle),
+      oneBotBody: toSimplified(value.oneBotBody),
+      teamTitle: toSimplified(value.teamTitle),
+      teamBody: toSimplified(value.teamBody),
+      bots: (count) => toSimplified(value.bots(count)),
+      evidence: (count) => toSimplified(value.evidence(count)),
+      verifiedSetup: toSimplified(value.verifiedSetup),
+      officialExample: toSimplified(value.officialExample),
+      namedRoles: (named, total) => toSimplified(value.namedRoles(named, total)),
+      open: toSimplified(value.open),
+      guideEyebrow: toSimplified(value.guideEyebrow),
+      guideTitle: toSimplified(value.guideTitle),
+      guideBody: toSimplified(value.guideBody),
+      guideSteps: value.guideSteps.map((step) => ({ title: toSimplified(step.title), body: toSimplified(step.body) })),
+      guideLink: toSimplified(value.guideLink),
+      teamEyebrow: toSimplified(value.teamEyebrow),
+      outcomeLabel: toSimplified(value.outcomeLabel),
+      audienceLabel: toSimplified(value.audienceLabel),
+      workflowTitle: toSimplified(value.workflowTitle),
+      workflowBody: toSimplified(value.workflowBody),
+      handoffLabel: toSimplified(value.handoffLabel),
+      templatesTitle: toSimplified(value.templatesTitle),
+      templatesBody: toSimplified(value.templatesBody),
+      templateOpen: toSimplified(value.templateOpen),
+      setupTitle: toSimplified(value.setupTitle),
+      setupBody: toSimplified(value.setupBody),
+      examplesTitle: toSimplified(value.examplesTitle),
+      examplesBody: toSimplified(value.examplesBody),
+      otherTitle: toSimplified(value.otherTitle),
+      allTeams: toSimplified(value.allTeams),
+    }),
+  );
 }

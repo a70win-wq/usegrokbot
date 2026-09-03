@@ -25,7 +25,9 @@ export { localizeTemplateCopy } from "./templates";
 export {
   botTeamsPageCopy,
   localizeBotTeam,
+  localizeBotTeamCategory,
   type BotTeamsPageCopy,
   type LocalizedBotTeam,
+  type LocalizedBotTeamCategory,
   type LocalizedBotTeamRole,
 } from "./bot-teams";
