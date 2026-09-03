@@ -59139,5 +59139,105 @@
     "publishedAt": "2026-08-29",
     "sourceUrl": "https://github.com/bilauitmcuti/bot",
     "sourceLabel": "bilauitmcuti · GitHub"
+  },
+  {
+    "slug": "nirkouris-im-onboarding-a-large-bank-into-grok-bot-i-basic",
+    "title": "I’m onboarding a large bank into @grok @bot I basically run out of...",
+    "headline": "I’m onboarding a large bank into @grok @bot I basically run out of credits just for the crazy demonstration I did .",
+    "body": "I’m onboarding a large bank into @grok @bot I basically run out of credits just for the crazy demonstration I did . I think I should be a @SpaceXAI ambassador;)",
+    "whatTheyDid": "I’m onboarding a large bank into @grok @bot I basically run out of credits just for the crazy demonstration I did .",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I’m onboarding a large bank into @grok @bot I basically run out of credits just for the crazy demonstration I did .",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Nir Kourisᵍᵐ (Hap)",
+    "handle": "nirkouris",
+    "publishedAt": "2026-09-03",
+    "xPostUrl": "https://x.com/nirkouris/status/2095546005395534275",
+    "sourceUrl": "https://x.com/nirkouris/status/2095546005395534275",
+    "sourceLabel": "Nir Kourisᵍᵐ (Hap) on X"
+  },
+  {
+    "slug": "xmglab-grok-bot-angravity-grok",
+    "title": "Grok Bot 终于派上用场了…… 我的 Angravity 网络不是又崩了吗，让 Grok...",
+    "headline": "Grok Bot 终于派上用场了…… 我的 Angravity 网络不是又崩了吗，让 Grok 查了下分流规则，也没有问题，它让我查下账号有没有问题。 于是我想到用 Grok Bot 测试下，Grok Build 完全跑通了！！！ 看来还是我的网络问题，这谷歌真让人无语了！！ 不过关键时刻，Grok Bot 还真有妙用。 我的 SuperGrok 的含金量还在上升！！",
+    "body": "Grok Bot  终于派上用场了……\n\n我的 Angravity 网络不是又崩了吗，让 Grok 查了下分流规则，也没有问题，它让我查下账号有没有问题。\n\n于是我想到用 Grok Bot 测试下，Grok Build 完全跑通了！！！\n\n看来还是我的网络问题，这谷歌真让人无语了！！\n\n不过关键时刻，Grok Bot 还真有妙用。\n\n我的 SuperGrok 的含金量还在上升！！",
+    "whatTheyDid": "Grok Bot 终于派上用场了…… 我的 Angravity 网络不是又崩了吗，让 Grok 查了下分流规则，也没有问题，它让我查下账号有没有问题。 于是我想到用 Grok Bot 测试下，Grok Build 完全跑通了！！！ 看来还是我的网络问题，这谷歌真让人无语了！！ 不过关键时刻，Grok Bot 还真有妙用。 我的 SuperGrok 的含金量还在上升！！",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot 终于派上用场了…… 我的 Angravity 网络不是又崩了吗，让 Grok 查了下分流规则，也没有问题，它让我查下账号有没有问题。 于是我想到用 Grok Bot 测试下，Grok Build 完全跑通了！！！ 看来还是我的网络问题，这谷歌真让人无语了！！ 不过关键时刻，Grok Bot 还真有妙用。 我的 SuperGrok 的含金量还在上升！！",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "小码哥",
+    "handle": "xmglab",
+    "publishedAt": "2026-09-03",
+    "xPostUrl": "https://x.com/xmglab/status/2095477055806918832",
+    "sourceUrl": "https://x.com/xmglab/status/2095477055806918832",
+    "sourceLabel": "小码哥 on X"
+  },
+  {
+    "slug": "zjuniv-grok-bot-codex",
+    "title": "今天同时用grok bot和codex设计一个灯箱广告页，喂了同样的素材，用了同样的提示词和要求，结果出来的文档一模一样，错误标点都一样，也不...",
+    "headline": "今天同时用grok bot和codex设计一个灯箱广告页，喂了同样的素材，用了同样的提示词和要求，结果出来的文档一模一样，错误标点都一样，也不知道到底什么情况",
+    "body": "今天同时用grok bot和codex设计一个灯箱广告页，喂了同样的素材，用了同样的提示词和要求，结果出来的文档一模一样，错误标点都一样，也不知道到底什么情况",
+    "whatTheyDid": "今天同时用grok bot和codex设计一个灯箱广告页，喂了同样的素材，用了同样的提示词和要求，结果出来的文档一模一样，错误标点都一样，也不知道到底什么情况",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "今天同时用grok bot和codex设计一个灯箱广告页，喂了同样的素材，用了同样的提示词和要求，结果出来的文档一模一样，错误标点都一样，也不知道到底什么情况",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Eric Zhao",
+    "handle": "zjuniv",
+    "publishedAt": "2026-09-03",
+    "xPostUrl": "https://x.com/zjuniv/status/2095463689352859705",
+    "sourceUrl": "https://x.com/zjuniv/status/2095463689352859705",
+    "sourceLabel": "Eric Zhao on X"
   }
 ]
