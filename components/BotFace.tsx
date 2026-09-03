@@ -3,10 +3,16 @@ import { COLORS } from "@/lib/bloub";
 
 export const botPalette = COLORS.map((item) => item.hex);
 
+const teamBotPalette = ["#4f7cff", "#f08a24", "#8b5cf6", "#3ecf8e", "#e152b0"] as const;
+
 export function botColorFor(key: string) {
   let hash = 0;
   for (let i = 0; i < key.length; i += 1) hash = (hash * 33 + key.charCodeAt(i)) >>> 0;
   return botPalette[hash % botPalette.length];
+}
+
+export function teamBotColor(index: number) {
+  return teamBotPalette[index % teamBotPalette.length];
 }
 
 export const botColors = {

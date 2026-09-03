@@ -3,6 +3,7 @@ import { discoverStories, shouldIndexDiscoverStory } from "@/data/discover";
 import { scenarios } from "@/data/scenarios";
 import { templateIdentitySlugs } from "@/data/template-identities";
 import { topics } from "@/data/topics";
+import { verifiedUseCases } from "@/data/verified-use-cases";
 import { LAST_REVIEWED } from "@/data/verification";
 import { URL_LOCALES, absoluteUrl, languageAlternates } from "@/lib/i18n/paths";
 
@@ -37,6 +38,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/templates/all", { changeFrequency: "daily", priority: 0.72 }, day(latestStory)),
     ...templateIdentitySlugs.flatMap((identity) =>
       entries("/templates/" + identity, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),
+    ),
+    ...verifiedUseCases.flatMap((item) =>
+      entries(`/use-cases/${item.slug}`, { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ),
     ...scenarios.flatMap((item) =>
       entries(`/use-cases/${item.slug}`, { changeFrequency: "weekly", priority: 0.75 }, day(latestStory)),
