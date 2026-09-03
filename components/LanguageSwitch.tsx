@@ -30,8 +30,8 @@ export function LanguageSwitch({
       role="group"
       aria-label={t("lang.label")}
       className={cn(
-        "flex items-center rounded-lg border border-line p-0.5",
-        variant === "menu" && "rounded-full bg-card p-0.5",
+        "flex h-10 items-center rounded-[10px] border border-line p-0.5",
+        variant === "menu" && "h-auto rounded-full bg-card p-0.5",
         compact && variant === "default" && "scale-[0.95]",
       )}
     >
@@ -54,15 +54,13 @@ export function LanguageSwitch({
               event.currentTarget.href = `${withLocale(path, urlLocale)}${window.location.search}`;
             }}
             className={cn(
-              "inline-flex h-7 min-w-7 items-center justify-center rounded-md px-1.5 text-[12px] leading-none transition",
-              variant === "menu" && "h-11 min-w-[3.25rem] rounded-full px-2",
+              "inline-flex h-8 min-w-8 items-center justify-center rounded-lg px-1.5 text-[15px] leading-none transition-colors",
+              variant === "menu" && "h-11 min-w-[3.25rem] rounded-full px-2 text-[15px]",
               locale === item
-                ? variant === "menu"
-                  ? "bg-accent-soft font-medium text-accent"
-                  : "bg-ink text-inverse"
+                ? "bg-accent-soft font-medium text-accent"
                 : variant === "menu"
                   ? "text-mute hover:bg-elevated hover:text-ink"
-                  : "text-mute hover:text-ink",
+                  : "text-mute hover:bg-card hover:text-ink",
             )}
           >
             {variant === "menu" ? menuLocaleLabels[item] : localeLabels[item]}

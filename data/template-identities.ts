@@ -537,7 +537,7 @@ export const templateIdentityUiCopy = {
     catalogTitle: "All templates",
   },
   "zh-Hant": {
-    title: "你的身份是什麼？",
+    title: "你是誰？",
     intro: "先選身分，再看這些 bot 能幫你做什麼。",
     allTemplates: "查看全部 {n} 個模板",
     templateCount: "{n} 個模板",
@@ -561,7 +561,7 @@ export const templateIdentityUiCopy = {
     catalogTitle: "全部模板",
   },
   "zh-Hans": {
-    title: "你的身份是什么？",
+    title: "你是谁？",
     intro: "先选身份，再看这些 bot 能帮你做什么。",
     allTemplates: "查看全部 {n} 个模板",
     templateCount: "{n} 个模板",

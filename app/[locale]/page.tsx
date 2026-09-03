@@ -56,7 +56,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           numberOfItems: discoverStories.length,
         }}
       />
-      <HomeView stars={stars} />
+      <HomeView postCount={discoverStories.length} stars={stars} />
     </>
   );
 }

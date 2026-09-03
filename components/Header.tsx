@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Languages, Menu, Search, X } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { useI18n } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n/locale";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
 import { BotFace, botColorFor } from "./BotFace";
 import { GetGrokBot } from "./GetGrokBot";
@@ -31,37 +31,18 @@ export function Header() {
   const path = stripLocalePrefix(pathname);
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const nav: NavItem[] = [
-    {
-      href: "/",
-      label: t("nav.discover"),
-      match: (current: string) => current === "/" || current.startsWith("/discover"),
-    },
-    {
-      href: "/use-cases",
-      label: t("nav.useCases"),
-      match: (current: string) => current.startsWith("/use-cases"),
-    },
     {
       href: "/templates",
       label: t("nav.templates"),
       match: (current: string) => current.startsWith("/templates"),
     },
     {
-      href: "/roles",
-      label: t("nav.official"),
-      match: (current: string) => current.startsWith("/roles"),
-    },
-    {
-      href: "/categories",
-      label: t("nav.categories"),
-      match: (current: string) => current.startsWith("/categories"),
-    },
-    {
-      href: "/rankings",
-      label: t("nav.rankings"),
-      match: (current: string) => current.startsWith("/rankings"),
+      href: "/use-cases",
+      label: t("nav.useCases"),
+      match: (current: string) => current.startsWith("/use-cases"),
     },
     {
       href: "/articles",
@@ -70,16 +51,43 @@ export function Header() {
     },
     { href: "/submit", label: t("nav.submitShort") },
   ];
+  const menuItems = nav.filter((item) => item.href !== "/submit");
+
+  function closeMenu(returnFocus = false) {
+    setOpen(false);
+    if (returnFocus) {
+      window.requestAnimationFrame(() => menuButtonRef.current?.focus());
+    }
+  }
+
+  useEffect(() => {
+    if (!open) return;
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      closeMenu(true);
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-canvas/90 backdrop-blur-md">
-      <div className="mx-auto flex h-12 max-w-[1240px] items-center justify-between px-5 md:px-8">
-        <LocaleLink href="/" className="flex items-center gap-2 text-[15px] font-medium tracking-tight text-ink">
-          <BotFace size={18} color={botColorFor("usegrokbot")} />
+    <header className="relative sticky top-0 z-40 border-b border-line bg-canvas/85 backdrop-blur-xl">
+      <div className="relative z-20 mx-auto flex h-14 max-w-[1240px] items-center justify-between px-5 md:px-8">
+        <LocaleLink
+          href="/"
+          className="flex items-center gap-2.5 text-[16px] font-medium tracking-tight text-ink"
+        >
+          <BotFace size={20} color={botColorFor("usegrokbot")} />
           UseGrokBot
         </LocaleLink>
 
-        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary">
+        <nav
+          className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-[11px] border border-line bg-elevated/70 p-1 xl:flex"
+          aria-label="Primary"
+        >
           {nav.map((item) => {
             const active = isNavItemActive(item, path);
             return (
@@ -88,8 +96,8 @@ export function Header() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "rounded-lg px-3 py-1.5 text-[13px] text-mute transition hover:text-ink",
-                  active && "text-ink",
+                  "inline-flex h-9 items-center rounded-lg px-3.5 text-[15px] font-medium text-mute transition-colors hover:bg-card hover:text-ink",
+                  active && "bg-accent-soft text-accent",
                 )}
               >
                 {item.label}
@@ -99,15 +107,19 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-1">
-          {SEARCH_UI_ENABLED ? <HeaderSearch /> : null}
-          <GetGrokBot />
+          {SEARCH_UI_ENABLED ? <HeaderSearch onOpen={() => setOpen(false)} /> : null}
+          <div className="hidden xl:block">
+            <GetGrokBot className="h-10 px-3 text-[15px]" />
+          </div>
+          <span aria-hidden="true" className="mx-1 hidden h-5 w-px bg-line xl:block" />
           <ThemeToggle />
           <div className="hidden xl:block">
             <LanguageSwitch />
           </div>
           <button
+            ref={menuButtonRef}
             type="button"
-            className="inline-flex size-9 items-center justify-center rounded-lg text-mute xl:hidden"
+            className="inline-flex size-11 items-center justify-center rounded-[10px] text-mute transition-colors hover:bg-elevated hover:text-ink xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-navigation"
             aria-label={open ? t("nav.closeMenu") : t("nav.openMenu")}
@@ -119,87 +131,81 @@ export function Header() {
       </div>
 
       {open ? (
-        <div
-          id="mobile-navigation"
-          className="border-t border-line bg-elevated px-5 py-4 shadow-[var(--shadow-menu)] xl:hidden"
-        >
-          <nav aria-label={t("nav.menuLabel")}>
-            <div className="grid grid-cols-2 gap-x-6">
-              {[
-                { label: t("nav.exploreGroup"), items: nav.slice(0, 4), start: 1 },
-                { label: t("nav.moreGroup"), items: nav.slice(4, 7), start: 5 },
-              ].map((group) => (
-                <div key={group.label} className="min-w-0">
-                  <p className="mb-1 px-1 text-[11px] font-medium tracking-[0.12em] text-faint uppercase">
-                    {group.label}
-                  </p>
-                  <ul className="border-t border-line">
-                    {group.items.map((item, index) => {
-                      const active = isNavItemActive(item, path);
-                      return (
-                        <li key={item.href} className="border-b border-line">
-                          <LocaleLink
-                            href={item.href}
-                            aria-current={active ? "page" : undefined}
-                            className={cn(
-                              "flex min-h-11 items-center gap-2 px-1 text-[14px] transition-colors hover:text-accent",
-                              active ? "font-medium text-accent" : "text-ink",
-                            )}
-                            onClick={() => setOpen(false)}
-                          >
-                            <span
-                              aria-hidden="true"
-                              className={cn(
-                                "w-5 shrink-0 text-[10px] tabular-nums",
-                                active ? "text-accent" : "text-faint",
-                              )}
-                            >
-                              {String(group.start + index).padStart(2, "0")}
-                            </span>
-                            <span className="min-w-0">{item.label}</span>
-                            {active ? (
-                              <span aria-hidden="true" className="ml-auto size-1.5 shrink-0 rounded-full bg-accent" />
-                            ) : null}
-                          </LocaleLink>
-                        </li>
-                      );
-                    })}
-                  </ul>
+        <>
+          <button
+            type="button"
+            aria-label={t("nav.closeMenu")}
+            className="absolute inset-x-0 top-full z-0 h-[calc(100dvh-3.5rem)] bg-black/20 backdrop-blur-[1px] xl:hidden"
+            onClick={() => closeMenu(true)}
+          />
+          <div
+            id="mobile-navigation"
+            className="absolute inset-x-0 top-full z-10 max-h-[calc(100dvh-3.5rem)] overflow-x-hidden overflow-y-auto border-b border-line bg-canvas px-5 py-4 shadow-[var(--shadow-menu)] xl:hidden"
+          >
+            <div className="mx-auto max-w-[1176px]">
+              <nav aria-label={t("nav.menuLabel")}>
+                <ul className="space-y-1">
+                  {menuItems.map((item) => {
+                    const active = isNavItemActive(item, path);
+                    return (
+                      <li key={item.href}>
+                        <LocaleLink
+                          href={item.href}
+                          aria-current={active ? "page" : undefined}
+                          className={cn(
+                            "flex min-h-12 items-center justify-between rounded-[10px] px-4 text-[15px] font-medium transition-colors hover:bg-elevated hover:text-ink",
+                            active ? "bg-accent-soft text-accent" : "text-ink",
+                          )}
+                          onClick={() => closeMenu()}
+                        >
+                          <span>{item.label}</span>
+                          <ArrowRight
+                            aria-hidden="true"
+                            className={cn("size-4", active ? "text-accent" : "text-faint")}
+                            strokeWidth={1.75}
+                          />
+                        </LocaleLink>
+                      </li>
+                    );
+                  })}
+                </ul>
+
+                <div className="mt-4 grid gap-2">
+                  <LocaleLink
+                    href="/submit"
+                    aria-current={path.startsWith("/submit") ? "page" : undefined}
+                    className={cn(
+                      "flex min-h-12 items-center justify-between rounded-[10px] border border-line bg-card px-4 text-[15px] font-medium text-ink transition-colors hover:border-line-strong",
+                      path.startsWith("/submit") && "border-accent/40 bg-accent-soft text-accent",
+                    )}
+                    onClick={() => closeMenu()}
+                  >
+                    <span>{t("nav.submit")}</span>
+                    <ArrowRight aria-hidden="true" className="size-4 shrink-0" strokeWidth={1.75} />
+                  </LocaleLink>
+                  <GetGrokBot
+                    variant="outline"
+                    className="min-h-12 w-full justify-between bg-card px-4 text-[15px]"
+                  />
                 </div>
-              ))}
-            </div>
+              </nav>
 
-            <div className="mt-4 flex items-center gap-2">
-              <LocaleLink
-                href="/submit"
-                aria-current={path.startsWith("/submit") ? "page" : undefined}
-                className="flex h-11 min-w-0 flex-1 items-center justify-between rounded-[10px] border border-line bg-card px-4 text-[13px] font-medium text-ink transition-colors hover:border-line-strong"
-                onClick={() => setOpen(false)}
-              >
-                <span>{t("nav.submit")}</span>
-                <ArrowRight aria-hidden="true" className="size-3.5 shrink-0 text-mute" strokeWidth={1.75} />
-              </LocaleLink>
-              <GetGrokBot
-                variant="outline"
-                className="min-w-0 flex-1 justify-center bg-card px-3 text-[13px]"
-              />
+              <div className="mt-4 flex items-center justify-between gap-3 border-t border-line pt-4">
+                <span className="inline-flex items-center gap-2 text-[15px] text-mute">
+                  <Languages aria-hidden="true" className="size-4" strokeWidth={1.75} />
+                  {t("lang.label")}
+                </span>
+                <LanguageSwitch variant="menu" onSelect={() => closeMenu()} />
+              </div>
             </div>
-          </nav>
-
-          <div className="mt-3 flex items-center justify-between gap-3 border-t border-line pt-3">
-            <span className="inline-flex items-center gap-1.5 text-[12px] text-mute">
-              <Languages aria-hidden="true" className="size-3.5" strokeWidth={1.75} />
-              {t("lang.label")}
-            </span>
-            <LanguageSwitch variant="menu" onSelect={() => setOpen(false)} />
           </div>
-        </div>
+        </>
       ) : null}
     </header>
   );
 }
 
-function HeaderSearch() {
+function HeaderSearch({ onOpen }: { onOpen?: () => void }) {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const boxRef = useRef<HTMLDivElement>(null);
@@ -218,13 +224,17 @@ function HeaderSearch() {
         type="button"
         aria-expanded={open}
         aria-label={t("search.label")}
-        onClick={() => setOpen((value) => !value)}
-        className="inline-flex size-9 items-center justify-center rounded-lg text-mute hover:text-ink"
+        onClick={() => {
+          const next = !open;
+          setOpen(next);
+          if (next) onOpen?.();
+        }}
+        className="inline-flex size-11 items-center justify-center rounded-[10px] text-mute transition-colors hover:bg-elevated hover:text-ink xl:size-10"
       >
-        <Search className="size-3.5" strokeWidth={1.75} />
+        <Search className="size-4" strokeWidth={1.75} />
       </button>
       {open ? (
-        <div className="absolute top-[calc(100%+8px)] right-0 z-50 w-[min(calc(100vw-2rem),20rem)]">
+        <div className="fixed inset-x-5 top-[4.25rem] z-50 xl:absolute xl:inset-x-auto xl:top-[calc(100%+8px)] xl:right-0 xl:w-80">
           <SearchBar variant="inline" autoFocus />
         </div>
       ) : null}

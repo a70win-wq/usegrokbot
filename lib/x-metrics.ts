@@ -55,13 +55,42 @@ export function storiesByXViews() {
     .sort((a, b) => b.views - a.views);
 }
 
+export type RankedStory = {
+  story: DiscoverStory;
+  views: number;
+  checkedAt?: string;
+};
+
+function rankedStory(story: DiscoverStory): RankedStory {
+  const metric = metricForStory(story);
+  return { story, views: metric?.views ?? 0, checkedAt: metric?.checkedAt };
+}
+
 export function articleStoriesByViews() {
   return articleStories()
-    .map((story) => ({ story, views: metricForStory(story)?.views ?? 0, checkedAt: metricForStory(story)?.checkedAt }))
+    .map(rankedStory)
     .sort((a, b) => {
       if (a.views !== b.views) return b.views - a.views;
-      return a.story.publishedAt < b.story.publishedAt ? 1 : -1;
+      const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
+      if (date !== 0) return date;
+      return a.story.slug.localeCompare(b.story.slug);
     });
+}
+
+export function topArticleStoriesByViews(limit = 20) {
+  return articleStoriesByViews().slice(0, limit);
+}
+
+export function latestArticleStories(limit = 10) {
+  return articleStories()
+    .map(rankedStory)
+    .sort((a, b) => {
+      const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
+      if (date !== 0) return date;
+      if (a.views !== b.views) return b.views - a.views;
+      return a.story.slug.localeCompare(b.story.slug);
+    })
+    .slice(0, limit);
 }
 
 export function learnFeedStories(limit = 5) {

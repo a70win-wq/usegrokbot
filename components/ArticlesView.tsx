@@ -1,13 +1,34 @@
 "use client";
 
-import { AuthorAvatar } from "@/components/AuthorAvatar";
-import { articleStoriesByViews, formatViewCount } from "@/lib/x-metrics";
-import { formatCardDate } from "@/lib/format";
-import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
+import { ArticleRow } from "@/components/ArticleRow";
+import { useI18n } from "@/lib/i18n/locale";
+import type { Locale } from "@/lib/i18n/types";
+import type { RankedStory } from "@/lib/x-metrics";
 
-export function ArticlesView() {
+const SECTION_COPY: Record<Locale, { top: string; latest: string }> = {
+  en: {
+    top: "Top 20 Articles",
+    latest: "Latest 10 Articles",
+  },
+  "zh-Hant": {
+    top: "瀏覽量最高的 20 篇文章",
+    latest: "最新 10 篇文章",
+  },
+  "zh-Hans": {
+    top: "浏览量最高的 20 篇文章",
+    latest: "最新 10 篇文章",
+  },
+};
+
+export function ArticlesView({
+  top,
+  latest,
+}: {
+  top: RankedStory[];
+  latest: RankedStory[];
+}) {
   const { locale, t } = useI18n();
-  const articles = articleStoriesByViews();
+  const copy = SECTION_COPY[locale] ?? SECTION_COPY.en;
 
   return (
     <div className="mx-auto max-w-[760px] px-5 py-12 md:px-8 md:py-16">
@@ -15,42 +36,37 @@ export function ArticlesView() {
         {t("pages.articlesTitle")}
       </h1>
       <p className="mt-3 max-w-2xl text-base text-mute">{t("pages.articlesBody")}</p>
-      <p className="mt-3 text-[13px] text-faint">{t("count.articles", { n: articles.length })}</p>
 
-      <ol className="mt-10 divide-y divide-line border-y border-line">
-        {articles.map((item) => {
-          const story = localizeDiscoverStory(item.story, locale);
-          const href = item.story.xPostUrl ?? item.story.sourceUrl;
-          return (
-            <li key={item.story.slug}>
-              <a
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-start gap-4 py-4 transition hover:bg-card-hover md:gap-5"
-              >
-                <AuthorAvatar name={story.authorName} handle={item.story.handle} size={40} />
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-[13px] font-medium text-ink">
-                    {story.authorName}
-                    {item.story.handle ? (
-                      <span className="ml-1 font-normal text-mute">@{item.story.handle}</span>
-                    ) : null}
-                  </p>
-                  <p className="mt-1 text-[15px] leading-snug text-ink">{story.title}</p>
-                  <p className="mt-1 text-[12px] text-faint">{formatCardDate(item.story.publishedAt, locale)}</p>
-                </div>
-                <div className="shrink-0 pt-1 text-right">
-                  <p className="text-[18px] font-medium tabular-nums tracking-tight text-ink">
-                    {item.views > 0 ? formatViewCount(item.views, locale) : "—"}
-                  </p>
-                  <p className="mt-0.5 text-[11px] text-faint">{t("pages.rankingsViews")}</p>
-                </div>
-              </a>
-            </li>
-          );
-        })}
-      </ol>
+      <section className="mt-12">
+        <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{copy.top}</h2>
+        <p className="mt-2 text-[13px] text-faint">{t("count.articles", { n: top.length })}</p>
+        <ol className="mt-6 divide-y divide-line border-y border-line">
+          {top.map((item, index) => (
+            <ArticleRow
+              key={`top-${item.story.slug}`}
+              item={item}
+              locale={locale}
+              viewsLabel={t("pages.rankingsViews")}
+              rank={index + 1}
+            />
+          ))}
+        </ol>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="text-[24px] font-medium tracking-tight text-ink md:text-[28px]">{copy.latest}</h2>
+        <p className="mt-2 text-[13px] text-faint">{t("count.articles", { n: latest.length })}</p>
+        <ol className="mt-6 divide-y divide-line border-y border-line">
+          {latest.map((item) => (
+            <ArticleRow
+              key={`latest-${item.story.slug}`}
+              item={item}
+              locale={locale}
+              viewsLabel={t("pages.rankingsViews")}
+            />
+          ))}
+        </ol>
+      </section>
     </div>
   );
 }

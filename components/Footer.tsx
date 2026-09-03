@@ -1,6 +1,6 @@
 "use client";
 
-import { useI18n } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n/locale";
 import { BotFace, botColorFor } from "./BotFace";
 import { GetGrokBot } from "./GetGrokBot";
 import { GitHubStar } from "./GitHubStar";
@@ -15,7 +15,7 @@ export function Footer({ stars }: { stars?: number | null }) {
     { href: "/templates", label: t("nav.templates") },
     { href: "/roles", label: t("nav.official") },
     { href: "/categories", label: t("nav.categories") },
-    { href: "/rankings", label: t("nav.rankings") },
+    { href: "/community", label: t("trust.community") },
     { href: "/articles", label: t("nav.articles") },
     { href: "/submit", label: t("nav.submitShort") },
   ];
@@ -23,13 +23,13 @@ export function Footer({ stars }: { stars?: number | null }) {
   return (
     <footer className="mt-auto border-t border-line">
       <div className="mx-auto max-w-[1240px] px-5 py-10 md:px-8 md:py-12">
-        <LocaleLink href="/" className="inline-flex items-center gap-2 text-sm font-medium text-ink">
+        <LocaleLink href="/" className="inline-flex items-center gap-2 text-[15px] font-medium text-ink">
           <BotFace size={18} color={botColorFor("usegrokbot")} />
           UseGrokBot
         </LocaleLink>
 
         <nav
-          className="mt-5 grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-mute sm:flex sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3"
+          className="mt-5 grid grid-cols-2 gap-x-8 gap-y-1 text-[15px] text-mute sm:flex sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-3"
           aria-label="Footer"
         >
           {links.map((item) => (
@@ -43,7 +43,7 @@ export function Footer({ stars }: { stars?: number | null }) {
           ))}
         </nav>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-1 text-sm text-mute sm:mt-5">
+        <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-1 text-[15px] text-mute sm:mt-5">
           <span className="flex min-h-10 items-center sm:min-h-0">
             <GetGrokBot variant="link" />
           </span>

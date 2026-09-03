@@ -8,7 +8,6 @@ export const INDEXNOW_KEY_LOCATION = `${site.url}/${INDEXNOW_KEY}.txt`;
 export const PRIORITY_PATHS = [
   "/",
   "/categories",
-  "/rankings",
   "/articles",
   "/categories/email",
   "/categories/sales",
