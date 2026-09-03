@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 35,
+    "total": 36,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 30,
+    "alreadyIngested": 31,
     "pending": 0
   },
   "cases": [
@@ -466,6 +466,19 @@
       "title": "Bull Desk Webull trading",
       "url": "https://github.com/HammeredSmithy/bull-trade",
       "sourceSummary": "HyperGrok-style seven-agent trading desk ported to Webull OpenAPI for US users—research, size, approve-by-id execution and review Bots with paper sandbox before live keys.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "growth-grok-bots-self-serve-team",
+      "title": "Growth Grok Bots self-serve team",
+      "url": "https://github.com/jay-sahnan/growth-grok-bots",
+      "sourceSummary": "Shareable multi-bot growth team (Head of Growth plus specialists) with narrow jobs, handoffs, and human approval before anything ships or sends.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
