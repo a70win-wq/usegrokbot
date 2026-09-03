@@ -7,9 +7,9 @@ export type Sponsor = {
 
 export const sponsors: readonly Sponsor[] = [
   {
-    slug: "grok-app",
-    name: "Grok App",
-    href: "https://grok-app.com/?utm_source=usegrokbot.com&utm_medium=sponsor&utm_campaign=strip",
-    logo: "/sponsors/grok-app.svg",
+    slug: "awesome-grok-bot",
+    name: "Awesome Grok Bot",
+    href: "https://github.com/RongleCat/awesome-grok-bot",
+    logo: "/sponsors/awesome-grok-bot.png",
   },
 ];

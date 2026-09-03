@@ -26,10 +26,10 @@ export const messages = {
     },
     sponsor: {
       label: "Sponsored",
-      name: "Grok App",
-      tagline: "Open-source desktop GUI for Grok Build CLI",
-      cta: "Visit Grok App",
-      aria: "Sponsored by Grok App. Opens in a new tab.",
+      name: "Awesome Grok Bot",
+      tagline: "Curated bilingual list of Grok Bot resources",
+      cta: "Open on GitHub",
+      aria: "Sponsored by Awesome Grok Bot. Opens in a new tab.",
     },
     nav: {
       discover: "Home",
@@ -481,10 +481,10 @@ export const messages = {
     },
     sponsor: {
       label: "贊助",
-      name: "Grok App",
-      tagline: "為 Grok Build CLI 打造的開源桌面 GUI",
-      cta: "前往 Grok App",
-      aria: "由 Grok App 贊助，在新分頁開啟。",
+      name: "Awesome Grok Bot",
+      tagline: "雙語 Grok Bot 資源精選清單",
+      cta: "在 GitHub 開啟",
+      aria: "由 Awesome Grok Bot 贊助，在新分頁開啟。",
     },
     nav: {
       discover: "首頁",
@@ -930,10 +930,10 @@ export const messages = {
     },
     sponsor: {
       label: "赞助",
-      name: "Grok App",
-      tagline: "为 Grok Build CLI 打造的开源桌面 GUI",
-      cta: "前往 Grok App",
-      aria: "由 Grok App 赞助，在新标签页打开。",
+      name: "Awesome Grok Bot",
+      tagline: "双语 Grok Bot 资源精选清单",
+      cta: "在 GitHub 打开",
+      aria: "由 Awesome Grok Bot 赞助，在新标签页打开。",
     },
     nav: {
       discover: "首页",
