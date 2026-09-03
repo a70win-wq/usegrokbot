@@ -238,7 +238,8 @@ html:has(#mobile-navigation) [data-cursor-bot] {
 }
 
 @media (max-width: 640px) {
-  html:has([data-bot-teams-page]) [data-cursor-bot] {
+  html:has([data-bot-teams-page]) [data-cursor-bot],
+  html:has([data-use-cases-page]) [data-cursor-bot] {
     display: none !important;
   }
 }

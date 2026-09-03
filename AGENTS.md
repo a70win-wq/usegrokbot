@@ -21,3 +21,20 @@ After any UI, copy, i18n, routing, or local-dev change:
 Do **not** ask Chris to try, refresh, or "see if it works" until you have already done this. If local will not load, fix it first.
 
 Never use overflow-x-auto for catalogs, chip rows, or nav lists.
+
+# Reply to Chris in written Traditional Chinese
+
+Chris's rule, not optional.
+
+Use 繁體中文書面語 (written Traditional Chinese). Do not use simplified Chinese characters. Do not use 粵語口語 (Cantonese colloquial): no 呢隻、咩、唔好、而家、嗰、啲 as the reply register.
+
+# How to talk about a bot
+
+Chris's rule, not optional.
+
+A bot is a helper. Describe **what the bot helps you do**. Do not call that a 工, 工作, or job in Chinese.
+
+- Say: 這隻 bot 幫你做什麼
+- Do not say: 這份工、第一份工、交一份工、一份有完成定義的工
+
+English product words like job, role, and use case stay English in code and official labels. When explaining to Chris or writing Chinese copy, translate the *purpose*, not the word job.

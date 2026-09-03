@@ -288,7 +288,7 @@ const pageCopy: Record<"en" | "zh-Hant", BotTeamsPageCopy> = {
     examplesTitle: "Source posts",
     examplesBody: "Read the original posts, authors, dates, and available view counts before copying the setup.",
     otherTitle: "More teams in this category",
-    allTeams: "See all Bot Teams",
+    allTeams: "See current Use Cases",
   },
   "zh-Hant": {
     eyebrow: "真實多 BOT 組隊",
@@ -334,7 +334,7 @@ const pageCopy: Record<"en" | "zh-Hant", BotTeamsPageCopy> = {
     examplesTitle: "來源貼文",
     examplesBody: "複製前，可以查看原貼文、作者、日期和已有觀看數據。",
     otherTitle: "同分類的其他團隊",
-    allTeams: "查看全部 Bot 團隊",
+    allTeams: "查看目前的使用案例",
   },
 };
 

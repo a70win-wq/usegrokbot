@@ -23,6 +23,11 @@ export { localizeOfficial } from "./official";
 export { localizeScenario } from "./scenarios";
 export { localizeTemplateCopy } from "./templates";
 export {
+  localizeUseCaseText,
+  localizeVerifiedUseCase,
+  verifiedUseCasesPageCopy,
+} from "./verified-use-cases";
+export {
   botTeamsPageCopy,
   localizeBotTeam,
   localizeBotTeamCategory,

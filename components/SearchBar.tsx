@@ -4,17 +4,15 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
-import { botTeams } from "@/data/bot-teams";
 import { searchDiscoverStories } from "@/data/discover";
-import { scenarios } from "@/data/scenarios";
 import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/templates";
 import { topicMessageKey, topics } from "@/data/topics";
+import { verifiedUseCases } from "@/data/verified-use-cases";
 import { cn } from "@/lib/cn";
 import {
-  localizeBotTeam,
   localizeDiscoverStory,
-  localizeScenario,
   localizeTemplateCopy,
+  localizeVerifiedUseCase,
   useI18n,
 } from "@/lib/i18n";
 import { searchResultsPath } from "@/lib/search";
@@ -128,55 +126,30 @@ export function SearchBar({
     const q = query.trim().toLowerCase();
     if (!q) return [];
 
-    const teams = botTeams
+    return verifiedUseCases
       .map((item) => ({
-        localized: localizeBotTeam(item, locale),
-        english: localizeBotTeam(item, "en"),
+        localized: localizeVerifiedUseCase(item, locale),
+        english: localizeVerifiedUseCase(item, "en"),
       }))
       .filter(({ localized, english }) => {
         const haystack = [
           localized.slug,
           localized.title,
-          localized.summary,
-          localized.outcome,
-          localized.audience,
-          ...localized.roles.flatMap((role) => [role.name, role.action, role.handoff]),
+          localized.categoryLabel,
+          ...localized.setupSteps,
+          ...localized.teamRoles.flatMap((role) => [role.name, role.purpose]),
           english.title,
-          english.summary,
-          english.outcome,
-          english.audience,
-          ...english.roles.flatMap((role) => [role.name, role.action, role.handoff]),
+          english.categoryLabel,
+          ...english.setupSteps,
+          ...english.teamRoles.flatMap((role) => [role.name, role.purpose]),
         ]
           .filter(Boolean)
           .join(" ")
           .toLowerCase();
         return haystack.includes(q);
       })
-      .map(({ localized }) => ({ slug: localized.slug, title: localized.title }));
-
-    const legacyScenarios = scenarios
-      .map((item) => localizeScenario(item, locale))
-      .filter((item) => {
-        const source = scenarios.find((entry) => entry.slug === item.slug);
-        const haystack = [
-          item.slug,
-          item.title,
-          item.short,
-          item.oneLiner,
-          item.does,
-          item.who,
-          source?.title,
-          source?.short,
-          source?.oneLiner,
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-        return haystack.includes(q);
-      })
-      .map((item) => ({ slug: item.slug, title: item.title }));
-
-    return [...teams, ...legacyScenarios].slice(0, 3);
+      .map(({ localized }) => ({ slug: localized.slug, title: localized.title }))
+      .slice(0, 3);
   }, [query, locale]);
 
   const matchingTemplates = useMemo(() => {
