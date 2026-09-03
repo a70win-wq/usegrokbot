@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 36,
+    "total": 40,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 31,
+    "alreadyIngested": 35,
     "pending": 0
   },
   "cases": [
@@ -479,6 +479,58 @@
       "title": "Growth Grok Bots self-serve team",
       "url": "https://github.com/jay-sahnan/growth-grok-bots",
       "sourceSummary": "Shareable multi-bot growth team (Head of Growth plus specialists) with narrow jobs, handoffs, and human approval before anything ships or sends.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-market-memory-pack",
+      "title": "Grok Bot Market Memory pack",
+      "url": "https://github.com/palehonk0-o/grokbot-market-memory",
+      "sourceSummary": "Evidence-first market-memory implementation pack for turning public pages into decision briefs with Grok Bot, matching a public X article walkthrough.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-fleet-public-packets",
+      "title": "Grok Bot fleet public packets",
+      "url": "https://github.com/Logos52/grok-bot-packets",
+      "sourceSummary": "Public weekday dump of files a Grok Bot fleet writes under /workspace on the shared cloud computer, mirrored for Mac /fold skill intake.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "per-bot-durable-knowledge-log",
+      "title": "Per-bot durable knowledge log",
+      "url": "https://github.com/jblack4vols/grok-bot",
+      "sourceSummary": "Durable per-bot knowledge log for a real Grok Bot roster, with dated America/New_York files for decisions, shipped work, and standing preferences.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "uitm-calendar-grok-bot-mcp",
+      "title": "UiTM calendar Grok Bot + MCP",
+      "url": "https://github.com/bilauitmcuti/bot",
+      "sourceSummary": "UiTM academic calendar assistant running on Grok Bot with a remote MCP server for live lecture, cuti, exam, and holiday dates.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
