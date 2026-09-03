@@ -237,6 +237,12 @@ html:has(#mobile-navigation) [data-cursor-bot] {
   opacity: 0 !important;
 }
 
+@media (max-width: 640px) {
+  html:has([data-bot-teams-page]) [data-cursor-bot] {
+    display: none !important;
+  }
+}
+
 html[data-boot="1"] {
   overflow: hidden;
 }

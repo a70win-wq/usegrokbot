@@ -4,12 +4,19 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
+import { botTeams } from "@/data/bot-teams";
 import { searchDiscoverStories } from "@/data/discover";
 import { scenarios } from "@/data/scenarios";
 import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/templates";
 import { topicMessageKey, topics } from "@/data/topics";
 import { cn } from "@/lib/cn";
-import { localizeDiscoverStory, localizeScenario, localizeTemplateCopy, useI18n } from "@/lib/i18n";
+import {
+  localizeBotTeam,
+  localizeDiscoverStory,
+  localizeScenario,
+  localizeTemplateCopy,
+  useI18n,
+} from "@/lib/i18n";
 import { searchResultsPath } from "@/lib/search";
 
 type SearchBarProps = {
@@ -117,10 +124,37 @@ export function SearchBar({
       .slice(0, 3);
   }, [query, t]);
 
-  const matchingScenarios = useMemo(() => {
+  const matchingUseCases = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return [];
-    return scenarios
+
+    const teams = botTeams
+      .map((item) => ({
+        localized: localizeBotTeam(item, locale),
+        english: localizeBotTeam(item, "en"),
+      }))
+      .filter(({ localized, english }) => {
+        const haystack = [
+          localized.slug,
+          localized.title,
+          localized.summary,
+          localized.outcome,
+          localized.audience,
+          ...localized.roles.flatMap((role) => [role.name, role.action, role.handoff]),
+          english.title,
+          english.summary,
+          english.outcome,
+          english.audience,
+          ...english.roles.flatMap((role) => [role.name, role.action, role.handoff]),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(q);
+      })
+      .map(({ localized }) => ({ slug: localized.slug, title: localized.title }));
+
+    const legacyScenarios = scenarios
       .map((item) => localizeScenario(item, locale))
       .filter((item) => {
         const source = scenarios.find((entry) => entry.slug === item.slug);
@@ -140,7 +174,9 @@ export function SearchBar({
           .toLowerCase();
         return haystack.includes(q);
       })
-      .slice(0, 3);
+      .map((item) => ({ slug: item.slug, title: item.title }));
+
+    return [...teams, ...legacyScenarios].slice(0, 3);
   }, [query, locale]);
 
   const matchingTemplates = useMemo(() => {
@@ -184,7 +220,7 @@ export function SearchBar({
   const showSuggestions = open && trimmed.length === 0;
   const menuItems = showResults
     ? [
-        ...matchingScenarios.map((item) => ({
+        ...matchingUseCases.map((item) => ({
           href: `/use-cases/${item.slug}`,
           title: item.title,
           detail: t("nav.useCases"),
@@ -316,7 +352,7 @@ export function SearchBar({
           {showResults &&
           stories.length === 0 &&
           matchingTopics.length === 0 &&
-          matchingScenarios.length === 0 &&
+          matchingUseCases.length === 0 &&
           matchingTemplates.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">
               {t("search.empty")}

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { botTeams } from "@/data/bot-teams";
 import { discoverStories, shouldIndexDiscoverStory } from "@/data/discover";
 import { scenarios } from "@/data/scenarios";
 import { templateIdentitySlugs } from "@/data/template-identities";
@@ -36,6 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/templates/all", { changeFrequency: "daily", priority: 0.72 }, day(latestStory)),
     ...templateIdentitySlugs.flatMap((identity) =>
       entries("/templates/" + identity, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),
+    ),
+    ...botTeams.flatMap((item) =>
+      entries(`/use-cases/${item.slug}`, { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ),
     ...scenarios.flatMap((item) =>
       entries(`/use-cases/${item.slug}`, { changeFrequency: "weekly", priority: 0.75 }, day(latestStory)),

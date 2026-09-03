@@ -22,3 +22,10 @@ export { localizeDiscoverStory, getDiscoverStoryI18n } from "./discover";
 export { localizeOfficial } from "./official";
 export { localizeScenario } from "./scenarios";
 export { localizeTemplateCopy } from "./templates";
+export {
+  botTeamsPageCopy,
+  localizeBotTeam,
+  type BotTeamsPageCopy,
+  type LocalizedBotTeam,
+  type LocalizedBotTeamRole,
+} from "./bot-teams";

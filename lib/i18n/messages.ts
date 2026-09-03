@@ -33,7 +33,7 @@ export const messages = {
     },
     nav: {
       discover: "Home",
-      useCases: "Use Cases",
+      useCases: "Bot Teams",
       templates: "Templates",
       workflows: "Workflows",
       official: "xAI Roles",
@@ -362,9 +362,9 @@ export const messages = {
     useCases: {
       title: "Ten Grok Bot use cases",
       body: "The ten jobs people actually post about most — each with a first prompt, real posts from X, and the matching xAI role where there is one.",
-      allTitle: "Grok Bot use cases",
-      allBody:
-        "{n} jobs summarized from public X posts on this site, plus official xAI roles. The first ten are the ones with the most attention and the easiest first prompt.",
+      seoTitle: "Grok Bot Teams & Use Cases",
+      allTitle: "Grok Bot Teams",
+      allBody: "Build teams of Grok Bots that work together toward a real result, with clear roles, handoffs, templates, and examples from X.",
       count: "{n} jobs",
       open: "Open this job",
       promptTitle: "First prompt",
@@ -488,7 +488,7 @@ export const messages = {
     },
     nav: {
       discover: "首頁",
-      useCases: "使用場景",
+      useCases: "Bot 團隊",
       templates: "模板",
       workflows: "工作流程",
       official: "官方角色",
@@ -814,8 +814,9 @@ export const messages = {
     useCases: {
       title: "Grok Bot 十大使用場景",
       body: "站上公開帖裡，人們做得最多、最好開工的十份工作。每項都有第一句提示詞、真實 X 貼文，有官方角色就連上去。",
-      allTitle: "Grok Bot 使用場景",
-      allBody: "從本站公開 X 帖與 xAI 官方角色收成 {n} 份工作。前十個是關注最高、最好開工的。",
+      seoTitle: "Grok Bot 團隊與使用案例",
+      allTitle: "Grok Bot 團隊",
+      allBody: "建立一組能一起完成真實結果的 Grok Bots，清楚查看角色、交接、模板和 X 上的公開例子。",
       count: "{n} 個場景",
       open: "打開這份工作",
       promptTitle: "第一句提示詞",
@@ -937,7 +938,7 @@ export const messages = {
     },
     nav: {
       discover: "首页",
-      useCases: "使用场景",
+      useCases: "Bot 团队",
       templates: "模板",
       workflows: "工作流",
       official: "官方角色",
@@ -1263,8 +1264,9 @@ export const messages = {
     useCases: {
       title: "Grok Bot 十大使用场景",
       body: "站上公开帖里，人们做得最多、最好开工的十份工作。每项都有第一句提示词、真实 X 帖，有官方角色就连上去。",
-      allTitle: "Grok Bot 使用场景",
-      allBody: "从本站公开 X 帖与 xAI 官方角色收成 {n} 份工作。前十个是关注最高、最好开工的。",
+      seoTitle: "Grok Bot 团队与使用案例",
+      allTitle: "Grok Bot 团队",
+      allBody: "建立一组能一起完成真实结果的 Grok Bots，清楚查看角色、交接、模板和 X 上的公开例子。",
       count: "{n} 个场景",
       open: "打开这份工作",
       promptTitle: "第一句提示词",
