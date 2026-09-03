@@ -10,6 +10,7 @@
     "validate:discover": "tsx scripts/validate-discover.ts",
     "validate:search": "tsx scripts/validate-search.ts",
     "validate:prompts": "tsx scripts/validate-prompts.ts",
+    "validate:template-identities": "tsx scripts/validate-template-identities.ts",
     "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs",
     "ingest:awesome-grok-bot": "tsx scripts/ingest-awesome-grok-bot.ts",
     "refresh:x-metrics": "tsx scripts/refresh-x-metrics.ts",

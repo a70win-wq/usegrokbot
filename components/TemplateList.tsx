@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { ExpandablePost } from "@/components/ExpandablePost";
 import {
   catalogEntry,
@@ -17,108 +17,147 @@ import { formatViewCount, metricForPostUrl, metricForStory } from "@/lib/x-metri
 
 const MORE_STEP = 12;
 
-function firstScreenCount() {
-  if (typeof window === "undefined") return 12;
-  if (window.matchMedia("(min-width: 1280px)").matches) return 12;
-  if (window.matchMedia("(min-width: 1024px)").matches) return 9;
-  if (window.matchMedia("(min-width: 768px)").matches) return 6;
-  return 12;
-}
-
 export function TemplateList({
   items = templates,
   pager = true,
   heading: Heading = "h2",
+  variant = "ranked",
 }: {
   items?: readonly BotTemplate[];
   pager?: boolean;
   heading?: "h2" | "h3";
+  variant?: "ranked" | "identity";
 }) {
   const { locale, t } = useI18n();
-  const [visible, setVisible] = useState(pager ? 12 : items.length);
-
-  useLayoutEffect(() => {
-    if (!pager) {
-      setVisible(items.length);
-      return;
-    }
-    setVisible((current) => Math.min(Math.max(current, firstScreenCount()), items.length));
-  }, [items.length, pager]);
+  const [requestedVisible, setRequestedVisible] = useState(MORE_STEP);
+  const visible = pager ? Math.min(requestedVisible, items.length) : items.length;
 
   const shown = items.slice(0, visible);
   const hasMore = visible < items.length;
+  const ListTag = variant === "identity" ? "ul" : "ol";
 
   return (
     <>
-    <ol className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-5">
-      {shown.map((item) => {
-        const story = getTemplateStory(item);
-        const localized = story ? localizeDiscoverStory(story, locale) : undefined;
-        const english = templateCopy(item, localized ?? { title: item.authorName, headline: "", body: "" });
-        const catalog = catalogEntry(item.id);
-        const copy = localizeTemplateCopy(item.id, locale, {
-          title: english.title,
-          oneLiner: english.oneLiner,
-          body: catalog?.body,
-        });
-        const views =
-          (story ? metricForStory(story)?.views ?? 0 : 0) ||
-          (metricForPostUrl(item.xPostUrl)?.views ?? 0);
-        const postText = (
-          locale === "en"
-            ? localized?.body || catalog?.body || copy.oneLiner
-            : copy.body || localized?.body || copy.oneLiner
-        ).trim();
-        const xPostUrl = item.xPostUrl ?? story?.xPostUrl ?? story?.sourceUrl;
+      <ListTag className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-5">
+        {shown.map((item) => {
+          const story = getTemplateStory(item);
+          const localized = story ? localizeDiscoverStory(story, locale) : undefined;
+          const english = templateCopy(
+            item,
+            localized ?? { title: item.authorName, headline: "", body: "" },
+          );
+          const catalog = catalogEntry(item.id);
+          const copy = localizeTemplateCopy(item.id, locale, {
+            title: english.title,
+            oneLiner: english.oneLiner,
+            body: catalog?.body,
+          });
+          const xPostUrl = item.xPostUrl ?? story?.xPostUrl ?? story?.sourceUrl;
 
-        return (
-          <li key={item.id}>
-            <article className="spring-lift flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
-              <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <span className="font-mono text-[20px] tabular-nums tracking-tight text-faint">
-                    {rankLabel(item.rank)}
-                  </span>
-                  {xPostUrl ? <XPostButton href={xPostUrl} label={t("discover.viewOriginalX")} /> : null}
+          if (variant === "identity") {
+            const byline = item.handle ? `@${item.handle}` : item.authorName;
+            const oneLiner = copy.oneLiner.trim();
+            const showOneLiner =
+              Boolean(oneLiner) &&
+              oneLiner.toLowerCase() !== copy.title.trim().toLowerCase();
+
+            return (
+              <li key={item.id}>
+                <article className="spring-lift flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
+                  <div className="flex items-start justify-between gap-3">
+                    <Heading className="min-w-0 text-[18px] font-medium tracking-tight wrap-break-word text-ink">
+                      {copy.title}
+                    </Heading>
+                    {xPostUrl ? (
+                      <XPostButton href={xPostUrl} label={t("discover.viewOriginalX")} />
+                    ) : null}
+                  </div>
+                  {showOneLiner ? (
+                    <p className="mt-1.5 min-w-0 line-clamp-2 text-[14px] leading-6 wrap-break-word text-mute">
+                      {oneLiner}
+                    </p>
+                  ) : null}
+                  {byline ? (
+                    <p className="mt-3 min-w-0 truncate text-[13px] text-faint">{byline}</p>
+                  ) : null}
+                  <div className="mt-auto pt-5">
+                    <a
+                      href={item.templateUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="accent-gradient spring-press inline-flex h-11 w-full items-center justify-center rounded-[10px] px-5 text-base font-medium"
+                    >
+                      {t("templates.open")}
+                    </a>
+                  </div>
+                </article>
+              </li>
+            );
+          }
+
+          const views =
+            (story ? metricForStory(story)?.views ?? 0 : 0) ||
+            (metricForPostUrl(item.xPostUrl)?.views ?? 0);
+          const postText = (
+            locale === "en"
+              ? localized?.body || catalog?.body || copy.oneLiner
+              : copy.body || localized?.body || copy.oneLiner
+          ).trim();
+
+          return (
+            <li key={item.id}>
+              <article className="spring-lift flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[20px] tabular-nums tracking-tight text-faint">
+                      {rankLabel(item.rank)}
+                    </span>
+                    {xPostUrl ? (
+                      <XPostButton href={xPostUrl} label={t("discover.viewOriginalX")} />
+                    ) : null}
+                  </div>
+                  <p className="shrink-0 text-right">
+                    <span className="text-[18px] font-medium tabular-nums tracking-tight text-ink">
+                      {views > 0 ? formatViewCount(views, locale) : "—"}
+                    </span>{" "}
+                    <span className="text-[11px] text-faint">{t("pages.rankingsViews")}</span>
+                  </p>
                 </div>
-                <p className="shrink-0 text-right">
-                  <span className="text-[18px] font-medium tabular-nums tracking-tight text-ink">
-                    {views > 0 ? formatViewCount(views, locale) : "—"}
-                  </span>{" "}
-                  <span className="text-[11px] text-faint">{t("pages.rankingsViews")}</span>
-                </p>
-              </div>
 
-              <Heading className="mt-4 text-[18px] font-medium tracking-tight text-ink">{copy.title}</Heading>
-              <ExpandablePost text={postText} lines={3} className="mt-1.5" />
+                <Heading className="mt-4 text-[18px] font-medium tracking-tight text-ink">
+                  {copy.title}
+                </Heading>
+                <ExpandablePost text={postText} lines={3} className="mt-1.5" />
 
-              <div className="mt-auto pt-5">
-                <a
-                  href={item.templateUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="accent-gradient spring-press inline-flex h-11 w-full items-center justify-center rounded-[10px] px-5 text-base font-medium"
-                >
-                  {t("templates.open")}
-                </a>
-              </div>
-            </article>
-          </li>
-        );
-      })}
-    </ol>
-    {pager && hasMore ? (
-      <div className="mt-8 flex flex-wrap items-center justify-center gap-3" data-catalog-pager>
-        <PagerButton
-          onClick={() => setVisible((count) => Math.min(count + MORE_STEP, items.length))}
-        >
-          {t("templates.showMore")}
-        </PagerButton>
-        <PagerButton onClick={() => setVisible(items.length)}>
-          {t("templates.showAll")}
-        </PagerButton>
-      </div>
-    ) : null}
+                <div className="mt-auto pt-5">
+                  <a
+                    href={item.templateUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="accent-gradient spring-press inline-flex h-11 w-full items-center justify-center rounded-[10px] px-5 text-base font-medium"
+                  >
+                    {t("templates.open")}
+                  </a>
+                </div>
+              </article>
+            </li>
+          );
+        })}
+      </ListTag>
+      {pager && hasMore ? (
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3" data-catalog-pager>
+          <PagerButton
+            onClick={() =>
+              setRequestedVisible((count) => Math.min(count + MORE_STEP, items.length))
+            }
+          >
+            {t("templates.showMore")}
+          </PagerButton>
+          <PagerButton onClick={() => setRequestedVisible(items.length)}>
+            {t("templates.showAll")}
+          </PagerButton>
+        </div>
+      ) : null}
     </>
   );
 }
@@ -162,7 +201,7 @@ function XPostButton({ href, label }: { href: string; label: string }) {
       onClick={tap.trigger}
       onAnimationEnd={tap.onAnimationEnd}
       className={cn(
-        "spring-press inline-flex size-8 items-center justify-center rounded-[10px] border border-line text-ink transition hover:border-line-strong hover:bg-accent-soft hover:text-accent",
+        "spring-press inline-flex size-8 shrink-0 items-center justify-center rounded-[10px] border border-line text-ink transition hover:border-line-strong hover:bg-accent-soft hover:text-accent",
         tap.className,
       )}
     >

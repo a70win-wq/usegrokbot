@@ -114,7 +114,7 @@ function HomeViewContent({
                   {t("templates.homeTitle")}
                 </h2>
               </div>
-              <LocaleLink href="/templates" className="shrink-0 text-base font-medium text-mute hover:text-ink">
+              <LocaleLink href="/templates/all" className="shrink-0 text-base font-medium text-mute hover:text-ink">
                 {t("templates.viewAll", { n: templates.length })}
               </LocaleLink>
             </div>
