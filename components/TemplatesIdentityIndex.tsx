@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { TemplatesModeNav } from "@/components/TemplatesModeNav";
 import {
   identityClusters,
   interpolateIdentityCopy,
@@ -9,7 +10,6 @@ import {
   templateIdentitiesForCluster,
   templateIdentityUiCopy,
 } from "@/data/template-identities";
-import { templates } from "@/data/templates";
 import { withLocale, type UrlLocale } from "@/lib/i18n/paths";
 import type { Locale } from "@/lib/i18n/types";
 
@@ -21,24 +21,18 @@ export function TemplatesIdentityIndex({
   urlLocale: UrlLocale;
 }) {
   const copy = templateIdentityUiCopy[locale];
-  const allTemplatesLabel = interpolateIdentityCopy(copy.allTemplates, { n: templates.length });
 
   return (
     <div className="mx-auto max-w-[1240px] px-5 py-12 md:px-8 md:py-16" data-template-identity-index>
-      <div className="grid items-end gap-6 border-b border-line pb-8 lg:grid-cols-[minmax(0,1fr)_auto]">
+      <TemplatesModeNav active="role" locale={locale} urlLocale={urlLocale} />
+
+      <div className="border-b border-line pb-8 pt-10 md:pt-12">
         <div>
           <h1 className="text-[clamp(32px,5vw,48px)] font-medium tracking-[-0.035em] text-ink">
             {copy.title}
           </h1>
           <p className="mt-3 max-w-2xl text-base leading-7 text-mute">{copy.intro}</p>
         </div>
-        <Link
-          href={withLocale("/templates/all", urlLocale)}
-          className="spring-press inline-flex min-h-11 w-fit items-center gap-2 rounded-[10px] border border-line px-4 text-sm font-medium text-ink hover:border-line-strong hover:bg-card"
-        >
-          {allTemplatesLabel}
-          <ArrowRight className="size-4" aria-hidden />
-        </Link>
       </div>
 
       <div className="space-y-16 pt-12 md:space-y-20 md:pt-16">

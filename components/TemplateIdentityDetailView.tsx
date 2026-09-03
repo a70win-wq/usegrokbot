@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { TemplateList } from "@/components/TemplateList";
+import { TemplatesModeNav } from "@/components/TemplatesModeNav";
 import {
   getTemplateIdentity,
   interpolateIdentityCopy,
@@ -40,9 +41,11 @@ export function TemplateIdentityDetailView({
       className="mx-auto max-w-[1240px] px-5 py-10 md:px-8 md:py-16"
       data-template-identity-detail={slug}
     >
+      <TemplatesModeNav active="role" locale={locale} urlLocale={urlLocale} />
+
       <Link
         href={withLocale("/templates", urlLocale)}
-        className="inline-flex min-h-11 items-center gap-2 rounded-[10px] text-sm font-medium text-mute hover:text-ink"
+        className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-[10px] text-sm font-medium text-mute hover:text-ink"
       >
         <ArrowLeft className="size-4" aria-hidden />
         {copy.back}

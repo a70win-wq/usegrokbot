@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entries("/", { changeFrequency: "daily", priority: 1 }, day(latestStory)),
     ...entries("/use-cases", { changeFrequency: "weekly", priority: 0.85 }, day(latestStory)),
     ...entries("/templates", { changeFrequency: "daily", priority: 0.8 }, day(latestStory)),
+    ...entries("/templates/teams", { changeFrequency: "daily", priority: 0.76 }, day(latestStory)),
     ...entries("/templates/all", { changeFrequency: "daily", priority: 0.72 }, day(latestStory)),
     ...templateIdentitySlugs.flatMap((identity) =>
       entries("/templates/" + identity, { changeFrequency: "weekly", priority: 0.7 }, day(latestStory)),

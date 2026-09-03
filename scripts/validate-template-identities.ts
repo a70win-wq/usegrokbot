@@ -21,6 +21,11 @@ const assignmentIds = new Set(Object.keys(templateIdentityAssignments));
 const storyAssignmentIds = new Set(Object.keys(templateIdentityStoryAssignments));
 const runtimeIds = new Set(templates.map((template) => template.id));
 const validSlugs = new Set<string>(templateIdentitySlugs);
+const reservedTemplateRoutes = ["all", "teams"];
+
+for (const slug of reservedTemplateRoutes) {
+  if (validSlugs.has(slug)) fail("Identity slug conflicts with reserved template route " + slug);
+}
 
 function validateAssignment(id: string, slugs: readonly string[]) {
   if (slugs.length > 2) fail("Template " + id + " has more than two identities.");

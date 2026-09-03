@@ -10,6 +10,7 @@ import {
   templateCopy,
   type BotTemplate,
 } from "@/data/templates";
+import { templateHubUiCopy, type TemplateTeamMode } from "@/data/template-types";
 import { cn } from "@/lib/cn";
 import { localizeDiscoverStory, localizeTemplateCopy, useI18n } from "@/lib/i18n";
 import { useTapFeedback } from "@/lib/tap-feedback";
@@ -26,15 +27,16 @@ export function TemplateList({
   items?: readonly BotTemplate[];
   pager?: boolean;
   heading?: "h2" | "h3";
-  variant?: "ranked" | "identity";
+  variant?: "ranked" | "identity" | "team";
 }) {
   const { locale, t } = useI18n();
+  const hubCopy = templateHubUiCopy[locale];
   const [requestedVisible, setRequestedVisible] = useState(MORE_STEP);
   const visible = pager ? Math.min(requestedVisible, items.length) : items.length;
 
   const shown = items.slice(0, visible);
   const hasMore = visible < items.length;
-  const ListTag = variant === "identity" ? "ul" : "ol";
+  const ListTag = variant === "ranked" ? "ol" : "ul";
 
   return (
     <>
@@ -54,24 +56,43 @@ export function TemplateList({
           });
           const xPostUrl = item.xPostUrl ?? story?.xPostUrl ?? story?.sourceUrl;
 
-          if (variant === "identity") {
+          if (variant === "identity" || variant === "team") {
             const byline = item.handle ? `@${item.handle}` : item.authorName;
             const oneLiner = copy.oneLiner.trim();
             const showOneLiner =
               Boolean(oneLiner) &&
               oneLiner.toLowerCase() !== copy.title.trim().toLowerCase();
+            const isTeamCard = variant === "team";
 
             return (
               <li key={item.id}>
-                <article className="spring-lift flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong">
-                  <div className="flex items-start justify-between gap-3">
-                    <Heading className="min-w-0 text-[18px] font-medium tracking-tight wrap-break-word text-ink">
-                      {copy.title}
-                    </Heading>
+                <article
+                  className={cn(
+                    "spring-lift flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong",
+                    isTeamCard && "border-line-strong bg-elevated",
+                  )}
+                >
+                  <div className="flex min-h-8 items-start justify-between gap-3">
+                    {isTeamCard ? (
+                      <TeamModeBadges
+                        modes={item.teamModes}
+                        builderLabel={hubCopy.builderBadge}
+                        orchestratorLabel={hubCopy.orchestratorBadge}
+                      />
+                    ) : (
+                      <Heading className="min-w-0 text-[18px] font-medium tracking-tight wrap-break-word text-ink">
+                        {copy.title}
+                      </Heading>
+                    )}
                     {xPostUrl ? (
                       <XPostButton href={xPostUrl} label={t("discover.viewOriginalX")} />
                     ) : null}
                   </div>
+                  {isTeamCard ? (
+                    <Heading className="mt-4 min-w-0 text-[18px] font-medium tracking-tight wrap-break-word text-ink">
+                      {copy.title}
+                    </Heading>
+                  ) : null}
                   {showOneLiner ? (
                     <p className="mt-1.5 min-w-0 line-clamp-2 text-[14px] leading-6 wrap-break-word text-mute">
                       {oneLiner}
@@ -127,6 +148,15 @@ export function TemplateList({
                 <Heading className="mt-4 text-[18px] font-medium tracking-tight text-ink">
                   {copy.title}
                 </Heading>
+                {item.templateType === "team" ? (
+                  <div className="mt-3">
+                    <TeamModeBadges
+                      modes={item.teamModes}
+                      builderLabel={hubCopy.builderBadge}
+                      orchestratorLabel={hubCopy.orchestratorBadge}
+                    />
+                  </div>
+                ) : null}
                 <ExpandablePost text={postText} lines={3} className="mt-1.5" />
 
                 <div className="mt-auto pt-5">
@@ -159,6 +189,29 @@ export function TemplateList({
         </div>
       ) : null}
     </>
+  );
+}
+
+function TeamModeBadges({
+  modes,
+  builderLabel,
+  orchestratorLabel,
+}: {
+  modes: readonly TemplateTeamMode[];
+  builderLabel: string;
+  orchestratorLabel: string;
+}) {
+  return (
+    <div className="flex min-w-0 flex-wrap gap-1.5">
+      {modes.map((mode) => (
+        <span
+          key={mode}
+          className="inline-flex min-h-7 items-center rounded-full border border-accent/30 bg-accent-soft px-2.5 text-[11px] font-medium leading-4 text-accent"
+        >
+          {mode === "builder" ? builderLabel : orchestratorLabel}
+        </span>
+      ))}
+    </div>
   );
 }
 

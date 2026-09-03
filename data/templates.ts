@@ -1,5 +1,12 @@
 import { metricForPostUrl, metricForStory } from "@/lib/x-metrics";
 import { discoverStories, type DiscoverStory } from "./discover";
+import {
+  reviewedTemplateTeamModes,
+  templateTypeFromModes,
+  type TemplateTeamMode,
+  type TemplateType,
+  type TemplateTypeFilter,
+} from "./template-types";
 import catalogFile from "./templates-catalog.json";
 
 export const TOP_TEMPLATE_COUNT = 10;
@@ -20,7 +27,11 @@ export type BotTemplate = {
   xPostUrl?: string;
   rank: number;
   category?: TemplateCategorySlug;
+  templateType: TemplateType;
+  teamModes: readonly TemplateTeamMode[];
 };
+
+type UnrankedBotTemplate = Omit<BotTemplate, "rank" | "templateType" | "teamModes">;
 
 export type TemplateCopy = {
   title: string;
@@ -209,7 +220,7 @@ export function templateCopy(template: BotTemplate, story: StoryCopy): TemplateC
   return { title, oneLiner };
 }
 
-function viewsForTemplate(item: Omit<BotTemplate, "rank">) {
+function viewsForTemplate(item: UnrankedBotTemplate) {
   if (item.storySlug) {
     const story = discoverStories.find((entry) => entry.slug === item.storySlug);
     const views = story ? metricForStory(story)?.views ?? 0 : 0;
@@ -218,9 +229,9 @@ function viewsForTemplate(item: Omit<BotTemplate, "rank">) {
   return metricForPostUrl(item.xPostUrl)?.views ?? 0;
 }
 
-function templatesFromStories(stories: readonly DiscoverStory[]): Omit<BotTemplate, "rank">[] {
+function templatesFromStories(stories: readonly DiscoverStory[]): UnrankedBotTemplate[] {
   const seen = new Set<string>();
-  const collected: Omit<BotTemplate, "rank">[] = [];
+  const collected: UnrankedBotTemplate[] = [];
 
   for (const story of stories) {
     const links = collectLinks(storyText(story));
@@ -242,7 +253,7 @@ function templatesFromStories(stories: readonly DiscoverStory[]): Omit<BotTempla
   return collected;
 }
 
-function templatesFromCatalog(): Omit<BotTemplate, "rank">[] {
+function templatesFromCatalog(): UnrankedBotTemplate[] {
   return catalog.map((item) => ({
     id: item.id,
     templateUrl: item.templateUrl,
@@ -256,7 +267,7 @@ function templatesFromCatalog(): Omit<BotTemplate, "rank">[] {
 }
 
 export function mergeTemplates(): BotTemplate[] {
-  const byId = new Map<string, Omit<BotTemplate, "rank">>();
+  const byId = new Map<string, UnrankedBotTemplate>();
 
   for (const item of templatesFromCatalog()) byId.set(item.id, item);
 
@@ -286,7 +297,15 @@ export function mergeTemplates(): BotTemplate[] {
       if (byDate) return byDate;
       return a.id.localeCompare(b.id);
     })
-    .map((item, index) => ({ ...item, rank: index + 1 }));
+    .map((item, index) => {
+      const teamModes = reviewedTemplateTeamModes(item.id);
+      return {
+        ...item,
+        rank: index + 1,
+        templateType: templateTypeFromModes(teamModes),
+        teamModes,
+      };
+    });
 }
 
 export const templates: readonly BotTemplate[] = mergeTemplates();
@@ -294,6 +313,25 @@ export const templates: readonly BotTemplate[] = mergeTemplates();
 export function templatesForCategory(slug: TemplateCategorySlug | "all") {
   const source = slug === "all" ? templates : templates.filter((item) => item.category === slug);
   return source.map((item, index) => ({ ...item, rank: index + 1 }));
+}
+
+export function templatesForFilters(
+  category: TemplateCategorySlug | "all",
+  type: TemplateTypeFilter,
+) {
+  return templates
+    .filter((item) => category === "all" || item.category === category)
+    .filter((item) => type === "all" || item.templateType === type)
+    .map((item, index) => ({ ...item, rank: index + 1 }));
+}
+
+export function teamTemplates(mode?: TemplateTeamMode) {
+  return templates
+    .filter(
+      (item) =>
+        item.templateType === "team" && (!mode || item.teamModes.includes(mode)),
+    )
+    .map((item, index) => ({ ...item, rank: index + 1 }));
 }
 
 export function getTemplateStory(template: BotTemplate) {
