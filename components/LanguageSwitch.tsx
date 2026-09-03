@@ -1,10 +1,10 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import { cn } from "@/lib/cn";
 import { localeLabels, locales, useI18n, type Locale } from "@/lib/i18n";
-import { LOCALE_COOKIE, hreflang, localeToUrl, stripLocalePrefix, withLocale } from "@/lib/i18n/paths";
-import { STORAGE_KEY } from "@/lib/i18n/types";
+import { hreflang, localeToUrl, stripLocalePrefix, withLocale } from "@/lib/i18n/paths";
 
 const menuLocaleLabels: Record<Locale, string> = {
   "zh-Hant": "繁體",
@@ -21,8 +21,50 @@ export function LanguageSwitch({
   variant?: "default" | "menu";
   onSelect?: () => void;
 }) {
+  return (
+    <Suspense
+      fallback={<LanguageSwitchControl compact={compact} variant={variant} onSelect={onSelect} search="" />}
+    >
+      <LanguageSwitchFromUrl compact={compact} variant={variant} onSelect={onSelect} />
+    </Suspense>
+  );
+}
+
+function LanguageSwitchFromUrl({
+  compact,
+  variant,
+  onSelect,
+}: {
+  compact: boolean;
+  variant: "default" | "menu";
+  onSelect?: () => void;
+}) {
+  const searchParams = useSearchParams();
+  const query = searchParams.toString();
+
+  return (
+    <LanguageSwitchControl
+      compact={compact}
+      variant={variant}
+      onSelect={onSelect}
+      search={query ? `?${query}` : ""}
+    />
+  );
+}
+
+function LanguageSwitchControl({
+  compact,
+  variant,
+  onSelect,
+  search,
+}: {
+  compact: boolean;
+  variant: "default" | "menu";
+  onSelect?: () => void;
+  search: string;
+}) {
   const pathname = usePathname();
-  const { locale, t } = useI18n();
+  const { locale, setLocale, t } = useI18n();
   const path = stripLocalePrefix(pathname);
 
   return (
@@ -40,18 +82,14 @@ export function LanguageSwitch({
         return (
           <a
             key={item}
-            href={withLocale(path, urlLocale)}
+            href={withLocale(`${path}${search}`, urlLocale)}
             hrefLang={hreflang[urlLocale]}
             aria-current={locale === item ? "page" : undefined}
             onClick={(event) => {
+              event.preventDefault();
               onSelect?.();
-              if (locale === item) {
-                event.preventDefault();
-                return;
-              }
-              window.localStorage.setItem(STORAGE_KEY, item);
-              document.cookie = `${LOCALE_COOKIE}=${urlLocale}; path=/; max-age=31536000; samesite=lax`;
-              event.currentTarget.href = `${withLocale(path, urlLocale)}${window.location.search}`;
+              if (locale === item) return;
+              setLocale(item);
             }}
             className={cn(
               "inline-flex h-8 min-w-8 items-center justify-center rounded-lg px-1.5 text-[15px] leading-none transition-colors",

@@ -9,6 +9,7 @@
     "lint": "eslint",
     "validate:discover": "tsx scripts/validate-discover.ts",
     "validate:search": "tsx scripts/validate-search.ts",
+    "validate:url-phase1": "tsx scripts/validate-url-reduction-phase1.ts",
     "validate:prompts": "tsx scripts/validate-prompts.ts",
     "validate:template-identities": "tsx scripts/validate-template-identities.ts",
     "validate:template-types": "tsx scripts/validate-template-types.ts",

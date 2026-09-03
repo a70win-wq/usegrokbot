@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { CommunityView, type CommunityIdentity, type GitHubContributor } from "@/components/CommunityView";
-import { discoverStories } from "@/data/discover";
+import { CommunityView, type GitHubContributor } from "@/components/CommunityView";
+import { featuredCommunityIdentities } from "@/data/community";
 import { site } from "@/lib/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -17,32 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function CommunityPage() {
   const [contributors] = await Promise.all([getContributors()]);
-  return <CommunityView identities={communityIdentities()} contributors={contributors} />;
-}
-
-function communityIdentities(): CommunityIdentity[] {
-  const grouped = new Map<string, CommunityIdentity>();
-
-  for (const story of discoverStories) {
-    if (story.source !== "community") continue;
-    const key = (story.handle ?? story.authorName).trim().toLowerCase();
-    if (!key) continue;
-    const current = grouped.get(key);
-    if (!current) {
-      grouped.set(key, {
-        name: story.authorName,
-        handle: story.handle,
-        count: 1,
-        latest: story.publishedAt,
-      });
-      continue;
-    }
-    current.count += 1;
-    if (story.publishedAt > current.latest) current.latest = story.publishedAt;
-    if (!current.handle && story.handle) current.handle = story.handle;
-  }
-
-  return [...grouped.values()].sort((a, b) => b.count - a.count || b.latest.localeCompare(a.latest));
+  return <CommunityView identities={featuredCommunityIdentities()} contributors={contributors} />;
 }
 
 async function getContributors(): Promise<GitHubContributor[]> {

@@ -99,6 +99,10 @@ export const appsBySlug = Object.fromEntries(apps.map((app) => [app.slug, app]))
   App
 >;
 
+export function isAppSlug(value: string): value is AppSlug {
+  return Object.hasOwn(appsBySlug, value);
+}
+
 export const homeApps = apps.filter((app) => app.showOnHome);
 
 export const popularIntegrationSlugs: AppSlug[] = [

@@ -1,12 +1,24 @@
 import assert from "node:assert/strict";
 import { searchDiscoverStories } from "../data/discover";
 import { localizeDiscoverStory } from "../lib/i18n/discover";
-import { searchResultsPath, withSearchQuery } from "../lib/search";
+import {
+  appResultsPath,
+  homeDiscoverPath,
+  searchResultsPath,
+  topicResultsPath,
+  withSearchQuery,
+} from "../lib/search";
 
 assert.equal(searchResultsPath(" podcast summarizer "), "/?q=podcast+summarizer");
 assert.equal(searchResultsPath("   "), "/");
 assert.equal(withSearchQuery("/en", "?tab=latest", "podcast"), "/en?tab=latest&q=podcast");
 assert.equal(withSearchQuery("/zh-hk", "?tab=latest&q=old", "  "), "/zh-hk?tab=latest");
+assert.equal(topicResultsPath("email"), "/?topic=email");
+assert.equal(appResultsPath("google-calendar"), "/?app=google-calendar");
+assert.equal(
+  homeDiscoverPath({ query: " weekly brief ", topic: "research", app: "notion" }),
+  "/?q=weekly+brief&topic=research&app=notion",
+);
 
 const podcastResults = searchDiscoverStories("podcast", 3);
 assert.ok(podcastResults.length > 0, "expected podcast search to return a known result");

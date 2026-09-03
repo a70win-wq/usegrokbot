@@ -11,6 +11,7 @@ import { HeroBot } from "@/components/HeroBot";
 import { IdentityMascot } from "@/components/IdentityMascot";
 import { LocaleLink } from "@/components/LocaleLink";
 import { AnimatedCountLabel, CensusNumber } from "@/components/PostCensus";
+import { appsBySlug, isAppSlug } from "@/data/apps";
 import { getDiscoverStory } from "@/data/discover";
 import {
   getTemplateIdentity,
@@ -20,6 +21,8 @@ import {
 } from "@/data/template-identities";
 import { getTemplateTeamCardCopy } from "@/data/template-team-copy";
 import { catalogEntry, templates } from "@/data/templates";
+import { isTopicSlug, topicMessageKey, type TopicSlug } from "@/data/topics";
+import type { AppSlug } from "@/data/types";
 import { getVerifiedUseCase } from "@/data/verified-use-cases";
 import { useI18n } from "@/lib/i18n/locale";
 import { localizeTemplateCopy } from "@/lib/i18n/templates";
@@ -139,10 +142,17 @@ function HomeViewFromUrl({
   stars?: number | null;
 }) {
   const searchParams = useSearchParams();
+  const rawTopic = searchParams.get("topic")?.trim() ?? "";
+  const rawApp = searchParams.get("app")?.trim() ?? "";
+  const topic = isTopicSlug(rawTopic) ? rawTopic : undefined;
+  const app = isAppSlug(rawApp) ? rawApp : undefined;
+
   return (
     <HomeViewContent
       postCount={postCount}
       query={searchParams.get("q")?.trim() ?? ""}
+      topic={topic}
+      app={app}
       stars={stars}
     />
   );
@@ -151,14 +161,26 @@ function HomeViewFromUrl({
 function HomeViewContent({
   postCount,
   query,
+  topic,
+  app,
   stars,
 }: {
   postCount: number;
   query: string;
+  topic?: TopicSlug;
+  app?: AppSlug;
   stars?: number | null;
 }) {
   const { locale, t } = useI18n();
   const useCaseCopy = verifiedUseCasesPageCopy(locale);
+  const resultTitle = [
+    query ? `“${query}”` : "",
+    topic ? t(topicMessageKey(topic)) : "",
+    app ? appsBySlug[app].name : "",
+  ]
+    .filter(Boolean)
+    .join(" · ");
+  const showResults = Boolean(query || topic || app);
 
   return (
     <>
@@ -189,9 +211,31 @@ function HomeViewContent({
         </div>
       </section>
 
-      {query ? (
-        <section id="search-results" className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20">
-          <DiscoverFeed query={query} showIntro hideFilters showOutcomes={false} />
+      {showResults ? (
+        <section
+          id="search-results"
+          data-topic={topic}
+          data-app={app}
+          className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-20"
+        >
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="min-w-0 text-[24px] leading-tight font-medium tracking-tight break-words text-ink md:text-[28px]">
+              {resultTitle}
+            </h2>
+            <LocaleLink
+              href="/"
+              className="inline-flex min-h-11 shrink-0 items-center self-start text-[15px] font-medium text-mute hover:text-ink sm:self-auto"
+            >
+              {t("filters.clear")}
+            </LocaleLink>
+          </div>
+          <DiscoverFeed
+            query={query}
+            hideFilters
+            showOutcomes={false}
+            categoryFilter={topic}
+            appFilter={app}
+          />
         </section>
       ) : (
         <>

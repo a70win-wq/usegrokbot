@@ -4,12 +4,13 @@ import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { ExpandablePost } from "@/components/ExpandablePost";
 import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
-import { isElonLiked, type DiscoverStory } from "@/data/discover";
+import { isElonLiked, shouldIndexDiscoverStory, type DiscoverStory } from "@/data/discover";
 import { topicsForStory } from "@/data/topics";
 import { cn } from "@/lib/cn";
 import { formatCardDate, sameCopy } from "@/lib/format";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
 import { openExternalUrl } from "@/lib/open-external";
+import { topicResultsPath } from "@/lib/search";
 import { formatViewCount, metricForStory } from "@/lib/x-metrics";
 
 export function DiscoverCard({
@@ -23,6 +24,7 @@ export function DiscoverCard({
   const item = localizeDiscoverStory(story, locale);
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
+  const hasInternalDetail = shouldIndexDiscoverStory(story);
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
   const heading = featured ? item.headline : item.title;
@@ -38,13 +40,15 @@ export function DiscoverCard({
 
   return (
     <article
+      data-story-slug={story.slug}
+      data-detail-link={hasInternalDetail ? "internal" : "source"}
       className={cn(
         "spring-lift group relative flex h-full min-w-0 flex-col rounded-2xl border border-line bg-card p-5 hover:border-line-strong",
         featured && "featured-glow",
       )}
     >
       {featured || isElonLiked(story) ? (
-        <p className="text-[11px] font-medium tracking-[0.12em] text-accent uppercase">{t("discover.featured")}</p>
+        <p className="text-[12px] font-medium tracking-[0.1em] text-accent uppercase">{t("discover.featured")}</p>
       ) : null}
 
       <div className={cn("flex min-w-0 items-start justify-between gap-3", (featured || isElonLiked(story)) && "mt-3")}>
@@ -68,7 +72,7 @@ export function DiscoverCard({
             >
               {formatViewCount(views, locale)}
             </p>
-            <p className="mt-1 text-[11px] text-mute">{t("pages.rankingsViews")}</p>
+            <p className="mt-1 text-[12px] text-mute">{t("pages.rankingsViews")}</p>
           </div>
         ) : null}
       </div>
@@ -79,7 +83,18 @@ export function DiscoverCard({
             featured ? "text-[22px] leading-snug md:text-[26px]" : "text-[16px] leading-snug",
           )}
         >
-          <LocaleLink href={`/discover/${story.slug}`}>{heading}</LocaleLink>
+          {hasInternalDetail ? (
+            <LocaleLink href={`/discover/${story.slug}`}>{heading}</LocaleLink>
+          ) : (
+            <a
+              href={originalHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(event) => openExternalUrl(originalHref, event)}
+            >
+              {heading}
+            </a>
+          )}
         </h3>
       ) : (
         <h3 className="sr-only">{item.title}</h3>
@@ -88,7 +103,7 @@ export function DiscoverCard({
 
       {showOutcome ? (
         <div className="mt-4 rounded-[12px] border border-line bg-elevated px-3 py-3">
-          <p className="text-[10px] font-medium tracking-[0.1em] text-faint uppercase">{t("discover.result")}</p>
+          <p className="text-[12px] font-medium tracking-[0.08em] text-faint uppercase">{t("discover.result")}</p>
           <p className="mt-1 text-[13px] leading-5 text-ink">
             <SketchUnderline active={featured}>{outcome}</SketchUnderline>
           </p>
@@ -99,15 +114,15 @@ export function DiscoverCard({
         {labels.map((topic) => (
           <LocaleLink
             key={topic.slug}
-            href={`/categories/${topic.slug}`}
-            className="rounded-full border border-line px-2.5 py-0.5 text-[11px] font-medium text-mute hover:border-line-strong hover:text-ink"
+            href={topicResultsPath(topic.slug)}
+            className="rounded-full border border-line px-2.5 py-0.5 text-[12px] font-medium text-mute hover:border-line-strong hover:text-ink"
           >
             {t(`discover.cat${topic.slug.charAt(0).toUpperCase()}${topic.slug.slice(1)}`)}
           </LocaleLink>
         ))}
       </div>
       {trustLabel ? (
-        <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-faint">
+        <div className="mt-3 flex flex-wrap items-center gap-2 text-[12px] text-faint">
           <span className="rounded-full border border-line px-2 py-0.5 text-mute">{trustLabel}</span>
         </div>
       ) : null}
@@ -118,7 +133,7 @@ export function DiscoverCard({
           target="_blank"
           rel="noopener noreferrer"
           onClick={(event) => openExternalUrl(originalHref, event)}
-          className="inline-flex h-11 items-center justify-center rounded-[10px] border border-line px-4 text-[13px] text-mute hover:border-line-strong hover:text-ink sm:h-9"
+          className="inline-flex h-11 items-center justify-center rounded-[10px] border border-line px-4 text-[15px] text-mute hover:border-line-strong hover:text-ink"
         >
           {originalLabel} ↗
         </a>

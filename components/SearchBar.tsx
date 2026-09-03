@@ -4,7 +4,8 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
-import { searchDiscoverStories } from "@/data/discover";
+import { apps } from "@/data/apps";
+import { searchDiscoverStories, shouldIndexDiscoverStory } from "@/data/discover";
 import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/templates";
 import { topicMessageKey, topics } from "@/data/topics";
 import { verifiedUseCases } from "@/data/verified-use-cases";
@@ -15,7 +16,7 @@ import {
   localizeVerifiedUseCase,
   useI18n,
 } from "@/lib/i18n";
-import { searchResultsPath } from "@/lib/search";
+import { appResultsPath, searchResultsPath, topicResultsPath } from "@/lib/search";
 
 type SearchBarProps = {
   variant?: "hero" | "inline";
@@ -99,11 +100,14 @@ export function SearchBar({
     return searchDiscoverStories(query, 6, {
       locale,
       localize: (item) => localizeDiscoverStory(item, locale),
-    }).map((item) => ({
-      localized: localizeDiscoverStory(item, locale),
-      href: `/discover/${item.slug}`,
-      external: false,
-    }));
+    }).map((item) => {
+      const external = !shouldIndexDiscoverStory(item);
+      return {
+        localized: localizeDiscoverStory(item, locale),
+        href: external ? (item.xPostUrl ?? item.sourceUrl) : `/discover/${item.slug}`,
+        external,
+      };
+    });
   }, [query, locale]);
 
   const matchingTopics = useMemo(() => {
@@ -121,6 +125,19 @@ export function SearchBar({
       })
       .slice(0, 3);
   }, [query, t]);
+
+  const matchingApps = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return [];
+    return apps
+      .filter((app) =>
+        [app.slug.replace(/-/g, " "), app.name, app.description]
+          .join(" ")
+          .toLowerCase()
+          .includes(q),
+      )
+      .slice(0, 3);
+  }, [query]);
 
   const matchingUseCases = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -206,9 +223,15 @@ export function SearchBar({
           external: true,
         })),
         ...matchingTopics.map((topic) => ({
-          href: `/categories/${topic.slug}`,
+          href: topicResultsPath(topic.slug),
           title: t(topicMessageKey(topic.slug)),
           detail: t("nav.categories"),
+          external: false,
+        })),
+        ...matchingApps.map((app) => ({
+          href: appResultsPath(app.slug),
+          title: app.name,
+          detail: t("nav.integrations"),
           external: false,
         })),
         ...stories.map((item) => ({
@@ -325,6 +348,7 @@ export function SearchBar({
           {showResults &&
           stories.length === 0 &&
           matchingTopics.length === 0 &&
+          matchingApps.length === 0 &&
           matchingUseCases.length === 0 &&
           matchingTemplates.length === 0 ? (
             <div className="px-4 py-5 text-sm text-mute">

@@ -11,6 +11,7 @@ import { officialUseCases } from "@/data/official-use-cases";
 import { rankLabel, scenarios, type Scenario } from "@/data/scenarios";
 import { topicMessageKey } from "@/data/topics";
 import { localizeOfficial, localizeScenario, useI18n } from "@/lib/i18n";
+import { topicResultsPath } from "@/lib/search";
 
 export function UseCaseDetailView({ scenario }: { scenario: Scenario }) {
   const { locale, t } = useI18n();
@@ -95,7 +96,7 @@ export function UseCaseDetailView({ scenario }: { scenario: Scenario }) {
           ) : null}
 
           <p className="mt-12">
-            <LocaleLink href={`/categories/${scenario.topic}`} className="text-sm text-mute hover:text-ink">
+            <LocaleLink href={topicResultsPath(scenario.topic)} className="text-[15px] text-mute hover:text-ink">
               {t("useCases.moreIn", { name: t(topicMessageKey(scenario.topic)) })} →
             </LocaleLink>
           </p>

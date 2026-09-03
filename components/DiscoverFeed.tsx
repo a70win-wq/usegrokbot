@@ -11,6 +11,7 @@ import {
   type OutcomeSlug,
 } from "@/data/discover";
 import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
+import type { AppSlug } from "@/data/types";
 import { cn } from "@/lib/cn";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
 import { learnFeedStories } from "@/lib/x-metrics";
@@ -73,7 +74,7 @@ export function DiscoverFilters({
 
   return (
     <div>
-      <div className="flex gap-2 overflow-x-auto pb-1">
+      <div className="flex flex-wrap gap-2 pb-1">
         {discoverTabs.map((item) => (
           <TabChip
             key={item}
@@ -148,6 +149,8 @@ export function DiscoverFeed({
   hideFilters = false,
   showOutcomes = true,
   filterState,
+  categoryFilter,
+  appFilter = "all",
 }: {
   query?: string;
   initialTab?: DiscoverTab;
@@ -155,12 +158,15 @@ export function DiscoverFeed({
   hideFilters?: boolean;
   showOutcomes?: boolean;
   filterState?: DiscoverFilterState;
+  categoryFilter?: TopicSlug | "all";
+  appFilter?: AppSlug | "all";
 }) {
   const { locale, t } = useI18n();
   const internal = useDiscoverFilterState(initialTab);
   const filters = filterState ?? internal;
-  const { tab, category, outcome } = filters;
-  const resetKey = `${query}\0${tab}\0${category}\0${outcome}`;
+  const { tab, category: selectedCategory, outcome } = filters;
+  const category = categoryFilter ?? selectedCategory;
+  const resetKey = `${query}\0${tab}\0${category}\0${outcome}\0${appFilter}`;
   const [page, setPage] = useState({ key: resetKey, count: PAGE_SIZE });
   const visible = page.key === resetKey ? page.count : PAGE_SIZE;
 
@@ -173,17 +179,17 @@ export function DiscoverFeed({
       const ranked = learnFeedStories(5);
       const allowed = new Set(
         filterDiscoverStories(
-          { query, tab: "latest", category, outcome, app: "all" },
+          { query, tab: "latest", category, outcome, app: appFilter },
           searchOptions,
         ).map((item) => item.slug),
       );
       return ranked.filter((item) => allowed.has(item.slug));
     }
     return filterDiscoverStories(
-      { query, tab, category, outcome, app: "all" },
+      { query, tab, category, outcome, app: appFilter },
       searchOptions,
     );
-  }, [query, tab, category, outcome, locale]);
+  }, [query, tab, category, outcome, appFilter, locale]);
 
   const shown = stories.slice(0, visible);
 
@@ -212,7 +218,7 @@ export function DiscoverFeed({
       {stories.length === 0 ? (
         <div className="mt-8 rounded-2xl border border-line bg-elevated px-5 py-10 text-center">
           <BlobatarAvatar
-            name={`empty:${query || tab}:${category}:${outcome}`}
+            name={`empty:${query || tab}:${category}:${outcome}:${appFilter}`}
             size={72}
             expression="thinking"
             className="mx-auto mb-4"
