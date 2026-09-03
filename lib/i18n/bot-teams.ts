@@ -375,6 +375,8 @@ function toSimplified(value: string) {
     ["號", "号"], ["蒐", "搜"], ["聞", "闻"], ["蓋", "盖"], ["論", "论"], ["掃", "扫"], ["辯", "辩"],
     ["歷", "历"], ["稅", "税"], ["瀏", "浏"], ["擇", "择"], ["幫", "帮"], ["穩", "稳"], ["稱", "称"],
     ["補", "补"], ["廠", "厂"], ["佇", "伫"], ["雙", "双"], ["討", "讨"],
+    ["腳", "脚"], ["鎖", "锁"], ["鉤", "钩"], ["餵", "喂"], ["強", "强"], ["鎮", "镇"],
+    ["師", "师"], ["倉", "仓"],
   ] as const;
   const map = new Map<string, string>(pairs);
   return [...value]
@@ -409,11 +411,18 @@ export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam
     const base = rolesForLocale[role.id];
     const count = role.count ?? 1;
     const name = roleName(base, role.sourceName, count);
+    const action = role.action
+      ? locale === "en"
+        ? role.action.en
+        : locale === "zh-Hans"
+          ? toSimplified(role.action.zhHant)
+          : role.action.zhHant
+      : base.action;
     return {
       id: `${role.id}-${index}`,
       roleId: role.id,
       name: locale === "zh-Hans" ? toSimplified(name) : name,
-      action: locale === "zh-Hans" ? toSimplified(base.action) : base.action,
+      action: locale === "zh-Hans" ? toSimplified(action) : action,
       count,
     };
   });

@@ -34,6 +34,21 @@ for (const team of botTeams) {
   assert.ok(team.exampleSlugs.length > 0, `${team.slug} needs at least one source post`);
   assert.ok(team.templateIds.length > 0, `${team.slug} needs at least one real Template`);
 
+  for (const locale of ["en", "zh-Hant", "zh-Hans"] as const) {
+    const actions = localizeBotTeam(team, locale).roles.map((role) => role.action);
+    assert.equal(
+      new Set(actions).size,
+      actions.length,
+      `${team.slug} repeats a role explanation in ${locale}`,
+    );
+    if (locale !== "en") {
+      assert.ok(
+        actions.every((action) => !action.includes("工作")),
+        `${team.slug} must describe what each Bot helps with in ${locale}`,
+      );
+    }
+  }
+
   const representedBotCount = team.roles.reduce((total, role) => total + (role.count ?? 1), 0);
   assert.ok(
     representedBotCount <= team.botCount,

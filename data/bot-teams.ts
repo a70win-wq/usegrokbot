@@ -67,6 +67,10 @@ export type BotTeamRole = {
   id: BotTeamRoleId;
   sourceName?: string;
   count?: number;
+  action?: {
+    en: string;
+    zhHant: string;
+  };
 };
 
 export type BotTeam = {
@@ -164,11 +168,46 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "主管站會團隊",
     botCount: 5,
     roles: [
-      { id: "coordinator", sourceName: "Chief of Staff" },
-      { id: "manager", sourceName: "Content Executive" },
-      { id: "manager", sourceName: "Community Executive" },
-      { id: "manager", sourceName: "SaaS Executive" },
-      { id: "analyst", sourceName: "Reporter" },
+      {
+        id: "coordinator",
+        sourceName: "Chief of Staff",
+        action: {
+          en: "Runs the standup, relays your instructions, and writes the daily plan.",
+          zhHant: "主持站會、傳達指示，再寫出當日計畫。",
+        },
+      },
+      {
+        id: "manager",
+        sourceName: "Content Executive",
+        action: {
+          en: "Reports the content lane's status and today's next move.",
+          zhHant: "回報內容線進度和今天下一步。",
+        },
+      },
+      {
+        id: "manager",
+        sourceName: "Community Executive",
+        action: {
+          en: "States the community goal and where it stands this week.",
+          zhHant: "說明社群線本週目標和目前狀態。",
+        },
+      },
+      {
+        id: "manager",
+        sourceName: "SaaS Executive",
+        action: {
+          en: "Reports yesterday's SaaS result and one move for today.",
+          zhHant: "交出 SaaS 線昨天結果和今日行動。",
+        },
+      },
+      {
+        id: "analyst",
+        sourceName: "Reporter",
+        action: {
+          en: "Adds one fact to the daily scrum.",
+          zhHant: "在每日站會交出一件事實。",
+        },
+      },
     ],
     pattern: "room",
     templateIds: [templates.chief, templates.router, templates.data],
@@ -289,14 +328,46 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "創作者與開發工作室",
     botCount: 8,
     roles: [
-      { id: "coordinator", sourceName: "Master" },
-      { id: "designer", sourceName: "Webby" },
-      { id: "social", sourceName: "Shotry" },
-      { id: "writer", sourceName: "Writey" },
-      { id: "writer", sourceName: "Script" },
-      { id: "researcher", sourceName: "Idea" },
-      { id: "engineer", sourceName: "Claude Code" },
-      { id: "engineer", sourceName: "Codex" },
+      {
+        id: "coordinator",
+        sourceName: "Master",
+        action: { en: "Orchestrates the whole team.", zhHant: "統籌整隊。" },
+      },
+      {
+        id: "designer",
+        sourceName: "Webby",
+        action: { en: "Designs the website.", zhHant: "設計網站。" },
+      },
+      {
+        id: "social",
+        sourceName: "Shotry",
+        action: { en: "Creates short-form content.", zhHant: "製作短影音內容。" },
+      },
+      {
+        id: "writer",
+        sourceName: "Writey",
+        action: { en: "Writes articles and newsletters.", zhHant: "撰寫文章和電子報。" },
+      },
+      {
+        id: "writer",
+        sourceName: "Script",
+        action: { en: "Writes YouTube scripts.", zhHant: "撰寫 YouTube 腳本。" },
+      },
+      {
+        id: "researcher",
+        sourceName: "Idea",
+        action: { en: "Suggests ideas for videos and content.", zhHant: "提供影片和內容題材。" },
+      },
+      {
+        id: "engineer",
+        sourceName: "Claude Code",
+        action: { en: "Builds through Claude Code.", zhHant: "使用 Claude Code 開發。" },
+      },
+      {
+        id: "engineer",
+        sourceName: "Codex",
+        action: { en: "Builds through Codex.", zhHant: "使用 Codex 開發。" },
+      },
     ],
     pattern: "hub",
     templateIds: [templates.projects, templates.designer, templates.writer, templates.engineer],
@@ -309,12 +380,34 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "爆款內容工廠",
     botCount: 6,
     roles: [
-      { id: "coordinator", sourceName: "Chief" },
-      { id: "researcher", sourceName: "Trend" },
-      { id: "researcher", sourceName: "Idea" },
-      { id: "writer" },
-      { id: "editor" },
-      { id: "analyst", sourceName: "Stats" },
+      {
+        id: "coordinator",
+        sourceName: "Chief",
+        action: { en: "Holds every draft until you approve it.", zhHant: "所有草稿都等你批准才放行。" },
+      },
+      {
+        id: "researcher",
+        sourceName: "Trend",
+        action: { en: "Finds the gap.", zhHant: "找出缺口。" },
+      },
+      {
+        id: "researcher",
+        sourceName: "Idea",
+        action: { en: "Locks the hook.", zhHant: "鎖定鉤子。" },
+      },
+      {
+        id: "writer",
+        action: { en: "Drafts in your voice.", zhHant: "用你的語氣起草。" },
+      },
+      {
+        id: "editor",
+        action: { en: "Cuts the weak lines.", zhHant: "刪掉薄弱句子。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Stats",
+        action: { en: "Feeds results into the next cycle.", zhHant: "把成效餵回下一輪。" },
+      },
     ],
     pattern: "pipeline",
     templateIds: [templates.chief, templates.socialScout, templates.writer, templates.data],
@@ -382,11 +475,30 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "成長引擎團隊",
     botCount: 5,
     roles: [
-      { id: "coordinator", sourceName: "Master Orchestrator" },
-      { id: "writer", sourceName: "Content" },
-      { id: "scheduler" },
-      { id: "analyst", sourceName: "Engagement" },
-      { id: "analyst", sourceName: "Reporting" },
+      {
+        id: "coordinator",
+        sourceName: "Master Orchestrator",
+        action: { en: "Assigns each lane and only asks for yes or no.", zhHant: "分配各條線，只在需要批准時找你。" },
+      },
+      {
+        id: "writer",
+        sourceName: "Content",
+        action: { en: "Prepares growth content.", zhHant: "製作成長內容。" },
+      },
+      {
+        id: "scheduler",
+        action: { en: "Keeps the publishing schedule.", zhHant: "安排發布時間。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Engagement",
+        action: { en: "Tracks audience engagement.", zhHant: "查看受眾互動。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Reporting",
+        action: { en: "Combines results into reports.", zhHant: "把結果整理成報告。" },
+      },
     ],
     pattern: "hub",
     templateIds: [templates.marketing, templates.writer, templates.socialScout, templates.data],
@@ -415,14 +527,46 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "8 Agent 產品發布團隊",
     botCount: 8,
     roles: [
-      { id: "researcher", sourceName: "Research" },
-      { id: "analyst", sourceName: "Position" },
-      { id: "writer", sourceName: "Hooks" },
-      { id: "designer", sourceName: "Creative" },
-      { id: "publisher", sourceName: "Distribute" },
-      { id: "analyst", sourceName: "Analytics" },
-      { id: "reviewer", sourceName: "Red Team" },
-      { id: "coordinator", sourceName: "Director" },
+      {
+        id: "researcher",
+        sourceName: "Research",
+        action: { en: "Maps the market and customer pain.", zhHant: "整理市場與顧客痛點。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Position",
+        action: { en: "Finds the strongest angle.", zhHant: "找出最強定位角度。" },
+      },
+      {
+        id: "writer",
+        sourceName: "Hooks",
+        action: { en: "Generates and ranks messages.", zhHant: "生成並排序訊息。" },
+      },
+      {
+        id: "designer",
+        sourceName: "Creative",
+        action: { en: "Turns winning ideas into assets.", zhHant: "把入選點子做成素材。" },
+      },
+      {
+        id: "publisher",
+        sourceName: "Distribute",
+        action: { en: "Chooses where and when the campaign runs.", zhHant: "決定活動在哪裡及何時進行。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Analytics",
+        action: { en: "Reads retention and conversion signals.", zhHant: "查看留存與轉換訊號。" },
+      },
+      {
+        id: "reviewer",
+        sourceName: "Red Team",
+        action: { en: "Rejects weak campaigns before they waste budget.", zhHant: "在浪費預算前淘汰薄弱方案。" },
+      },
+      {
+        id: "coordinator",
+        sourceName: "Director",
+        action: { en: "Sends the final choice for your approval.", zhHant: "把最終方案交給你批准。" },
+      },
     ],
     pattern: "pipeline",
     templateIds: [templates.marketing, templates.research, templates.writer, templates.data],
@@ -697,9 +841,21 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "GIS 規劃團隊",
     botCount: 3,
     roles: [
-      { id: "coordinator", sourceName: "ChiefBot" },
-      { id: "engineer", sourceName: "ZoningBot" },
-      { id: "engineer", sourceName: "UtilitiesBot" },
+      {
+        id: "coordinator",
+        sourceName: "ChiefBot",
+        action: { en: "Requests the town plan and GIS map layers.", zhHant: "提出市鎮規劃和 GIS 地圖層要求。" },
+      },
+      {
+        id: "engineer",
+        sourceName: "ZoningBot",
+        action: { en: "Creates Title 30 district, FAR, and overlay layers.", zhHant: "建立 Title 30 分區、FAR 與覆蓋圖層。" },
+      },
+      {
+        id: "engineer",
+        sourceName: "UtilitiesBot",
+        action: { en: "Creates water, sewer, power, and drainage layers.", zhHant: "建立供水、污水、電力與排水圖層。" },
+      },
     ],
     pattern: "hub",
     templateIds: [templates.projects, templates.engineer, templates.data],
@@ -783,13 +939,40 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "夜間市場研究團隊",
     botCount: 7,
     roles: [
-      { id: "researcher", sourceName: "Filings" },
-      { id: "researcher", sourceName: "Earnings" },
-      { id: "researcher", sourceName: "Insider" },
-      { id: "analyst", sourceName: "Flow" },
-      { id: "analyst", sourceName: "Macro" },
-      { id: "risk" },
-      { id: "coordinator", sourceName: "Chief" },
+      {
+        id: "researcher",
+        sourceName: "Filings",
+        action: { en: "Flags going-concern language and auditor changes in overnight 10-Ks.", zhHant: "查看夜間 10-K，標出持續經營和會計師變更。" },
+      },
+      {
+        id: "researcher",
+        sourceName: "Earnings",
+        action: { en: "Compares earnings-call tone with the previous quarter.", zhHant: "比較法說會與上季的語氣變化。" },
+      },
+      {
+        id: "researcher",
+        sourceName: "Insider",
+        action: { en: "Finds same-day Form 4 buys over $1M.", zhHant: "找出當日超過 100 萬美元的 Form 4 買入。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Flow",
+        action: { en: "Reads sweeps and 0DTE pressure before the open.", zhHant: "開盤前查看掃單與 0DTE 壓力。" },
+      },
+      {
+        id: "analyst",
+        sourceName: "Macro",
+        action: { en: "Covers the overnight Asia handover.", zhHant: "夜間接手亞洲市場動態。" },
+      },
+      {
+        id: "risk",
+        action: { en: "Caps positions at 3% and rejects exceptions.", zhHant: "限制每個持倉不超過 3%，並拒絕例外。" },
+      },
+      {
+        id: "coordinator",
+        sourceName: "Chief",
+        action: { en: "Removes one-source flags and emails a ranked 5:30 brief.", zhHant: "移除單一來源警報，再於 5:30 寄出排序簡報。" },
+      },
     ],
     pattern: "hub",
     templateIds: [templates.research, templates.data, templates.chief, templates.prReviewer],
@@ -825,10 +1008,26 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "數學審核小組",
     botCount: 4,
     roles: [
-      { id: "coordinator", sourceName: "Video Lead" },
-      { id: "specialist", sourceName: "Complex Analysis" },
-      { id: "specialist", sourceName: "Geometric Function Theory" },
-      { id: "specialist", sourceName: "Harmonic Analysis" },
+      {
+        id: "coordinator",
+        sourceName: "Video Lead",
+        action: { en: "Creates the paper explainer video.", zhHant: "製作論文解說影片。" },
+      },
+      {
+        id: "specialist",
+        sourceName: "Complex Analysis",
+        action: { en: "Checks conformal maps and complex-analysis math.", zhHant: "核對共形映射和複變分析數學。" },
+      },
+      {
+        id: "specialist",
+        sourceName: "Geometric Function Theory",
+        action: { en: "Checks arguments, graphs, and geometric-function details.", zhHant: "核對論證、圖表和幾何函數細節。" },
+      },
+      {
+        id: "specialist",
+        sourceName: "Harmonic Analysis",
+        action: { en: "Checks the harmonic-analysis math.", zhHant: "核對調和分析數學。" },
+      },
     ],
     pattern: "room",
     templateIds: [templates.teacher, templates.research, templates.council],
@@ -982,9 +1181,21 @@ const definitions: readonly BotTeamDefinition[] = [
     titleZhHant: "旅行方案討論團隊",
     botCount: 3,
     roles: [
-      { id: "travel", sourceName: "Route Scout" },
-      { id: "travel", sourceName: "Stay Scout" },
-      { id: "coordinator", sourceName: "Trip Lead" },
+      {
+        id: "travel",
+        sourceName: "Route Scout",
+        action: { en: "Compares route options.", zhHant: "比較路線選項。" },
+      },
+      {
+        id: "travel",
+        sourceName: "Stay Scout",
+        action: { en: "Compares stay options.", zhHant: "比較住宿選項。" },
+      },
+      {
+        id: "coordinator",
+        sourceName: "Trip Lead",
+        action: { en: "Runs the debate and stops before booking.", zhHant: "整合討論，預訂前停下。" },
+      },
     ],
     pattern: "room",
     templateIds: [templates.travel, templates.research, templates.chief],
