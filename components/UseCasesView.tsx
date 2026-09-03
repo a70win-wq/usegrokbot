@@ -55,16 +55,16 @@ export function UseCasesView({
         <h1 className="text-[clamp(42px,7vw,72px)] leading-[0.96] font-medium tracking-[-0.05em] text-ink">
           {copy.title}
         </h1>
-        <p className="mt-5 text-[15px] leading-7 text-mute">{copy.subtitle(reviewedPostCount)}</p>
+        <p className="mt-5 text-[16px] leading-7 text-mute">{copy.subtitle(reviewedPostCount)}</p>
       </header>
 
       <section className="mt-10 grid gap-5 border-y border-line py-5 lg:grid-cols-[minmax(14rem,1fr)_auto_auto] lg:items-end">
-        <label className="grid gap-2 text-[11px] font-medium tracking-[0.1em] text-faint uppercase">
+        <label className="grid gap-2 text-[13px] font-medium tracking-[0.06em] text-mute uppercase">
           {copy.categoryLabel}
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value as FilterValue<VerifiedUseCaseCategorySlug>)}
-            className="min-h-11 w-full rounded-xl border border-line bg-card px-3 text-[14px] font-normal tracking-normal text-ink normal-case focus:border-line-strong"
+            className="min-h-11 w-full rounded-xl border border-line bg-card px-3 text-[16px] font-normal tracking-normal text-ink normal-case focus:border-line-strong"
           >
             <option value="all">{copy.allCategories}</option>
             {copy.categories.map((item) => (
@@ -99,7 +99,7 @@ export function UseCasesView({
       </section>
 
       <section className="mt-10" aria-label={copy.resultsLabel}>
-        <p aria-live="polite" className="font-mono text-[11px] tracking-[0.08em] text-faint">
+        <p aria-live="polite" className="font-mono text-[16px] font-medium tracking-[0.03em] text-mute">
           {copy.showing(filteredItems.length)}
         </p>
 
@@ -111,7 +111,7 @@ export function UseCasesView({
                   href={`/use-cases/${item.slug}`}
                   className="group grid min-h-40 grid-cols-[2rem_minmax(0,1fr)_auto] gap-3 py-6 focus-visible:outline-offset-4"
                 >
-                  <span className="pt-1 font-mono text-[10px] tracking-[0.12em] text-faint">
+                  <span className="pt-0.5 font-mono text-[16px] font-medium tracking-[0.04em] text-mute">
                     {String(item.rank).padStart(2, "0")}
                   </span>
 
@@ -130,8 +130,8 @@ export function UseCasesView({
                     <span className="mt-5 flex min-w-0 items-center gap-2.5">
                       <AuthorAvatar name={item.authorName} handle={item.handle} size={40} />
                       <span className="min-w-0">
-                        <span className="block truncate text-[12px] font-medium text-ink">{item.authorName}</span>
-                        {item.handle ? <span className="block truncate text-[11px] text-faint">@{item.handle}</span> : null}
+                        <span className="block truncate text-[15px] font-medium text-ink">{item.authorName}</span>
+                        {item.handle ? <span className="block truncate text-[13px] text-mute">@{item.handle}</span> : null}
                       </span>
                     </span>
                   </span>
@@ -156,7 +156,7 @@ export function UseCasesView({
                 setEvidence("all");
                 setStructure("all");
               }}
-              className="mt-4 min-h-11 text-[13px] font-medium text-accent hover:text-ink"
+              className="mt-4 min-h-11 text-[15px] font-medium text-accent hover:text-ink"
             >
               {copy.clearFilters}
             </button>
@@ -180,7 +180,7 @@ function FilterGroup({
 }) {
   return (
     <fieldset className="min-w-0">
-      <legend className="mb-2 text-[11px] font-medium tracking-[0.1em] text-faint uppercase">{label}</legend>
+      <legend className="mb-2 text-[13px] font-medium tracking-[0.06em] text-mute uppercase">{label}</legend>
       <div className="flex flex-wrap gap-2">
         {options.map((option) => {
           const active = value === option.value;
@@ -192,7 +192,7 @@ function FilterGroup({
               aria-pressed={active}
               onClick={() => onChange(option.value)}
               className={cn(
-                "inline-flex min-h-11 items-center rounded-full border px-3.5 text-[12px] font-medium transition-colors",
+                "inline-flex min-h-11 items-center rounded-full border px-3.5 text-[15px] font-medium transition-colors",
                 active
                   ? "border-ink bg-ink text-inverse"
                   : "border-line bg-card text-mute hover:border-line-strong hover:text-ink",
@@ -211,8 +211,8 @@ function Badge({ children, tone }: { children: React.ReactNode; tone: "accent" |
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-medium tracking-[0.08em]",
-        tone === "accent" ? "bg-accent-soft text-accent" : "border border-line text-faint",
+        "inline-flex items-center rounded-full px-2.5 py-1 text-[12px] font-medium tracking-[0.04em]",
+        tone === "accent" ? "bg-accent-soft text-accent" : "border border-line text-mute",
       )}
     >
       {children}

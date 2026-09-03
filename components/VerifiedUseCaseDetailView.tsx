@@ -51,8 +51,8 @@ export function VerifiedUseCaseDetailView({ item, locale }: { item: VerifiedUseC
         >
           <AuthorAvatar name={source.authorName} handle={source.handle} size={40} />
           <span>
-            <span className="block text-[13px] font-medium text-ink group-hover:text-accent">{source.authorName}</span>
-            <span className="mt-0.5 flex items-center gap-1 text-[11px] text-faint">
+            <span className="block text-[15px] font-medium text-ink group-hover:text-accent">{source.authorName}</span>
+            <span className="mt-0.5 flex items-center gap-1 text-[13px] text-mute">
               {source.handle ? `@${source.handle}` : copy.openOriginal}
               <ArrowUpRight aria-hidden className="size-3" strokeWidth={1.75} />
             </span>
@@ -72,10 +72,10 @@ export function VerifiedUseCaseDetailView({ item, locale }: { item: VerifiedUseC
           <ol className="mt-6 border-y border-line">
             {localized.setupSteps.map((step, index) => (
               <li key={`${item.slug}-step-${index}`} className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-3 border-b border-line py-5 last:border-b-0">
-                <span className="pt-0.5 font-mono text-[10px] tracking-[0.12em] text-faint">
+                <span className="pt-0.5 font-mono text-[16px] font-medium tracking-[0.04em] text-mute">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="text-[15px] leading-7 text-ink">{step}</p>
+                <p className="text-[16px] leading-7 text-ink">{step}</p>
               </li>
             ))}
           </ol>
@@ -98,7 +98,7 @@ export function VerifiedUseCaseDetailView({ item, locale }: { item: VerifiedUseC
                   </span>
                   <span className="min-w-0 pt-0.5">
                     <span className="block text-[16px] font-medium text-ink">{role.name}</span>
-                    <span className="mt-1 block text-[14px] leading-6 text-mute">{role.purpose}</span>
+                    <span className="mt-1 block text-[16px] leading-7 text-mute">{role.purpose}</span>
                   </span>
                 </li>
               );
@@ -123,10 +123,10 @@ export function VerifiedUseCaseDetailView({ item, locale }: { item: VerifiedUseC
                   className="group flex min-h-16 items-center justify-between gap-3 py-3"
                 >
                   <span className="min-w-0">
-                    <span className="block truncate text-[13px] font-medium text-ink group-hover:text-accent">
+                    <span className="block truncate text-[15px] font-medium text-ink group-hover:text-accent">
                       {related.authorName}
                     </span>
-                    {related.handle ? <span className="block truncate text-[11px] text-faint">@{related.handle}</span> : null}
+                    {related.handle ? <span className="block truncate text-[13px] text-mute">@{related.handle}</span> : null}
                   </span>
                   <ArrowUpRight aria-hidden className="size-3.5 shrink-0 text-faint group-hover:text-accent" strokeWidth={1.75} />
                 </a>
@@ -137,7 +137,7 @@ export function VerifiedUseCaseDetailView({ item, locale }: { item: VerifiedUseC
       ) : null}
 
       <p className="mt-14 border-t border-line pt-6">
-        <LocaleLink href="/use-cases" className="inline-flex min-h-11 items-center gap-2 text-[13px] font-medium text-accent hover:text-ink">
+        <LocaleLink href="/use-cases" className="inline-flex min-h-11 items-center gap-2 text-[15px] font-medium text-accent hover:text-ink">
           <ArrowLeft aria-hidden className="size-3.5" strokeWidth={1.75} />
           {copy.allUseCases}
         </LocaleLink>
@@ -151,8 +151,8 @@ function Badge({ children, tone }: { children: React.ReactNode; tone: "accent" |
     <span
       className={
         tone === "accent"
-          ? "inline-flex items-center rounded-full bg-accent-soft px-2.5 py-1 text-[10px] font-medium tracking-[0.08em] text-accent"
-          : "inline-flex items-center rounded-full border border-line px-2.5 py-1 text-[10px] font-medium tracking-[0.08em] text-faint"
+          ? "inline-flex items-center rounded-full bg-accent-soft px-2.5 py-1 text-[12px] font-medium tracking-[0.04em] text-accent"
+          : "inline-flex items-center rounded-full border border-line px-2.5 py-1 text-[12px] font-medium tracking-[0.04em] text-mute"
       }
     >
       {children}
