@@ -17,9 +17,9 @@ export function TemplatesModeNav({
 }) {
   const copy = templateHubUiCopy[locale];
   const items = [
-    { key: "role" as const, number: "01", label: copy.byRole, href: "/templates" },
-    { key: "teams" as const, number: "02", label: copy.botTeams, href: "/templates/teams" },
-    { key: "all" as const, number: "03", label: copy.allTemplates, href: "/templates/all" },
+    { key: "role" as const, label: copy.byRole, href: "/templates" },
+    { key: "teams" as const, label: copy.botTeams, href: "/templates/teams" },
+    { key: "all" as const, label: copy.allTemplates, href: "/templates/all" },
   ];
 
   return (
@@ -33,21 +33,12 @@ export function TemplatesModeNav({
               href={withLocale(item.href, urlLocale)}
               aria-current={current ? "page" : undefined}
               className={cn(
-                "relative flex min-h-14 min-w-0 items-center justify-center gap-2 border-b-2 px-2 py-3 text-center text-[13px] leading-4 transition-colors sm:text-sm",
+                "relative flex min-h-[72px] min-w-0 items-center justify-center border-b-2 px-2 py-3 text-center text-base leading-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent sm:min-h-20 sm:px-4 sm:text-lg",
                 current
                   ? "border-accent font-medium text-ink"
                   : "border-transparent text-mute hover:border-line-strong hover:text-ink",
               )}
             >
-              <span
-                aria-hidden="true"
-                className={cn(
-                  "hidden font-mono text-[10px] tabular-nums sm:inline",
-                  current ? "text-accent" : "text-faint",
-                )}
-              >
-                {item.number}
-              </span>
               <span className="min-w-0 text-balance">{item.label}</span>
             </Link>
           );

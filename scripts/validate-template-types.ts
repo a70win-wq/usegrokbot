@@ -1,7 +1,8 @@
 import catalogFile from "../data/templates-catalog.json";
+import { templateTeamCardCopy } from "../data/template-team-copy";
 import { teamTemplates, templates } from "../data/templates";
 import {
-  reviewedTemplateTeamModes,
+  reviewedTemplateTeamMode,
   templateTeamAssignments,
   templateTeamModes,
 } from "../data/template-types";
@@ -20,21 +21,30 @@ function fail(message: string): never {
 const catalog = catalogFile as CatalogItem[];
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
 const validModes = new Set<string>(templateTeamModes);
+const locales = ["en", "zh-Hant", "zh-Hans"] as const;
 
-for (const [id, modes] of Object.entries(templateTeamAssignments)) {
+for (const [id, mode] of Object.entries(templateTeamAssignments)) {
   const item = catalogById.get(id);
   if (!item) fail("Team map contains an unknown catalog template " + id);
-  if (!modes.length) fail("Team template has no team mode " + id);
-  if (new Set(modes).size !== modes.length) fail("Team template repeats a mode " + id);
-  if (modes.some((mode) => !validModes.has(mode))) fail("Team template has an unknown mode " + id);
+  if (!validModes.has(mode)) fail("Team template has an unknown mode " + id);
 
-  const classified = reviewedTemplateTeamModes(item.id);
-  if (classified.join(",") !== modes.join(",")) {
+  const classified = reviewedTemplateTeamMode(item.id);
+  if (classified !== mode) {
     fail("Team template classification does not match its reviewed decision " + id);
+  }
+
+  const cardCopy = templateTeamCardCopy[id];
+  if (!cardCopy) fail("Team template has no clear card copy " + id);
+  for (const locale of locales) {
+    if (!cardCopy[locale]?.trim()) fail("Team template card copy is empty for " + id + " " + locale);
   }
 }
 
-if (reviewedTemplateTeamModes("unreviewed-template").length) {
+for (const id of Object.keys(templateTeamCardCopy)) {
+  if (!(id in templateTeamAssignments)) fail("Team card copy has no reviewed category " + id);
+}
+
+if (reviewedTemplateTeamMode("unreviewed-template")) {
   fail("An unreviewed template was classified as a team.");
 }
 
@@ -56,6 +66,10 @@ for (const template of templates) {
 
 const builders = teamTemplates("builder");
 const orchestrators = teamTemplates("orchestrator");
+
+if (builders.length + orchestrators.length !== runtimeTeams.length) {
+  fail("A team template appears in more than one category.");
+}
 console.log("Template type validation passed.");
 console.log("Runtime templates: " + templates.length);
 console.log("Reviewed team templates: " + Object.keys(templateTeamAssignments).length);

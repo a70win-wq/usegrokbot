@@ -1,8 +1,8 @@
 import { metricForPostUrl, metricForStory } from "@/lib/x-metrics";
 import { discoverStories, type DiscoverStory } from "./discover";
 import {
-  reviewedTemplateTeamModes,
-  templateTypeFromModes,
+  reviewedTemplateTeamMode,
+  templateTypeFromMode,
   type TemplateTeamMode,
   type TemplateType,
   type TemplateTypeFilter,
@@ -28,10 +28,10 @@ export type BotTemplate = {
   rank: number;
   category?: TemplateCategorySlug;
   templateType: TemplateType;
-  teamModes: readonly TemplateTeamMode[];
+  teamMode?: TemplateTeamMode;
 };
 
-type UnrankedBotTemplate = Omit<BotTemplate, "rank" | "templateType" | "teamModes">;
+type UnrankedBotTemplate = Omit<BotTemplate, "rank" | "templateType" | "teamMode">;
 
 export type TemplateCopy = {
   title: string;
@@ -298,12 +298,12 @@ export function mergeTemplates(): BotTemplate[] {
       return a.id.localeCompare(b.id);
     })
     .map((item, index) => {
-      const teamModes = reviewedTemplateTeamModes(item.id);
+      const teamMode = reviewedTemplateTeamMode(item.id);
       return {
         ...item,
         rank: index + 1,
-        templateType: templateTypeFromModes(teamModes),
-        teamModes,
+        templateType: templateTypeFromMode(teamMode),
+        teamMode,
       };
     });
 }
@@ -329,7 +329,7 @@ export function teamTemplates(mode?: TemplateTeamMode) {
   return templates
     .filter(
       (item) =>
-        item.templateType === "team" && (!mode || item.teamModes.includes(mode)),
+        item.templateType === "team" && (!mode || item.teamMode === mode),
     )
     .map((item, index) => ({ ...item, rank: index + 1 }));
 }
