@@ -12,6 +12,14 @@ import type { Locale } from "../lib/i18n/types";
 const errors: string[] = [];
 const items = [...githubBookmarks, ...youtubeBookmarks];
 const locales: Locale[] = ["en", "zh-Hant", "zh-Hans"];
+const xHandlePattern = /^[A-Za-z0-9_]{1,15}$/;
+const verifiedXAuthors = new Map([
+  ["grok-bot-orange-book", "KinGao476942"],
+  ["grokbot-for-gtm", "brandon_ai"],
+  ["grok-ship", "kunchenguid"],
+  ["grok-bot-second-brain", "makneidinger"],
+  ["grok-bot-concepts", "nateherk"],
+]);
 
 function check(condition: unknown, message: string) {
   if (!condition) errors.push(message);
@@ -40,6 +48,13 @@ for (const item of items) {
   check(url.protocol === "https:", `${item.id} must use HTTPS`);
   check(url.hostname === expectedHostname(item), `${item.id} has the wrong source hostname`);
   check(Boolean(item.author.trim()), `${item.id} is missing an author`);
+  if (item.xAuthor) {
+    check(Boolean(item.xAuthor.name.trim()), `${item.id} is missing an X author name`);
+    check(
+      xHandlePattern.test(item.xAuthor.handle),
+      `${item.id} has an invalid X author handle`,
+    );
+  }
   check(Boolean(item.focus.en.trim()), `${item.id} is missing a focus`);
   for (const locale of locales) {
     check(Boolean(item.title[locale].trim()), `${item.id} is missing a ${locale} title`);
@@ -53,6 +68,17 @@ for (const item of items) {
   } else {
     check(Boolean(url.searchParams.get("v")), `${item.id} is not a YouTube video URL`);
   }
+}
+
+check(
+  items.filter((item) => item.xAuthor).length === verifiedXAuthors.size,
+  "Only verified bookmark authors may have an X profile",
+);
+for (const [id, handle] of verifiedXAuthors) {
+  check(
+    items.find((item) => item.id === id)?.xAuthor?.handle === handle,
+    `${id} must link to its verified X account`,
+  );
 }
 
 for (const sourceItems of [githubBookmarks, youtubeBookmarks]) {

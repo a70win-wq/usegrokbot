@@ -7,11 +7,17 @@ export type BookmarkLanguage = "zh" | "en" | "bilingual";
 
 type LocalizedText = Record<Locale, string>;
 
+export type BookmarkXAuthor = {
+  name: string;
+  handle: string;
+};
+
 export type BookmarkItem = {
   id: string;
   source: Exclude<BookmarkSource, "x">;
   url: string;
   author: string;
+  xAuthor?: BookmarkXAuthor;
   language: BookmarkLanguage;
   title: LocalizedText;
   description: LocalizedText;
@@ -61,7 +67,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     openYoutube: "Watch on YouTube",
     viewsLabel: "X views",
     language: { zh: "Chinese", en: "English", bilingual: "Chinese + English" },
-    note: "Every card opens the original source. GitHub and YouTube links are selected by relevance; X articles are ranked only by public X views.",
+    note: "The main button on every card opens the original source. GitHub and YouTube links are selected by relevance; X articles are ranked only by public X views.",
   },
   "zh-Hant": {
     title: "Grok Bot 書籤",
@@ -80,7 +86,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     openYoutube: "在 YouTube 觀看",
     viewsLabel: "X 瀏覽",
     language: { zh: "中文", en: "英文", bilingual: "中英雙語" },
-    note: "每個書籤都會開啟原始來源。GitHub 與 YouTube 內容按實用程度精選；X 長文只按公開瀏覽次數排列。",
+    note: "每張卡片的主要按鈕都會開啟原始來源。GitHub 與 YouTube 內容按實用程度精選；X 長文只按公開瀏覽次數排列。",
   },
   "zh-Hans": {
     title: "Grok Bot 书签",
@@ -99,7 +105,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     openYoutube: "在 YouTube 观看",
     viewsLabel: "X 浏览",
     language: { zh: "中文", en: "英文", bilingual: "中英双语" },
-    note: "每个书签都会打开原始来源。GitHub 和 YouTube 内容按实用程度精选；X 长文只按公开浏览次数排列。",
+    note: "每张卡片的主要按钮都会打开原始来源。GitHub 和 YouTube 内容按实用程度精选；X 长文只按公开浏览次数排列。",
   },
 };
 
@@ -109,6 +115,7 @@ export const githubBookmarks: readonly BookmarkItem[] = [
     source: "github",
     url: "https://github.com/KinGao294/grok-bot-orange-book",
     author: "KinGao294",
+    xAuthor: { name: "Kin", handle: "KinGao476942" },
     language: "zh",
     title: { en: "Grok Bot Orange Book", "zh-Hant": "Grok Bot 橙皮書", "zh-Hans": "Grok Bot 橙皮书" },
     description: {
@@ -197,6 +204,7 @@ export const githubBookmarks: readonly BookmarkItem[] = [
     source: "github",
     url: "https://github.com/bcharleson/grokbot-for-gtm",
     author: "bcharleson",
+    xAuthor: { name: "Brandon Charleson", handle: "brandon_ai" },
     language: "en",
     title: { en: "Grok Bot for GTM", "zh-Hant": "Grok Bot 銷售推廣指南", "zh-Hans": "Grok Bot 销售推广指南" },
     description: {
@@ -225,6 +233,7 @@ export const githubBookmarks: readonly BookmarkItem[] = [
     source: "github",
     url: "https://github.com/kunchenguid/grok-ship",
     author: "kunchenguid",
+    xAuthor: { name: "Kun Chen", handle: "kunchenguid" },
     language: "en",
     title: { en: "Grok Ship", "zh-Hant": "Grok Ship 開發團隊指南", "zh-Hans": "Grok Ship 开发团队指南" },
     description: {
@@ -239,6 +248,7 @@ export const githubBookmarks: readonly BookmarkItem[] = [
     source: "github",
     url: "https://github.com/mKay00/grok-bot-second-brain",
     author: "mKay00",
+    xAuthor: { name: "Mario Kneidinger", handle: "makneidinger" },
     language: "en",
     title: { en: "Five Grok Bots, One Vault", "zh-Hant": "五隻 Grok Bot，共用一個知識庫", "zh-Hans": "五只 Grok Bot，共用一个知识库" },
     description: {
@@ -298,6 +308,7 @@ export const youtubeBookmarks: readonly BookmarkItem[] = [
     source: "youtube",
     url: "https://www.youtube.com/watch?v=NyfYxpXiw_0",
     author: "Nate Herk | AI Automation",
+    xAuthor: { name: "Nate Herk", handle: "nateherk" },
     language: "en",
     title: {
       en: "Every Grok Bot Concept Explained for Normal People",

@@ -3,6 +3,7 @@
 import { useState, type KeyboardEvent } from "react";
 import { ExternalLink, FolderGit2, Play } from "lucide-react";
 import { ArticleRow } from "@/components/ArticleRow";
+import { AuthorAvatar } from "@/components/AuthorAvatar";
 import {
   bookmarkSources,
   bookmarkUiCopy,
@@ -199,11 +200,38 @@ function BookmarkGrid({
             </h3>
             <p className="mt-2 text-[14px] leading-6 text-mute">{item.description}</p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-2 text-[12px]">
-              <span className="rounded-full bg-elevated px-2.5 py-1 text-mute">{item.focus}</span>
-              <span className="min-w-0 truncate text-faint">
-                {copy.by} {item.author}
+            <div className="mt-5">
+              <span className="inline-flex rounded-full bg-elevated px-2.5 py-1 text-[12px] text-mute">
+                {item.focus}
               </span>
+              {item.xAuthor ? (
+                <a
+                  href={`https://x.com/${item.xAuthor.handle}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${item.xAuthor.name}, @${item.xAuthor.handle}, X`}
+                  className="group mt-4 flex min-h-11 max-w-full items-center gap-3 rounded-[10px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  <AuthorAvatar
+                    name={item.xAuthor.name}
+                    handle={item.xAuthor.handle}
+                    size={40}
+                  />
+                  <span className="min-w-0">
+                    <span className="block truncate text-[13px] font-medium text-ink transition-colors group-hover:text-accent">
+                      {item.xAuthor.name}
+                    </span>
+                    <span className="block truncate text-[12px] text-faint transition-colors group-hover:text-accent">
+                      @{item.xAuthor.handle}
+                      <span className="sr-only"> X</span>
+                    </span>
+                  </span>
+                </a>
+              ) : (
+                <p className="mt-4 flex min-h-11 min-w-0 items-center truncate text-[12px] text-faint">
+                  {copy.by} {item.author}
+                </p>
+              )}
             </div>
 
             <div className="mt-auto pt-6">
