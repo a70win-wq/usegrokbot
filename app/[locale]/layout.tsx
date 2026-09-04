@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { InlineScript } from "@/components/InlineScript";
 import { Providers } from "@/components/Providers";
 import { SponsorStrip } from "@/components/SponsorStrip";
 import { getGithubStars } from "@/lib/github";
@@ -97,13 +97,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <InlineScript id="usegrokbot-theme-boot" html={themeBootScript} />
+        <InlineScript id="usegrokbot-boot" html={bootBootScript} />
+      </head>
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink antialiased">
-        <Script id="usegrokbot-theme-boot" strategy="beforeInteractive">
-          {themeBootScript}
-        </Script>
-        <Script id="usegrokbot-boot" strategy="beforeInteractive">
-          {bootBootScript}
-        </Script>
         <Providers>
           <Header />
           <SponsorStrip />

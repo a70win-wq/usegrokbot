@@ -4,7 +4,7 @@ export const BOOT_STORAGE_KEY = "usegrokbot:boot";
 export const BOOT_MAX_MS = 400;
 
 /**
- * Runs before first paint (inline in `<body>`). Hides the boot overlay as soon as
+ * Runs before first paint (inline in the root layout `<head>`). Hides the boot overlay as soon as
  * the DOM is ready, or after BOOT_MAX_MS, whichever comes first. Repeat visits in
  * the same tab skip the overlay entirely.
  */
