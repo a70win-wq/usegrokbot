@@ -7,6 +7,7 @@ const PATHS = [
   "/use-cases",
   "/templates",
   "/community",
+  "/bookmarks",
   "/articles",
   "/discover/clear-email-elon",
   "/discover/week-of-hacks-nate-herk",

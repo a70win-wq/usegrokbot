@@ -12,6 +12,7 @@ Locales: /en /zh-hk /zh-cn
 - https://usegrokbot.com/en/use-cases/shared-bot-wiki
 - https://usegrokbot.com/en/templates
 - https://usegrokbot.com/en/community
+- https://usegrokbot.com/en/bookmarks
 - https://usegrokbot.com/en/articles
 - https://usegrokbot.com/sitemap.xml
 
@@ -56,6 +57,10 @@ Locales: /en /zh-hk /zh-cn
 ## Community
 
 - https://usegrokbot.com/en/community
+
+## Bookmarks
+
+- https://usegrokbot.com/en/bookmarks
 
 ## Discover
 

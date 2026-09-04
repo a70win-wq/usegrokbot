@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     ...entries("/roles", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
     ...entries("/community", { changeFrequency: "weekly", priority: 0.8 }, day(latestStory)),
+    ...entries("/bookmarks", { changeFrequency: "weekly", priority: 0.75 }, day(latestStory)),
     ...entries("/articles", { changeFrequency: "daily", priority: 0.7 }, day(latestStory)),
     ...discoverStories.filter(shouldIndexDiscoverStory).flatMap((story) =>
       entries(`/discover/${story.slug}`, { changeFrequency: "monthly", priority: 0.6 }, day(story.publishedAt)),

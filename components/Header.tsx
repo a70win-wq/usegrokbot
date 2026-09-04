@@ -45,9 +45,9 @@ export function Header() {
       match: (current: string) => current.startsWith("/use-cases"),
     },
     {
-      href: "/articles",
-      label: t("nav.articles"),
-      match: (current: string) => current.startsWith("/articles"),
+      href: "/bookmarks",
+      label: t("nav.bookmarks"),
+      match: (current: string) => current.startsWith("/bookmarks"),
     },
     { href: "/submit", label: t("nav.submitShort") },
   ];

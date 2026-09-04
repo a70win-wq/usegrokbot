@@ -16,6 +16,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx tsc --noEmit
+      - run: npm run validate:bookmarks
       - run: npm run validate:url-phase1
       - run: npm run validate:url-phase2
       - run: npm run validate:template-identities
