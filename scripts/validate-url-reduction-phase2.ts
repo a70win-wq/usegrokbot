@@ -23,9 +23,9 @@ import {
   urlReductionRedirects,
 } from "../lib/url-reduction-redirects";
 
-const EXPECTED_DISCOVER = 1_834;
+const EXPECTED_DISCOVER = 1_838;
 const EXPECTED_RETAINED_DISCOVER = 88;
-const EXPECTED_EXTERNAL_DISCOVER = 1_746;
+const EXPECTED_EXTERNAL_DISCOVER = 1_750;
 const EXPECTED_TEMPLATES = 217;
 const EXPECTED_VERIFIED_USE_CASES = 28;
 const EXPECTED_OLD_BOT_TEAMS = 48;

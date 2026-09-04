@@ -18,9 +18,9 @@ import { appResultsPath, topicResultsPath } from "../lib/search";
 const retained = discoverStories.filter(shouldIndexDiscoverStory);
 const externalOnly = discoverStories.filter((story) => !shouldIndexDiscoverStory(story));
 
-assert.equal(discoverStories.length, 1_834, "Discover inventory changed; review the URL plan again");
+assert.equal(discoverStories.length, 1_838, "Discover inventory changed; review the URL plan again");
 assert.equal(retained.length, 88, "The retained Discover set must stay at the reviewed 88 stories");
-assert.equal(externalOnly.length, 1_746, "Every non-retained Discover story must use its source URL");
+assert.equal(externalOnly.length, 1_750, "Every non-retained Discover story must use its source URL");
 assert.equal(templates.length, 217, "All selected Templates must stay available");
 assert.equal(verifiedUseCases.length, 28, "All verified Use Cases must stay available");
 
