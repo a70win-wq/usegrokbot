@@ -61158,5 +61158,33 @@
     "xPostUrl": "https://x.com/zkmake/status/2095565103869444480",
     "sourceUrl": "https://x.com/zkmake/status/2095565103869444480",
     "sourceLabel": "Zubin Khavarian on X"
+  },
+  {
+    "slug": "domross3-umich-course-planner-grok-bot-team",
+    "title": "UMich course planner Grok Bot team",
+    "headline": "University of Michigan course planner built by a three-Bot Grok Bot team at SpaceXAI@UMich Build Night, with a reusable BOT-TEMPLATE.md for coordinator and worker roles.",
+    "whatTheyDid": "University of Michigan course planner built by a three-Bot Grok Bot team at SpaceXAI@UMich Build Night, with a reusable BOT-TEMPLATE.md for coordinator and worker roles.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "University of Michigan course planner built by a three-Bot Grok Bot team at SpaceXAI@UMich Build Night, with a reusable BOT-TEMPLATE.md for coordinator and worker roles.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Domross3",
+    "publishedAt": "2026-09-04",
+    "sourceUrl": "https://github.com/Domross3/umich-course-planner",
+    "sourceLabel": "Domross3 · GitHub"
   }
 ]

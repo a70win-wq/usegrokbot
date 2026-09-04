@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 44,
+    "total": 45,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 39,
+    "alreadyIngested": 40,
     "pending": 0
   },
   "cases": [
@@ -583,6 +583,19 @@
       "title": "SuperGrok Heavy policy_denied evidence hub",
       "url": "https://github.com/COOLak/cursor-grok-bot-policy-denied",
       "sourceSummary": "Privacy-sanitized public evidence hub for an unresolved SuperGrok Heavy to Cursor Grok Bot linking failure that returns policy_denied on a paid feature path.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "umich-course-planner-grok-bot-team",
+      "title": "UMich course planner Grok Bot team",
+      "url": "https://github.com/Domross3/umich-course-planner",
+      "sourceSummary": "University of Michigan course planner built by a three-Bot Grok Bot team at SpaceXAI@UMich Build Night, with a reusable BOT-TEMPLATE.md for coordinator and worker roles.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
