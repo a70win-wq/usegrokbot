@@ -377,24 +377,6 @@ export const youtubeBookmarks: readonly BookmarkItem[] = [
     focus: { en: "Cloud computer", "zh-Hant": "雲端電腦", "zh-Hans": "云电脑" },
   },
   {
-    id: "grok-automation-skills-cantonese",
-    source: "youtube",
-    url: "https://www.youtube.com/watch?v=MxWgxrBQnpQ",
-    author: "aforadvice",
-    language: "zh",
-    title: {
-      en: "Grok automation skills explained in Cantonese",
-      "zh-Hant": "Grok Automation Skills：製圖、影片及應用示範",
-      "zh-Hans": "Grok Automation Skills：制图、视频和应用演示",
-    },
-    description: {
-      en: "A Cantonese walkthrough of image, video, and automation skills.",
-      "zh-Hant": "以廣東話示範製圖、製作影片及自動化技能。",
-      "zh-Hans": "以粤语演示制图、制作视频和自动化技能。",
-    },
-    focus: { en: "Cantonese guide", "zh-Hant": "廣東話教學", "zh-Hans": "粤语教程" },
-  },
-  {
     id: "grok-bot-hands-on-review",
     source: "youtube",
     url: "https://www.youtube.com/watch?v=D6x1PYbxMLg",

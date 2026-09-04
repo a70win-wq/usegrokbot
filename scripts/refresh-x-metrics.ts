@@ -1,4 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { chineseTutorialArticles } from "../data/chinese-tutorial-articles";
 import { discoverStories } from "../data/discover";
 import { tweetIdFromUrl } from "../lib/ingest/x-url";
 import type { XMetricsFile } from "../lib/x-metrics";
@@ -36,7 +37,7 @@ async function loadExistingPosts() {
 async function main() {
   const ids = [
     ...new Set(
-      discoverStories
+      [...discoverStories, ...chineseTutorialArticles]
         .map((story) => tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? ""))
         .filter((id): id is string => Boolean(id)),
     ),

@@ -5,9 +5,11 @@ import {
   youtubeBookmarks,
   type BookmarkItem,
 } from "../data/bookmarks";
+import { chineseTutorialArticles } from "../data/chinese-tutorial-articles";
 import sitemap from "../app/sitemap";
 import { URL_LOCALES, absoluteUrl } from "../lib/i18n/paths";
 import type { Locale } from "../lib/i18n/types";
+import { metricForStory } from "../lib/x-metrics";
 
 const errors: string[] = [];
 const items = [...githubBookmarks, ...youtubeBookmarks];
@@ -67,7 +69,18 @@ for (const item of items) {
     check(url.pathname.split("/").filter(Boolean).length === 2, `${item.id} is not a repository URL`);
   } else {
     check(Boolean(url.searchParams.get("v")), `${item.id} is not a YouTube video URL`);
+    check(
+      `${item.title.en} ${item.description.en}`.toLowerCase().includes("grok bot"),
+      `${item.id} is not specifically about Grok Bot`,
+    );
   }
+}
+
+for (const story of chineseTutorialArticles) {
+  check(
+    (metricForStory(story)?.views ?? 0) > 0,
+    `${story.slug} is missing its public X view count`,
+  );
 }
 
 check(
