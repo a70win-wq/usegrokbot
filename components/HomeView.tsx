@@ -30,6 +30,7 @@ import {
   localizeVerifiedUseCase,
   verifiedUseCasesPageCopy,
 } from "@/lib/i18n/verified-use-cases";
+import { cn } from "@/lib/cn";
 import { articleStoriesByViews } from "@/lib/x-metrics";
 
 const IDENTITY_SLUGS = [
@@ -185,9 +186,9 @@ function HomeViewContent({
   return (
     <>
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1240px] px-5 pb-16 pt-16 md:px-8 md:pb-24 md:pt-[104px]">
-          <div className="grid items-center gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:gap-16">
-            <div className="min-w-0">
+        <div className="mx-auto max-w-[1240px] px-5 pb-10 pt-8 md:px-8 md:pb-24 md:pt-[104px]">
+          <div className="grid grid-cols-[minmax(0,1fr)_160px] items-center gap-x-3 gap-y-5 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-16 md:gap-y-8">
+            <div className="col-span-2 min-w-0 md:col-span-1 md:col-start-1 md:row-start-1">
               <div className="flex flex-wrap items-center gap-3">
                 <p className="text-[13px] font-medium tracking-[0.1em] text-mute uppercase sm:tracking-[0.14em]">
                   {t("home.kicker")}
@@ -197,14 +198,14 @@ function HomeViewContent({
               <h1 className="mt-5 max-w-3xl text-[clamp(38px,8vw,68px)] leading-[0.98] font-medium tracking-[-0.05em] text-ink">
                 {t("home.title")}
               </h1>
-              <div className="mt-8 max-w-[650px] border-l border-accent pl-4 md:pl-5">
-                <AnimatedSignal total={postCount} />
-                <p className="mt-3 text-[12px] leading-5 font-medium tracking-[0.01em] text-faint md:text-[13px]">
-                  {t("home.signalRefresh")}
-                </p>
-              </div>
             </div>
-            <div className="mx-auto md:mx-0">
+            <div className="col-start-1 row-start-2 min-w-0 self-center border-l border-accent pl-4 md:col-start-1 md:row-start-2 md:max-w-[650px] md:pl-5">
+              <AnimatedSignal total={postCount} />
+              <p className="mt-3 text-[12px] leading-5 font-medium tracking-[0.01em] text-faint md:text-[13px]">
+                {t("home.signalRefresh")}
+              </p>
+            </div>
+            <div className="col-start-2 row-start-2 mx-auto md:col-start-2 md:row-span-2 md:row-start-1 md:mx-0">
               <HeroBot />
             </div>
           </div>
@@ -239,9 +240,14 @@ function HomeViewContent({
         </section>
       ) : (
         <>
-      <section className="mx-auto max-w-[1240px] px-5 py-16 md:px-8 md:py-24">
-        <SectionHeader title={t("home.identitiesTitle")} href="/templates" cta={t("home.identitiesCta")} />
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="mx-auto max-w-[1240px] px-5 py-10 md:px-8 md:py-24">
+        <SectionHeader
+          title={t("home.identitiesTitle")}
+          href="/templates"
+          cta={t("home.identitiesCta")}
+          compactOnMobile
+        />
+        <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-4">
           {identities.map((identity) => (
             <LocaleLink
               key={identity.slug}
@@ -441,20 +447,33 @@ function SectionHeader({
   body,
   href,
   cta,
+  compactOnMobile = false,
 }: {
   title: string;
   body?: string;
   href?: string;
   cta?: string;
+  compactOnMobile?: boolean;
 }) {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+    <div
+      className={cn(
+        "flex gap-3 sm:flex-row sm:items-end sm:justify-between",
+        compactOnMobile ? "flex-row items-end justify-between" : "flex-col",
+      )}
+    >
       <div className="min-w-0">
         <h2 className="text-[30px] leading-tight font-medium tracking-[-0.035em] text-ink md:text-[36px]">{title}</h2>
         {body ? <p className="mt-2 text-[15px] leading-6 text-mute">{body}</p> : null}
       </div>
       {href && cta ? (
-        <LocaleLink href={href} className="min-h-11 shrink-0 self-start py-2.5 text-[15px] font-medium text-mute hover:text-ink sm:self-auto">
+        <LocaleLink
+          href={href}
+          className={cn(
+            "min-h-11 shrink-0 py-2.5 text-[15px] font-medium text-mute hover:text-ink sm:self-auto",
+            compactOnMobile ? "self-auto text-right" : "self-start",
+          )}
+        >
           {cta}
         </LocaleLink>
       ) : null}

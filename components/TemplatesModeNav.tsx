@@ -33,13 +33,20 @@ export function TemplatesModeNav({
               href={withLocale(item.href, urlLocale)}
               aria-current={current ? "page" : undefined}
               className={cn(
-                "relative flex min-h-[72px] min-w-0 items-center justify-center border-b-2 px-2 py-3 text-center text-base leading-5 transition-colors focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent sm:min-h-20 sm:px-4 sm:text-lg",
+                "relative flex min-h-[72px] min-w-0 items-center justify-center px-2 py-3 text-center text-base leading-5 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent sm:min-h-20 sm:px-4 sm:text-lg",
                 current
-                  ? "border-accent font-medium text-ink"
-                  : "border-transparent text-mute hover:border-line-strong hover:text-ink",
+                  ? "font-medium text-ink"
+                  : "text-mute hover:bg-elevated hover:text-ink",
               )}
             >
               <span className="min-w-0 text-balance">{item.label}</span>
+              <span
+                aria-hidden
+                className={cn(
+                  "absolute inset-x-3 -bottom-px h-0.5 origin-center rounded-full bg-accent transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] motion-reduce:transition-none",
+                  current ? "scale-x-100" : "scale-x-0",
+                )}
+              />
             </Link>
           );
         })}

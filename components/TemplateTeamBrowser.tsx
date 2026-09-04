@@ -22,6 +22,7 @@ export function TemplateTeamBrowser({
 }) {
   const copy = templateHubUiCopy[locale];
   const [mode, setMode] = useState<TemplateTeamMode>("builder");
+  const [hasChanged, setHasChanged] = useState(false);
   const items = mode === "builder" ? builders : orchestrators;
   const resultCount = interpolateTemplateHubCopy(copy.categoryCount, { n: items.length });
   const resultTitle = mode === "builder" ? copy.builderListTitle : copy.orchestratorListTitle;
@@ -41,7 +42,10 @@ export function TemplateTeamBrowser({
               body={copy.builderBody}
               count={builders.length}
               countLabel={copy.categoryCount}
-              onChange={setMode}
+              onChange={(next) => {
+                setMode(next);
+                setHasChanged(true);
+              }}
             />
             <CategoryRadio
               checked={mode === "orchestrator"}
@@ -50,7 +54,10 @@ export function TemplateTeamBrowser({
               body={copy.orchestratorBody}
               count={orchestrators.length}
               countLabel={copy.categoryCount}
-              onChange={setMode}
+              onChange={(next) => {
+                setMode(next);
+                setHasChanged(true);
+              }}
             />
           </div>
         </fieldset>
@@ -65,7 +72,9 @@ export function TemplateTeamBrowser({
             {resultCount}
           </p>
         </div>
-        <TemplateList items={items} variant="team" pager={false} heading="h3" />
+        <div key={mode} className={cn(hasChanged && "template-results-reveal")}>
+          <TemplateList items={items} variant="team" pager={false} heading="h3" />
+        </div>
       </section>
     </>
   );
@@ -101,7 +110,7 @@ function CategoryRadio({
       />
       <span
         className={cn(
-          "block min-h-[132px] rounded-2xl border p-5 text-left peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent md:p-6",
+          "block min-h-[132px] rounded-2xl border p-5 text-left transition-colors duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent md:p-6",
           checked
             ? "border-accent bg-accent-soft"
             : "border-line bg-elevated hover:border-line-strong",
@@ -113,7 +122,7 @@ function CategoryRadio({
             {interpolateTemplateHubCopy(countLabel, { n: count })}
           </span>
         </span>
-        <span className="mt-2 block text-sm leading-6 text-mute">{body}</span>
+        <span className="mt-2 block text-[15px] leading-6 text-mute">{body}</span>
       </span>
     </label>
   );

@@ -183,19 +183,11 @@ function PagerButton({
   children: string;
   onClick: () => void;
 }) {
-  const tap = useTapFeedback();
   return (
     <button
       type="button"
-      onClick={() => {
-        tap.trigger();
-        onClick();
-      }}
-      onAnimationEnd={tap.onAnimationEnd}
-      className={cn(
-        "spring-press inline-flex h-11 min-w-[8.5rem] items-center justify-center rounded-[10px] border border-line px-5 text-sm text-ink hover:border-line-strong",
-        tap.className,
-      )}
+      onClick={onClick}
+      className="inline-flex h-11 min-w-[8.5rem] items-center justify-center rounded-[10px] border border-line px-5 text-[15px] text-ink transition-colors duration-200 hover:border-line-strong active:border-accent active:bg-accent-soft"
     >
       {children}
     </button>

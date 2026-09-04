@@ -175,8 +175,24 @@ html[data-theme="dark"] .featured-glow {
 }
 
 .expand-copy {
+  display: grid;
   overflow: hidden;
-  transition: max-height 380ms var(--ease-out);
+  transition: grid-template-rows 380ms var(--ease-out);
+}
+
+@keyframes template-results-reveal {
+  from {
+    opacity: 0.72;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.template-results-reveal {
+  animation: template-results-reveal 180ms var(--ease-out);
 }
 
 .spring-pop {
@@ -327,5 +343,9 @@ html[data-boot="skip"] [data-boot-screen] {
 
   .expand-copy {
     transition: none;
+  }
+
+  .template-results-reveal {
+    animation: none;
   }
 }

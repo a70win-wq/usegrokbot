@@ -23,6 +23,7 @@ export function TemplatesView() {
   const copy = templateHubUiCopy[locale];
   const [category, setCategory] = useState<TemplateCategorySlug | "all">("all");
   const [templateType, setTemplateType] = useState<TemplateTypeFilter>("all");
+  const [hasFiltered, setHasFiltered] = useState(false);
   const items = useMemo(
     () => templatesForFilters(category, templateType),
     [category, templateType],
@@ -31,6 +32,18 @@ export function TemplatesView() {
   const description = isFiltered
     ? interpolateTemplateHubCopy(copy.filteredBody, { n: items.length })
     : t("templates.allBody", { n: items.length });
+
+  function selectTemplateType(next: TemplateTypeFilter) {
+    if (next === templateType) return;
+    setHasFiltered(true);
+    setTemplateType(next);
+  }
+
+  function selectCategory(next: TemplateCategorySlug | "all") {
+    if (next === category) return;
+    setHasFiltered(true);
+    setCategory(next);
+  }
 
   if (!templates.length) {
     return (
@@ -59,17 +72,17 @@ export function TemplatesView() {
           <div className="flex flex-wrap gap-2">
             <Chip
               active={templateType === "all"}
-              onClick={() => setTemplateType("all")}
+              onClick={() => selectTemplateType("all")}
               label={copy.typeAll}
             />
             <Chip
               active={templateType === "single"}
-              onClick={() => setTemplateType("single")}
+              onClick={() => selectTemplateType("single")}
               label={copy.typeSingle}
             />
             <Chip
               active={templateType === "team"}
-              onClick={() => setTemplateType("team")}
+              onClick={() => selectTemplateType("team")}
               label={copy.typeTeam}
             />
           </div>
@@ -80,14 +93,14 @@ export function TemplatesView() {
           <div className="flex flex-wrap gap-2">
             <Chip
               active={category === "all"}
-              onClick={() => setCategory("all")}
+              onClick={() => selectCategory("all")}
               label={t("templates.catAll")}
             />
             {templateCategorySlugs.map((item) => (
               <Chip
                 key={item}
                 active={category === item}
-                onClick={() => setCategory(item)}
+                onClick={() => selectCategory(item)}
                 label={t(`templates.cat${item.charAt(0).toUpperCase()}${item.slice(1)}`)}
               />
             ))}
@@ -95,11 +108,14 @@ export function TemplatesView() {
         </fieldset>
       </div>
 
-      <div className="mt-10">
+      <div
+        key={`${templateType}:${category}`}
+        className={cn("mt-10", hasFiltered && "template-results-reveal")}
+      >
         {items.length ? (
-          <TemplateList key={`${templateType}:${category}`} items={items} />
+          <TemplateList items={items} />
         ) : (
-          <p className="rounded-2xl border border-line bg-card p-6 text-sm leading-6 text-mute">
+          <p className="rounded-2xl border border-line bg-card p-6 text-[15px] leading-6 text-mute">
             {copy.filterEmpty}
           </p>
         )}
@@ -123,8 +139,10 @@ function Chip({
       onClick={onClick}
       aria-pressed={active}
       className={cn(
-        "inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 text-[13px] transition",
-        active ? "border-accent text-ink" : "border-line text-mute hover:border-line-strong hover:text-ink",
+        "inline-flex min-h-11 shrink-0 items-center rounded-full border px-4 text-[15px] font-medium transition-colors duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]",
+        active
+          ? "border-accent bg-accent-soft text-accent"
+          : "border-line text-mute hover:border-line-strong hover:bg-elevated hover:text-ink",
       )}
     >
       {label}
