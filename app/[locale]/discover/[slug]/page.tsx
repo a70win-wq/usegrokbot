@@ -117,6 +117,13 @@ function metadataCopy(locale: Locale, title: string, headline: string) {
     };
   }
 
+  if (locale === "ja") {
+    return {
+      title: `${title}：例をプロンプトにする`,
+      description: `この Grok Bot の実例を読み、試し実行と承認ルール付きのプロンプトをコピーできます。${headline}`,
+    };
+  }
+
   return {
     title: `${title}: Case to prompt`,
     description: `Understand this real Grok Bot case, then copy a paste-ready setup prompt with a dry run and approval rules. ${headline}`,

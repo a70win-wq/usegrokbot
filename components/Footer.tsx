@@ -7,7 +7,7 @@ import { GitHubStar } from "./GitHubStar";
 import { LocaleLink } from "./LocaleLink";
 
 export function Footer({ stars }: { stars?: number | null }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   const links = [
     { href: "/", label: t("nav.discover") },
@@ -57,7 +57,7 @@ export function Footer({ stars }: { stars?: number | null }) {
             {t("bot.credit")}
           </a>
           <a href="https://github.com/Alain00/blobatar" className="hover:text-mute" rel="noreferrer">
-            Community blobs powered by Blobatar
+            {locale === "ja" ? "コミュニティの Blob は Blobatar を使用" : "Community blobs powered by Blobatar"}
           </a>
         </div>
       </div>

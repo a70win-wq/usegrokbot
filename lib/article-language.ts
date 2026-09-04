@@ -1,4 +1,4 @@
-export const articleContentLanguages = ["en", "zh-Hant", "zh-Hans", "other"] as const;
+export const articleContentLanguages = ["en", "zh-Hant", "zh-Hans", "ja", "other"] as const;
 
 export type ArticleContentLanguage = (typeof articleContentLanguages)[number];
 
@@ -25,7 +25,13 @@ const SIMPLIFIED_CHARS = new Set(
 );
 
 export function isArticleContentLanguage(value: string | undefined): value is ArticleContentLanguage {
-  return value === "en" || value === "zh-Hant" || value === "zh-Hans" || value === "other";
+  return (
+    value === "en" ||
+    value === "zh-Hant" ||
+    value === "zh-Hans" ||
+    value === "ja" ||
+    value === "other"
+  );
 }
 
 export function detectArticleContentLanguage(text: string): ArticleContentLanguage {
@@ -38,7 +44,8 @@ export function detectArticleContentLanguage(text: string): ArticleContentLangua
   const hangul = countMatches(sample, HANGUL_RE);
   const latin = countMatches(sample, LATIN_RE);
 
-  if (hiragana + katakana >= 2 || hangul >= 2) return "other";
+  if (hiragana + katakana >= 2) return "ja";
+  if (hangul >= 2) return "other";
 
   if (han >= 2 && han >= latin * 0.15) {
     let traditional = 0;

@@ -4,8 +4,9 @@ import {
 } from "../data/retired-use-case-slugs";
 import { topicSlugs } from "../data/topics";
 import { appSlugs } from "../data/types";
+import { URL_LOCALE_PATTERN } from "./i18n/paths";
 
-const locale = ":locale(en|zh-hk|zh-cn)";
+const locale = `:locale(${URL_LOCALE_PATTERN})`;
 
 function permanentRedirect(source: string, destination: string) {
   return { source, destination, permanent: true as const };

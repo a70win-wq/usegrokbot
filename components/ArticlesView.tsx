@@ -7,46 +7,60 @@ import type { RankedStory } from "@/lib/x-metrics";
 
 const SECTION_COPY: Record<
   Locale,
-  { chinese: string; english: string; latest: string }
+  { chinese: string; english: string; japanese: string; latest: string }
 > = {
   en: {
     chinese: "Chinese Tutorial Articles",
     english: "Top 20 English Articles",
+    japanese: "Japanese Articles",
     latest: "Latest 10 Articles",
   },
   "zh-Hant": {
     chinese: "中文教學文章排行",
     english: "英文文章排行",
+    japanese: "日文文章排行",
     latest: "最新 10 篇文章",
   },
   "zh-Hans": {
     chinese: "中文教程文章排行",
     english: "英文文章排行",
+    japanese: "日文文章排行",
     latest: "最新 10 篇文章",
+  },
+  ja: {
+    chinese: "中国語のチュートリアル記事",
+    english: "英語記事トップ20",
+    japanese: "日本語記事の閲覧数順",
+    latest: "最新の10記事",
   },
 };
 
 export function ArticlesView({
   chineseTutorials,
   english,
+  japanese,
   latest,
 }: {
   chineseTutorials: RankedStory[];
   english: RankedStory[];
+  japanese: RankedStory[];
   latest: RankedStory[];
 }) {
   const { locale, t } = useI18n();
   const copy = SECTION_COPY[locale] ?? SECTION_COPY.en;
+  const japaneseSection = { key: "japanese", title: copy.japanese, items: japanese };
+  const englishSection = { key: "english", title: copy.english, items: english };
+  const chineseSection = { key: "chinese", title: copy.chinese, items: chineseTutorials };
   const rankedSections =
-    locale === "en"
+    locale === "ja"
       ? [
-          { key: "english", title: copy.english, items: english },
-          { key: "chinese", title: copy.chinese, items: chineseTutorials },
+          ...(japanese.length > 0 ? [japaneseSection] : []),
+          englishSection,
+          chineseSection,
         ]
-      : [
-          { key: "chinese", title: copy.chinese, items: chineseTutorials },
-          { key: "english", title: copy.english, items: english },
-        ];
+      : locale === "en"
+        ? [englishSection, chineseSection]
+        : [chineseSection, englishSection];
 
   return (
     <div className="mx-auto max-w-[760px] px-5 py-12 md:px-8 md:py-16">

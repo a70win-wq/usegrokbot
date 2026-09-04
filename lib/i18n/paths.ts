@@ -1,7 +1,9 @@
-import { site } from "@/lib/site";
+import { site } from "../site";
 import type { Locale } from "./types";
 
-export const URL_LOCALES = ["en", "zh-hk", "zh-cn"] as const;
+export const URL_LOCALES = ["en", "zh-hk", "zh-cn", "ja"] as const;
+
+export const URL_LOCALE_PATTERN = URL_LOCALES.join("|");
 
 export type UrlLocale = (typeof URL_LOCALES)[number];
 
@@ -13,36 +15,41 @@ export const urlToLocale: Record<UrlLocale, Locale> = {
   en: "en",
   "zh-hk": "zh-Hant",
   "zh-cn": "zh-Hans",
+  ja: "ja",
 };
 
 export const localeToUrl: Record<Locale, UrlLocale> = {
   en: "en",
   "zh-Hant": "zh-hk",
   "zh-Hans": "zh-cn",
+  ja: "ja",
 };
 
 export const htmlLang: Record<UrlLocale, string> = {
   en: "en",
   "zh-hk": "zh-HK",
   "zh-cn": "zh-CN",
+  ja: "ja",
 };
 
 export const hreflang: Record<UrlLocale, string> = {
   en: "en",
   "zh-hk": "zh-HK",
   "zh-cn": "zh-CN",
+  ja: "ja",
 };
 
 export const ogLocale: Record<UrlLocale, string> = {
   en: "en_US",
   "zh-hk": "zh_HK",
   "zh-cn": "zh_CN",
+  ja: "ja_JP",
 };
 
-const URL_LOCALE_RE = /^\/(en|zh-hk|zh-cn)(?=\/|$)/;
+const URL_LOCALE_RE = new RegExp("^/(" + URL_LOCALE_PATTERN + ")(?=/|$)");
 
 export function isUrlLocale(value: string): value is UrlLocale {
-  return value === "en" || value === "zh-hk" || value === "zh-cn";
+  return (URL_LOCALES as readonly string[]).includes(value);
 }
 
 export function parseUrlLocale(value: string | null | undefined): UrlLocale {
@@ -92,15 +99,40 @@ export function absoluteUrl(path: string, urlLocale: UrlLocale): string {
 
 export function languageAlternates(path: string): Record<string, string> {
   return {
-    en: absoluteUrl(path, "en"),
-    "zh-HK": absoluteUrl(path, "zh-hk"),
-    "zh-CN": absoluteUrl(path, "zh-cn"),
+    ...Object.fromEntries(URL_LOCALES.map((locale) => [hreflang[locale], absoluteUrl(path, locale)])),
     "x-default": absoluteUrl(path, DEFAULT_URL_LOCALE),
   };
 }
 
 export function detectUrlLocaleFromHeader(acceptLanguage: string | null | undefined): UrlLocale {
   const header = acceptLanguage ?? "";
+  const ranges = header
+    .split(",")
+    .map((part, index) => {
+      const [rawTag = "", ...parameters] = part.trim().split(";");
+      const qParameter = parameters.find((parameter) => parameter.trim().toLowerCase().startsWith("q="));
+      const quality = qParameter ? Number.parseFloat(qParameter.split("=")[1] ?? "") : 1;
+      return {
+        tag: rawTag.trim().replaceAll("_", "-").toLowerCase(),
+        quality: Number.isFinite(quality) ? quality : 0,
+        index,
+      };
+    })
+    .filter((range) => range.quality > 0)
+    .sort((a, b) => b.quality - a.quality || a.index - b.index);
+
+  const firstSupported = ranges.find(({ tag }) =>
+    tag === "ja" ||
+    tag.startsWith("ja-") ||
+    tag === "zh" ||
+    tag.startsWith("zh-") ||
+    tag === "en" ||
+    tag.startsWith("en-"),
+  );
+
+  if (firstSupported?.tag === "ja" || firstSupported?.tag.startsWith("ja-")) return "ja";
+
+  // Preserve the existing Chinese-first fallback for non-Japanese visitors.
   if (/zh[-_](HK|TW|MO|Hant)/i.test(header)) return "zh-hk";
   if (/zh/i.test(header)) return "zh-cn";
   return DEFAULT_URL_LOCALE;

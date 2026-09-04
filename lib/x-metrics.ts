@@ -8,7 +8,7 @@ import {
 } from "@/data/discover";
 import { chineseTutorialArticles } from "@/data/chinese-tutorial-articles";
 import { storyContentLanguage, type ArticleContentLanguage } from "@/lib/article-language";
-import type { Locale } from "@/lib/i18n/types";
+import { locales, type Locale } from "@/lib/i18n/types";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
 
 export type XMetric = {
@@ -48,6 +48,10 @@ export function formatViewCount(views: number, locale: string) {
     if (views >= 10000) return `${trimNumber(views / 10000)} 万`;
     return views.toLocaleString("zh-CN");
   }
+  if (locale === "ja") {
+    if (views >= 10000) return `${trimNumber(views / 10000)}万`;
+    return views.toLocaleString("ja-JP");
+  }
   if (views >= 1_000_000) return `${trimNumber(views / 1_000_000)}M`;
   if (views >= 1000) return `${trimNumber(views / 1000)}K`;
   return views.toLocaleString("en-US");
@@ -81,15 +85,23 @@ function languagePriority(language: ArticleContentLanguage, locale?: Locale) {
   if (locale === "en") {
     if (language === "en") return 0;
     if (isChinese) return 1;
-    return 2;
+    if (language === "ja") return 2;
+    return 3;
+  }
+  if (locale === "ja") {
+    if (language === "ja") return 0;
+    if (language === "en") return 1;
+    if (isChinese) return 2;
+    return 3;
   }
   if (isChinese) return 0;
   if (language === "en") return 1;
-  return 2;
+  if (language === "ja") return 2;
+  return 3;
 }
 
 function isLocale(value: unknown): value is Locale {
-  return value === "en" || value === "zh-Hant" || value === "zh-Hans";
+  return typeof value === "string" && (locales as readonly string[]).includes(value);
 }
 
 export function parseArticleListArgs(

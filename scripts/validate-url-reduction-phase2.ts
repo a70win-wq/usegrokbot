@@ -22,6 +22,11 @@ import {
   legacyPageRedirects,
   urlReductionRedirects,
 } from "../lib/url-reduction-redirects";
+import {
+  URL_LOCALE_PATTERN,
+  URL_LOCALES,
+  detectUrlLocaleFromHeader,
+} from "../lib/i18n/paths";
 
 const EXPECTED_DISCOVER = 1_838;
 const EXPECTED_RETAINED_DISCOVER = 88;
@@ -31,12 +36,13 @@ const EXPECTED_VERIFIED_USE_CASES = 28;
 const EXPECTED_OLD_BOT_TEAMS = 48;
 const EXPECTED_OLD_SCENARIOS = 24;
 const EXPECTED_COMMUNITY_HANDLES = 1_292;
-const EXPECTED_SITEMAP_URLS = 465;
+const EXPECTED_SITEMAP_PATHS = 155;
 const EXPECTED_CONFIGURED_REDIRECTS = 259;
 const EXPECTED_LEGACY_PAGE_REDIRECTS = 14;
 const EXPECTED_URL_REDUCTION_REDIRECTS = 244;
-const LOCALES = ["en", "zh-hk", "zh-cn"] as const;
-const localePattern = ":locale(en|zh-hk|zh-cn)";
+const LOCALES = URL_LOCALES;
+const localePattern = `:locale(${URL_LOCALE_PATTERN})`;
+const EXPECTED_SITEMAP_URLS = EXPECTED_SITEMAP_PATHS * LOCALES.length;
 
 const errors: string[] = [];
 const redirectRules = configuredRedirects();
@@ -63,6 +69,28 @@ function expectLocalizedAndDefaultRedirect(
   expectRedirect(`/${localePattern}${path}`, localizedDestination);
   expectRedirect(path, defaultDestination);
 }
+
+check(URL_LOCALES.includes("ja"), "Japanese locale is missing from URL_LOCALES");
+check(
+  detectUrlLocaleFromHeader("ja-JP,ja;q=1,en;q=0.8,zh-CN;q=0.1") === "ja",
+  "Japanese-first browsers must open /ja",
+);
+check(
+  detectUrlLocaleFromHeader("zh-CN;q=0.4,ja;q=0.9") === "ja",
+  "Accept-Language quality values must be respected",
+);
+check(
+  detectUrlLocaleFromHeader("zh-HK,ja;q=0.8") === "zh-hk",
+  "Traditional Chinese-first browsers must still open /zh-hk",
+);
+check(
+  detectUrlLocaleFromHeader("en-US,zh-HK;q=0.9") === "zh-hk",
+  "Existing English-primary Hong Kong browsers must keep the Chinese fallback",
+);
+check(
+  detectUrlLocaleFromHeader("en-US,ja;q=0.9") === "en",
+  "Japanese must not override a higher-priority English preference",
+);
 
 const retained = discoverStories.filter(shouldIndexDiscoverStory);
 const externalOnly = discoverStories.filter((story) => !shouldIndexDiscoverStory(story));
@@ -164,7 +192,7 @@ for (const entry of sitemapEntries) {
   const pathname = new URL(entry.url).pathname;
   check(!pathname.includes("/categories"), `Sitemap contains category URL: ${pathname}`);
   check(!pathname.includes("/integrations"), `Sitemap contains integration URL: ${pathname}`);
-  check(!/^\/(en|zh-hk|zh-cn)\/community\/.+/.test(pathname), `Sitemap contains community profile: ${pathname}`);
+  check(!new RegExp("^/(" + URL_LOCALE_PATTERN + ")/community/.+").test(pathname), `Sitemap contains community profile: ${pathname}`);
 }
 
 const removedRoutes = [

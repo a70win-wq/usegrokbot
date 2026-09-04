@@ -295,6 +295,40 @@ function promptBuilderCopy(locale: Locale): BuilderCopy {
     };
   }
 
+  if (locale === "ja") {
+    return {
+      eyebrow: "例からプロンプトを作りました",
+      title: "コピーして、Grok Bot に渡す",
+      body: "そのまま貼れる設定プロンプトです。最初は試し実行にし、大切な操作は承認を待ちます。",
+      caseNote: "公開例を参考にしています。同じ結果を保証するものではありません。",
+      toolsLabel: "必要なツール",
+      toolsNote: "接続と最小権限を先に確認します。パスワードは貼りません。",
+      included: ["貼るだけで新しい Bot を設定", "最初は読むだけの試し実行", "大切な操作は先にあなたが承認", "できないことははっきり言う"],
+      promptTitle: "この例から作ったプロンプト",
+      copyPrompt: "プロンプト全体をコピー",
+      openGrok: "Grok Bot を開く",
+      firstRun: "先にプロンプトを貼り、Bot の質問に答えてください。初回はデータを変えません。",
+      customize: "自分の状況に寄せたい？",
+      optional: "任意",
+      approvalLabel: "Bot はどこまで進めてよい？",
+      confirmChanges: "何かを変える前に、毎回必ず聞いてください",
+      draftOnly: "見る・分析する・下書きだけ。何も変えてはいけない",
+      privacy: "入力内容はこのブラウザ内だけで使います。アップロードしません。",
+      fields: [
+        { key: "goal", label: "本当に達成したいことは？", placeholder: "例：毎日いちばん大切なメールを10通選ぶ" },
+        { key: "dataScope", label: "どの資料を見てよい？", placeholder: "例：仕事用 Gmail、直近30日、私用ラベルは見ない" },
+        { key: "destination", label: "結果はどこに出す？", placeholder: "例：まず会話に出し、承認後にファイルへ書き出す" },
+        { key: "schedule", label: "いつ実行する？", placeholder: "例：平日の朝9時、日本時間" },
+        {
+          key: "boundaries",
+          label: "絶対に触れてはいけないことは？",
+          placeholder: "例：メール削除、顧客への連絡、支払い、アカウント設定の変更は禁止",
+          multiline: true,
+        },
+      ],
+    };
+  }
+
   return {
     eyebrow: "Case turned into a prompt",
     title: "Copy it straight into Grok Bot",

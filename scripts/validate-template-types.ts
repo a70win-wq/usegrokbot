@@ -1,4 +1,5 @@
 import catalogFile from "../data/templates-catalog.json";
+import jaCatalogFile from "../data/templates-i18n-ja.json";
 import { templateTeamCardCopy } from "../data/template-team-copy";
 import { teamTemplates, templates } from "../data/templates";
 import {
@@ -20,8 +21,17 @@ function fail(message: string): never {
 
 const catalog = catalogFile as CatalogItem[];
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
+const jaCatalog = jaCatalogFile as Record<string, { title?: string; oneLiner?: string; body?: string }>;
 const validModes = new Set<string>(templateTeamModes);
-const locales = ["en", "zh-Hant", "zh-Hans"] as const;
+const locales = ["en", "zh-Hant", "zh-Hans", "ja"] as const;
+
+for (const item of templates) {
+  const localized = jaCatalog[item.id];
+  if (!localized) fail("Japanese template copy is missing " + item.id);
+  if (!localized.oneLiner?.trim() || !localized.body?.trim()) {
+    fail("Japanese template copy is empty " + item.id);
+  }
+}
 
 for (const [id, mode] of Object.entries(templateTeamAssignments)) {
   const item = catalogById.get(id);

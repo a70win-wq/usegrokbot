@@ -168,7 +168,53 @@ const hantRoles: Record<BotTeamRoleId, RoleCopy> = {
   specialist: { name: "專才 Bot", action: "把一個明確範圍的專業意見加入共同結果。" },
 };
 
-const categoryCopy: Record<"en" | "zh-Hant", Record<BotTeamCategorySlug, { title: string; description: string }>> = {
+const jaRoles: Record<BotTeamRoleId, RoleCopy> = {
+  coordinator: { name: "統括 Bot", action: "目的を振り分け、共有の背景を保ち、判断が必要なときだけあなたに尋ねます。" },
+  manager: { name: "担当 Bot", action: "一つの範囲を持ち、待ち行列を整え、チームが必要な事実だけを報告します。" },
+  researcher: { name: "調査 Bot", action: "関連資料を探し、出典を残し、確認できない内容ははっきり印を付けます。" },
+  writer: { name: "執筆 Bot", action: "確認済みの資料を、指定の声と形式に沿った下書きにします。" },
+  editor: { name: "編集 Bot", action: "弱い行を削り、構成を確認し、公開せずにより引き締めた版を返します。" },
+  designer: { name: "デザイン Bot", action: "承認済みのブリーフを、一貫したビジュアル、ページ、または素材パックにします。" },
+  publisher: { name: "公開 Bot", action: "最終版と予定を用意し、公開前で待ちます。" },
+  scheduler: { name: "予定 Bot", action: "タイミングを管理し、承認済みの内容を正しい順に置きます。" },
+  analyst: { name: "分析 Bot", action: "根拠を比べ、何が変わったかを説明し、次の判断を示します。" },
+  auditor: { name: "監査 Bot", action: "主張、範囲、数字、食い違う内容を問い直します。" },
+  archivist: { name: "保管 Bot", action: "長く残る背景、判断、出典を、チームが再び見つけやすく保ちます。" },
+  operations: { name: "運営 Bot", action: "繰り返しの事務、フォロー、例外を、見える一つの待ち列で進めます。" },
+  finance: { name: "財務 Bot", action: "金銭記録を確認し、例外リストを整えます。資金は動かしません。" },
+  support: { name: "サポート Bot", action: "顧客の質問を分け、返信下書きを作り、繊細な内容はエスカレーションします。" },
+  inbox: { name: "受信箱 Bot", action: "必要なメッセージを見つけ、下書きを用意し、危険な操作は承認待ちにします。" },
+  calendar: { name: "カレンダー Bot", action: "予定の衝突を見つけ、リマインダーを用意し、予約変更は承認待ちにします。" },
+  community: { name: "コミュニティ Bot", action: "返信と依頼を見守り、役立つ会話とノイズを分けます。" },
+  social: { name: "SNS Bot", action: "今必要な題材を探し、各チャネル向けの下書きを用意します。先に投稿はしません。" },
+  marketing: { name: "マーケ Bot", action: "相手、メッセージ、チャネル、成功の測り方を一つの計画にまとめます。" },
+  seo: { name: "SEO Bot", action: "検索の隙間を探し、直し方を用意し、提案ごとの根拠を残します。" },
+  ads: { name: "広告 Bot", action: "キャンペーンを確認し、提案を用意します。本番の予算は変えません。" },
+  "account-research": { name: "顧客調査 Bot", action: "適切な会社と担当者、出典のある連絡理由を見つけます。" },
+  outreach: { name: "アプローチ Bot", action: "短く関連するメッセージを下書きし、確認待ちに渡します。" },
+  crm: { name: "CRM Bot", action: "重複を除き、返信を記録し、次の一歩を見えるようにします。" },
+  recruiter: { name: "採用 Bot", action: "一つの明確な範囲で候補を探し、合う根拠を付けたままにします。" },
+  "product-manager": { name: "プロダクトマネージャー Bot", action: "必要を小さな仕様、はっきりした成果、受け入れ条件にします。" },
+  "engineering-manager": { name: "エンジニアリングマネージャー Bot", action: "制作を担当付きの部分に分け、依存関係を順に保ちます。" },
+  engineer: { name: "エンジニア Bot", action: "一つの担当部分を作りテストし、根拠付きの小さな変更を返します。" },
+  devops: { name: "配信 Bot", action: "プレビューまたは公開パッケージを用意し、本番変更の前で止まります。" },
+  reviewer: { name: "レビュー Bot", action: "自分が作っていない出力を確認し、弱い部分を理由付きで戻します。" },
+  qa: { name: "QA Bot", action: "問題を再現し、確認を実行し、通った内容と失敗を記録します。" },
+  data: { name: "データ Bot", action: "指定の数字を取り、定義を安定させ、小さな表を返します。" },
+  security: { name: "安全 Bot", action: "危険な状態を探し、根拠が安全でないときは次の操作を止めます。" },
+  risk: { name: "リスク Bot", action: "厳格な制限を適用し、元に戻せない一歩の前に案を拒否できます。" },
+  execution: { name: "実行 Bot", action: "必要な確認がすべて通ったあとだけ、最後の操作を用意します。" },
+  credit: { name: "与信 Bot", action: "印の付いた注文を確認し、判断に必要な根拠を用意します。" },
+  inventory: { name: "在庫 Bot", action: "在庫、入荷、需要を満たせるかを確認します。" },
+  returns: { name: "返品 Bot", action: "製品の問題とアクセスの問題を分け、返品の型を示します。" },
+  shopping: { name: "買い物 Bot", action: "実際の選択肢と価格を比べ、購入前に待ちます。" },
+  travel: { name: "旅行 Bot", action: "日付、予算、制約に照らして経路や宿泊を比べます。" },
+  family: { name: "家庭 Bot", action: "家庭の必要、計画、未決の問いをまとめ、先に動かしません。" },
+  teacher: { name: "学習 Bot", action: "確認済みの資料を、わかりやすい授業、練習、準備ガイドにします。" },
+  specialist: { name: "専門 Bot", action: "一つの狭い専門を、共有の結果に加えます。" },
+};
+
+const categoryCopy: Record<"en" | "zh-Hant" | "ja", Record<BotTeamCategorySlug, { title: string; description: string }>> = {
   en: {
     operations: { title: "Operations", description: "Chiefs of staff, company rosters, briefs, and fleet care." },
     content: { title: "Content", description: "Teams that research, write, edit, design, and prepare publishing." },
@@ -188,6 +234,16 @@ const categoryCopy: Record<"en" | "zh-Hant", Record<BotTeamCategorySlug, { title
     research: { title: "研究與情報", description: "來源核對、協作分析和夜間情報團隊。" },
     commerce: { title: "商務與交易", description: "電商、財務核對、訂單檢查和風險把關團隊。" },
     personal: { title: "個人與家庭", description: "家庭、旅行、學習和個人事務團隊。" },
+  },
+  ja: {
+    operations: { title: "運営管理", description: "参謀、会社の編成、毎日のブリーフ、Bot 艦隊の手入れ。" },
+    content: { title: "コンテンツ制作", description: "調査、執筆、編集、デザインから公開準備までのチーム。" },
+    marketing: { title: "マーケと成長", description: "SNS、製品公開、代理店、SEO の組み方。" },
+    sales: { title: "営業", description: "見込み客、アプローチ、CRM、採用、フォローのチーム。" },
+    engineering: { title: "製品とエンジニアリング", description: "製品、実装、レビュー、QA、配信のチーム。" },
+    research: { title: "調査と情報", description: "出典確認、共同分析、夜間の情報チーム。" },
+    commerce: { title: "取引と商務", description: "EC、財務確認、注文チェック、リスク関門のチーム。" },
+    personal: { title: "個人と家庭", description: "家庭、旅行、学習、個人事務のチーム。" },
   },
 };
 
@@ -243,7 +299,163 @@ const teamOutcomeCopy: Record<string, { en: string; "zh-Hant": string }> = {
   "personal-finance-board": { en: "Advisor, tax, and retirement pause for approval before touching accounts.", "zh-Hant": "財務、稅務與退休建議，動帳前先問你。" },
 };
 
-const pageCopy: Record<"en" | "zh-Hant", BotTeamsPageCopy> = {
+const teamTitleJa: Record<string, string> = {
+  "founder-org-chart": "創業者の組織図",
+  "executive-standup-team": "役員スタンドアップチーム",
+  "one-person-company-team": "一人会社チーム",
+  "agency-operations-fleet": "代理店オペレーション艦隊",
+  "daily-revenue-brief-team": "毎日の売上ブリーフチーム",
+  "bot-fleet-care-team": "Bot 艦隊ケアチーム",
+  "seven-bot-content-team": "7 Bot コンテンツチーム",
+  "creator-dev-studio": "クリエイター＋開発スタジオ",
+  "viral-content-factory": "バズコンテンツ工場",
+  "author-publishing-staff": "著者出版チーム",
+  "pinterest-content-team": "Pinterest コンテンツチーム",
+  "training-material-room": "教材制作ルーム",
+  "growth-engine-team": "成長エンジンチーム",
+  "social-content-queue": "SNS コンテンツ待ち列",
+  "product-launch-team": "8 Agent 製品公開チーム",
+  "full-marketing-agency": "フルマーケ代理店チーム",
+  "growth-deal-desk": "成長と成約デスク",
+  "seo-company-team": "6 Agent SEO チーム",
+  "chief-crm-team": "参謀と CRM チーム",
+  "newsletter-sales-team": "ニュースレター営業チーム",
+  "recruiting-desk": "5 Agent 採用デスク",
+  "outbound-sales-department": "アウトバウンド営業部門",
+  "commission-sales-floor": "コミッション営業チーム",
+  "product-engineering-org": "製品とエンジニアリング組織",
+  "cto-specialist-team": "CTO と専門 Bot チーム",
+  "website-build-relay": "サイト制作リレーチーム",
+  "repo-fleet-team": "リポジトリ艦隊チーム",
+  "overnight-software-team": "夜間ソフトウェアチーム",
+  "dual-review-engineering-team": "二重レビュー開発チーム",
+  "overnight-bugfix-team": "夜間バグ修正チーム",
+  "gis-planning-team": "GIS 計画チーム",
+  "six-agent-architecture": "6 Agent アーキテクチャ",
+  "evidence-pipeline-team": "5 Agent 証拠パイプライン",
+  "research-audit-team": "調査主管と出典監査チーム",
+  "market-news-desk": "市場ニュースデスク",
+  "market-coverage-team": "夜間マーケット調査チーム",
+  "collaborative-analysis-room": "共同分析ルーム",
+  "math-review-panel": "数学レビュー班",
+  "netsuite-credit-team": "NetSuite 注文と与信チーム",
+  "five-agent-trading-desk": "5 Agent 取引デスク",
+  "risk-gated-trading-floor": "リスク関門の取引フロア",
+  "finance-recovery-team": "費用回収チーム",
+  "ecommerce-operations-team": "8 Bot EC 運営チーム",
+  "household-manager-team": "家庭管理チーム",
+  "family-office-team": "ファミリーオフィスチーム",
+  "travel-debate-team": "旅行案ディベートチーム",
+  "job-application-team": "応募準備チーム",
+  "personal-client-office": "個人と顧客オフィス",
+  "personal-finance-board": "個人財務ボード",
+};
+
+const teamOutcomeJa: Record<string, string> = {
+  "founder-org-chart": "参謀にだけ指示し、ほかの専門 Bot が分担します。",
+  "executive-standup-team": "各担当が事実を1つ出し、当日の計画を書きます。",
+  "one-person-company-team": "一人会社の各レーンに担当がいます。",
+  "agency-operations-fleet": "統括が専門 Bot を回し、送信と支出はあなたが承認します。",
+  "daily-revenue-brief-team": "参謀が売上ブリーフを求め、Builder がメールを返します。",
+  "bot-fleet-care-team": "ファイルを整理し、Bot を整え、毎週改善を出します。",
+  "seven-bot-content-team": "調査から公開まで、参謀が割り振ります。",
+  "creator-dev-studio": "1人の総括がウェブ、短尺、原稿、実装を振ります。",
+  "viral-content-factory": "話題を見つけ、下書きし、公開前にあなたが承認します。",
+  "author-publishing-staff": "世界観を覚え、原稿と投稿資料を整えます。",
+  "pinterest-content-team": "人気 Pin を調べ、一括アップロード用ファイルを作ります。",
+  "training-material-room": "デザイン、学習、専門が同じ部屋で教材を作ります。",
+  "growth-engine-team": "コンテンツ、予定、交流、報告を分けて担います。",
+  "social-content-queue": "朝に題材を探し、下書きと資料はあなた待ちです。",
+  "product-launch-team": "1つのブリーフが通ってから、承認できる施策を出します。",
+  "full-marketing-agency": "戦略から広報まで、1人の参謀に報告します。",
+  "growth-deal-desk": "情報と成長を成約チームに渡し、フォローを続けます。",
+  "seo-company-team": "検索の隙間を探し、書いて確認してから公開します。",
+  "chief-crm-team": "参謀が予定とメール、CRM がアウトバウンドを担います。",
+  "newsletter-sales-team": "スポンサーを拾い、価格を決め、下書きは送信待ちです。",
+  "recruiting-desk": "候補を探し、最初の連絡を書き、面接は人に残します。",
+  "outbound-sales-department": "関心を探し、顧客を調べ、アプローチ下書きは確認待ちです。",
+  "commission-sales-floor": "リードから成約、手数料まで同じ循環に置きます。",
+  "product-engineering-org": "主管が要件を分け、実装と製品は PR で引き継ぎます。",
+  "cto-specialist-team": "リポジトリを CTO に渡し、専門 Bot が報告します。",
+  "website-build-relay": "デザイン、執筆、実装のあと、公開へ渡します。",
+  "repo-fleet-team": "各リポジトリに担当がおり、完了後に QA が確認します。",
+  "overnight-software-team": "夜間に作りプレビューし、元に戻せない操作は止めます。",
+  "dual-review-engineering-team": "並行して作り、規則と質が通ってから統合します。",
+  "overnight-bugfix-team": "再現して起票し、修正 Bot が直しを用意します。",
+  "gis-planning-team": "用途地域とインフラを実際の地図レイヤーにします。",
+  "six-agent-architecture": "信号の調査、実装、独立レビューを経て渡します。",
+  "evidence-pipeline-team": "集め、出典を確認し、分析して報告にまとめます。",
+  "research-audit-team": "調査主管が資料を集め、監査が矛盾する数字を見ます。",
+  "market-news-desk": "ニュースを見守り、偽情報を除き、確認済みの1行だけ送ります。",
+  "market-coverage-team": "夜間に決算と資金を追い、朝に1枚のブリーフを出します。",
+  "collaborative-analysis-room": "調査と分析が同じ部屋で根拠を突き合わせます。",
+  "math-review-panel": "数学の専門が論証を確認してから解説動画を直します。",
+  "netsuite-credit-team": "注文主管が問題のある注文を与信審査へ渡します。",
+  "five-agent-trading-desk": "走査、リスク、資金確認のあとだけ実行できます。",
+  "risk-gated-trading-floor": "検索とリスクが拒否でき、購入前に止めます。",
+  "finance-recovery-team": "領収書と漏れを照合し、拒否権で送信を止められます。",
+  "ecommerce-operations-team": "朝会の1画面で資金、広告、在庫、返品を見ます。",
+  "household-manager-team": "予定、買い物、調査を家庭の総括に集めます。",
+  "family-office-team": "住まい、財務、家庭、ニュースを総括へ報告します。",
+  "travel-debate-team": "経路と宿泊が議論し、予約はあなた待ちです。",
+  "job-application-team": "履歴書を見つけ、求人を採点し、面接を用意します。",
+  "personal-client-office": "メルマガと DM を整理し、その日の顧客要約を出します。",
+  "personal-finance-board": "財務、税、退職の提案は、口座を触る前に確認します。",
+};
+
+const customActionJa: Record<string, string> = {
+  "Orchestrates the whole team.": "チーム全体を統括します。",
+  "Designs the website.": "ウェブサイトをデザインします。",
+  "Creates short-form content.": "短尺コンテンツを作ります。",
+  "Writes articles and newsletters.": "記事とニュースレターを書きます。",
+  "Writes YouTube scripts.": "YouTube の台本を書きます。",
+  "Suggests ideas for videos and content.": "動画とコンテンツの題材を出します。",
+  "Builds through Claude Code.": "Claude Code で実装します。",
+  "Builds through Codex.": "Codex で実装します。",
+  "Holds every draft until you approve it.": "すべての下書きを、あなたが承認するまで止めます。",
+  "Finds the gap.": "隙間を見つけます。",
+  "Locks the hook.": "フックを固めます。",
+  "Drafts in your voice.": "あなたの声で下書きします。",
+  "Cuts the weak lines.": "弱い行を削ります。",
+  "Feeds results into the next cycle.": "結果を次の循環に戻します。",
+  "Assigns each lane and only asks for yes or no.": "各レーンを割り当て、承認が必要なときだけ尋ねます。",
+  "Prepares growth content.": "成長用コンテンツを用意します。",
+  "Keeps the publishing schedule.": "公開予定を管理します。",
+  "Tracks audience engagement.": "相手の反応を追います。",
+  "Combines results into reports.": "結果を報告にまとめます。",
+  "Maps the market and customer pain.": "市場と顧客の痛みを整理します。",
+  "Finds the strongest angle.": "いちばん強い角度を見つけます。",
+  "Generates and ranks messages.": "メッセージを作り、順位を付けます。",
+  "Turns winning ideas into assets.": "選ばれた案を素材にします。",
+  "Chooses where and when the campaign runs.": "施策をどこで、いつ走らせるかを決めます。",
+  "Reads retention and conversion signals.": "継続と転換の信号を読みます。",
+  "Rejects weak campaigns before they waste budget.": "予算を無駄にする前に、弱い施策を落とします。",
+  "Sends the final choice for your approval.": "最終案をあなたの承認に渡します。",
+  "Requests the town plan and GIS map layers.": "市街計画と GIS の地図レイヤーを求めます。",
+  "Creates Title 30 district, FAR, and overlay layers.": "Title 30 の地区、FAR、オーバーレイレイヤーを作ります。",
+  "Creates water, sewer, power, and drainage layers.": "水道、下水、電力、排水のレイヤーを作ります。",
+  "Flags going-concern language and auditor changes in overnight 10-Ks.": "夜間の 10-K から継続企業の前提と監査人変更を印します。",
+  "Compares earnings-call tone with the previous quarter.": "決算説明会の声を前四半期と比べます。",
+  "Finds same-day Form 4 buys over $1M.": "当日 100 万ドル超の Form 4 買いを見つけます。",
+  "Reads sweeps and 0DTE pressure before the open.": "開場前にスイープと 0DTE の圧力を読みます。",
+  "Covers the overnight Asia handover.": "夜間のアジア市場の引き継ぎを追います。",
+  "Caps positions at 3% and rejects exceptions.": "各ポジションを 3% までにし、例外を拒否します。",
+  "Removes one-source flags and emails a ranked 5:30 brief.": "単一出典の警報を外し、5:30 に順位付きブリーフを送ります。",
+  "Creates the paper explainer video.": "論文の解説動画を作ります。",
+  "Checks conformal maps and complex-analysis math.": "等角写像と複素解析の数学を確認します。",
+  "Checks arguments, graphs, and geometric-function details.": "論証、グラフ、幾何関数の細部を確認します。",
+  "Checks the harmonic-analysis math.": "調和解析の数学を確認します。",
+  "Compares route options.": "経路の選択肢を比べます。",
+  "Compares stay options.": "宿泊の選択肢を比べます。",
+  "Runs the debate and stops before booking.": "議論をまとめ、予約の前で止まります。",
+  "Runs the standup, relays your instructions, and writes the daily plan.": "スタンドアップを回し、指示を伝え、当日の計画を書きます。",
+  "Reports the content lane's status and today's next move.": "コンテンツ担当の進みと、今日の次の一手を報告します。",
+  "States the community goal and where it stands this week.": "コミュニティ担当の今週の目標と現状を述べます。",
+  "Reports yesterday's SaaS result and one move for today.": "SaaS 担当の昨日の結果と、今日の一手を報告します。",
+  "Adds one fact to the daily scrum.": "毎日のスタンドアップに事実を1つ加えます。",
+};
+
+const pageCopy: Record<"en" | "zh-Hant" | "ja", BotTeamsPageCopy> = {
   en: {
     eyebrow: "REAL MULTI-BOT SETUPS",
     title: "Grok Bot Teams",
@@ -336,6 +548,52 @@ const pageCopy: Record<"en" | "zh-Hant", BotTeamsPageCopy> = {
     otherTitle: "同分類的其他團隊",
     allTeams: "查看目前的使用案例",
   },
+  ja: {
+    eyebrow: "実際のマルチ BOT 編成",
+    title: "Grok Bot チーム",
+    body: "複数 Bot の組み方を、公開出典と照らしながら見られます。",
+    count: (teams, _categories, sources, posts) => `${teams}チーム · ${sources}件の出典 · ${posts.toLocaleString("ja-JP")}件の投稿を確認`,
+    filterLabel: "Bot チームを絞る",
+    allFilter: "すべてのチーム",
+    featuredFilter: "注目",
+    chooseTitle: "すべての Bot チーム",
+    chooseBody: "まず成果を見て、役割と引き継ぎを確認し、作る前に元の投稿を開けます。",
+    showing: (count) => `${count}チームを表示`,
+    oneBotTitle: "Templates = 1つの Bot",
+    oneBotBody: "一つのはっきりした目的に、1体の Bot を選びます。",
+    teamTitle: "Bot Teams = 複数の Bot が協力",
+    teamBody: "役割、引き継ぎ、人の承認ゲートがはっきりした、繰り返し使える組み方を選びます。",
+    bots: (count) => `${count}体の Bot`,
+    evidence: (count) => `${count}件の出典`,
+    verifiedSetup: "公開された組み方",
+    officialExample: "公式の例を含む",
+    namedRoles: (named, total) => named === total ? `${named}件の役割を表示` : `${named}件の名前付き役割を表示 · 出典には ${total}体の Bot`,
+    open: "チームを見る",
+    guideEyebrow: "小さく始める",
+    guideTitle: "次の Bot を足すタイミング",
+    guideBody: "安定した一つの成果なら、まず 1体の Bot で足ります。同じ部分が何度も繰り返すときだけ専門 Bot を足し、引き継ぎを見えるようにしたいときにグループを使います。",
+    guideSteps: [
+      { title: "まず一人の担当を決める", body: "成果、出典のルール、承認の境界を 1体の Bot に渡します。" },
+      { title: "繰り返す部分を分ける", body: "その部分だけが独自の背景を何度も必要にするとき、専門 Bot を足します。" },
+      { title: "引き継ぎを見えるようにする", body: "共通グループを使い、出典を残し、元に戻せない操作の前で止めます。" },
+    ],
+    guideLink: "公式の Bot ガイドを読む",
+    teamEyebrow: "BOT チーム",
+    outcomeLabel: "成果",
+    audienceLabel: "向いている人",
+    workflowTitle: "役割と引き継ぎ",
+    workflowBody: "公開出典に役割名があれば、その名前を残します。Bot の総数は出典の投稿に従います。",
+    handoffLabel: "引き継ぎ",
+    templatesTitle: "合う Templates",
+    templatesBody: "ここには、UseGrokBot にすでに載っている実際の Templates だけをリンクします。",
+    templateOpen: "Template を開く",
+    setupTitle: "組み方をコピー",
+    setupBody: "まず安全な出発点として使い、そのあと自分のルールと承認済みツールに置き換えてください。",
+    examplesTitle: "出典の投稿",
+    examplesBody: "コピーする前に、元の投稿、作者、日付、ある場合は閲覧数を確認できます。",
+    otherTitle: "同じ分類のほかのチーム",
+    allTeams: "いまの Use Cases を見る",
+  },
 };
 
 function toSimplified(value: string) {
@@ -388,8 +646,9 @@ function toSimplified(value: string) {
     .replaceAll("贴文", "帖子");
 }
 
-function forLocale<T>(locale: Locale, en: T, hant: T, simplify: (value: T) => T): T {
+function forLocale<T>(locale: Locale, en: T, hant: T, simplify: (value: T) => T, ja?: T): T {
   if (locale === "en") return en;
+  if (locale === "ja") return ja ?? en;
   if (locale === "zh-Hans") return simplify(hant);
   return hant;
 }
@@ -405,7 +664,7 @@ export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam
   const localizedSource = source ? localizeDiscoverStory(source, locale) : undefined;
   const outcomeCopy = teamOutcomeCopy[team.slug];
   if (!outcomeCopy) throw new Error(`Missing Bot Team outcome copy: ${team.slug}`);
-  const rolesForLocale = locale === "en" ? enRoles : hantRoles;
+  const rolesForLocale = locale === "en" ? enRoles : locale === "ja" ? jaRoles : hantRoles;
   const leadIndex = Math.max(0, team.roles.findIndex((role) => role.id === "coordinator" || role.id === "manager"));
   const preliminary = team.roles.map((role, index) => {
     const base = rolesForLocale[role.id];
@@ -414,6 +673,8 @@ export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam
     const action = role.action
       ? locale === "en"
         ? role.action.en
+        : locale === "ja"
+          ? customActionJa[role.action.en] ?? role.action.en
         : locale === "zh-Hans"
           ? toSimplified(role.action.zhHant)
           : role.action.zhHant
@@ -436,6 +697,12 @@ export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam
         : team.pattern === "hub"
           ? index === leadIndex ? "Assigns one clear lane to each specialist and holds the final approval queue." : `Returns the checked result to ${leadName}.`
           : "Shares the evidence in the group so another Bot can challenge or extend it.";
+    } else if (locale === "ja") {
+      handoff = team.pattern === "pipeline"
+        ? next ? `確認済みの結果を ${next} に渡します。` : "確認用の一式を返し、人の承認を待ちます。"
+        : team.pattern === "hub"
+          ? index === leadIndex ? "各担当に明確な範囲を割り当て、最後の承認リストをまとめます。" : `確認済みの結果を ${leadName} に戻します。`
+          : "グループで根拠を共有し、別の Bot が補足や疑問を出せるようにします。";
     } else {
       handoff = team.pattern === "pipeline"
         ? next ? `把核對過的結果交給 ${next}。` : "交回一份審核包，等待人工批准。"
@@ -446,17 +713,27 @@ export function localizeBotTeam(team: BotTeam, locale: Locale): LocalizedBotTeam
     return { ...role, handoff: locale === "zh-Hans" ? toSimplified(handoff) : handoff };
   });
 
-  const title = locale === "en" ? team.title : locale === "zh-Hans" ? toSimplified(team.titleZhHant) : team.titleZhHant;
+  const title = locale === "en"
+    ? team.title
+    : locale === "ja"
+      ? teamTitleJa[team.slug] ?? team.title
+      : locale === "zh-Hans"
+        ? toSimplified(team.titleZhHant)
+        : team.titleZhHant;
   const outcome = locale === "en"
     ? outcomeCopy.en
+    : locale === "ja"
+      ? teamOutcomeJa[team.slug] ?? outcomeCopy.en
     : locale === "zh-Hans"
       ? toSimplified(outcomeCopy["zh-Hant"])
       : outcomeCopy["zh-Hant"];
   const summary = outcome;
-  const audience = localizedSource?.usefulFor ?? localizedSource?.whoShouldTry?.join(" · ") ?? "Grok Bot users";
+  const audience = localizedSource?.usefulFor ?? localizedSource?.whoShouldTry?.join(" · ") ?? (locale === "ja" ? "Grok Bot の利用者" : "Grok Bot users");
   const roleList = roles.map((role) => role.name).join(locale === "en" ? ", " : "、");
   const setupPrompt = locale === "en"
     ? `Build a ${title} with ${team.botCount} Bots. Roles: ${roleList}. Keep sources with every handoff and ask me before any external action.`
+    : locale === "ja"
+      ? `「${title}」を ${team.botCount} 体の Bot で作ってください。役割：${roleList}。引き継ぎのたびに出典を残し、外部への操作の前には必ず確認してください。`
     : `建立「${title}」，共 ${team.botCount} 個 Bot。角色：${roleList}。每次交接保留來源；任何對外操作前先詢問我。`;
 
   return {
@@ -476,6 +753,7 @@ export function localizeBotTeamCategory(category: BotTeamCategory, locale: Local
     categoryCopy.en[category.slug],
     categoryCopy["zh-Hant"][category.slug],
     (value) => ({ title: toSimplified(value.title), description: toSimplified(value.description) }),
+    categoryCopy.ja[category.slug],
   );
   return { ...category, ...item };
 }
@@ -528,5 +806,6 @@ export function botTeamsPageCopy(locale: Locale): BotTeamsPageCopy {
       otherTitle: toSimplified(value.otherTitle),
       allTeams: toSimplified(value.allTeams),
     }),
+    pageCopy.ja,
   );
 }

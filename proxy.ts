@@ -5,6 +5,7 @@ import {
   LOCALE_COOKIE,
   detectUrlLocaleFromHeader,
   isUrlLocale,
+  URL_LOCALE_PATTERN,
   type UrlLocale,
 } from "@/lib/i18n/paths";
 
@@ -44,7 +45,7 @@ function apexRedirect(request: NextRequest) {
   return NextResponse.redirect(url, 301);
 }
 
-const DISCOVER_DETAIL_PATH = /^\/(?:(?:en|zh-hk|zh-cn)\/)?discover\/[^/]+\/?$/;
+const DISCOVER_DETAIL_PATH = new RegExp("^/(?:(?:" + URL_LOCALE_PATTERN + ")/)?discover/[^/]+/?$");
 
 export async function proxy(request: NextRequest) {
   const hostRedirect = apexRedirect(request);

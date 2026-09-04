@@ -12,6 +12,7 @@ import {
 } from "@/data/bookmarks";
 import { cn } from "@/lib/cn";
 import { useI18n } from "@/lib/i18n";
+import type { Locale } from "@/lib/i18n/types";
 import type { RankedStory } from "@/lib/x-metrics";
 
 export function BookmarksView({
@@ -19,11 +20,13 @@ export function BookmarksView({
   youtube,
   chineseArticles,
   englishArticles,
+  japaneseArticles,
 }: {
   github: LocalizedBookmarkItem[];
   youtube: LocalizedBookmarkItem[];
   chineseArticles: RankedStory[];
   englishArticles: RankedStory[];
+  japaneseArticles: RankedStory[];
 }) {
   const { locale } = useI18n();
   const copy = bookmarkUiCopy[locale];
@@ -33,7 +36,9 @@ export function BookmarksView({
       ? github.length
       : item === "youtube"
         ? youtube.length
-        : chineseArticles.length + englishArticles.length;
+        : chineseArticles.length +
+          englishArticles.length +
+          (locale === "ja" ? japaneseArticles.length : 0);
   }
   const visibleCount = countForSource(source);
 
@@ -154,6 +159,7 @@ export function BookmarksView({
                 ) : (
                   <XArticleLists
                     locale={locale}
+                    japanese={japaneseArticles}
                     chinese={chineseArticles}
                     english={englishArticles}
                   />
@@ -254,24 +260,29 @@ function BookmarkGrid({
 
 function XArticleLists({
   locale,
+  japanese,
   chinese,
   english,
 }: {
-  locale: "en" | "zh-Hant" | "zh-Hans";
+  locale: Locale;
+  japanese: RankedStory[];
   chinese: RankedStory[];
   english: RankedStory[];
 }) {
   const copy = bookmarkUiCopy[locale];
+  const japaneseSection = { key: "japanese", title: copy.xJapaneseTitle, items: japanese };
+  const englishSection = { key: "english", title: copy.xEnglishTitle, items: english };
+  const chineseSection = { key: "chinese", title: copy.xChineseTitle, items: chinese };
   const sections =
-    locale === "en"
+    locale === "ja"
       ? [
-          { key: "english", title: copy.xEnglishTitle, items: english },
-          { key: "chinese", title: copy.xChineseTitle, items: chinese },
+          ...(japanese.length > 0 ? [japaneseSection] : []),
+          englishSection,
+          chineseSection,
         ]
-      : [
-          { key: "chinese", title: copy.xChineseTitle, items: chinese },
-          { key: "english", title: copy.xEnglishTitle, items: english },
-        ];
+      : locale === "en"
+        ? [englishSection, chineseSection]
+        : [chineseSection, englishSection];
 
   return (
     <div className="max-w-[860px]">

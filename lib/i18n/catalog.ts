@@ -33,6 +33,21 @@ const appCopy: Record<Exclude<Locale, "en">, Record<AppSlug, string>> = {
     reddit: "找出真实顾客用语与新冒出的问题。",
     youtube: "收集视频灵感、评论与竞品上传。",
   },
+  ja: {
+    browser: "Web を見て、ページを比べ、公開情報を集めます。",
+    gmail: "受信箱を整理し、返信案とフォローを用意します。",
+    "google-sheets": "リストを保存し、見込み客や簡単なレポートを更新します。",
+    "google-calendar": "会議を準備し、1週間の予定を整えます。",
+    slack: "チームが使う場所へ要点を届けます。",
+    notion: "調査結果を再利用できるページにまとめます。",
+    github: "Issue、Pull Request、リポジトリの動きを追います。",
+    salesforce: "CRM のメモと次の対応を最新に保ちます。",
+    hubspot: "連絡先、取引、フォローを更新します。",
+    linkedin: "人物や会社を調べ、投稿のヒントを集めます。",
+    x: "会話、メンション、話題を追います。",
+    reddit: "顧客の言葉と新しい悩みを見つけます。",
+    youtube: "動画のヒント、コメント、競合の投稿を集めます。",
+  },
 };
 
 export function localizeApp(app: App, locale: Locale): App {

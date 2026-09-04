@@ -79,6 +79,7 @@ export type DiscoverStory = {
     en?: string;
     "zh-Hant"?: string;
     "zh-Hans"?: string;
+    ja?: string;
   };
 };
 

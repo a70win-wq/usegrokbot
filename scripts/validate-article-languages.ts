@@ -27,7 +27,7 @@ import {
 
 type TutorialStory = DiscoverStory & { articleUrl?: string };
 
-const LOCALES: Locale[] = ["zh-Hant", "zh-Hans", "en"];
+const LOCALES: Locale[] = ["zh-Hant", "zh-Hans", "en", "ja"];
 const TOP_LIMIT = 5;
 const LATEST_LIMIT = 10;
 const errors: string[] = [];
@@ -86,16 +86,25 @@ function languagePriority(language: ArticleContentLanguage, locale: Locale) {
   if (locale === "en") {
     if (language === "en") return 0;
     if (isChinese) return 1;
-    return 2;
+    if (language === "ja") return 2;
+    return 3;
+  }
+  if (locale === "ja") {
+    if (language === "ja") return 0;
+    if (language === "en") return 1;
+    if (isChinese) return 2;
+    return 3;
   }
   if (isChinese) return 0;
   if (language === "en") return 1;
-  return 2;
+  if (language === "ja") return 2;
+  return 3;
 }
 
 function isPreferredLanguage(story: DiscoverStory, locale: Locale) {
   const language = storyContentLanguage(story);
   if (locale === "en") return language === "en";
+  if (locale === "ja") return language === "ja";
   return language === "zh-Hant" || language === "zh-Hans";
 }
 
@@ -205,7 +214,7 @@ function assertLocalePriorityAndGroupOrder(
     }
   }
 
-  const preferredLabel = locale === "en" ? "English" : "Chinese";
+  const preferredLabel = locale === "en" ? "English" : locale === "ja" ? "Japanese" : "Chinese";
   const firstOther = items.findIndex((item) => !isPreferredLanguage(item.story, locale));
   let lastPreferred = -1;
   for (let index = items.length - 1; index >= 0; index -= 1) {
@@ -321,7 +330,7 @@ function main() {
     const actualLatest = latestArticleStories(LATEST_LIMIT, locale);
     const goldTop = expectedRanked(locale, "views", TOP_LIMIT);
     const goldLatest = expectedRanked(locale, "date", LATEST_LIMIT);
-    const preferredLabel = locale === "en" ? "English" : "Chinese";
+    const preferredLabel = locale === "en" ? "English" : locale === "ja" ? "Japanese" : "Chinese";
 
     check(actualTop.length > 0, "Top articles API returned no rows for " + locale);
     check(actualLatest.length > 0, "Latest articles API returned no rows for " + locale);

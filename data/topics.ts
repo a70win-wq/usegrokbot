@@ -206,7 +206,7 @@ export function topicsForStory(story: DiscoverStory) {
   return topics.filter((topic) => storyMatchesTopic(story, topic.slug));
 }
 
-export const topicCopy: Record<"zh-Hant" | "zh-Hans", Record<TopicSlug, string>> = {
+export const topicCopy: Record<"zh-Hant" | "zh-Hans" | "ja", Record<TopicSlug, string>> = {
   "zh-Hant": {
     email: "收件匣、回覆、退訂、電子郵件工作。",
     calendar: "會議、行程、日曆。",
@@ -245,9 +245,30 @@ export const topicCopy: Record<"zh-Hant" | "zh-Hans", Record<TopicSlug, string>>
     operations: "办公室、设置教程、打理一张桌子。",
     personal: "家里、父母、日常。",
   },
+  ja: {
+    email: "受信箱、返信、配信停止など、メールを Bot に任せた例。",
+    calendar: "会議、予定、カレンダー管理。",
+    stock: "市場レポート、証券会社、取引 Bot。",
+    finance: "会計、請求書、経費、お金の管理。",
+    shopping: "セール、再入荷、買い物。",
+    travel: "航空券、ホテル、旅行計画。",
+    sales: "見込み客、営業連絡、CRM、一人会社の販売。",
+    marketing: "Reddit、競合の監視、週次レポート。",
+    research: "Podcast、要約、監視などの調査。",
+    content: "YouTube コメント、ニュースレター、動画、投稿。",
+    notes: "Obsidian、Notion、Wiki、第二の脳。",
+    coding: "Bug、GitHub、WordPress、開発フロー。",
+    hardware: "Arduino、ESP32、Bot とつながる機器。",
+    games: "Roblox、Three.js、Bot が作ったゲーム。",
+    support: "サポート、返金、Intercom、Helpdesk。",
+    operations: "運用、設定ガイド、日々の管理。",
+    personal: "家庭、家族、日常生活。",
+  },
 };
 
 export function topicDescription(topic: PostTopic, locale: string) {
-  if (locale === "zh-Hant" || locale === "zh-Hans") return topicCopy[locale][topic.slug];
+  if (locale === "zh-Hant" || locale === "zh-Hans" || locale === "ja") {
+    return topicCopy[locale][topic.slug];
+  }
   return topic.description;
 }

@@ -109,6 +109,32 @@ export const templateHubUiCopy = {
     filteredBody: "目前显示 {n} 个符合筛选条件的公开模板。",
     filterEmpty: "目前没有符合这些筛选条件的公开模板。",
   },
+  ja: {
+    navLabel: "テンプレートの探し方",
+    byRole: "立場から",
+    botTeams: "Bot Teams",
+    allTemplates: "すべてのテンプレート",
+    teamTitle: "Bot Team テンプレート",
+    teamIntro:
+      "今の状況を選んでください。まだ Bot チームがないか、すでに複数の Bots があるか。",
+    teamCount: "確認済みのチームテンプレート {n} 件",
+    categoryLabel: "今はどの状況ですか？",
+    categoryCount: "{n} 件のテンプレート",
+    builderTitle: "まだ Bot チームがない",
+    builderBody: "これらのテンプレートは、用途の違う複数の Bots を代わりに作ります。",
+    orchestratorTitle: "すでに複数の Bots がある",
+    orchestratorBody: "これらのテンプレートは、一件ずつ一番合う Bot に渡します。",
+    builderListTitle: "Bots を代わりに作るテンプレート",
+    orchestratorListTitle: "依頼を振り分けるテンプレート",
+    evidenceNote:
+      "公開説明が、複数の Bots を作るか管理すると明記しているテンプレートだけを載せています。",
+    typeLabel: "テンプレートの種類",
+    typeAll: "すべて",
+    typeSingle: "Single Bot",
+    typeTeam: "Bot Team",
+    filteredBody: "この条件に合う公開テンプレート {n} 件を表示しています。",
+    filterEmpty: "この条件に合う公開テンプレートはまだありません。",
+  },
 } satisfies Record<Locale, Record<string, string>>;
 
 export function interpolateTemplateHubCopy(

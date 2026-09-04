@@ -1,13 +1,15 @@
 import { officialUseCases, type OfficialUseCase } from "@/data/official-use-cases";
-import type { Locale } from "./types";
+import type { ChineseLocale, Locale } from "./types";
 
 export type OfficialI18n = {
   title: string;
   role: string;
-  guide?: { owns: string; connect: string; startWith: string };
+  guide?: { owns: string; connect: string; startWith?: string };
 };
 
-const officialCopy: Record<Exclude<Locale, "en">, Record<string, OfficialI18n>> = {
+type OfficialCopyLocale = ChineseLocale | "ja";
+
+const officialCopy: Record<OfficialCopyLocale, Record<string, OfficialI18n>> = {
   "zh-Hant": {
     "chief-of-staff": {
       title: "幕僚長",
@@ -575,11 +577,269 @@ const officialCopy: Record<Exclude<Locale, "en">, Record<string, OfficialI18n>> 
       role: "在最佳选项过期前先留住。依你的规则比较航班与酒店，预订前先确认，再交出行程与日历。",
     },
   },
+  ja: {
+    "chief-of-staff": {
+      title: "Chief of Staff",
+      role: "いつでも動けるアシスタントです。Slack、メール、カレンダー、会議メモを見て、新しいことと優先事項に合うことを短くまとめます。それぞれに出典、重要性、次の一手が付きます。",
+      guide: {
+        owns: "何が変わったか、何に注意が必要かを、出典付きでまとめたダイジェスト。",
+        connect: "Slack、メール、カレンダー、会議メモ、計画文書。",
+      },
+    },
+    "daily-briefing-writer": {
+      title: "Daily Briefing Writer",
+      role: "ノイズではなく、質の高い情報で一日を始められます。あなたに本当に関係する話だけを、引き締めた毎日のブリーフにします。",
+    },
+    "executive-assistant": {
+      title: "Executive Assistant",
+      role: "すべてのチャンネルに張り付かなくても、状況がわかります。朝のブリーフを届け、新しい部屋に入ったときは追い付き用の要約も自動で足します。スレッドに入った直後でも迷いません。",
+    },
+    "inbox-manager": {
+      title: "Inbox Manager",
+      role: "メールを使える状態に保ちます。受信箱をはっきりした分類に分け、緊急と止まっているスレッドを出し、返信と整理の下書きを作ります。送信は毎回あなたの承認が必要です。",
+    },
+    "presentation-designer": {
+      title: "Presentation Designer",
+      role: "白紙のスライドから始めなくても、ブランドに合う資料ができます。マスターテンプレートとブランドの決まりを使い、直して話せる編集可能なリンクを渡します。",
+    },
+    "status-report-writer": {
+      title: "Status Report Writer",
+      role: "未完了を逃さないようにします。文書、会議、Slack から残件を集め、生きた一覧と朝の要約にします。",
+    },
+    "account-research-specialist": {
+      title: "Account Research Specialist",
+      role: "触る前に顧客を階層分けします。Salesforce とリアルタイムの信号を取り、適性と温度を採点し、顧客ごとに共有できる調査パックを作ります。",
+    },
+    "crm-operations-manager": {
+      title: "CRM Operations Manager",
+      role: "パイプラインをきれいに保ちます。会議の前後で CRM と組織図の手入れをし、手作業の通し確認なしでも記録が新しく残ります。",
+    },
+    "deal-desk-coordinator": {
+      title: "Deal Desk Coordinator",
+      role: "過去のメール、Salesforce、通話から、文脈のある社内向け成約メモを下書きします。あなたが承認したあと、Salesforce に入れます。",
+    },
+    "deck-updater": {
+      title: "Deck Updater",
+      role: "会議室を出るころには、スライドが動き始めています。通話の途中または直後に、ヒアリングメモから資料を更新し、次の一歩も入れます。",
+    },
+    "meeting-prep-buddy": {
+      title: "Meeting Prep Buddy",
+      role: "どの会議にも準備して入れます。カレンダー、メモ、CRM、Gong、Slack から準備パックを作ります。誰がいるか、前回の接触、未完のスレッド、提案議題です。",
+    },
+    "pipeline-analyst": {
+      title: "Pipeline Analyst",
+      role: "パイプラインを見るとき、画面はすでにきれいです。Salesforce とシートを整え、停滞とコミットリスクに印を付け、月曜のスコアボードを置きます。",
+    },
+    "prospecting-plan-builder": {
+      title: "Prospecting Plan Builder",
+      role: "今週やる一覧を作ります。連絡先を足し、メールと携帯を補い、すぐ動ける追跡表を書いて、アウトバウンドが名簿から始まるようにします。",
+    },
+    "renewal-desk-operator": {
+      title: "Renewal Desk Operator",
+      role: "どの更新にも、すでに把握した状態で入れます。利用量、チケット、Gong、CRM から顧客ごとに90日パックを作り、取引メモを下書きし、条件が止まったときだけ法務を促します。",
+    },
+    "sales-call-coach": {
+      title: "Sales Call Coach",
+      role: "どの通話のあとにも、次にやる項目が残ります。Gong の通話を見直し、ヒアリング、異議、経営層への立ち居振る舞いに時刻付きの助言と、通話スコアを残します。",
+    },
+    "sales-outbound": {
+      title: "Sales Outbound",
+      role: "調査とアウトバウンドを任せられます。夜間に顧客を調べ、関心で連絡先を採点し、あなたの声でメールと LinkedIn を下書きし、承認用の確認リストを残します。",
+      guide: {
+        owns: "顧客調査、連絡先の優先付け、確認できるアウトバウンド。",
+        connect: "CRM、製品の関心ソース、会社サイト、メール、利用規約で許された範囲の職業ネットワーク。",
+      },
+    },
+    "community-operations-manager": {
+      title: "Community Operations Manager",
+      role: "アンバサダーの循環を止めません。応募を見て、各チャネルの DM を分け、育成の下書きをリズムで作ります。コミュニティを一日中追いかける必要はありません。",
+    },
+    "compelling-events-monitor": {
+      title: "Compelling Events Monitor",
+      role: "本当に理由があるときだけ関わります。経営層の投稿から受賞、公開、採用の信号を見、コメントや引用リポスト用に、あなたの声で短いダイジェストを送ります。",
+    },
+    "competitive-intelligence-analyst": {
+      title: "Competitive Intelligence Analyst",
+      role: "意味のある景色の変化が見えます。夜間に新しい公開を追い、疲れたクリエイティブと古いメッセージをサイトで点検します。勢いが出た重要な変化だけを出し、あなたが直す案を示します。",
+    },
+    "event-guest-screener": {
+      title: "Event Guest Screener",
+      role: "部屋を適切な人で満たします。イベント応募を ICP に照らして採点し、合う人を招待ツールでまとめて承認します。",
+    },
+    "internal-communications-manager": {
+      title: "Internal Communications Manager",
+      role: "実際の文脈から、相手とチャネルに合わせた、声の通る文を下書きします。確認専用で、勝手には送りません。",
+    },
+    "linkedin-campaign-manager": {
+      title: "LinkedIn Campaign Manager",
+      role: "広告、フォーム、フォロー、UTM まで、リード獲得の流れを揃えます。承認用にキャンペーンを下書きし、オファーと引き渡しをきれいに保ちます。",
+    },
+    "marketing-calendar-owner": {
+      title: "Marketing Calendar Owner",
+      role: "地域と全体のコンテンツ、公開、イベントのカレンダーを揃えます。Notion から取り、ウェビナーとキャンペーンを、毎週追いかけなくても新しく保ちます。",
+    },
+    "merch-fulfillment-operator": {
+      title: "Merch Fulfillment Operator",
+      role: "適切な見込み客にグッズを届けます。案内を回し、引き換えフォームを見、チャットで承認や却下をあなたに尋ね、ベンダーへ毎日の発注表を送り、いつどこへ出すかを知らせます。",
+    },
+    "newsletter-writer": {
+      title: "Newsletter Writer",
+      role: "毎月のマーケと製品の更新を、遅れずに出せます。公開、成果、カレンダーから新しいことを取り、あなたの声で号を書き、確認待ちに置きます。マーケは一度直して送れます。",
+    },
+    "paid-media": {
+      title: "Paid Media",
+      role: "チャネルとキャンペーンの現データを取り、月次予算に対する再配分案を Slack し、調整の前にあなたの承認を待ちます。",
+      guide: {
+        owns: "キャンペーン監視と予算の提案。",
+        connect: "広告プラットフォーム、分析、予算スプレッドシート、Slack。",
+      },
+    },
+    "paid-media-creative-strategist": {
+      title: "Paid Media Creative Strategist",
+      role: "クリエイティブの勝ち筋を、はっきりする前に見つけます。なぜ効くかの鋭い仮説を書き、次のテストを提案します。数字の捏造はありません。",
+    },
+    "seo-aeo-auditor": {
+      title: "SEO / AEO Auditor",
+      role: "キーワード、技術、AI プロンプト、競合の動きを一箇所で追います。伸びているか失っているか、直すべきサイトの問題、動ける改善案を返します。",
+    },
+    "social-media-manager": {
+      title: "Social Media Manager",
+      role: "下書き画面を見続けなくても、あなたの声で投稿できます。実際の履歴を学び、注目すべき公開があったときに下書きし、あなたが公開するまで置き、待ち行列を動かします。",
+    },
+    "account-health": {
+      title: "Account Health",
+      role: "QBR の前に、リスクと拡大が見えます。担当全体の利用と信号を読み、ノイズをはっきりした観察リストにします。",
+      guide: {
+        owns: "顧客ポートフォリオ全体の、リスクと拡大の信号。",
+        connect: "CRM、製品利用、サポート、請求、カスタマー成功のメモ。",
+      },
+    },
+    "account-manager": {
+      title: "Account Manager",
+      role: "毎回文脈を作り直さなくても、重点顧客の温度を保てます。逐語録、メモ、CRM、Slack から毎回の通話を準備し、フォローを下書きし、次の一歩を新しく保ちます。",
+    },
+    "enablement-fulfillment-specialist": {
+      title: "Enablement Fulfillment Specialist",
+      role: "「録画を送って」に、探さなくても答えられます。Zoom 素材を見つけ、1枚の要約を作り、Drive に上げ、リンク付きの返信を下書きします。",
+    },
+    "ticket-triage-specialist": {
+      title: "Ticket Triage Specialist",
+      role: "待ち行列を見続けなくても、片付けられます。サポートを定期的に見守り、返信の下書きだけ作り、問題がなければ黙っています。",
+    },
+    "calendar-coordinator": {
+      title: "Calendar Coordinator",
+      role: "人を同じ部屋に入れます。カレンダーをまたいで予定を組み、誰も追う時間がない仮押さえを追います。",
+    },
+    "hiring-screener": {
+      title: "Hiring Screener",
+      role: "山全部ではなく、強い人だけを面接できます。決めた基準で応募や作品を採点し、ATS に入れられる確認結果を渡します。",
+    },
+    "onboarding-manager": {
+      title: "Onboarding Manager",
+      role: "新しい人に、リンクの山ではなく道を渡します。チェックリストを作り、適切な文書を取り、初日の問いに答え、詰まりを外せる人へ各依頼を回します。",
+    },
+    "talent-scout": {
+      title: "Talent Scout",
+      role: "あなたが寝ているあいだも、採用は進みます。選考から内定まで回します。候補を探し、あなたの声で案内を下書きし、すでに ATS にいる人は飛ばし、承認後に日程を用意します。",
+      guide: {
+        owns: "候補探し、候補調査、案内の下書き、日程の準備。",
+        connect: "ATS、承認済みの候補探しツール、メール、カレンダー。",
+      },
+    },
+    "contract-desk": {
+      title: "Contract Desk",
+      role: "今週の契約を一目で見られます。段階と担当者ごとに要約し、重要条項を取り、止まっている確認に印を付けます。",
+    },
+    "expense-manager": {
+      title: "Expense Manager",
+      role: "お金の流れを見失いません。経費システムとシートから週次要約を作り、メールの新しい領収書を記し、確認前に足りない分類を担当者へ促します。",
+      guide: {
+        owns: "週次の経費突合と、足りない情報の催促。",
+        connect: "経費システム、メール、共有ドライブ、財務スプレッドシート。",
+      },
+    },
+    "invoice-coordinator": {
+      title: "Invoice Coordinator",
+      role: "請求書が溜まらないようにします。転送し、合うものは突き合わせ、キャンパスやベンダーの実数を追い、人が必要なときだけ担当者を促します。",
+    },
+    "security-questionnaire-filler": {
+      title: "Security Questionnaire Filler",
+      role: "ベンダーのセキュリティポータルを速く進めます。質問サイトに入り、トラストセンターと過去の RFP から答えを取り、各欄を下書きし、送信はあなた待ちに置きます。",
+    },
+    "vendor-portal-operator": {
+      title: "Vendor Portal Operator",
+      role: "きれいな API がないポータルで、更新、席数、調達を回します。毎週同じ道を辿り、例外だけ持ち帰ります。",
+    },
+    "beta-adoption-watcher": {
+      title: "Beta Adoption Watcher",
+      role: "新しい機能を本当に試している人が見えます。利用を見守り、どの顧客が入ったかを出し、チームが後から追えるようにします。",
+    },
+    "call-faq-miner": {
+      title: "Call FAQ Miner",
+      role: "実際の通話から、支援資料を新しく保ちます。質問を追い、答えに時刻を付け、元の録画へ戻します。",
+    },
+    "docs-auditor": {
+      title: "Docs Auditor",
+      role: "製品とずれた文書を見つけます。ヘルプセンターと内部メモを、先週公開した内容と比べ、古いページに印を付け、書き換えを下書きします。",
+    },
+    "feature-request-tracker": {
+      title: "Feature Request Tracker",
+      role: "「誰がこれを頼んだか」を失いません。Slack と通話から要望を掘り、顧客に紐づく生きた一覧にし、仕様に本物の需要の軌跡が残るようにします。",
+    },
+    "product-feedback-analyst": {
+      title: "Product Feedback Analyst",
+      role: "散らばった製品信号を、優先付きの見取り図にします。つながった出典からフィードバックを集め束ね、根拠と緊急度を量り、振り分け案を承認用に下書きします。",
+    },
+    "bug-reproduction": {
+      title: "Bug Reproduction",
+      role: "エンジニアが信じられる報告を渡せます。スレッドを受け、ステージングで同じ道を辿り、失敗を捉え、再現パック（手順、画面、ネットワークメモ）を置きます。",
+      guide: {
+        owns: "報告を、信頼できる再現パックにすること。",
+        connect: "課題トラッカー、ステージング環境、ブラウザ、ネットワークツール。",
+      },
+    },
+    "cloud-agent-orchestrator": {
+      title: "Cloud Agent Orchestrator",
+      role: "多くのクラウド agent の実行を、一つずつ見守らなくても進めます。実行を始め、見守り、止まったものを促し、報告を要約します。",
+    },
+    "playtest-operator": {
+      title: "Playtest Operator",
+      role: "API だけでは足りないとき、製品の道を力技で試します。パソコン上で UI を操作し、失敗を捉え、引き締めた発見パックを返します。",
+    },
+    "product-performance": {
+      title: "Product Performance",
+      role: "本当に大切な指標がはっきり見えます。可観測ツールに入り、フレームグラフを辿り、ホットスポットと画面付きの短い説明を持ち帰ります。",
+      guide: {
+        owns: "根拠付きの、狙いを定めた性能調査。",
+        connect: "可観測性、分析、インシデントツール、ソース管理のリンク。",
+      },
+    },
+    "prototype-builder": {
+      title: "Prototype Builder",
+      role: "依頼から、すぐクリックできるものまで速く進めます。自分のパソコンで書き、画面と公開 URL を持ち帰ります。",
+    },
+    "apartment-scout": {
+      title: "Apartment Scout",
+      role: "条件に合う部屋が市場に出たら、内見を予約します。物件を絞り、内見のメールを送り、あなたが選んだものに申し込みます。",
+    },
+    "personal-site-builder": {
+      title: "Personal Site Builder",
+      role: "説明から個人サイトの骨組みを作り、ドメインの問題をほどき、公開済みの出発点を残します。",
+    },
+    "subscription-cleaner": {
+      title: "Subscription Cleaner",
+      role: "忘れていたノイズを減らします。領収書とメルマガをまとめ、止める候補を出し、あなたが承認したものの配信停止を実行します。",
+    },
+    "travel-coordinator": {
+      title: "Travel Coordinator",
+      role: "良い選択肢が切れる前に押さえます。あなたのルールで便とホテルを比べ、予約前に確認し、旅程とカレンダーを渡します。",
+    },
+  },
 };
 
 const guideSlugs = officialUseCases.filter((item) => item.guide).map((item) => item.slug);
 
-for (const locale of ["zh-Hant", "zh-Hans"] as const) {
+for (const locale of ["zh-Hant", "zh-Hans", "ja"] as const) {
   const table = officialCopy[locale];
   for (const item of officialUseCases) {
     const row = table[item.slug];
@@ -591,6 +851,12 @@ for (const locale of ["zh-Hant", "zh-Hans"] as const) {
     }
     if (!item.guide && row.guide) {
       throw new Error(`Unexpected ${locale} guide for ${item.slug}`);
+    }
+    if (locale === "ja" && row.title !== item.title) {
+      throw new Error(`ja official role title must stay original: ${item.slug}`);
+    }
+    if (locale === "ja" && row.guide?.startWith) {
+      throw new Error(`ja must not replace the official first task: ${item.slug}`);
     }
   }
   if (Object.keys(table).length !== officialUseCases.length) {
@@ -608,10 +874,21 @@ export function localizeOfficial(item: OfficialUseCase, locale: Locale): Officia
   if (locale === "en") return item;
   const localized = officialCopy[locale][item.slug];
   if (!localized) return item;
+  const keepOfficialTask = locale === "ja";
+  const guide = item.guide && localized.guide
+    ? {
+        owns: localized.guide.owns,
+        connect: localized.guide.connect,
+        startWith: keepOfficialTask
+          ? item.guide.startWith
+          : (localized.guide.startWith ?? item.guide.startWith),
+      }
+    : item.guide;
   return {
-    ...item,
-    title: localized.title,
+    slug: item.slug,
+    title: keepOfficialTask ? item.title : localized.title,
+    category: item.category,
     role: localized.role,
-    ...(localized.guide ? { guide: localized.guide } : {}),
+    ...(guide ? { guide } : {}),
   };
 }

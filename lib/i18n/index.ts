@@ -1,8 +1,9 @@
 export { LocaleProvider, useI18n } from "./locale";
 export { messages } from "./messages";
-export { locales, localeLabels, type Locale } from "./types";
+export { locales, localeLabels, type ChineseLocale, type Locale } from "./types";
 export {
   URL_LOCALES,
+  URL_LOCALE_PATTERN,
   DEFAULT_URL_LOCALE,
   LOCALE_COOKIE,
   urlToLocale,

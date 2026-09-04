@@ -7,6 +7,7 @@ import {
   DEFAULT_URL_LOCALE,
   LOCALE_COOKIE,
   absoluteUrl,
+  htmlLang,
   localeToUrl,
   urlLocaleFromPath,
   urlToLocale,
@@ -53,7 +54,7 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const locale = urlToLocale[urlLocale];
 
   useEffect(() => {
-    document.documentElement.lang = urlLocale === "en" ? "en" : urlLocale === "zh-hk" ? "zh-HK" : "zh-CN";
+    document.documentElement.lang = htmlLang[urlLocale];
     document.cookie = `${LOCALE_COOKIE}=${urlLocale}; path=/; max-age=31536000; samesite=lax`;
     window.localStorage.setItem(STORAGE_KEY, locale);
   }, [locale, urlLocale]);

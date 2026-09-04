@@ -16,7 +16,7 @@ const PATHS = [
   "/discover/grok-bot-launch-bot",
 ];
 
-const LOCALES = ["en", "zh-hk", "zh-cn"];
+const LOCALES = ["en", "zh-hk", "zh-cn", "ja"];
 
 function urlFor(path, locale) {
   if (path === "/") return `https://${HOST}/${locale}`;

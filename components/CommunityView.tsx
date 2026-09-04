@@ -140,6 +140,22 @@ function communityCopy(locale: string) {
       cases: "个案例",
     };
   }
+  if (locale === "ja") {
+    return {
+      title: "UseGrokBot コミュニティ",
+      body: "実際の Grok Bot 例を共有する人と、UseGrokBot を支えるオープンソースの貢献者を紹介します。",
+      submit: "あなたの Grok Bot を追加",
+      builders: "コミュニティの作り手",
+      buildersBody: "UseGrokBot を支えるオープンソースの貢献者。",
+      github: "GitHub で見る",
+      contributions: "件の貢献",
+      buildersFallback: "貢献者のデータを読み込めません。GitHub のリポジトリは閲覧できます。",
+      zoo: "厳選した共有者",
+      zooBody: "公開例の数から厳選。カードから作者の X プロフィールを開けます。",
+      case: "件の例",
+      cases: "件の例",
+    };
+  }
   return {
     title: "UseGrokBot Community",
     body: "Meet the people behind real Grok Bot examples and the open-source builders improving UseGrokBot. This page keeps the list short and useful.",

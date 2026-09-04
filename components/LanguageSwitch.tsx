@@ -10,6 +10,7 @@ const menuLocaleLabels: Record<Locale, string> = {
   "zh-Hant": "繁體",
   "zh-Hans": "简体",
   en: "English",
+  ja: "日本語",
 };
 
 export function LanguageSwitch({

@@ -74,6 +74,13 @@ function grokBotCopy(locale: string) {
       desktopAria: "打开 Grok Bot 官方电脑版登录及下载页",
     };
   }
+  if (locale === "ja") {
+    return {
+      label: "Grok Bot アプリ",
+      iosAria: "Grok Bot の iPhone アプリを開くかインストールする",
+      desktopAria: "Grok Bot 公式のパソコン版初期設定とダウンロードページを開く",
+    };
+  }
   return {
     label: "Grok Bot app",
     iosAria: "Open or install the Grok Bot iPhone app",

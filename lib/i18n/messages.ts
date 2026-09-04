@@ -1,4 +1,5 @@
 import type { Locale } from "./types";
+import { jaMessages } from "./messages-ja";
 
 export const messages = {
   en: {
@@ -1419,6 +1420,7 @@ export const messages = {
       send: "提交场景 →",
     },
   },
+  ja: jaMessages,
 } as const;
 
 export type Messages = (typeof messages)[Locale];

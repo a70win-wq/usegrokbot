@@ -208,6 +208,13 @@ function identityCopy(locale: string) {
       placeholderName: "你的 Grok Bot",
     };
   }
+  if (locale === "ja") {
+    return {
+      title: "あなたの UseGrokBot の姿",
+      body: "X の URL を貼ると、コミュニティ用の Blob がすぐに現れます。同じ handle なら、いつも同じ姿です。",
+      placeholderName: "あなたの Grok Bot",
+    };
+  }
   return {
     title: "Your UseGrokBot identity",
     body: "Paste an X URL to reveal your community Blob. Same handle, same creature every time.",

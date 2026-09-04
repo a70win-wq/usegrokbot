@@ -14,12 +14,15 @@ const sourceUrls: string[] = [];
 const categoryCounts = new Map<string, number>();
 const englishOutcomes = botTeams.map((team) => localizeBotTeam(team, "en").outcome);
 const traditionalChineseOutcomes = botTeams.map((team) => localizeBotTeam(team, "zh-Hant").outcome);
+const japaneseOutcomes = botTeams.map((team) => localizeBotTeam(team, "ja").outcome);
 
 assert.equal(new Set(teamSlugs).size, teamSlugs.length, "Bot Team slugs must be unique");
 assert.equal(new Set(sourceSlugs).size, sourceSlugs.length, "Each source post should map to one Bot Team");
 assert.equal(new Set(englishOutcomes).size, botTeams.length, "English outcomes must be unique");
 assert.equal(new Set(traditionalChineseOutcomes).size, botTeams.length, "Chinese outcomes must be unique");
+assert.equal(new Set(japaneseOutcomes).size, botTeams.length, "Japanese outcomes must be unique");
 assert.ok(traditionalChineseOutcomes.every((outcome) => !outcome.includes("工作")), "Chinese outcomes must describe what each Bot helps with");
+assert.ok(japaneseOutcomes.every((outcome) => !outcome.includes("仕事")), "Japanese outcomes must describe what each Bot helps with");
 assert.equal(verifiedBotTeamPostCount, sourceSlugs.length, "The verified source count must match the source map");
 assert.deepEqual(
   botTeams.map((team) => team.rank),
@@ -34,16 +37,22 @@ for (const team of botTeams) {
   assert.ok(team.exampleSlugs.length > 0, `${team.slug} needs at least one source post`);
   assert.ok(team.templateIds.length > 0, `${team.slug} needs at least one real Template`);
 
-  for (const locale of ["en", "zh-Hant", "zh-Hans"] as const) {
+  for (const locale of ["en", "zh-Hant", "zh-Hans", "ja"] as const) {
     const actions = localizeBotTeam(team, locale).roles.map((role) => role.action);
     assert.equal(
       new Set(actions).size,
       actions.length,
       `${team.slug} repeats a role explanation in ${locale}`,
     );
-    if (locale !== "en") {
+    if (locale === "zh-Hant" || locale === "zh-Hans") {
       assert.ok(
         actions.every((action) => !action.includes("工作")),
+        `${team.slug} must describe what each Bot helps with in ${locale}`,
+      );
+    }
+    if (locale === "ja") {
+      assert.ok(
+        actions.every((action) => !action.includes("仕事")),
         `${team.slug} must describe what each Bot helps with in ${locale}`,
       );
     }

@@ -1,0 +1,1112 @@
+{
+  "sQDD87Gp6VLT0m99tFpzu": {
+    "title": "1000x Product Engineer",
+    "oneLiner": "Convex、TanStack、React のアプリを、公開まで仕上げるフルスタックの製品エンジニアです。",
+    "body": "ウェブアプリをゼロから全層まで公開します。画面にも品位があり、仮組みには見えません。"
+  },
+  "oq-mYZXM23ShlY7UbJWeB": {
+    "title": "AI Harness Assistant",
+    "oneLiner": "手元の AI コーディングツールを、どれも最新のままに保ちます。",
+    "body": "Codex、Claude Code、Cursor、OpenCode などを予定どおり更新します。何世代も遅れたことに、あとから気づく必要はありません。"
+  },
+  "-kSMWtBCorQFkgUhm0DLk": {
+    "title": "AI Orchestrator (JP)",
+    "oneLiner": "日本語で依頼を受け、専門 Bot に一件ずつ振り分ける司令です。",
+    "body": "担当は一件ずつ決め、部署を整え、定期確認と共有メモリも見ます。投稿や破壊的な変更は、持ち主の許可を待ちます。"
+  },
+  "3XvYxSCGJRY6x1woq-hdL": {
+    "title": "AI Resource Sift",
+    "oneLiner": "論文、コード、講義、掲示板を一つの読み物にまとめます。",
+    "body": "AI のテーマを一つ指定すると、論文、GitHub、講義、講座、掲示板、各研究所の文書まで見て、検索ページではなく選別済みの山を返します。"
+  },
+  "2atUDeldi9vF1R_ySRgCo": {
+    "title": "AI Usage Meter",
+    "oneLiner": "各 AI サブスクを、実際にどれだけ使ったか追います。",
+    "body": "監視する契約と使用量の場所を教えると、残量が減ったときに知らせます。月末を過ぎてから気づくことはありません。"
+  },
+  "wOvqAFpr3o8VB3g4Tmpxr": {
+    "title": "AIO Specialist (AEO/GEO)",
+    "oneLiner": "AI Overviews と回答エンジン最適化を、一度きりではなく続けます。",
+    "body": "チャットボットが今日あなたをどう言うかをたまに見るのではなく、回答エンジンと生成エンジンの最適化を継続案件として回します。"
+  },
+  "KZ9xav0Qad1U5QigEn7rh": {
+    "title": "Alfred (Bot Chief Advisor)",
+    "oneLiner": "手元の Bot 編成を設計し、変化に合わせて組み直します。",
+    "body": "もう一人のアシスタントを足すのではなく、いまある一式を点検し、必要が変われば Bot をやめたり足したりします。"
+  },
+  "0VC1XzREXRFGe0hVo-JEG": {
+    "title": "Be Happier",
+    "oneLiner": "毎週、いまの生活を少し楽しくする具体案を三つ出します。",
+    "body": "メールと予定表を読んだうえで、いまの暮らしへの調整を提案します。習慣は足さないので、二週目でも続けられます。"
+  },
+  "Do4CujP_kqnnc1KYnpOfI": {
+    "title": "Best Video Editor",
+    "oneLiner": "素材から編集方針を決め、確認できる完成版を返します。",
+    "body": "まず方針を見極め、カット、音、タイトル、テンポまで整えます。手元に来るのは確認用の一本であり、切ったファイルの山ではありません。"
+  },
+  "BAbHIps4VA0Hr4GLIOJme": {
+    "title": "Blair (Personal Shopper)",
+    "oneLiner": "欲しいデザイナー品の中古を探し、必要なら購入まで進めます。",
+    "body": "具体的な一点を伝えると探しに行きます。定価の新品より、中古や静かな贅沢を優先します。"
+  },
+  "tII28kVM4dxPvzSLjwqko": {
+    "title": "Bodyguard",
+    "oneLiner": "届いた依頼を、あなたの時間に値するかで分けます。",
+    "body": "来るものを「返信する価値あり」「あとで」「たぶん無視」に分けます。代わりに返信はしません。仕分けそのものが役割です。"
+  },
+  "gCWYD009F66A3XDEYdZgf": {
+    "title": "Bounty Hunter",
+    "oneLiner": "メールと請求から、取りに行っていない返金やクレジットを見つけます。",
+    "body": "もともとあなたの分なのに未請求のものを探します。見逃した返金、忘れたクレジット、過請求、追いかけていない未収です。"
+  },
+  "YihRBqrXaDwRdjN79Uofl": {
+    "title": "Canvas",
+    "oneLiner": "Canvas から大学の科目と締切を取り出します。",
+    "body": "ブラウザで大学ポータルに入り、科目と締切を読みます。学生アカウントのセッションを持つ点に注意してください。課題は一緒に進めるだけで、代わりにはやりません。"
+  },
+  "3U6zxtPa1b8GbWheaIr4J": {
+    "title": "Chef",
+    "oneLiner": "一週間の食事を決め、買い物リストを作り、食材を注文します。",
+    "body": "流行より旬の地元レシピを使い、計画を買い物リストにしてオンラインで注文します。"
+  },
+  "7f5AjmpjZkmTIsSybedYS": {
+    "title": "Chicken Joe (Surf Report)",
+    "oneLiner": "毎朝、北カリフォルニアのサーフレポートとカメラを見て、行く場所を伝えます。",
+    "body": "起きる前に Marin County から Santa Cruz までのポイントを見ます。答えは一つのメッセージで、タブを九個開く必要はありません。"
+  },
+  "GiBPBQR2WrHNul4k9Tz6Q": {
+    "title": "Chieeeeefy (Chief of Staff)",
+    "oneLiner": "現場エンジニア向けの参謀です。予定表と業務の受信箱を先に見ます。",
+    "body": "何より先に予定表と業務の受信箱を読み、予定をいまいる時間帯に直します。注意を守るための設計であり、山を増やすためではありません。"
+  },
+  "JugVUSPe_wSZg-in69owM": {
+    "title": "Chief (Router)",
+    "oneLiner": "一件につき担当を一人決め、それ以外には口を出さない振り分け役です。",
+    "body": "自分では処理しません。担当 Bot を一人決めたら静かになり、完了・停滞・あなただけが決められるときだけ知らせます。"
+  },
+  "XjQ-AZTMrGLmQOTeMu3LF": {
+    "title": "Chief of Staff (Aryaman)",
+    "oneLiner": "机、Slack、受信箱、予定表をまたぐ、静かな参謀です。",
+    "body": "出すのは三つだけです。新しい成果、新しい失敗、本当に判断が必要なことです。メール案は書きますが、代わりには送りません。"
+  },
+  "d8OshqLZvtcKDcNluPuyo": {
+    "title": "Chief of Staff (Avid)",
+    "oneLiner": "一日と会社を、同じ机で同時に回す参謀です。",
+    "body": "一つの会話で両方を見ます。動き出す前に、あなたが誰で会社が何かを確定し、文脈から推測しません。"
+  },
+  "6sF7_MwHMcWgWwq0Z6Xes": {
+    "title": "Clark Kent (Daily Diary)",
+    "oneLiner": "店でその日に実際に起きたことを、そのまま書きます。",
+    "body": "その日の動きを見守り、平易な言葉で残します。予定どおりの部分だけでなく、失敗や飛ばした手順にも気づきます。"
+  },
+  "Vk0cnF2c364QxNv-Xip1M": {
+    "title": "Clip Bot",
+    "oneLiner": "どの YouTube ポッドキャストからも、字幕つき 16:9 の見どころを切ります。",
+    "body": "カラオケ風字幕と出典カードつきの、投稿向けクリップを作り、クラウドではなくパソコンへ直接置きます。"
+  },
+  "ozEfaAFJMDGoB-ysym8_V": {
+    "title": "Clipper",
+    "oneLiner": "動画から短尺と字幕つき GIF を作り、笑いの瞬間も自分で選びます。",
+    "body": "X や自分のファイルを見て、本当の一瞬を判断し、話す GIF に字幕をつけ、出力を分類して保存します。一つのフォルダに放り込みません。"
+  },
+  "h4suD8jA37Wsb7tS4giUO": {
+    "title": "Cold Open",
+    "oneLiner": "アイデアをシットコム風の短編にし、先に脚本を書きます。",
+    "body": "脚本を書いて許可を待ってから生成します。却下する前提に、テキスト動画の予算を使いません。"
+  },
+  "5PKSzU0ruN_DQbNXc7m0N": {
+    "title": "Competitor Watching",
+    "oneLiner": "あなたと競合 3〜8 社のスナップを取り、実質的な変化のときだけ知らせます。",
+    "body": "毎週、価格、更新履歴、機能、求人、言い回しを見ます。本当に動いていなければ黙るので、通知が来たときは意味があります。"
+  },
+  "__sNWxlx-8H08UluQuOeo": {
+    "title": "Contra Job Scraper",
+    "oneLiner": "6時間ごとに Contra のフリーランス情報を見、変化のときだけメールします。",
+    "body": "掲載を Notion に残し、古い手がかりも見直します。届くのは新規と閉じた手がかりであり、同じ掲示板の再印刷ではありません。"
+  },
+  "Rm6VqcE8cOWXwotPth9qM": {
+    "title": "Cost-Smart Health Brief",
+    "oneLiner": "健康の質問一つを、三分のブリーフにまとめます。",
+    "body": "証拠が実際に示すこと、より安い治療の選択肢、読むのをやめて医師に会うべき地点までカバーします。"
+  },
+  "D831qeIZ5QrobdVh-X79U": {
+    "title": "Credit Card Max",
+    "oneLiner": "その支払いにはどのカードが、ポイントと特典を一番伸ばすか伝えます。",
+    "body": "持っているカードを追い、払っているのに使っていない特典を示し、違うカードに乗っている定期課金も見つけます。"
+  },
+  "z4r7D8iILsTQDf7r7DwKR": {
+    "title": "Cursor Agent (Local)",
+    "oneLiner": "実験や現場向けに、cursor-agent CLI を手元で動かします。",
+    "body": "設計上、手元だけです。手を動かす作業は自分のノートに残し、GitHub PR で終わるものはクラウド agent が既定です。"
+  },
+  "dug1Zq29P009fdcI5-tTC": {
+    "title": "Daily YouTube Recap",
+    "oneLiner": "朝に、フォロー中の YouTube チャンネルをまとめます。更新がなければ黙ります。",
+    "body": "説明文ではなく実際の文字起こしを使います。投稿がない日は何も言わないので、毎日続けられます。"
+  },
+  "Bu2sEQqu0hEjpbzN_07D3": {
+    "title": "Data Science (Querie)",
+    "oneLiner": "分析クエリ、表の取り出し、指標の定義を担当します。",
+    "body": "データの質問は一つの Bot に任せ、ほかはそこに回します。同じ指標を各自が即興で定義しません。"
+  },
+  "MGiEdMz0TNxBkvMgUZAbf": {
+    "title": "Deal Hunting",
+    "oneLiner": "送料と税まで入れた、実際の支払い額で買い物を比べます。",
+    "body": "好みの店で本当に払う額を比べ、任意のウォッチリストも持てます。頼まない限り買いません。"
+  },
+  "KlcxAG1I8cMQoqS_8Hrdn": {
+    "title": "DeckLens (Pitch Deck Analyzer)",
+    "oneLiner": "先にインタビューで採点基準を作り、その基準でピッチ資料を採点します。",
+    "body": "十問で、あなたの実際の好みを編集できる基準にします。以降の資料は汎用尺度ではなく、その基準で採点します。"
+  },
+  "izE8-5f78ykATd43I5ROC": {
+    "title": "Disney Ride Strategist",
+    "oneLiner": "乗りたいアトラクションに合わせて、Walt Disney World の日別計画を作ります。",
+    "body": "出発前に待ち時間を取り、実際のパーク日、Early Entry の有無、外せないアトラクションで組みます。"
+  },
+  "YkmZEZYBk-BqylyQbM3kq": {
+    "title": "Dispatch",
+    "oneLiner": "毎晩、メール、Slack、LinkedIn、X の DM を見て、欠けている通話を入れます。",
+    "body": "通話に合意したのに招待がないときは予定を作ります。「いいよ」が、予定なしで消える隙間を埋めます。"
+  },
+  "93gOz3op1UQdBdbekQFLK": {
+    "title": "Dr Eggbot",
+    "oneLiner": "ほかの Grok Bot を、あなたのために作る Bot です。",
+    "body": "好みをいくつか聞いてから、空ではなく構造のある Bot を作ります。コーディング用は、作者の技術の決まりも入ります。"
+  },
+  "rBnJhXhks-_7n1zhZCN3E": {
+    "title": "Examiner",
+    "oneLiner": "壊れたとき、直前に何が変わったかを示します。",
+    "body": "本当に重要な変更の時間軸を保ちます。障害の起点は、その前後数時間の事実であり、記憶ではありません。"
+  },
+  "FReKiR82_-lF359lhshpR": {
+    "title": "Fenrir (Paper Trading)",
+    "oneLiner": "NSE または NASDAQ で、ペーパー取引の大会を回します。",
+    "body": "競う戦略をライブ相場に対して大会にします。取引所に合わせて時計、通貨、対象も切り替えます。"
+  },
+  "CEtFUY1_kkn78AJSNINHI": {
+    "title": "Fixer (Liam)",
+    "oneLiner": "先延ばしにしている事務を渡すと、ほぼそこまで進めます。",
+    "body": "返金、解約、覚えのない課金。全体を調べ、あなたが出る直前まで押し進めます。"
+  },
+  "jiF_km66YLNm5LBVJ5_Ho": {
+    "title": "Fixer (Uzi)",
+    "oneLiner": "実際に手を動かす実行役です。計画がおかしいときは押し返します。",
+    "body": "参謀の対になる役割です。調整ではなく実行し、うまくいかないことを機嫌よくはやらず、異論を出します。"
+  },
+  "8dB3XPIA8XIopvQUIC73P": {
+    "title": "Forge (Grokbot Studio)",
+    "oneLiner": "Forge Head を追加すると、ウェブアプリ作成を含むソフトウェアスタジオが立ち上がります。",
+    "body": "Head Bot 一つで、残りの Forge 専門 Bot をアカウントに作ります。App Builder はウェブとモバイル、Frontend UI Developer は画面。マージは人がします。"
+  },
+  "uF_uodOFUz9mdv6XDWE70": {
+    "title": "Forge (Template Foundry)",
+    "oneLiner": "キーワード一つで、すぐ使える Grok Bot のレシピが出ます。",
+    "body": "依頼や役割の説明を渡すと、初回で完成レシピを返します。自分で埋めるアウトラインではありません。"
+  },
+  "UMCdNlqEH7USe3eOznd1U": {
+    "title": "Freelance Prospector",
+    "oneLiner": "フリーランスの募集を見て、あなたの口調で面談を入れます。",
+    "body": "合う投稿を見つけ、あなたが書くような初回連絡をし、返事がなければ追い、通話を入れます。その先はあなたです。"
+  },
+  "YHqn0iTQuvI-8LC01IP6S": {
+    "title": "Frontier Model Watch",
+    "oneLiner": "最先端 AI 研究所 10 社の発表を、確認済みの日次ダイジェストにします。",
+    "body": "xAI、Anthropic、Google、OpenAI、DeepSeek など公式チャンネルを見ます。噂の連続ではなく、確認済みの一通です。"
+  },
+  "oH3eR4YWtsljcz0W4HUBp": {
+    "title": "Gardener",
+    "oneLiner": "証明できる死んだコードを、振る舞いを変えない小さな PR で抜きます。",
+    "body": "対象は証明できるものです。呼び出しがない、または重複。再構成も振る舞い変更もしないので、マージできる大きさです。"
+  },
+  "T5FSfM91XA6gMgh2rX56K": {
+    "title": "Gatekeeper",
+    "oneLiner": "新しい約束をする前に、何を下ろす必要があるかを見せます。",
+    "body": "新しい約束が積み上がる前に、遅れ、中止、黙ってやらないことになるものをはっきりさせます。"
+  },
+  "8vjjlI7z5W0HtpRcFQgJ4": {
+    "title": "George",
+    "oneLiner": "ポスターやスライドと同じ見た目で、ランディングページまで出すデザイン工房です。",
+    "body": "ポスター、スタイルシート、ヒーロー、ランディング、製品ブリーフ、スライドが一つの視覚です。別のチームが作ったようには見えません。"
+  },
+  "tttQVA2UtlNwCzITNCIr0": {
+    "title": "Google Agent",
+    "oneLiner": "Gmail、Drive、Calendar を、読むことを先にする操作役です。",
+    "body": "検索と閲覧は自由です。送信、削除、移動の前には、はっきりした「はい」を待ちます。この非対称が設計です。"
+  },
+  "fkM4b8n4RqZTbrq5fw5L_": {
+    "title": "Grant (General Manager)",
+    "oneLiner": "職人の会社向けの総支配人で、バックオフィスを立ち上げます。",
+    "body": "建設と職人向けです。手配、予約、予定に加え、財務とマーケの助けも置き、現場の会社の事務側に居場所を作ります。"
+  },
+  "luPJeAxuAjhqO97wU3wm0": {
+    "title": "Grimoire's Tome & The Grim Council",
+    "oneLiner": "50 の技能を持つコーディングの魔法使いに、20 人の諮問会議がつきます。",
+    "body": "作るための大きな技能庫と、工学、事業、暮らしの自動化を見る専門の声を束ねます。"
+  },
+  "BrjELcmSwatjRc8DYjtrT": {
+    "title": "Grok Bot Coach",
+    "oneLiner": "いまある Grok Bot を点検し、調整します。",
+    "body": "漠然とした改善ではなく、具体的な用途から始め、接続と常設指示が本当に支えられるかを見ます。"
+  },
+  "DTNL6V2HxpUHj3MkI-bSj": {
+    "title": "Grok Bot Use-Case Scout",
+    "oneLiner": "朝に、セットする価値のある新しい Grok Bot の使い方を短く出します。",
+    "body": "毎朝このディレクトリ自身の agent フィードを読み、最大五件、各出典 URL つきです。取ってきたプロンプトは実行しません。"
+  },
+  "lkkCqhC1jBFp6ouZOQd9m": {
+    "title": "Harvey Specter",
+    "oneLiner": "取引、更新、見積もりで、現実的に一番よい条件を交渉します。",
+    "body": "相手と直接、価格と条件を話します。署名も拘束も、見ていない約束も、代わりにはしません。"
+  },
+  "3mf-UN4mGnCp8DbPBnW5u": {
+    "title": "Home Robots",
+    "oneLiner": "芝刈り機、掃除機、ほかの Matter 家庭ロボットを、一つのチャットで操作します。",
+    "body": "各ロボットは一度つなぎ、あとは一つの Bot に話します。芝、床、そのほかでアプリを使い分けません。"
+  },
+  "Mm_WhYXIjZ3xDNf3s3p91": {
+    "title": "Homework Checker",
+    "oneLiner": "平日に、生徒の未提出と成績をまとめます。",
+    "body": "放課後に残件を出し、Google Classroom の点が落ちたときはその題材の説明も添えます。続きは教えであり、警告だけではありません。"
+  },
+  "3ufXSXC-Z8OadVsV9yMLL": {
+    "title": "HouseBot",
+    "oneLiner": "12時間ごとに、掲載サイト六つから賃貸と住宅を探します。",
+    "body": "条件を Redfin、Zillow、Craigslist、Facebook、MLS、ApartmentList に一日二回かけます。午後だけ出て消えた掲載も届きます。"
+  },
+  "JZAccYtlRFvDSU2CnMnkZ": {
+    "title": "Human Copywriter",
+    "oneLiner": "AI っぽい下書きを、人が書いたように読める文に直します。",
+    "body": "メール、投稿、ブログ、DM、ランディング、広報の書き直し机です。設計上、下書きだけ。送るのはあなたです。"
+  },
+  "y3uTGY5hkl6iTmE-ZAX02": {
+    "title": "illo",
+    "oneLiner": "アイデアや投稿を、マスコット中心の編集イラストにします。",
+    "body": "設定はほぼ不要です。告知や投稿を渡すと、素材写真ではなくマスコットまわりのイラストが返ります。"
+  },
+  "9y2GcFkKMAUhYlMxRUS0X": {
+    "title": "Imogen (Alt Text)",
+    "oneLiner": "投稿した画像に、きれいなコピー用代替テキストで返信します。",
+    "body": "画像の本当に大事な部分に絞った短い代替テキストを書きます。毎回自分で書かなくても、視覚障害のある人に届きます。"
+  },
+  "yH2UttxbMwMugweZrigHT": {
+    "title": "Inbot",
+    "oneLiner": "実際に使っている受信箱をまとめて、ゼロに近づけます。",
+    "body": "設定でメール、Slack か Teams、予定表、Notion、メッセンジャーをつなぎ、六箇所を自分で見なくて済むようにします。"
+  },
+  "Viv2NbC5skPslV1WH9Fs7": {
+    "title": "Index (SEO/AEO Teammate)",
+    "oneLiner": "SEO と AEO の相棒で、書き手向けのブリーフを作ります。",
+    "body": "すでに繋いだものを読み、足りない組み合わせを後から勧め、隙間を書き手が動ける内容ブリーフにします。"
+  },
+  "-TlSH1rNkA-c2JLsFFVc7": {
+    "title": "Interrogator",
+    "oneLiner": "事実だと思い込んでいる前提を見つけます。",
+    "body": "もう疑っていないことを掘り、次の行動が変わるものから確かめます。全部を同じ重さでは調べません。"
+  },
+  "4aTE8S1KT93GkqHYxWIo3": {
+    "title": "Interview Prep",
+    "oneLiner": "題材とレベルを決め、本当に準備できるまで一緒に登ります。",
+    "body": "例、動くコード、小テストがあり、固定シラバスで終わりません。終点は材料切れではなく、準備できたあなたです。"
+  },
+  "-kO6HrXokJZANVwUOMZO9": {
+    "title": "Invoice Hunter",
+    "oneLiner": "Gmail の請求 PDF を見つけ、一か月分を CSV にまとめます。",
+    "body": "各 PDF から業者、日付、金額、番号を取り、索引つきで一か月分を束ねます。会計へ渡す前に許可を待ちます。"
+  },
+  "9X-V8im-kPPFgybviXkd6": {
+    "title": "jason",
+    "oneLiner": "冗談 Bot です。jason と挨拶し、あとは Uber のシード投資の話だけします。",
+    "body": "「hey i'm jason」と挨拶し、Uber のシード投資以外は話しません。質問に答えず、ツールも使わず、依頼も処理しません。"
+  },
+  "Nmv2fCQEcQc3EHzVXJZKN": {
+    "title": "Jess (Executive Assistant)",
+    "oneLiner": "メール、予定表、Notion、Slack を、開く前にまとめます。",
+    "body": "平日のエグゼクティブアシスタントです。先に全部読み、書面の手順で同僚の質問に答え、顧客通話メモを出します。朝にはもう把握できています。"
+  },
+  "_OlL8LPI6lc2xi82F4Gf7": {
+    "title": "John Wick",
+    "oneLiner": "対象企業を地図にし、決裁者まで上へ進みます。",
+    "body": "組織を描き、メールを見つけ、紹介をたどり、本当に「はい」と言える人まで届いたら、その会話にあなたを入れます。"
+  },
+  "1hyNK6vXzs_8QamyfhvCV": {
+    "title": "KeyWire Comic Week Brief",
+    "oneLiner": "週のプルリストリマインダーと、好みに合わせた漫画ダイジェストです。",
+    "body": "始める前に、実際に追っているものを聞きます。週次は出荷全部ではなく、気になる号です。"
+  },
+  "FaRchqvTT6ZCRVPf0JABl": {
+    "title": "Kirk (Enterprise Crew)",
+    "oneLiner": "Kirk を入れて START と送ると、専門 Bot のブリッジクルーが現れます。",
+    "body": "『Star Trek』の役割遊びであり、本物のエージェントチーム実演でもあります。指揮席が組員として動く専門 Bot を出すので、組織図より分かります。"
+  },
+  "yTSGElYcIjFW_5IXu2I-e": {
+    "title": "Kody",
+    "oneLiner": "優先事項を、まとまった実行に変える参謀です。",
+    "body": "人、案件、ほかのアシスタントをまたぎ、大切だと言ったことを、実際に前へ進む動きにします。"
+  },
+  "ANv3NrqPfRcS9PdXku7h8": {
+    "title": "last30days",
+    "oneLiner": "この 30 日に、人々がその話題について実際に言ったことを出します。",
+    "body": "一か月に限ったソーシャルリスニングです。何年も前の上位ではなく、今の絵です。設定で公開 GitHub から skill を入れる点は、実行前に知ってください。"
+  },
+  "eZhKhPkfxxFSml18TS2X8": {
+    "title": "Leader 1:1 Bot",
+    "oneLiner": "週次 1:1 に、先週の続きと、言う価値のある三つの話題を持って入ります。",
+    "body": "毎週リセットせずスレッドを進め、その枠に値する少数の題を選び、先延ばしにしていたフィードバック案も書きます。"
+  },
+  "s5JszATSty0w-uDTw_NzK": {
+    "title": "Learn (Math & ML Video Teacher)",
+    "oneLiner": "第一原理から授業を組み、アニメ解説にします。",
+    "body": "数学か機械学習の題を土台から組み立て、解説動画を作ります。自分では公開しません。"
+  },
+  "_A_AZayMmSNuN_-sdq_M1": {
+    "title": "Lease Finder",
+    "oneLiner": "全国の現行カーリースを探し、MSRP からの割引が一番深いものを見つけます。",
+    "body": "Edmunds、KBB、CarGurus、Cars.com から、表示価格に対する割引が実際に大きい場所を見ます。地元広告ではありません。"
+  },
+  "VjbtJ_qTdzbhJGmXdvTIc": {
+    "title": "Lennybot",
+    "oneLiner": "Lenny Rachitsky 自身のアーカイブから、製品と成長の質問に答えます。",
+    "body": "なりきりではなく、本人のアーカイブです。実際に出した文章とインタビューから答え、印象ではありません。"
+  },
+  "6I-yjMRU1BmiYNfZgWXBK": {
+    "title": "Life (Life Door)",
+    "oneLiner": "私的な用件の常設入口で、必要な Bot をその場で作ります。",
+    "body": "私的な依頼はこの一扉です。部屋を開き、必要な専門 Bot を作ります。新しい持ち主は空から始まり、作者の生活は引き継ぎません。"
+  },
+  "tQuoQ94ErUfXNJu4xPqZi": {
+    "title": "LinkedIn Desk",
+    "oneLiner": "あなたが決めた方針で、LinkedIn の招待を毎日審査します。",
+    "body": "売り込みと迷惑を分け、承認か無視を勧め、許可なく何も押しません。LinkedIn に触る前に初回設定が必要です。"
+  },
+  "zcHEE4_hbqw3cZsy7X2Vk": {
+    "title": "Linky",
+    "oneLiner": "ファイル、フォルダ、Bot の出力を渡すと、共有できる URL を返します。",
+    "body": "小さな道具です。ほかの Bot が作ったものを公開し、送れるリンクにします。here.now プラグインを一度つなぐ必要があります。"
+  },
+  "KmR5kmGnalq1b2nhCRXyo": {
+    "title": "Local Deals",
+    "oneLiner": "近くのフリマの掘り出しを毎日見つけ、代わりに値交渉もできます。",
+    "body": "近くの Craigslist、Facebook Marketplace、OfferUp を見てその日の発見を出し、売り手への交渉も開けます。"
+  },
+  "Ub3T7usX-c6yRQibQq83P": {
+    "title": "loops",
+    "oneLiner": "コーディング agent の上に乗る、エンジニアリングの外側ループです。",
+    "body": "粗い意図を、検証できる目標形の指示にし、ループを正直に保ちます。下の agent は、確認できる具体に対して動きます。"
+  },
+  "4E6m-7mPfUHzLt_aIJ_5D": {
+    "title": "Lucy (creative companion)",
+    "oneLiner": "絵、世界、詩、映画のための、終わりのない創作の相棒です。",
+    "body": "依頼処理 Bot ではありません。作るための砂場です。新しい人には空で開き、作者の企画は持ち込みません。"
+  },
+  "12Gbp1lPVsfTVAHPXKd3B": {
+    "title": "Lurk (Reddit Researcher)",
+    "oneLiner": "Reddit から正確な引用を掘り、困りごとのまとめにします。",
+    "body": "種キーワードから門のある流れです。先に困りごと、その上にアイデアのまとめ。読むだけで、投稿はしません。"
+  },
+  "spIXb6rwPJq_iFlu1L-_l": {
+    "title": "Mappy (Talent Map)",
+    "oneLiner": "対象企業でいま働いている人を、全員地図にします。",
+    "body": "候補探しではなく組織地図です。会社の人の絵を組みます。地図化を頼んでいない個人の公開職歴も集める点に注意してください。"
+  },
+  "37ZOM10GzlSOQpMjRp7KB": {
+    "title": "Marketing Bot (CMO)",
+    "oneLiner": "製品を、その周りのマーケ一式に変える CMO Bot です。",
+    "body": "製品の文脈を一度渡すと、文案、メール、オファー、コンバージョンのアイデアまで出します。マーケの質問に一つずつ答えません。"
+  },
+  "j7B5LHnEIPTuPQZxxQwpx": {
+    "title": "Master (Orchestrator)",
+    "oneLiner": "依頼を必ず合う専門 Bot に渡し、自分では動かない細い司令です。",
+    "body": "自分の担当はありません。来る依頼は担当すべき専門 Bot へ渡し、黙って済んだことにせず、引き渡しを確認します。"
+  },
+  "3foGoeh6ksDhD4jTxYjyE": {
+    "title": "Melissa (Fitness & Nutrition Coach)",
+    "oneLiner": "1型糖尿病の制約に合わせた、運動と栄養のコーチです。",
+    "body": "食事はその場で記録します。催促と放置のあいだを取ります。多くのコーチ Bot は、どちらかに偏ります。"
+  },
+  "uv4r3mNUgymF11q0N3L7F": {
+    "title": "Morpheus",
+    "oneLiner": "迷っている選択肢を渡すと、一つ選んでその理由を守ります。",
+    "body": "両論の要約ではなく決断します。理由を説明し、どう違えばもう一方を選んだかも伝えます。"
+  },
+  "GU4KJSYtPZeiLf8ubPMXY": {
+    "title": "Mr. Laser",
+    "oneLiner": "一人のレーザー彫刻店の、案件リーダーです。",
+    "body": "図、LightBurn、機械設定を専門 Bot でまとめます。許可が出るまでレーザーは撃ちません。"
+  },
+  "jEv8xhxlnSNp2KnQ9ciyP": {
+    "title": "Mystery Snack Agent",
+    "oneLiner": "毎週金曜 19 時、玄関にサプライズのデザートが届きます。",
+    "body": "好み、アレルギー、カード、配達アプリは一度だけ。届くまで中身は秘密です。常設注文を持ち、毎週代わりに払う点は知ってください。"
+  },
+  "l_MfrDAGFed5t2A9Wrzqz": {
+    "title": "Neuroscience",
+    "oneLiner": "神経科学と脳コンピュータインタフェースの専門です。",
+    "body": "EEG と BCI の信号解釈、脳状態と意図の復号、その信号を出す OpenBCI 級の機器までカバーします。"
+  },
+  "9Mo5saoPQYIp45IgzMT7P": {
+    "title": "News Scout",
+    "oneLiner": "自分の時間帯での、平日朝のニュースダイジェストです。",
+    "body": "求められたときだけ動きます。現地時間なので、朝のブリーフはあなたの朝に届きます。"
+  },
+  "dHd69sBvMG2o3lJa__T7K": {
+    "title": "Newsletter Cleanup",
+    "oneLiner": "六か月分のニュースレターを点検し、許可したものだけ配信停止します。",
+    "body": "読める審査ページに分け、あなたの判断で実行します。削除ではなく配信停止なので、メールは消えません。"
+  },
+  "Sj_LPMP7hKOOSzF8YDiNr": {
+    "title": "OutBid Mania",
+    "oneLiner": "話題の入札サイト潮流と模倣を、日次ダッシュボードで追います。",
+    "body": "元とコピー、売上を見、毎日、本当に伸びているのか、うるさいだけかを出します。"
+  },
+  "7u3XiRiTYw4GVZmuZboyP": {
+    "title": "Overwatch",
+    "oneLiner": "共有マシンが腐らないよう、Grok Bot の仮想マシンを整えます。",
+    "body": "Bot ごとに作業場所を分け、git にバックアップし、掃除と保管をします。共有箱が散らかってからでは遅い作業です。"
+  },
+  "zY0fbKG9UqTMWIu1NcudB": {
+    "title": "Peekaboo Mac",
+    "oneLiner": "登録済み Mac に、画面録画、スクリーンショット、画面操作を足します。",
+    "body": "登録マシンにはすでに bash があります。この層は画面を見てインタフェースを動かす力であり、シェルだけではありません。"
+  },
+  "fcJJMM58AdXSTBdW3xWyW": {
+    "title": "PG (Prospecting)",
+    "oneLiner": "取引先を調べ、ポッドキャストから本当に使える最初の一言を掘ります。",
+    "body": "接触前に対象を掘り、最近のポッドキャストやウェビナーから、プロフィールの引き写しではない具体を見つけます。"
+  },
+  "vB2o6vvmHjDQRM5yFH9vn": {
+    "title": "PhoneZero Operator",
+    "oneLiner": "Bot が、本物の電話をかけ、受けられるようにします。",
+    "body": "Grok Voice Agents と Telnyx で、実際の電話会話ができます。電話基盤を自分で建てて守る必要はありません。"
+  },
+  "mqVPHm0oB3WPsnxbU1qB9": {
+    "title": "Pitch Deck Coach",
+    "oneLiner": "投資家が実際に理解し、覚えることを伝えます。",
+    "body": "資料を上げると、何が届き、何が信じられ、何が質問になり、何が会議を生き抜くかを返し、その軸で話を研ぎます。"
+  },
+  "PFD95widaEeqjkYLLUZmD": {
+    "title": "point peddler",
+    "oneLiner": "ポイント最適化を、考えなくて済む特典旅行の頭脳です。",
+    "body": "見るのはクレジットカードと航空のポイントだけです。予約の決め方に一分もかけません。交換とマイルは、あなたではなくこちらが算出します。"
+  },
+  "xF12c5y4LVe7nf7IFguWI": {
+    "title": "Post Call Assistant",
+    "oneLiner": "会議のたびに、やることとフォロー案を置きます。",
+    "body": "フォローは書きますが送りません。使うメモ、受信箱、予定表は最初に聞き、設定を推測しません。"
+  },
+  "rt629UEZFtE4Wz0A_0c37": {
+    "title": "PR Reviewer",
+    "oneLiner": "壊れうるところから、プルリクエストを見ます。",
+    "body": "壊れるもの、未テスト、判断できない薄い文脈を先に出します。審査は diff の怖いところから始まります。"
+  },
+  "FU-Ev6_Ju4lFGWwWRD0GD": {
+    "title": "Projects Manager",
+    "oneLiner": "Grok Bot の一隊をプロジェクト組織として回し、真実の源は Notion です。",
+    "body": "コーダー、デザイナー、調査、書き手を別 Bot にし、案件ごとに Notion の行とチャンネルを持ち、共有ボードから担当を取ります。"
+  },
+  "n9zq64kTeEEc5NwrkAOi8": {
+    "title": "Publish work as a private link",
+    "oneLiner": "Bot が作ったものを、非公開リンクのライブページにします。",
+    "body": "報告、計画、一枚が送れる URL になり、先方にアカウントは不要です。推測しにくいだけで権限管理ではないので、未掲載であり、秘密ではありません。"
+  },
+  "NQQjXITgX9V7WjaDh9Vzb": {
+    "title": "Ralph",
+    "oneLiner": "履歴書を、採用担当が実際にクリックできる公開ポートフォリオにします。",
+    "body": "各製品は PDF の一行ではなくデモです。同じことを他人にもできる、共有 Bot も渡します。"
+  },
+  "Gd-cqXG8xG_RPmKGixa73": {
+    "title": "Reaper",
+    "oneLiner": "やめるべきサブスク、会議、手順を見つけます。",
+    "body": "予定表、請求、常設の流れを見て、もう必要のないものを挙げ、それぞれ終える理由を出します。"
+  },
+  "Nn0ykGa3vJ6YS7ib7F6yH": {
+    "title": "Research Bot",
+    "oneLiner": "確認済み引用つきの短い答えを返す、深い調査です。",
+    "body": "第一原理から考え、未確認の出典を黙って出しません。それが調査と、自信ありげな段落の違いです。"
+  },
+  "oSvAMKX_ahD56ZmgwtRys": {
+    "title": "Sable: Game Art",
+    "oneLiner": "選んだ作風で、2D ゲーム美術とスプライトシートを作ります。",
+    "body": "実在ゲームから見た目を提案し、同じ案を複数で試し、2D またはスプライトシートを作り、使える PNG に切ります。"
+  },
+  "rthl9MdskO2f-JCzmyINP": {
+    "title": "Scout (Competitive Intelligence)",
+    "oneLiner": "競合サイト、検索順位、AI 回答での見え方を見ます。",
+    "body": "競合の文案と価格、順位、AI 回答での言及を追い、返事が必要な動きだけ出します。"
+  },
+  "oMU6GmI59Z1jtPUooMLLJ": {
+    "title": "Sharenow Feed Bot",
+    "oneLiner": "五つの SNS を毎時見て、ライブの掲示板に出します。",
+    "body": "テーマを渡すと、Instagram、X、Threads、YouTube、TikTok を毎時、更新され続ける掲示板へ追います。公開には第三者 ShareNow が必要です。"
+  },
+  "fXHgGtuPfTcHBTVKSCZ1d": {
+    "title": "Sherlock Holmes",
+    "oneLiner": "症状を渡すと、落ち込みの本当の原因を調べます。",
+    "body": "売上減、流入減、転換崩壊。容疑者リストを作り、証明または除外できることから潰します。最初のそれらしい答えでは終わりません。"
+  },
+  "rrvGu13S5uYCc09WP7A-9": {
+    "title": "Shikamaru",
+    "oneLiner": "名前のある世界で、専門 Bot を雇い、まとめる参謀です。",
+    "body": "専門の処理はせず、報告をそのまま転送もしません。本当に必要なときだけ話し、あとは編成を回します。"
+  },
+  "rBXWgythSa09pIp14rnV4": {
+    "title": "ShopBot",
+    "oneLiner": "Shopify のカタログを探し、クーポンを見つけ、一番得なカードを選びます。",
+    "body": "商品を比べ、割引コードを探し、Link または Shop Pay で、既定のカードではなく特典が最大のカードで会計します。"
+  },
+  "h5CE1r5-LDWHacnuRuuOW": {
+    "title": "Shopper",
+    "oneLiner": "公式店で本物を探し、カートを会計直前まで運びます。",
+    "body": "模倣品は飛ばし、公式店と市場で価格と仕様を比べ、カートを会計まで持っていきます。"
+  },
+  "32fHIBw9Yz-s_o35KycGX": {
+    "title": "Shorty",
+    "oneLiner": "すでに効いた長尺から、YouTube Shorts を切ります。",
+    "body": "投稿全部ではなく実績のある本編から始め、強い導入を選び、字幕つき 9:16 にし、平日にまとめて出します。"
+  },
+  "s6JVFYDIDMsCQMBeTcznW": {
+    "title": "Site Audit",
+    "oneLiner": "SEO、速度、アクセシビリティ、CRO、schema を、一度のサイト監査で見ます。",
+    "body": "各項目は P0、P1、P2 と証拠 URL つきです。月ごとに前回との差を見るので、新しい発見の壁ではありません。"
+  },
+  "bjsbaj_a2ds2pQY1YiXqE": {
+    "title": "Socials (Short-Form Scout)",
+    "oneLiner": "毎時の偵察で、撮れる短尺のキットを渡します。",
+    "body": "X と Reddit の、撮る価値のある AI とテックの瞬間を見ます。届くのは台本ではなく、撮れる角度のブリーフです。"
+  },
+  "_2vi1lOY4oiBaJDA3S8l1": {
+    "title": "Spark (Onboarding)",
+    "oneLiner": "五分の導入 Bot で、必要な最初の Bots を作ります。",
+    "body": "短い質問のあと、答えに合う Bot を作り、本当に使えるようアカウント接続へ促します。"
+  },
+  "P-8iKYx3Eeq3pelx_UPHq": {
+    "title": "Stitchy (Personal Stylist)",
+    "oneLiner": "毎朝新しい服装を提案し、夜のうちにお得を探します。",
+    "body": "既存の衣服とアカウントをつなぎ、六時に天気と、すでに持っている服での服装を出します。本当に良い発見だけ見せます。"
+  },
+  "cV7nGFO88pb2WXNN56h8A": {
+    "title": "StoriesBot",
+    "oneLiner": "17 年分の MacStories を、時期と著者で絞って探せます。",
+    "body": "長評、Setups、Shortcuts Archive に一箇所で答えます。コーパスはウェブ全体ではなく、その媒体自身の文章です。"
+  },
+  "l8p6rXw-lalL-UNiHySnJ": {
+    "title": "Talent Matchmaker",
+    "oneLiner": "働きたい人と、受信箱に隠れている役割を結びつけます。",
+    "body": "投資家更新と受信から採用の兆しを、もう一方で静かに探している人を追い、紹介が実際にできる状態にします。"
+  },
+  "9oKJDID_EKLacIXpKfFAq": {
+    "title": "template generator",
+    "oneLiner": "手元の Claude、Cline、Grok Bot のセッションを見て、共有できるテンプレートを作ります。",
+    "body": "よくある設定の依頼を拾い、生成して共有できる Grok Bot テンプレートの一覧を出します。"
+  },
+  "_S9OOSBgXixedyANQSYjQ": {
+    "title": "TeslrBot",
+    "oneLiner": "チャットから Tesla の充電、空調、鍵、ナビを操作します。",
+    "body": "操作は Bot のマシンでログインする第三者コネクタ経由です。トークンをコピーし回さなくても車に届きます。信頼するのはそのコネクタと、この Bot です。"
+  },
+  "W4Z5pvEm6UgCml48Ig4dT": {
+    "title": "Thoth (Researcher & Archivist)",
+    "oneLiner": "深い調査をし、あとで見つかるように一件ずつ保管します。",
+    "body": "要点は保管です。出典ブリーフと長い一件を、数か月後も辿れる構造の場所へ置きます。"
+  },
+  "uY_7s1TZILVzUeJ9lLOx9": {
+    "title": "Tradbot",
+    "oneLiner": "家族の予定、学校、家の事務を見る、家庭の参謀です。",
+    "body": "名前に反して取引 Bot ではありません。私用の受信箱と予定表を見、学校、家族予定、家の続きが落ちないようにします。"
+  },
+  "m7sSNlYWSxqrsHrMiEnsh": {
+    "title": "Travel & Event Agency",
+    "oneLiner": "いまの航空券とイベント券を探し、実際の料金を比べます。",
+    "body": "旅程の本当の費用を選択肢で比べ、買うときは公式経路だけ、しかもあなたが言ったときだけです。"
+  },
+  "BsTA9W4uysdokbBQiriuQ": {
+    "title": "Walt",
+    "oneLiner": "別の映像 Bot の品質を見る製作総指揮で、カットが終わるまで見ます。",
+    "body": "あなたが実際に出した依頼に照らして映像 agent の出力を見、残すか再カットかを決め、初回レンダーで終わりません。"
+  },
+  "Q2shbC8RRmoRleIyr5J33": {
+    "title": "Webby",
+    "oneLiner": "再構築、ダッシュボード、ニュースレターを続けるサイト管理者です。",
+    "body": "個人サイトを端から端まで見、再構築中も公開の予備があり、平日の公開ダッシュボードと長文・ニュースレターを進めます。"
+  },
+  "qL6Dww98g_OGhwqDmgvJK": {
+    "title": "Wedding Photo Hunter",
+    "oneLiner": "結婚式の写真と動画を、一つのフォルダに集めます。",
+    "body": "すでに知る人から Facebook のゲスト関係を外へ歩きます。当日の写真を探すため他のゲストの投稿を読み、見つけたものをマシンへ落とします。"
+  },
+  "p_0KTQ41WwupGeD-iShbK": {
+    "title": "Witness",
+    "oneLiner": "大切な判断を、なぜそう決めたかの記録として残します。",
+    "body": "六か月後に見えるのは選んだ結果だけでなく、当時信じていたことと、何を引き換えにしたかです。記憶で理由を組み立てません。"
+  },
+  "vOipeiu0AZ7CuC5ynw5h0": {
+    "title": "Work (Work Door)",
+    "oneLiner": "Life の対になる、会社の用件専用の入口です。",
+    "body": "用件が来てからチャンネルと専門 Bot を作ります。作った人のことは意図的に覚えず、複製は空の開始です。"
+  },
+  "GkX6X536UK2MlbkfGLQnb": {
+    "title": "X Brief",
+    "oneLiner": "自分の投稿から関心を学び、その線だけを見ます。",
+    "body": "最近の X を読んで本当に気になることを見極め、線を確認してから、一般ではなくその線の動きを知らせます。"
+  },
+  "HU7XArfGhUgLnzVcr7neB": {
+    "title": "X Top 100 Fans (Weekly)",
+    "oneLiner": "毎週、X の投稿に一番関わった 100 人を並べます。",
+    "body": "返信、いいね、リポストに実際にいた人を数え、上位百人をダイジェストで送ります。"
+  },
+  "XzEATGwJNRvgsCLlcD9ox": {
+    "title": "X Top 500 Fans (Monthly)",
+    "oneLiner": "毎月、最大の X 支持者 500 人を、非公開リストに残します。",
+    "body": "その月の関わりで五百人を並べ、新規と脱落を印し、月名の非公開 X リストにします。"
+  },
+  "0y-dcpVFqFkjibKs2M48D": {
+    "title": "YC Podcast Notes",
+    "oneLiner": "Y Combinator のポッドキャストを毎時見、創業者に役立つメモを出します。",
+    "body": "新エピソードが着いたら印し、文字起こし要約ではなく、作っている人向けの短いメモと、スタートアップ案の角度を出します。"
+  },
+  "RFXogCwTbb2mUODW6rfVe": {
+    "title": "YieldSentinel A2H",
+    "oneLiner": "入れる前に、自分で決めた規則で DeFi の利回り一件を点検します。",
+    "body": "調査のみです。資金は持たず、ウォレットでもありません。目を引く高利回りが、自分の方針を本当に通るか見ます。"
+  },
+  "wygP8wogrg509aSev5RMF": {
+    "title": "402buyer",
+    "oneLiner": "Coinbase Agentic Wallet を用意し、x402 の有料壁から買います。",
+    "body": "x402 の有料壁と x402 bazaar から買います。有料の端点を見つけ、Base 上で USDC を決済し、結果を返す agent が欲しい人向けです。"
+  },
+  "Uytjr0oAalw0OuzCLdWPd": {
+    "title": "Construction office manager",
+    "oneLiner": "成長中の建設会社の事務です。帳簿、見積、現場予定、カレンダーを見ます。",
+    "body": "一社の成長する建設会社向けです。会計と経費の道具をつなぎ、見積と現場予定を止めず、経営者の予定を現場と突き合わせます。"
+  },
+  "l6H6WL7HF-CAwcvr1hBey": {
+    "title": "dbs",
+    "oneLiner": "dontbesilent の商用道具箱です。確認済みの話題一つと、専門の短尺一本です。",
+    "body": "事業、内容、行動の相談は /dbs へ回します。いまの話題を指名すると、事実を確認し、ニュース回顧ではなく専門の短尺一本を返します。"
+  },
+  "ph5mcXqVy2p176Br7BJYi": {
+    "title": "Echo",
+    "oneLiner": "顧客との通話のあと、実際に話したことから資料を作ります。",
+    "body": "発見通話やデモの文脈を、Figma または Google Slides のスライドにします。外部通話のあと自動でも、話しながら書き換えもできます。"
+  },
+  "e16tva1g3ZyYI1MgN-DDS": {
+    "title": "Flutter Mentor",
+    "oneLiner": "Flutter のメンターで、Android と iOS のネイティブも見ます。",
+    "body": "詰まったときに聞くと、はっきりした説明と具体的な直しが返ります。"
+  },
+  "y_D2m_51Lww_oWJwIEHSg": {
+    "title": "Friend Cloner",
+    "oneLiner": "WhatsApp グループを Grok Bot の友人にします。話し方を読み、案を出し、許可を待ちます。",
+    "body": "実際の話し方を読み（メッセージは送りません）、声、強み、暮らしを学び、本人の Bot 案を出します。作る前に必ず許可が必要です。"
+  },
+  "02wWT21lRVarTtKQWDBKu": {
+    "title": "OpenZoo.fun Arena",
+    "oneLiner": "agent 経済への入り口です。Solana の mint-pair を一度播くと、播いた人が分配の 60% を永続で受けます。",
+    "body": "burner key が毎回の分配の 60% を永続で受けます。種を使い切り、:latest のクライアントで起動し、FluxRPC でチェーンと話します。"
+  },
+  "A42rzhad6J8lhYMOaQ20o": {
+    "title": "Paddy",
+    "oneLiner": "タイトルだけでなく、動画全体を見る YouTube ストラテジストです。",
+    "body": "題材、タイトル、サムネを一つの約束として見、話し出しと、公開後に触らないところも見ます。"
+  },
+  "RqfNH_lezeW6Wab2yNoT6": {
+    "title": "proofnetworkbot",
+    "oneLiner": "チャットから ProofNetwork のスマートコントラクトを書き、公開し、フロントもつなぎます。",
+    "body": "公開中の契約と話すフロントまで手伝います。コピーできるクリックカウンター例と、apiUrl とデプロイの落とし穴つきです。"
+  },
+  "OaRwBX_QPos9EDlhLEV1J": {
+    "title": "Segundo Cérebro",
+    "oneLiner": "Obsidian の第二の脳です。朝のブリーフ、夜の音声チェックイン、地図のままの wiki。",
+    "body": "日次ノート、朝のタスクブリーフ、夜の音声、地図であり書庫ではない wiki。ポルトガル語で、習慣と気分をタスクと同じ場所に置きたい人向けです。"
+  },
+  "Bt48h63v32_q_shWVlEBb": {
+    "title": "TheFounder",
+    "oneLiner": "ログインと共有マシンを預かります。送信を押したあとでだけ読み込みます。",
+    "body": "創業者の参謀であり、共有マシンの番人です。依頼は専門へ回し、担当がいないときだけ受けます。聞かれない限り、自分の役割は繰り返しません。"
+  },
+  "rQt4W2zO2Gx9lfcBjd1lj": {
+    "title": "Researchy",
+    "oneLiner": "Grok Build CLI だけで動き、最新モデルを最高の思考レベルで使う調査 Bot です。",
+    "body": "名前は Researchy。調べることに集中し、実装はしません。"
+  },
+  "br5f3C4mc75QCMEHaszXd": {
+    "title": "tinkabot",
+    "oneLiner": "API を見て MCP や skill を作り、Grok Bot プラグインにまとめます。",
+    "body": "小さく動く足場から始め、手元で確かめてから公開用にします。承認後はほかの利用者も使えます。"
+  },
+  "scYgD9jdFhooaSHihRzy7": {
+    "title": "SEO engineer",
+    "oneLiner": "ランディング、記事、被リンクまで見る、常駐の SEO エンジニアです。",
+    "body": "オーガニック流入を積み上げるために、ページから記事、バックリンクまで一手に見ます。追加はワンクリックです。"
+  },
+  "qL920VjKyua3_u89UYnQL": {
+    "title": "Solo founder bot",
+    "oneLiner": "一人創業者向けです。Grok Bot を入れて、この Bot を足せば始められます。",
+    "body": "設定を積み上げる前に、まずこの一匹を追加する前提で作られています。"
+  },
+  "hkGSHcqKjGc5dm3ugNc2U": {
+    "title": "Nightly audit engineer",
+    "oneLiner": "夜のうちにコードベース全体を調べ、領域ごとに掃除を一つ出します。",
+    "body": "一晩かけてリポジトリを読み、翌朝は範囲ごとの小さな掃除が届きます。一気に直そうとはしません。"
+  },
+  "fY1xWwCLzDDGVe3GwH78j": {
+    "title": "Engineer bot",
+    "oneLiner": "案件をボードし、クラウド agent を起動し、30分ごとに PR を見ます。",
+    "body": "あなたに頼むのはマージだけです。実装の往復はクラウド agent に任せます。"
+  },
+  "VHMdjIGjGpgDSJR7dW6Gz": {
+    "title": "Figma Bro",
+    "oneLiner": "Figma で、本物のコンポーネントと直感的なレイアウト、動きまでデザインします。",
+    "body": "見た目の案だけではなく、実際のコンポーネントで組み、モーションも違和感が出ないようにします。"
+  },
+  "zvkkoHMbclsUBWX8MRGpU": {
+    "title": "Tech demos",
+    "oneLiner": "X のブックマークからライブラリを一つ選び、許可後に sticky モノレポでデモを作ります。",
+    "body": "Cursor のクラウド agent で実装します。選んだ一つだけ進め、勝手に全部は作りません。"
+  },
+  "X_P19IvPAHZ3FiA1Q-05s": {
+    "title": "X algo",
+    "oneLiner": "引用するか、出すか、待つかを、公開の For You コードとライブ指標から読みます。",
+    "body": "感覚ではなく、公開されているランキングの決まりと、いまの数字で判断します。"
+  },
+  "gJ4waNMuQoJkQCGX77yF3": {
+    "title": "Writing bot",
+    "oneLiner": "エッセイ、メール、資料の、構造ある直しです。意味、事実、口調は残します。",
+    "body": "別の人の文に置き換えるのではなく、あなたの意図を保ったまま整えます。"
+  },
+  "FtxHtWPnLGheNJmF04wSf": {
+    "title": "Connections",
+    "oneLiner": "フォローと相互を場所ごとに分け、すでに持っている Notion に地図化します。",
+    "body": "新しいデータベースを増やさず、いま使っている Notion に人のつながりを置きます。"
+  },
+  "phPQtGzCZOynABubl0pwx": {
+    "title": "Image gen bot",
+    "oneLiner": "参考を集め、Grok Imagine の指示を書き、FAL で背景を切り、固まるまで繰り返します。",
+    "body": "一発で終わらせず、参考、指示、切り抜き、やり直しまで一連で見ます。"
+  },
+  "b00VrDzeasoqtPymoNDB-": {
+    "title": "Skippy",
+    "oneLiner": "住所を貼ると、そのサンフランシスコの縁石で次の路上清掃を出します。",
+    "body": "駐車が合法だとは言いません。次に清掃が出る日時だけを返します。"
+  },
+  "NJXi2SWEuhNxjOjspMMPi": {
+    "title": "Dial bot",
+    "oneLiner": "頼んだときだけ Bland AI で外向きの電話をかけ、何が起きたかを報告します。",
+    "body": "勝手にはかけません。通話のあと、結果だけ戻します。"
+  },
+  "JeFTvcDX-7QT2evKGIb52": {
+    "title": "Product idea stress test",
+    "oneLiner": "何が真でなければならないか、一番危うい前提、次に試すべきことを出します。",
+    "body": "アイデアを褒めるのではなく、壊れ方を先に見ます。"
+  },
+  "uFRK1GoAsiopBLPY19QCe": {
+    "title": "The page",
+    "oneLiner": "毎朝、公開ページを 3〜5 件見て、気になる点が変わるまで黙ります。",
+    "body": "毎日の要約は出しません。本当に動いたときだけ知らせます。"
+  },
+  "BqrH8_GNQvSYV-gcmJnd8": {
+    "title": "When it matters",
+    "oneLiner": "何度も確認している対象を渡すと、答えが本当に変わる条件を見つけます。",
+    "body": "同じページを何度も開かなくて済むよう、何が変わったら見る価値があるかを先に決めます。"
+  },
+  "eFfFM4-QmHxxrUlTUqyAo": {
+    "title": "Pattern of pain",
+    "oneLiner": "サイトを渡すと、繰り返している困りごとを見つけ、証拠を示します。",
+    "body": "一度きりの不満ではなく、何度も出る痛みと、その根拠を返します。"
+  },
+  "ZRxm1O9tmizOhriV7GiWL": {
+    "title": "Grok Build",
+    "oneLiner": "agent のコンピュータで、本物の Grok Build CLI を最大努力で動かします。",
+    "body": "チャットで真似するのではなく、実際の CLI を最大設定で走らせます。"
+  },
+  "_CIeV4P17QVoxuaEyeiFZ": {
+    "title": "Stock Trader",
+    "oneLiner": "株式トレーダー Bot です。作者時点では S&P500 をわずかに上回っています。",
+    "body": "自己責任です。取引の助言として使う前提ではなく、作者の実験用テンプレートです。"
+  },
+  "tLSg4HxepSclMqbZUTRnX": {
+    "title": "Fable 5.1 Oracle",
+    "oneLiner": "実装せず、計画とレビューをして、クラウド agent にパケットを渡します。",
+    "body": "Grok Bot と Cursor のループに入る Oracle です。Bot の VM では Claude Code を使います。"
+  },
+  "_xZZE41svJdcq2w6ZWJan": {
+    "title": "Supermemory sync",
+    "oneLiner": "会社用、私用、コーディング用の Bot が、一日の動きを共有メモリで揃えます。",
+    "body": "supermemory で組んだテンプレートです。Grok Bot、Hermes、Cursor / Claude Code / Codex が同じ状況を見られるようにします。"
+  },
+  "guides": {
+    "title": "Grok Bot guides",
+    "oneLiner": "公式ガイドを読んだ人がまとめた、あまり語られない使い方のコツです。",
+    "body": "優先事項の確かめ方、一度見せて覚えさせる手順、新しいことだけ報告する、など 11 項です。Bot 本体というより、ガイド要点へのリンクです。"
+  },
+  "M9c2tC_-mwY8XNTmSbkUY": {
+    "title": "Medical Bill Review",
+    "oneLiner": "意味の通らない病院請求を、項目ごとに見直し、争う手紙まで書きます。",
+    "body": "明細を取り、不意打ち請求を止める規則を確認し、減額や免除の可否を調べます。SSN や MRN は聞きません。"
+  },
+  "uvX1KHZ67D_AZQogYxR8-": {
+    "title": "旅行手配エージェント",
+    "oneLiner": "日本語の旅行手配エージェントです。行程の相談と手配を手伝います。",
+    "body": "作者が自分用に公開したテンプレートです。実用の検証は作者も限定的だとしています。"
+  },
+  "riqe7Z1oOnU6wIV7Zb9Mt": {
+    "title": "I Said I Would",
+    "oneLiner": "Slack と GitHub で、人に約束したことを覚え、まだ開いているものだけ見せます。",
+    "body": "実行の強い証拠があれば自分で閉じます。全部の催促ではなく、未完了か不確かな大事な約束だけ出します。"
+  },
+  "peJxDrQRS4t2DHuHfzhfW": {
+    "title": "Reminder",
+    "oneLiner": "シンプルなリマインダー Bot です。",
+    "body": "用事を忘れないための短いテンプレートです。高機能な参謀ではありません。"
+  },
+  "rt9m-FTkJoGsZzAjsKLPM": {
+    "title": "Critiquito",
+    "oneLiner": "UI を見て、感想ではなくメモだけ出す批評役です。",
+    "body": "チームに足す前提です。褒めるのではなく、画面へのノートだけを返します。"
+  },
+  "plugin": {
+    "title": "CLI for Agents",
+    "oneLiner": "「CLI for Agents」プラグインです。依頼を Claude、Codex、Kimi などに渡せます。",
+    "body": "トークンを Bot 本体で使い切らないための経路です。x.ai/bot/plugin 配下のリンクから拾っています。"
+  },
+  "-miS0AF-lema7i8Z019Qp": {
+    "title": "x402 book shop",
+    "oneLiner": "ドメインがあれば、x402 の本屋を自分で立てて売り始められます。",
+    "body": "Cloudflare Workers 上です。作者はスマホの Grok Bot で約 20 分で組んだとしています。"
+  },
+  "ndOGeXyjkQLdceRlk7JP4": {
+    "title": "free_bots_lol",
+    "oneLiner": "free_bots_lol の公式テンプレートです。実験の決まりを Bot が理解して参加します。",
+    "body": "この実験用に作られたテンプレートです。一般用途の参謀ではありません。"
+  },
+  "-GgufM3GkZclfn9PuI17_": {
+    "title": "Kinesis compute",
+    "oneLiner": "Kinesis Network 上の計算資源を、一つの Bot にまとめます。",
+    "body": "分散した compute をここから見るための、作者自用テンプレートです。"
+  },
+  "p6eYp9BM2aFxQSOtzQX3S": {
+    "title": "赛博小晚",
+    "oneLiner": "小晚先生の skill を Grok Bot にした、IP づくりと発信の相棒です。",
+    "body": "キャラクターの作り方と発信の相談向けです。元の skill は公開 GitHub にあります。"
+  },
+  "xSfBSprfKv5h909uzrv7W": {
+    "title": "X High Coach",
+    "oneLiner": "@ を渡すと X の投稿を集め、アカウントを採点し、直し方を出します。",
+    "body": "投稿の掃除と、アカウントの問題の手当てが目的です。投稿代行ではありません。"
+  },
+  "KTuDBQv3fYw-h8RaC8XGg": {
+    "title": "Monad",
+    "oneLiner": "新しい Monad ウォレットを作り、ミーム、パープ、貸借、スワップができます。",
+    "body": "自己責任です。チェーン上の操作ができるテンプレートであり、収益は保証しません。"
+  },
+  "dep-tU0gmIPgiqNsvS4N4": {
+    "title": "Marketing Grok",
+    "oneLiner": "広告、SEO、GEO 向けの Grok です。検索語、広告、引用され方まで見ます。",
+    "body": "マーケ用のデータ源につなぐ入口です。広告アカウントそのものに触れない運用の説明もあります。"
+  },
+  "1L2VgwhlakwrV5p-iOsuR": {
+    "title": "eBay team",
+    "oneLiner": "eBay の開発者 API で店を回し、スラブ仕入れも見ます。使う前に APPROVE が必要です。",
+    "body": "オンチェーンのスラブ案件を探し、eBay に出品します。許可なしでは支払いしません。"
+  },
+  "ehxj2Wdxq9M04jvaAqyBD": {
+    "title": "Copay Compass",
+    "oneLiner": "がん薬の自己負担支援を探し、再開アラートに登録し、申請の準備をします。",
+    "body": "SSN や MRN は聞きません。医療助言もしません。閉じた基金が開いたときの備えが中心です。"
+  },
+  "LlldYnfUbSX5Z5ogLkHik": {
+    "title": "Revenue Enablement",
+    "oneLiner": "トークトラック、バトルカード、ローンチ更新、立ち上げ計画、営業 QBR を手伝います。",
+    "body": "enablementskills.md の内容を Grok Bot 用にまとめたテンプレートです。"
+  },
+  "9BnpveyF3fbsRRtolSWpp": {
+    "title": "Revenue Signal Radar",
+    "oneLiner": "止まった商談、企業案件も含めて、再開の手がかりを探します。",
+    "body": "失速した案件を、公開シグナルから起こすためのレーダーです。自動送信はしません。"
+  },
+  "cGcG0msqfz7o7J3QMLhbE": {
+    "title": "Bot checker",
+    "oneLiner": "追加前に共有リンクを貼ると、CLEAN / WARN / BLOCK の目安を返します。",
+    "body": "ほかの Bot を入れる前の点検です。削除はせず、推奨だけ出します。"
+  },
+  "-E-6LRFFIZ7oJl5FRXRxbI": {
+    "title": "Plato",
+    "oneLiner": "賛成しません。ニュースやアイデアを、出典つきで反対側の強い形まで調べます。",
+    "body": "同意して終わらせません。出典を残し、反対側の一番強い形を出します。"
+  },
+  "1kQ8p3TAKx2FgvYXir2Ta": {
+    "title": "App Store Connect Skill",
+    "oneLiner": "App Store Connect の提出を、API キーから TestFlight、文言、スクリーンショット、事前確認まで案内します。",
+    "body": "提出の迷路を短くします。必要なところでは手を添えます。"
+  },
+  "FfGFlZLAQDyxhJwg2ZJlL": {
+    "title": "Pika Bot",
+    "oneLiner": "Pokémon Center の新商品とドロップを監視します。",
+    "body": "実際のドロップでの検証は作者もこれから、として公開された早いテンプレートです。"
+  },
+  "D9HYH2jAmGiKw7e499mrE": {
+    "title": "GitHub hotspot repos",
+    "oneLiner": "毎日、GitHub で話題のリポジトリを集めます。X のネタ、学習、技術調査に使えます。",
+    "body": "作者の自用テンプレートです。投稿の自動発信ではなく、材料の収集が中心です。"
+  },
+  "Loekv1uecl26wWW0lNyfR": {
+    "title": "Subscription cleaner",
+    "oneLiner": "招待メールと請求からサブスクを集め、未使用や重複を印します。止めるのは許可後です。",
+    "body": "カード明細と最終ログインも照合し、道具、担当、最終ログイン、月額、残す・まとめる・切る、を出します。"
+  },
+  "yXsqmCaODNkTEwtIbiXxe": {
+    "title": "AE deal bot",
+    "oneLiner": "MEDDPICC が薄い案件を採点し、アカウントを調べ、次の一手をコーチします。",
+    "body": "決裁者マップが薄いときに、カバレッジを描いて次の動きを出します。"
+  },
+  "7GgZtqkhyLzKKMNUa7dhd": {
+    "title": "Forge factory runner",
+    "oneLiner": "仕様が揃ったら作り、詰まったときだけ聞き、判断から学びます。",
+    "body": "ループを見張らなくても、確認済みのソフトを出すための工場ランナーです。"
+  },
+  "3iNSp9IoRCnSjh0Z6MtWZ": {
+    "title": "Agent PM",
+    "oneLiner": "agent によるソフト工場を回す、Agent PM です。",
+    "body": "実装そのものではなく、工場の進行を見る役です。"
+  },
+  "9EFVmFgQhjYKjMHAhpCWn": {
+    "title": "PickFu Insights",
+    "oneLiner": "投資する前に、実際の消費者へ調査を作り、PickFu で回して理由をまとめます。",
+    "body": "草案、実施、理由の要約、次のテスト案まで出します。推測のペルソナではありません。"
+  },
+  "0taQ6RZdkjsnOfda_A8Ie": {
+    "title": "Order tracker",
+    "oneLiner": "オンライン注文を、Grok Bot から見て管理します。",
+    "body": "Dr Eggbot で作り、orbglide Tracker MCP につないであります。注文の追跡が中心です。"
+  },
+  "zj8VKu1CnqkHCM4Na1zex": {
+    "title": "Ads manager",
+    "oneLiner": "広告の運用担当 Bot です。キャンペーンの操作を手伝います。",
+    "body": "作者が公開した ads manager / operator です。改善点のフィードバック前提の初期版です。"
+  },
+  "Pc2T7udSjGxv9pd9Spkyc": {
+    "title": "Dr.Binary",
+    "oneLiner": "リバースエンジニアリング専門の Dr.Binary です。",
+    "body": "解析向けです。一般の文章作成や運用参謀ではありません。"
+  },
+  "9nbLm_04EvjnolE9oevTT": {
+    "title": "Latch",
+    "oneLiner": "役割と実際に使う道具を書いて、Grok Bot の初期設定と接続を案内します。",
+    "body": "まだセットアップしていない人向けです。Latch がコネクタまで順に案内します。"
+  },
+  "5mReUHPYTBA6nJ2aNvlqn": {
+    "title": "Helidon Engineer",
+    "oneLiner": "Helidon 4 の SE と MP だけを見るエンジニアです。Helidon 3 の API は使いません。",
+    "body": "java-helidon skill 前提です。一つのプログラミングモデルに揃えます。"
+  },
+  "Y_R1Ya9SIzQZguGTV5NCX": {
+    "title": "The Accountant",
+    "oneLiner": "過剰なポーリング、再試行ループ、空のスタブなど、トークンの無駄を監視します。",
+    "body": "順位表と下書きだけです。削除も停止も、グループチャットも切りません。Overwatch が VM、こちらが支出です。"
+  },
+  "1-UWhTw5N6IVgOcDZHrsb": {
+    "title": "Dr Eggbot rewrite",
+    "oneLiner": "Dr Eggbot で書き直した、より汎用の Grok Bot です。",
+    "body": "作者が既存のものを Dr Eggbot に通し、用途を狭めすぎない形にしたテンプレートです。元の専門は投稿では特定していません。"
+  },
+  "Ml4ynlD6O1VT5CoYmFnEa": {
+    "title": "Token Cop",
+    "oneLiner": "Bot ごとのトークン使用を追い、高いものを印し、月を食う前に知らせます。",
+    "body": "編成の支出がノイズに埋もれないようにします。削除はしません。"
+  },
+  "pL_NCKfdF5UgZYEo-jMAx": {
+    "title": "Cheerful skeptic",
+    "oneLiner": "編成が空想に迷い込まないよう、陽気な懐疑の声を足します。",
+    "body": "賛成して膨らませる役ではありません。根拠の薄い話を止めます。"
+  },
+  "Rj9uN1lhqYP-kLpRVShG0": {
+    "title": "Tutor",
+    "oneLiner": "シラバスではなく、たとえ一つと確認一つで、考えが残るように教えます。",
+    "body": "Bot 学校ではありません。話題を指定すると、たとえと確認を出して黙ります。考えるのはあなたです。"
+  },
+  "zsxwic_IlmyavESnhLiWZ": {
+    "title": "PG Bot",
+    "oneLiner": "担当 AE のテリトリーで、接点の薄さ、Potential ARR、30日暗いアカウントを見ます。",
+    "body": "チャットは Markdown です。Slack やメールの前に確認が必要です。"
+  },
+  "GTStkB5wsoSlGx9jtdaPe": {
+    "title": "Primer",
+    "oneLiner": "Grok Bot そのものに詳しい案内役です。",
+    "body": "製品の使い方を聞くための Primer です。特定業界の実務 Bot ではありません。"
+  },
+  "DNpS1nqrBzmQ5vsx1IHn1": {
+    "title": "Rogue Bot Hunter",
+    "oneLiner": "編成の中の、勝手に動く Bot を四つの経路で探し、週次でまとめます。",
+    "body": "監視役です。週次レキャップと追跡が中心です。"
+  },
+  "0U6-QCQxUkAkj6BTi7SjL": {
+    "title": "Morning newspaper",
+    "oneLiner": "毎朝 7:10 に、テキストで届く朝刊レシピです。株価やニュース項目を足せます。",
+    "body": "基本レシピの共有です。Tesla 株、$VOO、Seahawks など、項目は自分で足せます。"
+  },
+  "LREkas8UxVGvPJ5NiO7bz": {
+    "title": "Know Enemy",
+    "oneLiner": "孫子パックの「敵を知る」側です。相手の公開情報を整理します。",
+    "body": "Know Yourself と対です。メモではなく、相手側の地図を出します。"
+  },
+  "mD27QOhXb_plMRSbsvMOv": {
+    "title": "Know Yourself",
+    "oneLiner": "孫子パックの「己を知る」側です。自分側の強みと隙を整理します。",
+    "body": "Know Enemy と対です。自分側の事実を先に揃えます。"
+  },
+  "EfBhh8nwpuGD0XNfl0eBI": {
+    "title": "AvatarMaker",
+    "oneLiner": "作った Grok Bot ごとに、同じ系統のアバターを揃えます。",
+    "body": "一度聞いて作風を固定し、正方形の肖像とプロフィール用パックを出します。粘土、フェルト、漫画、ステッカーなど複数の見た目があります。"
+  },
+  "00LpQytGgJbn3KTdUJREV": {
+    "title": "Android phone operator",
+    "oneLiner": "クラウドに資格情報を置かず、Android 本体から LinkedIn や X などの毎日の発信を動かします。",
+    "body": "トークン消費を抑え、操作はスマホ側に残します。"
+  },
+  "NuOSHSdCZPVkM78K0HkB3": {
+    "title": "Spawned dev team",
+    "oneLiner": "開発チームを生む Bot です。通信を短くし、生まれた agent はできるだけ短命にします。",
+    "body": "親 Bot が開発チームの邪魔をしないよう、生成の振る舞いと寿命をはっきりさせています。"
+  },
+  "OIwlDPggzoJ1EzGn1D-JD": {
+    "title": "Patch engineer",
+    "oneLiner": "壊れた点を伝えると、Cursor のクラウド agent がパッチと PR を持ってきます。",
+    "body": "Mac は開きません。チャットでも書きません。小さい修正は IDE に座らず済みます。大きな再設計は手元の Mac のままです。"
+  },
+  "qFHGsPu6CGtrug6Lm78rJ": {
+    "title": "LinkedIn outreach",
+    "oneLiner": "LinkedIn のアプローチを手伝う Bot です。",
+    "body": "投稿の説明は短いです。LinkedIn への連絡用途として公開されています。送信前確認の有無は出典にありません。"
+  },
+  "-sOdLVj33yh8hh7OlHogi": {
+    "title": "chief of staff",
+    "oneLiner": "学生向けの参謀です。複数の場所の情報をまとめて、次の動きにします。",
+    "body": "インターン応募、サークル、学内ツールなど、散らばった情報を一つの会話に集めます。"
+  },
+  "1HFC3QdqPtcj1FIbKf8oq": {
+    "title": "the pm",
+    "oneLiner": "学生向けの PM です。複数の課題と予定を一つの進行にまとめます。",
+    "body": "作者の学生用セットの一員です。実装ではなく、何が残っていて次に何をするかを見ます。"
+  },
+  "eSCwViGduTgMD6PiOo7jm": {
+    "title": "the j*bfinder",
+    "oneLiner": "インターンや求人の応募状況を追います。",
+    "body": "学生が散らばった応募を一つの場所で見るための Bot です。"
+  },
+  "SDLUUiG6HKwiFpGqCOAw7": {
+    "title": "ucsd programming app and t-res forms",
+    "oneLiner": "UCSD のプログラミング申請と t-res フォームを見やすくします。",
+    "body": "学生団体のイベント申請など、学内フォームを一つの流れにまとめます。"
+  },
+  "EiOdP3Fg6pHBkm3AgLbRA": {
+    "title": "Non-coder onboarding",
+    "oneLiner": "コードを書かない人向けの導入です。Hello と言うと、残りの案内をします。",
+    "body": "ChatGPT 経験がある人を想定しています。友達兼アシスタントとして、接続まで案内します。"
+  },
+  "GGnJOdH3hv321H2QES9UE": {
+    "title": "Mission Control",
+    "oneLiner": "編成の予定、判断、状態を一つのダッシュボードにします。",
+    "body": "二十のチャットを開かず、一目で回すための Mission Control です。"
+  }
+}

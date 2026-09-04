@@ -7,7 +7,11 @@ import {
   localizeBookmark,
   youtubeBookmarks,
 } from "@/data/bookmarks";
-import { chineseTeachingArticlesByViews, englishArticlesByViews } from "@/lib/articles";
+import {
+  chineseTeachingArticlesByViews,
+  englishArticlesByViews,
+  japaneseArticlesByViews,
+} from "@/lib/articles";
 import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -42,6 +46,7 @@ export default async function BookmarksPage({
   );
   const chineseArticles = chineseTeachingArticlesByViews();
   const englishArticles = englishArticlesByViews(20);
+  const japaneseArticles = japaneseArticlesByViews(20);
 
   return (
     <>
@@ -53,7 +58,11 @@ export default async function BookmarksPage({
           description: copy.intro,
           url: absoluteUrl("/bookmarks", urlLocale),
           numberOfItems:
-            github.length + youtube.length + chineseArticles.length + englishArticles.length,
+            github.length +
+            youtube.length +
+            chineseArticles.length +
+            englishArticles.length +
+            (locale === "ja" ? japaneseArticles.length : 0),
           publisher: { "@type": "Organization", name: site.name, url: site.url },
         }}
       />
@@ -62,6 +71,7 @@ export default async function BookmarksPage({
         youtube={youtube}
         chineseArticles={chineseArticles}
         englishArticles={englishArticles}
+        japaneseArticles={japaneseArticles}
       />
     </>
   );

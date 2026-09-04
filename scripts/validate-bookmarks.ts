@@ -13,7 +13,7 @@ import { metricForStory } from "../lib/x-metrics";
 
 const errors: string[] = [];
 const items = [...githubBookmarks, ...youtubeBookmarks];
-const locales: Locale[] = ["en", "zh-Hant", "zh-Hans"];
+const locales: Locale[] = ["en", "zh-Hant", "zh-Hans", "ja"];
 const xHandlePattern = /^[A-Za-z0-9_]{1,15}$/;
 const verifiedXAuthors = new Map([
   ["grok-bot-orange-book", "KinGao476942"],
@@ -114,5 +114,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Validated ${githubBookmarks.length} GitHub guides and ${youtubeBookmarks.length} YouTube tutorials in three locales.`,
+  `Validated ${githubBookmarks.length} GitHub guides and ${youtubeBookmarks.length} YouTube tutorials in four locales.`,
 );

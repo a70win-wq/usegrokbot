@@ -86,7 +86,7 @@ export function Header() {
 
         <nav
           className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-[11px] border border-line bg-elevated/70 p-1 xl:flex"
-          aria-label="Primary"
+          aria-label={t("nav.menuLabel")}
         >
           {nav.map((item) => {
             const active = isNavItemActive(item, path);

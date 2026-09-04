@@ -1,5 +1,5 @@
 import { scenarios, type Scenario } from "@/data/scenarios";
-import type { Locale } from "./types";
+import type { ChineseLocale, Locale } from "./types";
 
 export type ScenarioI18n = {
   title: string;
@@ -10,7 +10,7 @@ export type ScenarioI18n = {
   startWith: string;
 };
 
-const scenarioCopy: Record<Exclude<Locale, "en">, Record<string, ScenarioI18n>> = {
+const scenarioCopy: Record<ChineseLocale, Record<string, ScenarioI18n>> = {
   "zh-Hant": {
     inbox: {
       title: "清掉我的收件匣",
@@ -464,7 +464,7 @@ for (const locale of ["zh-Hant", "zh-Hans"] as const) {
 }
 
 export function localizeScenario(item: Scenario, locale: Locale): Scenario {
-  if (locale === "en") return item;
+  if (locale === "en" || locale === "ja") return item;
   const localized = scenarioCopy[locale][item.slug];
   if (!localized) return item;
   return {

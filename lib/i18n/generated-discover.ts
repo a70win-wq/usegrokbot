@@ -1,4 +1,5 @@
 import generated from "@/data/discover/zh.json";
+import generatedJa from "@/data/discover/ja.json";
 import type { DiscoverStory } from "@/data/discover";
 import type { DiscoverStoryI18n } from "./discover";
 import type { Locale } from "./types";
@@ -25,8 +26,11 @@ export type GeneratedStoryCopy = Partial<
 type GeneratedFile = Record<string, { "zh-Hant"?: GeneratedStoryCopy; "zh-Hans"?: GeneratedStoryCopy }>;
 
 const file = generated as GeneratedFile;
+const jaFile = generatedJa as Record<string, GeneratedStoryCopy>;
 
-const howItWorks: Record<Exclude<Locale, "en">, Record<string, string>> = {
+export type DiscoverCopyLocale = Exclude<Locale, "en">;
+
+const howItWorks: Record<DiscoverCopyLocale, Record<string, string>> = {
   "zh-Hant": {
     "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.":
       "UseGrokBot 收錄了這則公開 X 貼文。我們保留原帖連結，沒有在這裡重跑這個 Bot。",
@@ -51,9 +55,21 @@ const howItWorks: Record<Exclude<Locale, "en">, Record<string, string>> = {
     "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.":
       "这个公开案例来自 awesome-grok-bot Field Cases 索引。UseGrokBot 保留原帖链接，没有在这里重跑这个 Bot。",
   },
+  ja: {
+    "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.":
+      "UseGrokBot は、この公開 X 投稿を収録しています。元の投稿リンクは残し、この Bot はこちらでは動かし直していません。",
+    "This public X post is a first-person Grok Bot case. UseGrokBot keeps the original permalink and did not re-run this Bot.":
+      "これは、本人が書いた公開の Grok Bot 事例です。UseGrokBot は元の投稿リンクを残し、この Bot はこちらでは動かし直していません。",
+    "Elon Musk reposted or quoted this original Grok Bot post. UseGrokBot keeps the original X permalink and did not re-run this Bot.":
+      "Elon Musk が転載または引用した、元の Grok Bot 投稿です。UseGrokBot は元の X リンクを残し、この Bot はこちらでは動かし直していません。",
+    "This public X Article / long-form write-up is a Grok Bot case. UseGrokBot keeps the original permalink and did not re-run this Bot.":
+      "これは公開の X 長文による Grok Bot 事例です。UseGrokBot は元のリンクを残し、この Bot はこちらでは動かし直していません。",
+    "This public case was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot keeps the original X permalink and did not re-run this Bot.":
+      "この公開事例は awesome-grok-bot Field Cases の索引から見つけました。UseGrokBot は元の X リンクを残し、この Bot はこちらでは動かし直していません。",
+  },
 };
 
-const whyUseful: Record<Exclude<Locale, "en">, Record<string, string>> = {
+const whyUseful: Record<DiscoverCopyLocale, Record<string, string>> = {
   "zh-Hant": {
     "A public example of someone handing work to Grok Bot, kept here with attribution.":
       "有人把工作交給 Grok Bot 的公開例子，這裡保留出處。",
@@ -70,9 +86,17 @@ const whyUseful: Record<Exclude<Locale, "en">, Record<string, string>> = {
     "It is a public Grok Bot post Elon Musk boosted. The card opens the original author, not Elon's repost.":
       "这是 Elon Musk 推过的公开 Grok Bot 帖子。卡片打开原作者，不是 Elon 的转发。",
   },
+  ja: {
+    "A public example of someone handing work to Grok Bot, kept here with attribution.":
+      "誰かが Grok Bot に任せた公開の例です。出典はここに残しています。",
+    "It is a concrete public example of work being handed to Grok Bot, with the original source kept for context.":
+      "Grok Bot に任せた具体的な公開例です。元の投稿リンクはページに残しています。",
+    "It is a public Grok Bot post Elon Musk boosted. The card opens the original author, not Elon's repost.":
+      "Elon Musk が広めた公開の Grok Bot 投稿です。カードは原作者を開き、Elon の転載ではありません。",
+  },
 };
 
-const whyItMatters: Record<Exclude<Locale, "en">, Record<string, string>> = {
+const whyItMatters: Record<DiscoverCopyLocale, Record<string, string>> = {
   "zh-Hant": {
     "The original X post is the source. This card is a short curator summary, not a reprint of the thread.":
       "原始 X 貼文才是來源。這張卡是簡短整理，不是把整串貼文重印一次。",
@@ -93,9 +117,19 @@ const whyItMatters: Record<Exclude<Locale, "en">, Record<string, string>> = {
     "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.":
       "索引摘要是 CC0；链接的 X 帖子仍是原作者来源。这份后备整理刻意不加来源没有的说法。",
   },
+  ja: {
+    "The original X post is the source. This card is a short curator summary, not a reprint of the thread.":
+      "出典は元の X 投稿です。このカードは短い整理であり、スレッドの再掲ではありません。",
+    "The linked X post remains the original author's source. This card only restates what is already public and does not add claims we did not see.":
+      "リンク先の X 投稿が原作者の出典です。このカードは公開済みの内容だけを言い直し、見ていない主張は足しません。",
+    "The Elon liked filter only includes original posts from a Grok Bot search of Elon reposts and quotes. No authors, handles, or results were invented.":
+      "「Elon が推した」は、Elon の転載・引用を Grok Bot で探し、当たった原投稿だけを収めています。作者、アカウント、結果の捏造はありません。",
+    "The source-index summary is CC0, while the linked X post remains the original author's source. This fallback deliberately avoids adding claims that are not supported by the source.":
+      "索引の要約は CC0 です。リンク先の X 投稿は原作者の出典のままです。出典にない主張は、この予備文では足していません。",
+  },
 };
 
-const usefulFor: Record<Exclude<Locale, "en">, Record<string, string>> = {
+const usefulFor: Record<DiscoverCopyLocale, Record<string, string>> = {
   "zh-Hant": {
     "Operators / Grok Bot users": "營運 / Grok Bot 使用者",
     "Developers / Engineering teams": "開發者 / 工程團隊",
@@ -114,9 +148,18 @@ const usefulFor: Record<Exclude<Locale, "en">, Record<string, string>> = {
     "Marketers / Founders": "营销 / 创始人",
     "Sales teams / Founders": "销售 / 创始人",
   },
+  ja: {
+    "Operators / Grok Bot users": "運営 / Grok Bot を使う人",
+    "Developers / Engineering teams": "開発者 / エンジニアチーム",
+    "People exploring personal automation / Grok Bot users": "自分用の自動化 / Grok Bot を使う人",
+    "Researchers / Operators": "調べ物 / 運営",
+    "Creators / Content teams": "作り手 / コンテンツチーム",
+    "Marketers / Founders": "集客 / 創業者",
+    "Sales teams / Founders": "営業 / 創業者",
+  },
 };
 
-const who: Record<Exclude<Locale, "en">, Record<string, string>> = {
+const who: Record<DiscoverCopyLocale, Record<string, string>> = {
   "zh-Hant": {
     Operators: "營運人員",
     "Grok Bot users": "Grok Bot 使用者",
@@ -143,13 +186,27 @@ const who: Record<Exclude<Locale, "en">, Record<string, string>> = {
     Founders: "创始人",
     "Sales teams": "销售团队",
   },
+  ja: {
+    Operators: "運営する人",
+    "Grok Bot users": "Grok Bot を使う人",
+    Developers: "開発者",
+    "Engineering teams": "エンジニアチーム",
+    "People exploring personal automation": "自分用の自動化を試したい人",
+    Researchers: "調べ物をする人",
+    Creators: "作り手",
+    "Content teams": "コンテンツチーム",
+    Marketers: "集客をする人",
+    Founders: "創業者",
+    "Sales teams": "営業チーム",
+  },
 };
 
-export function generatedCopyFor(slug: string, locale: Exclude<Locale, "en">): GeneratedStoryCopy | undefined {
+export function generatedCopyFor(slug: string, locale: DiscoverCopyLocale): GeneratedStoryCopy | undefined {
+  if (locale === "ja") return jaFile[slug];
   return file[slug]?.[locale];
 }
 
-export function applyDiscoverTemplates(story: DiscoverStory, locale: Exclude<Locale, "en">): Partial<DiscoverStory> {
+export function applyDiscoverTemplates(story: DiscoverStory, locale: DiscoverCopyLocale): Partial<DiscoverStory> {
   const next: Partial<DiscoverStory> = {};
   const how = howItWorks[locale][story.howItWorks];
   if (how) next.howItWorks = how;

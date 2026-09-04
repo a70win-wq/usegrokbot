@@ -67,6 +67,7 @@ const FOLLOW_ACCOUNTS = [
       en: "Official product account",
       "zh-Hant": "官方產品帳號",
       "zh-Hans": "官方产品账号",
+      ja: "公式プロダクトアカウント",
     },
   },
   {
@@ -76,6 +77,7 @@ const FOLLOW_ACCOUNTS = [
       en: "Building Grok Bot",
       "zh-Hant": "參與建立 Grok Bot",
       "zh-Hans": "参与打造 Grok Bot",
+      ja: "Grok Bot を作っています",
     },
   },
   {
@@ -85,6 +87,7 @@ const FOLLOW_ACCOUNTS = [
       en: "Grok Bot team",
       "zh-Hant": "Grok Bot 團隊",
       "zh-Hans": "Grok Bot 团队",
+      ja: "Grok Bot チーム",
     },
   },
   {
@@ -94,6 +97,7 @@ const FOLLOW_ACCOUNTS = [
       en: "SpaceXAI",
       "zh-Hant": "SpaceXAI 團隊",
       "zh-Hans": "SpaceXAI 团队",
+      ja: "SpaceXAI チーム",
     },
   },
 ] as const;

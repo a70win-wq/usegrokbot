@@ -47,3 +47,11 @@ export function chineseTeachingArticlesByViews(limit?: number) {
   const ranked = rankArticleStories(chineseTeachingArticleStories(), { by: "views" });
   return typeof limit === "number" ? ranked.slice(0, limit) : ranked;
 }
+
+export function japaneseArticlesByViews(limit?: number) {
+  const japanese = articleLibraryStories().filter(
+    (story) => storyContentLanguage(story) === "ja",
+  );
+  const ranked = rankArticleStories(japanese, { by: "views" });
+  return typeof limit === "number" ? ranked.slice(0, limit) : ranked;
+}

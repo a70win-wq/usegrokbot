@@ -4,7 +4,7 @@ import { localizeDiscoverStory } from "../lib/i18n/discover";
 import type { Locale } from "../lib/i18n/types";
 import { buildPromptFromCase, defaultCaseSchedule } from "../lib/prompts/from-discover";
 
-const locales: Locale[] = ["en", "zh-Hant", "zh-Hans"];
+const locales: Locale[] = ["en", "zh-Hant", "zh-Hans", "ja"];
 const promptMarkers: Record<Locale, string[]> = {
   en: [
     "Set up a new bot for me",
@@ -36,11 +36,22 @@ const promptMarkers: Record<Locale, string[]> = {
     "保存",
     "未完成：",
   ],
+  ja: [
+    "新しい Bot",
+    "必要な接続",
+    "読み取り専用",
+    "承認",
+    "参考情報",
+    "安全ルール",
+    "保存",
+    "未完了：",
+  ],
 };
 const draftOnlyMarkers: Record<Locale, string> = {
   en: "permanently blocked for this prompt",
   "zh-Hant": "在這份提示詞永久禁止",
   "zh-Hans": "在这份提示词永久禁止",
+  ja: "すべての外部操作は禁止",
 };
 
 const generatedFailures: string[] = [];
