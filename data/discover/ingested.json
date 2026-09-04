@@ -60247,5 +60247,117 @@
     "sourceUrl": "https://x.com/bradshannon/status/2095482810060374437",
     "sourceLabel": "bradshannon on X",
     "format": "article"
+  },
+  {
+    "slug": "danielvegac-startup-services-outbound-gtm-template",
+    "title": "Startup services outbound GTM template",
+    "headline": "Shareable Grok Bot GTM template for AI services firms: finds startups, drafts Founder/CTO/CFO outreach in-owner voice, and stops before send at autonomy L1.",
+    "whatTheyDid": "Shareable Grok Bot GTM template for AI services firms: finds startups, drafts Founder/CTO/CFO outreach in-owner voice, and stops before send at autonomy L1.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Shareable Grok Bot GTM template for AI services firms: finds startups, drafts Founder/CTO/CFO outreach in-owner voice, and stops before send at autonomy L1.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "danielvegac",
+    "publishedAt": "2026-09-03",
+    "sourceUrl": "https://github.com/danielvegac/grok-bot-startup-services-outbound",
+    "sourceLabel": "danielvegac · GitHub"
+  },
+  {
+    "slug": "wess1982-echo-chief-of-staff-decisions-log",
+    "title": "Echo chief-of-staff decisions log",
+    "headline": "Dutch/English Grok Bot chief-of-staff template with decisions log (reason+outcome), feedback loop, kill switch, silent-bot detection, and bundled Searchy researcher.",
+    "whatTheyDid": "Dutch/English Grok Bot chief-of-staff template with decisions log (reason+outcome), feedback loop, kill switch, silent-bot detection, and bundled Searchy researcher.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Dutch/English Grok Bot chief-of-staff template with decisions log (reason+outcome), feedback loop, kill switch, silent-bot detection, and bundled Searchy researcher.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "WeSs1982",
+    "publishedAt": "2026-09-03",
+    "sourceUrl": "https://github.com/WeSs1982/echo-chief-of-staff",
+    "sourceLabel": "WeSs1982 · GitHub"
+  },
+  {
+    "slug": "p10ns11y-botify-shareable-grok-bot-templates",
+    "title": "botify shareable Grok Bot templates",
+    "headline": "Shareable Grok Bot templates that fuse p10ns11y plugins with high-leverage skills into ready agent packs rather than a raw skills dump.",
+    "whatTheyDid": "Shareable Grok Bot templates that fuse p10ns11y plugins with high-leverage skills into ready agent packs rather than a raw skills dump.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Shareable Grok Bot templates that fuse p10ns11y plugins with high-leverage skills into ready agent packs rather than a raw skills dump.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "p10ns11y",
+    "publishedAt": "2026-09-03",
+    "sourceUrl": "https://github.com/p10ns11y/botify",
+    "sourceLabel": "p10ns11y · GitHub"
+  },
+  {
+    "slug": "coolak-supergrok-heavy-policy-denied-evidence-hub",
+    "title": "SuperGrok Heavy policy_denied evidence hub",
+    "headline": "Privacy-sanitized public evidence hub for an unresolved SuperGrok Heavy to Cursor Grok Bot linking failure that returns policy_denied on a paid feature path.",
+    "whatTheyDid": "Privacy-sanitized public evidence hub for an unresolved SuperGrok Heavy to Cursor Grok Bot linking failure that returns policy_denied on a paid feature path.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Privacy-sanitized public evidence hub for an unresolved SuperGrok Heavy to Cursor Grok Bot linking failure that returns policy_denied on a paid feature path.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "COOLak",
+    "publishedAt": "2026-09-04",
+    "sourceUrl": "https://github.com/COOLak/cursor-grok-bot-policy-denied",
+    "sourceLabel": "COOLak · GitHub"
   }
 ]

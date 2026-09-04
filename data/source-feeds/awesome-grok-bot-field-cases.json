@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 40,
+    "total": 44,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 35,
+    "alreadyIngested": 39,
     "pending": 0
   },
   "cases": [
@@ -531,6 +531,58 @@
       "title": "UiTM calendar Grok Bot + MCP",
       "url": "https://github.com/bilauitmcuti/bot",
       "sourceSummary": "UiTM academic calendar assistant running on Grok Bot with a remote MCP server for live lecture, cuti, exam, and holiday dates.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "startup-services-outbound-gtm-template",
+      "title": "Startup services outbound GTM template",
+      "url": "https://github.com/danielvegac/grok-bot-startup-services-outbound",
+      "sourceSummary": "Shareable Grok Bot GTM template for AI services firms: finds startups, drafts Founder/CTO/CFO outreach in-owner voice, and stops before send at autonomy L1.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "echo-chief-of-staff-decisions-log",
+      "title": "Echo chief-of-staff decisions log",
+      "url": "https://github.com/WeSs1982/echo-chief-of-staff",
+      "sourceSummary": "Dutch/English Grok Bot chief-of-staff template with decisions log (reason+outcome), feedback loop, kill switch, silent-bot detection, and bundled Searchy researcher.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "botify-shareable-grok-bot-templates",
+      "title": "botify shareable Grok Bot templates",
+      "url": "https://github.com/p10ns11y/botify",
+      "sourceSummary": "Shareable Grok Bot templates that fuse p10ns11y plugins with high-leverage skills into ready agent packs rather than a raw skills dump.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "supergrok-heavy-policy-denied-evidence-hub",
+      "title": "SuperGrok Heavy policy_denied evidence hub",
+      "url": "https://github.com/COOLak/cursor-grok-bot-policy-denied",
+      "sourceSummary": "Privacy-sanitized public evidence hub for an unresolved SuperGrok Heavy to Cursor Grok Bot linking failure that returns policy_denied on a paid feature path.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
