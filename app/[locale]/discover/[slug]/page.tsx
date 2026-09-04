@@ -1,8 +1,9 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { DiscoverDetailView } from "@/components/DiscoverDetailView";
 import { JsonLd } from "@/components/JsonLd";
 import {
   discoverStories,
+  discoverStoryDestination,
   getDiscoverStory,
   getRelatedDiscoverStories,
   shouldIndexDiscoverStory,
@@ -14,7 +15,7 @@ import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
-  return discoverStories.map((story) => ({ slug: story.slug }));
+  return discoverStories.filter(shouldIndexDiscoverStory).map((story) => ({ slug: story.slug }));
 }
 
 export async function generateMetadata({
@@ -24,7 +25,7 @@ export async function generateMetadata({
 }) {
   const { locale: raw, slug } = await params;
   const story = getDiscoverStory(slug);
-  if (!story) return {};
+  if (!story || !shouldIndexDiscoverStory(story)) return {};
 
   const { urlLocale, locale } = localeFromParams(raw);
   const item = localizeDiscoverStory(story, locale);
@@ -48,6 +49,9 @@ export default async function DiscoverStoryPage({
   const { locale: raw, slug } = await params;
   const story = getDiscoverStory(slug);
   if (!story) notFound();
+  if (!shouldIndexDiscoverStory(story)) {
+    permanentRedirect(discoverStoryDestination(story));
+  }
   const { urlLocale, locale } = localeFromParams(raw);
   const item = localizeDiscoverStory(story, locale);
   const pageUrl = absoluteUrl(`/discover/${story.slug}`, urlLocale);

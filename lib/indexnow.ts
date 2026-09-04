@@ -7,16 +7,11 @@ export const INDEXNOW_KEY_LOCATION = `${site.url}/${INDEXNOW_KEY}.txt`;
 
 export const PRIORITY_PATHS = [
   "/",
-  "/categories",
+  "/use-cases",
+  "/templates",
+  "/community",
   "/articles",
-  "/categories/email",
-  "/categories/sales",
-  "/categories/marketing",
-  "/categories/research",
-  "/categories/content",
-  "/categories/coding",
-  "/categories/operations",
-  "/categories/personal",
+  "/roles",
 ] as const;
 
 export function indexNowUrls(paths: readonly string[] = PRIORITY_PATHS) {

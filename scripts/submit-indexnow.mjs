@@ -4,15 +4,15 @@ const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
 const PATHS = [
   "/",
-  "/discover",
+  "/use-cases",
+  "/templates",
+  "/community",
+  "/articles",
   "/discover/clear-email-elon",
   "/discover/week-of-hacks-nate-herk",
   "/discover/household-bots-blake-king",
   "/discover/overnight-sales-xai",
   "/discover/grok-bot-launch-bot",
-  "/categories/sales",
-  "/categories/marketing",
-  "/categories/research",
 ];
 
 const LOCALES = ["en", "zh-hk", "zh-cn"];

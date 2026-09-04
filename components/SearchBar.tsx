@@ -5,7 +5,11 @@ import { LocaleLink } from "@/components/LocaleLink";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { apps } from "@/data/apps";
-import { searchDiscoverStories, shouldIndexDiscoverStory } from "@/data/discover";
+import {
+  discoverStoryDestination,
+  searchDiscoverStories,
+  shouldIndexDiscoverStory,
+} from "@/data/discover";
 import { catalogEntry, getTemplateStory, templateCopy, templates } from "@/data/templates";
 import { topicMessageKey, topics } from "@/data/topics";
 import { verifiedUseCases } from "@/data/verified-use-cases";
@@ -104,7 +108,7 @@ export function SearchBar({
       const external = !shouldIndexDiscoverStory(item);
       return {
         localized: localizeDiscoverStory(item, locale),
-        href: external ? (item.xPostUrl ?? item.sourceUrl) : `/discover/${item.slug}`,
+        href: discoverStoryDestination(item),
         external,
       };
     });

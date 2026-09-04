@@ -1,4 +1,25 @@
 import type { NextConfig } from "next";
+import {
+  legacyPageRedirects,
+  urlReductionRedirects,
+} from "./lib/url-reduction-redirects";
+
+type ConfiguredRedirects = Awaited<
+  ReturnType<NonNullable<NextConfig["redirects"]>>
+>;
+
+export function configuredRedirects(): ConfiguredRedirects {
+  return [
+    {
+      source: "/:path*",
+      has: [{ type: "host", value: "www.usegrokbot.com" }],
+      destination: "https://usegrokbot.com/:path*",
+      permanent: true,
+    },
+    ...legacyPageRedirects(),
+    ...urlReductionRedirects(),
+  ];
+}
 
 const nextConfig: NextConfig = {
   experimental: {
@@ -23,73 +44,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.usegrokbot.com" }],
-        destination: "https://usegrokbot.com/:path*",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/official",
-        destination: "/:locale/roles",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/apps",
-        destination: "/:locale/integrations",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/apps/:slug",
-        destination: "/:locale/integrations/:slug",
-        permanent: true,
-      },
-
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/prompts",
-        destination: "/:locale",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/saved",
-        destination: "/:locale",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/discover",
-        destination: "/:locale",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/learn",
-        destination: "/:locale",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/learn/:slug",
-        destination: "/:locale",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/categories/customer-support",
-        destination: "/:locale/categories/operations",
-        permanent: true,
-      },
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/categories/hr",
-        destination: "/:locale/categories/operations",
-        permanent: true,
-      },
-
-      {
-        source: "/:locale(en|zh-hk|zh-cn)/categories/productivity",
-        destination: "/:locale/categories/personal",
-        permanent: true,
-      },
-    ];
-  },
+  redirects: configuredRedirects,
 };
 
 export default nextConfig;

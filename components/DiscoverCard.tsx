@@ -4,7 +4,12 @@ import { AuthorAvatar } from "@/components/AuthorAvatar";
 import { ExpandablePost } from "@/components/ExpandablePost";
 import { LocaleLink } from "@/components/LocaleLink";
 import { SketchUnderline } from "@/components/SketchUnderline";
-import { isElonLiked, shouldIndexDiscoverStory, type DiscoverStory } from "@/data/discover";
+import {
+  discoverStoryDestination,
+  isElonLiked,
+  shouldIndexDiscoverStory,
+  type DiscoverStory,
+} from "@/data/discover";
 import { topicsForStory } from "@/data/topics";
 import { cn } from "@/lib/cn";
 import { formatCardDate, sameCopy } from "@/lib/format";
@@ -25,6 +30,7 @@ export function DiscoverCard({
   const originalHref = story.xPostUrl ?? story.sourceUrl;
   const originalLabel = story.xPostUrl ? t("discover.viewOnX") : t("discover.viewOriginal");
   const hasInternalDetail = shouldIndexDiscoverStory(story);
+  const detailHref = discoverStoryDestination(story);
   const labels = topicsForStory(story);
   const views = metricForStory(story)?.views;
   const heading = featured ? item.headline : item.title;
@@ -84,13 +90,13 @@ export function DiscoverCard({
           )}
         >
           {hasInternalDetail ? (
-            <LocaleLink href={`/discover/${story.slug}`}>{heading}</LocaleLink>
+            <LocaleLink href={detailHref}>{heading}</LocaleLink>
           ) : (
             <a
-              href={originalHref}
+              href={detailHref}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(event) => openExternalUrl(originalHref, event)}
+              onClick={(event) => openExternalUrl(detailHref, event)}
             >
               {heading}
             </a>

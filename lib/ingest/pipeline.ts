@@ -1,4 +1,8 @@
-import { discoverStories, type DiscoverStory } from "@/data/discover";
+import {
+  discoverStories,
+  discoverStoryDestination,
+  type DiscoverStory,
+} from "@/data/discover";
 import { extractCase } from "./extract";
 import { fallbackExtract } from "./fallback";
 import { fetchXPost } from "./fetch-post";
@@ -71,7 +75,12 @@ export async function ingestUseCase(input: IngestInput): Promise<IngestResult> {
   try {
     const published = await publishStory(story);
     if (published.merged) {
-      return { status: "published", slug: story.slug, url: `/discover/${story.slug}`, prUrl: published.prUrl };
+      return {
+        status: "published",
+        slug: story.slug,
+        url: discoverStoryDestination(story),
+        prUrl: published.prUrl,
+      };
     }
     return { status: "queued", slug: story.slug, prUrl: published.prUrl };
   } catch (error) {

@@ -1,6 +1,7 @@
 import ingestedStories from "./discover/ingested.json";
 import elonLikedFile from "./discover/elon-liked.json";
 import { appSearchText } from "./apps";
+import { retainedDiscoverSlugSet } from "./retained-discover";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { storyMatchesTopic, type TopicSlug } from "./topics";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
@@ -1220,8 +1221,6 @@ const curatedStories: DiscoverStory[] = [
   },
 ];
 
-const curatedSlugs = new Set(curatedStories.map((story) => story.slug));
-
 export const discoverStories: DiscoverStory[] = [
   ...curatedStories,
   ...(ingestedStories as DiscoverStory[]),
@@ -1396,10 +1395,13 @@ export function isThinDiscoverStory(story: DiscoverStory) {
 }
 
 export function shouldIndexDiscoverStory(story: DiscoverStory) {
-  if (curatedSlugs.has(story.slug)) return true;
-  if (story.featured || story.tested || story.source === "official") return true;
-  if (isElonLiked(story)) return true;
-  return !isThinDiscoverStory(story);
+  return retainedDiscoverSlugSet.has(story.slug);
+}
+
+export function discoverStoryDestination(story: DiscoverStory) {
+  return shouldIndexDiscoverStory(story)
+    ? `/discover/${story.slug}`
+    : (story.xPostUrl ?? story.sourceUrl);
 }
 
 function elonBoostRank(story: DiscoverStory) {

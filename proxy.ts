@@ -44,11 +44,20 @@ function apexRedirect(request: NextRequest) {
   return NextResponse.redirect(url, 301);
 }
 
-export function proxy(request: NextRequest) {
+const DISCOVER_DETAIL_PATH = /^\/(?:(?:en|zh-hk|zh-cn)\/)?discover\/[^/]+\/?$/;
+
+export async function proxy(request: NextRequest) {
   const hostRedirect = apexRedirect(request);
   if (hostRedirect) return hostRedirect;
 
   const { pathname } = request.nextUrl;
+  if (DISCOVER_DETAIL_PATH.test(pathname)) {
+    const { retiredDiscoverDestination } = await import("@/lib/retired-discover-redirects");
+    const retiredDestination = retiredDiscoverDestination(pathname);
+    if (retiredDestination) {
+      return NextResponse.redirect(new URL(retiredDestination), 308);
+    }
+  }
   const last = pathname.split("/").filter(Boolean).pop() ?? "";
 
   if (pathname.startsWith("/_next") || pathname.startsWith("/api") || SKIP.has(last) || /\.[a-zA-Z0-9]+$/.test(last)) {

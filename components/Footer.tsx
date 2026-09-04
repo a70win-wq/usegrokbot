@@ -14,7 +14,6 @@ export function Footer({ stars }: { stars?: number | null }) {
     { href: "/use-cases", label: t("nav.useCases") },
     { href: "/templates", label: t("nav.templates") },
     { href: "/roles", label: t("nav.official") },
-    { href: "/categories", label: t("nav.categories") },
     { href: "/community", label: t("trust.community") },
     { href: "/articles", label: t("nav.articles") },
     { href: "/submit", label: t("nav.submitShort") },

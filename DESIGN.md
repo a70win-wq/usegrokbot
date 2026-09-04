@@ -353,12 +353,19 @@ Then, in this order:
 5. What you’ll get
 6. You may also like (3–4 cards)
 
-### `/categories/[slug]`, `/apps/[slug]`
+### Homepage `?topic` / `?app` filters
 
-Same listing organism as `/use-cases`, pre-filtered. Unique H1:
+Categories and apps are homepage filters, not standalone listing pages.
+
+- Topic: `/?topic=sales`
+- App: `/?app=gmail`
+
+Same listing organism as the homepage Discover feed, pre-filtered. Unique H1 can stay on the homepage:
 
 - “Grok Bot workflows for sales”
 - “Best Grok Bot workflows for Gmail”
+
+Old `/categories/[slug]`, `/integrations/[slug]`, and `/apps/[slug]` URLs permanently redirect to those homepage filters.
 
 ### `/prompts`
 

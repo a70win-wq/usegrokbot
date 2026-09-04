@@ -9,47 +9,58 @@ Locales: /en /zh-hk /zh-cn
 
 - https://usegrokbot.com/en
 - https://usegrokbot.com/en/use-cases
-- https://usegrokbot.com/en/use-cases/inbox
-- https://usegrokbot.com/en/categories
-- https://usegrokbot.com/en/categories/email
+- https://usegrokbot.com/en/use-cases/shared-bot-wiki
+- https://usegrokbot.com/en/templates
+- https://usegrokbot.com/en/community
 - https://usegrokbot.com/en/articles
 - https://usegrokbot.com/sitemap.xml
 
 ## Use cases
 
 - https://usegrokbot.com/en/use-cases
-- https://usegrokbot.com/en/use-cases/inbox
-- https://usegrokbot.com/en/use-cases/briefing
-- https://usegrokbot.com/en/use-cases/coding
-- https://usegrokbot.com/en/use-cases/meetings
-- https://usegrokbot.com/en/use-cases/content
-- https://usegrokbot.com/en/use-cases/sales
-- https://usegrokbot.com/en/use-cases/research
-- https://usegrokbot.com/en/use-cases/shopping
-- https://usegrokbot.com/en/use-cases/expenses
-- https://usegrokbot.com/en/use-cases/recruiting
-- https://usegrokbot.com/en/use-cases/support
-- https://usegrokbot.com/en/use-cases/hardware
-- https://usegrokbot.com/en/use-cases/notes
-- https://usegrokbot.com/en/use-cases/stock
-- https://usegrokbot.com/en/use-cases/life
-- https://usegrokbot.com/en/use-cases/family
-- https://usegrokbot.com/en/use-cases/travel
-- https://usegrokbot.com/en/use-cases/competitors
-- https://usegrokbot.com/en/use-cases/games
-- https://usegrokbot.com/en/use-cases/decks
-- https://usegrokbot.com/en/use-cases/vendor
-- https://usegrokbot.com/en/use-cases/subscriptions
-- https://usegrokbot.com/en/use-cases/seo
-- https://usegrokbot.com/en/use-cases/product
+- https://usegrokbot.com/en/use-cases/shared-bot-wiki
+- https://usegrokbot.com/en/use-cases/lease-pdf-review
+- https://usegrokbot.com/en/use-cases/digital-clutter-cleanup
+- https://usegrokbot.com/en/use-cases/bot-team-watcher
+- https://usegrokbot.com/en/use-cases/live-page-qa
+- https://usegrokbot.com/en/use-cases/amazon-cart-builder
+- https://usegrokbot.com/en/use-cases/home-chef
+- https://usegrokbot.com/en/use-cases/photo-reminder-board
+- https://usegrokbot.com/en/use-cases/x-following-cleanup
+- https://usegrokbot.com/en/use-cases/rent-payment-check
+- https://usegrokbot.com/en/use-cases/best-tools-outreach
+- https://usegrokbot.com/en/use-cases/army-pubs-research
+- https://usegrokbot.com/en/use-cases/job-feed-watcher
+- https://usegrokbot.com/en/use-cases/draft-only-communications
+- https://usegrokbot.com/en/use-cases/side-by-side-video
+- https://usegrokbot.com/en/use-cases/bug-to-pull-request
+- https://usegrokbot.com/en/use-cases/credit-card-benefits-audit
+- https://usegrokbot.com/en/use-cases/money-leak-recovery
+- https://usegrokbot.com/en/use-cases/local-contractor-quotes
+- https://usegrokbot.com/en/use-cases/bookmarks-to-post
+- https://usegrokbot.com/en/use-cases/bulk-patent-pdfs
+- https://usegrokbot.com/en/use-cases/github-canary
+- https://usegrokbot.com/en/use-cases/weekly-receipt-reconciliation
+- https://usegrokbot.com/en/use-cases/family-sports-calendar
+- https://usegrokbot.com/en/use-cases/resume-interview-prep
+- https://usegrokbot.com/en/use-cases/lenny-archive-advisor
+- https://usegrokbot.com/en/use-cases/remote-mower
+- https://usegrokbot.com/en/use-cases/founder-org-chart
 
-## Categories
+## Templates
 
-- https://usegrokbot.com/en/categories/email
-- https://usegrokbot.com/en/categories/sales
-- https://usegrokbot.com/en/categories/marketing
-- https://usegrokbot.com/en/categories/research
-- https://usegrokbot.com/en/categories/content
-- https://usegrokbot.com/en/categories/coding
-- https://usegrokbot.com/en/categories/operations
-- https://usegrokbot.com/en/categories/personal
+- https://usegrokbot.com/en/templates
+- https://usegrokbot.com/en/templates/teams
+- https://usegrokbot.com/en/templates/all
+
+## Community
+
+- https://usegrokbot.com/en/community
+
+## Discover
+
+- https://usegrokbot.com/en/discover/clear-email-elon
+- https://usegrokbot.com/en/discover/week-of-hacks-nate-herk
+- https://usegrokbot.com/en/discover/household-bots-blake-king
+- https://usegrokbot.com/en/discover/overnight-sales-xai
+- https://usegrokbot.com/en/discover/grok-bot-launch-bot

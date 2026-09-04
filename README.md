@@ -6,9 +6,9 @@
 
 <p align="center">
   <a href="https://usegrokbot.com/en">Live site</a> ·
-  <a href="https://usegrokbot.com/en/discover">Discover</a> ·
   <a href="https://usegrokbot.com/en/use-cases">Workflows</a> ·
-  <a href="https://usegrokbot.com/en/integrations">Integrations</a> ·
+  <a href="https://usegrokbot.com/en/templates">Templates</a> ·
+  <a href="https://usegrokbot.com/en/community">Community</a> ·
   <a href="https://usegrokbot.com/en/submit">Submit a use case</a>
 </p>
 
