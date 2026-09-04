@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo } from "react";
+import { usePathname } from "next/navigation";
+import { createContext, useCallback, useContext, useLayoutEffect, useMemo } from "react";
 import { THEME_STORAGE_KEY } from "@/lib/theme-script";
 
 export type Theme = "light" | "dark";
@@ -18,6 +19,16 @@ export function applyTheme(theme: Theme) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  useLayoutEffect(() => {
+    let stored: Theme = "light";
+    try {
+      stored = window.localStorage.getItem(THEME_STORAGE_KEY) === "dark" ? "dark" : "light";
+    } catch {}
+    applyTheme(stored);
+  }, [pathname]);
+
   const setTheme = useCallback((next: Theme) => {
     window.localStorage.setItem(THEME_STORAGE_KEY, next);
     applyTheme(next);
