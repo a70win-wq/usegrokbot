@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { IdentityMascot } from "@/components/IdentityMascot";
+import { AnimatedCountLabel } from "@/components/PostCensus";
 import { TemplatesModeNav } from "@/components/TemplatesModeNav";
 import {
   identityClusters,
-  interpolateIdentityCopy,
   localizeText,
   moreTemplateIdentities,
   templateCountForIdentity,
@@ -78,9 +78,11 @@ export function TemplatesIdentityIndex({
                             aria-hidden
                           />
                         </span>
-                        <span className="shrink-0 font-mono text-xs tabular-nums text-faint">
-                          {interpolateIdentityCopy(copy.templateCount, { n: count })}
-                        </span>
+                        <AnimatedCountLabel
+                          total={count}
+                          template={copy.templateCount}
+                          className="shrink-0 font-mono text-xs tabular-nums text-faint"
+                        />
                       </span>
                     </Link>
                   );
@@ -112,9 +114,11 @@ export function TemplatesIdentityIndex({
                     <span className="block text-[15px] font-medium">
                       {localizeText(identity.name, locale)}
                     </span>
-                    <span className="mt-1 block font-mono text-xs text-faint">
-                      {interpolateIdentityCopy(copy.templateCount, { n: count })}
-                    </span>
+                    <AnimatedCountLabel
+                      total={count}
+                      template={copy.templateCount}
+                      className="mt-1 block font-mono text-xs text-faint"
+                    />
                   </span>
                   <ArrowRight
                     className="size-3.5 shrink-0 text-faint transition-transform duration-200 group-hover:translate-x-0.5 group-hover:text-accent"

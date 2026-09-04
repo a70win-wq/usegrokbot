@@ -10,7 +10,7 @@ import { GitHubStar } from "@/components/GitHubStar";
 import { HeroBot } from "@/components/HeroBot";
 import { IdentityMascot } from "@/components/IdentityMascot";
 import { LocaleLink } from "@/components/LocaleLink";
-import { CensusNumber } from "@/components/PostCensus";
+import { AnimatedCountLabel, CensusNumber } from "@/components/PostCensus";
 import { getDiscoverStory } from "@/data/discover";
 import {
   getTemplateIdentity,
@@ -214,9 +214,11 @@ function HomeViewContent({
                 {localizeText(identity.description, locale)}
               </p>
               <div className="mt-auto flex items-end justify-between gap-3 pt-5">
-                <p className="font-mono text-[13px] font-medium text-faint">
-                  {t("home.identityTemplateCount", { n: templateCountForIdentity(identity.slug) })}
-                </p>
+                <AnimatedCountLabel
+                  total={templateCountForIdentity(identity.slug)}
+                  template={t("home.identityTemplateCount")}
+                  className="font-mono text-[13px] font-medium text-faint"
+                />
                 <ArrowUpRight aria-hidden className="size-4 shrink-0 text-faint group-hover:text-accent" />
               </div>
             </LocaleLink>
@@ -377,13 +379,10 @@ function AnimatedSignal({ total }: { total: number }) {
         className="flex flex-wrap items-baseline gap-x-1.5 text-[15px] leading-6 font-medium tracking-[-0.01em] text-mute md:text-[16px]"
       >
         <span>{before.trim()}</span>
-        <span className="inline-grid text-right text-[24px] leading-none font-medium tabular-nums md:text-[26px]">
-          <span className="invisible col-start-1 row-start-1">{formattedTotal}</span>
-          <CensusNumber
-            total={total}
-            className="col-start-1 row-start-1 justify-self-end text-[1em] leading-none"
-          />
-        </span>
+        <CensusNumber
+          total={total}
+          className="text-right text-[24px] leading-none md:text-[26px]"
+        />
         <span>{after.trim()}</span>
       </p>
       <p aria-hidden="true" className="mt-1 text-[19px] leading-7 font-medium tracking-[-0.02em] text-ink md:text-[21px]">
