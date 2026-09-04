@@ -1,4 +1,5 @@
 import { AuthorAvatar } from "@/components/AuthorAvatar";
+import { articleExternalUrl } from "@/lib/articles";
 import { formatCardDate } from "@/lib/format";
 import { localizeDiscoverStory } from "@/lib/i18n/discover";
 import type { Locale } from "@/lib/i18n/types";
@@ -16,7 +17,7 @@ export function ArticleRow({
   rank?: number;
 }) {
   const story = localizeDiscoverStory(item.story, locale);
-  const href = item.story.xPostUrl ?? item.story.sourceUrl;
+  const href = articleExternalUrl(item.story);
 
   return (
     <li>

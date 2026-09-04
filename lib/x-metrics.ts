@@ -1,5 +1,14 @@
 import metrics from "@/data/discover/x-metrics.json";
-import { articleStories, discoverStories, type DiscoverStory } from "@/data/discover";
+import {
+  articleStories,
+  discoverStories,
+  resolvedXArticleUrl,
+  xArticleIdFromUrl,
+  type DiscoverStory,
+} from "@/data/discover";
+import { chineseTutorialArticles } from "@/data/chinese-tutorial-articles";
+import { storyContentLanguage, type ArticleContentLanguage } from "@/lib/article-language";
+import type { Locale } from "@/lib/i18n/types";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
 
 export type XMetric = {
@@ -66,35 +75,113 @@ function rankedStory(story: DiscoverStory): RankedStory {
   return { story, views: metric?.views ?? 0, checkedAt: metric?.checkedAt };
 }
 
-export function articleStoriesByViews() {
-  return articleStories()
-    .map(rankedStory)
-    .sort((a, b) => {
-      if (a.views !== b.views) return b.views - a.views;
-      const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
-      if (date !== 0) return date;
-      return a.story.slug.localeCompare(b.story.slug);
-    });
+function languagePriority(language: ArticleContentLanguage, locale?: Locale) {
+  if (!locale) return 0;
+  const isChinese = language === "zh-Hant" || language === "zh-Hans";
+  if (locale === "en") {
+    if (language === "en") return 0;
+    if (isChinese) return 1;
+    return 2;
+  }
+  if (isChinese) return 0;
+  if (language === "en") return 1;
+  return 2;
 }
 
-export function topArticleStoriesByViews(limit = 20) {
-  return articleStoriesByViews().slice(0, limit);
+function isLocale(value: unknown): value is Locale {
+  return value === "en" || value === "zh-Hant" || value === "zh-Hans";
 }
 
-export function latestArticleStories(limit = 10) {
-  return articleStories()
-    .map(rankedStory)
-    .sort((a, b) => {
-      const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
-      if (date !== 0) return date;
-      if (a.views !== b.views) return b.views - a.views;
-      return a.story.slug.localeCompare(b.story.slug);
-    })
-    .slice(0, limit);
+export function parseArticleListArgs(
+  limitOrLocale?: number | Locale,
+  localeOrLimit?: number | Locale,
+  defaultLimit?: number,
+) {
+  if (isLocale(limitOrLocale)) {
+    return {
+      locale: limitOrLocale,
+      limit: typeof localeOrLimit === "number" ? localeOrLimit : defaultLimit,
+    };
+  }
+  if (typeof limitOrLocale === "number") {
+    return {
+      limit: limitOrLocale,
+      locale: isLocale(localeOrLimit) ? localeOrLimit : undefined,
+    };
+  }
+  return {
+    locale: isLocale(localeOrLimit) ? localeOrLimit : undefined,
+    limit: defaultLimit,
+  };
 }
 
-export function learnFeedStories(limit = 5) {
-  return articleStoriesByViews()
-    .slice(0, limit)
+function compareRankedStories(
+  a: RankedStory,
+  b: RankedStory,
+  locale: Locale | undefined,
+  by: "views" | "date",
+) {
+  const language =
+    languagePriority(storyContentLanguage(a.story), locale) -
+    languagePriority(storyContentLanguage(b.story), locale);
+  if (language !== 0) return language;
+  if (by === "date") {
+    const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
+    if (date !== 0) return date;
+    if (a.views !== b.views) return b.views - a.views;
+    return a.story.slug.localeCompare(b.story.slug);
+  }
+  if (a.views !== b.views) return b.views - a.views;
+  const date = b.story.publishedAt.localeCompare(a.story.publishedAt);
+  if (date !== 0) return date;
+  return a.story.slug.localeCompare(b.story.slug);
+}
+
+export function rankArticleStories(
+  stories: DiscoverStory[],
+  options: { locale?: Locale; by?: "views" | "date" } = {},
+): RankedStory[] {
+  const by = options.by ?? "views";
+  return stories.map(rankedStory).sort((a, b) => compareRankedStories(a, b, options.locale, by));
+}
+
+export function articleRankingStories() {
+  const seen = new Set<string>();
+  const stories: DiscoverStory[] = [];
+  for (const story of [...chineseTutorialArticles, ...articleStories()]) {
+    const keys = [`slug:${story.slug}`];
+    const articleId = xArticleIdFromUrl(resolvedXArticleUrl(story));
+    const tweetId = storyTweetId(story);
+    if (articleId) keys.push(`article:${articleId}`);
+    if (tweetId) keys.push(`tweet:${tweetId}`);
+    if (keys.some((key) => seen.has(key))) continue;
+    keys.forEach((key) => seen.add(key));
+    stories.push(story);
+  }
+  return stories;
+}
+
+function storiesForLocaleRanking(locale?: Locale) {
+  return locale ? articleRankingStories() : articleStories();
+}
+
+export function articleStoriesByViews(locale?: Locale) {
+  return rankArticleStories(storiesForLocaleRanking(locale), { locale, by: "views" });
+}
+
+export function topArticleStoriesByViews(limitOrLocale?: number | Locale, localeOrLimit?: number | Locale) {
+  const { limit, locale } = parseArticleListArgs(limitOrLocale, localeOrLimit, 20);
+  return articleStoriesByViews(locale).slice(0, limit ?? 20);
+}
+
+export function latestArticleStories(limitOrLocale?: number | Locale, localeOrLimit?: number | Locale) {
+  const { limit, locale } = parseArticleListArgs(limitOrLocale, localeOrLimit, 10);
+  return rankArticleStories(storiesForLocaleRanking(locale), { locale, by: "date" }).slice(0, limit ?? 10);
+}
+
+export function learnFeedStories(limitOrLocale?: number | Locale, localeOrLimit?: number | Locale) {
+  const { limit, locale } = parseArticleListArgs(limitOrLocale, localeOrLimit, 5);
+  return articleStoriesByViews(locale)
+    .slice(0, limit ?? 5)
     .map((item) => item.story);
 }

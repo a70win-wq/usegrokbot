@@ -5,6 +5,7 @@ import { retainedDiscoverSlugSet } from "./retained-discover";
 import type { AppSlug, Difficulty, Schedule } from "./types";
 import { storyMatchesTopic, type TopicSlug } from "./topics";
 import { tweetIdFromUrl } from "@/lib/ingest/x-url";
+import type { ArticleContentLanguage } from "@/lib/article-language";
 
 export const discoverCategorySlugs = [
   "sales",
@@ -72,6 +73,13 @@ export type DiscoverStory = {
   tested?: boolean;
   format?: "post" | "article";
   elonLiked?: boolean;
+  articleUrl?: string;
+  contentLanguage?: ArticleContentLanguage;
+  localizedArticleTitles?: {
+    en?: string;
+    "zh-Hant"?: string;
+    "zh-Hans"?: string;
+  };
 };
 
 const XAI_INTRO = "https://x.ai/news/introducing-grok-bot";
@@ -1356,7 +1364,7 @@ export function storiesForTopic(slug: TopicSlug) {
 export function isArticleStory(story: DiscoverStory) {
   if (story.format === "article") return true;
   if (story.format === "post") return false;
-  return looksLikeXArticleUrl(story.xPostUrl) || looksLikeXArticleUrl(story.sourceUrl);
+  return Boolean(resolvedXArticleUrl(story));
 }
 
 export function articleStories() {
@@ -1419,6 +1427,55 @@ export function looksLikeXArticleUrl(url?: string) {
   } catch {
     return /(?:x\.com|twitter\.com)\/(?:i\/)?[^/\s]+\/article\//i.test(url);
   }
+}
+
+const X_ARTICLE_IN_TEXT_RE =
+  /https?:\/\/(?:www\.)?(?:x\.com|twitter\.com)\/(i|[^/\s]+)\/article\/(\d+)/i;
+
+export function canonicalXArticleUrl(url?: string): string | undefined {
+  if (!url) return undefined;
+  try {
+    const parsed = new URL(url.trim());
+    if (!/^(www\.)?(x\.com|twitter\.com)$/i.test(parsed.hostname)) return undefined;
+    const parts = parsed.pathname.split("/").filter(Boolean);
+    const articleAt = parts.findIndex((part) => part.toLowerCase() === "article");
+    if (articleAt < 0) return undefined;
+    const id = parts[articleAt + 1];
+    if (!id || !/^\d+$/.test(id)) return undefined;
+    const rawHandle = articleAt === 0 ? "i" : parts[0];
+    const handle = !rawHandle || rawHandle.toLowerCase() === "i" ? "i" : rawHandle.replace(/^@/, "");
+    return `https://x.com/${handle}/article/${id}`;
+  } catch {
+    return extractXArticleUrl(url);
+  }
+}
+
+export function extractXArticleUrl(text?: string): string | undefined {
+  if (!text) return undefined;
+  const match = text.match(X_ARTICLE_IN_TEXT_RE);
+  if (!match) return undefined;
+  const handle = match[1].toLowerCase() === "i" ? "i" : match[1].replace(/^@/, "");
+  return `https://x.com/${handle}/article/${match[2]}`;
+}
+
+export function xArticleIdFromUrl(url?: string): string | undefined {
+  const canonical = canonicalXArticleUrl(url) ?? extractXArticleUrl(url);
+  return canonical?.match(/\/article\/(\d+)/)?.[1];
+}
+
+export function resolvedXArticleUrl(story: DiscoverStory): string | undefined {
+  return (
+    canonicalXArticleUrl(story.articleUrl) ??
+    canonicalXArticleUrl(story.xPostUrl) ??
+    canonicalXArticleUrl(story.sourceUrl) ??
+    extractXArticleUrl(story.body) ??
+    extractXArticleUrl(story.headline) ??
+    extractXArticleUrl(story.title)
+  );
+}
+
+export function articleExternalUrl(story: DiscoverStory) {
+  return resolvedXArticleUrl(story) ?? story.xPostUrl ?? story.sourceUrl;
 }
 
 export function assertUniqueDiscoverSlugs() {

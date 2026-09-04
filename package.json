@@ -18,6 +18,7 @@
     "validate:template-types": "tsx scripts/validate-template-types.ts",
     "validate:bot-teams": "tsx scripts/validate-bot-teams.ts",
     "validate:use-cases": "tsx scripts/validate-verified-use-cases.ts",
+    "validate:article-languages": "tsx scripts/validate-article-languages.ts",
     "generate:discover-redirects": "node --import tsx scripts/generate-retired-discover-redirects.ts",
     "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs",
     "ingest:awesome-grok-bot": "tsx scripts/ingest-awesome-grok-bot.ts",

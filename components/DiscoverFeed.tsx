@@ -12,9 +12,9 @@ import {
 } from "@/data/discover";
 import { topicMessageKey, topicSlugs, type TopicSlug } from "@/data/topics";
 import type { AppSlug } from "@/data/types";
+import { learnFeedStories } from "@/lib/articles";
 import { cn } from "@/lib/cn";
 import { localizeDiscoverStory, useI18n } from "@/lib/i18n";
-import { learnFeedStories } from "@/lib/x-metrics";
 
 const mobileTabs: DiscoverTab[] = ["latest", "featured", "learn"];
 
@@ -176,7 +176,7 @@ export function DiscoverFeed({
       localize: (story: Parameters<typeof localizeDiscoverStory>[0]) => localizeDiscoverStory(story, locale),
     };
     if (tab === "learn") {
-      const ranked = learnFeedStories(5);
+      const ranked = learnFeedStories(5, locale);
       const allowed = new Set(
         filterDiscoverStories(
           { query, tab: "latest", category, outcome, app: appFilter },

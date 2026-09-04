@@ -24,6 +24,7 @@ import { catalogEntry, templates } from "@/data/templates";
 import { isTopicSlug, topicMessageKey, type TopicSlug } from "@/data/topics";
 import type { AppSlug } from "@/data/types";
 import { getVerifiedUseCase } from "@/data/verified-use-cases";
+import type { RankedStory } from "@/lib/articles";
 import { useI18n } from "@/lib/i18n/locale";
 import { localizeTemplateCopy } from "@/lib/i18n/templates";
 import {
@@ -31,7 +32,6 @@ import {
   verifiedUseCasesPageCopy,
 } from "@/lib/i18n/verified-use-cases";
 import { cn } from "@/lib/cn";
-import { articleStoriesByViews } from "@/lib/x-metrics";
 
 const IDENTITY_SLUGS = [
   "x-creator",
@@ -119,18 +119,26 @@ const realUseCases = USE_CASE_SLUGS.map((slug) => {
   return useCase;
 });
 
-const popularArticles = articleStoriesByViews().slice(0, 5);
-
 export function HomeView({
   postCount,
   stars,
+  popularArticles,
 }: {
   postCount: number;
   stars?: number | null;
+  popularArticles: RankedStory[];
 }) {
   return (
-    <Suspense fallback={<HomeViewContent postCount={postCount} query="" stars={stars} />}>
-      <HomeViewFromUrl postCount={postCount} stars={stars} />
+    <Suspense
+      fallback={
+        <HomeViewContent postCount={postCount} query="" stars={stars} popularArticles={popularArticles} />
+      }
+    >
+      <HomeViewFromUrl
+        postCount={postCount}
+        stars={stars}
+        popularArticles={popularArticles}
+      />
     </Suspense>
   );
 }
@@ -138,9 +146,11 @@ export function HomeView({
 function HomeViewFromUrl({
   postCount,
   stars,
+  popularArticles,
 }: {
   postCount: number;
   stars?: number | null;
+  popularArticles: RankedStory[];
 }) {
   const searchParams = useSearchParams();
   const rawTopic = searchParams.get("topic")?.trim() ?? "";
@@ -155,6 +165,7 @@ function HomeViewFromUrl({
       topic={topic}
       app={app}
       stars={stars}
+      popularArticles={popularArticles}
     />
   );
 }
@@ -165,12 +176,14 @@ function HomeViewContent({
   topic,
   app,
   stars,
+  popularArticles,
 }: {
   postCount: number;
   query: string;
   topic?: TopicSlug;
   app?: AppSlug;
   stars?: number | null;
+  popularArticles: RankedStory[];
 }) {
   const { locale, t } = useI18n();
   const useCaseCopy = verifiedUseCasesPageCopy(locale);

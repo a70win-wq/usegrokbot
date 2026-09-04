@@ -1,11 +1,19 @@
 import { ArticlesView } from "@/components/ArticlesView";
-import { latestArticleStories, topArticleStoriesByViews } from "@/lib/x-metrics";
+import {
+  chineseTeachingArticlesByViews,
+  englishArticlesByViews,
+  latestArticleStories,
+} from "@/lib/articles";
+import { localeFromParams } from "@/lib/i18n/paths";
 
-export default function ArticlesPage() {
+export default async function ArticlesPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = localeFromParams((await params).locale);
+
   return (
     <ArticlesView
-      top={topArticleStoriesByViews(20)}
-      latest={latestArticleStories(10)}
+      chineseTutorials={chineseTeachingArticlesByViews()}
+      english={englishArticlesByViews(20)}
+      latest={latestArticleStories(10, locale)}
     />
   );
 }

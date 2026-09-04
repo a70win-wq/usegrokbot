@@ -1022,12 +1022,13 @@ const hans: Record<string, DiscoverStoryI18n> = {
 };
 
 export function localizeDiscoverStory(story: DiscoverStory, locale: Locale): DiscoverStory {
-  if (locale === "en") return story;
+  const articleTitle = story.localizedArticleTitles?.[locale];
+  if (locale === "en") return articleTitle ? { ...story, title: articleTitle } : story;
   const curated = (locale === "zh-Hant" ? hant : hans)[story.slug];
   const generated = generatedCopyFor(story.slug, locale);
   const templates = applyDiscoverTemplates(story, locale);
-  if (!curated && !generated && Object.keys(templates).length === 0) return story;
-  return { ...story, ...templates, ...generated, ...curated };
+  if (!curated && !generated && Object.keys(templates).length === 0 && !articleTitle) return story;
+  return { ...story, ...templates, ...generated, ...curated, ...(articleTitle ? { title: articleTitle } : {}) };
 }
 
 export function getDiscoverStoryI18n(slug: string, locale: Locale): DiscoverStoryI18n | undefined {

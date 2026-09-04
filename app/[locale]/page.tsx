@@ -1,6 +1,7 @@
 import { HomeView } from "@/components/HomeView";
 import { JsonLd } from "@/components/JsonLd";
 import { discoverStories } from "@/data/discover";
+import { articleStoriesByViews } from "@/lib/articles";
 import { getGithubStars } from "@/lib/github";
 import { messages } from "@/lib/i18n/messages";
 import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
@@ -56,7 +57,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           numberOfItems: discoverStories.length,
         }}
       />
-      <HomeView postCount={discoverStories.length} stars={stars} />
+      <HomeView
+        postCount={discoverStories.length}
+        stars={stars}
+        popularArticles={articleStoriesByViews(locale).slice(0, 5)}
+      />
     </>
   );
 }
