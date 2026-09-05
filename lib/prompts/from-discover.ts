@@ -327,6 +327,10 @@ function openingParagraph(
     return `帮我建立一个叫做「${args.botName}」的 Grok Bot，${trigger}，使用独立对话。带我连接 ${args.apps}，然后这样设置：${withPeriod(args.job)}${approval}先一次问我${ask}。${firstRun}然后${save}。`;
   }
 
+  if (locale === "ja") {
+    return `「${args.botName}」という新しい Bot を専用チャットに設定してください。${trigger}。${args.apps} の接続を案内し、次の内容で設定してください。${withPeriod(args.job)}${approval}${ask}をまとめて確認してください。${firstRun}その後、${save}。`;
+  }
+
   return `Set up a new bot for me called "${args.botName}" ${trigger}, in its own dedicated chat. Walk me through connecting ${args.apps}, then configure it: ${withPeriod(args.job)}${approval} Ask me ${ask}. ${firstRun} Then ${save}.`;
 }
 
@@ -347,6 +351,14 @@ function triggerPhrase(locale: Locale, schedule: Schedule) {
       "always-on": "需要时随时可用",
     }[schedule];
   }
+  if (locale === "ja") {
+    return {
+      "one-time": "必要なときに実行できます",
+      daily: "毎日実行します",
+      weekly: "毎週実行します",
+      "always-on": "必要なときにいつでも使えます",
+    }[schedule];
+  }
   return {
     "one-time": "I can trigger when I need this job",
     daily: "that runs daily",
@@ -361,6 +373,7 @@ function askPhrase(locale: Locale) {
     "which accounts are in scope, how far back to look, where the result should go, and what must never be touched",
     "可以用哪些帳戶、要查多久以前、結果放在哪裡，以及有什麼絕對不能碰",
     "可以用哪些账户、要查多久以前、结果放在哪里，以及有什么绝对不能碰",
+    "対象のアカウント、確認する期間、結果の保存先、触れてはいけないもの",
   );
 }
 
@@ -370,6 +383,7 @@ function firstRunPhrase(locale: Locale) {
     "The first run must be a read-only dry run with me watching: show the plan, what you found, and the proposed actions, and do not change anything.",
     "第一次必須做只讀試跑，讓我看着：先顯示計劃、找到什麼、準備做什麼，期間不要改任何東西。",
     "第一次必须做只读试跑，让我看着：先显示计划、找到什么、准备做什么，期间不要改任何东西。",
+    "初回は私が確認できる読み取り専用の試し実行にし、計画、見つけた内容、予定する操作を見せ、何も変更しないでください。",
   );
 }
 
@@ -390,6 +404,15 @@ function savePhrase(locale: Locale, schedule: Schedule) {
       "always-on": "在我说「保存」之后保存它；如果平台不能一直开着，就直说并给我手动做法",
     }[schedule];
   }
+  if (locale === "ja") {
+    return {
+      "one-time": "私が「保存」と言ったあと、必要なときに使える Bot として保存してください",
+      daily: "私が「保存」と言ったあと、確認した時刻に毎日実行するよう保存してください",
+      weekly: "私が「保存」と言ったあと、確認した時刻に毎週実行するよう保存してください",
+      "always-on":
+        "私が「保存」と言ったあと保存してください。常時実行できない場合は、そのことを伝えて手動の手順を示してください",
+    }[schedule];
+  }
   return {
     "one-time": "save it for on-demand use after I say \"save it\"",
     daily: "save it for a daily run at a time I confirm after I say \"save it\"",
@@ -406,6 +429,7 @@ function inlineApproval(locale: Locale, mode: ApprovalMode) {
       " Read, analyze and draft only — never make an external change, even if I later say yes.",
       "只可以查看、分析和寫草稿，永遠不要改外部資料，即使我後來說可以也不行。",
       "只可以查看、分析和写草稿，永远不要改外部资料，即使我后来说可以也不行。",
+      "読む、分析する、下書きするだけにし、あとで承認しても外部への変更は行わないでください。",
     );
   }
   return t3(
@@ -413,6 +437,7 @@ function inlineApproval(locale: Locale, mode: ApprovalMode) {
     " Show me the full list and require my approval before sending, publishing, deleting, paying or changing anything.",
     "任何發送、發布、刪除、付款或改設定的動作，都要先把完整清單給我看，等我核准。",
     "任何发送、发布、删除、付款或改设置的动作，都要先把完整清单给我看，等我核准。",
+    "送信、公開、削除、支払い、変更の前に完全な一覧を見せ、承認を得てください。",
   );
 }
 
@@ -424,6 +449,7 @@ function configureJob(source: CasePromptSource, locale: Locale) {
     "Stay inside the accounts and date range I confirm.",
     "只留在我確認的帳戶和日期範圍內。",
     "只留在我确认的账户和日期范围内。",
+    "確認したアカウントと期間の範囲だけを扱ってください。",
   );
 
   const job = fromCase || playbook;
@@ -458,12 +484,14 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
             "review relevant mail, research the people I should contact, and draft outreach or replies in my voice. Keep every message as a draft",
             "查看相關郵件，研究我該聯絡的人，並用我的語氣起草外聯或回覆。所有郵件都只先做草稿",
             "查看相关邮件，研究我该联系的人，并用我的语气起草外联或回复。所有邮件都只先做草稿",
+            "関係するメールを確認し、連絡すべき人を調べ、私の文体で案内文や返信を下書きしてください。すべて下書きのまま残してください",
           )
         : t3(
             locale,
             "review my inbox, identify newsletters, promotions, stale threads and other mail I no longer need, group them, and prepare delete, archive and unsubscribe actions",
             "檢查我的收件箱，找出電子報、促銷、過時對話和其他不再需要的郵件，分類後準備刪除、封存和取消訂閱",
             "检查我的收件箱，找出电子报、促销、过时对话和其他不再需要的邮件，分类后准备删除、归档和取消订阅",
+            "受信箱を確認し、ニュースレター、広告、古いスレッド、不要なメールを見つけて分類し、削除、保管、配信停止の候補を用意してください",
           ),
     );
   }
@@ -474,6 +502,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "research the people or companies I name and draft LinkedIn messages in my voice, without sending them",
         "研究我指定的人或公司，用我的語氣起草 LinkedIn 訊息，但不要送出",
         "研究我指定的人或公司，用我的语气起草 LinkedIn 消息，但不要送出",
+        "指定した人や会社を調べ、私の文体で LinkedIn メッセージを下書きしてください。送信はしないでください",
       ),
     );
   }
@@ -484,6 +513,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "review the X account and draft posts or replies I can edit, without posting, liking or replying from my account",
         "查看 X 帳戶，起草我可以修改的貼文或回覆，但不要代我發佈、按讚或回覆",
         "查看 X 账户，起草我可以修改的帖文或回复，但不要代我发布、点赞或回复",
+        "X アカウントを確認し、私が編集できる投稿や返信を下書きしてください。私のアカウントから投稿、いいね、返信はしないでください",
       ),
     );
   }
@@ -494,6 +524,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "check my calendar for the job I describe and propose times or holds, without creating, moving or deleting events until I approve",
         "按我說的工作查看日曆，提出時間或暫留，未核准前不要新增、移動或刪除行程",
         "按我说的工作查看日历，提出时间或暂留，未核准前不要新增、移动或删除行程",
+        "説明した用件に合わせてカレンダーを確認し、候補日時や仮予定を提案してください。承認前は予定の作成、移動、削除をしないでください",
       ),
     );
   }
@@ -504,6 +535,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "inspect the repository, explain what you found, and propose a patch or pull request I can review. Do not commit, merge or deploy until I approve",
         "檢查程式庫，說明你找到什麼，並提出我可以審查的修改或 pull request。未核准前不要提交、合併或部署",
         "检查代码库，说明你找到什么，并提出我可以审查的修改或 pull request。未核准前不要提交、合并或部署",
+        "リポジトリを確認し、見つけたことを説明し、確認できる修正案または pull request を提案してください。承認前はコミット、統合、公開をしないでください",
       ),
     );
   }
@@ -514,6 +546,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "read the channels I allow and draft updates there, without posting until I approve",
         "閱讀我允許的頻道並起草更新，未核准前不要發佈",
         "阅读我允许的频道并起草更新，未核准前不要发布",
+        "許可したチャンネルだけを読み、更新文を下書きしてください。承認前は投稿しないでください",
       ),
     );
   }
@@ -524,6 +557,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "review the videos, comments or channel I name and draft the work, without publishing or replying until I approve",
         "查看我指定的影片、留言或頻道並起草結果，未核准前不要發佈或回覆",
         "查看我指定的视频、评论或频道并起草结果，未核准前不要发布或回复",
+        "指定した動画、コメント、チャンネルを確認し、必要な内容を下書きしてください。承認前は公開や返信をしないでください",
       ),
     );
   }
@@ -534,6 +568,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "scout relevant Reddit threads and draft replies I can edit, without posting until I approve",
         "找出相關的 Reddit 討論並起草我可以修改的回覆，未核准前不要發文",
         "找出相关的 Reddit 讨论并起草我可以修改的回复，未核准前不要发帖",
+        "関係する Reddit のスレッドを探し、私が編集できる返信を下書きしてください。承認前は投稿しないでください",
       ),
     );
   }
@@ -544,6 +579,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "draft CRM updates from the notes I allow, without changing live records until I approve each field",
         "根據我允許的筆記起草 CRM 更新，未逐項核准前不要改正式紀錄",
         "根据我允许的笔记起草 CRM 更新，未逐项核准前不要改正式记录",
+        "許可したメモから CRM の更新内容を下書きしてください。各項目を承認するまで正式な記録は変更しないでください",
       ),
     );
   }
@@ -554,6 +590,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "collect the result into a draft table, without overwriting my sheet until I approve",
         "把結果整理成表格草稿，未核准前不要覆蓋我的試算表",
         "把结果整理成表格草稿，未核准前不要覆盖我的表格",
+        "結果を表の下書きにまとめてください。承認前は元の表を上書きしないでください",
       ),
     );
   }
@@ -564,6 +601,7 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "draft the notes or pages in my voice, without editing live Notion pages until I approve",
         "用我的語氣起草筆記或頁面，未核准前不要改正式的 Notion 頁面",
         "用我的语气起草笔记或页面，未核准前不要改正式的 Notion 页面",
+        "私の文体でメモやページを下書きしてください。承認前は公開中の Notion ページを編集しないでください",
       ),
     );
   }
@@ -574,55 +612,63 @@ function playbookJob(source: CasePromptSource, locale: Locale) {
         "use the browser to research or complete the job, staying only on sites I allow, and bring the result back here",
         "用瀏覽器研究或完成這份工作，只留在我允許的網站，再把結果帶回來",
         "用浏览器研究或完成这份工作，只留在我允许的网站，再把结果带回来",
+        "許可したサイトだけでブラウザを使って調べ、結果をここへ戻してください",
       ),
     );
   }
 
   if (bits.length === 0) bits.push(categoryJob(source.category, locale));
 
-  return locale === "en" ? bits.join(" Also, ") : bits.join("另外，");
+  return locale === "en" ? bits.join(" Also, ") : locale === "ja" ? bits.join("さらに、") : bits.join("另外，");
 }
 
 function categoryJob(category: DiscoverCategorySlug, locale: Locale) {
-  const jobs: Record<DiscoverCategorySlug, [string, string, string]> = {
+  const jobs: Record<DiscoverCategorySlug, [string, string, string, string]> = {
     sales: [
       "find and research people or companies I could sell to, then draft the next message in my voice and leave it for approval",
       "找出並研究我可以銷售的對象，再用我的語氣起草下一封訊息，等我核准",
       "找出并研究我可以销售的对象，再用我的语气起草下一封消息，等我核准",
+      "販売先になりそうな人や会社を探して調べ、私の文体で次のメッセージを下書きし、承認を待ってください",
     ],
     marketing: [
       "watch the channel or competitors I name, then draft the next marketing action without publishing it",
       "觀察我指定的頻道或對手，起草下一步行銷動作，但不要發佈",
       "观察我指定的频道或竞品，起草下一步营销动作，但不要发布",
+      "指定したチャンネルや競合を見守り、次の集客案を下書きしてください。公開はしないでください",
     ],
     research: [
       "gather sources, compare claims, and give me a short brief with links and anything you could not verify",
       "收集來源、比對說法，給我一份附連結的短簡報，並標出無法確認的地方",
       "收集来源、比对说法，给我一份附链接的短简报，并标出无法确认的地方",
+      "出典を集めて主張を比べ、リンク付きの短い要約を作り、確認できない点を示してください",
     ],
     content: [
       "turn the source material into a draft I can edit, without publishing anything",
       "把來源材料變成我可以修改的草稿，不要發佈",
       "把来源材料变成我可以修改的草稿，不要发布",
+      "元の資料を私が編集できる下書きにしてください。公開はしないでください",
     ],
     coding: [
       "inspect the project, reproduce the issue if needed, and propose a patch I can review before any change is made",
       "檢查專案，必要時重現問題，並在改任何東西之前提出我可以審查的修改",
       "检查项目，必要时复现问题，并在改任何东西之前提出我可以审查的修改",
+      "プロジェクトを確認し、必要なら問題を再現し、変更前に確認できる修正案を出してください",
     ],
     operations: [
       "handle this repeating office job, show me exactly what would change, and wait before changing live records",
       "處理這份重複的辦公室工作，先清楚顯示會改什麼，再等我決定是否改正式紀錄",
       "处理这份重复的办公室工作，先清楚显示会改什么，再等我决定是否改正式记录",
+      "この繰り返し作業を進め、変更内容を先にはっきり示し、正式な記録を変える前に承認を待ってください",
     ],
     personal: [
       "help with this personal task, then show me the plan before buying, booking, sending or changing anything",
       "幫我做這件個人任務，購買、預約、發送或改任何東西之前先給我看計劃",
       "帮我做这件个人任务，购买、预约、发送或改任何东西之前先给我看计划",
+      "この個人的な用件を手伝い、購入、予約、送信、変更の前に計画を見せてください",
     ],
   };
-  const [en, hant, hans] = jobs[category];
-  return t3(locale, en, hant, hans);
+  const [en, hant, hans, ja] = jobs[category];
+  return t3(locale, en, hant, hans, ja);
 }
 
 function workflowSteps(source: CasePromptSource, locale: Locale) {
@@ -632,12 +678,14 @@ function workflowSteps(source: CasePromptSource, locale: Locale) {
       "Confirm each tool, what you need it for, the lowest access you need, and whether it is connected. If it is not connected, ask me to use the official connection screen, then wait. Never ask me to paste a password or token.",
       "確認每項工具、用途、最低權限，以及是否已連接。未連接就請我用官方連接畫面，然後停下來等我。不要叫我在對話貼上密碼或 Token。",
       "确认每项工具、用途、最低权限，以及是否已连接。未连接就请我用官方连接画面，然后停下来等我。不要叫我在对话粘贴密码或 Token。",
+      "各ツールの用途、必要な最小権限、接続済みかを確認してください。未接続なら公式の接続画面を使うよう頼み、そこで待ってください。パスワードやトークンを貼るよう求めないでください。",
     ),
     t3(
       locale,
       "Confirm the accounts, date range, destination and what must never be touched.",
       "確認帳戶、日期範圍、結果位置，以及絕對不能碰的東西。",
       "确认账户、日期范围、结果位置，以及绝对不能碰的东西。",
+      "対象のアカウント、期間、結果の保存先、触れてはいけないものを確認してください。",
     ),
   ];
 
@@ -647,12 +695,14 @@ function workflowSteps(source: CasePromptSource, locale: Locale) {
       "Show a dry-run preview: the plan, evidence, proposed output and any action waiting for approval. Change nothing yet.",
       "先做試跑預覽：計劃、證據、預計輸出，以及等我核准的動作。現在不要改任何東西。",
       "先做试跑预览：计划、证据、预计输出，以及等我核准的动作。现在不要改任何东西。",
+      "試し実行として、計画、根拠、予定する結果、承認待ちの操作を見せてください。まだ何も変更しないでください。",
     ),
     t3(
       locale,
       "After I approve, do only the approved items and put the result in the stated destination.",
       "我核准之後，只做已核准的項目，並把結果放到指定位置。",
       "我核准之后，只做已核准的项目，并把结果放到指定位置。",
+      "承認後は、承認された項目だけを行い、指定した場所に結果を置いてください。",
     ),
   ];
 
@@ -668,12 +718,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Scan only the mail I allowed and sort it into reply, wait, and no longer needed.",
         "只掃描我允許的郵件，分成需要回覆、可以等，以及不再需要。",
         "只扫描我允许的邮件，分成需要回复、可以等，以及不再需要。",
+        "許可したメールだけを確認し、返信が必要、待てる、不要の3つに分けてください。",
       ),
       t3(
         locale,
         "Prepare the exact list of proposed deletes, archives and unsubscribes, with counts.",
         "準備準確的刪除、封存和取消訂閱清單，並寫上數量。",
         "准备准确的删除、归档和取消订阅清单，并写上数量。",
+        "削除、保管、配信停止の候補を正確な一覧にし、件数も付けてください。",
       ),
     ];
   }
@@ -684,12 +736,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Research only the accounts I named, using public information.",
         "只研究我點名的對象，而且只用公開資料。",
         "只研究我点名的对象，而且只用公开资料。",
+        "指定した相手だけを、公開情報だけで調べてください。",
       ),
       t3(
         locale,
         "Draft the messages in my voice and keep them as drafts until I approve each one.",
         "用我的語氣起草訊息，未逐封核准前都只做草稿。",
         "用我的语气起草消息，未逐封核准前都只做草稿。",
+        "私の文体でメッセージを下書きし、一つずつ承認するまで下書きのまま残してください。",
       ),
     ];
   }
@@ -700,12 +754,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Inspect the project and write down what you found, with files or steps.",
         "檢查專案，並寫下找到的內容、檔案或步驟。",
         "检查项目，并写下找到的内容、文件或步骤。",
+        "プロジェクトを確認し、見つけた内容をファイル名や手順と一緒に書いてください。",
       ),
       t3(
         locale,
         "Propose the smallest safe change and wait before editing, committing or opening a pull request.",
         "提出最小且安全的修改，編輯、提交或開 pull request 之前先等我。",
         "提出最小且安全的修改，编辑、提交或开 pull request 之前先等我。",
+        "最小で安全な修正を提案し、編集、コミット、pull request の作成前に待ってください。",
       ),
     ];
   }
@@ -716,12 +772,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Read only the channels I allow and draft the update, roster or summary I asked for.",
         "只閱讀我允許的頻道，並起草我要的更新、名單或摘要。",
         "只阅读我允许的频道，并起草我要的更新、名单或摘要。",
+        "許可したチャンネルだけを読み、指定した更新文、一覧、要約を下書きしてください。",
       ),
       t3(
         locale,
         "Show me the draft in this chat. Do not post or change channel settings until I approve.",
         "先在這個對話顯示草稿。未核准前不要發佈，也不要改頻道設定。",
         "先在这个对话显示草稿。未核准前不要发布，也不要改频道设置。",
+        "このチャットで下書きを見せてください。承認前は投稿やチャンネル設定の変更をしないでください。",
       ),
     ];
   }
@@ -732,12 +790,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Inspect the project and write down what you found, with files or steps.",
         "檢查專案，並寫下找到的內容、檔案或步驟。",
         "检查项目，并写下找到的内容、文件或步骤。",
+        "プロジェクトを確認し、見つけた内容をファイル名や手順と一緒に書いてください。",
       ),
       t3(
         locale,
         "Propose the smallest safe change and wait before editing, committing or opening a pull request.",
         "提出最小且安全的修改，編輯、提交或開 pull request 之前先等我。",
         "提出最小且安全的修改，编辑、提交或开 pull request 之前先等我。",
+        "最小で安全な修正を提案し、編集、コミット、pull request の作成前に待ってください。",
       ),
     ];
   }
@@ -748,12 +808,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
         "Collect sources, keep the links, and separate facts from guesses.",
         "收集來源、保留連結，並把事實和推測分開寫。",
         "收集来源、保留链接，并把事实和推测分开写。",
+        "出典を集めてリンクを残し、事実と推測を分けてください。",
       ),
       t3(
         locale,
         "Write a short draft I can check. If a claim is unverified, say so.",
         "寫一份我可以檢查的短草稿。無法確認的說法要標出來。",
         "写一份我可以检查的短草稿。无法确认的说法要标出来。",
+        "確認しやすい短い下書きを作り、未確認の内容はそのように示してください。",
       ),
     ];
   }
@@ -763,12 +825,14 @@ function playbookSteps(source: CasePromptSource, locale: Locale) {
       "Do the job using only the tools and data I allowed.",
       "只用我允許的工具和資料來做這份工作。",
       "只用我允许的工具和资料来做这份工作。",
+      "許可したツールとデータだけを使って進めてください。",
     ),
     t3(
       locale,
       "Show the proposed result in a format I can check before anything is changed.",
       "先用我可以檢查的格式顯示預計結果，再改任何東西。",
       "先用我可以检查的格式显示预计结果，再改任何东西。",
+      "何かを変更する前に、確認しやすい形式で予定する結果を見せてください。",
     ),
   ];
 }
@@ -966,6 +1030,7 @@ function approvalRule(locale: Locale, mode: ApprovalMode) {
       "Read, analyze and draft only. Never make an external change. A later approval message does not unlock changes.",
       "只可以查看、分析和寫草稿。永遠不可以執行外部改動，即使我之後說核准也不會解鎖。",
       "只可以查看、分析和写草稿。永远不可以执行外部改动，即使我之后说核准也不会解锁。",
+      "読む、分析する、下書きするだけにしてください。外部への変更は絶対に行わないでください。あとから承認しても変更はできません。",
     );
   }
   return t3(
@@ -973,6 +1038,7 @@ function approvalRule(locale: Locale, mode: ApprovalMode) {
     "Show me and get my explicit approval before every action that changes data, contacts people, publishes content, spends money or changes settings.",
     "任何會改資料、聯絡人、公開內容、付款或改設定的動作，都要先給我看並逐次核准。",
     "任何会改资料、联系人、公开内容、付款或改设置的动作，都要先给我看并逐次核准。",
+    "データの変更、人への連絡、公開、支払い、設定変更の前に毎回内容を見せ、明確な承認を得てください。",
   );
 }
 
@@ -983,6 +1049,7 @@ function externalActionRule(locale: Locale, mode: ApprovalMode) {
       "The following actions are permanently blocked for this prompt: sending, publishing, deleting, archiving, unsubscribing, editing data, files or code, changing schedules, spending money and every external action. I must choose a different approval mode and generate a new prompt to change this rule.",
       "以下動作在這份提示詞永久禁止：發送、發布、刪除、封存、取消訂閱、修改資料、檔案或程式、改時間表、付款，以及任何對外動作。我要先重新選擇核准模式並產生新提示詞，才可以改變這條規則。",
       "以下动作在这份提示词永久禁止：发送、发布、删除、归档、取消订阅、修改资料、文件或程序、改时间表、付款，以及任何对外动作。我要先重新选择核准模式并生成新提示词，才可以改变这条规则。",
+      "このプロンプトでは、送信、公開、削除、保管、配信停止、データ・ファイル・コードの編集、予定変更、支払い、その他の外部操作を常に禁止します。このルールを変えるには、別の承認方法を選び、新しいプロンプトを作る必要があります。",
     );
   }
   return t3(
@@ -990,6 +1057,7 @@ function externalActionRule(locale: Locale, mode: ApprovalMode) {
     "Always ask before sending, publishing, deleting, archiving, unsubscribing, editing data, files or code, changing schedules, spending money or taking any external action.",
     "以下動作一定要先問我：發送、發布、刪除、封存、取消訂閱、修改資料、檔案或程式、改時間表、付款，或者任何對外動作。",
     "以下动作一定要先问我：发送、发布、删除、归档、取消订阅、修改资料、文件或程序、改时间表、付款，或者任何对外动作。",
+    "送信、公開、削除、保管、配信停止、データ・ファイル・コードの編集、予定変更、支払い、その他の外部操作の前には、必ず確認してください。",
   );
 }
 
@@ -1020,6 +1088,17 @@ function categorySafetyRule(locale: Locale, category: DiscoverCategorySlug) {
     return rules[group];
   }
 
+  if (locale === "ja") {
+    const rules: Record<typeof group, string> = {
+      publishing: "案内、返信、公開内容は外部操作として扱い、先に完全な下書きと送信先を見せてください。",
+      research: "購入、予約、支払い、元データの編集は外部操作として扱い、先に正確な内容と合計金額を見せてください。",
+      personal: "購入、予約、支払い、個人情報の編集は外部操作として扱い、先に正確な内容と合計金額を見せてください。",
+      operations: "削除、保管、配信停止、記録の編集はデータ変更として扱い、先に正確な一覧と件数を見せてください。",
+      coding: "ファイル編集、pull request、コミット、統合、公開はコード変更として扱い、先に正確な差分と手順を見せてください。",
+    };
+    return rules[group];
+  }
+
   const rules: Record<typeof group, string> = {
     publishing: "Treat outreach, replies and public content as external actions. Show the complete draft and recipients first.",
     research: "Treat buying, booking, paying or editing source data as external actions. Show the exact details and total cost first.",
@@ -1036,6 +1115,7 @@ function scheduleSafetyRule(locale: Locale) {
     "Follow the run timing written above. If it says once, never repeat it. Schedule or monitor continuously only if the platform explicitly confirms support. Otherwise say it is not scheduled and give me the manual steps.",
     "嚴格按照上面寫的執行時間。寫明只做一次就不可以重複；需要定時或持續運行，就只可以在平台明確支援後安排，否則要說明尚未安排，並提供手動做法。",
     "严格按照上面写的执行时间。写明只做一次就不可以重复；需要定时或持续运行，就只可以在平台明确支持后安排，否则要说明尚未安排，并提供手动做法。",
+    "上に書いた実行時間を守ってください。1回だけなら繰り返さないでください。定期実行や継続監視は、対応していることをサービスが明示した場合だけ設定してください。それ以外は未設定だと伝え、手動の手順を示してください。",
   );
 }
 

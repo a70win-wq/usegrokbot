@@ -129,7 +129,7 @@ const pageCopy = {
     allUseCases: "全部 Use Cases",
   },
   ja: {
-    title: "Use Cases",
+    title: "活用例",
     subtitle: (count: number) => `${count.toLocaleString("ja-JP")} 件の公開投稿から厳選。`,
     categoryLabel: "カテゴリー",
     evidenceLabel: "公開内容",
@@ -139,20 +139,20 @@ const pageCopy = {
     allStructures: "すべて",
     promptIncluded: "プロンプトあり",
     setupShared: "設定を公開",
-    singleBot: "Single Bot",
-    botTeam: "Bot Team",
-    resultsLabel: "Use Case の結果",
-    showing: (count: number) => `${count} 件の Use Cases`,
-    empty: "この条件に合う Use Case はありません。",
+    singleBot: "単独 Bot",
+    botTeam: "Bot チーム",
+    resultsLabel: "活用例の結果",
+    showing: (count: number) => `${count} 件の活用例`,
+    empty: "この条件に合う活用例はありません。",
     clearFilters: "条件をクリア",
-    open: "Use Case を見る",
+    open: "活用例を見る",
     promptTitle: "元のプロンプト",
     setupTitle: "公開されている設定",
     handoffTitle: "Bot の受け渡し",
     sourceTitle: "出典",
     relatedSourcesTitle: "関連する出典",
     openOriginal: "元の投稿を見る",
-    allUseCases: "すべての Use Cases",
+    allUseCases: "すべての活用例",
   },
 } satisfies Record<Locale, Record<string, string | ((count: number) => string)>>;
 
@@ -164,11 +164,11 @@ export function verifiedUseCasesPageCopy(locale: Locale) {
 }
 
 const jaUseCaseByEnglish: Record<string, string> = {
-  "Keep a living wiki for every Bot": "どの Bot にも生きた wiki を置く",
+  "Keep a living wiki for every Bot": "どの Bot にも更新される Wiki を置く",
   "Fill and sign a PDF, then wait": "PDF を記入・署名し、確認を待つ",
   "Tidy email, files, and paid subscriptions": "メール、ファイル、有料サブスクを先に整理する",
   "Watch the rest of your Bots": "ほかの Bot を見守り、改善案だけ渡す",
-  "Open a live webpage and return a QA report": "公開中のページを開き、QA レポートを返す",
+  "Open a live webpage and return a QA report": "公開中のページを開き、品質確認レポートを返す",
   "Fill your Amazon cart, never check out": "Amazon のカートまで入れ、購入はしない",
   "Turn a dish into a shopping list and cooking steps": "料理名から買い物リストと手順を作る",
   "Keep a reminder board with its photos": "写真つきのリマインダーボードを保つ",
@@ -179,7 +179,7 @@ const jaUseCaseByEnglish: Record<string, string> = {
   "Watch a job feed and archive new listings": "求人フィードを見守り、新しい募集を保存する",
   "Draft every message, send nothing": "文面はすべて下書きし、送信しない",
   "Make one publishable video from two clips": "2本の素材から公開できる1本にまとめる",
-  "Turn a bug into a pull request": "不具合から pull request まで進める",
+  "Turn a bug into a pull request": "不具合からプルリクエストまで進める",
   "Audit spending against cards you already have": "持っているカードに対して支出を点検する",
   "Find money leaks, then wait for approval": "お金の漏れを見つけ、許可を待つ",
   "Find contractors who serve your address": "自分の住所に来る業者を探す",
@@ -192,9 +192,9 @@ const jaUseCaseByEnglish: Record<string, string> = {
   "Ask Lenny's archive a product question": "Lenny のアーカイブにプロダクトの質問をする",
   "Start and dock a mower from far away": "遠くから芝刈り機を起動し、充電位置へ戻す",
   "Run a founder org chart with a morning standup": "創業者の組織図で朝のスタンドアップを回す",
-  "Owns the vault, the wiki, and the daily note.": "vault、wiki、デイリーノートを管理します。",
+  "Owns the vault, the wiki, and the daily note.": "保管庫、Wiki、デイリーノートを管理します。",
   "Create one Obsidian vault on the Chief of Staff computer, with Home.md as the entrance.":
-    "幕僚長のコンピュータに Obsidian vault を1つ作り、Home.md を入口にします。",
+    "幕僚長のコンピュータに Obsidian の保管庫を1つ作り、Home.md を入口にします。",
   "Create Hunt folders for incoming sources, Ship folders for outputs, plus Wiki and Maps folders.":
     "入ってくる出典用に Hunt、成果物用に Ship、さらに Wiki と Maps のフォルダを作ります。",
   "Give every note a date and folder before anything else happens.":
@@ -204,7 +204,7 @@ const jaUseCaseByEnglish: Record<string, string> = {
   "Run the published daily schedule and keep decisions in Wiki/Decisions.":
     "公開されている日次の時間割で回し、決定は Wiki/Decisions に残します。",
   "Nothing in the vault may post, pay, or send; the final approval stays human.":
-    "vault の中身は投稿も支払いも送信もしません。最終承認は人が行います。",
+    "保管庫の中身は投稿も支払いも送信もしません。最終承認は人が行います。",
   "File research into Hunt without filling the chat.": "調査資料は Hunt に入れ、チャットを埋めません。",
   "Writes performance notes to twitter/live-score.": "成果メモを twitter/live-score に書きます。",
   "Writes build records into builds/.": "ビルドの記録を builds/ に書きます。",
@@ -236,7 +236,7 @@ const jaUseCaseByEnglish: Record<string, string> = {
   "Turns the report into a bounded request and hands it to the cloud agent.":
     "報告を範囲つきの依頼に直し、クラウド agent へ渡します。",
   "Patches and tests the cloud branch, then opens a pull request.":
-    "クラウドのブランチを修正・テストし、pull request を開きます。",
+    "クラウドのブランチを修正・テストし、プルリクエストを開きます。",
   "Use Captain as the only Bot that talks to you.": "あなたと話す Bot は Captain だけにします。",
   "Use read-only Plaid data and never show account numbers.": "Plaid は読み取り専用にし、口座番号は表示しません。",
   "Use only the official Chase and Amex pages for current benefits.":

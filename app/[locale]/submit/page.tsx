@@ -211,7 +211,7 @@ function identityCopy(locale: string) {
   if (locale === "ja") {
     return {
       title: "あなたの UseGrokBot の姿",
-      body: "X の URL を貼ると、コミュニティ用の Blob がすぐに現れます。同じ handle なら、いつも同じ姿です。",
+      body: "X の URL を貼ると、コミュニティ用の Blob がすぐに現れます。同じ X ユーザー名なら、いつも同じ姿です。",
       placeholderName: "あなたの Grok Bot",
     };
   }

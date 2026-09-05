@@ -72,12 +72,12 @@ const identityDefinitions: readonly TemplateIdentity[] = [
       "Ships code, reviews PRs, and coordinates coding agents.",
       "寫程式、審查 PR，也調度 coding agents。",
       "写代码、审查 PR，也调度 coding agents。",
-      "コードを書き、PR をレビューし、coding agents をまとめます。",
+      "コードを書き、PR をレビューし、コーディング用 AI エージェントをまとめます。",
     ),
     focus: [
       text("Ship an app", "寫程式上線", "写代码上线", "アプリを公開する"),
       text("Review PRs", "審查 PR", "审查 PR", "PR をレビューする"),
-      text("Coordinate coding agents", "調度 coding agents", "调度 coding agents", "coding agents をまとめる"),
+      text("Coordinate coding agents", "調度 coding agents", "调度 coding agents", "コーディング用 AI エージェントをまとめる"),
     ],
   },
   {
@@ -88,7 +88,7 @@ const identityDefinitions: readonly TemplateIdentity[] = [
       "Routes a roster of bots and handles decisions that need a person.",
       "調度一整組 bot，只處理需要由人決定的事情。",
       "调度一整组 bot，只处理需要由人决定的事情。",
-      "一組の bot を振り分け、人の判断が必要なことだけ扱います。",
+      "一組の Bot を振り分け、人の判断が必要なことだけ扱います。",
     ),
     focus: [
       text("Route requests", "分派事情", "分派事情", "依頼を振り分ける"),
@@ -752,12 +752,12 @@ const scenarioDefinitions: Partial<
     },
     {
       slug: "agents",
-      title: text("Coordinate coding agents", "調度 coding agents", "调度 coding agents", "coding agents をまとめる"),
+      title: text("Coordinate coding agents", "調度 coding agents", "调度 coding agents", "コーディング用 AI エージェントをまとめる"),
       description: text(
         "Keep coding agents aimed at a checkable goal and keep their tools current.",
         "讓 coding agents 對準可以檢查的目標，也保持本機工具更新。",
         "让 coding agents 对准可以检查的目标，也保持本机工具更新。",
-        "coding agents を確認できる目標に向け、手元のツールも新しく保ちます。",
+        "コーディング用 AI エージェントを確認できる目標に向け、手元のツールも新しく保ちます。",
     ),
       templateIds: ["Ub3T7usX-c6yRQibQq83P", "oq-mYZXM23ShlY7UbJWeB", "z4r7D8iILsTQDf7r7DwKR"],
     },

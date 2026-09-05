@@ -122,7 +122,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
       youtube: { title: "YouTube", body: "初期設定、実演、実際の使い方の動画。" },
     },
     xChineseTitle: "中国語チュートリアル（X 閲覧数順）",
-    xEnglishTitle: "英語記事の X 閲覧数 Top 20",
+    xEnglishTitle: "英語記事の X 閲覧数 上位20件",
     xJapaneseTitle: "日本語記事の X 閲覧数順",
     by: "作者",
     openGithub: "GitHub で開く",

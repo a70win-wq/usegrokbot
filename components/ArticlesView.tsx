@@ -29,7 +29,7 @@ const SECTION_COPY: Record<
   },
   ja: {
     chinese: "中国語のチュートリアル記事",
-    english: "英語記事トップ20",
+    english: "英語記事 上位20件",
     japanese: "日本語記事の閲覧数順",
     latest: "最新の10記事",
   },

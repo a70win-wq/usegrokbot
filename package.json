@@ -20,6 +20,7 @@
     "validate:use-cases": "tsx scripts/validate-verified-use-cases.ts",
     "validate:article-languages": "tsx scripts/validate-article-languages.ts",
     "validate:bookmarks": "node --import tsx scripts/validate-bookmarks.ts",
+    "validate:japanese": "node --import tsx scripts/validate-japanese.ts",
     "generate:discover-redirects": "node --import tsx scripts/generate-retired-discover-redirects.ts",
     "sync:awesome-grok-bot": "node scripts/sync-awesome-grok-bot.mjs",
     "ingest:awesome-grok-bot": "tsx scripts/ingest-awesome-grok-bot.ts",
