@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 45,
+    "total": 48,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 40,
+    "alreadyIngested": 43,
     "pending": 0
   },
   "cases": [
@@ -596,6 +596,45 @@
       "title": "UMich course planner Grok Bot team",
       "url": "https://github.com/Domross3/umich-course-planner",
       "sourceSummary": "University of Michigan course planner built by a three-Bot Grok Bot team at SpaceXAI@UMich Build Night, with a reusable BOT-TEMPLATE.md for coordinator and worker roles.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-meme-desk-playbooks",
+      "title": "Grok meme-desk playbooks",
+      "url": "https://github.com/shaharmaimon/grok-meme-desk-playbooks",
+      "sourceSummary": "Public playbooks, signal schema, and box-side scripts for a multi-Bot Grok Bot memecoin research squad that only analyzes and never holds keys.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "real-world-agents-org-chart",
+      "title": "Real World Agents org chart",
+      "url": "https://github.com/pyco404/-real-world-agents",
+      "sourceSummary": "Reusable Grok Bot org-chart setup that assigns outcomes to named seats (Atlas, Scout, Quill, …) instead of task lists, with charters and hard never-do fences.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "daily-diff-news-site-by-grok-bot",
+      "title": "Daily Diff news site by Grok Bot",
+      "url": "https://github.com/indrayam/samachar",
+      "sourceSummary": "Static “Daily Diff” newspaper site whose edition.json feed is aggregated by a Grok Bot, with live hosting at dailydiff.indrayam.com.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
