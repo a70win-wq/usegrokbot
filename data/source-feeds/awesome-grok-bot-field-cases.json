@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 48,
+    "total": 52,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 43,
+    "alreadyIngested": 47,
     "pending": 0
   },
   "cases": [
@@ -635,6 +635,58 @@
       "title": "Daily Diff news site by Grok Bot",
       "url": "https://github.com/indrayam/samachar",
       "sourceSummary": "Static “Daily Diff” newspaper site whose edition.json feed is aggregated by a Grok Bot, with live hosting at dailydiff.indrayam.com.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "hypergrok-trading-desk-setup-prompt",
+      "title": "HyperGrok trading desk setup prompt",
+      "url": "https://github.com/L1vsun/GrokBot-Trading-Desk__Setup-Prompt",
+      "sourceSummary": "Paste-ready prompt that has a Grok Bot build a seven-agent paper-trading desk swarm on its cloud computer and open a shared Trading Floor group.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "termpilot-student-life-grok-bot-tower",
+      "title": "TermPilot student-life Grok Bot tower",
+      "url": "https://github.com/FrankAsanteVanLaarhoven/TermPilot",
+      "sourceSummary": "Student-life control tower with Scout/Verifier/Planner/Guardian Grok Bot specialists, .grok skills, OR-Tools planning, and approval-gated demo calendar writes.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "termwise-syllabus-grok-bot-web-app",
+      "title": "Termwise syllabus Grok Bot + web app",
+      "url": "https://github.com/chhaviiiii/termwise",
+      "sourceSummary": "Shareable Grok Bot template plus Next.js app that extracts syllabi, flags collisions, drafts weekly briefs and extension emails, with .grok skills and install docs.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "sanitized-multi-bot-fleet-export",
+      "title": "Sanitized multi-Bot fleet export",
+      "url": "https://github.com/ofs100private/GrokBot",
+      "sourceSummary": "Sanitized Grok Bot backup of eight agents (Chief of Staff, traders, X watch, eToro QA) with profiles, automations, and shared workflow SKILL.md files.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

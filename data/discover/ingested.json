@@ -63810,5 +63810,119 @@
     "xPostUrl": "https://x.com/shengguo7051/status/2096023757475209387",
     "sourceUrl": "https://x.com/shengguo7051/status/2096023757475209387",
     "sourceLabel": "starknext on X"
+  },
+  {
+    "slug": "l1vsun-hypergrok-trading-desk-setup-prompt",
+    "title": "HyperGrok trading desk setup prompt",
+    "headline": "Paste-ready prompt that has a Grok Bot build a seven-agent paper-trading desk swarm on its cloud computer and open a shared Trading Floor group.",
+    "whatTheyDid": "Paste-ready prompt that has a Grok Bot build a seven-agent paper-trading desk swarm on its cloud computer and open a shared Trading Floor group.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Paste-ready prompt that has a Grok Bot build a seven-agent paper-trading desk swarm on its cloud computer and open a shared Trading Floor group.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "L1vsun",
+    "publishedAt": "2026-08-24",
+    "sourceUrl": "https://github.com/L1vsun/GrokBot-Trading-Desk__Setup-Prompt",
+    "sourceLabel": "L1vsun · GitHub"
+  },
+  {
+    "slug": "frankasantevanlaarhoven-termpilot-student-life-grok-bot-tower",
+    "title": "TermPilot student-life Grok Bot tower",
+    "headline": "Student-life control tower with Scout/Verifier/Planner/Guardian Grok Bot specialists, .grok skills, OR-Tools planning, and approval-gated demo calendar writes.",
+    "whatTheyDid": "Student-life control tower with Scout/Verifier/Planner/Guardian Grok Bot specialists, .grok skills, OR-Tools planning, and approval-gated demo calendar writes.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Student-life control tower with Scout/Verifier/Planner/Guardian Grok Bot specialists, .grok skills, OR-Tools planning, and approval-gated demo calendar writes.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "FrankAsanteVanLaarhoven",
+    "publishedAt": "2026-09-05",
+    "sourceUrl": "https://github.com/FrankAsanteVanLaarhoven/TermPilot",
+    "sourceLabel": "FrankAsanteVanLaarhoven · GitHub"
+  },
+  {
+    "slug": "chhaviiiii-termwise-syllabus-grok-bot-web-app",
+    "title": "Termwise syllabus Grok Bot + web app",
+    "headline": "Shareable Grok Bot template plus Next.js app that extracts syllabi, flags collisions, drafts weekly briefs and extension emails, with .grok skills and install docs.",
+    "whatTheyDid": "Shareable Grok Bot template plus Next.js app that extracts syllabi, flags collisions, drafts weekly briefs and extension emails, with .grok skills and install docs.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Shareable Grok Bot template plus Next.js app that extracts syllabi, flags collisions, drafts weekly briefs and extension emails, with .grok skills and install docs.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "weekly",
+    "source": "community",
+    "authorName": "chhaviiiii",
+    "publishedAt": "2026-09-05",
+    "sourceUrl": "https://github.com/chhaviiiii/termwise",
+    "sourceLabel": "chhaviiiii · GitHub"
+  },
+  {
+    "slug": "ofs100private-sanitized-multi-bot-fleet-export",
+    "title": "Sanitized multi-Bot fleet export",
+    "headline": "Sanitized Grok Bot backup of eight agents (Chief of Staff, traders, X watch, eToro QA) with profiles, automations, and shared workflow SKILL.md files.",
+    "whatTheyDid": "Sanitized Grok Bot backup of eight agents (Chief of Staff, traders, X watch, eToro QA) with profiles, automations, and shared workflow SKILL.md files.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Sanitized Grok Bot backup of eight agents (Chief of Staff, traders, X watch, eToro QA) with profiles, automations, and shared workflow SKILL.md files.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ofs100private",
+    "publishedAt": "2026-08-27",
+    "sourceUrl": "https://github.com/ofs100private/GrokBot",
+    "sourceLabel": "ofs100private · GitHub"
   }
 ]
