@@ -43,7 +43,8 @@ function tutorialArticle(input: TutorialArticleInput): DiscoverStory {
 
 /**
  * Chinese Grok Bot tutorials verified through Grok X Search on 2026-09-04,
- * with longform Article backfill on 2026-09-07 (cgnot996 credits / Hangzhou).
+ * with longform Article backfill on 2026-09-07 (cgnot996 credits / Hangzhou)
+ * and 2026-09-08 (Adrian Punk self-media team).
  *
  * These records are intentionally article-only. They are merged into the
  * Articles surfaces without increasing the Discover catalogue inventory.
@@ -300,6 +301,24 @@ export const chineseTutorialArticles: DiscoverStory[] = [
     category: "operations",
     outcomes: ["save-time", "automate-work"],
     difficulty: "easy",
+  }),
+  tutorialArticle({
+    slug: "zh-tutorial-adrianpunk-self-media-team",
+    title: "用Grok Bot搭建自媒体团队：保姆级教程",
+    localizedArticleTitles: {
+      en: "Build a self-media team with Grok Bot: a step-by-step guide",
+      "zh-Hant": "用 Grok Bot 搭建自媒體團隊：保姆級教程",
+      "zh-Hans": "用Grok Bot搭建自媒体团队：保姆级教程",
+      ja: "Grok Bot で自媒体チームを組む：手順ガイド",
+    },
+    authorName: "Adrian Punk",
+    handle: "AdrianPunk115",
+    publishedAt: "2026-09-08",
+    xPostUrl: "https://x.com/AdrianPunk115/status/2097311704547987756",
+    articleUrl: "https://x.com/i/article/2097303599365984256",
+    category: "content",
+    outcomes: ["create-content", "automate-work"],
+    difficulty: "medium",
   }),
 ];
 
