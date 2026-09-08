@@ -11,6 +11,7 @@ export function ArticleRow({
   locale,
   viewsLabel,
   rank,
+  badge,
   compact = false,
   presentation = "default",
 }: {
@@ -18,6 +19,7 @@ export function ArticleRow({
   locale: Locale;
   viewsLabel: string;
   rank?: number;
+  badge?: string;
   compact?: boolean;
   presentation?: "default" | "homepage";
 }) {
@@ -26,6 +28,16 @@ export function ArticleRow({
   const showHandle = item.story.handle && (
     !compact || story.authorName.replace(/^@/, "").toLowerCase() !== item.story.handle.toLowerCase()
   );
+  const lead = badge ? (
+    <span className="ui-label inline-flex shrink-0 items-center rounded-full bg-accent-soft px-2.5 py-1 text-accent">
+      {badge}
+    </span>
+  ) : rank != null ? (
+    <span className="ui-count w-6 shrink-0 pt-1 text-right font-medium text-mute sm:w-8">
+      {rank}
+    </span>
+  ) : null;
+  const hasLead = lead != null;
 
   if (presentation === "homepage") {
     return (
@@ -36,11 +48,7 @@ export function ArticleRow({
           rel="noreferrer"
           className="flex items-start gap-3 py-4 transition-colors hover:bg-card-hover sm:gap-4 md:gap-5"
         >
-          {rank != null ? (
-            <span className="ui-count w-6 shrink-0 pt-1 text-right font-medium text-mute sm:w-8">
-              {rank}
-            </span>
-          ) : null}
+          {lead}
           <AuthorAvatar name={story.authorName} handle={item.story.handle} size={40} />
           <div className="min-w-0 flex-1">
             <p className="truncate text-[13px] leading-normal font-medium text-ink">
@@ -72,19 +80,18 @@ export function ArticleRow({
         target="_blank"
         rel="noreferrer"
         className={cn(
-          "grid grid-cols-[1.5rem_minmax(0,1fr)] items-start gap-x-3 gap-y-2 transition-colors hover:bg-card-hover sm:flex sm:gap-4 md:gap-5",
+          "grid items-start gap-x-3 gap-y-2 transition-colors hover:bg-card-hover sm:flex sm:gap-4 md:gap-5",
+          badge
+            ? "grid-cols-[auto_minmax(0,1fr)]"
+            : "grid-cols-[1.5rem_minmax(0,1fr)]",
           compact ? "py-3" : "py-5",
         )}
       >
-        {rank != null ? (
-          <span className="ui-count col-start-1 row-start-1 w-6 shrink-0 pt-0.5 text-right font-medium text-mute sm:w-8 sm:pt-1">
-            {rank}
-          </span>
-        ) : null}
+        {lead ? <span className="col-start-1 row-start-1">{lead}</span> : null}
         <span className="hidden shrink-0 sm:block">
           <AuthorAvatar name={story.authorName} handle={item.story.handle} size={40} />
         </span>
-        <div className={cn("row-start-1 min-w-0 flex-1", rank != null ? "col-start-2" : "col-span-2")}>
+        <div className={cn("row-start-1 min-w-0 flex-1", hasLead ? "col-start-2" : "col-span-2")}>
           <p className="ui-card-title text-ink">{story.title}</p>
           <div className={cn(compact && "mt-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5")}>
             <p className={cn("ui-meta min-w-0 wrap-anywhere text-mute", !compact && "mt-2")}>
@@ -100,7 +107,7 @@ export function ArticleRow({
             </time>
           </div>
         </div>
-        <div className={cn("row-start-2 flex shrink-0 items-baseline gap-1.5 sm:block sm:pt-1 sm:text-right", rank != null ? "col-start-2" : "col-span-2")}>
+        <div className={cn("row-start-2 flex shrink-0 items-baseline gap-1.5 sm:block sm:pt-1 sm:text-right", hasLead ? "col-start-2" : "col-span-2")}>
           <p className="ui-count font-medium text-ink">
             {item.views > 0 ? formatViewCount(item.views, locale) : "—"}
           </p>

@@ -322,6 +322,7 @@ export const jaMessages = {
     rankingsViews: "X 表示",
     articlesTitle: "記事",
     articlesBody: "Grok Bot についての X の長文と記事。",
+    articlesPinned: "ピン留め",
     appsTitle: "アプリ",
     appsBody: "いま使っているツールのまま。",
     appHeading: "{name} 向けの Grok Bot の流れ",

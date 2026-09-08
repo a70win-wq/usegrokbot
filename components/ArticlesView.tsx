@@ -1,6 +1,8 @@
 "use client";
 
 import { ArticleRow } from "@/components/ArticleRow";
+import { PinnedArticleBlock } from "@/components/PinnedArticleBlock";
+import { splitChineseTeachingArticles } from "@/lib/articles";
 import { useI18n } from "@/lib/i18n/locale";
 import type { Locale } from "@/lib/i18n/types";
 import type { RankedStory } from "@/lib/x-metrics";
@@ -78,27 +80,43 @@ export function ArticlesView({
         ))}
       </nav>
 
-      {rankedSections.map((section, sectionIndex) => (
-        <section id={`articles-${section.key}`} className={sectionIndex === 0 ? "mt-8 md:mt-10" : "mt-12"} key={section.key}>
-          <h2 className="ui-section-title">
-            {section.title}
-          </h2>
-          <p className="ui-count mt-2 font-medium text-mute">
-            {t("count.articles", { n: section.items.length })}
-          </p>
-          <ol className="mt-6 divide-y divide-line border-y border-line">
-            {section.items.map((item, index) => (
-              <ArticleRow
-                key={`${section.key}-${item.story.slug}`}
-                item={item}
+      {rankedSections.map((section, sectionIndex) => {
+        const chinese =
+          section.key === "chinese" ? splitChineseTeachingArticles(section.items) : null;
+        const rankedItems = chinese?.ranked ?? section.items;
+        const pinnedItem = chinese?.pinned;
+
+        return (
+          <section id={`articles-${section.key}`} className={sectionIndex === 0 ? "mt-8 md:mt-10" : "mt-12"} key={section.key}>
+            <h2 className="ui-section-title">
+              {section.title}
+            </h2>
+            <p className="ui-count mt-2 font-medium text-mute">
+              {t("count.articles", { n: section.items.length })}
+            </p>
+            {pinnedItem ? (
+              <PinnedArticleBlock
+                item={pinnedItem}
                 locale={locale}
                 viewsLabel={t("pages.rankingsViews")}
-                rank={index + 1}
+                label={t("pages.articlesPinned")}
+                headingId="articles-chinese-pinned"
               />
-            ))}
-          </ol>
-        </section>
-      ))}
+            ) : null}
+            <ol className="mt-6 divide-y divide-line border-y border-line">
+              {rankedItems.map((item, index) => (
+                <ArticleRow
+                  key={`${section.key}-${item.story.slug}`}
+                  item={item}
+                  locale={locale}
+                  viewsLabel={t("pages.rankingsViews")}
+                  rank={index + 1}
+                />
+              ))}
+            </ol>
+          </section>
+        );
+      })}
 
       <section id="articles-latest" className="mt-12">
         <h2 className="ui-section-title">{copy.latest}</h2>

@@ -94,6 +94,39 @@ export function chineseTeachingArticlesByViews(limit?: number) {
   return typeof limit === "number" ? ranked.slice(0, limit) : ranked;
 }
 
+/** Stable X ids for Chris FAQ. Slugs differ between Discover and curated. */
+export const PINNED_CHINESE_FAQ_TWEET_ID = "2096982246913888554";
+export const PINNED_CHINESE_FAQ_ARTICLE_ID = "2095747836654796800";
+
+export function isPinnedChineseTeachingStory(story: DiscoverStory) {
+  const tweetId = tweetIdFromUrl(story.xPostUrl ?? story.sourceUrl ?? "");
+  if (tweetId === PINNED_CHINESE_FAQ_TWEET_ID) return true;
+
+  const articleId =
+    xArticleIdFromUrl(resolvedXArticleUrl(story)) ??
+    xArticleIdFromUrl(story.articleUrl) ??
+    xArticleIdFromUrl(story.sourceUrl) ??
+    xArticleIdFromUrl(story.xPostUrl);
+  if (articleId === PINNED_CHINESE_FAQ_ARTICLE_ID) return true;
+
+  return (
+    story.slug === "chris62771610-grok-bot-faq-7" ||
+    story.slug === "zh-tutorial-chris-faq-7"
+  );
+}
+
+/**
+ * Split the Chinese tutorial ranking so Chris FAQ can sit in a Pinned
+ * block. The numbered list then starts at the highest-views remaining story.
+ */
+export function splitChineseTeachingArticles(
+  items: RankedStory[] = chineseTeachingArticlesByViews(),
+) {
+  const pinned = items.find((item) => isPinnedChineseTeachingStory(item.story));
+  const ranked = items.filter((item) => !isPinnedChineseTeachingStory(item.story));
+  return { pinned, ranked };
+}
+
 export function japaneseArticlesByViews(limit?: number) {
   const japanese = articleLibraryStories().filter(
     (story) => storyContentLanguage(story) === "ja",

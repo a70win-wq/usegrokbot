@@ -15,7 +15,11 @@ import {
   articleLibraryStories,
   chineseTeachingArticleStories,
   chineseTeachingArticlesByViews,
+  isPinnedChineseTeachingStory,
   latestArticleStories,
+  PINNED_CHINESE_FAQ_ARTICLE_ID,
+  PINNED_CHINESE_FAQ_TWEET_ID,
+  splitChineseTeachingArticles,
   topArticleStoriesByViews,
 } from "../lib/articles";
 import type { Locale } from "../lib/i18n/types";
@@ -320,6 +324,50 @@ function main() {
     !teachingStories.some((item) => item.slug === "junedangg-9-grok-bot-ai-4-7-x"),
     "Discover JuneDangg row must lose to the curated tutorial on article/tweet id",
   );
+
+  const curatedChrisFaq = teachingStories.find((item) => item.slug === "zh-tutorial-chris-faq-7");
+  const discoverChrisFaq = discoverStories.find((item) => item.slug === "chris62771610-grok-bot-faq-7");
+  check(Boolean(curatedChrisFaq), "Curated Chris FAQ is missing from chineseTeachingArticleStories()");
+  check(
+    Boolean(curatedChrisFaq && isPinnedChineseTeachingStory(curatedChrisFaq)),
+    "Curated Chris FAQ must match the pin rule",
+  );
+  if (discoverChrisFaq) {
+    check(
+      isPinnedChineseTeachingStory(discoverChrisFaq),
+      "Discover Chris FAQ slug must still pin by tweet/article id",
+    );
+  }
+  check(
+    isPinnedChineseTeachingStory({
+      slug: "discover-only-chris-faq",
+      title: "Grok Bot FAQ：新手最常問的 7 個問題",
+      xPostUrl: `https://x.com/Chris62771610/status/${PINNED_CHINESE_FAQ_TWEET_ID}`,
+      articleUrl: `https://x.com/i/article/${PINNED_CHINESE_FAQ_ARTICLE_ID}`,
+    } as DiscoverStory),
+    "Pin matching must use tweet id 2096982246913888554 and article id 2095747836654796800",
+  );
+
+  const { pinned: pinnedTutorial, ranked: rankedTutorials } = splitChineseTeachingArticles();
+  check(Boolean(pinnedTutorial), "splitChineseTeachingArticles() must return the Chris FAQ pin");
+  check(
+    Boolean(pinnedTutorial && isPinnedChineseTeachingStory(pinnedTutorial.story)),
+    "Pinned Chinese tutorial is not Chris FAQ",
+  );
+  check(
+    !rankedTutorials.some((item) => isPinnedChineseTeachingStory(item.story)),
+    "Ranked Chinese tutorials must exclude the pinned Chris FAQ so it cannot take #1",
+  );
+  check(
+    chineseTeachingArticlesByViews().some((item) => isPinnedChineseTeachingStory(item.story)),
+    "chineseTeachingArticlesByViews() must still include Chris FAQ for the full ranking",
+  );
+  if (rankedTutorials.length > 1) {
+    check(
+      rankedTutorials[0].views >= rankedTutorials[1].views,
+      "Chinese tutorial #1 must remain the highest-views story among non-pinned items",
+    );
+  }
 
   for (const story of teachingStories) {
     const curated = chineseTutorialArticles.some((item) => item.slug === story.slug);

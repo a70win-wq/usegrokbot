@@ -5,6 +5,8 @@ import { ExternalLink, Play, Star } from "lucide-react";
 import { YouTubeVideoDialog } from "@/components/YouTubeVideoDialog";
 import { youtubeVideoId } from "@/lib/youtube";
 import { ArticleRow } from "@/components/ArticleRow";
+import { PinnedArticleBlock } from "@/components/PinnedArticleBlock";
+import { splitChineseTeachingArticles } from "@/lib/articles";
 import { AuthorAvatar } from "@/components/AuthorAvatar";
 import {
   bookmarkSources,
@@ -321,30 +323,47 @@ function XArticleLists({
 
   return (
     <div className="w-full">
-      {sections.map((section, sectionIndex) => (
-        <section data-article-language={section.key} className={sectionIndex === 0 ? "" : "mt-8"} key={section.key}>
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <h3 className="text-[22px] leading-snug font-medium text-ink md:text-2xl">
-              {section.title}
-            </h3>
-            <p className="ui-count font-medium text-mute">
-              {copy.count.replace("{n}", String(section.items.length))}
-            </p>
-          </div>
-          <ol className="mt-3 divide-y divide-line border-y border-line">
-            {section.items.map((item, index) => (
-              <ArticleRow
-                key={`${section.key}-${item.story.slug}`}
-                item={item}
+      {sections.map((section, sectionIndex) => {
+        const chinese =
+          section.key === "chinese" ? splitChineseTeachingArticles(section.items) : null;
+        const rankedItems = chinese?.ranked ?? section.items;
+        const pinnedItem = chinese?.pinned;
+
+        return (
+          <section data-article-language={section.key} className={sectionIndex === 0 ? "" : "mt-8"} key={section.key}>
+            <div className="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 className="text-[22px] leading-snug font-medium text-ink md:text-2xl">
+                {section.title}
+              </h3>
+              <p className="ui-count font-medium text-mute">
+                {copy.count.replace("{n}", String(section.items.length))}
+              </p>
+            </div>
+            {pinnedItem ? (
+              <PinnedArticleBlock
+                item={pinnedItem}
                 locale={locale}
                 viewsLabel={copy.viewsLabel}
-                rank={index + 1}
+                label={copy.pinnedLabel}
                 presentation="homepage"
+                headingId="bookmarks-chinese-pinned"
               />
-            ))}
-          </ol>
-        </section>
-      ))}
+            ) : null}
+            <ol className="mt-3 divide-y divide-line border-y border-line">
+              {rankedItems.map((item, index) => (
+                <ArticleRow
+                  key={`${section.key}-${item.story.slug}`}
+                  item={item}
+                  locale={locale}
+                  viewsLabel={copy.viewsLabel}
+                  rank={index + 1}
+                  presentation="homepage"
+                />
+              ))}
+            </ol>
+          </section>
+        );
+      })}
     </div>
   );
 }

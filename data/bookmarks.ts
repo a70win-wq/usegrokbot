@@ -42,6 +42,7 @@ export type BookmarkUiCopy = {
   xChineseTitle: string;
   xEnglishTitle: string;
   xJapaneseTitle: string;
+  pinnedLabel: string;
   by: string;
   openGithub: string;
   openYoutube: string;
@@ -72,6 +73,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     xChineseTitle: "Chinese Articles",
     xEnglishTitle: "English Articles",
     xJapaneseTitle: "Japanese Articles",
+    pinnedLabel: "Pinned",
     by: "By",
     openGithub: "Open on GitHub",
     openYoutube: "Watch on YouTube",
@@ -100,6 +102,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     xChineseTitle: "中文文章",
     xEnglishTitle: "英文文章",
     xJapaneseTitle: "日文文章",
+    pinnedLabel: "置頂",
     by: "作者",
     openGithub: "在 GitHub 開啟",
     openYoutube: "在 YouTube 觀看",
@@ -128,6 +131,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     xChineseTitle: "中文文章",
     xEnglishTitle: "英文文章",
     xJapaneseTitle: "日文文章",
+    pinnedLabel: "置顶",
     by: "作者",
     openGithub: "在 GitHub 打开",
     openYoutube: "在 YouTube 观看",
@@ -156,6 +160,7 @@ export const bookmarkUiCopy: Record<Locale, BookmarkUiCopy> = {
     xChineseTitle: "中国語の記事",
     xEnglishTitle: "英語の記事",
     xJapaneseTitle: "日本語の記事",
+    pinnedLabel: "ピン留め",
     by: "作者",
     openGithub: "GitHub で開く",
     openYoutube: "YouTube で見る",
