@@ -90864,5 +90864,91 @@
     "sourceLabel": "Mai Yang on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2098057592576811008"
+  },
+  {
+    "slug": "techfundoffice-weather-channel-factory-on-grok-bot-debian",
+    "title": "Weather channel factory on Grok Bot Debian",
+    "headline": "Cloud Computer AI.com weather-channel factory notes and SOFTWARE-SPEC for running FOX/YouTube capture automation on a Grok Bot Debian computer.",
+    "whatTheyDid": "Cloud Computer AI.com weather-channel factory notes and SOFTWARE-SPEC for running FOX/YouTube capture automation on a Grok Bot Debian computer.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Cloud Computer AI.com weather-channel factory notes and SOFTWARE-SPEC for running FOX/YouTube capture automation on a Grok Bot Debian computer.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "youtube"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "techfundoffice",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/techfundoffice/cloud-weather-bot-grok",
+    "sourceLabel": "techfundoffice · GitHub"
+  },
+  {
+    "slug": "gtmsko46-debug-asml-factory-showcase-with-grok-bot-lasercode",
+    "title": "ASML factory showcase with Grok Bot+lasercode",
+    "headline": "Champion pack documenting an ASML agent software factory with Grok Bot + lasercode orchestration, dual-gate evals, and product decks.",
+    "whatTheyDid": "Champion pack documenting an ASML agent software factory with Grok Bot + lasercode orchestration, dual-gate evals, and product decks.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Champion pack documenting an ASML agent software factory with Grok Bot + lasercode orchestration, dual-gate evals, and product decks.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "gtmsko46-debug",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/gtmsko46-debug/asml-factory-showcase",
+    "sourceLabel": "gtmsko46-debug · GitHub"
+  },
+  {
+    "slug": "aenchanteda-ars-paperspine-sync-kit-for-grok-bot-box",
+    "title": "ARS + PaperSpine sync kit for Grok Bot box",
+    "headline": "Academic Research Suite + PaperSpine mirror with sync-to-grok.sh and grok-adapters so a Grok Bot computer can run the same playbooks as Codex.",
+    "whatTheyDid": "Academic Research Suite + PaperSpine mirror with sync-to-grok.sh and grok-adapters so a Grok Bot computer can run the same playbooks as Codex.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Academic Research Suite + PaperSpine mirror with sync-to-grok.sh and grok-adapters so a Grok Bot computer can run the same playbooks as Codex.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Aenchanteda",
+    "publishedAt": "2026-09-11",
+    "sourceUrl": "https://github.com/Aenchanteda/ARS-Paperspine-transfered-by-Grok-Bot",
+    "sourceLabel": "Aenchanteda · GitHub"
   }
 ]

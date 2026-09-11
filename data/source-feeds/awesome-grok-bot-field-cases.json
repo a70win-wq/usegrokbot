@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 93,
+    "total": 96,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 88,
+    "alreadyIngested": 91,
     "pending": 0
   },
   "cases": [
@@ -1220,6 +1220,45 @@
       "title": "SABLE HQ command surface for a roster of Grok bots",
       "url": "https://github.com/lensleyluan001-create/sable-hq",
       "sourceSummary": "Sable.co HQ web app that navigates and commands a multi-desk roster of Grok bots (CEO/marketing/sales/tech) without running agent runtimes in the page.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "weather-channel-factory-on-grok-bot-debian",
+      "title": "Weather channel factory on Grok Bot Debian",
+      "url": "https://github.com/techfundoffice/cloud-weather-bot-grok",
+      "sourceSummary": "Cloud Computer AI.com weather-channel factory notes and SOFTWARE-SPEC for running FOX/YouTube capture automation on a Grok Bot Debian computer.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "asml-factory-showcase-with-grok-bot-lasercode",
+      "title": "ASML factory showcase with Grok Bot+lasercode",
+      "url": "https://github.com/gtmsko46-debug/asml-factory-showcase",
+      "sourceSummary": "Champion pack documenting an ASML agent software factory with Grok Bot + lasercode orchestration, dual-gate evals, and product decks.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "ars-paperspine-sync-kit-for-grok-bot-box",
+      "title": "ARS + PaperSpine sync kit for Grok Bot box",
+      "url": "https://github.com/Aenchanteda/ARS-Paperspine-transfered-by-Grok-Bot",
+      "sourceSummary": "Academic Research Suite + PaperSpine mirror with sync-to-grok.sh and grok-adapters so a Grok Bot computer can run the same playbooks as Codex.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
