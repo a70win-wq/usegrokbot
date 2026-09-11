@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 91,
+    "total": 93,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 86,
+    "alreadyIngested": 88,
     "pending": 0
   },
   "cases": [
@@ -1194,6 +1194,32 @@
       "title": "personal-config Grok Bot PR Desk field writeup",
       "url": "https://github.com/abhimehro/personal-config",
       "sourceSummary": "Maintainer field writeup that uses Grok Bot as a read-only Chief-of-Staff PR Desk digest compressing automation reports into at most five human decisions.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-austin-gtm-badge-booth-phomemo-m110",
+      "title": "Grok Bot Austin GTM badge booth (Phomemo M110)",
+      "url": "https://github.com/mehh/grokbot-austin",
+      "sourceSummary": "Austin GTM build-night case: guests or their Grok Bots claim badges that auto-print on a Phomemo M110 with procedural Grok Bot avatars.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "sable-hq-command-surface-for-a-roster-of-grok-bots",
+      "title": "SABLE HQ command surface for a roster of Grok bots",
+      "url": "https://github.com/lensleyluan001-create/sable-hq",
+      "sourceSummary": "Sable.co HQ web app that navigates and commands a multi-desk roster of Grok bots (CEO/marketing/sales/tech) without running agent runtimes in the page.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

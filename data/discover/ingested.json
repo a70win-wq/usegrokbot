@@ -89710,5 +89710,61 @@
     "sourceLabel": "Catcher of your mind on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2098167997336780800"
+  },
+  {
+    "slug": "mehh-grok-bot-austin-gtm-badge-booth-phomemo-m110",
+    "title": "Grok Bot Austin GTM badge booth (Phomemo M110)",
+    "headline": "Austin GTM build-night case: guests or their Grok Bots claim badges that auto-print on a Phomemo M110 with procedural Grok Bot avatars.",
+    "whatTheyDid": "Austin GTM build-night case: guests or their Grok Bots claim badges that auto-print on a Phomemo M110 with procedural Grok Bot avatars.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Austin GTM build-night case: guests or their Grok Bots claim badges that auto-print on a Phomemo M110 with procedural Grok Bot avatars.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mehh",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/mehh/grokbot-austin",
+    "sourceLabel": "mehh · GitHub"
+  },
+  {
+    "slug": "lensleyluan001-create-sable-hq-command-surface-for-a-roster-of-grok-bo",
+    "title": "SABLE HQ command surface for a roster of Grok bots",
+    "headline": "Sable.co HQ web app that navigates and commands a multi-desk roster of Grok bots (CEO/marketing/sales/tech) without running agent runtimes in the page.",
+    "whatTheyDid": "Sable.co HQ web app that navigates and commands a multi-desk roster of Grok bots (CEO/marketing/sales/tech) without running agent runtimes in the page.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Sable.co HQ web app that navigates and commands a multi-desk roster of Grok bots (CEO/marketing/sales/tech) without running agent runtimes in the page.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "lensleyluan001-create",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/lensleyluan001-create/sable-hq",
+    "sourceLabel": "lensleyluan001-create · GitHub"
   }
 ]
