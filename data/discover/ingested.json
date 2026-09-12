@@ -94327,5 +94327,117 @@
     "sourceLabel": "Codez on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2089655442657910784"
+  },
+  {
+    "slug": "inkboundnightdesk-ai-influencer-agency-pack-for-grok-bot",
+    "title": "AI Influencer Agency pack for Grok Bot",
+    "headline": "Plug-and-play Grok Bot agency with GROKBOT.md, eight desks, human gates, and scripts to spawn AI influencers that never log in.",
+    "whatTheyDid": "Plug-and-play Grok Bot agency with GROKBOT.md, eight desks, human gates, and scripts to spawn AI influencers that never log in.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Plug-and-play Grok Bot agency with GROKBOT.md, eight desks, human gates, and scripts to spawn AI influencers that never log in.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "inkboundnightdesk",
+    "publishedAt": "2026-09-12",
+    "sourceUrl": "https://github.com/inkboundnightdesk/ai-influencer-agency",
+    "sourceLabel": "inkboundnightdesk · GitHub"
+  },
+  {
+    "slug": "archive228-overnight-six-bot-grok-bot-visual-crew",
+    "title": "Overnight six-bot Grok Bot visual crew",
+    "headline": "Human-gated six-bot Grok Bot crew that turns a night brief into sourced short-form visuals with strict role boundaries and receipts.",
+    "whatTheyDid": "Human-gated six-bot Grok Bot crew that turns a night brief into sourced short-form visuals with strict role boundaries and receipts.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Human-gated six-bot Grok Bot crew that turns a night brief into sourced short-form visuals with strict role boundaries and receipts.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Archive228",
+    "publishedAt": "2026-08-26",
+    "sourceUrl": "https://github.com/Archive228/overnight",
+    "sourceLabel": "Archive228 · GitHub"
+  },
+  {
+    "slug": "thesethian-grok-bot-executive-branch-cabinet-demo",
+    "title": "Grok Bot Executive Branch cabinet demo",
+    "headline": "Case study where Grok Bot built a nine-agent Executive Branch cabinet with terminal routing into the Oval Office.",
+    "whatTheyDid": "Case study where Grok Bot built a nine-agent Executive Branch cabinet with terminal routing into the Oval Office.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Case study where Grok Bot built a nine-agent Executive Branch cabinet with terminal routing into the Oval Office.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "theSethian",
+    "publishedAt": "2026-08-26",
+    "sourceUrl": "https://github.com/theSethian/grok-executive-branch",
+    "sourceLabel": "theSethian · GitHub"
+  },
+  {
+    "slug": "stp-kas-kaspa-archival-node-via-one-grok-bot-prompt",
+    "title": "Kaspa archival node via one Grok Bot prompt",
+    "headline": "Paste GROK_BOT_PROMPT.md into Grok Bot to run a Kaspa mainnet archival node on the bot Linux computer with keep-alive checks.",
+    "whatTheyDid": "Paste GROK_BOT_PROMPT.md into Grok Bot to run a Kaspa mainnet archival node on the bot Linux computer with keep-alive checks.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Paste GROK_BOT_PROMPT.md into Grok Bot to run a Kaspa mainnet archival node on the bot Linux computer with keep-alive checks.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "STP-KAS",
+    "publishedAt": "2026-09-12",
+    "sourceUrl": "https://github.com/STP-KAS/Xai.Kaspa.node",
+    "sourceLabel": "STP-KAS · GitHub"
   }
 ]

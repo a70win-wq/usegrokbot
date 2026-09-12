@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 99,
+    "total": 103,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 94,
+    "alreadyIngested": 98,
     "pending": 0
   },
   "cases": [
@@ -1298,6 +1298,58 @@
       "title": "Dated case-log console demo for Grok Bot computer-use",
       "url": "https://github.com/liam-morrissy-cursor/jh-case-console-demo",
       "sourceSummary": "Small dated case-log console sandbox aimed at Grok Bot computer-use demos (explicitly not a Jack Henry product).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "ai-influencer-agency-pack-for-grok-bot",
+      "title": "AI Influencer Agency pack for Grok Bot",
+      "url": "https://github.com/inkboundnightdesk/ai-influencer-agency",
+      "sourceSummary": "Plug-and-play Grok Bot agency with GROKBOT.md, eight desks, human gates, and scripts to spawn AI influencers that never log in.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "overnight-six-bot-grok-bot-visual-crew",
+      "title": "Overnight six-bot Grok Bot visual crew",
+      "url": "https://github.com/Archive228/overnight",
+      "sourceSummary": "Human-gated six-bot Grok Bot crew that turns a night brief into sourced short-form visuals with strict role boundaries and receipts.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-executive-branch-cabinet-demo",
+      "title": "Grok Bot Executive Branch cabinet demo",
+      "url": "https://github.com/theSethian/grok-executive-branch",
+      "sourceSummary": "Case study where Grok Bot built a nine-agent Executive Branch cabinet with terminal routing into the Oval Office.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "kaspa-archival-node-via-one-grok-bot-prompt",
+      "title": "Kaspa archival node via one Grok Bot prompt",
+      "url": "https://github.com/STP-KAS/Xai.Kaspa.node",
+      "sourceSummary": "Paste GROK_BOT_PROMPT.md into Grok Bot to run a Kaspa mainnet archival node on the bot Linux computer with keep-alive checks.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
