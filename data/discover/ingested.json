@@ -93184,5 +93184,89 @@
     "xPostUrl": "https://x.com/ai_pmer/status/2098468768175571424",
     "sourceUrl": "https://x.com/ai_pmer/status/2098468768175571424",
     "sourceLabel": "Hands-On PM on X"
+  },
+  {
+    "slug": "noam99moyal-fomo-copy-trading-grok-bot-with-paper-live-modes",
+    "title": "FOMO copy-trading Grok Bot with paper/live modes",
+    "headline": "Documented Grok Bot template that hourly mirrors FOMO.family traders in paper or live mode with locked size/exits and mode stamps.",
+    "whatTheyDid": "Documented Grok Bot template that hourly mirrors FOMO.family traders in paper or live mode with locked size/exits and mode stamps.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Documented Grok Bot template that hourly mirrors FOMO.family traders in paper or live mode with locked size/exits and mode stamps.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "noam99moyal",
+    "publishedAt": "2026-09-11",
+    "sourceUrl": "https://github.com/noam99moyal/fomo-live-bot",
+    "sourceLabel": "noam99moyal · GitHub"
+  },
+  {
+    "slug": "duvida13-job-search-coverage-log-maintained-by-a-grok-bot",
+    "title": "Job-search coverage log maintained by a Grok Bot",
+    "headline": "Day-dated finds/ job-search coverage machine maintained by a Job Search Grok Bot assistant with Live/watch honesty rules.",
+    "whatTheyDid": "Day-dated finds/ job-search coverage machine maintained by a Job Search Grok Bot assistant with Live/watch honesty rules.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Day-dated finds/ job-search coverage machine maintained by a Job Search Grok Bot assistant with Live/watch honesty rules.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "duvida13",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/duvida13/GROK-BOT",
+    "sourceLabel": "duvida13 · GitHub"
+  },
+  {
+    "slug": "liam-morrissy-cursor-dated-case-log-console-demo-for-grok-bot-compute",
+    "title": "Dated case-log console demo for Grok Bot computer-use",
+    "headline": "Small dated case-log console sandbox aimed at Grok Bot computer-use demos (explicitly not a Jack Henry product).",
+    "whatTheyDid": "Small dated case-log console sandbox aimed at Grok Bot computer-use demos (explicitly not a Jack Henry product).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Small dated case-log console sandbox aimed at Grok Bot computer-use demos (explicitly not a Jack Henry product).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "liam-morrissy-cursor",
+    "publishedAt": "2026-09-11",
+    "sourceUrl": "https://github.com/liam-morrissy-cursor/jh-case-console-demo",
+    "sourceLabel": "liam-morrissy-cursor · GitHub"
   }
 ]
