@@ -98411,5 +98411,63 @@
     "xPostUrl": "https://x.com/scandunkme/status/2098827115437412842",
     "sourceUrl": "https://x.com/scandunkme/status/2098827115437412842",
     "sourceLabel": "ScanDunk on X"
+  },
+  {
+    "slug": "pitchfork-and-torch-pokebot-field-guide-for-grok-bot-rosters",
+    "title": "PokeBot Field Guide for Grok Bot rosters",
+    "headline": "Vite/React Field Guide to census, paste, Keep/Watch/Skip, and pin six Grok Bots from x.ai/bot share URLs — Never Add, pack templates under pack/.",
+    "whatTheyDid": "Vite/React Field Guide to census, paste, Keep/Watch/Skip, and pin six Grok Bots from x.ai/bot share URLs — Never Add, pack templates under pack/.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Vite/React Field Guide to census, paste, Keep/Watch/Skip, and pin six Grok Bots from x.ai/bot share URLs — Never Add, pack templates under pack/.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Pitchfork-and-Torch",
+    "publishedAt": "2026-09-12",
+    "sourceUrl": "https://github.com/Pitchfork-and-Torch/pokebot",
+    "sourceLabel": "Pitchfork-and-Torch · GitHub"
+  },
+  {
+    "slug": "thepeoplesvoice-countershift-parallel-grok-bot-galaxy-72h-desk",
+    "title": "COUNTERSHIFT — parallel Grok Bot Galaxy 72h desk",
+    "headline": "Public desk for an unofficial parallel 72-hour build against Grok Bot Galaxy (15–17 Sep 2026), with pasteable bots/, handoff protocol, and Perth night clock.",
+    "whatTheyDid": "Public desk for an unofficial parallel 72-hour build against Grok Bot Galaxy (15–17 Sep 2026), with pasteable bots/, handoff protocol, and Perth night clock.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Public desk for an unofficial parallel 72-hour build against Grok Bot Galaxy (15–17 Sep 2026), with pasteable bots/, handoff protocol, and Perth night clock.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ThePeoplesVoice",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/ThePeoplesVoice/countershift",
+    "sourceLabel": "ThePeoplesVoice · GitHub"
   }
 ]

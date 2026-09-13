@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 103,
+    "total": 105,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 98,
+    "alreadyIngested": 100,
     "pending": 0
   },
   "cases": [
@@ -1350,6 +1350,32 @@
       "title": "Kaspa archival node via one Grok Bot prompt",
       "url": "https://github.com/STP-KAS/Xai.Kaspa.node",
       "sourceSummary": "Paste GROK_BOT_PROMPT.md into Grok Bot to run a Kaspa mainnet archival node on the bot Linux computer with keep-alive checks.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "pokebot-field-guide-for-grok-bot-rosters",
+      "title": "PokeBot Field Guide for Grok Bot rosters",
+      "url": "https://github.com/Pitchfork-and-Torch/pokebot",
+      "sourceSummary": "Vite/React Field Guide to census, paste, Keep/Watch/Skip, and pin six Grok Bots from x.ai/bot share URLs — Never Add, pack templates under pack/.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "countershift-parallel-grok-bot-galaxy-72h-desk",
+      "title": "COUNTERSHIFT — parallel Grok Bot Galaxy 72h desk",
+      "url": "https://github.com/ThePeoplesVoice/countershift",
+      "sourceSummary": "Public desk for an unofficial parallel 72-hour build against Grok Bot Galaxy (15–17 Sep 2026), with pasteable bots/, handoff protocol, and Perth night clock.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
