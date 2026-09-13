@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 105,
+    "total": 109,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 100,
+    "alreadyIngested": 104,
     "pending": 0
   },
   "cases": [
@@ -1376,6 +1376,58 @@
       "title": "COUNTERSHIFT — parallel Grok Bot Galaxy 72h desk",
       "url": "https://github.com/ThePeoplesVoice/countershift",
       "sourceSummary": "Public desk for an unofficial parallel 72-hour build against Grok Bot Galaxy (15–17 Sep 2026), with pasteable bots/, handoff protocol, and Perth night clock.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "poly-formula-belgrade-grok-bot-hackathon-racer",
+      "title": "Poly Formula — Belgrade Grok Bot Hackathon racer",
+      "url": "https://github.com/peckz/poly-formula",
+      "sourceSummary": "Webcam-steered low-poly racing demo built at the Grok Bot Hackathon in Belgrade with MediaPipe and Three.js.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "circleback-pets-vs-bots-grok-bot-serbia-hackathon-game",
+      "title": "Circleback — Pets vs Bots Grok Bot Serbia hackathon game",
+      "url": "https://github.com/aleksicmarija/circleback",
+      "sourceSummary": "Real-time multiplayer turf-war game (pets vs AI bots) built in one day at the Grok Bot Serbia Hackathon.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "scam-drill-grok-bot-hackathon-voice-practice-app",
+      "title": "Scam Drill — Grok Bot hackathon voice practice app",
+      "url": "https://github.com/w4jo/grok-bot-hackathon",
+      "sourceSummary": "Voice practice app that coaches older adults through phone-scam drills, shipped as a Grok Bot hackathon project.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "late-one-minute-grok-bot-grok-build-game-case",
+      "title": "Late One Minute — Grok Bot × Grok Build game case",
+      "url": "https://github.com/parize670/late-one-minute",
+      "sourceSummary": "60-second outing mini-game case study: Grok Bot as PM, Grok Build as coder, Codex as tech lead, with AGENTS.md and paste-ready prompts.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

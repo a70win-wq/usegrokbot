@@ -99658,5 +99658,117 @@
     "xPostUrl": "https://x.com/leonardoballand/status/2099030321534566410",
     "sourceUrl": "https://x.com/leonardoballand/status/2099030321534566410",
     "sourceLabel": "Leonardo BALLAND on X"
+  },
+  {
+    "slug": "peckz-poly-formula-belgrade-grok-bot-hackathon-racer",
+    "title": "Poly Formula — Belgrade Grok Bot Hackathon racer",
+    "headline": "Webcam-steered low-poly racing demo built at the Grok Bot Hackathon in Belgrade with MediaPipe and Three.js.",
+    "whatTheyDid": "Webcam-steered low-poly racing demo built at the Grok Bot Hackathon in Belgrade with MediaPipe and Three.js.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Webcam-steered low-poly racing demo built at the Grok Bot Hackathon in Belgrade with MediaPipe and Three.js.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "peckz",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/peckz/poly-formula",
+    "sourceLabel": "peckz · GitHub"
+  },
+  {
+    "slug": "aleksicmarija-circleback-pets-vs-bots-grok-bot-serbia-hackatho",
+    "title": "Circleback — Pets vs Bots Grok Bot Serbia hackathon game",
+    "headline": "Real-time multiplayer turf-war game (pets vs AI bots) built in one day at the Grok Bot Serbia Hackathon.",
+    "whatTheyDid": "Real-time multiplayer turf-war game (pets vs AI bots) built in one day at the Grok Bot Serbia Hackathon.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Real-time multiplayer turf-war game (pets vs AI bots) built in one day at the Grok Bot Serbia Hackathon.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "aleksicmarija",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/aleksicmarija/circleback",
+    "sourceLabel": "aleksicmarija · GitHub"
+  },
+  {
+    "slug": "w4jo-scam-drill-grok-bot-hackathon-voice-practice-app",
+    "title": "Scam Drill — Grok Bot hackathon voice practice app",
+    "headline": "Voice practice app that coaches older adults through phone-scam drills, shipped as a Grok Bot hackathon project.",
+    "whatTheyDid": "Voice practice app that coaches older adults through phone-scam drills, shipped as a Grok Bot hackathon project.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Voice practice app that coaches older adults through phone-scam drills, shipped as a Grok Bot hackathon project.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "w4jo",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/w4jo/grok-bot-hackathon",
+    "sourceLabel": "w4jo · GitHub"
+  },
+  {
+    "slug": "parize670-late-one-minute-grok-bot-grok-build-game-case",
+    "title": "Late One Minute — Grok Bot × Grok Build game case",
+    "headline": "60-second outing mini-game case study: Grok Bot as PM, Grok Build as coder, Codex as tech lead, with AGENTS.md and paste-ready prompts.",
+    "whatTheyDid": "60-second outing mini-game case study: Grok Bot as PM, Grok Build as coder, Codex as tech lead, with AGENTS.md and paste-ready prompts.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The source did not expose a reliable machine-readable publication date, so the displayed date is when UseGrokBot indexed it.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "60-second outing mini-game case study: Grok Bot as PM, Grok Build as coder, Codex as tech lead, with AGENTS.md and paste-ready prompts.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "parize670",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/parize670/late-one-minute",
+    "sourceLabel": "parize670 · GitHub"
   }
 ]
