@@ -102838,5 +102838,63 @@
     "xPostUrl": "https://x.com/TheRocketMan587/status/2099310632495378738",
     "sourceUrl": "https://x.com/TheRocketMan587/status/2099310632495378738",
     "sourceLabel": "The Rocket 🚀 🌍 Man on X"
+  },
+  {
+    "slug": "jescandonp-baloto-analyst-grok-bot-lottery-desk-colombia",
+    "title": "Baloto Analyst — Grok Bot lottery desk (Colombia)",
+    "headline": "Grok Bot profile plus Python engines for Baloto/Revancha/MiLoto/ColorLoto: historical CSVs, frequency/atraso analytics, and responsible-play play generators.",
+    "whatTheyDid": "Grok Bot profile plus Python engines for Baloto/Revancha/MiLoto/ColorLoto: historical CSVs, frequency/atraso analytics, and responsible-play play generators.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Grok Bot profile plus Python engines for Baloto/Revancha/MiLoto/ColorLoto: historical CSVs, frequency/atraso analytics, and responsible-play play generators.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "jescandonp",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/jescandonp/baloto-grok-bot",
+    "sourceLabel": "jescandonp · GitHub"
+  },
+  {
+    "slug": "ababa831-grokbot-game-a-week-weekly-browser-games-bot-ski",
+    "title": "grokbot-game-a-week — weekly browser games + Bot skills",
+    "headline": "Weekly browser mini-game catalog with autonomous-game-development SKILL.md packs and Day1–7 shipping rules for Bot-driven game a week.",
+    "whatTheyDid": "Weekly browser mini-game catalog with autonomous-game-development SKILL.md packs and Day1–7 shipping rules for Bot-driven game a week.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Weekly browser mini-game catalog with autonomous-game-development SKILL.md packs and Day1–7 shipping rules for Bot-driven game a week.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "weekly",
+    "source": "community",
+    "authorName": "ababa831",
+    "publishedAt": "2026-08-25",
+    "sourceUrl": "https://github.com/ababa831/grokbot-game-a-week",
+    "sourceLabel": "ababa831 · GitHub"
   }
 ]

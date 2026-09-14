@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 109,
+    "total": 111,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 104,
+    "alreadyIngested": 106,
     "pending": 0
   },
   "cases": [
@@ -1428,6 +1428,32 @@
       "title": "Late One Minute — Grok Bot × Grok Build game case",
       "url": "https://github.com/parize670/late-one-minute",
       "sourceSummary": "60-second outing mini-game case study: Grok Bot as PM, Grok Build as coder, Codex as tech lead, with AGENTS.md and paste-ready prompts.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "baloto-analyst-grok-bot-lottery-desk-colombia",
+      "title": "Baloto Analyst — Grok Bot lottery desk (Colombia)",
+      "url": "https://github.com/jescandonp/baloto-grok-bot",
+      "sourceSummary": "Grok Bot profile plus Python engines for Baloto/Revancha/MiLoto/ColorLoto: historical CSVs, frequency/atraso analytics, and responsible-play play generators.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-game-a-week-weekly-browser-games-bot-skills",
+      "title": "grokbot-game-a-week — weekly browser games + Bot skills",
+      "url": "https://github.com/ababa831/grokbot-game-a-week",
+      "sourceSummary": "Weekly browser mini-game catalog with autonomous-game-development SKILL.md packs and Day1–7 shipping rules for Bot-driven game a week.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
