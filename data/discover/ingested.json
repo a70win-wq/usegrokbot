@@ -103726,5 +103726,201 @@
     "sourceLabel": "PEF on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2098778779560681474"
+  },
+  {
+    "slug": "wassimyounes01-agent-pipeline-grok-bot-role-task-to-delivery-ki",
+    "title": "Agent Pipeline — Grok Bot role task-to-delivery kit",
+    "headline": "Local task-to-delivery kit with bounded routing, Grok Bot research/systems/design/critic roles, review evidence, and verified publishing.",
+    "whatTheyDid": "Local task-to-delivery kit with bounded routing, Grok Bot research/systems/design/critic roles, review evidence, and verified publishing.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Local task-to-delivery kit with bounded routing, Grok Bot research/systems/design/critic roles, review evidence, and verified publishing.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Wassimyounes01",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/Wassimyounes01/agent-pipeline",
+    "sourceLabel": "Wassimyounes01 · GitHub"
+  },
+  {
+    "slug": "xrpshine-xrpl-neon-ledger-hud-built-for-grok-build",
+    "title": "XRPL neon ledger HUD built for Grok Build",
+    "headline": "Single-file WebGL neon dashboard that visualizes live XRPL ledger closes, packaged as a Grok Build project drop.",
+    "whatTheyDid": "Single-file WebGL neon dashboard that visualizes live XRPL ledger closes, packaged as a Grok Build project drop.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Single-file WebGL neon dashboard that visualizes live XRPL ledger closes, packaged as a Grok Build project drop.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "xrpshine",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/xrpshine/xrpl-neon-ledger",
+    "sourceLabel": "xrpshine · GitHub"
+  },
+  {
+    "slug": "1337sandvika-fantasy-shipping-roro-career-sim-grok-build",
+    "title": "Fantasy Shipping — RoRo career sim (Grok Build)",
+    "headline": "Worldwide RoRo shipping career sim built with Grok Build, with a Capacitor/App Store wrap planned next.",
+    "whatTheyDid": "Worldwide RoRo shipping career sim built with Grok Build, with a Capacitor/App Store wrap planned next.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Worldwide RoRo shipping career sim built with Grok Build, with a Capacitor/App Store wrap planned next.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "1337sandvika",
+    "publishedAt": "2026-09-04",
+    "sourceUrl": "https://github.com/1337sandvika/fantasy-shipping",
+    "sourceLabel": "1337sandvika · GitHub"
+  },
+  {
+    "slug": "ngc4160-cartscope-golf-cart-diagnostics-app-grok-build",
+    "title": "CartScope — golf-cart diagnostics app (Grok Build)",
+    "headline": "Tablet-first golf-cart diagnostic checklist app (battery → codes → factory tests → report) built with Grok Build.",
+    "whatTheyDid": "Tablet-first golf-cart diagnostic checklist app (battery → codes → factory tests → report) built with Grok Build.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Tablet-first golf-cart diagnostic checklist app (battery → codes → factory tests → report) built with Grok Build.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "NGC4160",
+    "publishedAt": "2026-09-05",
+    "sourceUrl": "https://github.com/NGC4160/CartScope",
+    "sourceLabel": "NGC4160 · GitHub"
+  },
+  {
+    "slug": "patreich72-rdr2-interactive-map-grok-build-next-js",
+    "title": "RDR2 interactive map (Grok Build / Next.js)",
+    "headline": "Local, ad-free, login-free interactive Red Dead Redemption 2 fan map built with Grok Build and Next.js.",
+    "whatTheyDid": "Local, ad-free, login-free interactive Red Dead Redemption 2 fan map built with Grok Build and Next.js.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Local, ad-free, login-free interactive Red Dead Redemption 2 fan map built with Grok Build and Next.js.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "patreiCH72",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/patreiCH72/rdr2-interactive-map",
+    "sourceLabel": "patreiCH72 · GitHub"
+  },
+  {
+    "slug": "dntof-taskpad-physical-pad-with-experimental-grok-bot",
+    "title": "TaskPad — physical pad with experimental Grok Bot adapter",
+    "headline": "STC89C52 physical task pad with LCD1602 and optional ESP8266 OLED bridge; PC hub includes experimental Grok Bot and Cursor adapters.",
+    "whatTheyDid": "STC89C52 physical task pad with LCD1602 and optional ESP8266 OLED bridge; PC hub includes experimental Grok Bot and Cursor adapters.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "STC89C52 physical task pad with LCD1602 and optional ESP8266 OLED bridge; PC hub includes experimental Grok Bot and Cursor adapters.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "DNTOF",
+    "publishedAt": "2026-09-13",
+    "sourceUrl": "https://github.com/DNTOF/TaskPad",
+    "sourceLabel": "DNTOF · GitHub"
+  },
+  {
+    "slug": "mrf1ow-boteducation-lms-with-grok-professors-over-mcp",
+    "title": "BotEducation — LMS with Grok professors over MCP",
+    "headline": "Self-hosted Next.js + Supabase LMS where Grok / xAI bots act as professors through a remote MCP tool surface (one school per deploy).",
+    "whatTheyDid": "Self-hosted Next.js + Supabase LMS where Grok / xAI bots act as professors through a remote MCP tool surface (one school per deploy).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Self-hosted Next.js + Supabase LMS where Grok / xAI bots act as professors through a remote MCP tool surface (one school per deploy).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "MrF1ow",
+    "publishedAt": "2026-09-09",
+    "sourceUrl": "https://github.com/MrF1ow/boteducation",
+    "sourceLabel": "MrF1ow · GitHub"
   }
 ]

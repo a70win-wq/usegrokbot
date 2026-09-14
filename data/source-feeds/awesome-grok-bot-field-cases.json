@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 111,
+    "total": 118,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 106,
+    "alreadyIngested": 113,
     "pending": 0
   },
   "cases": [
@@ -1454,6 +1454,97 @@
       "title": "grokbot-game-a-week — weekly browser games + Bot skills",
       "url": "https://github.com/ababa831/grokbot-game-a-week",
       "sourceSummary": "Weekly browser mini-game catalog with autonomous-game-development SKILL.md packs and Day1–7 shipping rules for Bot-driven game a week.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "agent-pipeline-grok-bot-role-task-to-delivery-kit",
+      "title": "Agent Pipeline — Grok Bot role task-to-delivery kit",
+      "url": "https://github.com/Wassimyounes01/agent-pipeline",
+      "sourceSummary": "Local task-to-delivery kit with bounded routing, Grok Bot research/systems/design/critic roles, review evidence, and verified publishing.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "xrpl-neon-ledger-hud-built-for-grok-build",
+      "title": "XRPL neon ledger HUD built for Grok Build",
+      "url": "https://github.com/xrpshine/xrpl-neon-ledger",
+      "sourceSummary": "Single-file WebGL neon dashboard that visualizes live XRPL ledger closes, packaged as a Grok Build project drop.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "fantasy-shipping-roro-career-sim-grok-build",
+      "title": "Fantasy Shipping — RoRo career sim (Grok Build)",
+      "url": "https://github.com/1337sandvika/fantasy-shipping",
+      "sourceSummary": "Worldwide RoRo shipping career sim built with Grok Build, with a Capacitor/App Store wrap planned next.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "cartscope-golf-cart-diagnostics-app-grok-build",
+      "title": "CartScope — golf-cart diagnostics app (Grok Build)",
+      "url": "https://github.com/NGC4160/CartScope",
+      "sourceSummary": "Tablet-first golf-cart diagnostic checklist app (battery → codes → factory tests → report) built with Grok Build.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "rdr2-interactive-map-grok-build-next-js",
+      "title": "RDR2 interactive map (Grok Build / Next.js)",
+      "url": "https://github.com/patreiCH72/rdr2-interactive-map",
+      "sourceSummary": "Local, ad-free, login-free interactive Red Dead Redemption 2 fan map built with Grok Build and Next.js.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "taskpad-physical-pad-with-experimental-grok-bot-adapter",
+      "title": "TaskPad — physical pad with experimental Grok Bot adapter",
+      "url": "https://github.com/DNTOF/TaskPad",
+      "sourceSummary": "STC89C52 physical task pad with LCD1602 and optional ESP8266 OLED bridge; PC hub includes experimental Grok Bot and Cursor adapters.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "boteducation-lms-with-grok-professors-over-mcp",
+      "title": "BotEducation — LMS with Grok professors over MCP",
+      "url": "https://github.com/MrF1ow/boteducation",
+      "sourceSummary": "Self-hosted Next.js + Supabase LMS where Grok / xAI bots act as professors through a remote MCP tool surface (one school per deploy).",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
