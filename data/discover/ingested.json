@@ -108565,5 +108565,175 @@
     "xPostUrl": "https://x.com/LiuweijiaVip/status/2099709549737628063",
     "sourceUrl": "https://x.com/LiuweijiaVip/status/2099709549737628063",
     "sourceLabel": "Wei佳 on X"
+  },
+  {
+    "slug": "edwinkestler-scplay-starcraft-ii-sparring-for-grok-bot",
+    "title": "SCPlay — StarCraft II sparring for Grok Bot",
+    "headline": "Ubuntu StarCraft II sparring package that a Grok Bot can install and coach against, with live chat, match logs, and chaos mode.",
+    "whatTheyDid": "Ubuntu StarCraft II sparring package that a Grok Bot can install and coach against, with live chat, match logs, and chaos mode.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Ubuntu StarCraft II sparring package that a Grok Bot can install and coach against, with live chat, match logs, and chaos mode.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "EdwinKestler",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/EdwinKestler/scplay-grok-bot",
+    "sourceLabel": "EdwinKestler · GitHub"
+  },
+  {
+    "slug": "denismsouza-video-maker-remotion-render-desk-for-grok-bot-sp",
+    "title": "video-maker — Remotion render desk for Grok Bot specs",
+    "headline": "Remotion + ffmpeg desk that validates and renders MP4s from JSON storyboards and media produced by a Grok Bot (the Bot does not encode video).",
+    "whatTheyDid": "Remotion + ffmpeg desk that validates and renders MP4s from JSON storyboards and media produced by a Grok Bot (the Bot does not encode video).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Remotion + ffmpeg desk that validates and renders MP4s from JSON storyboards and media produced by a Grok Bot (the Bot does not encode video).",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "DenisMSouza",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/DenisMSouza/video-maker",
+    "sourceLabel": "DenisMSouza · GitHub"
+  },
+  {
+    "slug": "funkytaff-grokbot-meetup-slides-daily-assistant-team",
+    "title": "GrokBot meetup slides — daily assistant team",
+    "headline": "15-page HTML meetup deck sharing how the speaker built a daily assistant team with Grok Bot, including audience QR and case screenshots.",
+    "whatTheyDid": "15-page HTML meetup deck sharing how the speaker built a daily assistant team with Grok Bot, including audience QR and case screenshots.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "15-page HTML meetup deck sharing how the speaker built a daily assistant team with Grok Bot, including audience QR and case screenshots.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "FunkyTaff",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/FunkyTaff/grokbot-meetup",
+    "sourceLabel": "FunkyTaff · GitHub"
+  },
+  {
+    "slug": "matiasboldrini-grok-bot-meetup-wall-mendoza",
+    "title": "Grok Bot Meetup wall — Mendoza",
+    "headline": "Public photo/message wall for a Grok Bot meetup in Mendoza, deployed as a static site teammates can update from the Bot.",
+    "whatTheyDid": "Public photo/message wall for a Grok Bot meetup in Mendoza, deployed as a static site teammates can update from the Bot.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Public photo/message wall for a Grok Bot meetup in Mendoza, deployed as a static site teammates can update from the Bot.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "MatiasBoldrini",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/MatiasBoldrini/grok-bot-meetup",
+    "sourceLabel": "MatiasBoldrini · GitHub"
+  },
+  {
+    "slug": "littletechbird-amv-company-proposal-on-grok-bot-live",
+    "title": "AMV company proposal on Grok Bot Live",
+    "headline": "Public-safe AMV music-video company proposal and Hatch template for standing up an anime-style studio on Grok Bot Live.",
+    "whatTheyDid": "Public-safe AMV music-video company proposal and Hatch template for standing up an anime-style studio on Grok Bot Live.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Public-safe AMV music-video company proposal and Hatch template for standing up an anime-style studio on Grok Bot Live.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "littletechbird",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/littletechbird/amv-grokbot-company-proposal",
+    "sourceLabel": "littletechbird · GitHub"
+  },
+  {
+    "slug": "stp-kas-kaspa-node-density-test-on-one-grok-bot-box",
+    "title": "Kaspa node density test on one Grok Bot box",
+    "headline": "Honest one-sandbox density notes measuring how many real Kaspa mainnet public nodes a single Grok Bot Linux box can run.",
+    "whatTheyDid": "Honest one-sandbox density notes measuring how many real Kaspa mainnet public nodes a single Grok Bot Linux box can run.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Honest one-sandbox density notes measuring how many real Kaspa mainnet public nodes a single Grok Bot Linux box can run.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "STP-KAS",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/STP-KAS/Xai.mainnet.public.nodes",
+    "sourceLabel": "STP-KAS · GitHub"
   }
 ]

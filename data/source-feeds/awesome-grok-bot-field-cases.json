@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 118,
+    "total": 124,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 113,
+    "alreadyIngested": 119,
     "pending": 0
   },
   "cases": [
@@ -1545,6 +1545,84 @@
       "title": "BotEducation — LMS with Grok professors over MCP",
       "url": "https://github.com/MrF1ow/boteducation",
       "sourceSummary": "Self-hosted Next.js + Supabase LMS where Grok / xAI bots act as professors through a remote MCP tool surface (one school per deploy).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "scplay-starcraft-ii-sparring-for-grok-bot",
+      "title": "SCPlay — StarCraft II sparring for Grok Bot",
+      "url": "https://github.com/EdwinKestler/scplay-grok-bot",
+      "sourceSummary": "Ubuntu StarCraft II sparring package that a Grok Bot can install and coach against, with live chat, match logs, and chaos mode.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "video-maker-remotion-render-desk-for-grok-bot-specs",
+      "title": "video-maker — Remotion render desk for Grok Bot specs",
+      "url": "https://github.com/DenisMSouza/video-maker",
+      "sourceSummary": "Remotion + ffmpeg desk that validates and renders MP4s from JSON storyboards and media produced by a Grok Bot (the Bot does not encode video).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-meetup-slides-daily-assistant-team",
+      "title": "GrokBot meetup slides — daily assistant team",
+      "url": "https://github.com/FunkyTaff/grokbot-meetup",
+      "sourceSummary": "15-page HTML meetup deck sharing how the speaker built a daily assistant team with Grok Bot, including audience QR and case screenshots.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-meetup-wall-mendoza",
+      "title": "Grok Bot Meetup wall — Mendoza",
+      "url": "https://github.com/MatiasBoldrini/grok-bot-meetup",
+      "sourceSummary": "Public photo/message wall for a Grok Bot meetup in Mendoza, deployed as a static site teammates can update from the Bot.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "amv-company-proposal-on-grok-bot-live",
+      "title": "AMV company proposal on Grok Bot Live",
+      "url": "https://github.com/littletechbird/amv-grokbot-company-proposal",
+      "sourceSummary": "Public-safe AMV music-video company proposal and Hatch template for standing up an anime-style studio on Grok Bot Live.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "kaspa-node-density-test-on-one-grok-bot-box",
+      "title": "Kaspa node density test on one Grok Bot box",
+      "url": "https://github.com/STP-KAS/Xai.mainnet.public.nodes",
+      "sourceSummary": "Honest one-sandbox density notes measuring how many real Kaspa mainnet public nodes a single Grok Bot Linux box can run.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
