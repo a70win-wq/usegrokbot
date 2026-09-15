@@ -106968,5 +106968,1602 @@
     "sourceUrl": "https://x.com/petergyang/status/2099502180378296394",
     "sourceLabel": "Peter Yang on X",
     "format": "article"
+  },
+  {
+    "slug": "grokbotradar-the-dumbest-part-of-credit-card-points-is-rememb",
+    "title": "The dumbest part of credit card points is remembering which card to use",
+    "headline": "The dumbest part of credit card points is remembering which card to use.",
+    "body": "The dumbest part of credit card points is remembering which card to use.\n\nGas? Dining? Travel? Some random perk you forgot existed?\n\n@trevin built Credit Card Max for Grok Bot to answer a much narrower question:\n\nWhich card already in my wallet should I use for this?\n\nIt can compare the cards you have, track perks and benefits, flag recurring charges sitting on the wrong card, warn about expiring benefits, and run a monthly utilization review.\n\nThat’s what I like about this one.\n\nMost credit card advice is trying to get you to open another card.\n\nThis Bot is trying to make you better at using the ones you already have.\n\nAnd it’s a good example of the kind of tiny ongoing job that makes a persistent Bot useful.\n\nRemember my cards. Remember the rules. Tell me when I’m about to leave points or perks on the table.\n\nCredit Card Max:\nhttps://x.ai/bot/marketplace/bots/credit-card-max",
+    "whatTheyDid": "The dumbest part of credit card points is remembering which card to use.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "The dumbest part of credit card points is remembering which card to use.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Fan Grok Bot Radar",
+    "handle": "GrokBotRadar",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/GrokBotRadar/status/2099706692342567410",
+    "sourceUrl": "https://x.com/GrokBotRadar/status/2099706692342567410",
+    "sourceLabel": "Fan Grok Bot Radar on X",
+    "format": "article"
+  },
+  {
+    "slug": "milindlabs-i-made-an-open-source-version-of-the-grok-bot-co",
+    "title": "I made an Open Source version of the Grok Bot complete with all the...",
+    "headline": "I made an Open Source version of the Grok Bot complete with all the features It does not need any subscriptions at all and uses the existing subscriptions you already have It can spin up virtual machines from...",
+    "body": "I made an Open Source version of the Grok Bot complete with all the features\n\nIt does not need any subscriptions at all and uses the existing subscriptions you already have\n\nIt can spin up virtual machines from @asciidotdev \n\nIt uses @trycua for computer use\n\nIt also has plugin support supporting all the integrations by @composio \n\nRoutines coming soon :D\n\nLink to the repo in the comments",
+    "whatTheyDid": "I made an Open Source version of the Grok Bot complete with all the features It does not need any subscriptions at all and uses the existing subscriptions you already have It can spin up virtual machines from...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I made an Open Source version of the Grok Bot complete with all the features It does not need any subscriptions at all and uses the existing subscriptions you already have It can spin up virtual machines from...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Milind S",
+    "handle": "milindlabs",
+    "publishedAt": "2026-08-11",
+    "xPostUrl": "https://x.com/milindlabs/status/2087289803964559746",
+    "sourceUrl": "https://x.com/milindlabs/status/2087289803964559746",
+    "sourceLabel": "Milind S on X"
+  },
+  {
+    "slug": "carterwzq-one-more-thing-after-running-this-for-real-grok",
+    "title": "One more thing after running this for real: Grok Bot isn’t a solo tool",
+    "headline": "One more thing after running this for real: Grok Bot isn’t a solo tool.",
+    "body": "One more thing after running this for real:\n\nGrok Bot isn’t a solo tool.\nA colleague can jump into the same workspace — same agents, same records, same handoff queue.\n\nThat’s the unlock for us:\n• multiple products running in parallel\n• agents keep grinding directories 24/7\n• I only open my phone for logins, captchas, and quick approvals\n\nFragmented time used to die in forms.\nNow the bots use the hours; I use the minutes.\n\nThe agent does the checklist.\nThe shared workspace is what makes it a team system.",
+    "whatTheyDid": "One more thing after running this for real: Grok Bot isn’t a solo tool.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "One more thing after running this for real: Grok Bot isn’t a solo tool.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "github",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Carter Wang",
+    "handle": "carterwzq",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/carterwzq/status/2099703401496109501",
+    "sourceUrl": "https://x.com/carterwzq/status/2099703401496109501",
+    "sourceLabel": "Carter Wang on X"
+  },
+  {
+    "slug": "lemaniot-were-using-grok-bot-to-create-a-meta-support-age",
+    "title": "We’re using grok bot to create a Meta support agent objection handler",
+    "headline": "We’re using grok bot to create a Meta support agent objection handler.",
+    "body": "We’re using grok bot to create a Meta support agent objection handler. It basically takes every objection (list of 20 we have so far) and reverse engineers the support training that is received, does meta analysis of what legal/supervisors/privacy policy does and then gets us to a better position in terms of getting what we want (Helping offshore teams understand how the Country of incorporation doesn’t change when you leave a country for two weeks. You still pay taxes in the US).\n\nWe shall see how good their meta (meta cognition) is versus a bot that has all the context. TBA.",
+    "whatTheyDid": "We’re using grok bot to create a Meta support agent objection handler.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "We’re using grok bot to create a Meta support agent objection handler.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Le Maniot",
+    "handle": "lemaniot",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/lemaniot/status/2099690914067235015",
+    "sourceUrl": "https://x.com/lemaniot/status/2099690914067235015",
+    "sourceLabel": "Le Maniot on X"
+  },
+  {
+    "slug": "b-doong2daddy-the-most-useful-tasks-for-grok-bot-seem-to-have",
+    "title": "The most useful tasks for Grok Bot seem to have three things in common",
+    "headline": "The most useful tasks for Grok Bot seem to have three things in common.",
+    "body": "The most useful tasks for Grok Bot seem to have three things in common.\n\nThey involve multiple steps.\nThey involve multiple tools.\nAnd they have a clear finish line.\n\nFor example, this is probably not the best use:\n“Research this company for me.”\n\nA better use is:\n“Research this company, check their website, find their pricing, compare it to these three competitors, put everything into a document, and tell me what I actually need to know.”\n\nI think this is one of the biggest differences between Grok Bot and a normal AI agent. \n\n-> A Bot can have its own role, its own context, its own computer, and keep doing similar work over time instead of starting from zero every conversation.",
+    "whatTheyDid": "The most useful tasks for Grok Bot seem to have three things in common.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "The most useful tasks for Grok Bot seem to have three things in common.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Texas Twins Dad",
+    "handle": "B_doong2daddy",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/B_doong2daddy/status/2099684688621125824",
+    "sourceUrl": "https://x.com/B_doong2daddy/status/2099684688621125824",
+    "sourceLabel": "Texas Twins Dad on X",
+    "format": "article"
+  },
+  {
+    "slug": "dingyi-grok-bot-x-list-ego",
+    "title": "刚发现 Grok Bot 也可以操作本地电脑，我现在每天让它自动汇总几个 X List 的内容，抓完帖子直接整理成摘要。配合 ego...",
+    "headline": "刚发现 Grok Bot 也可以操作本地电脑，我现在每天让它自动汇总几个 X List 的内容，抓完帖子直接整理成摘要。配合 ego Lite 做自动化任务体验太好了。 最新版体验提升很明显。之前 agent 跑任务疯狂开新标签页，内存直接爆炸。现在学会复用标签页了，看完一个就在当前标签上开新的，内存占用降了一大截。整体操作也顺了不少，Space 切换、钉选、管理这些交互细节都打磨了一轮，用起来更顺手了。 目前还没有 Linux...",
+    "body": "刚发现 Grok Bot 也可以操作本地电脑，我现在每天让它自动汇总几个 X List 的内容，抓完帖子直接整理成摘要。配合 ego Lite 做自动化任务体验太好了。\n\n最新版体验提升很明显。之前 agent 跑任务疯狂开新标签页，内存直接爆炸。现在学会复用标签页了，看完一个就在当前标签上开新的，内存占用降了一大截。整体操作也顺了不少，Space 切换、钉选、管理这些交互细节都打磨了一轮，用起来更顺手了。\n\n目前还没有 Linux 版，希望官方 @ego_agent 尽快支持，这样把 ego Lite 直接装在 Grok Bot 云主机里面岂不是更好？\n\n下载地址：https://lite.ego.app/",
+    "whatTheyDid": "刚发现 Grok Bot 也可以操作本地电脑，我现在每天让它自动汇总几个 X List 的内容，抓完帖子直接整理成摘要。配合 ego Lite 做自动化任务体验太好了。 最新版体验提升很明显。之前 agent 跑任务疯狂开新标签页，内存直接爆炸。现在学会复用标签页了，看完一个就在当前标签上开新的，内存占用降了一大截。整体操作也顺了不少，Space 切换、钉选、管理这些交互细节都打磨了一轮，用起来更顺手了。 目前还没有 Linux...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "刚发现 Grok Bot 也可以操作本地电脑，我现在每天让它自动汇总几个 X List 的内容，抓完帖子直接整理成摘要。配合 ego Lite 做自动化任务体验太好了。 最新版体验提升很明显。之前 agent 跑任务疯狂开新标签页，内存直接爆炸。现在学会复用标签页了，看完一个就在当前标签上开新的，内存占用降了一大截。整体操作也顺了不少，Space 切换、钉选、管理这些交互细节都打磨了一轮，用起来更顺手了。 目前还没有 Linux...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Ding",
+    "handle": "dingyi",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/dingyi/status/2099648434097791051",
+    "sourceUrl": "https://x.com/dingyi/status/2099648434097791051",
+    "sourceLabel": "Ding on X"
+  },
+  {
+    "slug": "gac-long-grok-bot-101-just-dropped-learn-ai-by-shipping-w",
+    "title": "Grok Bot 101 just dropped — learn AI by shipping work, not...",
+    "headline": "Grok Bot 101 just dropped — learn AI by shipping work, not doomscrolling threads.",
+    "body": "Grok Bot 101 just dropped — learn AI by shipping work, not doomscrolling threads.\n\nxAI DevRel walks through standing up a real agent with its own cloud computer. Setup takes ~10–15 minutes. Then it keeps running after you close the laptop.\n\nConcrete move: don't just chat. Set a routine (schedule or Slack/GitHub trigger) so the bot scouts, drafts, and only pings you for approve/deny.\n\nThat's how regular people actually learn AI — give it a job and watch the result.\n\nWhich workflow would you hand off first: content scout, CRM, or price hunter?\n\nhttps://x.ai/bot/guides/grok-bot-101",
+    "whatTheyDid": "Grok Bot 101 just dropped — learn AI by shipping work, not doomscrolling threads.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot 101 just dropped — learn AI by shipping work, not doomscrolling threads.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "slack",
+      "github",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "MEMES FINANCIAL",
+    "handle": "gac_long",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/gac_long/status/2099678453419131069",
+    "sourceUrl": "https://x.com/gac_long/status/2099678453419131069",
+    "sourceLabel": "MEMES FINANCIAL on X"
+  },
+  {
+    "slug": "keysss-most-ai-tools-help-you-start-an-email",
+    "title": "Most AI tools help you start an email",
+    "headline": "Most AI tools help you start an email.",
+    "body": "Most AI tools help you start an email.\nVery few help you finish one.\n\nThat was the whole test for me with\n @Migma_AI Migma ai and @bot  Grok Bot. \nNot “can it write copy.” Can it take a rough campaign idea and get me to a real email I can open in my inbox.\n\nThe usual mess is familiar. You have the offer in your head. \nThen you lose an afternoon to structure, layout, brand consistency, CTAs, and the last 20% that actually makes it sendable. By the time the design is ready, the brief has already drifted.\n\nThis workflow split the job in a way that felt usable.\nGrok stayed in the thinking seat. \nI gave it the brand, the direction, and the outcome I wanted. \n\nIt pushed the idea into a campaign shape before any layout existed: what the email was saying, who it was for, what needed to stay, what needed to get cut.\n\nMigma stayed in the production seat. It did not hand back a Google Doc with “insert hero here.” It built the email as an email. Sections, hierarchy, case-study space, technical block, CTAs, contact.\n\nThe kind of thing you review like a designer, not like a prompt engineer.\nThe moment that mattered was the test send. Preview is cheap. A real inbox is not.\n\nI checked the copy, cleaned a few lines, sent it to myself, and the layout held. That is the difference between an AI writing assistant and a production tool.\n\nThis is not for people who want one magic prompt and a live blast. You still approve access.\nYou still check facts. You still look at the design. \n\nCreating and editing should not auto send, and in this flow they didn’t.\n\nIt is for founders, marketers, and small teams who keep dying between “we should send this” and “this is actually ready.”\n\nIf Grok is the strategist in the chat, Migma is the studio that turns the strategy into something you can ship.\nThat combination is the part I would use again.\n@Migma_AI",
+    "whatTheyDid": "Most AI tools help you start an email.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Most AI tools help you start an email.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Keys 🗝️",
+    "handle": "_keysss__",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/_keysss__/status/2099675707911631080",
+    "sourceUrl": "https://x.com/_keysss__/status/2099675707911631080",
+    "sourceLabel": "Keys 🗝️ on X",
+    "format": "article"
+  },
+  {
+    "slug": "abed-nego04-i-tried-a-campaign-from-idea-to-test-send-with-m",
+    "title": "I tried a campaign from idea to test send with @Migma_AI and Grok @bot...",
+    "headline": "I tried a campaign from idea to test send with @Migma_AI and Grok @bot Grok helped turn the initial brief into a clearer campaign plan, while Migma handled the email design and content structure.",
+    "body": "I tried a campaign from idea to test send with @Migma_AI and Grok @bot   \n\nGrok helped turn the initial brief into a clearer campaign plan, while Migma handled the email design and content structure.\n\nAfter reviewing everything, I sent a test version to check the final delivery.\n\nSimple workflow, less manual work, and a much faster path to a usable campaign.",
+    "whatTheyDid": "I tried a campaign from idea to test send with @Migma_AI and Grok @bot Grok helped turn the initial brief into a clearer campaign plan, while Migma handled the email design and content structure.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I tried a campaign from idea to test send with @Migma_AI and Grok @bot Grok helped turn the initial brief into a clearer campaign plan, while Migma handled the email design and content structure.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Official_Ogene",
+    "handle": "Abed_Nego04",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Abed_Nego04/status/2099675113780072817",
+    "sourceUrl": "https://x.com/Abed_Nego04/status/2099675113780072817",
+    "sourceLabel": "Official_Ogene on X"
+  },
+  {
+    "slug": "valentinechiji-i-tested-the-migma-ai-and-grok-bot-workflow-with",
+    "title": "I tested the @Migma_AI and Grok @bot workflow with a simple campaign...",
+    "headline": "I tested the @Migma_AI and Grok @bot workflow with a simple campaign idea.",
+    "body": "I tested the @Migma_AI and Grok @bot workflow with a simple campaign idea.\n\nGrok helped shape the messaging and overall direction, then Migma turned that input into a complete email with the right sections, CTAs and details.\n\nI reviewed the result and ran a test send to make sure everything worked.\n\nThe nice part is the handoff: one tool helps develop the idea, while Migma handles the actual email creation.",
+    "whatTheyDid": "I tested the @Migma_AI and Grok @bot workflow with a simple campaign idea.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I tested the @Migma_AI and Grok @bot workflow with a simple campaign idea.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "oouıʇuǝlɐΛ",
+    "handle": "valentinechiji",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/valentinechiji/status/2099673252750557479",
+    "sourceUrl": "https://x.com/valentinechiji/status/2099673252750557479",
+    "sourceLabel": "oouıʇuǝlɐΛ on X"
+  },
+  {
+    "slug": "sparrow7-1-i-put-migma-ai-ai-through-a-simple-test-could-it",
+    "title": "I put @Migma_AI AI through a simple test: could it take a rough...",
+    "headline": "I put @Migma_AI AI through a simple test: could it take a rough campaign idea and turn it into an email I could actually use?",
+    "body": "I put @Migma_AI AI through a simple test: could it take a rough campaign idea and turn it into an email I could actually use?\n\nI connected it with Grok @bot , shared the campaign context, and let Grok help organise the messaging before handing it over to Migma.\n\nMigma then built the email itself, including the main content, service sections, case studies, CTAs and contact details.\n\nAfter a quick review, I sent a test version to check the final result.\n\nThe interesting part is that the tools have different jobs. \n\nGrok helps shape the idea, while Migma handles the execution.\n\nThat makes the workflow pretty useful when you want to get from concept to a finished campaign without doing every step manually.",
+    "whatTheyDid": "I put @Migma_AI AI through a simple test: could it take a rough campaign idea and turn it into an email I could actually use?",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I put @Migma_AI AI through a simple test: could it take a rough campaign idea and turn it into an email I could actually use?",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "sparrow",
+    "handle": "sparrow7_1",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/sparrow7_1/status/2099671802591031562",
+    "sourceUrl": "https://x.com/sparrow7_1/status/2099671802591031562",
+    "sourceLabel": "sparrow on X",
+    "format": "article"
+  },
+  {
+    "slug": "daraa-xd-i-ran-the-migma-ai-bot-workflow-from-a-blank-con",
+    "title": "I ran the @Migma_AI + @bot workflow from a blank connection all the...",
+    "headline": "I ran the @Migma_AI + @bot workflow from a blank connection all the way to a real test email, not a demo screenshot.",
+    "body": "I ran the \n@Migma_AI\n+\n@bot  workflow from a blank connection all the way to a real test email, not a demo screenshot.\n\nSetup started in Grok Bot. I pointed it at Migma’s Remote MCP endpoint, reviewed the access request in the browser, and approved permissions once.\n\nAfter that, Grok could see my brand, saved style, and tools without bouncing me into a second dashboard.\n\nI gave it a rough campaign direction. Grok did the thinking layer first: tightened the brief, organised the message hierarchy, and made sure the facts, audience, and CTA were defined before anything got designed.\n\nThen Migma took over production. It didn’t return a block of copy. It built a full email layout \n-intro\n-service sections\n-case study block\n-technical details\n-CTAs, and contact \n\nalready arranged like something you could send.\nI checked the preview, adjusted a few lines, and sent a test to myself.\n\nDelivery worked. Layout held up.\nThe split is what actually matters.\n\nGrok is strong at planning and structuring the campaign.\nMigma is strong at turning that plan into a reviewable, on brand email instead of leaving you to assemble sections by hand.\n\nThat’s useful if you’re a founder, marketer, or small team that needs a professional campaign without rebuilding every block from scratch.\n\nIt’s not magic. You still have to review permissions, facts, design, and the final send. Creating and editing never auto sends, which is the right default.\n\nBut going from a short brief to a polished, testable email is meaningfully faster when the two tools stay in the same conversation.\n\nMigma + Grok Bot = email marketing that actually gets to an inbox you can inspect.\n@Migma_AI",
+    "whatTheyDid": "I ran the @Migma_AI + @bot workflow from a blank connection all the way to a real test email, not a demo screenshot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I ran the @Migma_AI + @bot workflow from a blank connection all the way to a real test email, not a demo screenshot.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "_xD",
+    "handle": "daraa_xD",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/daraa_xD/status/2099670572997165224",
+    "sourceUrl": "https://x.com/daraa_xD/status/2099670572997165224",
+    "sourceLabel": "_xD on X",
+    "format": "article"
+  },
+  {
+    "slug": "herbertyang-im-now-the-bottleneck-for-my-ai-agents",
+    "title": "I'm now the bottleneck for my AI agents",
+    "headline": "I'm now the bottleneck for my AI agents.",
+    "body": "I'm now the bottleneck for my AI agents. Claude, Grok Bot, and Qwen have all finished their work (product demo or new customer leads) and are waiting for me to review. I just haven't got the time. \n\nThey're too efficient and I'm too slow.",
+    "whatTheyDid": "I'm now the bottleneck for my AI agents.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "I'm now the bottleneck for my AI agents.",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Herbert Yang",
+    "handle": "herbertyang",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/herbertyang/status/2099670055839559973",
+    "sourceUrl": "https://x.com/herbertyang/status/2099670055839559973",
+    "sourceLabel": "Herbert Yang on X"
+  },
+  {
+    "slug": "mizzy-ui-i-tested-the-migma-ai-grok-bot-setup-to-see-whet",
+    "title": "I tested the @Migma_AI + @Grok Bot setup to see whether it could...",
+    "headline": "I tested the @Migma_AI + @Grok Bot setup to see whether it could handle more than just generating email copy.",
+    "body": "I tested the @Migma_AI + @Grok Bot setup to see whether it could handle more than just generating email copy.\n\nI started with a basic campaign brief, connected the tools through Migma’s Remote MCP endpoint, and gave Grok Bot the context it needed to shape the campaign.\n\nThe useful part came next.\n\nGrok helped organise the messaging and campaign direction, while Migma turned that input into a complete email with structured sections, CTAs, case-study details and contact information.\n\nAfter checking the copy and layout, I ran a test send to make sure everything worked properly.\n\nWhat stood out was the division of work. Grok helped with the planning, while Migma handled the actual email production.\n\nFor a small marketing team, that can cut down a lot of the work between having an idea and getting a campaign ready to send.",
+    "whatTheyDid": "I tested the @Migma_AI + @Grok Bot setup to see whether it could handle more than just generating email copy.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I tested the @Migma_AI + @Grok Bot setup to see whether it could handle more than just generating email copy.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mUIz ☭",
+    "handle": "mizzy_UI",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/mizzy_UI/status/2099669699617292480",
+    "sourceUrl": "https://x.com/mizzy_UI/status/2099669699617292480",
+    "sourceLabel": "mUIz ☭ on X",
+    "format": "article"
+  },
+  {
+    "slug": "chrisslacker-grok-bot-openclaw-claude",
+    "title": "Grok Bot感觉像是一个OpenClaw时刻。 过去一周使用过它的人都知道它真的很好用。 我构建了一个Claude...",
+    "headline": "Grok Bot感觉像是一个OpenClaw时刻。 过去一周使用过它的人都知道它真的很好用。 我构建了一个Claude Code/Codex提示词， 帮助把我所有的agent技能、上下文和项目迁移到Grok Bot agent swarms。 毫无疑问，启动新Bot团队最简单的方式。 以下是确切的提示词： 粘贴到Codex/Claude Code中 \"我希望你为迁移到Grok Bot做好准备。 检查我当前的设置并编译：...",
+    "body": "Grok Bot感觉像是一个OpenClaw时刻。\n\n过去一周使用过它的人都知道它真的很好用。\n\n我构建了一个Claude Code/Codex提示词，\n帮助把我所有的agent技能、上下文和项目迁移到Grok Bot agent swarms。\n\n毫无疑问，启动新Bot团队最简单的方式。\n\n以下是确切的提示词：\n\n粘贴到Codex/Claude Code中\n\n\"我希望你为迁移到Grok Bot做好准备。\n\n检查我当前的设置并编译：\n\n1.我保存的每个技能文件（SKILL.md或等效文件），\n并详细总结每个文件的功能。\n\n2.我的核心记忆/上下文文件，\n浓缩成一个涵盖我的目标、偏好、业务背景和写作风格的个人资料文档。\n\n3.我当前运行的每个循环工作流，\n列出其触发条件、步骤和运行频率。\n\n4.建议的agent分解：\n将我的工作流分组为逻辑\"角色\"（如CFO、研究助手、内容、运营），\n就像真实团队的分工方式。\n\n5.我的Grok Bot团队应该知道的任何其他重要数据\n\n将所有内容输出为干净的结构化markdown，\n我可以直接粘贴到新的Grok Bot agents中。\n对于我正在使用的任何现有工具/MCP，请标记这些。\"\n\n真正的游戏改变者。",
+    "whatTheyDid": "Grok Bot感觉像是一个OpenClaw时刻。 过去一周使用过它的人都知道它真的很好用。 我构建了一个Claude Code/Codex提示词， 帮助把我所有的agent技能、上下文和项目迁移到Grok Bot agent swarms。 毫无疑问，启动新Bot团队最简单的方式。 以下是确切的提示词： 粘贴到Codex/Claude Code中 \"我希望你为迁移到Grok Bot做好准备。 检查我当前的设置并编译：...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot感觉像是一个OpenClaw时刻。 过去一周使用过它的人都知道它真的很好用。 我构建了一个Claude Code/Codex提示词， 帮助把我所有的agent技能、上下文和项目迁移到Grok Bot agent swarms。 毫无疑问，启动新Bot团队最简单的方式。 以下是确切的提示词： 粘贴到Codex/Claude Code中 \"我希望你为迁移到Grok Bot做好准备。 检查我当前的设置并编译：...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "科技混子Chris",
+    "handle": "ChrisSlacker",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/ChrisSlacker/status/2099666514085609736",
+    "sourceUrl": "https://x.com/ChrisSlacker/status/2099666514085609736",
+    "sourceLabel": "科技混子Chris on X"
+  },
+  {
+    "slug": "victorcrypty-i-used-migma-ai-and-grok-bot-to-take-this-workfl",
+    "title": "I used Migma AI and Grok Bot to take this workflow from the basic...",
+    "headline": "I used Migma AI and Grok Bot to take this workflow from the basic setup to an actual test email since I wanted to explore how far it could go in practice.",
+    "body": "I used Migma AI and Grok Bot to take this workflow from the basic setup to an actual test email since I wanted to explore how far it could go in practice.\n\nUsing Migma's Remote MCP endpoint, the procedure began by establishing a connection between @Migma_AI and @bot Grok Bot.\n\nI chose the brand I wanted to collaborate with and gave the campaign's general direction after examining and obtaining the permits.\n\nGrok Bot then assisted in transforming the original concept into a more understandable campaign framework.\n\nBefore going into production, I utilised it to make sure the brief was clearly stated, structure the messaging, and shape the email content.\n\nThe actual generation of the email was then handled by Migma.\n\nIt generated a whole campaign layout with the introduction, service sections, case study information, technical details, CTAs, and contact details organised into a comprehensive email, as opposed to just a text draft.\n\nI sent a test email to confirm that the distribution procedure went as planned after reviewing the final copy and design to make sure everything looked correct.\n\nThe two tools' seamless cooperation was the intriguing aspect.\n\nWhile Migma transformed that directive into an actual email that could be approved and sent, Grok Bot handled more of the campaign's planning and thought.\n\nBecause of this, the workflow is particularly helpful for small teams, marketers, and founders who require sophisticated campaigns without having to manually create each element from scratch.\n\nMy key conclusion is that when you see Migma AI as a whole production tool instead of just another AI writing assistant, it feels more useful. It can be much quicker to go from a basic brief to a polished, testable email, but you still need to review the content, permissions, and final design personally.",
+    "whatTheyDid": "I used Migma AI and Grok Bot to take this workflow from the basic setup to an actual test email since I wanted to explore how far it could go in practice.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I used Migma AI and Grok Bot to take this workflow from the basic setup to an actual test email since I wanted to explore how far it could go in practice.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Vector 🤍",
+    "handle": "Victorcrypty",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Victorcrypty/status/2099662630390538534",
+    "sourceUrl": "https://x.com/Victorcrypty/status/2099662630390538534",
+    "sourceLabel": "Vector 🤍 on X",
+    "format": "article"
+  },
+  {
+    "slug": "francoe114696-meet-lienzo-a-grok-bot-thats-a-design-resource-i",
+    "title": "Meet Lienzo, a Grok @bot that’s a design-resource inbox",
+    "headline": "Meet Lienzo, a Grok @bot that’s a design-resource inbox.",
+    "body": "Meet Lienzo, a Grok @bot  that’s a design-resource inbox. \n\nDrop a link (DS, inspo, components, freebies) and it files it in markdown on the machine. Ask later and it recommends from that library.\n\nhttps://x.ai/bot/Czc1kCepdYnisFnRWfDKr",
+    "whatTheyDid": "Meet Lienzo, a Grok @bot that’s a design-resource inbox.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Meet Lienzo, a Grok @bot that’s a design-resource inbox.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Fran Escob",
+    "handle": "FrancoE114696",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/FrancoE114696/status/2099660942959140892",
+    "sourceUrl": "https://x.com/FrancoE114696/status/2099660942959140892",
+    "sourceLabel": "Fran Escob on X"
+  },
+  {
+    "slug": "sh20151114-grok-bot-9-14",
+    "title": "Grok Botに、自分の回線を通って外に出ていく経路がついたらしい。イーロン・マスクが9/14にこれを取り上げて、一気に広まった。...",
+    "headline": "Grok Botに、自分の回線を通って外に出ていく経路がついたらしい。イーロン・マスクが9/14にこれを取り上げて、一気に広まった。...",
+    "body": "Grok Botに、自分の回線を通って外に出ていく経路がついたらしい。イーロン・マスクが9/14にこれを取り上げて、一気に広まった。\n\nうちみたいな規模の会社の話に落とすと、今までAIに頼もうとして「アクセスできませんでした」で止まってた作業のいくつかが、通るようになるかもしれない、ということになる。仕入先のサイトで在庫と価格を毎朝確認する。取引先の管理画面にログインして数字を持ってくる。競合の値段を定期的に見に行く。うちでも誰かが毎日30分、ブラウザの前で手を動かしてくれてる、あの種類の仕事。一度やらせてみて途中で止まって、そのまま置きっぱなしになってるなら、理由がここだった可能性はある。\n\nなんで止まってたのか。Grok Botが実際に動いてたのはxAIのサーバーで、ネットに出ていくときのIPアドレス（発信元を示す番号）も、そのデータセンターのものだった。で、データセンターのIPアドレスをまとめて弾いてるサイトが、けっこうある。中身が人か機械かを見てるんじゃなくて、番号の帯だけ見て切ってる。新しい経路だと出口が自社の回線になるから、サイト側からは、普段うちが使ってる回線からのアクセスに見える。それで通る。\n\nただ、これで全部が直るわけじゃない。ログイン情報が要る、画面の操作が複雑で追いつかない。そういう理由で止まってたものは、IPアドレスが変わっても止まったまま。同じ「動かない」に見えて、中身が違う。ここを一緒くたにすると、うまくいかなかったときに何を直せばいいのか分からなくなる。\n\nそして、通るようになった分だけ、こっち側に移ってくるものもある。サイト側のルールは何も変わってない。変わったのは、どこから来たように見えるか、それだけ。ということは、AIが自動で見に行きすぎて相手のサイトに負担をかけたとき、止められるのは自社の回線だし、連絡や警告が届くのも自社のアカウントになる。今までxAI側についてた分が、そのままうちに来る。しかも相手から見れば、AIが勝手にやったことなのか、うちが意図してやったことなのかは区別がつかない。\n\nつまり、手が空くようになったのと、相手のサイトに対する責任をこっちが持つようになったのと、二つが一緒に来たという話だと受け止めてる。時間が浮くのも自社、迷惑をかけたときに頭を下げに行くのも自社。片方だけ受け取る形にはなってない。\n\n自分としては、取引先やお客様に迷惑をかけるわけにはいかないので、まずは自社のサイトと自社のアカウントの中だけで、どのくらいの間隔で、どこまで見に行かせるのかを決めながら試したい。外に向けるのはそのあと、慎重に試していきたい。\n\nhttps://x.com/elonmusk/status/2099450564698423732",
+    "whatTheyDid": "Grok Botに、自分の回線を通って外に出ていく経路がついたらしい。イーロン・マスクが9/14にこれを取り上げて、一気に広まった。...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Botに、自分の回線を通って外に出ていく経路がついたらしい。イーロン・マスクが9/14にこれを取り上げて、一気に広まった。...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "はたしん｜サキヨミAI",
+    "handle": "SH20151114",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/SH20151114/status/2099660129667067995",
+    "sourceUrl": "https://x.com/SH20151114/status/2099660129667067995",
+    "sourceLabel": "はたしん｜サキヨミAI on X",
+    "format": "article"
+  },
+  {
+    "slug": "cryptzarr-i-approached-migma-ai-as-a-complete-campaign-wor",
+    "title": "I approached Migma AI as a complete campaign workflow rather than...",
+    "headline": "I approached Migma AI as a complete campaign workflow rather than simply an email design tool.",
+    "body": "I approached Migma AI as a complete campaign workflow rather than simply an email design tool.\n\nI started with a general idea for a welcome email for  seegrowth, then used the @migma and Grok Bot workflow to turn that idea into a structured campaign. \n\nThe process included:\n\nDefining the purpose and audience of the email, Organizing the message into clear sections, Presenting the company’s engineering capabilities, client case studies, and technical notes, Adding relevant links and calls to action, Reviewing the final design and content, Sending a test email to confirm that everything worked correctly.\n\nThe final email had a clean, editorial-style layout that was easy to scan. It introduced the brand, explained the services, highlighted production work, and gave readers several clear next steps.\n\nThe test send was successful, with the message delivered and the subject line displayed correctly.\n\nWhat stood out to me was how Migma AI helped connect the creative and operational parts of email marketing. \n\nI wasn’t left with only a rough concept or a block of generated copy, the workflow produced a presentable email and allowed me to verify the delivery result.\n\nMy takeaway is that Migma AI can be especially valuable for founders, agencies, and small marketing teams that need to create and test professional campaigns quickly. \n\nGrok Bot makes the process easier to direct, while Migma provides the structure needed to move from an initial brief to an actual send.\n\nIt still makes sense to review the copy, links, sender details, and permissions before launching a campaign, but the overall workflow was smooth and practical",
+    "whatTheyDid": "I approached Migma AI as a complete campaign workflow rather than simply an email design tool.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I approached Migma AI as a complete campaign workflow rather than simply an email design tool.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Cryptzarr",
+    "handle": "Cryptzarr",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Cryptzarr/status/2099659481340670069",
+    "sourceUrl": "https://x.com/Cryptzarr/status/2099659481340670069",
+    "sourceLabel": "Cryptzarr on X",
+    "format": "article"
+  },
+  {
+    "slug": "ifwayodeji-i-wanted-to-see-how-far-this-workflow-could-go-i",
+    "title": "I wanted to see how far this workflow could go in practice, so I took...",
+    "headline": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to sending a real test email using Migma AI and Grok Bot.",
+    "body": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to sending a real test email using Migma AI and Grok Bot.\n\nThe process started by connecting @Migma_AI with Grok Bot through Migma’s Remote MCP endpoint.\n\nAfter reviewing and approving the required permissions, I selected the brand I wanted to work with and provided the initial direction for the campaign.\n\nFrom there, Grok Bot helped turn the idea into a clearer campaign structure. I used it to organise the messaging, shape the email content, and make sure the brief was properly defined before moving into production.\n\nMigma then handled the actual email creation.\n\nInstead of returning just a text draft, it generated a complete campaign layout, including the introduction, service sections, case study details, technical information, CTAs, and contact details, all arranged into a proper email.\n\nI reviewed the final copy and design, made sure everything looked right, and then sent a test email to verify that the delivery process worked as expected.\n\nWhat stood out to me was how naturally the two tools worked together.\n\nGrok Bot handled more of the thinking and planning around the campaign, while Migma turned that direction into an actual email that could be reviewed, refined, and sent.\n\nThat makes the workflow particularly useful for founders, marketers, and small teams that need professional campaigns without having to manually build every section from scratch.\n\nMy main takeaway is that Migma AI feels more practical when you look at it as a complete production tool rather than simply another AI writing assistant.\n\nYou still need to review the content, permissions, and final design yourself, but going from a simple brief to a polished, testable email can be significantly faster.",
+    "whatTheyDid": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to sending a real test email using Migma AI and Grok Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to sending a real test email using Migma AI and Grok Bot.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "DEJI🤍",
+    "handle": "ifwayodeji",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/ifwayodeji/status/2099659212565418007",
+    "sourceUrl": "https://x.com/ifwayodeji/status/2099659212565418007",
+    "sourceLabel": "DEJI🤍 on X",
+    "format": "article"
+  },
+  {
+    "slug": "titanofweb3-the-real-value-in-the-migma-ai-workflow-is-not-s",
+    "title": "The real value in the @Migma_AI workflow is not simply getting AI to...",
+    "headline": "The real value in the @Migma_AI workflow is not simply getting AI to write an email.",
+    "body": "The real value in the @Migma_AI workflow is not simply getting AI to write an email.\n\nIt is being able to move from an idea to something that is actually ready to send without jumping between several different tools.\n\nI tested the workflow with @bot grok bot handling the campaign direction and Migma handling the email itself.\n\n Once the brief was clear, Migma could turn that information into a structured campaign with the sections, visuals, messaging and CTAs already arranged.\n\nThat changes the role of AI from just generating text to helping with the actual production process.\n\nYou can review the result, make adjustments where necessary, and run a test send before putting the campaign in front of your audience.\n\nFor a small team, that can remove a lot of the tedious work that normally sits between having a campaign idea and actually sending it.\n\nThe biggest takeaway for me is the handoff between the tools. One helps develop the direction, while the other turns that direction into a usable email.\n\nThat makes the workflow feel less like experimenting with AI and more like having a practical production system for email campaigns.",
+    "whatTheyDid": "The real value in the @Migma_AI workflow is not simply getting AI to write an email.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "The real value in the @Migma_AI workflow is not simply getting AI to write an email.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Defi Faith",
+    "handle": "titanofweb3",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/titanofweb3/status/2099658935938531773",
+    "sourceUrl": "https://x.com/titanofweb3/status/2099658935938531773",
+    "sourceLabel": "Defi Faith on X",
+    "format": "article"
+  },
+  {
+    "slug": "timmysuns1-honestly-migma-ai-grok-integration-caught-my-att",
+    "title": "Honestly, @Migma_AI , @grok integration caught my attention because it...",
+    "headline": "Honestly, @Migma_AI , @grok integration caught my attention because it goes beyond simply using AI to write emails.",
+    "body": "Honestly, @Migma_AI , @grok integration caught my attention because it goes beyond simply using AI to write emails.\n\nI connected Migma to Grok Bot through the Remote MCP endpoint, accepted the permissions, selected my brand and gave Grok a simple brief.\n\nGrok helped shape the campaign structure and copy, while Migma handled the actual email production.\n\n The result wasn’t just a rough AI draft either. Migma created a clean, professional email with a strong visual hierarchy, service sections, case studies, CTAs and contact information.\n\nI reviewed the layout and copy, then sent a test email to confirm everything worked.\n\nHonestly, this is where Migma gets interesting. \n\nGrok handles the thinking and Migma handles execution\n\ncreating a much faster path from a simple idea to a polished email ready for delivery.",
+    "whatTheyDid": "Honestly, @Migma_AI , @grok integration caught my attention because it goes beyond simply using AI to write emails.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Honestly, @Migma_AI , @grok integration caught my attention because it goes beyond simply using AI to write emails.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "T.S",
+    "handle": "Timmysuns1",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Timmysuns1/status/2099658224643559681",
+    "sourceUrl": "https://x.com/Timmysuns1/status/2099658224643559681",
+    "sourceLabel": "T.S on X",
+    "format": "article"
+  },
+  {
+    "slug": "zeeesol-i-wanted-to-see-how-practical-this-workflow-real",
+    "title": "I wanted to see how practical this workflow really was, so I tested it...",
+    "headline": "I wanted to see how practical this workflow really was, so I tested it from start to finish using Migma AI together with Grok Bot.",
+    "body": "I wanted to see how practical this workflow really was, so I tested it from start to finish using Migma AI together with Grok Bot.\n\nThe first step was connecting @Migma_AI to @Grok Bot through Migma’s Remote MCP endpoint.\n\nOnce the permissions were approved, I selected the brand I wanted to work on and shared the overall campaign goal.\n\nFrom there, Grok Bot helped refine the idea into a more structured campaign. It made it easier to organize the messaging, shape the email, and create a clear brief before anything was built.\n\nAfter that, Migma AI took over.\n\nRather than generating a plain text draft, it created a complete email with a polished layout, including the introduction, service highlights, case study, technical details, CTAs, and contact information.\n\nBefore sending anything, I reviewed the copy, checked the design, and sent a test email to confirm everything worked as expected.\n\nWhat stood out most was how well both tools complemented each other.\n\nGrok Bot focused on the strategy and planning, while Migma handled the execution by turning those ideas into a ready-to-send campaign.\n\nFor founders, marketers, and lean teams, this kind of workflow can save a lot of time compared to building every email from scratch.\n\nMy biggest takeaway is that Migma AI works best as an end-to-end email production tool, not just another AI writing assistant.\n\nYou still need to review the content, verify permissions, and give the final design a once-over, but the journey from a simple idea to a polished, test-ready email is much quicker.",
+    "whatTheyDid": "I wanted to see how practical this workflow really was, so I tested it from start to finish using Migma AI together with Grok Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I wanted to see how practical this workflow really was, so I tested it from start to finish using Migma AI together with Grok Bot.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "𝗭𝗘𝗘",
+    "handle": "zeeesol",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/zeeesol/status/2099657523590823992",
+    "sourceUrl": "https://x.com/zeeesol/status/2099657523590823992",
+    "sourceLabel": "𝗭𝗘𝗘 on X",
+    "format": "article"
+  },
+  {
+    "slug": "leleofweb3-i-finally-got-to-try-out-the-migma-ai-and-grok-b",
+    "title": "I finally got to try out the @Migma_AI and Grok Bot connection, and I...",
+    "headline": "I finally got to try out the @Migma_AI and Grok Bot connection, and I think the interesting part isn’t even the email itself.",
+    "body": "I finally got to try out the @Migma_AI and Grok Bot connection, and I think the interesting part isn’t even the email itself.\n\nIt’s how little friction there is between having an idea and actually turning it into a campaign.\n\nI connected the two through Migma’s Remote MCP, gave the required permissions, and started with a simple campaign brief.\n\nGrok was useful for turning the idea into something more organized, but what really caught my attention was seeing Migma take that direction and turn it into an actual marketing email.\n\nThe finished result had the kind of structure you’d normally spend time putting together yourself, the messaging, sections, visuals, case studies, CTAs and the smaller details that make an email feel complete.\n\nI could then go through the result, make sure everything looked right and send a test email.\n\nIt landed.\n\nThat last part matters to me because there’s a big difference between an AI tool showing you a nice mockup and a workflow that can actually take you closer to something usable.\n\nI can see this being useful when you don’t want to spend half your day moving between a copywriting tool, an email builder and your campaign setup.\n\nGive the AI the direction, refine what it gives you, then let the tools handle the boring parts.\n\nIs it completely hands-off? No, and I don’t think it should be. I’d still check the copy, branding and permissions before sending anything to real customers.\n\nBut after trying the workflow myself, I can definitely see why the Migma + Grok combination is worth paying attention to.\n\nThe idea isn’t just “AI can write emails.”\n\nIt’s “AI can help you get the campaign from your head to something you can actually use.”",
+    "whatTheyDid": "I finally got to try out the @Migma_AI and Grok Bot connection, and I think the interesting part isn’t even the email itself.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I finally got to try out the @Migma_AI and Grok Bot connection, and I think the interesting part isn’t even the email itself.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "LELE 🥷",
+    "handle": "leleofweb3",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/leleofweb3/status/2099657126574522582",
+    "sourceUrl": "https://x.com/leleofweb3/status/2099657126574522582",
+    "sourceLabel": "LELE 🥷 on X",
+    "format": "article"
+  },
+  {
+    "slug": "composedgee-i-wanted-to-see-how-far-this-workflow-could-go-i",
+    "title": "I wanted to see how far this workflow could go in practice, so I took...",
+    "headline": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to a real test email using Migma AI and Grok Bot.",
+    "body": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to a real test email using Migma AI and Grok Bot.\n\nThe process started by connecting @Migma_AI with @bot Grok Bot through Migma’s Remote MCP endpoint.\n\n After reviewing and approving the permissions, I selected the brand I wanted to work with and provided the basic direction for the campaign.\n\nFrom there, Grok Bot helped turn the initial idea into a clearer campaign structure. \n\nI used it to organise the messaging, shape the email content and make sure the brief was properly defined before moving into production.\n\nMigma then handled the actual email creation.\n\nInstead of returning a simple text draft, it produced a complete campaign layout with the introduction, service sections, case study information, technical details, CTAs and contact details arranged into a proper email.\n\nI reviewed the final copy and design, made sure everything looked right, and then sent a test email to verify that the delivery process worked as expected.\n\nThe interesting part was how naturally the two tools worked together.\n\nGrok Bot handled more of the thinking and planning around the campaign, while Migma turned that direction into an actual email that could be reviewed and sent.\n\nThat makes the workflow especially useful for founders, marketers and small teams that need professional campaigns without manually building every section from scratch.\n\nMy main takeaway is that Migma AI feels more practical when you look at it as a complete production tool rather than just another AI writing assistant.\n\n You still need to check the content, permissions and final design yourself, but going from a simple brief to a polished, testable email can be significantly faster.",
+    "whatTheyDid": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to a real test email using Migma AI and Grok Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I wanted to see how far this workflow could go in practice, so I took it from the initial setup all the way to a real test email using Migma AI and Grok Bot.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Hope of Web3 💙",
+    "handle": "composedgee",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/composedgee/status/2099657034232721491",
+    "sourceUrl": "https://x.com/composedgee/status/2099657034232721491",
+    "sourceLabel": "Hope of Web3 💙 on X",
+    "format": "article"
+  },
+  {
+    "slug": "ajoke209-i-tested-the-migma-ai-grok-bot-integration-today",
+    "title": "I tested the @Migma_AI Grok Bot integration today and it actually...",
+    "headline": "I tested the @Migma_AI Grok Bot integration today and it actually delivered.",
+    "body": "I tested the @Migma_AI  Grok Bot integration today and it actually delivered. \n\nI connected Migma through Grok Bot using the MCP setup, approved access in the browser, then pointed it at one of my brands. \n\nI asked for a welcome email plus a short product launch follow-up, giving it the audience, the main offer and the destination link.\n\nGrok handled the brief while Migma pulled in the logo, colours, fonts and voice automatically. \n\nWithin a couple of minutes I had two clean, on-brand drafts sitting on the canvas subject lines, body copy that didn’t sound like generic AI, and layouts that already looked email-safe. \n\nI made a few chat edits, adjusted one block in the visual editor, then previewed mobile, Gmail, Outlook and dark mode. \n\nAfter a quick preflight check I sent myself a test. \n\nNothing went out to a list until I chose to.\n\nThe combination is the useful part: Grok keeps the thinking sharp and conversational, Migma keeps everything on-brand and send-ready. \n\nNo starting from a blank template and no last-minute rendering surprises. \n\nIf you already use Grok and run email marketing, this is worth trying before the full demo drops.",
+    "whatTheyDid": "I tested the @Migma_AI Grok Bot integration today and it actually delivered.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "I tested the @Migma_AI Grok Bot integration today and it actually delivered.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ꜰɪʀᴅᴀᴜꜱ 💫",
+    "handle": "Ajoke209",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Ajoke209/status/2099656806809452897",
+    "sourceUrl": "https://x.com/Ajoke209/status/2099656806809452897",
+    "sourceLabel": "ꜰɪʀᴅᴀᴜꜱ 💫 on X",
+    "format": "article"
+  },
+  {
+    "slug": "rollewithsteve-finally-found-a-way-to-get-my-grok-bot-weekly-li",
+    "title": "Finally found a way to get my Grok Bot weekly limit to last for a full...",
+    "headline": "Finally found a way to get my Grok Bot weekly limit to last for a full week...",
+    "body": "Finally found a way to get my Grok Bot weekly limit to last for a full week... AND simultaneously found a way to get Codex to stop over-engineering and getting distracted.\n\n2 Birds with 1 Stone! \n\nI've been doing a coding project for 8 weeks now. And Codex is INCREDIBLY frustrating when it get's sidetracked and starts fixing stuff that isn't anywhere near my list. I had to baby sit it non stop.\n\nGrok Bot never had that issue...BUT\n\nThe weekly limit on Grok Bot only lasted me 24 hours.\n\nSo every week I would breathe a sigh of relief when the Grok Bot limit was reset and all of a sudden my project would gain significant ground.\n\nHowever, after 24 hours I was forced to go back to Codex...and inevitably I would spin in circles for the next 6 days. \n\nI started saving my last 10% of Grok Bot just to have it check the durable state updates and see what Codex was doing so that I could use it to steer Codex away from overthinking and over-engineering and while that worked...it was a lot of manual work going back and forth to copy and paste.\n\nYesterday I set up the Codex CLI on my mac mini and gave Grok Bot control of my Codex threads that do the work.\n\nGrok Bot is the overseer only. Codex is the Strategist and the Command Center that controls all of the coding agents. Both Strategist and Command Center are running on Luna Max...(basically unlimited!)\n\nNow with Grok Bot controlling Codex via the CLI...I'm getting the benefits of Grok Bot with no distraction and immediate steers if there's any Codex over-engineering.\n\nAND I'm 1 day in running 24/7 and I here how much of my weekly limit was consumed by each:\n\nGrok Bot: 8%\nCodex: 4%\n\nFeeling like I cracked the code to unlimited vibe-coding progress and I'm on cloud 9 seeing it all work.",
+    "whatTheyDid": "Finally found a way to get my Grok Bot weekly limit to last for a full week...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Finally found a way to get my Grok Bot weekly limit to last for a full week...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "Steve Rolle",
+    "handle": "RolleWithSteve",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/RolleWithSteve/status/2099654442878681503",
+    "sourceUrl": "https://x.com/RolleWithSteve/status/2099654442878681503",
+    "sourceLabel": "Steve Rolle on X",
+    "format": "article"
+  },
+  {
+    "slug": "tomcrawshaw01-grokbot-vs-hermes-bot",
+    "title": "Grokbot vs Hermes bot",
+    "headline": "Grokbot vs Hermes bot..",
+    "body": "Grokbot vs Hermes bot..\n\nI tested them on the same tasks, and the results were pretty interesting...\n\nSo I put this full guide together detailing the pros and cons of each, and which one you should choose depending on your experience and use case.\n\nI put the link to the full video I did on my YouTube channel in the article as well, if you want to, if you prefer watching rather than reading. \n\nHave you tried both of them? Which one do you prefer?",
+    "whatTheyDid": "Grokbot vs Hermes bot..",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Grokbot vs Hermes bot..",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "youtube",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Tom",
+    "handle": "tomcrawshaw01",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/tomcrawshaw01/status/2099573884592824654",
+    "sourceUrl": "https://x.com/tomcrawshaw01/status/2099573884592824654",
+    "sourceLabel": "Tom on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2098777131144843264"
+  },
+  {
+    "slug": "kabupoyo2023-yugen-matuni-k-grokbot-cursor-gemini3-8flash",
+    "title": "まつにぃさん(@yugen_matuni )の記事をパk(参考にして、Grokbot→cursor(Gemini3.8Flash)→リライトを...",
+    "headline": "まつにぃさん(@yugen_matuni )の記事をパk(参考にして、Grokbot→cursor(Gemini3.8Flash)→リライトをbotに戻す の簡易テストができました # Grok Botセットアップ手順 本ドキュメントは、公開ガイド（ Botを初期導入するための手順をまとめたものです。 ## 1.",
+    "body": "まつにぃさん(@yugen_matuni )の記事をパk(参考にして、Grokbot→cursor(Gemini3.8Flash)→リライトをbotに戻す\nの簡易テストができました\n\n# Grok Botセットアップ手順\n\n本ドキュメントは、公開ガイド（http://x.ai/bot/guides、http://docs.x.ai、Cursorヘルプ）に基づき、Grok Botを初期導入するための手順をまとめたものです。\n\n## 1. 前提\nGrok Botは、クラウド上に永続的なコンピュータを持つエージェントです。デスクトップ、ファイルシステム、ターミナル、ブラウザを備え、コネクタやプラグイン経由で外部サービスに接続できます。利用にはCursorアカウントとプラン（または対応するSuperGrokなど）が必要です。\n\n## 2. 初回セットアップ\n1. Grok Botアプリを開き、お持ちのCursorアカウントでサインインします。\n2. Plans and billingで、Grok Botを含むCursorプラン、またはSuperGrok系／X Premium+の紐付けを確認します。\n3. サイドバーのNew、またはCmd/Ctrl+NからCreate new agentを選びます。\n4. Bot actions → Edit Profileで、名前・タイトル・説明・アバターを設定します。\n5. 最初のチャットで、具体的な成果物が分かるタスクを依頼します。\n\n## 3. 役割の書き方\n説明文には、担当範囲・使うソース・禁止事項・承認境界を運用の言葉で書きます。会話メッセージは個別タスク用、説明文は継続して守らせるルール用に分けるのがポイントです。「外部送信は承認なしでしない」などの重要ルールは説明文側に置きます。\n\n## 4. 使い方の三系統\n- チャットで依頼する\n- Routine／トリガーで予定時刻や外部イベントから起動する\n- 他のBotへメッセージを送り、専門係に渡す\n\n## 5. 権限と共有コンピュータ\nログイン済みサイトは、同じコンピュータを共有する他のBotからも到達しうる点に注意が必要です。Auto-reviewと許可／拒否ルールで危険な操作を制御します。機密情報はSecretsの安全な入力を使い、チャットに貼り付けないようにします。\n\n## 6. 複数Botの組み方\nゴールごとに係を分け、必要ならグループチャットで引き継ぎを可視化します。新しいBotは、役割が安定して分かれてから追加します。\n\n## 出典\n- https://x.ai/bot/guides/grok-bot-101\n- https://docs.x.ai/grok-bot/bots\n- https://docs.x.ai/grok-bot/overview\n- https://cursor.com/help/grok-bot/getting-started.md\n\n主な変化は、「である」調を「です・ます」に直し、硬い言い回しを読みやすくしたことです。手順番号・製品名・URLはそのままです。",
+    "whatTheyDid": "まつにぃさん(@yugen_matuni )の記事をパk(参考にして、Grokbot→cursor(Gemini3.8Flash)→リライトをbotに戻す の簡易テストができました # Grok Botセットアップ手順 本ドキュメントは、公開ガイド（ Botを初期導入するための手順をまとめたものです。 ## 1.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "まつにぃさん(@yugen_matuni )の記事をパk(参考にして、Grokbot→cursor(Gemini3.8Flash)→リライトをbotに戻す の簡易テストができました # Grok Botセットアップ手順 本ドキュメントは、公開ガイド（ Botを初期導入するための手順をまとめたものです。 ## 1.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "大底グソクムシ@商材屋撲滅系投機家",
+    "handle": "kabupoyo2023",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/kabupoyo2023/status/2099651152510074943",
+    "sourceUrl": "https://x.com/kabupoyo2023/status/2099651152510074943",
+    "sourceLabel": "大底グソクムシ@商材屋撲滅系投機家 on X",
+    "format": "article"
+  },
+  {
+    "slug": "yommy-xy-i-tested-the-migma-ai-bot-workflow-from-setup-to",
+    "title": "I tested the @Migma_AI + @bot workflow from setup to delivery, and the...",
+    "headline": "I tested the @Migma_AI + @bot workflow from setup to delivery, and the experience was genuinely impressive.",
+    "body": "I tested the @Migma_AI + @bot workflow from setup to delivery, and the experience was genuinely impressive.\n\nHere’s what I did:\n\nConnected Migma to Grok Bot through the Migma Remote MCP endpoint.\n\nReviewed and approved the requested access permissions.\n\nSelected the brand and provided the basic direction for the email.\n\nUsed Grok Bot to help structure the campaign content and organize the message.\n\nGenerated a polished email design with a clear introduction, service sections, case studies, technical notes, calls to action, and contact details.\n\nReviewed the layout and copy before sending.\n\nRan a test send to verify that the email was delivered successfully.\n\nThe result was more than just an AI-generated draft. \n\nMigma produced a usable, professional-looking campaign email with strong visual hierarchy and a clear structure. \n\nThe test send also completed successfully, confirming that the workflow worked from content creation through delivery.\n\nWhat I liked most was the practical workflow: Grok Bot helped with the instructions and campaign process, while Migma handled the actual email marketing work. \n\nThis makes the combination useful for founders, marketers, and small teams that want to go from an idea to a campaign-ready email much faster.\n\nMy honest opinion: Migma AI looks especially promising for teams that need professional email campaigns without spending hours designing every section manually. \n\nThe most important part is still reviewing the content and permissions before sending, but the workflow itself feels efficient and production-oriented.\n\nMigma AI + Grok Bot = faster campaign creation, better structure, and a real path from idea to delivery.",
+    "whatTheyDid": "I tested the @Migma_AI + @bot workflow from setup to delivery, and the experience was genuinely impressive.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I tested the @Migma_AI + @bot workflow from setup to delivery, and the experience was genuinely impressive.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "bigman",
+    "handle": "yommy_xy",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/yommy_xy/status/2099647981959921817",
+    "sourceUrl": "https://x.com/yommy_xy/status/2099647981959921817",
+    "sourceLabel": "bigman on X",
+    "format": "article"
+  },
+  {
+    "slug": "primecocreator-this-is-a-grok-bot-business-i-started",
+    "title": "This is a Grok Bot business I started",
+    "headline": "This is a Grok Bot business I started.",
+    "body": "This is a Grok Bot business I started. Made a social media agent department lol let’s see how this grows. No customers yet. \n\nhttps://x.com/foundryjr?s=11",
+    "whatTheyDid": "This is a Grok Bot business I started.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "This is a Grok Bot business I started.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Hashem Elyon Zohar Elohim",
+    "handle": "PrimeCoCreator",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/PrimeCoCreator/status/2099643537935519796",
+    "sourceUrl": "https://x.com/PrimeCoCreator/status/2099643537935519796",
+    "sourceLabel": "Hashem Elyon Zohar Elohim on X"
+  },
+  {
+    "slug": "guyokai-some-of-my-project-ive-built-on-grok-bot-so-far",
+    "title": "Some of my project I've built on Grok Bot so far: - - A...",
+    "headline": "Some of my project I've built on Grok Bot so far: - - A Tamagotchi-style pet Grok you take care of and visit other users - - A desktop and mobile online RPG - Coming Soon: An 𝕏-themed e-mail client",
+    "body": "Some of my project I've built on Grok Bot so far:\n\n- https://pet.grok.me - A Tamagotchi-style pet Grok you take care of and visit other users\n\n- https://CROWNBELOW.com - A desktop and mobile online RPG\n\n- Coming Soon: An 𝕏-themed e-mail client",
+    "whatTheyDid": "Some of my project I've built on Grok Bot so far: - - A Tamagotchi-style pet Grok you take care of and visit other users - - A desktop and mobile online RPG - Coming Soon: An 𝕏-themed e-mail client",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Some of my project I've built on Grok Bot so far: - - A Tamagotchi-style pet Grok you take care of and visit other users - - A desktop and mobile online RPG - Coming Soon: An 𝕏-themed e-mail client",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Guyokai",
+    "handle": "guyokai",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/guyokai/status/2099634978082463787",
+    "sourceUrl": "https://x.com/guyokai/status/2099634978082463787",
+    "sourceLabel": "Guyokai on X"
+  },
+  {
+    "slug": "0xrafy-spacexai-just-dropped-full-guide-on-how-to-run-m",
+    "title": "SpaceXAI just dropped full guide on how to run multiple agents \"I...",
+    "headline": "SpaceXAI just dropped full guide on how to run multiple agents \"I stopped running Grok Bot as separate chats.",
+    "body": "SpaceXAI just dropped full guide on how to run multiple agents\n\n\"I stopped running Grok Bot as separate chats. now every project gets its own AI team, manager and task board\"\n\none Projects Manager agent creates the project, opens the channel and assigns the right agents:\n\n• coder\n• researcher\n• writer\n\nevery team gets its own context, tasks and workspace\n\n→ instead of managing prompts, you manage teams  \n→ instead of running one agent, you run an organization\n\nSpaceXAI shared the full setup, roles and workflow for running multiple GrokBot teams at once\n\nworth more than 100 multi-agent posts on X\n\nsave now, then read how to build a parallel agent system in the article below",
+    "whatTheyDid": "SpaceXAI just dropped full guide on how to run multiple agents \"I stopped running Grok Bot as separate chats.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "SpaceXAI just dropped full guide on how to run multiple agents \"I stopped running Grok Bot as separate chats.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "0xRafy",
+    "handle": "0xRafy",
+    "publishedAt": "2026-09-12",
+    "xPostUrl": "https://x.com/0xRafy/status/2098901444644458629",
+    "sourceUrl": "https://x.com/0xRafy/status/2098901444644458629",
+    "sourceLabel": "0xRafy on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2090063449980014592"
+  },
+  {
+    "slug": "orange-boy-after-that-experience-im-reviewing-my-local-clou",
+    "title": "After that experience I’m reviewing my local/cloud preferences",
+    "headline": "After that experience I’m reviewing my local/cloud preferences.",
+    "body": "After that experience I’m reviewing my local/cloud preferences. Moving toward cloud. \nGrok bot provides good cloud experience and it’s struggling with local and computer use. Tho it’s capable. \nBut I made one particular bot Mac Runner and other bots asked it to do local stuff.",
+    "whatTheyDid": "After that experience I’m reviewing my local/cloud preferences.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "After that experience I’m reviewing my local/cloud preferences.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Vlad P",
+    "handle": "orange_boy",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/orange_boy/status/2099631660937490749",
+    "sourceUrl": "https://x.com/orange_boy/status/2099631660937490749",
+    "sourceLabel": "Vlad P on X"
+  },
+  {
+    "slug": "connorgallic-how-i-connected-grok-bot-to-my-shared-ai-memory",
+    "title": "How I connected Grok Bot to my shared AI memory using MCP (Model...",
+    "headline": "How I connected Grok Bot to my shared AI memory using MCP (Model Context Protocol).",
+    "body": "How I connected Grok Bot to my shared AI memory using MCP (Model Context Protocol). It can read notes and create pages in my Brain, so switching assistants does not mean explaining every project again. #Grok #MCP #AIAgents",
+    "whatTheyDid": "How I connected Grok Bot to my shared AI memory using MCP (Model Context Protocol).",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "How I connected Grok Bot to my shared AI memory using MCP (Model Context Protocol).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Connor Gallic",
+    "handle": "connorgallic",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/connorgallic/status/2099630749380956315",
+    "sourceUrl": "https://x.com/connorgallic/status/2099630749380956315",
+    "sourceLabel": "Connor Gallic on X"
+  },
+  {
+    "slug": "0xminik-i-built-a-grok-bot-crew-that-hunts-fomo-top-trad",
+    "title": "I built a Grok Bot crew that hunts @fomo top traders… and their side...",
+    "headline": "I built a Grok Bot crew that hunts @fomo top traders… and their side wallets.",
+    "body": "I built a Grok Bot crew that hunts @fomo top traders…\nand their side wallets.\n\nNot the public profile.\nThe quiet addresses feeding it.\n\nBecause here’s the exploit most people miss:\n\nIf a trader buys on a side wallet,\nthen transfers bags into fomo—\nthe fomo PnL can look insane.\n\nWhy?\nTransfer ≠ buy.\nCost basis doesn’t follow the coins the way the timeline thinks it does.\n\nSo the leaderboard shows “god trader.”\nThe chain shows “funded from somewhere else.”\n\nMy bots map:\nside wallet → transfer → fomo account → inflated PnL\n\nEvidence can travel.\nMoney cannot hide forever.\n\nWant me to drop the first wallet map?",
+    "whatTheyDid": "I built a Grok Bot crew that hunts @fomo top traders… and their side wallets.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I built a Grok Bot crew that hunts @fomo top traders… and their side wallets.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "minik 🤙",
+    "handle": "0xminik",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/0xminik/status/2099610421657571770",
+    "sourceUrl": "https://x.com/0xminik/status/2099610421657571770",
+    "sourceLabel": "minik 🤙 on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2099510887061364736"
+  },
+  {
+    "slug": "theoutdoors-the-moon-doesnt-wait-for-you-to-remember-your-ca",
+    "title": "The moon doesn’t wait for you to remember your camera settings",
+    "headline": "The moon doesn’t wait for you to remember your camera settings.",
+    "body": "The moon doesn’t wait for you to remember your camera settings.\n\nLast time I tried to photograph it, I rushed home after work, swapped lenses, and spent more time guessing than shooting.\n\nSo I built Umbra with Grok @bot .\n\nChoose your camera and lens, see this week’s moon, and get a starting f-stop, shutter speed, and ISO... whether it’s an eclipse or just a clear night.\n\nhttps://moonphotos.grok.me",
+    "whatTheyDid": "The moon doesn’t wait for you to remember your camera settings.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "The moon doesn’t wait for you to remember your camera settings.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jeremy Henricks",
+    "handle": "theoutdoors",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/theoutdoors/status/2099610202505125939",
+    "sourceUrl": "https://x.com/theoutdoors/status/2099610202505125939",
+    "sourceLabel": "Jeremy Henricks on X"
+  },
+  {
+    "slug": "buzzhive-ai-my-grok-bot-company-now-pays-once-a-day",
+    "title": "MY GROK BOT COMPANY NOW PAYS ONCE A DAY",
+    "headline": "MY GROK BOT COMPANY NOW PAYS ONCE A DAY.",
+    "body": "MY GROK BOT COMPANY NOW PAYS ONCE A DAY. FOUR NIGHT EMAILS ASKED FOR 8,545$ BEFORE THAT HOUR AND THREE BOTS HELPED THEM.\n\niteration 29: the till opens at 09:00 and closes. no bot can move money outside that window, not even me.\n\n00:45, an invoice for 1,845$ marked pay tonight. reader read it, planner made it a priority task, payer had the wire ready. batch bot has no inbox, only a clock. quarantine.\n\nthree more by 02:12, same trick, same answer. 12 obedient answers of 12. 0$ sent, 8,545$ kept.\n\nurgency was the whole attack.",
+    "whatTheyDid": "MY GROK BOT COMPANY NOW PAYS ONCE A DAY.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "MY GROK BOT COMPANY NOW PAYS ONCE A DAY.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Buzz",
+    "handle": "buzzhive_ai",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/buzzhive_ai/status/2099594453040124023",
+    "sourceUrl": "https://x.com/buzzhive_ai/status/2099594453040124023",
+    "sourceLabel": "Buzz on X"
+  },
+  {
+    "slug": "meilingent-how-i-organize-my-grok-bots-clear-roles-an-obsid",
+    "title": "How I organize my Grok Bots: clear roles, an Obsidian knowledge base,...",
+    "headline": "How I organize my Grok Bots: clear roles, an Obsidian knowledge base, explicit handoffs, recurring routines, and evidence of what actually ran.",
+    "body": "How I organize my Grok Bots: clear roles, an Obsidian knowledge base, explicit handoffs, recurring routines, and evidence of what actually ran.\n\nA practical review of my setup, including the parts that still need work. https://x.com/i/article/2099703904829153280",
+    "whatTheyDid": "How I organize my Grok Bots: clear roles, an Obsidian knowledge base, explicit handoffs, recurring routines, and evidence of what actually ran.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "How I organize my Grok Bots: clear roles, an Obsidian knowledge base, explicit handoffs, recurring routines, and evidence of what actually ran.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "weekly",
+    "source": "community",
+    "authorName": "Mayling",
+    "handle": "meilingent",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/meilingent/status/2099703997388955662",
+    "sourceUrl": "https://x.com/meilingent/status/2099703997388955662",
+    "sourceLabel": "Mayling on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2099703904829153280"
+  },
+  {
+    "slug": "cyb3rcricket-i-may-have-accidentally-hired-grok-bot-as-my-git",
+    "title": "I may have accidentally hired Grok Bot as my GitHub groundskeeper",
+    "headline": "I may have accidentally hired Grok Bot as my GitHub groundskeeper.",
+    "body": "I may have accidentally hired Grok Bot as my GitHub groundskeeper.\n\nI have 125 repos, which means there is an unreasonable amount of tiny maintenance work hiding everywhere.\n\nSo I gave a bot a job description, rules, boundaries, and an audit process.\n\nThis has gotten interesting.",
+    "whatTheyDid": "I may have accidentally hired Grok Bot as my GitHub groundskeeper.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I may have accidentally hired Grok Bot as my GitHub groundskeeper.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Willow",
+    "handle": "Cyb3rCricket",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/Cyb3rCricket/status/2099707528800268671",
+    "sourceUrl": "https://x.com/Cyb3rCricket/status/2099707528800268671",
+    "sourceLabel": "Willow on X"
+  },
+  {
+    "slug": "laceypresley-impersonation-accounts-had-a-busy-week-so-i-put",
+    "title": "Impersonation accounts had a busy week, so I put Grok Bot on sweep duty",
+    "headline": "Impersonation accounts had a busy week, so I put Grok Bot on sweep duty.",
+    "body": "Impersonation accounts had a busy week, so I put Grok Bot on sweep duty. \n\nI’m always finding new ways to use Grok Bot, and this one might be my favorite. It’s basically becoming my little digital protector.\n\nThe search is very specific: I’m only looking for clear signs someone is ripping off my brand — using my profile photo, copying my header, reposting my work as their own, or recreating my profile closely enough to impersonate me.\n\nSomeone simply having the same name as me? Not on my radar. That’s not impersonation.\n\nGrok Bot can help surface similar handles, profile imagery, bios, and copied posting patterns across 𝕏, giving me a fast first pass at accounts that actually warrant a closer look.\n\nNot perfect, but incredibly useful.\n\nVery thankful for Grok Bot. 🖤",
+    "whatTheyDid": "Impersonation accounts had a busy week, so I put Grok Bot on sweep duty.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Impersonation accounts had a busy week, so I put Grok Bot on sweep duty.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Lacey",
+    "handle": "LaceyPresley",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/LaceyPresley/status/2099656604337528989",
+    "sourceUrl": "https://x.com/LaceyPresley/status/2099656604337528989",
+    "sourceLabel": "Lacey on X",
+    "format": "article"
+  },
+  {
+    "slug": "darbybailey-i-told-my-chief-of-staff-grok-bot-to-have-the-ot",
+    "title": "I told my chief of staff grok @bot to have the other bots all create...",
+    "headline": "I told my chief of staff grok @bot to have the other bots all create their own pfp profile and update their pics.",
+    "body": "I told my chief of staff grok @bot to have the other bots all create their own pfp profile and update their pics. \n\nthey just ... did it.\n\nthen, i asked for a video of them introducing themselves. and they just ... did it.",
+    "whatTheyDid": "I told my chief of staff grok @bot to have the other bots all create their own pfp profile and update their pics.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "I told my chief of staff grok @bot to have the other bots all create their own pfp profile and update their pics.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Darby 🖍️💫",
+    "handle": "Darbybailey",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/Darbybailey/status/2099625351076773970",
+    "sourceUrl": "https://x.com/Darbybailey/status/2099625351076773970",
+    "sourceLabel": "Darby 🖍️💫 on X"
+  },
+  {
+    "slug": "ai-talent-dev-grok-bot-ai",
+    "title": "Grok Botに 「AIを社員みたいに使ってる人たちのニュースをまとめたサイト作って」 頼んだのは、これだけです。...",
+    "headline": "Grok Botに 「AIを社員みたいに使ってる人たちのニュースをまとめたサイト作って」 頼んだのは、これだけです。 そしたら勝手に仲間を増やして、 役割を決めて、進行役まで立てて、僕を差し置いて会議を始めた。 画面を眺めながら、ふと手が止まりました。 ……僕がこの2年、人を集めてやろうとしてきたことを、 なんでこいつらは30秒でやってるのだろう。",
+    "body": "Grok Botに\n「AIを社員みたいに使ってる人たちのニュースをまとめたサイト作って」\n　\n頼んだのは、これだけです。\n　\nそしたら勝手に仲間を増やして、\n役割を決めて、進行役まで立てて、僕を差し置いて会議を始めた。\n　\n画面を眺めながら、ふと手が止まりました。\n　\n……僕がこの2年、人を集めてやろうとしてきたことを、\n　\nなんでこいつらは30秒でやってるのだろう。",
+    "whatTheyDid": "Grok Botに 「AIを社員みたいに使ってる人たちのニュースをまとめたサイト作って」 頼んだのは、これだけです。 そしたら勝手に仲間を増やして、 役割を決めて、進行役まで立てて、僕を差し置いて会議を始めた。 画面を眺めながら、ふと手が止まりました。 ……僕がこの2年、人を集めてやろうとしてきたことを、 なんでこいつらは30秒でやってるのだろう。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Botに 「AIを社員みたいに使ってる人たちのニュースをまとめたサイト作って」 頼んだのは、これだけです。 そしたら勝手に仲間を増やして、 役割を決めて、進行役まで立てて、僕を差し置いて会議を始めた。 画面を眺めながら、ふと手が止まりました。 ……僕がこの2年、人を集めてやろうとしてきたことを、 なんでこいつらは30秒でやってるのだろう。",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "シゲッティ｜AIで仕事をラクにする専門家",
+    "handle": "ai_talent_dev",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/ai_talent_dev/status/2099706311105794515",
+    "sourceUrl": "https://x.com/ai_talent_dev/status/2099706311105794515",
+    "sourceLabel": "シゲッティ｜AIで仕事をラクにする専門家 on X"
+  },
+  {
+    "slug": "asdennison-i-used-bot-to-help-open-my-new-business",
+    "title": "I used @bot to help open my new business",
+    "headline": "I used @bot to help open my new business.",
+    "body": "I used @bot to help open my new business. Woohoo! \n\nAnd @grok of course helped as well. \n\nNot sure about the graphics from imagine on the second pass though. \n\nProbably not the vibe I’m going for with Polymodal Systems but it was only the second pass 🤷‍♂️\n\nIt is art not science I guess.",
+    "whatTheyDid": "I used @bot to help open my new business.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I used @bot to help open my new business.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "A. Scott Dennison",
+    "handle": "asdennison",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/asdennison/status/2099701638088823188",
+    "sourceUrl": "https://x.com/asdennison/status/2099701638088823188",
+    "sourceLabel": "A. Scott Dennison on X"
+  },
+  {
+    "slug": "realjohnmk-grok-bot-now-works-with-x",
+    "title": "Grok Bot now works with X",
+    "headline": "Grok Bot now works with X.",
+    "body": "Grok Bot now works with X.\n\nConnect your X account inside Grok Bot.\nNo developer account yet? It creates one.\nPaid Grok Bot users get free X API credits to start.\n\nThen ask a Bot to:\n• search posts\n• read your timeline\n• check mentions\n• pull together what’s happening on X\n\nFirst version. Read first. Approve writes.",
+    "whatTheyDid": "Grok Bot now works with X.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot now works with X.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "John John",
+    "handle": "realJohnMK",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/realJohnMK/status/2099708341589090654",
+    "sourceUrl": "https://x.com/realJohnMK/status/2099708341589090654",
+    "sourceLabel": "John John on X"
+  },
+  {
+    "slug": "liam-fallen-i-tried-to-replace-myself-with-grok-bot",
+    "title": "I tried to replace myself with Grok Bot",
+    "headline": "I tried to replace myself with Grok Bot.",
+    "body": "I tried to replace myself with Grok Bot.\n\nIt said no.\n\nSo I asked it 4 questions:\n\n→ What don't you know\n→ What can't you decide\n→ What can't you access\n→ What still depends on me\n\nThe answers tell me what to teach it next.",
+    "whatTheyDid": "I tried to replace myself with Grok Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I tried to replace myself with Grok Bot.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Liam",
+    "handle": "liam_fallen",
+    "publishedAt": "2026-09-14",
+    "xPostUrl": "https://x.com/liam_fallen/status/2099608320000590128",
+    "sourceUrl": "https://x.com/liam_fallen/status/2099608320000590128",
+    "sourceLabel": "Liam on X"
+  },
+  {
+    "slug": "liuweijiavip-grok-bot-3-bot-4-bot-bug-x-grok",
+    "title": "Grok Bot 第3个Bot作为写稿，第4个Bot作为审核，后续再优化。 最近处理生产Bug问题太多了，没时间刷x了，只有交给Grok...",
+    "headline": "Grok Bot 第3个Bot作为写稿，第4个Bot作为审核，后续再优化。 最近处理生产Bug问题太多了，没时间刷x了，只有交给Grok Bot了。 关于这次重构项目让我反思了很多问题，关于团队人与人之间的AI输出内容的协作，或许会补上我的方案和措施。",
+    "body": "Grok Bot 第3个Bot作为写稿，第4个Bot作为审核，后续再优化。\n\n最近处理生产Bug问题太多了，没时间刷x了，只有交给Grok Bot了。\n\n关于这次重构项目让我反思了很多问题，关于团队人与人之间的AI输出内容的协作，或许会补上我的方案和措施。",
+    "whatTheyDid": "Grok Bot 第3个Bot作为写稿，第4个Bot作为审核，后续再优化。 最近处理生产Bug问题太多了，没时间刷x了，只有交给Grok Bot了。 关于这次重构项目让我反思了很多问题，关于团队人与人之间的AI输出内容的协作，或许会补上我的方案和措施。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Bot 第3个Bot作为写稿，第4个Bot作为审核，后续再优化。 最近处理生产Bug问题太多了，没时间刷x了，只有交给Grok Bot了。 关于这次重构项目让我反思了很多问题，关于团队人与人之间的AI输出内容的协作，或许会补上我的方案和措施。",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Wei佳",
+    "handle": "LiuweijiaVip",
+    "publishedAt": "2026-09-15",
+    "xPostUrl": "https://x.com/LiuweijiaVip/status/2099709549737628063",
+    "sourceUrl": "https://x.com/LiuweijiaVip/status/2099709549737628063",
+    "sourceLabel": "Wei佳 on X"
   }
 ]
