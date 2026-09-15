@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 124,
+    "total": 127,
     "candidates": 5,
     "xCandidates": 0,
     "nonXCandidates": 5,
-    "alreadyIngested": 119,
+    "alreadyIngested": 122,
     "pending": 0
   },
   "cases": [
@@ -1623,6 +1623,45 @@
       "title": "Kaspa node density test on one Grok Bot box",
       "url": "https://github.com/STP-KAS/Xai.mainnet.public.nodes",
       "sourceSummary": "Honest one-sandbox density notes measuring how many real Kaspa mainnet public nodes a single Grok Bot Linux box can run.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-weekly-grok-bot-tech-trend-issues",
+      "title": "grok-weekly — Grok Bot tech-trend Issues",
+      "url": "https://github.com/kurotanshi/grok-weekly",
+      "sourceSummary": "Archive of weekly tech-trend briefs researched by a Grok Bot specialist and posted to GitHub Issues after an SNS verification gate.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "finbot-ibm-screener-webhooking-grok-bot",
+      "title": "finbot — IBM screener webhooking Grok Bot",
+      "url": "https://github.com/jtaroreh/finbot",
+      "sourceSummary": "Post-close IBM accumulation screener that posts confluence snapshots to a Grok Bot webhook and opens GitHub Issue alerts only.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "openscad-print-loop-with-grok-bot-build",
+      "title": "OpenSCAD print loop with Grok Bot + Build",
+      "url": "https://github.com/leaf1644/OpensCAD-viewer",
+      "sourceSummary": "Case study loop where Grok Bot reviews OpenSCAD solids on its cloud computer while Grok Build writes and fixes .scad until print-ready.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

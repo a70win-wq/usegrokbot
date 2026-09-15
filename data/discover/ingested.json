@@ -110454,5 +110454,93 @@
     "xPostUrl": "https://x.com/Ken_LinkWell/status/2099793973761970624",
     "sourceUrl": "https://x.com/Ken_LinkWell/status/2099793973761970624",
     "sourceLabel": "Ken on X"
+  },
+  {
+    "slug": "kurotanshi-grok-weekly-grok-bot-tech-trend-issues",
+    "title": "grok-weekly — Grok Bot tech-trend Issues",
+    "headline": "Archive of weekly tech-trend briefs researched by a Grok Bot specialist and posted to GitHub Issues after an SNS verification gate.",
+    "whatTheyDid": "Archive of weekly tech-trend briefs researched by a Grok Bot specialist and posted to GitHub Issues after an SNS verification gate.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Archive of weekly tech-trend briefs researched by a Grok Bot specialist and posted to GitHub Issues after an SNS verification gate.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "weekly",
+    "source": "community",
+    "authorName": "kurotanshi",
+    "publishedAt": "2026-09-15",
+    "sourceUrl": "https://github.com/kurotanshi/grok-weekly",
+    "sourceLabel": "kurotanshi · GitHub"
+  },
+  {
+    "slug": "jtaroreh-finbot-ibm-screener-webhooking-grok-bot",
+    "title": "finbot — IBM screener webhooking Grok Bot",
+    "headline": "Post-close IBM accumulation screener that posts confluence snapshots to a Grok Bot webhook and opens GitHub Issue alerts only.",
+    "whatTheyDid": "Post-close IBM accumulation screener that posts confluence snapshots to a Grok Bot webhook and opens GitHub Issue alerts only.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Post-close IBM accumulation screener that posts confluence snapshots to a Grok Bot webhook and opens GitHub Issue alerts only.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "jtaroreh",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/jtaroreh/finbot",
+    "sourceLabel": "jtaroreh · GitHub"
+  },
+  {
+    "slug": "leaf1644-openscad-print-loop-with-grok-bot-build",
+    "title": "OpenSCAD print loop with Grok Bot + Build",
+    "headline": "Case study loop where Grok Bot reviews OpenSCAD solids on its cloud computer while Grok Build writes and fixes .scad until print-ready.",
+    "whatTheyDid": "Case study loop where Grok Bot reviews OpenSCAD solids on its cloud computer while Grok Build writes and fixes .scad until print-ready.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Case study loop where Grok Bot reviews OpenSCAD solids on its cloud computer while Grok Build writes and fixes .scad until print-ready.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "leaf1644",
+    "publishedAt": "2026-09-15",
+    "sourceUrl": "https://github.com/leaf1644/OpensCAD-viewer",
+    "sourceLabel": "leaf1644 · GitHub"
   }
 ]
