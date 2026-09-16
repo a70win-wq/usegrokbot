@@ -9,12 +9,12 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 131,
+    "total": 132,
     "candidates": 6,
     "xCandidates": 0,
     "nonXCandidates": 6,
-    "alreadyIngested": 125,
-    "pending": 1
+    "alreadyIngested": 126,
+    "pending": 0
   },
   "cases": [
     {
@@ -1692,8 +1692,8 @@
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "candidate",
       "ingest": {
-        "status": "retry",
-        "attempts": 2,
+        "status": "skipped",
+        "attempts": 3,
         "code": "source_unreadable",
         "reason": "404"
       }
@@ -1716,6 +1716,19 @@
       "title": "hunting-printables-team — Etsy printables Grok Bot team",
       "url": "https://github.com/SAW72/hunting-printables-team",
       "sourceSummary": "Role prompts for a Grok Bot team that scouts, designs, copies, and packages hunting-themed Etsy printables.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "checkingrokbot-luma-check-in-58mm-tickets",
+      "title": "checkingrokbot — Luma check-in + 58mm tickets",
+      "url": "https://github.com/martinmalgor04/checkingrokbot",
+      "sourceSummary": "Reception app for a Grok Bot Meetup that imports Luma guests, records door check-ins, and prints 58 mm ESC/POS welcome tickets.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

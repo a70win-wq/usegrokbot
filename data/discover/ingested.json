@@ -121414,5 +121414,33 @@
     "publishedAt": "2026-09-15",
     "sourceUrl": "https://github.com/SAW72/hunting-printables-team",
     "sourceLabel": "SAW72 · GitHub"
+  },
+  {
+    "slug": "martinmalgor04-checkingrokbot-luma-check-in-58mm-tickets",
+    "title": "checkingrokbot — Luma check-in + 58mm tickets",
+    "headline": "Reception app for a Grok Bot Meetup that imports Luma guests, records door check-ins, and prints 58 mm ESC/POS welcome tickets.",
+    "whatTheyDid": "Reception app for a Grok Bot Meetup that imports Luma guests, records door check-ins, and prints 58 mm ESC/POS welcome tickets.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Reception app for a Grok Bot Meetup that imports Luma guests, records door check-ins, and prints 58 mm ESC/POS welcome tickets.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "martinmalgor04",
+    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://github.com/martinmalgor04/checkingrokbot",
+    "sourceLabel": "martinmalgor04 · GitHub"
   }
 ]
