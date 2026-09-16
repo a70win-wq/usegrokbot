@@ -9,12 +9,12 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 127,
-    "candidates": 5,
+    "total": 129,
+    "candidates": 6,
     "xCandidates": 0,
-    "nonXCandidates": 5,
-    "alreadyIngested": 122,
-    "pending": 0
+    "nonXCandidates": 6,
+    "alreadyIngested": 123,
+    "pending": 1
   },
   "cases": [
     {
@@ -1668,6 +1668,34 @@
       "ingest": {
         "status": "published",
         "attempts": 1
+      }
+    },
+    {
+      "id": "bmo-grok-bot-seat-export-cos-profile-skills",
+      "title": "BMO — Grok Bot seat export (CoS profile + skills)",
+      "url": "https://github.com/owenezra/BMO",
+      "sourceSummary": "Public export of a Grok Bot Chief-of-Staff seat with profile, workflows, and assets (no chat DBs) for reuse.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "half-x-grok-bot-feature-request-board-prototype",
+      "title": "Half X — Grok Bot feature-request board prototype",
+      "url": "https://github.com/ojotapcosta/grok-bot-requests",
+      "sourceSummary": "Prototype feature-request mural for Grok Bot that turns X groupchat ideas into a votable inventory board.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "retry",
+        "attempts": 1,
+        "code": "source_unreadable",
+        "reason": "404"
       }
     }
   ]
