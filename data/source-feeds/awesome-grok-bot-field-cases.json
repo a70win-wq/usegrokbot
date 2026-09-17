@@ -1812,7 +1812,7 @@
       "sourceStatus": "candidate",
       "ingest": {
         "status": "retry",
-        "attempts": 1,
+        "attempts": 2,
         "code": "source_unreadable",
         "reason": "404"
       }
