@@ -9,12 +9,12 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 136,
-    "candidates": 6,
+    "total": 142,
+    "candidates": 7,
     "xCandidates": 0,
-    "nonXCandidates": 6,
-    "alreadyIngested": 130,
-    "pending": 0
+    "nonXCandidates": 7,
+    "alreadyIngested": 135,
+    "pending": 1
   },
   "cases": [
     {
@@ -1781,6 +1781,86 @@
       "title": "BBA Backtest Lab — Grok Bot team trading workspace",
       "url": "https://github.com/Simzy420/bba-backtest-lab",
       "sourceSummary": "Shared backtesting lab where Big Brain Ape and a Grok Bot research/trader team exchange strategy briefs and journals.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "listing-manager-facebook-vinted-drafts-built-by-grok-bot",
+      "title": "Listing Manager — Facebook/Vinted drafts built by Grok Bot",
+      "url": "https://github.com/mikesw15/listing-manager",
+      "sourceSummary": "Mobile-first Next.js listing manager for Facebook Marketplace and Vinted drafts, built end-to-end by Grok Bot with n8n webhooks.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "tech-demos-javascript-demos-created-by-grok-bot",
+      "title": "tech-demos — JavaScript demos created by Grok Bot",
+      "url": "https://github.com/goofansu/tech-demos",
+      "sourceSummary": "Collection of JavaScript demos created by Grok Bot, including Peekaboo Bots avatar gallery.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "retry",
+        "attempts": 1,
+        "code": "source_unreadable",
+        "reason": "404"
+      }
+    },
+    {
+      "id": "bookmark-demos-x-bookmarks-cursor-agent-mattyp-pattern",
+      "title": "bookmark-demos — X bookmarks → Cursor Agent (mattyp pattern)",
+      "url": "https://github.com/kk-agent/bookmark-demos",
+      "sourceSummary": "Daily X-Bookmarks to Cursor Agent demos with Cloudflare preview deploys following the mattyp Grok Bot pattern.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "onlydevs-meetup-grok-bot-cursor-github-demo",
+      "title": "Onlydevs meetup — Grok Bot + Cursor + GitHub demo",
+      "url": "https://github.com/truevis/onlydevs",
+      "sourceSummary": "Onlydevs meetup demo wiring Grok Bot, Cursor, and GitHub, with a live Streamlit city-radar sample.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "8-30-desk-cpi-fomc-briefing-built-with-grok-build",
+      "title": "8:30 Desk — CPI/FOMC briefing built with Grok Build",
+      "url": "https://github.com/tilakvenu/grok-830-desk-build",
+      "sourceSummary": "Interactive morning CPI, yields, and FOMC briefing desk built with Grok Build on 17 Sep 2026.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "ai-co-dm-grok-bot-fleet-for-a-campaign-vault",
+      "title": "ai-co-dm — Grok Bot fleet for a campaign vault",
+      "url": "https://github.com/Thedougler/ai-co-dm",
+      "sourceSummary": "Campaign co-DM vault with dedicated GROK-BOTS.md fleet wiring, Mac host gate, and packet standards for Grok Bots.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

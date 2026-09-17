@@ -126134,5 +126134,149 @@
     "sourceLabel": "NaganoHiro OwlCamp INC.代表🦉 on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2100419855820414976"
+  },
+  {
+    "slug": "mikesw15-listing-manager-facebook-vinted-drafts-built-by",
+    "title": "Listing Manager — Facebook/Vinted drafts built by Grok Bot",
+    "headline": "Mobile-first Next.js listing manager for Facebook Marketplace and Vinted drafts, built end-to-end by Grok Bot with n8n webhooks.",
+    "whatTheyDid": "Mobile-first Next.js listing manager for Facebook Marketplace and Vinted drafts, built end-to-end by Grok Bot with n8n webhooks.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Mobile-first Next.js listing manager for Facebook Marketplace and Vinted drafts, built end-to-end by Grok Bot with n8n webhooks.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mikesw15",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/mikesw15/listing-manager",
+    "sourceLabel": "mikesw15 · GitHub"
+  },
+  {
+    "slug": "kk-agent-bookmark-demos-x-bookmarks-cursor-agent-mattyp-p",
+    "title": "bookmark-demos — X bookmarks → Cursor Agent (mattyp pattern)",
+    "headline": "Daily X-Bookmarks to Cursor Agent demos with Cloudflare preview deploys following the mattyp Grok Bot pattern.",
+    "whatTheyDid": "Daily X-Bookmarks to Cursor Agent demos with Cloudflare preview deploys following the mattyp Grok Bot pattern.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Daily X-Bookmarks to Cursor Agent demos with Cloudflare preview deploys following the mattyp Grok Bot pattern.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "kk-agent",
+    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://github.com/kk-agent/bookmark-demos",
+    "sourceLabel": "kk-agent · GitHub"
+  },
+  {
+    "slug": "truevis-onlydevs-meetup-grok-bot-cursor-github-demo",
+    "title": "Onlydevs meetup — Grok Bot + Cursor + GitHub demo",
+    "headline": "Onlydevs meetup demo wiring Grok Bot, Cursor, and GitHub, with a live Streamlit city-radar sample.",
+    "whatTheyDid": "Onlydevs meetup demo wiring Grok Bot, Cursor, and GitHub, with a live Streamlit city-radar sample.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Onlydevs meetup demo wiring Grok Bot, Cursor, and GitHub, with a live Streamlit city-radar sample.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "truevis",
+    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://github.com/truevis/onlydevs",
+    "sourceLabel": "truevis · GitHub"
+  },
+  {
+    "slug": "tilakvenu-30-desk-cpi-fomc-briefing-built-with-grok-build",
+    "title": "30 Desk — CPI/FOMC briefing built with Grok Build",
+    "headline": "Interactive morning CPI, yields, and FOMC briefing desk built with Grok Build on 17 Sep 2026.",
+    "whatTheyDid": "Interactive morning CPI, yields, and FOMC briefing desk built with Grok Build on 17 Sep 2026.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Interactive morning CPI, yields, and FOMC briefing desk built with Grok Build on 17 Sep 2026.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "tilakvenu",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/tilakvenu/grok-830-desk-build",
+    "sourceLabel": "tilakvenu · GitHub"
+  },
+  {
+    "slug": "thedougler-ai-co-dm-grok-bot-fleet-for-a-campaign-vault",
+    "title": "ai-co-dm — Grok Bot fleet for a campaign vault",
+    "headline": "Campaign co-DM vault with dedicated GROK-BOTS.md fleet wiring, Mac host gate, and packet standards for Grok Bots.",
+    "whatTheyDid": "Campaign co-DM vault with dedicated GROK-BOTS.md fleet wiring, Mac host gate, and packet standards for Grok Bots.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Marketers",
+      "Founders"
+    ],
+    "usefulFor": "Marketers / Founders",
+    "output": "Campaign co-DM vault with dedicated GROK-BOTS.md fleet wiring, Mac host gate, and packet standards for Grok Bots.",
+    "category": "marketing",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Thedougler",
+    "publishedAt": "2026-09-05",
+    "sourceUrl": "https://github.com/Thedougler/ai-co-dm",
+    "sourceLabel": "Thedougler · GitHub"
   }
 ]
