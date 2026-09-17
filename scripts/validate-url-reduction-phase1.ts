@@ -24,7 +24,8 @@ assert.equal(
   discoverStories.length,
   "Every Discover story is either retained on-site or linked out to its source",
 );
-assert.equal(templates.length, 217, "All selected Templates must stay available");
+assert.ok(templates.length >= 217, "The template catalog must preserve its reviewed baseline while allowing new templates");
+assert.equal(new Set(templates.map((item) => item.id)).size, templates.length, "Template IDs must be unique");
 assert.equal(verifiedUseCases.length, 28, "All verified Use Cases must stay available");
 
 for (const story of externalOnly) {

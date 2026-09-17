@@ -8,7 +8,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const copy = templateIdentityUiCopy[locale];
   return pageMeta({
     path: "/templates",
-    title: copy.title,
+    title: copy.metaTitle,
     description: copy.intro,
     urlLocale,
   });

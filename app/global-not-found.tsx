@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import { BlobatarAvatar } from "@/components/BlobatarAvatar";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,8 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
   title: "Page not found",
   description: "That URL is not in the library.",
+  robots: { index: false, follow: true },
 };
 
 export default function GlobalNotFound() {

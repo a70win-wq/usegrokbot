@@ -6,6 +6,7 @@ import {
   isTemplateIdentitySlug,
   localizeText,
   templateIdentitySlugs,
+  templateIdentityUiCopy,
   templatesForIdentity,
 } from "@/data/template-identities";
 import { catalogEntry, getTemplateStory, templateCopy } from "@/data/templates";
@@ -28,7 +29,7 @@ export async function generateMetadata({
   if (!identity) return {};
   const { urlLocale, locale } = localeFromParams(raw);
   return pageMeta({
-    title: localizeText(identity.name, locale),
+    title: `${localizeText(identity.name, locale)} — ${templateIdentityUiCopy[locale].metaTitle}`,
     description: localizeText(identity.description, locale),
     path: "/templates/" + identity.slug,
     urlLocale,

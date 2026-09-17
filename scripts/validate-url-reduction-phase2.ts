@@ -29,11 +29,11 @@ import {
 } from "../lib/i18n/paths";
 
 const EXPECTED_RETAINED_DISCOVER = 88;
-const EXPECTED_TEMPLATES = 217;
+const MIN_TEMPLATES = 217;
 const EXPECTED_VERIFIED_USE_CASES = 28;
 const EXPECTED_OLD_BOT_TEAMS = 48;
 const EXPECTED_OLD_SCENARIOS = 24;
-const EXPECTED_COMMUNITY_HANDLES = 1_292;
+const MIN_COMMUNITY_HANDLES = 1_292;
 const EXPECTED_SITEMAP_PATHS = 155;
 const EXPECTED_CONFIGURED_REDIRECTS = 261;
 const EXPECTED_LEGACY_PAGE_REDIRECTS = 16;
@@ -101,6 +101,7 @@ const handles = new Set(
     .map((story) => story.handle?.trim().replace(/^@/, "").toLowerCase())
     .filter((handle): handle is string => Boolean(handle)),
 );
+const templateIds = templates.map((item) => item.id);
 
 check(retained.length === EXPECTED_RETAINED_DISCOVER, `Retained Discover must be ${EXPECTED_RETAINED_DISCOVER}, found ${retained.length}`);
 check(
@@ -109,7 +110,8 @@ check(
 );
 check(retainedSet.size === EXPECTED_RETAINED_DISCOVER, "Retained Discover list has duplicates");
 check(retained.every((story) => retainedSet.has(story.slug)), "Runtime retained set differs from the reviewed list");
-check(templates.length === EXPECTED_TEMPLATES, `Templates must be ${EXPECTED_TEMPLATES}, found ${templates.length}`);
+check(templates.length >= MIN_TEMPLATES, `Templates must be at least ${MIN_TEMPLATES}, found ${templates.length}`);
+check(new Set(templateIds).size === templates.length, "Template ids are not unique");
 check(verifiedUseCases.length === EXPECTED_VERIFIED_USE_CASES, `Verified Use Cases must be ${EXPECTED_VERIFIED_USE_CASES}, found ${verifiedUseCases.length}`);
 check(oldBotTeams.length === EXPECTED_OLD_BOT_TEAMS, `Old Bot Teams must be ${EXPECTED_OLD_BOT_TEAMS}, found ${oldBotTeams.length}`);
 check(scenarios.length === EXPECTED_OLD_SCENARIOS, `Old scenarios must be ${EXPECTED_OLD_SCENARIOS}, found ${scenarios.length}`);
@@ -121,7 +123,7 @@ check(
   scenarios.every((item) => retiredScenarioSlugs.includes(item.slug as (typeof retiredScenarioSlugs)[number])),
   "Retired scenario redirect list differs from the data",
 );
-check(handles.size === EXPECTED_COMMUNITY_HANDLES, `Community handles must be ${EXPECTED_COMMUNITY_HANDLES}, found ${handles.size}`);
+check(handles.size >= MIN_COMMUNITY_HANDLES, `Community handles must be at least ${MIN_COMMUNITY_HANDLES}, found ${handles.size}`);
 check(topicSlugs.length === 17, `Topics must be 17, found ${topicSlugs.length}`);
 check(appSlugs.length === 13, `Apps must be 13, found ${appSlugs.length}`);
 check(nextConfig.redirects === configuredRedirects, "Next config is not using the validated redirect list");

@@ -126,9 +126,9 @@ export const jaMessages = {
   home: {
     kicker: "Grok Bot の発見ハブ",
     title: "Grok Bot はどう使われている？",
-    metaTitle: "Grok Bot の活用例",
+    metaTitle: "Grok Bot の使い方・テンプレート・活用例",
     metaDescription:
-      "X の公開投稿から、人が Grok Bot を実際にどう使っているかを見られます。メール、営業、コーディングなど。",
+      "Grok Bot の使い方、設定プロンプト、テンプレート、X で共有された実例を紹介。メール整理、調査、営業、コーディングを手伝う Bot を見つけられます。",
     censusPosts: "件の投稿",
     censusRefresh: "6時間ごとに更新",
     signal: "{n}件から役立つ情報を選びます。",

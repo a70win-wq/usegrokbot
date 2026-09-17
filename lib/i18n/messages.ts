@@ -130,9 +130,9 @@ export const messages = {
     home: {
       kicker: "The Grok Bot Discovery Hub",
       title: "How people use Grok Bot.",
-      metaTitle: "How people use Grok Bot",
+      metaTitle: "Grok Bot Templates, Use Cases & Guides",
       metaDescription:
-        "Real public X posts showing how people actually use Grok Bot — email, sales, coding, and more.",
+        "Explore Grok Bot templates, setup prompts, tutorials, and real use cases from X. Find a bot to help with email, research, sales, coding, and everyday tasks.",
       censusPosts: "posts",
       censusRefresh: "Updated every 6 hours",
     signal: "We filter {n} posts, leaving you with pure signal.",
@@ -608,8 +608,8 @@ export const messages = {
     home: {
       kicker: "Grok Bot 發現中心",
       title: "Grok Bot 怎麼用",
-      metaTitle: "Grok Bot 怎麼用",
-      metaDescription: "真實公開的 X 貼文，看人們實際怎麼使用 Grok Bot：電子郵件、銷售、程式等。",
+      metaTitle: "Grok Bot 教學、提示詞範本與真實案例",
+      metaDescription: "了解 Grok Bot 怎麼用，探索可直接使用的提示詞範本、設定教學和 X 上的真實案例，找到能幫你整理郵件、研究資料、銷售和寫程式的 Bot。",
       censusPosts: "則貼文",
       censusRefresh: "每 6 小時更新",
     signal: "我們篩選了 {n} 則貼文，只留下真正有用的資訊。",
@@ -1081,8 +1081,8 @@ export const messages = {
     home: {
       kicker: "Grok Bot 发现中心",
       title: "Grok Bot 怎么用",
-      metaTitle: "Grok Bot 怎么用",
-      metaDescription: "真实公开的 X 帖子，看人们实际怎么使用 Grok Bot：邮件、销售、代码等。",
+      metaTitle: "Grok Bot 教程、提示词模板与真实案例",
+      metaDescription: "了解 Grok Bot 怎么用，探索可直接使用的提示词模板、设置教程和 X 上的真实案例，找到能帮你整理邮件、研究资料、销售和写代码的 Bot。",
       censusPosts: "条帖子",
       censusRefresh: "每 6 小时更新",
     signal: "我们筛选了 {n} 条帖子，只留下真正有用的信息。",

@@ -1,0 +1,48 @@
+# Notify IndexNow using the live production sitemap and the existing public key.
+#
+# workflow_dispatch only. GitHub deployment_status cannot be gated with enough
+# confidence to exclude Vercel preview deployments, so this does not run
+# automatically after a deploy.
+#
+# The script always reads https://usegrokbot.com/sitemap.xml and
+# https://usegrokbot.com/62d6505d7c4e672351306fbb847690dc.txt. It never uses
+# preview hosts. One IndexNow endpoint is enough because participating
+# search engines share submitted URLs.
+name: IndexNow
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Read the live production sitemap and verify the key without POSTing to IndexNow
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Preview or submit the live production sitemap
+        env:
+          INDEXNOW_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ "$INDEXNOW_DRY_RUN" = "true" ]; then
+            node scripts/submit-indexnow.mjs --dry-run
+          else
+            node scripts/submit-indexnow.mjs
+          fi

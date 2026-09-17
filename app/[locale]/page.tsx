@@ -4,7 +4,7 @@ import { discoverStories } from "@/data/discover";
 import { articleStoriesByViews } from "@/lib/articles";
 import { getGithubStars } from "@/lib/github";
 import { messages } from "@/lib/i18n/messages";
-import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
+import { absoluteUrl, htmlLang, localeFromParams, URL_LOCALES } from "@/lib/i18n/paths";
 import { SEARCH_UI_ENABLED } from "@/lib/search";
 import { messageMeta, translateMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
@@ -33,8 +33,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         data={{
           "@context": "https://schema.org",
           "@type": "WebSite",
+          "@id": `${site.url}/#website`,
           name: site.name,
-          url,
+          alternateName: site.domain,
+          url: site.url,
+          inLanguage: URL_LOCALES.map((item) => htmlLang[item]),
           description: copy.metaDescription,
           ...(SEARCH_UI_ENABLED
             ? {
@@ -51,9 +54,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         data={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
+          "@id": `${url}#webpage`,
           name: copy.title,
           description: copy.metaDescription,
           url,
+          inLanguage: htmlLang[urlLocale],
+          isPartOf: { "@id": `${site.url}/#website` },
           numberOfItems: discoverStories.length,
         }}
       />

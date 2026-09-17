@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CommunityView, type GitHubContributor } from "@/components/CommunityView";
 import { featuredCommunityIdentities } from "@/data/community";
 import { site } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         : locale === "ja"
           ? "Grok Bot の実例を共有する人と、UseGrokBot を支えるオープンソースの貢献者を紹介します。"
           : "Meet the community sharing real Grok Bot examples and the open-source contributors improving UseGrokBot.";
-  return { title, description };
+  return pageMeta({ title, description, path: "/community", urlLocale: locale });
 }
 
 export default async function CommunityPage() {

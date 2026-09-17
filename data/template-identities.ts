@@ -542,6 +542,7 @@ export const identityClusters = [
 
 export const templateIdentityUiCopy = {
   en: {
+    metaTitle: "Grok Bot Templates by Role",
     title: "Who are you?",
     intro: "Choose an identity first, then see what these Bots can help you do.",
     allTemplates: "Browse all {n} templates",
@@ -569,6 +570,7 @@ export const templateIdentityUiCopy = {
     catalogTitle: "All templates",
   },
   "zh-Hant": {
+    metaTitle: "按角色挑選 Grok Bot 範本",
     title: "你是誰？",
     intro: "先選身份，再看這些 Bot 能幫你做什麼。",
     allTemplates: "查看全部 {n} 個模板",
@@ -593,6 +595,7 @@ export const templateIdentityUiCopy = {
     catalogTitle: "全部模板",
   },
   "zh-Hans": {
+    metaTitle: "按角色挑选 Grok Bot 模板",
     title: "你是谁？",
     intro: "先选身份，再看这些 Bot 能帮你做什么。",
     allTemplates: "查看全部 {n} 个模板",
@@ -617,6 +620,7 @@ export const templateIdentityUiCopy = {
     catalogTitle: "全部模板",
   },
   ja: {
+    metaTitle: "役割別の Grok Bot テンプレート",
     title: "あなたは誰？",
     intro: "先に立場を選び、これらの Bot が何を手伝えるかを見ます。",
     allTemplates: "すべてのテンプレート {n} 件を見る",

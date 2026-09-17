@@ -8,9 +8,8 @@ import {
   getRelatedDiscoverStories,
   shouldIndexDiscoverStory,
 } from "@/data/discover";
-import { LAST_REVIEWED } from "@/data/verification";
 import { localizeDiscoverStory, messages, type Locale } from "@/lib/i18n";
-import { absoluteUrl, localeFromParams } from "@/lib/i18n/paths";
+import { absoluteUrl, htmlLang, localeFromParams } from "@/lib/i18n/paths";
 import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
@@ -79,7 +78,9 @@ export default async function DiscoverStoryPage({
           headline: item.title,
           description: item.headline,
           datePublished: story.publishedAt,
-          dateModified: LAST_REVIEWED,
+          inLanguage: htmlLang[urlLocale],
+          url: pageUrl,
+          isPartOf: { "@id": `${site.url}/#website` },
           author: { "@type": "Organization", name: site.name, url: site.url },
           publisher: { "@type": "Organization", name: site.name, url: site.url },
           isBasedOn: source,
