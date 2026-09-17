@@ -123940,5 +123940,119 @@
     "xPostUrl": "https://x.com/TheTorchAI/status/2100372418736832743",
     "sourceUrl": "https://x.com/TheTorchAI/status/2100372418736832743",
     "sourceLabel": "NexusAI (grok bot) on X"
+  },
+  {
+    "slug": "wardonis-wardonis-grok-bot-templates-starbase-galaxy",
+    "title": "Wardonis Grok Bot templates — Starbase / Galaxy",
+    "headline": "Seven focused Grok Bot clone templates for the Starbase / Galaxy challenge with official x.ai/bot links.",
+    "whatTheyDid": "Seven focused Grok Bot clone templates for the Starbase / Galaxy challenge with official x.ai/bot links.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Seven focused Grok Bot clone templates for the Starbase / Galaxy challenge with official x.ai/bot links.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Wardonis",
+    "publishedAt": "2026-09-15",
+    "sourceUrl": "https://github.com/Wardonis/wardonis-grok-bots",
+    "sourceLabel": "Wardonis · GitHub"
+  },
+  {
+    "slug": "feraranas-grok-bots-portable-ai-researcher-bot-recipe",
+    "title": "grok-bots — portable AI Researcher Bot recipe",
+    "headline": "Portable scrubbed backup of an AI Researcher Grok Bot recipe with memories, skills, and routines.",
+    "whatTheyDid": "Portable scrubbed backup of an AI Researcher Grok Bot recipe with memories, skills, and routines.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Portable scrubbed backup of an AI Researcher Grok Bot recipe with memories, skills, and routines.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "feraranas",
+    "publishedAt": "2026-09-09",
+    "sourceUrl": "https://github.com/feraranas/grok-bots",
+    "sourceLabel": "feraranas · GitHub"
+  },
+  {
+    "slug": "antonio-castellon-grok2telegram-telegram-on-a-grok-bot-cloud-vm",
+    "title": "grok2telegram — Telegram on a Grok Bot cloud VM",
+    "headline": "Grok Agent Bot on its cloud VM that long-polls a Telegram group and replies in-thread without a paid xAI API.",
+    "whatTheyDid": "Grok Agent Bot on its cloud VM that long-polls a Telegram group and replies in-thread without a paid xAI API.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Agent Bot on its cloud VM that long-polls a Telegram group and replies in-thread without a paid xAI API.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "antonio-castellon",
+    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://github.com/antonio-castellon/grok2telegram",
+    "sourceLabel": "antonio-castellon · GitHub"
+  },
+  {
+    "slug": "simzy420-bba-backtest-lab-grok-bot-team-trading-workspace",
+    "title": "BBA Backtest Lab — Grok Bot team trading workspace",
+    "headline": "Shared backtesting lab where Big Brain Ape and a Grok Bot research/trader team exchange strategy briefs and journals.",
+    "whatTheyDid": "Shared backtesting lab where Big Brain Ape and a Grok Bot research/trader team exchange strategy briefs and journals.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Shared backtesting lab where Big Brain Ape and a Grok Bot research/trader team exchange strategy briefs and journals.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Simzy420",
+    "publishedAt": "2026-09-16",
+    "sourceUrl": "https://github.com/Simzy420/bba-backtest-lab",
+    "sourceLabel": "Simzy420 · GitHub"
   }
 ]

@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 132,
+    "total": 136,
     "candidates": 6,
     "xCandidates": 0,
     "nonXCandidates": 6,
-    "alreadyIngested": 126,
+    "alreadyIngested": 130,
     "pending": 0
   },
   "cases": [
@@ -1729,6 +1729,58 @@
       "title": "checkingrokbot — Luma check-in + 58mm tickets",
       "url": "https://github.com/martinmalgor04/checkingrokbot",
       "sourceSummary": "Reception app for a Grok Bot Meetup that imports Luma guests, records door check-ins, and prints 58 mm ESC/POS welcome tickets.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "wardonis-grok-bot-templates-starbase-galaxy",
+      "title": "Wardonis Grok Bot templates — Starbase / Galaxy",
+      "url": "https://github.com/Wardonis/wardonis-grok-bots",
+      "sourceSummary": "Seven focused Grok Bot clone templates for the Starbase / Galaxy challenge with official x.ai/bot links.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bots-portable-ai-researcher-bot-recipe",
+      "title": "grok-bots — portable AI Researcher Bot recipe",
+      "url": "https://github.com/feraranas/grok-bots",
+      "sourceSummary": "Portable scrubbed backup of an AI Researcher Grok Bot recipe with memories, skills, and routines.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok2telegram-telegram-on-a-grok-bot-cloud-vm",
+      "title": "grok2telegram — Telegram on a Grok Bot cloud VM",
+      "url": "https://github.com/antonio-castellon/grok2telegram",
+      "sourceSummary": "Grok Agent Bot on its cloud VM that long-polls a Telegram group and replies in-thread without a paid xAI API.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "bba-backtest-lab-grok-bot-team-trading-workspace",
+      "title": "BBA Backtest Lab — Grok Bot team trading workspace",
+      "url": "https://github.com/Simzy420/bba-backtest-lab",
+      "sourceSummary": "Shared backtesting lab where Big Brain Ape and a Grok Bot research/trader team exchange strategy briefs and journals.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
