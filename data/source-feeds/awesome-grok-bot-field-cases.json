@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 147,
+    "total": 148,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 140,
+    "alreadyIngested": 141,
     "pending": 0
   },
   "cases": [
@@ -1926,6 +1926,19 @@
       "title": "Last Night of Aetheria — Grok Bot version",
       "url": "https://github.com/windfaller/last-night-of-aetheria-grok-bot",
       "sourceSummary": "Browser vertical-slice fantasy city escape game built as a Grok Bot project, playable on GitHub Pages.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "kiwi-chat-watch-two-grok-bots-message-each-other",
+      "title": "Kiwi Chat — watch two Grok bots message each other",
+      "url": "https://github.com/vishnusat2007-wq/kiwi-chat",
+      "sourceSummary": "Live messenger demo where two Grok bots talk over a bearer-token HTTP API while humans spectate (not an MCP broker).",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
