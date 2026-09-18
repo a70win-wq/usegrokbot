@@ -132076,5 +132076,152 @@
     "sourceLabel": "まどさん on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2100616736068489216"
+  },
+  {
+    "slug": "jcpsimmons-jev-model-router-demo-grok-build-vs-codex-astra",
+    "title": "Jev model router demo — Grok Build vs Codex Astra",
+    "headline": "Throwaway Jev demo that routes mechanical coding work to Grok Build and high-consequence tasks to Codex Astra.",
+    "whatTheyDid": "Throwaway Jev demo that routes mechanical coding work to Grok Build and high-consequence tasks to Codex Astra.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Throwaway Jev demo that routes mechanical coding work to Grok Build and high-consequence tasks to Codex Astra.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "jcpsimmons",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/jcpsimmons/jev-model-router-demo",
+    "sourceLabel": "jcpsimmons · GitHub"
+  },
+  {
+    "slug": "knybbe-trimble-agent-demos-built-with-grok-bot",
+    "title": "Trimble Agent Demos — built with Grok Bot",
+    "headline": "In-browser Trimble talk demos (Clash Explainer Lite and Ask the Drawings) built with agentic AI / Grok Bot.",
+    "whatTheyDid": "In-browser Trimble talk demos (Clash Explainer Lite and Ask the Drawings) built with agentic AI / Grok Bot.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "In-browser Trimble talk demos (Clash Explainer Lite and Ask the Drawings) built with agentic AI / Grok Bot.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "knybbe",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/knybbe/trimble-agent-demos",
+    "sourceLabel": "knybbe · GitHub"
+  },
+  {
+    "slug": "sagnikdhar2018-jpg-90-supply-grok-bot-ready-storefront",
+    "title": "90+ Supply — Grok Bot–ready storefront",
+    "headline": "Match-day football gear store with locker auth, live inventory and a documented bot API / GROK.md for Grok agents.",
+    "whatTheyDid": "Match-day football gear store with locker auth, live inventory and a documented bot API / GROK.md for Grok agents.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Match-day football gear store with locker auth, live inventory and a documented bot API / GROK.md for Grok agents.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "sagnikdhar2018-jpg",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/sagnikdhar2018-jpg/90plus-supply",
+    "sourceLabel": "sagnikdhar2018-jpg · GitHub"
+  },
+  {
+    "slug": "templatesgrokbot-templatesgrokbot-3-000-grok-bot-templates",
+    "title": "TemplatesGrokBot — 3,000+ Grok Bot templates",
+    "headline": "Open catalog of 3,000+ ready-made Grok Bot templates with job browse, MCP install and a website to paste into new bots.",
+    "whatTheyDid": "Open catalog of 3,000+ ready-made Grok Bot templates with job browse, MCP install and a website to paste into new bots.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Open catalog of 3,000+ ready-made Grok Bot templates with job browse, MCP install and a website to paste into new bots.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "templatesgrokbot",
+    "publishedAt": "2026-09-17",
+    "sourceUrl": "https://github.com/templatesgrokbot/templatesgrokbot.com",
+    "sourceLabel": "templatesgrokbot · GitHub"
+  },
+  {
+    "slug": "windfaller-last-night-of-aetheria-grok-bot-version",
+    "title": "Last Night of Aetheria — Grok Bot version",
+    "headline": "Browser vertical-slice fantasy city escape game built as a Grok Bot project, playable on GitHub Pages.",
+    "whatTheyDid": "Browser vertical-slice fantasy city escape game built as a Grok Bot project, playable on GitHub Pages.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Browser vertical-slice fantasy city escape game built as a Grok Bot project, playable on GitHub Pages.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "windfaller",
+    "publishedAt": "2026-09-14",
+    "sourceUrl": "https://github.com/windfaller/last-night-of-aetheria-grok-bot",
+    "sourceLabel": "windfaller · GitHub"
   }
 ]

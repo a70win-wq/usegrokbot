@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 142,
+    "total": 147,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 135,
+    "alreadyIngested": 140,
     "pending": 0
   },
   "cases": [
@@ -1861,6 +1861,71 @@
       "title": "ai-co-dm — Grok Bot fleet for a campaign vault",
       "url": "https://github.com/Thedougler/ai-co-dm",
       "sourceSummary": "Campaign co-DM vault with dedicated GROK-BOTS.md fleet wiring, Mac host gate, and packet standards for Grok Bots.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "jev-model-router-demo-grok-build-vs-codex-astra",
+      "title": "Jev model router demo — Grok Build vs Codex Astra",
+      "url": "https://github.com/jcpsimmons/jev-model-router-demo",
+      "sourceSummary": "Throwaway Jev demo that routes mechanical coding work to Grok Build and high-consequence tasks to Codex Astra.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "trimble-agent-demos-built-with-grok-bot",
+      "title": "Trimble Agent Demos — built with Grok Bot",
+      "url": "https://github.com/knybbe/trimble-agent-demos",
+      "sourceSummary": "In-browser Trimble talk demos (Clash Explainer Lite and Ask the Drawings) built with agentic AI / Grok Bot.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "90-supply-grok-bot-ready-storefront",
+      "title": "90+ Supply — Grok Bot–ready storefront",
+      "url": "https://github.com/sagnikdhar2018-jpg/90plus-supply",
+      "sourceSummary": "Match-day football gear store with locker auth, live inventory and a documented bot API / GROK.md for Grok agents.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "templatesgrokbot-3-000-grok-bot-templates",
+      "title": "TemplatesGrokBot — 3,000+ Grok Bot templates",
+      "url": "https://github.com/templatesgrokbot/templatesgrokbot.com",
+      "sourceSummary": "Open catalog of 3,000+ ready-made Grok Bot templates with job browse, MCP install and a website to paste into new bots.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "last-night-of-aetheria-grok-bot-version",
+      "title": "Last Night of Aetheria — Grok Bot version",
+      "url": "https://github.com/windfaller/last-night-of-aetheria-grok-bot",
+      "sourceSummary": "Browser vertical-slice fantasy city escape game built as a Grok Bot project, playable on GitHub Pages.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
