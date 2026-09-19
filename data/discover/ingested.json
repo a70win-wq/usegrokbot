@@ -140402,5 +140402,61 @@
     "sourceLabel": "Hartwell on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2100984463974940672"
+  },
+  {
+    "slug": "kaibairen-my-working-party-grok-bot-work-canvas",
+    "title": "my-working-party — Grok Bot work canvas",
+    "headline": "Grok Bot work-canvas case: bilingual planning/status board exploring a Boundary Harness (guardrails without jailing intelligence) for delivery with cloud teammates.",
+    "whatTheyDid": "Grok Bot work-canvas case: bilingual planning/status board exploring a Boundary Harness (guardrails without jailing intelligence) for delivery with cloud teammates.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Bot work-canvas case: bilingual planning/status board exploring a Boundary Harness (guardrails without jailing intelligence) for delivery with cloud teammates.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "kaibairen",
+    "publishedAt": "2026-09-18",
+    "sourceUrl": "https://github.com/kaibairen/my-working-party",
+    "sourceLabel": "kaibairen · GitHub"
+  },
+  {
+    "slug": "mcgalleg-grokbot-jev-jobs-jev-triage-grok-bot-ats-apply",
+    "title": "grokbot-jev-jobs — Jev triage + Grok Bot ATS apply",
+    "headline": "Public job-search app that triages postings with TypeSafe Jev, then webhooks a Grok Bot (Resume Rudy) to fill ATS forms and write status back via secret-gated APIs.",
+    "whatTheyDid": "Public job-search app that triages postings with TypeSafe Jev, then webhooks a Grok Bot (Resume Rudy) to fill ATS forms and write status back via secret-gated APIs.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Public job-search app that triages postings with TypeSafe Jev, then webhooks a Grok Bot (Resume Rudy) to fill ATS forms and write status back via secret-gated APIs.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mcgalleg",
+    "publishedAt": "2026-09-18",
+    "sourceUrl": "https://github.com/mcgalleg/grokbot-jev-jobs",
+    "sourceLabel": "mcgalleg · GitHub"
   }
 ]

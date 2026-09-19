@@ -9,14 +9,40 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 150,
+    "total": 152,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 143,
+    "alreadyIngested": 145,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "my-working-party-grok-bot-work-canvas",
+      "title": "my-working-party — Grok Bot work canvas",
+      "url": "https://github.com/kaibairen/my-working-party",
+      "sourceSummary": "Grok Bot work-canvas case: bilingual planning/status board exploring a Boundary Harness (guardrails without jailing intelligence) for delivery with cloud teammates.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-jev-jobs-jev-triage-grok-bot-ats-apply",
+      "title": "grokbot-jev-jobs — Jev triage + Grok Bot ATS apply",
+      "url": "https://github.com/mcgalleg/grokbot-jev-jobs",
+      "sourceSummary": "Public job-search app that triages postings with TypeSafe Jev, then webhooks a Grok Bot (Resume Rudy) to fill ATS forms and write status back via secret-gated APIs.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "sprite-portal-grok-bot-nursery-ui",
       "title": "Sprite Portal Grok Bot nursery UI",
