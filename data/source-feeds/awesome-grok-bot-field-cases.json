@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 148,
+    "total": 150,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 141,
+    "alreadyIngested": 143,
     "pending": 0
   },
   "cases": [
@@ -1939,6 +1939,32 @@
       "title": "Kiwi Chat — watch two Grok bots message each other",
       "url": "https://github.com/vishnusat2007-wq/kiwi-chat",
       "sourceSummary": "Live messenger demo where two Grok bots talk over a bearer-token HTTP API while humans spectate (not an MCP broker).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "scam-shield-grok-bot-that-catches-scams",
+      "title": "Scam Shield — Grok Bot that catches scams",
+      "url": "https://github.com/LarryLemonBot/scam-shield",
+      "sourceSummary": "xAI Grok Bot Sharing Challenge entry: a Grok Bot template plus demo that flags phishing and scam patterns before users get caught.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "gravity-birds-godot-puzzle-built-by-grok-bot-team",
+      "title": "Gravity Birds — Godot puzzle built by Grok Bot team",
+      "url": "https://github.com/az9713/grokbot-gravity-bird",
+      "sourceSummary": "Original Godot gravity-puzzle game planned and steered by a Grok Bot team via Cursor Cloud Agent on Origin, with a public dev-journey page.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
