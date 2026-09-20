@@ -9,14 +9,92 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 155,
+    "total": 161,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 148,
+    "alreadyIngested": 154,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "ship-by-thursday-grok-bot-galaxy-style-scaffold",
+      "title": "Ship by Thursday — Grok Bot Galaxy-style scaffold",
+      "url": "https://github.com/Phillipcolvin/ship-by-thursday",
+      "sourceSummary": "Scaffold inspired by the Grok Bot Galaxy ~9-hour company-build exercise, with docs and a starter web surface.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-mocap-live-face-mocap-svg-avatar",
+      "title": "grokbot-mocap — live face mocap SVG avatar",
+      "url": "https://github.com/NODE-Sudbury/grokbot-mocap",
+      "sourceSummary": "Live face motion-capture projected onto an animated SVG avatar, built by NODE Sudbury for a Grok community event.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-slides-react-decks-for-official-guides",
+      "title": "Grok Bot Slides — React decks for official guides",
+      "url": "https://github.com/wmoralesdev/grok-bot-slides",
+      "sourceSummary": "React slide decks and live Q&A shell covering Grok Bot 101, Engineering, Founders, GTM, and Ops guides.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "multi-harness-proof-live-grok-build-coordination",
+      "title": "Multi-Harness Proof — live Grok Build coordination",
+      "url": "https://github.com/xormania/multi-harness-proof",
+      "sourceSummary": "Confirmed proof that Codex, Claude Code and Grok Build can exchange messages and coordinate work across live native sessions via a local relay.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "gravity-birds-godot-game-built-with-grok-bot",
+      "title": "Gravity Birds — Godot game built with Grok Bot",
+      "url": "https://github.com/az9713/grokbot-game-dev-demo",
+      "sourceSummary": "Original Godot puzzle game Gravity Birds built by a Grok Bot team with a Cursor Cloud Agent, then published as an open demo.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "sherwood-fund-desk-grok-bot-template",
+      "title": "Sherwood Fund Desk — Grok Bot template",
+      "url": "https://github.com/sherwoodagent/grokbot-fund-template",
+      "sourceSummary": "Multi-agent agentic fund desk template for Grok Bot Share-as-Template: Desk Lead plus teammate bootstrap recipes (paper then live propose).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "grok-bot-fiverr-fiverr-sourcing-grok-bot",
       "title": "grok-bot-fiverr — Fiverr sourcing Grok Bot",

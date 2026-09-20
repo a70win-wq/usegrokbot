@@ -145981,5 +145981,173 @@
     "sourceLabel": "unicode on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2093685675602083840"
+  },
+  {
+    "slug": "phillipcolvin-ship-by-thursday-grok-bot-galaxy-style-scaffold",
+    "title": "Ship by Thursday — Grok Bot Galaxy-style scaffold",
+    "headline": "Scaffold inspired by the Grok Bot Galaxy ~9-hour company-build exercise, with docs and a starter web surface.",
+    "whatTheyDid": "Scaffold inspired by the Grok Bot Galaxy ~9-hour company-build exercise, with docs and a starter web surface.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Scaffold inspired by the Grok Bot Galaxy ~9-hour company-build exercise, with docs and a starter web surface.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Phillipcolvin",
+    "publishedAt": "2026-09-18",
+    "sourceUrl": "https://github.com/Phillipcolvin/ship-by-thursday",
+    "sourceLabel": "Phillipcolvin · GitHub"
+  },
+  {
+    "slug": "node-sudbury-grokbot-mocap-live-face-mocap-svg-avatar",
+    "title": "grokbot-mocap — live face mocap SVG avatar",
+    "headline": "Live face motion-capture projected onto an animated SVG avatar, built by NODE Sudbury for a Grok community event.",
+    "whatTheyDid": "Live face motion-capture projected onto an animated SVG avatar, built by NODE Sudbury for a Grok community event.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Live face motion-capture projected onto an animated SVG avatar, built by NODE Sudbury for a Grok community event.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "NODE-Sudbury",
+    "publishedAt": "2026-09-10",
+    "sourceUrl": "https://github.com/NODE-Sudbury/grokbot-mocap",
+    "sourceLabel": "NODE-Sudbury · GitHub"
+  },
+  {
+    "slug": "wmoralesdev-grok-bot-slides-react-decks-for-official-guides",
+    "title": "Grok Bot Slides — React decks for official guides",
+    "headline": "React slide decks and live Q&A shell covering Grok Bot 101, Engineering, Founders, GTM, and Ops guides.",
+    "whatTheyDid": "React slide decks and live Q&A shell covering Grok Bot 101, Engineering, Founders, GTM, and Ops guides.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "React slide decks and live Q&A shell covering Grok Bot 101, Engineering, Founders, GTM, and Ops guides.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "wmoralesdev",
+    "publishedAt": "2026-09-19",
+    "sourceUrl": "https://github.com/wmoralesdev/grok-bot-slides",
+    "sourceLabel": "wmoralesdev · GitHub"
+  },
+  {
+    "slug": "xormania-multi-harness-proof-live-grok-build-coordination",
+    "title": "Multi-Harness Proof — live Grok Build coordination",
+    "headline": "Confirmed proof that Codex, Claude Code and Grok Build can exchange messages and coordinate work across live native sessions via a local relay.",
+    "whatTheyDid": "Confirmed proof that Codex, Claude Code and Grok Build can exchange messages and coordinate work across live native sessions via a local relay.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Confirmed proof that Codex, Claude Code and Grok Build can exchange messages and coordinate work across live native sessions via a local relay.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "xormania",
+    "publishedAt": "2026-09-19",
+    "sourceUrl": "https://github.com/xormania/multi-harness-proof",
+    "sourceLabel": "xormania · GitHub"
+  },
+  {
+    "slug": "az9713-gravity-birds-godot-game-built-with-grok-bot",
+    "title": "Gravity Birds — Godot game built with Grok Bot",
+    "headline": "Original Godot puzzle game Gravity Birds built by a Grok Bot team with a Cursor Cloud Agent, then published as an open demo.",
+    "whatTheyDid": "Original Godot puzzle game Gravity Birds built by a Grok Bot team with a Cursor Cloud Agent, then published as an open demo.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Original Godot puzzle game Gravity Birds built by a Grok Bot team with a Cursor Cloud Agent, then published as an open demo.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "az9713",
+    "publishedAt": "2026-09-18",
+    "sourceUrl": "https://github.com/az9713/grokbot-game-dev-demo",
+    "sourceLabel": "az9713 · GitHub"
+  },
+  {
+    "slug": "sherwoodagent-sherwood-fund-desk-grok-bot-template",
+    "title": "Sherwood Fund Desk — Grok Bot template",
+    "headline": "Multi-agent agentic fund desk template for Grok Bot Share-as-Template: Desk Lead plus teammate bootstrap recipes (paper then live propose).",
+    "whatTheyDid": "Multi-agent agentic fund desk template for Grok Bot Share-as-Template: Desk Lead plus teammate bootstrap recipes (paper then live propose).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "Multi-agent agentic fund desk template for Grok Bot Share-as-Template: Desk Lead plus teammate bootstrap recipes (paper then live propose).",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "sherwoodagent",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://github.com/sherwoodagent/grokbot-fund-template",
+    "sourceLabel": "sherwoodagent · GitHub"
   }
 ]
