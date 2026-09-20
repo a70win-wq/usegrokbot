@@ -9,14 +9,53 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 152,
+    "total": 155,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 145,
+    "alreadyIngested": 148,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "grok-bot-fiverr-fiverr-sourcing-grok-bot",
+      "title": "grok-bot-fiverr — Fiverr sourcing Grok Bot",
+      "url": "https://github.com/sea517/grok-bot-fiverr",
+      "sourceSummary": "Source-of-truth skills and dashboard for a Grok Bot that sources Fiverr freelancers via browser session, screens them, and invites GitHub take-homes.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "eye-of-grok-human-facing-grok-bot-org-map",
+      "title": "Eye of Grok — human-facing Grok Bot org map",
+      "url": "https://github.com/supe-log/eye-of-grok",
+      "sourceSummary": "Next.js org map so humans can see a Grok Bot fleet roster pushed by a Chief of Staff bot and judge lean-up plans (live demo on Vercel).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "indexx-grok-bot-instagram-saved-wiki",
+      "title": "INDEXX — Grok Bot Instagram Saved wiki",
+      "url": "https://github.com/NYLLON-SOFTWARE/indexx",
+      "sourceSummary": "Grok Bot skill scaffolding that turns Instagram Saved into a personal media wiki with transcripts, tags and cited pages (Mac-first).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "my-working-party-grok-bot-work-canvas",
       "title": "my-working-party — Grok Bot work canvas",

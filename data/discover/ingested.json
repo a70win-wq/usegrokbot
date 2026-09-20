@@ -144867,5 +144867,92 @@
     "sourceUrl": "https://x.com/MarsHomestead/status/2101389864457654347",
     "sourceLabel": "Mars 🌿 on X",
     "format": "article"
+  },
+  {
+    "slug": "sea517-grok-bot-fiverr-fiverr-sourcing-grok-bot",
+    "title": "grok-bot-fiverr — Fiverr sourcing Grok Bot",
+    "headline": "Source-of-truth skills and dashboard for a Grok Bot that sources Fiverr freelancers via browser session, screens them, and invites GitHub take-homes.",
+    "whatTheyDid": "Source-of-truth skills and dashboard for a Grok Bot that sources Fiverr freelancers via browser session, screens them, and invites GitHub take-homes.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Source-of-truth skills and dashboard for a Grok Bot that sources Fiverr freelancers via browser session, screens them, and invites GitHub take-homes.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "sea517",
+    "publishedAt": "2026-09-18",
+    "sourceUrl": "https://github.com/sea517/grok-bot-fiverr",
+    "sourceLabel": "sea517 · GitHub"
+  },
+  {
+    "slug": "supe-log-eye-of-grok-human-facing-grok-bot-org-map",
+    "title": "Eye of Grok — human-facing Grok Bot org map",
+    "headline": "Next.js org map so humans can see a Grok Bot fleet roster pushed by a Chief of Staff bot and judge lean-up plans (live demo on Vercel).",
+    "whatTheyDid": "Next.js org map so humans can see a Grok Bot fleet roster pushed by a Chief of Staff bot and judge lean-up plans (live demo on Vercel).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Next.js org map so humans can see a Grok Bot fleet roster pushed by a Chief of Staff bot and judge lean-up plans (live demo on Vercel).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "supe-log",
+    "publishedAt": "2026-09-19",
+    "sourceUrl": "https://github.com/supe-log/eye-of-grok",
+    "sourceLabel": "supe-log · GitHub"
+  },
+  {
+    "slug": "nyllon-software-indexx-grok-bot-instagram-saved-wiki",
+    "title": "INDEXX — Grok Bot Instagram Saved wiki",
+    "headline": "Grok Bot skill scaffolding that turns Instagram Saved into a personal media wiki with transcripts, tags and cited pages (Mac-first).",
+    "whatTheyDid": "Grok Bot skill scaffolding that turns Instagram Saved into a personal media wiki with transcripts, tags and cited pages (Mac-first).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot skill scaffolding that turns Instagram Saved into a personal media wiki with transcripts, tags and cited pages (Mac-first).",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "NYLLON-SOFTWARE",
+    "publishedAt": "2026-09-19",
+    "sourceUrl": "https://github.com/NYLLON-SOFTWARE/indexx",
+    "sourceLabel": "NYLLON-SOFTWARE · GitHub"
   }
 ]
