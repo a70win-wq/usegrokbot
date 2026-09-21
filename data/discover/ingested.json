@@ -151788,5 +151788,91 @@
     "xPostUrl": "https://x.com/yutawatanabe/status/2101915759828168904",
     "sourceUrl": "https://x.com/yutawatanabe/status/2101915759828168904",
     "sourceLabel": "Yuta Watanabe on X"
+  },
+  {
+    "slug": "davenpmo-mordheim-grok-build-prompts-tactics-game-prompt",
+    "title": "mordheim-grok-build-prompts — tactics game prompt series",
+    "headline": "Rules-first Jupyter/markdown prompt series to build a 1999-rules Mordheim 3D tactics game inside Grok Build Mode.",
+    "whatTheyDid": "Rules-first Jupyter/markdown prompt series to build a 1999-rules Mordheim 3D tactics game inside Grok Build Mode.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Rules-first Jupyter/markdown prompt series to build a 1999-rules Mordheim 3D tactics game inside Grok Build Mode.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "davenpmo",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://github.com/davenpmo/mordheim-grok-build-prompts",
+    "sourceLabel": "davenpmo · GitHub"
+  },
+  {
+    "slug": "skiiwa67-collab-living-icon-mood-reactive-avatars-for-grok-bots",
+    "title": "living-icon — mood-reactive avatars for Grok Bots",
+    "headline": "Living Icon project for mood-reactive evolving avatars meant to sit beside Grok Bot teammates.",
+    "whatTheyDid": "Living Icon project for mood-reactive evolving avatars meant to sit beside Grok Bot teammates.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Living Icon project for mood-reactive evolving avatars meant to sit beside Grok Bot teammates.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "skiiwa67-collab",
+    "publishedAt": "2026-09-19",
+    "sourceUrl": "https://github.com/skiiwa67-collab/living-icon",
+    "sourceLabel": "skiiwa67-collab · GitHub"
+  },
+  {
+    "slug": "lennart1970-fleet-overview-static-grok-bot-fleet-board",
+    "title": "fleet-overview — static Grok Bot fleet board",
+    "headline": "Static GitHub Pages board that visualizes a personal Grok Bot fleet as lanes, bots, and todos.",
+    "whatTheyDid": "Static GitHub Pages board that visualizes a personal Grok Bot fleet as lanes, bots, and todos.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Static GitHub Pages board that visualizes a personal Grok Bot fleet as lanes, bots, and todos.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Lennart1970",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://github.com/Lennart1970/fleet-overview",
+    "sourceLabel": "Lennart1970 · GitHub"
   }
 ]

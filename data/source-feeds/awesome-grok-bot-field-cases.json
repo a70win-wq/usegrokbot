@@ -9,14 +9,53 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 163,
+    "total": 166,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 156,
+    "alreadyIngested": 159,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "mordheim-grok-build-prompts-tactics-game-prompt-series",
+      "title": "mordheim-grok-build-prompts — tactics game prompt series",
+      "url": "https://github.com/davenpmo/mordheim-grok-build-prompts",
+      "sourceSummary": "Rules-first Jupyter/markdown prompt series to build a 1999-rules Mordheim 3D tactics game inside Grok Build Mode.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "living-icon-mood-reactive-avatars-for-grok-bots",
+      "title": "living-icon — mood-reactive avatars for Grok Bots",
+      "url": "https://github.com/skiiwa67-collab/living-icon",
+      "sourceSummary": "Living Icon project for mood-reactive evolving avatars meant to sit beside Grok Bot teammates.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "fleet-overview-static-grok-bot-fleet-board",
+      "title": "fleet-overview — static Grok Bot fleet board",
+      "url": "https://github.com/Lennart1970/fleet-overview",
+      "sourceSummary": "Static GitHub Pages board that visualizes a personal Grok Bot fleet as lanes, bots, and todos.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "grok-bot-live-study-galaxy-sprint-field-record",
       "title": "Grok Bot Live Study — Galaxy sprint field record",
