@@ -150203,5 +150203,61 @@
     "sourceLabel": "たいちゃん｜AI初心者を卒業したい人 on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2101814981713141760"
+  },
+  {
+    "slug": "billgaohub-grok-bot-live-study-galaxy-sprint-field-record",
+    "title": "Grok Bot Live Study — Galaxy sprint field record",
+    "headline": "Evidence-first curated field-study reconstructing the Grok Bot Galaxy live-build sprint with observations, claims and failure recoveries.",
+    "whatTheyDid": "Evidence-first curated field-study reconstructing the Grok Bot Galaxy live-build sprint with observations, claims and failure recoveries.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Evidence-first curated field-study reconstructing the Grok Bot Galaxy live-build sprint with observations, claims and failure recoveries.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "billgaohub",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://github.com/billgaohub/grokbot-live-study",
+    "sourceLabel": "billgaohub · GitHub"
+  },
+  {
+    "slug": "colinmcdermott-grok-jev-router-jev-decides-grok-bot-executes",
+    "title": "grok-jev-router — Jev decides, Grok Bot executes",
+    "headline": "Dependency-free Python toolkit and Grok Bot template so Jev calibrates risky actions before the Bot executes, with shadow and kill-switch modes.",
+    "whatTheyDid": "Dependency-free Python toolkit and Grok Bot template so Jev calibrates risky actions before the Bot executes, with shadow and kill-switch modes.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Dependency-free Python toolkit and Grok Bot template so Jev calibrates risky actions before the Bot executes, with shadow and kill-switch modes.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "colinmcdermott",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://github.com/colinmcdermott/grok-jev-router",
+    "sourceLabel": "colinmcdermott · GitHub"
   }
 ]

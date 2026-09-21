@@ -9,14 +9,40 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 161,
+    "total": 163,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 154,
+    "alreadyIngested": 156,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "grok-bot-live-study-galaxy-sprint-field-record",
+      "title": "Grok Bot Live Study — Galaxy sprint field record",
+      "url": "https://github.com/billgaohub/grokbot-live-study",
+      "sourceSummary": "Evidence-first curated field-study reconstructing the Grok Bot Galaxy live-build sprint with observations, claims and failure recoveries.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-jev-router-jev-decides-grok-bot-executes",
+      "title": "grok-jev-router — Jev decides, Grok Bot executes",
+      "url": "https://github.com/colinmcdermott/grok-jev-router",
+      "sourceSummary": "Dependency-free Python toolkit and Grok Bot template so Jev calibrates risky actions before the Bot executes, with shadow and kill-switch modes.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "ship-by-thursday-grok-bot-galaxy-style-scaffold",
       "title": "Ship by Thursday — Grok Bot Galaxy-style scaffold",
