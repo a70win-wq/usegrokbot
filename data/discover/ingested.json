@@ -154858,5 +154858,465 @@
     "xPostUrl": "https://x.com/peptarded/status/2102148413143834689",
     "sourceUrl": "https://x.com/peptarded/status/2102148413143834689",
     "sourceLabel": "IVERMAX on X"
+  },
+  {
+    "slug": "alexfinn-grok-4-7-just-released-and-its-an-excellent-mode",
+    "title": "Grok 4.7 just released and it's an EXCELLENT model It was trained FOR...",
+    "headline": "Grok 4.7 just released and it's an EXCELLENT model It was trained FOR Grok Bot Meaning this is a fully agentic model trained to do your knowledge work better than you can In this video I show you how to use Grok 4.7...",
+    "body": "Grok 4.7 just released and it's an EXCELLENT model\n\nIt was trained FOR Grok Bot\n\nMeaning this is a fully agentic model trained to do your knowledge work better than you can\n\nIn this video I show you how to use Grok 4.7 and a Grok Bot workflow that will 10x your productivity:",
+    "whatTheyDid": "Grok 4.7 just released and it's an EXCELLENT model It was trained FOR Grok Bot Meaning this is a fully agentic model trained to do your knowledge work better than you can In this video I show you how to use Grok 4.7...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Grok 4.7 just released and it's an EXCELLENT model It was trained FOR Grok Bot Meaning this is a fully agentic model trained to do your knowledge work better than you can In this video I show you how to use Grok 4.7...",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Alex Finn",
+    "handle": "AlexFinn",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/AlexFinn/status/2102188069483155841",
+    "sourceUrl": "https://x.com/AlexFinn/status/2102188069483155841",
+    "sourceLabel": "Alex Finn on X"
+  },
+  {
+    "slug": "bleetchen-grok-bot-24-tailscale",
+    "title": "每个 Grok Bot 账号背后，都有台 24 小时不关机的云电脑。 我用 Tailscale...",
+    "headline": "每个 Grok Bot 账号背后，都有台 24 小时不关机的云电脑。 我用 Tailscale 把它接进了我的组网。出门在外，它能替我操作家里的电脑、调用家里的本地 AI、把干完的活存进 NAS、半夜替我盯着所有设备。 11 种玩法，接法只要发一段话给 Bot。提示词都在文章里，复制就能用 👇",
+    "body": "每个 Grok Bot 账号背后，都有台 24 小时不关机的云电脑。\n\n我用 Tailscale 把它接进了我的组网。出门在外，它能替我操作家里的电脑、调用家里的本地 AI、把干完的活存进 NAS、半夜替我盯着所有设备。\n\n11 种玩法，接法只要发一段话给 Bot。提示词都在文章里，复制就能用 👇 https://x.com/i/article/2102097820220305408",
+    "whatTheyDid": "每个 Grok Bot 账号背后，都有台 24 小时不关机的云电脑。 我用 Tailscale 把它接进了我的组网。出门在外，它能替我操作家里的电脑、调用家里的本地 AI、把干完的活存进 NAS、半夜替我盯着所有设备。 11 种玩法，接法只要发一段话给 Bot。提示词都在文章里，复制就能用 👇",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "每个 Grok Bot 账号背后，都有台 24 小时不关机的云电脑。 我用 Tailscale 把它接进了我的组网。出门在外，它能替我操作家里的电脑、调用家里的本地 AI、把干完的活存进 NAS、半夜替我盯着所有设备。 11 种玩法，接法只要发一段话给 Bot。提示词都在文章里，复制就能用 👇",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "deepthinkers-lin",
+    "handle": "bleetchen",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/bleetchen/status/2102280978475737437",
+    "sourceUrl": "https://x.com/bleetchen/status/2102280978475737437",
+    "sourceLabel": "deepthinkers-lin on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2102097820220305408"
+  },
+  {
+    "slug": "roundtablespace-jev-grokbot-can-turn-gtm-into-a-full-agent-syste",
+    "title": "JEV + GROKBOT CAN TURN GTM INTO A FULL AGENT SYSTEM THAT FILTERS...",
+    "headline": "JEV + GROKBOT CAN TURN GTM INTO A FULL AGENT SYSTEM THAT FILTERS THOUSANDS OF CANDIDATES BEFORE GROKBOT SPENDS TIME ON THEM.",
+    "body": "JEV + GROKBOT CAN TURN GTM INTO A FULL AGENT SYSTEM THAT FILTERS THOUSANDS OF CANDIDATES BEFORE GROKBOT SPENDS TIME ON THEM.\n\nTHIS SETUP PROCESSED 3,412 CANDIDATES IN 15.7 SECONDS FOR $0.41, AND THE ARTICLE BELOW SHOWS HOW TO BUILD IT.\n\nhttps://x.com/0xMovez/status/2101007482919227841?s=20",
+    "whatTheyDid": "JEV + GROKBOT CAN TURN GTM INTO A FULL AGENT SYSTEM THAT FILTERS THOUSANDS OF CANDIDATES BEFORE GROKBOT SPENDS TIME ON THEM.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "JEV + GROKBOT CAN TURN GTM INTO A FULL AGENT SYSTEM THAT FILTERS THOUSANDS OF CANDIDATES BEFORE GROKBOT SPENDS TIME ON THEM.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "0xMarioNawfal",
+    "handle": "RoundtableSpace",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/RoundtableSpace/status/2102280482625052907",
+    "sourceUrl": "https://x.com/RoundtableSpace/status/2102280482625052907",
+    "sourceLabel": "0xMarioNawfal on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2100991305535164417"
+  },
+  {
+    "slug": "rin-aoyama-fit-note-grok-bot",
+    "title": "noteで記事を書きました！この投稿をリポストするとお得に記事を読むことができます。 Grok botの使用量余ってんの？☺️...",
+    "headline": "noteで記事を書きました！この投稿をリポストするとお得に記事を読むことができます。 Grok botの使用量余ってんの？☺️ それ、キャラ固定に回そう💕 | Rin Aoyama | AI Fitness @rin_aoyama_fit #note",
+    "body": "noteで記事を書きました！この投稿をリポストするとお得に記事を読むことができます。\nGrok botの使用量余ってんの？☺️ それ、キャラ固定に回そう💕 | Rin Aoyama | AI Fitness @rin_aoyama_fit #note https://note.com/rin_aoyama_fit/n/n270ce17d80f8",
+    "whatTheyDid": "noteで記事を書きました！この投稿をリポストするとお得に記事を読むことができます。 Grok botの使用量余ってんの？☺️ それ、キャラ固定に回そう💕 | Rin Aoyama | AI Fitness @rin_aoyama_fit #note",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "noteで記事を書きました！この投稿をリポストするとお得に記事を読むことができます。 Grok botの使用量余ってんの？☺️ それ、キャラ固定に回そう💕 | Rin Aoyama | AI Fitness @rin_aoyama_fit #note",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Rin Aoyama | AI Fitness",
+    "handle": "rin_aoyama_fit",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/rin_aoyama_fit/status/2102261007414661503",
+    "sourceUrl": "https://x.com/rin_aoyama_fit/status/2102261007414661503",
+    "sourceLabel": "Rin Aoyama | AI Fitness on X"
+  },
+  {
+    "slug": "moto-1gpt-6-astra-2grok-bot",
+    "title": "①GPT-6 Astra プロンプト術マスタークラスの記事と記事②Grok Bot...",
+    "headline": "①GPT-6 Astra プロンプト術マスタークラスの記事と記事②Grok Bot エージェントで生活を自動化する10ステップの記事の2本立てをまとめてみた。 ※前提知識もこの後にまとめてあるので、読めるようになっている。 ■前提知識 - プロンプトとは、 AIに出す指示文のことである。 - システムプロンプト／カスタム指示とは、...",
+    "body": "①GPT-6 Astra プロンプト術マスタークラスの記事と記事②Grok Bot エージェントで生活を自動化する10ステップの記事の2本立てをまとめてみた。\n※前提知識もこの後にまとめてあるので、読めるようになっている。\n\n■前提知識\n\n- プロンプトとは、\nAIに出す指示文のことである。\n\n- システムプロンプト／カスタム指示とは、\n会話の最初に一度だけ設定し、その会話全体に効き続ける「基本ルール」のことである。毎回言い直す必要がない場所だと理解すればよい。\n\n- トークンとは、\nAIが文章を数える単位である。日本語ならおおよそ1文字＝1トークン強で、料金はこのトークン数で決まる。\n\n- プロンプトキャッシュとは、\n前回と同じ冒頭部分を使い回して安く高速に処理する仕組みである。冒頭が1文字でも変わると使い回しが効かなくなり、全部を再計算する料金がかかる。\n\n- 推論努力（reasoning effort）とは、\nAIにどれだけじっくり考えさせるかの設定である。高くすれば賢くなるが、遅く高価になる。\n\n- サブエージェントとは、\nAI本体が下請けとして生やす小さなAIのことである。独立した作業を同時並行で進めさせられる。\n\n- コンピュータ操作（computer use）とは、\nAIがAPIではなく画面のスクリーンショットを見てクリックし、人間と同じようにソフトを操作する機能である。\n\n扉図は「目標を定める→文脈を足す→制約を置く→例を示す→形式を指定する」という上段5ステップと、「考えを言わせる→ツールを使わせる→出力を検証する→プロンプトを改良する→定型ワークフロー化する」という下段5ステップが中央のモデルを囲む輪になっている構図であった。\nこの記事の主張は、一発の名文プロンプトを書く話ではなく、指示・検証・改良を回して再現可能な仕組みに育てる話である。\n\n出発点となる一つの事実\n\nAstraは、一度与えた指示が長い会話の中でもほとんどブレない。\nこれが記事全体の土台である。従来のモデルでは途中で言い直しが必要だった指示を、最初に一度正しく置けば最後まで効き続ける。\n逆に言えば、最初の指示を間違えると、その間違いも会話の最後まで効き続けるということである。\n\n■AIっぽさを消す禁止リスト\n\nOpenAIの公式ガイドは、自社モデルの癖を名指しして禁じている点が珍しい。\n禁じられているのは単語だけではなく、文章の型そのものである。\n\n- 「要するに」「掘り下げる」「活用する」「重要なことに」といった定型語\n- 「問い。答え。」「これはXではなくYである」という対比の型\n- 結論部の「つまり一言で言えば」「最も単純なモデルは」といった締めの要約\n- やらないことや変えない部分をわざわざ書き添える癖\n- 「exact-head checks」のような、その場で作った造語めいた複合ラベル\n- ハイフンでつないだ複合形容詞\n\n理由も明記されている。\nAstraは放っておくと装飾過多になり、無関係な別の会話でも同じ言い回しを繰り返す傾向があるためである。\n\n■禁止リストと必ず対で使う肯定指示\n\n禁止だけでは半分にしかならない。何を書くべきかを示す指示と組み合わせる。\n\n- 段落は短く、一段落に一つの論点だけ置く\n- 抽象論ではなく、平易な語と具体例を使う\n- 結論は最後に積み上げず、冒頭に置く\n- 箇条書きは本当に構造が必要なときだけ使い、既定の書式にしない\n- 読み手の前提知識に合わせて説明の深さを調整する\n\nこの二つは一つのブロックとしてまとめてカスタム指示に貼るのが正しい使い方である。\n片方だけでは効果が落ちる。\n\n質問してくる挙動は歓迎すべき変化\n\nAstraは、情報が欠けていて結果が変わりそうな場面では、勝手に推測せずユーザーに聞き返す。\nこれは弱点ではなく改善であり、あらゆる例外を先回りして書き込む必要が減ったということである。\n\nただし限界もある。聞き返すのは「結果を左右する情報の欠落」に対してであり、「言われなければ分からない個人的なこだわり」は聞いてこない。\n強い好みがあるなら明示すべきである。\n\n■コーディングではテストの範囲を明示する\nAstraは自分の仕事を念入りに検証してから完了とみなす。大きな変更では美点だが、小さな修正でも過剰に検証して時間と費用を使う。\nそこで範囲を言葉で指定する。\n\n小さな変更なら「この変更の規模に見合った確認だけ行い、新たなエラーや調査すべき理由が出ない限り検証範囲を広げないこと」と書く。\n大きな変更なら逆に「重要な変更である。周辺の統合点や例外ケースまで含め、完全な検証を行ってから完了とすること」と明示する。肝は、毎回一律にせず、実際の規模に合わせて指定し分けることである。\n\n■並列処理は自分から指示する\nAstraは作業を分割して複数のサブエージェントに同時実行させられるが、自発的にはあまり使わない。\n独立した部品があるなら「この作業には互いに依存しない要素がある（列挙）。\n逐次処理ではなく並列のサブエージェントに分けて進めること」と指示する。逆に本質的に順番が必要な作業へ無理に並列を持ち込む必要はない。\n\n■会話の途中で思考量を上げ下げできる\n従来は推論努力がリクエスト単位の設定だったため、途中で変えるとキャッシュが無効化され、それまでの文脈を全部再計算する費用がかかった。\nAstraでは configuration_update により、キャッシュを壊さずに、その時点以降の思考量だけを変えられる。\n\n普段は低めで走らせ、難所に来たら上げ、抜けたら戻すという運用ができる。\nただしこれは標準の単体モデル専用であり、proモードやトーナメントモードでは明示的に拒否される。\n\n■作業中の軌道修正\nAstraが長い作業をしている最中でも、追加指示を割り込ませられる。「入力が空の場合も処理してほしい。他は着手済みのまま進めてよい」といった具合である。完了を待って別途やり直すより、無駄が少ない。\n\n■画面操作を頼むときの作法\nAstraの特徴は画面のクリック操作だが、ここにはUIの状態がずれて意図しない場所を押してしまうという固有のリスクがある。\nAPIと違ってエラーにならず静かに失敗するため厄介である。対策は次の型を指示に含めることである。\n\n「クリック前にスクリーンショットを撮り、見えているものを説明せよ。目標に至る計画を述べよ。\n各段階の後、画面の変化が予想と一致したことを短く確認してから次へ進め」\n\n■セッション上限を前提に組む\nセッションの利用枠は、性能の高さから想像するより速く消費される。標準プランで20分の通常作業で枠を使い切った例が報告されている。\n野心的な作業では、最初から中断前提の指示を入れておく。「セッションの制約上、区切りが近いと判断したら、完了分と残作業を明記して進捗を保存せよ。\n次のセッションがやり直しではなく再開できるように」\n\n■なぜこうした挙動なのか\nAstraは、記憶では解けないよう設計されたベンチマークで極端に高い数値を出している。\nARC-AGI-3で99.9%、FrontierMath Tier 4で98%である。情報が足りないと気づける力は、難問を解ける力の裏返しである。\n聞き返しが増えたのは自信がないからではなく、どの欠落が結果を変えるかを正しく見積もれるようになったからである。\n\n同じ設計思想はExploitBenchの100%、そして許可された範囲の外に出た割合が前世代の48%から0%になった点にも現れている。\n境界を守り、正しさを確かめることを優先する設計であり、だからこそ放っておくと検証が過剰になる。\n範囲を明示する技術は、この慎重さと戦うのではなく、案件ごとに適切な慎重さへ向け直す行為である。\n\n■つまずきやすい点\n\n- 禁止リストが効かない場合は、会話の途中に書いたのではなく、カスタム指示やシステムプロンプトに置けているか確認する\n- 質問が多いと感じたら、それが本当に結果を左右する欠落を指しているかを先に検討する\n- 検証が過剰なら、範囲を限定する一文を足す\n- configuration_update が拒否されるなら、proやトーナメントのモデルを使っていないか確認する\n- 画面操作が理由不明で止まるなら、スクリーンショット確認の指示を足してやり直す\n- 並列化されないなら、どの部分が独立しているかを自分で明示する\n\n■費用を意識した構造\n\n料金は入力100万トークンあたり10ドル、出力100万トークンあたり50ドル、キャッシュ読み出しは100万あたり1ドルである。入力が27万2千トークンを超えると、そのリクエスト全体が20ドル／75ドルに跳ね上がる。\n\n安いキャッシュ読み出しを活かすには、変わらない部分を前、変わる部分を後ろに置く。\nすなわちシステム指示と文体ガイド、プロジェクト固有の文脈を先頭に固定し、毎回変わるタスク内容を後に続ける構造である。\n\nまた巨大な文書を扱うときは、一回の巨大リクエストにせず27万2千トークン未満の複数リクエストに割ると割増を避けられる。\n常に可能とは限らないが、確認する価値はある。結局のところ費用対策は単一の裏技ではなく、キャッシュに優しい構造、思考量の使い分け、長文割増の閾値への注意を組み合わせて成立するものである。\n\n■記事の核心\n\nこの記事が教えているのは技の一覧ではない。モデルの製作者が公開している、そのモデル固有の挙動を読み、それに合わせて指示を組むという姿勢そのものである。\n指示の持続性、聞き返し、検証過剰の癖、会話途中の思考量制御、画面操作のずれリスクという組み合わせは他のモデルと十分に違うため、汎用のプロンプト術では強みを取りこぼし、癖を踏み抜くことになる。\n一次資料を丁寧に読んで直接適用することが、あらゆる二次情報より価値を持つ、という主張である。\n\n---\n\n記事②Grok Bot エージェントで生活を自動化する10ステップ\n\n■前提知識\n\n- 従来のAIはあなたを待つ道具である。開いて聞いて答えをもらい、閉じる。作業自体はあなたの手に残る。\n\n- Grok Botは、\nクラウド上に自分専用のパソコンを持つAIである。あなたが使っているツールにログインし、人間と同じようにクリックして操作し、あなたがノートPCを閉じた後も動き続ける。\n\n- ボットとは、\n名前と役割と記憶を持ち続ける常駐の担当者である。使い捨てのプロンプトとは別物である。\n\n- ルーティンとは、\n保存された作業手順である。時刻指定（スケジュール）か出来事（トリガー）で自動起動する。\n\n- プラグイン／連携とは、\nNotionやGmailなどの外部サービスとの接続設定である。\n\n- APIやMCPがないとは、\nプログラムから機械的に操作する窓口が用意されていないという意味である。\n社内ツールの多くがこれに当たり、だからこそ画面を人間と同じようにクリックする方式が効いてくる。\n\n扉図は、中央の「Chief（統括ボット）」から Inbox、Sales、Accounts、Talent、Expense という5つの専門ボットへ矢印が伸び、そのうえで Talent から Chief へ戻る破線に「approvals only（承認のみ）」と添えられた構図であった。\nこの記事の主張は、仕事は専門ボットへ分配して流れ、人間に戻ってくるのは承認が必要な判断だけという組織図である。\n\n01　インストールし、統括役と会う\n\nGrok Botはブラウザのタブではなくデスクトップアプリである。これ自体が性格を物語っている。\nmacOS版をダウンロードし、GrokまたはCursorのアカウントでサインインすると、チャットボットよりもメッセージクライアントに近い画面が現れる。\n左に名前付きボットの一覧、右に会話である。\n\n出発点は汎用ボット、いわば統括役である。すべてを自分でやるのが仕事ではなく、どの専門に任せるべきか分からないときに相談する相手であり、後には他のボットを調整する役になる。\n誰に連絡すべきか分からないときに連絡する人、と考えればよい。\n\n最初の依頼はテスト質問ではなく、30秒で結果を確認できる実際の用事にする。\n以降の9ステップは徐々に大きな仕事を任せて信頼を築く過程だからである。\n\n02　プロンプトではなく職務を与える\n\nここが成否を分ける。プロンプトは依頼だが、ボットは役割である。継続し、記憶を蓄え、領域を持ち、同じスレッドに戻り続けることでその領域に習熟する。\n\nだから実在しうる職名を付ける。受信箱担当、経費担当、採用担当、営業開拓担当、といった具合である。そして初日の新人に渡す業務指示書のように書く。\n何を担当するか、良い状態とは何か、そして誰もが省く「私に聞かずにやってはいけないこと」である。\n\n最後の境界線は形式ではない。\n権限の限界を先に決めてあるからこそ、無人で走らせておけるのである。\n\nあなたは私の受信箱担当である。\n\n// 担当範囲\n毎朝メールを仕分けする。ニュースレターと領収書はアーカイブする。\n顧客からのメールには返信案を作る。\n締切、請求、法務に触れるものは私に上げる。\n\n// 良い状態\n9時までに受信箱をゼロにする。返信案は私の口調で、短く直接的に、「お世話になっております」のような前置きなしで、4文以内にする。\n\n// やってはいけないこと\n送信は絶対にしない。案の作成までである。\n会計士と大家からのメールはアーカイブしない。\n金銭や認証情報を求めるメールが来たら、止めて私に聞くこと。\n\n自分専用のパソコンとあなたのログインを持つボットは、あなたが寝ている間も行動できる。すべてを確認してくるボットは役に立たず、何も確認しないボットは危険である。業務指示書は、その線を毎日悩まないために一度だけ引く場所である。\n\n03　ツールは一度だけつなぐ\nNotion、Slack、Google Drive、AWS Agents、AWS SageMaker、Browserbase、Composio、Context7 のプラグインが用意されており、独自のものも作れる。いずれもワンクリック接続である。\n\n重要な点は、接続がアカウント単位で共有されることである。あるボットのためにGmailやGitHubを一度つなげば、以後作る全ボットが同じ接続を使える。だから早めに意図的に済ませておく。\n5番目に雇うボットが分単位ではなく秒単位で立ち上がる。\n\n同時にこれは、一つの接続の影響範囲が今後作る全ボットに及ぶことも意味する。ベータ期間中は本当に必要なアカウントだけつなぎ、残りは触らないのが賢明である。\n\n04　パスワードを貼らず、ログインを引き継ぐ\nAPIもMCPサーバーもないツール、つまり実際の会社にあるソフトの大半で、この製品が機能する仕組みがこれである。\n\nボットはクラウド上のブラウザで自分で進み、ログイン画面にぶつかったところで画面をあなたに渡す。\nあなたが認証して完了を押すと、ボットは同じブラウザセッションの続きから再開する。Notionでも、Gmailでも、誰も連携したことのない社内ツールでも同じである。\n\nこの仕組みが信頼のかたちを変えている。認証情報をチャットに打ち込むことが一度もない。\nボットが受け取るのはセッションであって秘密ではなく、機密に触れる部分だけあなたが担当したのである。この型を守るべきである。\nチャット欄にパスワードを貼らせるツールがあれば、それは間違った道である。\n\n05　説明するより、一度見せる\n\n考え方を変えさせる機能がこれである。あなたが一度やってみせる間、ボットが見ている。\nその手順が保存され、次回は自分で同じ手順を実行できる。\n\nなぜ想像以上に重要かというと、週を食い潰す作業は多くの場合「説明が面倒で、実演は簡単」なものだからである。「このダッシュボードから数字を取り、下がったものを突き合わせ、この文書の正しい見出しの下に貼り、15%以上落ちていればチームリードにSlackする」は、文章にすれば一段落だが、見せれば40秒である。\n\n最初に記録する作業は慎重に選ぶ。少なくとも毎週やっていて、2つ以上のツールをまたぎ、手順がほとんど変わらないものである。\nこの3条件を満たすなら、それは肩から降ろせる作業である。\n\nなおボットは使い込むほど賢くなり、会話を覚え、あなたの好みを学ぶとされる。\nSpaceXAIは最終的に頼む前から動き始めるようになると主張しているが、ベータ期間中は計画の前提ではなく方向性として受け取るべきである。\n\n06　自分がいなくても動くルーティンにする\n\n保存した手順には起動の理由が必要である。方法は2つあり、いずれも会話で設定する。\nワークフロービルダーもノードの図も要らない。実地の検証では、トリガー型ルーティンの設定に約2分と1つの指示文で足りたという。\n\nスケジュールは分かりやすい。朝7時の日次ブリーフィング、金曜のパイプライン要約、月末の経費処理である。トリガーの方が面白い。\n新しいSlackメッセージ、条件に合う受信メール、文書の変更などである。トリガーがあると、ボットは定時の存在ではなくその場に居る存在に感じられる。\n\n指示は、気に入った作業の最後に一文添えるだけである。これがこの製品の設計思想そのものである。\n自動化を組み立てるのではなく、いま起きたことを承認してもう一度頼むのである。\n\n// スケジュール — 朝のブリーフ\n平日の朝7時に、カレンダー、受信箱、#launches チャンネルを確認し、短く一本のブリーフをくれ。今日の予定、返信が必要なもの、昨夜のうちに変わったこと。\n\n// トリガー — 新規問い合わせの受け\n連絡先にないドメインからのメールで価格に触れているものが届いたら、テンプレートから返信案を作って保留しておけ。\n\n// スケジュール — 週次の締め\n毎週金曜16時に、その週の領収書を受信箱から集めて整理し、対応する請求書がないものを教えろ。\n\n// ほとんどのルーティンはこの一言から生まれる\nこれを毎週やってくれ。気に入った作業の直後に言うだけである。それが全部である。\n\n07　万能型ではなく専門家を雇う\n\n複数のボットを並行して走らせ、それぞれ別の領域を持たせられる。\nここで、この製品は既存のどれとも似なくなる。ボットを分ければ記憶も文脈も責任も分かれる。\n\n領収書のことだけ考えている経費担当は、あなたの領収書について本当に上手くなる。\n経費と採用と営業を掛け持ちする万能型は3つすべてで劣り、しかも問題が起きたときに見るべき綺麗なスレッドが残らない。\n\nSpaceXAI自身も営業開拓、マーケティング、事務運営、バグ修正のボットを運用しているという。一人で始めるなら扉図の顔ぶれが目安になる。\n分け方は作業量ではなく領域で分けるのが正しい。\n\n08　グループチャットに入れる\n\nボット同士はメッセージを送り合い、スレッドで文脈を共有できる。複数を同じグループチャットに入れると、自分たちで連携し、仕事を渡し、担当を決め、判断が必要な場面だけあなたを呼ぶ。\n案件が重なっても、あなたが会話の間でメモをコピペしなくても同じアカウント上で足並みが揃う。\n\nSpaceXAIの例は、エンジニアリング担当ボットがバグを再現し、チケットを起票し、その課題を2番目のボットに引き渡してデバッグさせるというものである。\nあるボットが「これは別のボットの方が適任だ」と判断して所有権を渡す。これは既存のどのツールにも存在しない動きである。\n\nうまく働かせる要点は、グループに作業リストではなく目的を与えることである。\n作業リストを渡した時点で分解はあなたが済ませており、ボットはあなたの計画を実行するだけになる。目的を渡せば彼らが分解する。それが複数持つ意味である。\n\n09　承認の線を引く\n\nGrok Botの前提は、ボットが仕事を端から端まで終わらせ、承認が必要なときだけ戻ってくることである。ゆえに「承認が必要」の定義はあなたの仕事になる。ボットが既定で選ぶ答えは、あなたの答えと一致しないかもしれない。\n\n機能する線引きは作業の大きさではなく、取り消せるかどうかである。ボットが元に戻せること、つまり案の作成、整理、タグ付け、要約、調査、準備は、一人で終わらせてよい。外の世界に見えること、金銭が動くこと、取り消せないことは、あなたのために保留する。\n\n// 常に一人で完了させてよいこと\n案の作成・整理・タグ付け・要約・調査・準備・突き合わせ\n   取り消せるものすべて。聞かずにやって、記録を残せ。\n\n// 常に私のために保留すること\n社外の人に何かを送ること\n金銭を使う・動かす、価格を確約すること\n公開の場に何かを公表すること\n明らかなゴミ以外を削除すること\n利用規約への登録・同意・承諾\n\n// 迷ったとき\n1分以内に取り消せないなら、保留して私に聞け。\n\n営業開拓の例がこの形に一致する。36件の案を作成し、送信は0件である。取り消せることはすべてやり、取り消せないところで正確に止まっている。これが全ボットで目指す形である。\n\n10　毎週見直し、容赦なく削る\n\n自動化は静かに腐る。サイトのレイアウトが変わり、ルーティンは黙ってゴミを生み始め、しかもボットはあなたが寝ている間に動くので、3週間誰も気づかない。これはあらゆる常時稼働システムの故障の型であり、ここでも必ず起こる。\n\nだからカレンダーに15分を確保する。各ルーティンについて3つ問う。動いたか、出力は本当に正しかったか、消したら困るかである。\n3つ目が見た目より重要である。この種のツールは放っておくと、誰も消す勇気のない半端な自動化の山へ向かって漂流するからである。\n\n■今週動いたルーティンを全部挙げろ。\nそれぞれについて：\n  - 何回起動したか\n  - 何を生み出したか\n  - 飛ばした・失敗した・推測で埋めた箇所\n  - 私に保留したまま私が答えていないもの\n\nそのうえで、最も役に立っていないと思うものと、その理由を言え。\n\n見直しはボット自身に頼むのが一番よい。スレッドを持っているのは彼らであり、自己報告ができる。\nただし各ルーティンから1件は手作業で抜き取り検査する。自分の仕事を報告するボットは、あなたと同じ盲点を持っているからである。\n\n■まとめ\nクリックする人であることをやめるということである。\n\nこれまでのAI製品はモデルを窓の中に置き、作業はあなたの手に残した。\nGrok Botは作業そのものを動かす。パソコンとログインと記憶と時間はボットが持ち、あなたが持つのは決定である。\n\n技術としての変化は聞こえるより小さく、習慣としての変化は聞こえるよりずっと大きい。求められる技能は「どう言えばよいか」ではなく、「自分は何を委任していて、その権限はどこで終わるのか」になる。これはプロンプトの問題ではなく、マネジメントの問題である。\n\n#GPT6Astra",
+    "whatTheyDid": "①GPT-6 Astra プロンプト術マスタークラスの記事と記事②Grok Bot エージェントで生活を自動化する10ステップの記事の2本立てをまとめてみた。 ※前提知識もこの後にまとめてあるので、読めるようになっている。 ■前提知識 - プロンプトとは、 AIに出す指示文のことである。 - システムプロンプト／カスタム指示とは、...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "①GPT-6 Astra プロンプト術マスタークラスの記事と記事②Grok Bot エージェントで生活を自動化する10ステップの記事の2本立てをまとめてみた。 ※前提知識もこの後にまとめてあるので、読めるようになっている。 ■前提知識 - プロンプトとは、 AIに出す指示文のことである。 - システムプロンプト／カスタム指示とは、...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail",
+      "slack",
+      "notion",
+      "github",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "新井 元気@ITエンジニア",
+    "handle": "_moto___",
+    "publishedAt": "2026-09-17",
+    "xPostUrl": "https://x.com/_moto___/status/2100711887310880836",
+    "sourceUrl": "https://x.com/_moto___/status/2100711887310880836",
+    "sourceLabel": "新井 元気@ITエンジニア on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2097333594523836418"
+  },
+  {
+    "slug": "seisei-ai-1st-note-ai-grok",
+    "title": "【note更新】メンバーシップ限定記事を公開しました！ もうAI美女を自力で作る時代は終わり…？ Grok...",
+    "headline": "【note更新】メンバーシップ限定記事を公開しました！ もうAI美女を自力で作る時代は終わり…？ Grok Botに画像生成を丸投げして完全自動化する方法をまとめました。 📖『Grok BotでChatGPTの画像生成を自動化』 👇実際にGrok Botが生成した画像",
+    "body": "【note更新】メンバーシップ限定記事を公開しました！\n\nもうAI美女を自力で作る時代は終わり…？\nGrok Botに画像生成を丸投げして完全自動化する方法をまとめました。\n\n📖『Grok BotでChatGPTの画像生成を自動化』\nhttps://note.com/seisei_ai_1st/n/nf9a51e563892\n\n👇実際にGrok Botが生成した画像",
+    "whatTheyDid": "【note更新】メンバーシップ限定記事を公開しました！ もうAI美女を自力で作る時代は終わり…？ Grok Botに画像生成を丸投げして完全自動化する方法をまとめました。 📖『Grok BotでChatGPTの画像生成を自動化』 👇実際にGrok Botが生成した画像",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "【note更新】メンバーシップ限定記事を公開しました！ もうAI美女を自力で作る時代は終わり…？ Grok Botに画像生成を丸投げして完全自動化する方法をまとめました。 📖『Grok BotでChatGPTの画像生成を自動化』 👇実際にGrok Botが生成した画像",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "聖星あい＠AI愛好家",
+    "handle": "seisei_ai_1st",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/seisei_ai_1st/status/2102244174464741381",
+    "sourceUrl": "https://x.com/seisei_ai_1st/status/2102244174464741381",
+    "sourceLabel": "聖星あい＠AI愛好家 on X"
+  },
+  {
+    "slug": "gilibox-b-ai-notion-grok-bot-muse",
+    "title": "丢个 B 站链接，AI 帮我整理成 Notion 最近体验了：Grok Bot和 Muse。...",
+    "headline": "丢个 B 站链接，AI 帮我整理成 Notion 最近体验了：Grok Bot和 Muse。 想着能不能让他看视频，并将视频里的教程整理成能进 Notion 的笔记 我拿一个 b 站装机教程试的。发现他自己在云电脑打开了浏览器，自动选择了二倍速观看。 总结的笔记也很详细，我看了一遍，笔记非常详细和完整 邀请码：LIGO5D",
+    "body": "丢个 B 站链接，AI 帮我整理成 Notion\n最近体验了：Grok Bot和 Muse。\n想着能不能让他看视频，并将视频里的教程整理成能进 Notion 的笔记\n我拿一个 b 站装机教程试的。发现他自己在云电脑打开了浏览器，自动选择了二倍速观看。\n总结的笔记也很详细，我看了一遍，笔记非常详细和完整\n邀请码：LIGO5D",
+    "whatTheyDid": "丢个 B 站链接，AI 帮我整理成 Notion 最近体验了：Grok Bot和 Muse。 想着能不能让他看视频，并将视频里的教程整理成能进 Notion 的笔记 我拿一个 b 站装机教程试的。发现他自己在云电脑打开了浏览器，自动选择了二倍速观看。 总结的笔记也很详细，我看了一遍，笔记非常详细和完整 邀请码：LIGO5D",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "丢个 B 站链接，AI 帮我整理成 Notion 最近体验了：Grok Bot和 Muse。 想着能不能让他看视频，并将视频里的教程整理成能进 Notion 的笔记 我拿一个 b 站装机教程试的。发现他自己在云电脑打开了浏览器，自动选择了二倍速观看。 总结的笔记也很详细，我看了一遍，笔记非常详细和完整 邀请码：LIGO5D",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "notion"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "gilibox",
+    "handle": "gilibox",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/gilibox/status/2102273403357221344",
+    "sourceUrl": "https://x.com/gilibox/status/2102273403357221344",
+    "sourceLabel": "gilibox on X"
+  },
+  {
+    "slug": "don-mechaaa-grok-bot",
+    "title": "Grok Botメモ ■ セッションとトークン ・一つの会話で長く話すほど、毎回モデルに渡る履歴が増えやすく、使用量も増えやすい...",
+    "headline": "Grok Botメモ ■ セッションとトークン ・一つの会話で長く話すほど、毎回モデルに渡る履歴が増えやすく、使用量も増えやすい ・Cursorのような `/compact` は、いまのところない ・会話が上限近くまで膨らむと自動要約は入るが、手動compactや同じBotでの新規セッションとは別物 ・名前・記憶・ルーチン・スキル・共有コンピュータ上のファイルは、チャット本文とは別に残る ・使用量は設定の Usage で確認できる...",
+    "body": "Grok Botメモ\n\n■ セッションとトークン\n・一つの会話で長く話すほど、毎回モデルに渡る履歴が増えやすく、使用量も増えやすい\n・Cursorのような `/compact` は、いまのところない\n・会話が上限近くまで膨らむと自動要約は入るが、手動compactや同じBotでの新規セッションとは別物\n・名前・記憶・ルーチン・スキル・共有コンピュータ上のファイルは、チャット本文とは別に残る\n・使用量は設定の Usage で確認できる\n\n■ モデルと裏側\n・推論はGrok系（SpaceXAI）\n・アプリ・クラウドPC・連携・課金などの土台はCursor\n・IDEのようにチャットでモデルを切り替えるUIはない\n・Cursor IDEのエージェント機能そのものとは別製品\n\nざっくり言うと「頭はGrok、手足と土台はCursor」。長く使うほどコンテキスト税が乗るので、テーマが切り替わるタイミングで整理するのが現実的。",
+    "whatTheyDid": "Grok Botメモ ■ セッションとトークン ・一つの会話で長く話すほど、毎回モデルに渡る履歴が増えやすく、使用量も増えやすい ・Cursorのような `/compact` は、いまのところない ・会話が上限近くまで膨らむと自動要約は入るが、手動compactや同じBotでの新規セッションとは別物 ・名前・記憶・ルーチン・スキル・共有コンピュータ上のファイルは、チャット本文とは別に残る ・使用量は設定の Usage で確認できる...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Botメモ ■ セッションとトークン ・一つの会話で長く話すほど、毎回モデルに渡る履歴が増えやすく、使用量も増えやすい ・Cursorのような `/compact` は、いまのところない ・会話が上限近くまで膨らむと自動要約は入るが、手動compactや同じBotでの新規セッションとは別物 ・名前・記憶・ルーチン・スキル・共有コンピュータ上のファイルは、チャット本文とは別に残る ・使用量は設定の Usage で確認できる...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ドンメカ｜メカノ姫β",
+    "handle": "DON_Mechaaa",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/DON_Mechaaa/status/2102268437108257162",
+    "sourceUrl": "https://x.com/DON_Mechaaa/status/2102268437108257162",
+    "sourceLabel": "ドンメカ｜メカノ姫β on X"
+  },
+  {
+    "slug": "masakiishitani-api-grok-bot-bot",
+    "title": "やっと入れたので、APIをそのままGrok Botに渡して、使えるの？と師匠Botに質問。...",
+    "headline": "やっと入れたので、APIをそのままGrok Botに渡して、使えるの？と師匠Botに質問。 メール鑑定士だなというレス。そのままうらで実装してもらって、平日になったらメールでテストするところまで完了。 あと、関係ないけど、グループで自分のアイコンに違和感あったので、Grok Bot用のユーザーアイコン作ってもらった。 Cursor側で変更したら反映された（なんだそれｗ）",
+    "body": "やっと入れたので、APIをそのままGrok Botに渡して、使えるの？と師匠Botに質問。\nメール鑑定士だなというレス。そのままうらで実装してもらって、平日になったらメールでテストするところまで完了。\nあと、関係ないけど、グループで自分のアイコンに違和感あったので、Grok Bot用のユーザーアイコン作ってもらった。\nCursor側で変更したら反映された（なんだそれｗ）",
+    "whatTheyDid": "やっと入れたので、APIをそのままGrok Botに渡して、使えるの？と師匠Botに質問。 メール鑑定士だなというレス。そのままうらで実装してもらって、平日になったらメールでテストするところまで完了。 あと、関係ないけど、グループで自分のアイコンに違和感あったので、Grok Bot用のユーザーアイコン作ってもらった。 Cursor側で変更したら反映された（なんだそれｗ）",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "やっと入れたので、APIをそのままGrok Botに渡して、使えるの？と師匠Botに質問。 メール鑑定士だなというレス。そのままうらで実装してもらって、平日になったらメールでテストするところまで完了。 あと、関係ないけど、グループで自分のアイコンに違和感あったので、Grok Bot用のユーザーアイコン作ってもらった。 Cursor側で変更したら反映された（なんだそれｗ）",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "いしたにまさき, ブロガー, ひらくPCバッグ, Manus Fellow, ログミーツの中の人",
+    "handle": "masakiishitani",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/masakiishitani/status/2102266098494452028",
+    "sourceUrl": "https://x.com/masakiishitani/status/2102266098494452028",
+    "sourceLabel": "いしたにまさき, ブロガー, ひらくPCバッグ, Manus Fellow, ログミーツの中の人 on X"
+  },
+  {
+    "slug": "jeanzxiang4t-24-7-grok-bot-team-elon-musk-chief-of-staff",
+    "title": "我搭了一套 24/7 在跑的 Grok Bot Team。 统一入口：Elon Musk（我管它叫 chief of staff）。...",
+    "headline": "我搭了一套 24/7 在跑的 Grok Bot Team。 统一入口：Elon Musk（我管它叫 chief of staff）。 我所有的需求，只对它讲，由它做 coordinator → routing → 到对应的Agent Cli。 分工按 需求类型、thinking level 切，而不是按一个模型打天下： 热点资讯 → GrokBuild + Grok 4.7 长文写作 → Antigravity CLI +...",
+    "body": "我搭了一套 24/7 在跑的 Grok Bot Team。\n\n 统一入口：Elon Musk（我管它叫 chief of staff）。\n\n 我所有的需求，只对它讲，由它做 coordinator → routing → 到对应的Agent Cli。\n\n 分工按 需求类型、thinking level 切，而不是按一个模型打天下：\n\n 热点资讯 → GrokBuild + Grok 4.7\n 长文写作 → Antigravity CLI + Gemini Flash 3.8\n 代码 / 出图 → Codex + GPT-6 Astra\n X 发布、GitHub push、行业分析、检索 → 各自专用 agent\n\n真正让它从 pipeline 变成 team 的是两件事：persistent memory 和 voice通话。记忆保证我不用每次重新 brief；语音把派活成本压到接近零。\n\n 三端（mobile / desktop / shared cloud desktop）共享同一 session state。云桌面 execution，本地只 view —— 合上手机、记本，任务继续跑。\n\n目前的瓶颈：跨 agent memory 冲突、长链路可观测性、成本随 agent 数非线性上升。\n\n Tooling 层还在早期。谁先解决 agent team 的 memory 治理 + observability，谁吃下这波。",
+    "whatTheyDid": "我搭了一套 24/7 在跑的 Grok Bot Team。 统一入口：Elon Musk（我管它叫 chief of staff）。 我所有的需求，只对它讲，由它做 coordinator → routing → 到对应的Agent Cli。 分工按 需求类型、thinking level 切，而不是按一个模型打天下： 热点资讯 → GrokBuild + Grok 4.7 长文写作 → Antigravity CLI +...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "我搭了一套 24/7 在跑的 Grok Bot Team。 统一入口：Elon Musk（我管它叫 chief of staff）。 我所有的需求，只对它讲，由它做 coordinator → routing → 到对应的Agent Cli。 分工按 需求类型、thinking level 切，而不是按一个模型打天下： 热点资讯 → GrokBuild + Grok 4.7 长文写作 → Antigravity CLI +...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "github",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "always-on",
+    "source": "community",
+    "authorName": "JeanzXiang",
+    "handle": "JeanzXiang4t",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/JeanzXiang4t/status/2102320724400853265",
+    "sourceUrl": "https://x.com/JeanzXiang4t/status/2102320724400853265",
+    "sourceLabel": "JeanzXiang on X",
+    "format": "article"
+  },
+  {
+    "slug": "tnaoki-0208-grok-bot-galaxy-livestream-day3-grok-bot-for-mar-2",
+    "title": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Marketing 日本語要約",
+    "headline": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Marketing 日本語要約",
+    "body": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Marketing 日本語要約 https://x.com/i/article/2102058086865506305",
+    "whatTheyDid": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Marketing 日本語要約",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Marketing 日本語要約",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail",
+      "slack",
+      "notion",
+      "github",
+      "salesforce"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Naoki Takigawa",
+    "handle": "TNaoki_0208",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/TNaoki_0208/status/2102309226248880432",
+    "sourceUrl": "https://x.com/TNaoki_0208/status/2102309226248880432",
+    "sourceLabel": "Naoki Takigawa on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2102058086865506305"
+  },
+  {
+    "slug": "tnaoki-0208-grok-bot-galaxy-livestream-day3-grok-bot-for-fin",
+    "title": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Final Showcase 日本語要約",
+    "headline": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Final Showcase 日本語要約",
+    "body": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Final Showcase 日本語要約 https://x.com/i/article/2102058236400795649",
+    "whatTheyDid": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Final Showcase 日本語要約",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Final Showcase 日本語要約",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "slack",
+      "notion",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Naoki Takigawa",
+    "handle": "TNaoki_0208",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/TNaoki_0208/status/2102309040269484317",
+    "sourceUrl": "https://x.com/TNaoki_0208/status/2102309040269484317",
+    "sourceLabel": "Naoki Takigawa on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2102058236400795649"
+  },
+  {
+    "slug": "tnaoki-0208-grok-bot-galaxy-livestream-day3-grok-bot-for-pos",
+    "title": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Post Sales 日本語要約",
+    "headline": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Post Sales 日本語要約",
+    "body": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Post Sales 日本語要約 https://x.com/i/article/2102057636028108800",
+    "whatTheyDid": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Post Sales 日本語要約",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot Galaxy: Livestream Day3 Grok Bot for Post Sales 日本語要約",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail",
+      "google-sheets",
+      "google-calendar",
+      "slack",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Naoki Takigawa",
+    "handle": "TNaoki_0208",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/TNaoki_0208/status/2102308126607458802",
+    "sourceUrl": "https://x.com/TNaoki_0208/status/2102308126607458802",
+    "sourceLabel": "Naoki Takigawa on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2102057636028108800"
   }
 ]
