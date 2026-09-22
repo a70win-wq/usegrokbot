@@ -9,14 +9,79 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 166,
+    "total": 171,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 159,
+    "alreadyIngested": 164,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "rle-harness-using-xai-grok-build",
+      "title": "RLE harness using xAI Grok Build",
+      "url": "https://github.com/AppSprout-dev/rle-harness-grok-build",
+      "sourceSummary": "Turns xai-org/grok-build into an RLE harness where a coding agent manages a RimWorld colony over MCP.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "epochbound-mmo-grok-build-handoff",
+      "title": "EPOCHBOUND MMO Grok Build handoff",
+      "url": "https://github.com/MetaphyKing/epochbound",
+      "sourceSummary": "Original two-era MMO language prototype packaged as a Grok Build handoff with GOAL/HANDOFF/LOCKS agent files.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "sable-gtm-desk-for-cursor-grok-build",
+      "title": "Sable GTM desk for Cursor / Grok Build",
+      "url": "https://github.com/thoughtpilot99/sable",
+      "sourceSummary": "GTM prospecting desk with ColdIQ motions, shipping both Cursor rules and .grok skills so Grok Build can run the same brief.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "star-catcher-smoke-offline-canvas-game-grok-build-smoke",
+      "title": "star-catcher-smoke — offline canvas game (Grok Build smoke)",
+      "url": "https://github.com/Cesardellantonio/star-catcher-smoke",
+      "sourceSummary": "Offline HTML canvas courier game (Ember→Ion→Nova quotas) used as a Grok Build smoke—open index.html, no install or network.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "llegadas-tarde-local-late-arrival-pwa-built-with-grok-bot",
+      "title": "llegadas-tarde — local late-arrival PWA built with Grok Bot",
+      "url": "https://github.com/korckyjals-grok-bot/llegadas-tarde",
+      "sourceSummary": "Local-only school late-arrival PWA (IndexedDB, WhatsApp-ready texts, Vite + Vitest/Playwright) authored under a Grok Bot org—no backend or CDN.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "mordheim-grok-build-prompts-tactics-game-prompt-series",
       "title": "mordheim-grok-build-prompts — tactics game prompt series",

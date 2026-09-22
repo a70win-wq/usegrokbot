@@ -155318,5 +155318,145 @@
     "sourceLabel": "Naoki Takigawa on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2102057636028108800"
+  },
+  {
+    "slug": "appsprout-dev-rle-harness-using-xai-grok-build",
+    "title": "RLE harness using xAI Grok Build",
+    "headline": "Turns xai-org/grok-build into an RLE harness where a coding agent manages a RimWorld colony over MCP.",
+    "whatTheyDid": "Turns xai-org/grok-build into an RLE harness where a coding agent manages a RimWorld colony over MCP.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Turns xai-org/grok-build into an RLE harness where a coding agent manages a RimWorld colony over MCP.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "AppSprout-dev",
+    "publishedAt": "2026-09-04",
+    "sourceUrl": "https://github.com/AppSprout-dev/rle-harness-grok-build",
+    "sourceLabel": "AppSprout-dev · GitHub"
+  },
+  {
+    "slug": "metaphyking-epochbound-mmo-grok-build-handoff",
+    "title": "EPOCHBOUND MMO Grok Build handoff",
+    "headline": "Original two-era MMO language prototype packaged as a Grok Build handoff with GOAL/HANDOFF/LOCKS agent files.",
+    "whatTheyDid": "Original two-era MMO language prototype packaged as a Grok Build handoff with GOAL/HANDOFF/LOCKS agent files.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Original two-era MMO language prototype packaged as a Grok Build handoff with GOAL/HANDOFF/LOCKS agent files.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "MetaphyKing",
+    "publishedAt": "2026-09-22",
+    "sourceUrl": "https://github.com/MetaphyKing/epochbound",
+    "sourceLabel": "MetaphyKing · GitHub"
+  },
+  {
+    "slug": "thoughtpilot99-sable-gtm-desk-for-cursor-grok-build",
+    "title": "Sable GTM desk for Cursor / Grok Build",
+    "headline": "GTM prospecting desk with ColdIQ motions, shipping both Cursor rules and .grok skills so Grok Build can run the same brief.",
+    "whatTheyDid": "GTM prospecting desk with ColdIQ motions, shipping both Cursor rules and .grok skills so Grok Build can run the same brief.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "GTM prospecting desk with ColdIQ motions, shipping both Cursor rules and .grok skills so Grok Build can run the same brief.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "thoughtpilot99",
+    "publishedAt": "2026-09-22",
+    "sourceUrl": "https://github.com/thoughtpilot99/sable",
+    "sourceLabel": "thoughtpilot99 · GitHub"
+  },
+  {
+    "slug": "cesardellantonio-star-catcher-smoke-offline-canvas-game-grok-buil",
+    "title": "star-catcher-smoke — offline canvas game (Grok Build smoke)",
+    "headline": "Offline HTML canvas courier game (Ember→Ion→Nova quotas) used as a Grok Build smoke—open index.html, no install or network.",
+    "whatTheyDid": "Offline HTML canvas courier game (Ember→Ion→Nova quotas) used as a Grok Build smoke—open index.html, no install or network.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Offline HTML canvas courier game (Ember→Ion→Nova quotas) used as a Grok Build smoke—open index.html, no install or network.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Cesardellantonio",
+    "publishedAt": "2026-09-21",
+    "sourceUrl": "https://github.com/Cesardellantonio/star-catcher-smoke",
+    "sourceLabel": "Cesardellantonio · GitHub"
+  },
+  {
+    "slug": "korckyjals-grok-bot-llegadas-tarde-local-late-arrival-pwa-built-with",
+    "title": "llegadas-tarde — local late-arrival PWA built with Grok Bot",
+    "headline": "Local-only school late-arrival PWA (IndexedDB, WhatsApp-ready texts, Vite + Vitest/Playwright) authored under a Grok Bot org—no backend or CDN.",
+    "whatTheyDid": "Local-only school late-arrival PWA (IndexedDB, WhatsApp-ready texts, Vite + Vitest/Playwright) authored under a Grok Bot org—no backend or CDN.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Local-only school late-arrival PWA (IndexedDB, WhatsApp-ready texts, Vite + Vitest/Playwright) authored under a Grok Bot org—no backend or CDN.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "korckyjals-grok-bot",
+    "publishedAt": "2026-09-22",
+    "sourceUrl": "https://github.com/korckyjals-grok-bot/llegadas-tarde",
+    "sourceLabel": "korckyjals-grok-bot · GitHub"
   }
 ]
