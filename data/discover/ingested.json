@@ -162681,5 +162681,121 @@
     "sourceUrl": "https://x.com/ShanuMathew93/status/2102638421026001078",
     "sourceLabel": "Shanu Mathew on X",
     "format": "article"
+  },
+  {
+    "slug": "aepiros33-kr-etf-lab-grok-bot-handoff-backtest-app",
+    "title": "KR ETF Lab — Grok Bot handoff backtest app",
+    "headline": "KRX ETF portfolio backtest web app with AGENTS.md and GROK_BOT_PROMPT.md handoff notes for continuing work on a Grok Bot computer.",
+    "whatTheyDid": "KRX ETF portfolio backtest web app with AGENTS.md and GROK_BOT_PROMPT.md handoff notes for continuing work on a Grok Bot computer.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "KRX ETF portfolio backtest web app with AGENTS.md and GROK_BOT_PROMPT.md handoff notes for continuing work on a Grok Bot computer.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "aepiros33",
+    "publishedAt": "2026-09-23",
+    "sourceUrl": "https://github.com/aepiros33/kr-etf-lab",
+    "sourceLabel": "aepiros33 · GitHub"
+  },
+  {
+    "slug": "siriusbontea-interactive-staff-org-chart-for-a-grok-bot-board",
+    "title": "Interactive staff org chart for a Grok Bot board",
+    "headline": "Public interactive org-chart site for a Grok Bot board with role chips, stories, and generated portraits.",
+    "whatTheyDid": "Public interactive org-chart site for a Grok Bot board with role chips, stories, and generated portraits.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Public interactive org-chart site for a Grok Bot board with role chips, stories, and generated portraits.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "siriusbontea",
+    "publishedAt": "2026-08-15",
+    "sourceUrl": "https://github.com/siriusbontea/grok-bot-task-org",
+    "sourceLabel": "siriusbontea · GitHub"
+  },
+  {
+    "slug": "ansefe-director-orchestrator-logs-templates-for-grok-bo",
+    "title": "Director orchestrator logs & templates for Grok Bot",
+    "headline": "Spanish evaluation logs, bitácora, and templates for a Grok Bot “Director” that coordinates competitor coding agents.",
+    "whatTheyDid": "Spanish evaluation logs, bitácora, and templates for a Grok Bot “Director” that coordinates competitor coding agents.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Spanish evaluation logs, bitácora, and templates for a Grok Bot “Director” that coordinates competitor coding agents.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Ansefe",
+    "publishedAt": "2026-09-23",
+    "sourceUrl": "https://github.com/Ansefe/grok-bot-orquestator",
+    "sourceLabel": "Ansefe · GitHub"
+  },
+  {
+    "slug": "cuthbertnogood-public-agent-observatory-page-for-a-grok-bot-ope",
+    "title": "Public agent observatory page for a Grok Bot / OpenClaw host",
+    "headline": "Browser-safe public showcase of agents on a Grok Bot/OpenClaw host (index.html + agents.json), not a Control UI.",
+    "whatTheyDid": "Browser-safe public showcase of agents on a Grok Bot/OpenClaw host (index.html + agents.json), not a Control UI.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Browser-safe public showcase of agents on a Grok Bot/OpenClaw host (index.html + agents.json), not a Control UI.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "cuthbertnogood",
+    "publishedAt": "2026-09-22",
+    "sourceUrl": "https://github.com/cuthbertnogood/grok-bot-observatory",
+    "sourceLabel": "cuthbertnogood · GitHub"
   }
 ]

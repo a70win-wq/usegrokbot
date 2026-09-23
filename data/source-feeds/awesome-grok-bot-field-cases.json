@@ -9,14 +9,66 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 172,
+    "total": 176,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 165,
+    "alreadyIngested": 169,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "kr-etf-lab-grok-bot-handoff-backtest-app",
+      "title": "KR ETF Lab — Grok Bot handoff backtest app",
+      "url": "https://github.com/aepiros33/kr-etf-lab",
+      "sourceSummary": "KRX ETF portfolio backtest web app with AGENTS.md and GROK_BOT_PROMPT.md handoff notes for continuing work on a Grok Bot computer.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "interactive-staff-org-chart-for-a-grok-bot-board",
+      "title": "Interactive staff org chart for a Grok Bot board",
+      "url": "https://github.com/siriusbontea/grok-bot-task-org",
+      "sourceSummary": "Public interactive org-chart site for a Grok Bot board with role chips, stories, and generated portraits.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "director-orchestrator-logs-templates-for-grok-bot",
+      "title": "Director orchestrator logs & templates for Grok Bot",
+      "url": "https://github.com/Ansefe/grok-bot-orquestator",
+      "sourceSummary": "Spanish evaluation logs, bitácora, and templates for a Grok Bot “Director” that coordinates competitor coding agents.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "public-agent-observatory-page-for-a-grok-bot-openclaw-host",
+      "title": "Public agent observatory page for a Grok Bot / OpenClaw host",
+      "url": "https://github.com/cuthbertnogood/grok-bot-observatory",
+      "sourceSummary": "Browser-safe public showcase of agents on a Grok Bot/OpenClaw host (index.html + agents.json), not a Control UI.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "orb-teardown-grok-bot-orb-design-study",
       "title": "ORB//TEARDOWN — Grok Bot orb design study",
