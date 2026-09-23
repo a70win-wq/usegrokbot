@@ -9,14 +9,27 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 171,
+    "total": 172,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 164,
+    "alreadyIngested": 165,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "orb-teardown-grok-bot-orb-design-study",
+      "title": "ORB//TEARDOWN — Grok Bot orb design study",
+      "url": "https://github.com/Pitchfork-and-Torch/grok-bot-exploded",
+      "sourceSummary": "Independent WebGL design study that explodes a porcelain Grok Bot orb into near-future internals (not an official product).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "rle-harness-using-xai-grok-build",
       "title": "RLE harness using xAI Grok Build",
