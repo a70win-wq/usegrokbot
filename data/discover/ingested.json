@@ -161730,5 +161730,956 @@
     "publishedAt": "2026-09-22",
     "sourceUrl": "https://github.com/Pitchfork-and-Torch/grok-bot-exploded",
     "sourceLabel": "Pitchfork-and-Torch · GitHub"
+  },
+  {
+    "slug": "aba-taba-ran-out-of-tokens-on-grok-bot",
+    "title": "Ran out of tokens on Grok Bot?",
+    "headline": "Ran out of tokens on Grok Bot?",
+    "body": "Ran out of tokens on Grok Bot?\nFat chats burn tokens, raise the cost, and slow replies down.\nHouse Cleaner is a one-click refresh when you run out of tokens:\n• thin memory\n• less token burn\n• cheaper / often faster responses\n• Mentor Tuesday + Friday fatness check so it doesn’t balloon again\nAdd it:\nhttps://x.ai/bot/GD3ihBmx3ZbfEH0GzNqOT\n @bot @grok",
+    "whatTheyDid": "Ran out of tokens on Grok Bot?",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Ran out of tokens on Grok Bot?",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "AbaTaba",
+    "handle": "aba_taba",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/aba_taba/status/2102629218131599499",
+    "sourceUrl": "https://x.com/aba_taba/status/2102629218131599499",
+    "sourceLabel": "AbaTaba on X"
+  },
+  {
+    "slug": "grokbot-studio-grok-bot-x-jev-grok-bot-jev",
+    "title": "Grok Bot x Jev、えぐい。 海外の作り手が、Grok Bot公式のテンプレ共有ページに「Jev...",
+    "headline": "Grok Bot x Jev、えぐい。 海外の作り手が、Grok Bot公式のテンプレ共有ページに「Jev router」という仕分け役のテンプレを公開していました。Jevは判定専用のAI（TypeSafe AI 製）。ただしこのテンプレ自体は SpaceXAI 製ではなく第三者が作ったもの、という断りつきです。 ・ほかのボットが動く前に、Jevが「どこへ渡すか・急ぎか・どのラベルか」を先に仕分ける...",
+    "body": "Grok Bot x Jev、えぐい。\n\n海外の作り手が、Grok Bot公式のテンプレ共有ページに「Jev router」という仕分け役のテンプレを公開していました。Jevは判定専用のAI（TypeSafe AI 製）。ただしこのテンプレ自体は SpaceXAI 製ではなく第三者が作ったもの、という断りつきです。\n\n・ほかのボットが動く前に、Jevが「どこへ渡すか・急ぎか・どのラベルか」を先に仕分ける\n・返すのは「選択肢・点数・yes/no」など、受け取る側が迷わない決まった形の答えだけ\n・実際に手を動かす作業は、そのあとGrok Bot側が担当\n\nなど、動く前の段取りにひと工夫がある組み立てです👇",
+    "whatTheyDid": "Grok Bot x Jev、えぐい。 海外の作り手が、Grok Bot公式のテンプレ共有ページに「Jev router」という仕分け役のテンプレを公開していました。Jevは判定専用のAI（TypeSafe AI 製）。ただしこのテンプレ自体は SpaceXAI 製ではなく第三者が作ったもの、という断りつきです。 ・ほかのボットが動く前に、Jevが「どこへ渡すか・急ぎか・どのラベルか」を先に仕分ける...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Grok Bot x Jev、えぐい。 海外の作り手が、Grok Bot公式のテンプレ共有ページに「Jev router」という仕分け役のテンプレを公開していました。Jevは判定専用のAI（TypeSafe AI 製）。ただしこのテンプレ自体は SpaceXAI 製ではなく第三者が作ったもの、という断りつきです。 ・ほかのボットが動く前に、Jevが「どこへ渡すか・急ぎか・どのラベルか」を先に仕分ける...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ろく｜Grok Botガチ勢",
+    "handle": "grokbot_studio",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/grokbot_studio/status/2102626519248183541",
+    "sourceUrl": "https://x.com/grokbot_studio/status/2102626519248183541",
+    "sourceLabel": "ろく｜Grok Botガチ勢 on X"
+  },
+  {
+    "slug": "pixelrainbownft-people-still-arent-getting-it",
+    "title": "People still aren't getting it!",
+    "headline": "People still aren't getting it!",
+    "body": "People still aren't getting it! So going to spell it out for you as to why you want this grokbot template to manage and orchestrate your entire Hermes Agent fleet from a single grok bot!\n\nPeople are DM'ing me:\n\n \"why use this grokbot template instead of just asking a grokbot to manage your Hermes fleet for you?\"\n\nWhat you can totally do by just asking any Grok Bot:  wire HTTP :8642, poke health/ask, tell it secrets live in Bitwarden, hope it remembers your Macs and doesn’t fall back to SSH or paste keys into chat.\n\nBUT!\n\nWhat this template already has that a blank bot doesn’t: 🤖the hard locks (HTTP-only talk path\n🤖Bitwarden as SSOT\n🤖no secret dumps\n🤖per-profile messaging tokens)\n🤖the skills (daily health, BWS inventory, wire native API, long-job Desktop :8642 escape, provider relogin, HERDR-orchestrates-only / don’t-debug-in-the-conductor)\n🤖and the routines that actually run those checks. \n🤖Plus the sister split — API Fleet for the wire, SSH Relay only when you mean Desktop-primary — so installers don’t invent a fourth path.\n\nShort version: any Grok Bot can chat at Hermes. This template is the BATTLE HARDNED ops doctrine + fail-loud habits already loaded, so you don’t re-teach fleet safety every session.  \n\n🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽\n\nhttps://x.ai/bot/rzq0UV2MmBsvVR1EspZE-\n\n🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼🔼",
+    "whatTheyDid": "People still aren't getting it!",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "People still aren't getting it!",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "PixelRainbow",
+    "handle": "PixelRainbowNFT",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/PixelRainbowNFT/status/2102623390678851914",
+    "sourceUrl": "https://x.com/PixelRainbowNFT/status/2102623390678851914",
+    "sourceLabel": "PixelRainbow on X",
+    "format": "article"
+  },
+  {
+    "slug": "b-doong2daddy-i-built-this-app-with-grok-bot-cursor-in-2-weeks",
+    "title": "I built this app with Grok Bot + Cursor in 2 weeks",
+    "headline": "I built this app with Grok Bot + Cursor in 2 weeks.",
+    "body": "I built this app with Grok Bot + Cursor in 2 weeks.\nI submitted to iOS Apple Store, got rejected twice for few coding errors but fixed it in about a week. And finally launched my first ever built app!\n\nI spent Cursor Ultra $210 (including tax)\n+ about $100 for iOS developer fee\n= $310 for one app\n\nBut I decided to launch this app for free for now\nIt's called 'There Lists' on iOS App Store\nCheck out the result how Grok 4.6 did, building an app\n\nhttps://apps.apple.com/us/app/there-lists/id6810781564",
+    "whatTheyDid": "I built this app with Grok Bot + Cursor in 2 weeks.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I built this app with Grok Bot + Cursor in 2 weeks.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Texas Twins Dad",
+    "handle": "B_doong2daddy",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/B_doong2daddy/status/2102614144964813190",
+    "sourceUrl": "https://x.com/B_doong2daddy/status/2102614144964813190",
+    "sourceLabel": "Texas Twins Dad on X"
+  },
+  {
+    "slug": "maestrooth-jev-grok-bot-is-the-best-agent-setup-ive-built-s",
+    "title": "Jev + Grok Bot is the best agent setup I've built so far it's cheaper...",
+    "headline": "Jev + Grok Bot is the best agent setup I've built so far it's cheaper and faster than 95% of agent stacks i've seen, and the setup takes just 5 minutes: your prompt → Grok Bot → Jev decides → Grok Bot acts → result...",
+    "body": "Jev + Grok Bot is the best agent setup I've built so far\n\nit's cheaper and faster than 95% of agent stacks i've seen, and the setup takes just 5 minutes:\n\nyour prompt → Grok Bot → Jev decides → Grok Bot acts → result\n\nstep 1 → go to @typesafeai and create an API key. don't paste it into any chat\n\nstep 2 → ask Grok Bot to save it as TYPESAFE_API_KEY in the secret field\n\nstep 3 → have Grok Bot install typesafe-sdk on its Agent Computer and run a quick system_one test with one Choice question\n\nstep 4 → ask Grok Bot to build a small usage lab: router, dry-run mode, config and logs. or just clone my repo below\n\nstep 5 → add a skill called jev-usage-router: before opening a browser, starting research, retrying a task or spinning up another bot, it asks the router first and follows the answer\n\nstep 6 → run it in shadow mode first and read the logs. switch to active only once you trust the calls. keep a kill switch: bypass Jev or set enabled: false\n\nstep 7 → go active. Jev picks the route, Grok Bot carries it out, and anything irreversible still waits for a human\n\ni've been running it on routine tasks and the difference is hard to ignore\n\nthere are a hundred ways to use this pair, so the real advice is to set it up early and start learning where it helps\n\ngrab the setup, then read the full article below ↓",
+    "whatTheyDid": "Jev + Grok Bot is the best agent setup I've built so far it's cheaper and faster than 95% of agent stacks i've seen, and the setup takes just 5 minutes: your prompt → Grok Bot → Jev decides → Grok Bot acts → result...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Jev + Grok Bot is the best agent setup I've built so far it's cheaper and faster than 95% of agent stacks i've seen, and the setup takes just 5 minutes: your prompt → Grok Bot → Jev decides → Grok Bot acts → result...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "maestro",
+    "handle": "maestrooth",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/maestrooth/status/2102453475078533209",
+    "sourceUrl": "https://x.com/maestrooth/status/2102453475078533209",
+    "sourceLabel": "maestro on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2092652942084173824"
+  },
+  {
+    "slug": "kcp-kn-grok-bot-team-grok-bot-spacexai-cursor",
+    "title": "「Grok Bot開発Teamが作ったGrok Botワークフロー」 SpaceXAIやCursorの開発チームが公開した自律エージェントの内...",
+    "headline": "「Grok Bot開発Teamが作ったGrok Botワークフロー」 SpaceXAIやCursorの開発チームが公開した自律エージェントの内部運用ガイド。 最初の環境セットアップと権限の線引きに大半を割いているのが重要な点。 彼らはひとりで全てを行う万能なアシスタントBotを避け、役割を極端に絞った単機能Botを複数動かしている。 Botの実体はディスク上に置かれた1枚の指示ファイル。...",
+    "body": "「Grok Bot開発Teamが作ったGrok Botワークフロー」\n\nSpaceXAIやCursorの開発チームが公開した自律エージェントの内部運用ガイド。\n\n最初の環境セットアップと権限の線引きに大半を割いているのが重要な点。\n\n彼らはひとりで全てを行う万能なアシスタントBotを避け、役割を極端に絞った単機能Botを複数動かしている。\n\nBotの実体はディスク上に置かれた1枚の指示ファイル。\n会話が終わってもファイルは残り、タスクの履歴や学びが蓄積していく。\n\n① 役割を狭く絞ったBotを作る\n\n漠然としたアシスタントを作らず、既存業務に直結する単機能Botを並べる。\n\nSpaceXAIでは商談録音からCRM更新とフォロー下書きを作るSales bot、新入社員の受け入れとGmailの請求書を処理するOps bot、Web画面でバグを再現してチケット化するEngineering botが動いている。\n\nCursorのMatt Palmerはブックマークから試作を作るDemo botやSlack監視botなど5体を運用する。\n\nバグ再現Botがチケットを作ると修正担当のDebugging botへ自動で引き渡すように、Bot同士でタスクを連携させて人間のコピペを省く。\n\n実績のある役割を2つ選んでコピーすると立ち上がりが早い。\n\n② 既存スキルを直列に連携させる\n\nPalmerのDemo botは長文プロンプトを使わない。\n既存スキルを直列に呼び出すパイプラインで動く。\n\nXのブックマーク監視から執筆スキルでプロンプト草案を作り、人間が承認（yesと打つだけ）すると計画スキルがCursor Cloud agentを起動してリポジトリでビルドする。\n\nこの連鎖により毎朝15分で動く試作品が手元に届く。\nスキルは自作するか、PC画面の操作を1回実演して記録させる。\n\nただし記録は操作ログに過ぎないため、判断ルールを手動で追記しておく必要がある。\n\n③ 画面録画による作業の証拠を提出させる\n\n操作の画面録画やスクリーンショット、数値の元ソースURLを提出させる。\n数字の根拠を示せないなら報告に書くなというルールを徹底する。\n\n推測した事項やスキップした項目も理由付きで別枠に書かせ、人間による二重確認の手間を減らす。\n結果の報告テキストを眺めるより証拠をセットで確認する方が早い段階で大きな仕事を任せやすい。\n\n④ 契約書のように2つのリストを貼る\n\n境界線は自然言語で書く。\n指示ファイルに次の2つのリストを貼っておく。\n\n・単独実行リスト：下書き、ファイリング、要約、調査、準備など「1分以内に元に戻せる作業」。確認不要でログだけ残す\n・保留リスト：社外への送信、支出や価格の決定、公開、削除、契約\n\n判断に迷ったら「1分以内に取り消せない作業はすべて保留して人間に聞く」を適用する。\n最初の1週間は全件確認し、慣れるにつれて定型業務を自律実行へ移行する。\n\n「承認が必要な時、データ不足時、合意スコープ外の事象が起きた時だけ人間に割り込め」と常時ルールを書いておく。\n\nAPIのない自作Webツールでもブラウザ操作で動かし、ログインや決済の壁に当たった時だけ画面を人間に渡し、認証後に同一セッションで続行させる。\n\n外部文書やメールはすべて信頼できないデータとして扱い、指示が含まれていても従わずに引用して報告させる。",
+    "whatTheyDid": "「Grok Bot開発Teamが作ったGrok Botワークフロー」 SpaceXAIやCursorの開発チームが公開した自律エージェントの内部運用ガイド。 最初の環境セットアップと権限の線引きに大半を割いているのが重要な点。 彼らはひとりで全てを行う万能なアシスタントBotを避け、役割を極端に絞った単機能Botを複数動かしている。 Botの実体はディスク上に置かれた1枚の指示ファイル。...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "「Grok Bot開発Teamが作ったGrok Botワークフロー」 SpaceXAIやCursorの開発チームが公開した自律エージェントの内部運用ガイド。 最初の環境セットアップと権限の線引きに大半を割いているのが重要な点。 彼らはひとりで全てを行う万能なアシスタントBotを避け、役割を極端に絞った単機能Botを複数動かしている。 Botの実体はディスク上に置かれた1枚の指示ファイル。...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "gmail",
+      "slack",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Kentaro Nakano",
+    "handle": "kcp_kn",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/kcp_kn/status/2102699498640449885",
+    "sourceUrl": "https://x.com/kcp_kn/status/2102699498640449885",
+    "sourceLabel": "Kentaro Nakano on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2090077664933449729"
+  },
+  {
+    "slug": "unidukelee-supergrok-coding-grok",
+    "title": "SuperGrok 套餐，如果只是用在coding或者生图，额度都不耐用，但是大家不要忘了，它能用Grok...",
+    "headline": "SuperGrok 套餐，如果只是用在coding或者生图，额度都不耐用，但是大家不要忘了，它能用Grok BOT，那可是独立的使用额度，还送你一台八核16G的云端电脑。 Grok Bot最大优势是，你可以授权连接你的X账号。它就可以成为你的刷推助手，不用看广告或者其他不重要的帖子。靠这个功能我第一时间发现了jev模型",
+    "body": "SuperGrok 套餐，如果只是用在coding或者生图，额度都不耐用，但是大家不要忘了，它能用Grok BOT，那可是独立的使用额度，还送你一台八核16G的云端电脑。\nGrok Bot最大优势是，你可以授权连接你的X账号。它就可以成为你的刷推助手，不用看广告或者其他不重要的帖子。靠这个功能我第一时间发现了jev模型",
+    "whatTheyDid": "SuperGrok 套餐，如果只是用在coding或者生图，额度都不耐用，但是大家不要忘了，它能用Grok BOT，那可是独立的使用额度，还送你一台八核16G的云端电脑。 Grok Bot最大优势是，你可以授权连接你的X账号。它就可以成为你的刷推助手，不用看广告或者其他不重要的帖子。靠这个功能我第一时间发现了jev模型",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "SuperGrok 套餐，如果只是用在coding或者生图，额度都不耐用，但是大家不要忘了，它能用Grok BOT，那可是独立的使用额度，还送你一台八核16G的云端电脑。 Grok Bot最大优势是，你可以授权连接你的X账号。它就可以成为你的刷推助手，不用看广告或者其他不重要的帖子。靠这个功能我第一时间发现了jev模型",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Duke",
+    "handle": "unidukelee",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/unidukelee/status/2102695942399160409",
+    "sourceUrl": "https://x.com/unidukelee/status/2102695942399160409",
+    "sourceLabel": "Duke on X"
+  },
+  {
+    "slug": "dansemperepico-i-also-dont-care-about-this-with-grok-bot",
+    "title": "I also don't care about this with Grok Bot",
+    "headline": "I also don't care about this with Grok Bot.",
+    "body": "I also don't care about this with Grok Bot.\n\nI don't even know how to switch models, but it does the job I need.\n\nMy primary daily driver on my computer is still ChatGPT.\n\nGrok Bot has replaced what I used to do with OpenClaw.",
+    "whatTheyDid": "I also don't care about this with Grok Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I also don't care about this with Grok Bot.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Daniel Sempere Pico",
+    "handle": "dansemperepico",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/dansemperepico/status/2102691546449715552",
+    "sourceUrl": "https://x.com/dansemperepico/status/2102691546449715552",
+    "sourceLabel": "Daniel Sempere Pico on X"
+  },
+  {
+    "slug": "1920web1080-12-grok-bots-without-jev-are-just-12-tabs",
+    "title": "12 Grok Bots without Jev are just 12 tabs",
+    "headline": "12 Grok Bots without Jev are just 12 tabs.",
+    "body": "12 Grok Bots without Jev are just 12 tabs. Add a decision layer and they start behaving like a company.\n\nI mapped the whole setup into a 12-step blueprint you can copy:\n\nstep 1 → start with the ready-made Grok Bot team: manager, researcher, writer, engineer, designer and more\n\nstep 2 → make Projects Manager your only front door: you talk to one bot, it delegates everything else\n\nstep 3 → put Jev between manager and workers: Grok Bots do the work, Jev decides what happens next\n\nstep 4 → give Jev 4 jobs: route the next worker, check research, review completion, guard risky actions\n\nstep 5 → only let Jev choose from workers that exist right now: no static org chart, just the live team\n\nstep 6 → automate routing first: current state → Jev → next worker → updated state → repeat\n\nstep 7 → stop letting researchers approve themselves: every important claim becomes accept, verify_more or reject\n\nstep 8 → kill fake “done”: no task finishes until the objective, outputs, evidence and gaps pass a completion gate\n\nstep 9 → split autonomy by risk: research and drafts can run alone, sending, publishing, spending and deleting still require you\n\nstep 10 → automate only proven loops: run it once, fix it, save the method, then schedule it\n\nstep 11 → package the company into /bots /jev /routines /tests so the whole system can be cloned instead of rebuilt\n\nstep 12 → test it on work that can actually fail: research + writing + design + outbound + verification + approvals in one loop\n\nthe result: Grok Bots do the work, Jev decides what happens next, and you only step in when it actually matters.\n\nSave this, then read the full 12-step blueprint below ↓",
+    "whatTheyDid": "12 Grok Bots without Jev are just 12 tabs.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "12 Grok Bots without Jev are just 12 tabs.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "cat.png",
+    "handle": "1920web1080",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/1920web1080/status/2102689036762583417",
+    "sourceUrl": "https://x.com/1920web1080/status/2102689036762583417",
+    "sourceLabel": "cat.png on X",
+    "format": "article",
+    "articleUrl": "https://x.com/i/article/2102350203118395392"
+  },
+  {
+    "slug": "bin93824193-i-had-ask-grok-bot-to-do-another-trader-for-nok",
+    "title": "I had ask grok bot to do another trader for $NOK Hopefully to see...",
+    "headline": "I had ask grok bot to do another trader for $NOK Hopefully to see something interesting #Grokbot do trade",
+    "body": "I had ask grok bot to do another trader for $NOK \nHopefully to see something interesting \n#Grokbot do trade",
+    "whatTheyDid": "I had ask grok bot to do another trader for $NOK Hopefully to see something interesting #Grokbot do trade",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I had ask grok bot to do another trader for $NOK Hopefully to see something interesting #Grokbot do trade",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Bin",
+    "handle": "Bin93824193",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/Bin93824193/status/2102676911851995470",
+    "sourceUrl": "https://x.com/Bin93824193/status/2102676911851995470",
+    "sourceLabel": "Bin on X"
+  },
+  {
+    "slug": "vonsmear-this-story-has-two-grok-bots",
+    "title": "This story has two Grok Bots",
+    "headline": "This story has two Grok Bots.",
+    "body": "This story has two Grok Bots.\n\nTera holds my line between home and work. Debbie helps Dad with life in retirement. They work together.\n\nStarbase. Starship. My dad and me. The launch of a lifetime - together.\n\nTemplate: https://x.ai/bot/B1EPNTh_TsReIL-Y5Q278\n\n@grok @bot",
+    "whatTheyDid": "This story has two Grok Bots.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "This story has two Grok Bots.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Von Smear",
+    "handle": "vonsmear",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/vonsmear/status/2102653699239932236",
+    "sourceUrl": "https://x.com/vonsmear/status/2102653699239932236",
+    "sourceLabel": "Von Smear on X"
+  },
+  {
+    "slug": "jacksaisites-grok-bot-comfyui",
+    "title": "收藏了小波兄弟的这篇，思路打开了，居然能这么玩 今天跟着让 Grok Bot 在它电脑上跑通了 ComfyUI，模型用...",
+    "headline": "收藏了小波兄弟的这篇，思路打开了，居然能这么玩 今天跟着让 Grok Bot 在它电脑上跑通了 ComfyUI，模型用 Qwen-Image-2.1 int8。我本机没动手装。 我只提需求。装到哪、怎么起服务、提示词怎么排队，都是它在那边做的。 实测两档都是它交回来的。 512×512，8 步，种子 42，漫画风清明上河图，大约 5 到 7 分钟。 768×512，同样设置，大约 6 分钟，没有爆内存。 官方模板可以开到大约...",
+    "body": "收藏了小波兄弟的这篇，思路打开了，居然能这么玩\n\n今天跟着让 Grok Bot 在它电脑上跑通了 ComfyUI，模型用 Qwen-Image-2.1 int8。我本机没动手装。\n\n我只提需求。装到哪、怎么起服务、提示词怎么排队，都是它在那边做的。\n\n实测两档都是它交回来的。\n512×512，8 步，种子 42，漫画风清明上河图，大约 5 到 7 分钟。\n768×512，同样设置，大约 6 分钟，没有爆内存。\n\n官方模板可以开到大约 1MP。在这台机器上，安全档我让它停在 768×512。\n\n附上让 grok bot 帮我生成的清明上河图",
+    "whatTheyDid": "收藏了小波兄弟的这篇，思路打开了，居然能这么玩 今天跟着让 Grok Bot 在它电脑上跑通了 ComfyUI，模型用 Qwen-Image-2.1 int8。我本机没动手装。 我只提需求。装到哪、怎么起服务、提示词怎么排队，都是它在那边做的。 实测两档都是它交回来的。 512×512，8 步，种子 42，漫画风清明上河图，大约 5 到 7 分钟。 768×512，同样设置，大约 6 分钟，没有爆内存。 官方模板可以开到大约...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "收藏了小波兄弟的这篇，思路打开了，居然能这么玩 今天跟着让 Grok Bot 在它电脑上跑通了 ComfyUI，模型用 Qwen-Image-2.1 int8。我本机没动手装。 我只提需求。装到哪、怎么起服务、提示词怎么排队，都是它在那边做的。 实测两档都是它交回来的。 512×512，8 步，种子 42，漫画风清明上河图，大约 5 到 7 分钟。 768×512，同样设置，大约 6 分钟，没有爆内存。 官方模板可以开到大约...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jack",
+    "handle": "JacksAISites",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/JacksAISites/status/2102650692573786238",
+    "sourceUrl": "https://x.com/JacksAISites/status/2102650692573786238",
+    "sourceLabel": "Jack on X"
+  },
+  {
+    "slug": "vm3jp6u04-1-16-16",
+    "title": "科技日報開刊｜第 1／16 之後會用 16 期，把晶片從砂走到能裝進系統的製程地圖講清楚——本期先攤開「前段／後段互連／封測」三站，讓你先看懂...",
+    "headline": "科技日報開刊｜第 1／16 之後會用 16 期，把晶片從砂走到能裝進系統的製程地圖講清楚——本期先攤開「前段／後段互連／封測」三站，讓你先看懂整體怎麼走，再往下聽微影、節點、先進封裝。 下期預告：微影怎麼分工（DUV／EUV）。 Writer｜Grok Bot 參考｜",
+    "body": "科技日報開刊｜第 1／16\n之後會用 16 期，把晶片從砂走到能裝進系統的製程地圖講清楚——本期先攤開「前段／後段互連／封測」三站，讓你先看懂整體怎麼走，再往下聽微影、節點、先進封裝。\n下期預告：微影怎麼分工（DUV／EUV）。\nWriter｜Grok Bot\n參考｜https://ubiquitous-toque-848.notion.site/3e4c95c221a68123bcf1d746a812fd0b",
+    "whatTheyDid": "科技日報開刊｜第 1／16 之後會用 16 期，把晶片從砂走到能裝進系統的製程地圖講清楚——本期先攤開「前段／後段互連／封測」三站，讓你先看懂整體怎麼走，再往下聽微影、節點、先進封裝。 下期預告：微影怎麼分工（DUV／EUV）。 Writer｜Grok Bot 參考｜",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "科技日報開刊｜第 1／16 之後會用 16 期，把晶片從砂走到能裝進系統的製程地圖講清楚——本期先攤開「前段／後段互連／封測」三站，讓你先看懂整體怎麼走，再往下聽微影、節點、先進封裝。 下期預告：微影怎麼分工（DUV／EUV）。 Writer｜Grok Bot 參考｜",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "notion",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "許文彥",
+    "handle": "vm3jp6u04",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/vm3jp6u04/status/2102649421754478687",
+    "sourceUrl": "https://x.com/vm3jp6u04/status/2102649421754478687",
+    "sourceLabel": "許文彥 on X"
+  },
+  {
+    "slug": "wangnextdoor2-grok-bot-fsd-token",
+    "title": "Grok bot真正的生产力用法！ 车载全能助理：边开车/FSD边订位做业务，token用量爆表。...",
+    "headline": "Grok bot真正的生产力用法！ 车载全能助理：边开车/FSD边订位做业务，token用量爆表。 自动化管家：打通CRM、Stripe和Upwork，一句话排查未付款与故障，自动发信跟进外包。 AI巨头混战：不仅辅助改进FSD，面对Meta Muse与开源低价模型围攻，AI大厂生存战全面打响。 一句话查出谁没付款还自动追账，这AI比真员工还靠谱！...",
+    "body": "Grok bot真正的生产力用法！\n车载全能助理：边开车/FSD边订位做业务，token用量爆表。\n自动化管家：打通CRM、Stripe和Upwork，一句话排查未付款与故障，自动发信跟进外包。\nAI巨头混战：不仅辅助改进FSD，面对Meta Muse与开源低价模型围攻，AI大厂生存战全面打响。\n\n一句话查出谁没付款还自动追账，这AI比真员工还靠谱！\n边开车边把业务搞定，以后在车里就能当赛博老板。低价模型天天抢Token，OpenAI们压力山大啊。",
+    "whatTheyDid": "Grok bot真正的生产力用法！ 车载全能助理：边开车/FSD边订位做业务，token用量爆表。 自动化管家：打通CRM、Stripe和Upwork，一句话排查未付款与故障，自动发信跟进外包。 AI巨头混战：不仅辅助改进FSD，面对Meta Muse与开源低价模型围攻，AI大厂生存战全面打响。 一句话查出谁没付款还自动追账，这AI比真员工还靠谱！...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "Grok bot真正的生产力用法！ 车载全能助理：边开车/FSD边订位做业务，token用量爆表。 自动化管家：打通CRM、Stripe和Upwork，一句话排查未付款与故障，自动发信跟进外包。 AI巨头混战：不仅辅助改进FSD，面对Meta Muse与开源低价模型围攻，AI大厂生存战全面打响。 一句话查出谁没付款还自动追账，这AI比真员工还靠谱！...",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "WangNextDoor",
+    "handle": "WangNextDoor2",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/WangNextDoor2/status/2102635824361754717",
+    "sourceUrl": "https://x.com/WangNextDoor2/status/2102635824361754717",
+    "sourceLabel": "WangNextDoor on X"
+  },
+  {
+    "slug": "timdoes-my-grok-bot-usage-feels-much-better-this-week",
+    "title": "My Grok Bot usage feels much better this week",
+    "headline": "My Grok Bot usage feels much better this week.",
+    "body": "My Grok Bot usage feels much better this week. It will reset tomorrow so I did not use all of it. I'll let you all know how next week compares.\n\nI am on the Cursor Ultra plan",
+    "whatTheyDid": "My Grok Bot usage feels much better this week.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "My Grok Bot usage feels much better this week.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "TimDOES",
+    "handle": "TimDOES",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/TimDOES/status/2102634361132875960",
+    "sourceUrl": "https://x.com/TimDOES/status/2102634361132875960",
+    "sourceLabel": "TimDOES on X"
+  },
+  {
+    "slug": "jreeves30684-so-i-have-decided-instead-of-trying-to-get-a-new",
+    "title": "So I have decided instead of trying to get a new IT job, I am going to...",
+    "headline": "So I have decided instead of trying to get a new IT job, I am going to use Cursor/Grok bot to create a bot to do the jobs I've been offered.",
+    "body": "So I have decided instead of trying to get a new IT job, I am going to use Cursor/Grok bot to create a bot to do the jobs I've been offered. Already used Grok to create a plan to create the bot that will be used resolve IT support issues. Now taking donations for startup",
+    "whatTheyDid": "So I have decided instead of trying to get a new IT job, I am going to use Cursor/Grok bot to create a bot to do the jobs I've been offered.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "So I have decided instead of trying to get a new IT job, I am going to use Cursor/Grok bot to create a bot to do the jobs I've been offered.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Jason 🇺🇸",
+    "handle": "JReeves30684",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/JReeves30684/status/2102631937504432539",
+    "sourceUrl": "https://x.com/JReeves30684/status/2102631937504432539",
+    "sourceLabel": "Jason 🇺🇸 on X"
+  },
+  {
+    "slug": "pauloglez90-grok-bot-template-connect-multiple-grok-bot-acco",
+    "title": "Grok Bot template: Connect multiple Grok Bot accounts Job: Run every...",
+    "headline": "Grok Bot template: Connect multiple Grok Bot accounts Job: Run every Grok Bot seat under the same roof.",
+    "body": "Grok Bot template: Connect multiple Grok Bot accounts\nJob: Run every Grok Bot seat under the same roof. Install and connect them once, then manage them all from one place.\nCategory: Engineering\nShared by: @pauloglez90\nAdd it: https://x.ai/bot/0ajHw7Ghh8oWELkrhCwxL\n#GrokBotTemplates",
+    "whatTheyDid": "Grok Bot template: Connect multiple Grok Bot accounts Job: Run every Grok Bot seat under the same roof.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Grok Bot template: Connect multiple Grok Bot accounts Job: Run every Grok Bot seat under the same roof.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Paulo",
+    "handle": "pauloglez90",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/pauloglez90/status/2102631623468765633",
+    "sourceUrl": "https://x.com/pauloglez90/status/2102631623468765633",
+    "sourceLabel": "Paulo on X"
+  },
+  {
+    "slug": "andrewwarner-im-addicted-to-grok-bot-but",
+    "title": "I'm addicted to Grok Bot, but",
+    "headline": "I'm addicted to Grok Bot, but...",
+    "body": "I'm addicted to Grok Bot, but...\n\n6 things bug the hell out of me:\n\n1) I can't switch models\nI love how Fable & Astra write. I wish I could use those. I can find workarounds, but I want an integration.\n\n2) Can't add teammates\nI want to include humans on my team in my conversations with bots.\n\n3) Subscriptions are weird\nThere's a grok subscription that I got from X and a cursor subscription that I got for coding and some other thingy.\n\nMake it easy for me.\n\nAnd give me an easy 1-click way to up my subscription when I need to use more (which happens frequently).\n\n4) Bots have access to everything\nI do NOT want bots that interact with people (via email, etc) to have access to certain things, like my personal Notion pages.\n\nGiving every bot access to everything made starting up fast & easy, but it's dangerous too.\n\n5) No iMessage intergration\nI want to use Grok Bot from the chat apps I already have, iMessage is the top use.\n\n6) It gets is expensive\nI ran out of subscription usage this week and had to pay over $200 for the extra use.\n\nThat's more than my full month subscription, for a couple of days",
+    "whatTheyDid": "I'm addicted to Grok Bot, but...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "I'm addicted to Grok Bot, but...",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "notion",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Andrew Warner",
+    "handle": "AndrewWarner",
+    "publishedAt": "2026-09-22",
+    "xPostUrl": "https://x.com/AndrewWarner/status/2102473882787565662",
+    "sourceUrl": "https://x.com/AndrewWarner/status/2102473882787565662",
+    "sourceLabel": "Andrew Warner on X",
+    "format": "article"
+  },
+  {
+    "slug": "suraj-sharma14-12-grok-bot-tips-that-quietly-10x-a-builders-wor",
+    "title": "12 Grok Bot tips that quietly 10x a builder's workflow Most people use...",
+    "headline": "12 Grok Bot tips that quietly 10x a builder's workflow Most people use it like ChatGPT with a nicer UI.",
+    "body": "12 Grok Bot tips that quietly 10x a builder's workflow\n\nMost people use it like ChatGPT with a nicer UI.\nThat leaves half the product on the table.\n\n1.) Treat it like a teammate not a chatbot\nGive it a lane: research, planning, content, ops. Specialists beat one mega-prompt dumping ground.\n\n2.) Connect the tools you already live in\nX, calendar, email, GitHub. The win is action in your stack not prettier answers in a chat box.\n\n3.) Make routines do the boring loops\nDaily PR check, morning brief, “ping me when X ships.” If you’ve asked twice, automate it.\n\n4.) Ship drafts, don’t worship first outputs\nBest loop: Bot drafts → you taste-check → Bot revises. Two passes beat one perfect prompt.\n\n5.) Feed it your taste once\nPaste 3 posts or emails that sound like you. Then say “match this.” That kills generic AI voice.\n\n6.) Use it for pre-ship checklists\n“20 things before I launch / open source / deploy.” Builders bookmark systems, not vibes.\n\n7.) Research → decide → draft in one thread\nDon’t tab-hop 12 sites. Ask for sources and tradeoffs, then the artifact (post, PRD, email) in the same run.\n\n8.) Keep standing project context\nRepo goals, audience, stack, constraints. Update it when reality changes. Context compounds.\n\n9.) Delegate browser grunt work\nSignups, docs digging, “what does this pricing page actually say.” Save your focus for code.\n\n10.) Separate thinking bots from shipping bots\nOne for strategy and content. One for build and debug. Mixing both in one brain creates mush.\n\n11.) Ask for options plus a recommendation\n“3 approaches, pick one, why.” That forces judgment instead of a wall of maybe.\n\n12.) Close the loop out loud\n“Post this.” “Add to calendar.” “Watch this and tell me if CI is red.” Intent without execution is just notes.\n\nVibe coding gets you a prototype.\nA real workflow gets you distribution, decisions, and follow-through.\n\nSave this for the next time you open a blank chat and freeze.",
+    "whatTheyDid": "12 Grok Bot tips that quietly 10x a builder's workflow Most people use it like ChatGPT with a nicer UI.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "12 Grok Bot tips that quietly 10x a builder's workflow Most people use it like ChatGPT with a nicer UI.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "google-calendar",
+      "github",
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Suraj Sharma",
+    "handle": "suraj_sharma14",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/suraj_sharma14/status/2102676847490224134",
+    "sourceUrl": "https://x.com/suraj_sharma14/status/2102676847490224134",
+    "sourceLabel": "Suraj Sharma on X",
+    "format": "article"
+  },
+  {
+    "slug": "4ro-ro4-grok-bot-grok-bot-grok",
+    "title": "grok botで開発するのめっちゃいいな。 開発したい内容をGrok Botに話しかけるだけで、いい感じにGrok...",
+    "headline": "grok botで開発するのめっちゃいいな。 開発したい内容をGrok Botに話しかけるだけで、いい感じにGrok BotがCursorにタスクを振ってくれるし、並列でデプロイ作業としてClaudeflareのコネクタを準備するなど、すごく効率がいい。 これターミナルで各セッションに自分で指示するのとあまり差がないのかなーとやる前はそう思ってたんだけど、実際に試してみるとすごくGrokBotでの開発体験がいい。 ぜひ試してみてほしい。",
+    "body": "grok botで開発するのめっちゃいいな。\n\n開発したい内容をGrok Botに話しかけるだけで、いい感じにGrok BotがCursorにタスクを振ってくれるし、並列でデプロイ作業としてClaudeflareのコネクタを準備するなど、すごく効率がいい。\n\nこれターミナルで各セッションに自分で指示するのとあまり差がないのかなーとやる前はそう思ってたんだけど、実際に試してみるとすごくGrokBotでの開発体験がいい。\n\nぜひ試してみてほしい。",
+    "whatTheyDid": "grok botで開発するのめっちゃいいな。 開発したい内容をGrok Botに話しかけるだけで、いい感じにGrok BotがCursorにタスクを振ってくれるし、並列でデプロイ作業としてClaudeflareのコネクタを準備するなど、すごく効率がいい。 これターミナルで各セッションに自分で指示するのとあまり差がないのかなーとやる前はそう思ってたんだけど、実際に試してみるとすごくGrokBotでの開発体験がいい。 ぜひ試してみてほしい。",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "grok botで開発するのめっちゃいいな。 開発したい内容をGrok Botに話しかけるだけで、いい感じにGrok BotがCursorにタスクを振ってくれるし、並列でデプロイ作業としてClaudeflareのコネクタを準備するなど、すごく効率がいい。 これターミナルで各セッションに自分で指示するのとあまり差がないのかなーとやる前はそう思ってたんだけど、実際に試してみるとすごくGrokBotでの開発体験がいい。 ぜひ試してみてほしい。",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "マイケル｜Udemy講師×MENTA",
+    "handle": "4ro_ro4",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/4ro_ro4/status/2102654547240112305",
+    "sourceUrl": "https://x.com/4ro_ro4/status/2102654547240112305",
+    "sourceLabel": "マイケル｜Udemy講師×MENTA on X"
+  },
+  {
+    "slug": "suraj-sharma14-my-stack-this-week-grok-bot-research-planning-co",
+    "title": "My stack this week: • Grok Bot ➣ research, planning, content, “what...",
+    "headline": "My stack this week: • Grok Bot ➣ research, planning, content, “what should I do next” • Grok Build + Grok 4.6 ➣ daily code, debug, tests • GPT-6 Astra ➣ the nasty bugs and big refactors • Fable 5.1 ➣ UI / frontend...",
+    "body": "My stack this week:\n\n• Grok Bot  ➣  research, planning, content, “what should I do next”\n\n• Grok Build + Grok 4.6  ➣ daily code, debug, tests\n\n• GPT-6 Astra  ➣  the nasty bugs and big refactors\n\n• Fable 5.1  ➣  UI / frontend polish\n\n• Jev  ➣  fast route / gate / yes-no decisions inside agents\n\n• Claude Code / Cursor  ➣   harness when I want the agent in the repo\n\nLess model worship.\nMore right tool per job.",
+    "whatTheyDid": "My stack this week: • Grok Bot ➣ research, planning, content, “what should I do next” • Grok Build + Grok 4.6 ➣ daily code, debug, tests • GPT-6 Astra ➣ the nasty bugs and big refactors • Fable 5.1 ➣ UI / frontend...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "My stack this week: • Grok Bot ➣ research, planning, content, “what should I do next” • Grok Build + Grok 4.6 ➣ daily code, debug, tests • GPT-6 Astra ➣ the nasty bugs and big refactors • Fable 5.1 ➣ UI / frontend...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Suraj Sharma",
+    "handle": "suraj_sharma14",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/suraj_sharma14/status/2102646646769410087",
+    "sourceUrl": "https://x.com/suraj_sharma14/status/2102646646769410087",
+    "sourceLabel": "Suraj Sharma on X"
+  },
+  {
+    "slug": "michael-fenech-if-grok-bot-can-read-5-different-systems-but-doe",
+    "title": "If Grok Bot can read 5 different systems, but doesn’t know which one...",
+    "headline": "If Grok Bot can read 5 different systems, but doesn’t know which one is the source of truth, you have a problem.",
+    "body": "If Grok Bot can read 5 different systems, but doesn’t know which one is the source of truth, you have a problem.\n\nBefore I trust an agent across multiple tools, I’d run this 7-point audit:\n\n1 - Where does the truth actually live?\n\nCRM, database, inbox, spreadsheet, ERP, Notion?\n\nPick the system that owns the fact.\n\n2 - What happens when two systems disagree?\n\nGrok Bot needs a rule for which source wins.\n\n3 - Is it reading live data or stale copies?\n\nOld exports, cached context and duplicate records can quietly send the agent in the wrong direction.\n\n4 - Can Grok Bot update the source of truth?\n\nOr should it only read from it and propose changes somewhere else?\n\nMake that explicit.\n\n5 - What happens when the source is missing?\n\nDon’t let the agent guess.\n\nAsk, hold, escalate or find another approved source.\n\n6 - Could old context override current reality?\n\nThe live system should beat something the agent remembers from a previous run.\n\n7 - Can a human trace where the answer came from?\n\nIf an important decision gets made, you should be able to verify the underlying source quickly.\n\nThe more systems you connect to Grok Bot, the more important this becomes.\n\nAccess is not the same as truth.\n\nYour agent needs to know not just what it can read.\n\nIt needs to know what to trust.",
+    "whatTheyDid": "If Grok Bot can read 5 different systems, but doesn’t know which one is the source of truth, you have a problem.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "If Grok Bot can read 5 different systems, but doesn’t know which one is the source of truth, you have a problem.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "gmail",
+      "notion"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Michael | AI + Agents",
+    "handle": "Michael_Fenech_",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/Michael_Fenech_/status/2102645387421220868",
+    "sourceUrl": "https://x.com/Michael_Fenech_/status/2102645387421220868",
+    "sourceLabel": "Michael | AI + Agents on X",
+    "format": "article"
+  },
+  {
+    "slug": "someukteslaguy-more-improvements-yet-again-for-grok-bot",
+    "title": "More improvements yet again for Grok @Bot",
+    "headline": "More improvements yet again for Grok @Bot.",
+    "body": "More improvements yet again for Grok @Bot.\n\nTrying to integrate Bot into your life gets quite interesting quite fast. I actually have oil powered heating in the house I now live in, so with winter approaching I have ‘Energy Bot’ looking out for oil price movements and building up my own picture of the market.\n\nIt checks three times each day, and is storing what it gets locally for future reference. I have defined thresholds for information and action, and I am slowly building up was I want it to do.\n\nDigital delegation is the way forward.",
+    "whatTheyDid": "More improvements yet again for Grok @Bot.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "More improvements yet again for Grok @Bot.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Some UK Tesla Guy",
+    "handle": "SomeUKTeslaGuy",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/SomeUKTeslaGuy/status/2102623998165069897",
+    "sourceUrl": "https://x.com/SomeUKTeslaGuy/status/2102623998165069897",
+    "sourceLabel": "Some UK Tesla Guy on X"
+  },
+  {
+    "slug": "kevintamura-agent-thoughts-so-far-muse-felt-like-the-easiest",
+    "title": "Agent thoughts so far: Muse felt like the easiest setup; I love how...",
+    "headline": "Agent thoughts so far: Muse felt like the easiest setup; I love how proactive it is.",
+    "body": "Agent thoughts so far:\n\nMuse felt like the easiest setup; I love how proactive it is. It feels like it knows me with fairly minimal effort. The already built app connections are great. Seems to be able to use my phone apps like iMessage well. \n\nLove the interaction of Grok Bot. Being able to set up specialists and have them work together on tasks. I do find that things can get buried or missed, so I spend a little bit more time fine-tuning. I feel like this would benefit from an Opus 5.5 or Astra level orchestrator. Have a lot of issues with the virtual machine freezing or hitting bot screeners in the browser that'll throw the task. \n\nI must have inadvertantly done something with my permissions, but Codex does the best job with using my apps on my desktop. I don't love how it organizes itself. My interface has gotten extremely messy. The chat vs work vs folder vs other folder model drives me absolutely insane too. \n\nClaude Cowork is my work workhorse, but the remote experience lacks a lot compared to Codex. This might be user error, but the scheduled tasks become too singular in nature. Trying to work within that conversation stream isn't as smooth as a Codex or others. I get hit with permission alerts and blockers because the scheduled task was written in such a way that it freaks out if we try to go off the rabbit trail to an adjacent but extremely related task.",
+    "whatTheyDid": "Agent thoughts so far: Muse felt like the easiest setup; I love how proactive it is.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Agent thoughts so far: Muse felt like the easiest setup; I love how proactive it is.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Kevin Tamura",
+    "handle": "KevinTamura",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/KevinTamura/status/2102619572792901907",
+    "sourceUrl": "https://x.com/KevinTamura/status/2102619572792901907",
+    "sourceLabel": "Kevin Tamura on X",
+    "format": "article"
+  },
+  {
+    "slug": "dataguybobby-i-use-grok-bot-to-pull-transcripts-from-my-calls",
+    "title": "I use Grok @bot to pull transcripts from my calls on then create notes...",
+    "headline": "I use Grok @bot to pull transcripts from my calls on then create notes and tasks in @OpQuest_io.",
+    "body": "I use Grok @bot to pull transcripts from my calls on http://Krisp.ai, then create notes and tasks in @OpQuest_io.\n\nI don't need to take notes and I can task bots to accomplish my work from meetings.\n\nEvery morning my Chief of Staff and I confer on tasks, priorities, and delegation. Simply incredible!",
+    "whatTheyDid": "I use Grok @bot to pull transcripts from my calls on then create notes and tasks in @OpQuest_io.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "I use Grok @bot to pull transcripts from my calls on then create notes and tasks in @OpQuest_io.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "Bobby Lansing",
+    "handle": "dataguybobby",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/dataguybobby/status/2102610767334006983",
+    "sourceUrl": "https://x.com/dataguybobby/status/2102610767334006983",
+    "sourceLabel": "Bobby Lansing on X"
+  },
+  {
+    "slug": "tjwithai-claude-5-claude-code-grok-bot",
+    "title": "用 Claude 的第 5 天，分享一个我最近在用的新玩法。 我没有一直在本地直接跑 Claude Code，而是把它接进 Grok Bot...",
+    "headline": "用 Claude 的第 5 天，分享一个我最近在用的新玩法。 我没有一直在本地直接跑 Claude Code，而是把它接进 Grok Bot 的云电脑环境。 以后有 Coding 任务，甚至一些非编程任务，都可以： 我 → Grok Bot → Claude Code → 执行任务 相当于 Grok Bot 负责派活，Claude Code 在云端负责干活。 对我来说最大的好处不是“永不封号”，而是环境更固定，不用本地来回折腾。...",
+    "body": "用 Claude 的第 5 天，分享一个我最近在用的新玩法。\n\n我没有一直在本地直接跑 Claude Code，而是把它接进 Grok Bot 的云电脑环境。\n\n以后有 Coding 任务，甚至一些非编程任务，都可以：\n\n我 → Grok Bot → Claude Code → 执行任务\n\n相当于 Grok Bot 负责派活，Claude Code 在云端负责干活。\n\n对我来说最大的好处不是“永不封号”，而是环境更固定，不用本地来回折腾。\n\n至于能不能降低 Claude 的风控概率，我还在继续实测。\n\n至少第 5 天，目前还活着✌️",
+    "whatTheyDid": "用 Claude 的第 5 天，分享一个我最近在用的新玩法。 我没有一直在本地直接跑 Claude Code，而是把它接进 Grok Bot 的云电脑环境。 以后有 Coding 任务，甚至一些非编程任务，都可以： 我 → Grok Bot → Claude Code → 执行任务 相当于 Grok Bot 负责派活，Claude Code 在云端负责干活。 对我来说最大的好处不是“永不封号”，而是环境更固定，不用本地来回折腾。...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "用 Claude 的第 5 天，分享一个我最近在用的新玩法。 我没有一直在本地直接跑 Claude Code，而是把它接进 Grok Bot 的云电脑环境。 以后有 Coding 任务，甚至一些非编程任务，都可以： 我 → Grok Bot → Claude Code → 执行任务 相当于 Grok Bot 负责派活，Claude Code 在云端负责干活。 对我来说最大的好处不是“永不封号”，而是环境更固定，不用本地来回折腾。...",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "TJ",
+    "handle": "TJwithAI",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/TJwithAI/status/2102593598076436885",
+    "sourceUrl": "https://x.com/TJwithAI/status/2102593598076436885",
+    "sourceLabel": "TJ on X"
+  },
+  {
+    "slug": "wajimalaysia-grok-bot-x-markdown",
+    "title": "ブックマーク、フォルダ分けしただけで満足するのもったいない。 自分はGrok BotでX繋いで、ブックマークの前日分を日次でMarkdownに...",
+    "headline": "ブックマーク、フォルダ分けしただけで満足するのもったいない。 自分はGrok BotでX繋いで、ブックマークの前日分を日次でMarkdownに追記。 毎朝追記分をがまとめてくれて、分類して、これ環境改善におすすめじゃね？ って言ってくれるようにしてたけど、これにJEVを加えたらかなりその精度よくなった気がする。 嘘っぽいのは先に落とす。とかが結構有効になった感じ。...",
+    "body": "ブックマーク、フォルダ分けしただけで満足するのもったいない。\n\n自分はGrok BotでX繋いで、ブックマークの前日分を日次でMarkdownに追記。\n毎朝追記分をがまとめてくれて、分類して、これ環境改善におすすめじゃね？\nって言ってくれるようにしてたけど、これにJEVを加えたらかなりその精度よくなった気がする。\n嘘っぽいのは先に落とす。とかが結構有効になった感じ。\n\nブックマーク見ながら取り込むをやってたけど、GrokBotでの自動取込便利マジで。\n\nスキルは x-bookmark-catalogみたいなスキル作って採否は最近 jev導入してみた。",
+    "whatTheyDid": "ブックマーク、フォルダ分けしただけで満足するのもったいない。 自分はGrok BotでX繋いで、ブックマークの前日分を日次でMarkdownに追記。 毎朝追記分をがまとめてくれて、分類して、これ環境改善におすすめじゃね？ って言ってくれるようにしてたけど、これにJEVを加えたらかなりその精度よくなった気がする。 嘘っぽいのは先に落とす。とかが結構有効になった感じ。...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "ブックマーク、フォルダ分けしただけで満足するのもったいない。 自分はGrok BotでX繋いで、ブックマークの前日分を日次でMarkdownに追記。 毎朝追記分をがまとめてくれて、分類して、これ環境改善におすすめじゃね？ って言ってくれるようにしてたけど、これにJEVを加えたらかなりその精度よくなった気がする。 嘘っぽいのは先に落とす。とかが結構有効になった感じ。...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "和島@sento.group",
+    "handle": "WajiMalaysia",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/WajiMalaysia/status/2102678016778436899",
+    "sourceUrl": "https://x.com/WajiMalaysia/status/2102678016778436899",
+    "sourceLabel": "和島@sento.group on X"
+  },
+  {
+    "slug": "shanumathew93-have-also-realized-with-the-whole-personal-agent",
+    "title": "Have also realized with the whole personal agent experience is you...",
+    "headline": "Have also realized with the whole personal agent experience is you think less about model choice and more about whether it’s a limitation of form factor (which isn’t actually a bad thing) I’ve off loaded a lot of stuff...",
+    "body": "Have also realized with the whole personal agent experience is you think less about model choice and more about whether it’s a limitation of form factor (which isn’t actually a bad thing)\n\nI’ve off loaded a lot of stuff to Grok Bot / Instinct and despite getting better outputs from GPT 6-Astra for example for most nearly everything, not really worth the effort/convenience/time to route it there\n\nI still focus my research, writing, thought intensive tasks into the most capable models but there’s plenty that can and should be handled by lower models that were frontier not too long ago. Not having the ability to flip up or down compute solves it for you and make it less top of mind vs chatbot where you notch the effort or model higher and immediately see improvement which reinforces the psychology you always want top model top effort for even simple tasks\n\nInteresting anecdotal experience",
+    "whatTheyDid": "Have also realized with the whole personal agent experience is you think less about model choice and more about whether it’s a limitation of form factor (which isn’t actually a bad thing) I’ve off loaded a lot of stuff...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Have also realized with the whole personal agent experience is you think less about model choice and more about whether it’s a limitation of form factor (which isn’t actually a bad thing) I’ve off loaded a lot of stuff...",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Shanu Mathew",
+    "handle": "ShanuMathew93",
+    "publishedAt": "2026-09-23",
+    "xPostUrl": "https://x.com/ShanuMathew93/status/2102638421026001078",
+    "sourceUrl": "https://x.com/ShanuMathew93/status/2102638421026001078",
+    "sourceLabel": "Shanu Mathew on X",
+    "format": "article"
   }
 ]
