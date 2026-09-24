@@ -168168,5 +168168,61 @@
     "sourceLabel": "Antonio Ortiz on X",
     "format": "article",
     "articleUrl": "https://x.com/i/article/2102785730820890624"
+  },
+  {
+    "slug": "prophetengine-airesearch-grokbot-maintained-ai-knowledge-base",
+    "title": "AIResearch — GrokBot-maintained AI knowledge base",
+    "headline": "Obsidian-friendly AI research knowledge base that a Grok Bot automatically maintains with topic MOCs and atomic notes.",
+    "whatTheyDid": "Obsidian-friendly AI research knowledge base that a Grok Bot automatically maintains with topic MOCs and atomic notes.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Obsidian-friendly AI research knowledge base that a Grok Bot automatically maintains with topic MOCs and atomic notes.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ProphetEngine",
+    "publishedAt": "2026-09-22",
+    "sourceUrl": "https://github.com/ProphetEngine/AIResearch",
+    "sourceLabel": "ProphetEngine · GitHub"
+  },
+  {
+    "slug": "xander-using-ai-to-scale-content-grokbot-kit-v1-0-0",
+    "title": "Content Grokbot kit v1.0.0",
+    "headline": "Drop-in kit that turns a fresh Grok Bot into a content team with an editor-in-chief, nine sub-agents, and an Almanac memory vault.",
+    "whatTheyDid": "Drop-in kit that turns a fresh Grok Bot into a content team with an editor-in-chief, nine sub-agents, and an Almanac memory vault.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Drop-in kit that turns a fresh Grok Bot into a content team with an editor-in-chief, nine sub-agents, and an Almanac memory vault.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "xander-using-ai-to-scale",
+    "publishedAt": "2026-09-23",
+    "sourceUrl": "https://github.com/xander-using-ai-to-scale/content-grokbot",
+    "sourceLabel": "xander-using-ai-to-scale · GitHub"
   }
 ]

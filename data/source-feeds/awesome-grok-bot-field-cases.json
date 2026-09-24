@@ -9,14 +9,40 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 176,
+    "total": 178,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 169,
+    "alreadyIngested": 171,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "airesearch-grokbot-maintained-ai-knowledge-base",
+      "title": "AIResearch — GrokBot-maintained AI knowledge base",
+      "url": "https://github.com/ProphetEngine/AIResearch",
+      "sourceSummary": "Obsidian-friendly AI research knowledge base that a Grok Bot automatically maintains with topic MOCs and atomic notes.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "content-grokbot-kit-v1-0-0",
+      "title": "Content Grokbot kit v1.0.0",
+      "url": "https://github.com/xander-using-ai-to-scale/content-grokbot",
+      "sourceSummary": "Drop-in kit that turns a fresh Grok Bot into a content team with an editor-in-chief, nine sub-agents, and an Almanac memory vault.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "kr-etf-lab-grok-bot-handoff-backtest-app",
       "title": "KR ETF Lab — Grok Bot handoff backtest app",
