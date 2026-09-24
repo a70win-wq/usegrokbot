@@ -169097,5 +169097,89 @@
     "xPostUrl": "https://x.com/NotABot/status/2102988027886977275",
     "sourceUrl": "https://x.com/NotABot/status/2102988027886977275",
     "sourceLabel": "Not-A-Bot on X"
+  },
+  {
+    "slug": "codenolimits-woodeex-mate-riel-for-grok-build-2026-09-24",
+    "title": "Woodeex matériel for Grok Build (2026-09-24)",
+    "headline": "French Woodeex delivery pack for Grok Build (pilots, 30s cuts, QC notes) published 2026-09-24 for temporary public Build access.",
+    "whatTheyDid": "French Woodeex delivery pack for Grok Build (pilots, 30s cuts, QC notes) published 2026-09-24 for temporary public Build access.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "French Woodeex delivery pack for Grok Build (pilots, 30s cuts, QC notes) published 2026-09-24 for temporary public Build access.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "CodeNoLimits",
+    "publishedAt": "2026-09-24",
+    "sourceUrl": "https://github.com/CodeNoLimits/woodeex-grok-build-2026-09-24",
+    "sourceLabel": "CodeNoLimits · GitHub"
+  },
+  {
+    "slug": "12553240kj-seambound-grok-build-slot-design-pack",
+    "title": "SEAMBOUND — Grok Build slot design pack",
+    "headline": "Original slot-design pack dated 2026-09-24 for Grok Build, with a master spec zip ready to attach to a Build session.",
+    "whatTheyDid": "Original slot-design pack dated 2026-09-24 for Grok Build, with a master spec zip ready to attach to a Build session.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Original slot-design pack dated 2026-09-24 for Grok Build, with a master spec zip ready to attach to a Build session.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "12553240Kj",
+    "publishedAt": "2026-09-24",
+    "sourceUrl": "https://github.com/12553240Kj/seambound-grok-build-pack",
+    "sourceLabel": "12553240Kj · GitHub"
+  },
+  {
+    "slug": "jorgedearmas-grok-canvas-mobile-scene-canvas-for-grok-bot",
+    "title": "grok-canvas — mobile scene canvas for Grok Bot",
+    "headline": "Mobile web canvas for Grok Bot: one link updates as scenes change, with HTML scenes and media for shareable bot-driven visuals.",
+    "whatTheyDid": "Mobile web canvas for Grok Bot: one link updates as scenes change, with HTML scenes and media for shareable bot-driven visuals.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Mobile web canvas for Grok Bot: one link updates as scenes change, with HTML scenes and media for shareable bot-driven visuals.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "JorgeDeArmas",
+    "publishedAt": "2026-09-24",
+    "sourceUrl": "https://github.com/JorgeDeArmas/grok-canvas",
+    "sourceLabel": "JorgeDeArmas · GitHub"
   }
 ]

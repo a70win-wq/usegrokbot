@@ -9,14 +9,53 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 178,
+    "total": 181,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 171,
+    "alreadyIngested": 174,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "woodeex-mate-riel-for-grok-build-2026-09-24",
+      "title": "Woodeex matériel for Grok Build (2026-09-24)",
+      "url": "https://github.com/CodeNoLimits/woodeex-grok-build-2026-09-24",
+      "sourceSummary": "French Woodeex delivery pack for Grok Build (pilots, 30s cuts, QC notes) published 2026-09-24 for temporary public Build access.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "seambound-grok-build-slot-design-pack",
+      "title": "SEAMBOUND — Grok Build slot design pack",
+      "url": "https://github.com/12553240Kj/seambound-grok-build-pack",
+      "sourceSummary": "Original slot-design pack dated 2026-09-24 for Grok Build, with a master spec zip ready to attach to a Build session.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-canvas-mobile-scene-canvas-for-grok-bot",
+      "title": "grok-canvas — mobile scene canvas for Grok Bot",
+      "url": "https://github.com/JorgeDeArmas/grok-canvas",
+      "sourceSummary": "Mobile web canvas for Grok Bot: one link updates as scenes change, with HTML scenes and media for shareable bot-driven visuals.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "airesearch-grokbot-maintained-ai-knowledge-base",
       "title": "AIResearch — GrokBot-maintained AI knowledge base",
