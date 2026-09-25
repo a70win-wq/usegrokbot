@@ -9,14 +9,27 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 181,
+    "total": 182,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 174,
+    "alreadyIngested": 175,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "startupswarm-23-role-grokbot-startup-team",
+      "title": "StartupSwarm — 23-role GrokBot startup team",
+      "url": "https://github.com/mr-dap-lab/startupswarm",
+      "sourceSummary": "Markdown role pack for a 23-agent startup team designed for GrokBot (orchestrator + specialists; Miami Kickoff demo lineage).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "woodeex-mate-riel-for-grok-build-2026-09-24",
       "title": "Woodeex matériel for Grok Build (2026-09-24)",

@@ -174449,5 +174449,33 @@
     "sourceUrl": "https://x.com/mrfundman/status/2097376671355830695",
     "sourceLabel": "mr fundman on X",
     "format": "article"
+  },
+  {
+    "slug": "mr-dap-lab-startupswarm-23-role-grokbot-startup-team",
+    "title": "StartupSwarm — 23-role GrokBot startup team",
+    "headline": "Markdown role pack for a 23-agent startup team designed for GrokBot (orchestrator + specialists; Miami Kickoff demo lineage).",
+    "whatTheyDid": "Markdown role pack for a 23-agent startup team designed for GrokBot (orchestrator + specialists; Miami Kickoff demo lineage).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Markdown role pack for a 23-agent startup team designed for GrokBot (orchestrator + specialists; Miami Kickoff demo lineage).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "mr-dap-lab",
+    "publishedAt": "2026-09-24",
+    "sourceUrl": "https://github.com/mr-dap-lab/startupswarm",
+    "sourceLabel": "mr-dap-lab · GitHub"
   }
 ]
