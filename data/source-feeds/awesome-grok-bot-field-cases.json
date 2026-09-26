@@ -9,14 +9,27 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 182,
+    "total": 183,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 175,
+    "alreadyIngested": 176,
     "pending": 0
   },
   "cases": [
+    {
+      "id": "immortalwrt-x86-64-qnap-soft-router-built-by-grok-bot",
+      "title": "ImmortalWrt x86/64 QNAP soft-router — built by Grok Bot",
+      "url": "https://github.com/pengyuw96/immortalwrt-x86-64-qnap",
+      "sourceSummary": "ImmortalWrt v25.12.2 x86/64 UEFI soft-router image for QNAP Virtualization Station, documented as built by Grok Bot.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
     {
       "id": "startupswarm-23-role-grokbot-startup-team",
       "title": "StartupSwarm — 23-role GrokBot startup team",

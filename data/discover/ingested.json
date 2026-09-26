@@ -176244,5 +176244,33 @@
     "xPostUrl": "https://x.com/GrokBotRadar/status/2103419739905069523",
     "sourceUrl": "https://x.com/GrokBotRadar/status/2103419739905069523",
     "sourceLabel": "Fan Grok Bot Radar on X"
+  },
+  {
+    "slug": "pengyuw96-immortalwrt-x86-64-qnap-soft-router-built-by-gro",
+    "title": "ImmortalWrt x86/64 QNAP soft-router — built by Grok Bot",
+    "headline": "ImmortalWrt v25.12.2 x86/64 UEFI soft-router image for QNAP Virtualization Station, documented as built by Grok Bot.",
+    "whatTheyDid": "ImmortalWrt v25.12.2 x86/64 UEFI soft-router image for QNAP Virtualization Station, documented as built by Grok Bot.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "ImmortalWrt v25.12.2 x86/64 UEFI soft-router image for QNAP Virtualization Station, documented as built by Grok Bot.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "pengyuw96",
+    "publishedAt": "2026-09-25",
+    "sourceUrl": "https://github.com/pengyuw96/immortalwrt-x86-64-qnap",
+    "sourceLabel": "pengyuw96 · GitHub"
   }
 ]
