@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 183,
+    "total": 184,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 176,
+    "alreadyIngested": 177,
     "pending": 0
   },
   "cases": [
@@ -2394,6 +2394,19 @@
       "title": "Gravity Birds — Godot puzzle built by Grok Bot team",
       "url": "https://github.com/az9713/grokbot-gravity-bird",
       "sourceSummary": "Original Godot gravity-puzzle game planned and steered by a Grok Bot team via Cursor Cloud Agent on Origin, with a public dev-journey page.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "replenish-autopilot-grok-bot-commerce-hackathon-london",
+      "title": "Replenish Autopilot — Grok Bot Commerce Hackathon (London)",
+      "url": "https://github.com/EXL-1/Replenish-Autopilot",
+      "sourceSummary": "Privacy-first autonomous replenishment commerce demo built at the London Grok Bot Commerce Hackathon, with policy engine, Shopify path, and Bot-facing agent loop.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
