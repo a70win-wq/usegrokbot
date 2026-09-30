@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 184,
+    "total": 185,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 177,
+    "alreadyIngested": 178,
     "pending": 0
   },
   "cases": [
@@ -2407,6 +2407,19 @@
       "title": "Replenish Autopilot — Grok Bot Commerce Hackathon (London)",
       "url": "https://github.com/EXL-1/Replenish-Autopilot",
       "sourceSummary": "Privacy-first autonomous replenishment commerce demo built at the London Grok Bot Commerce Hackathon, with policy engine, Shopify path, and Bot-facing agent loop.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "don-t-panic-hhgttg-flavored-tea-stretch-grok-bot",
+      "title": "Don't Panic — HHGTTG-flavored tea & stretch Grok Bot",
+      "url": "https://github.com/tink1010/dont-panic-grokbot",
+      "sourceSummary": "Hitchhiker’s Guide–flavored Grok Bot (x.ai/bot share) built around KTeaTime/RSIBreak-style tea timers, water/stretch reminders, and uplift menus, with public bot-rules.md.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
