@@ -9,9 +9,9 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 186,
-    "candidates": 7,
-    "xCandidates": 0,
+    "total": 187,
+    "candidates": 8,
+    "xCandidates": 1,
     "nonXCandidates": 7,
     "alreadyIngested": 179,
     "pending": 0
@@ -2439,6 +2439,21 @@
       "ingest": {
         "status": "published",
         "attempts": 1
+      }
+    },
+    {
+      "id": "poteto-gave-my-bot-my-brain-how-i-fix-bugs-now",
+      "title": "poteto: gave my bot my brain — how I fix bugs now",
+      "url": "https://x.com/poteto/status/2105576730413134291",
+      "sourceSummary": "SpaceXAI eng lead shows handing a personal Grok Bot her context so it fixes bugs her way while she sleeps.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "candidate",
+      "ingest": {
+        "status": "skipped",
+        "attempts": 1,
+        "code": "no_grok_signal",
+        "reason": "Source does not mention Grok Bot."
       }
     }
   ]
