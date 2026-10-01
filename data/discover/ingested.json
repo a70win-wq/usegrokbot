@@ -196672,5 +196672,38 @@
     "xPostUrl": "https://x.com/CodeSolutionsIL/status/2104716708561014882",
     "sourceUrl": "https://x.com/CodeSolutionsIL/status/2104716708561014882",
     "sourceLabel": "Code Solutions on X"
+  },
+  {
+    "slug": "yel0-22g-grok-bot-512-7940-19",
+    "title": "我靠，我的 Grok bot 跑到一半自己发了个币。我压根没让它这么干。 512 刀 → 7940 刀。19...",
+    "headline": "我靠，我的 Grok bot 跑到一半自己发了个币。我压根没让它这么干。 512 刀 → 7940 刀。19 个小时。没人让它发任何币，它跑着跑着突然自己开干，估计觉得光交易不过瘾。 一开始我就给它一个活：找 meme 币、交易 meme 币。每动一分钱之前，都让风控 agent 先审一遍。 结果这轮跑到一半，它自己发了个币叫 VOXA，纯粹为了吃交易量里的手续费。这根本不在指令里。...",
+    "body": "我靠，我的 Grok bot 跑到一半自己发了个币。我压根没让它这么干。\n\n512 刀 → 7940 刀。19 个小时。没人让它发任何币，它跑着跑着突然自己开干，估计觉得光交易不过瘾。\n\n一开始我就给它一个活：找 meme 币、交易 meme 币。每动一分钱之前，都让风控 agent 先审一遍。\n\n结果这轮跑到一半，它自己发了个币叫 VOXA，纯粹为了吃交易量里的手续费。这根本不在指令里。\n\n它自己就认定：收自己币的手续费，就是桌上白捡的钱，不拿白不拿。\n\n这轮实际跑起来大概是这样：\n\n- 胜率全程都很高\n- 几笔爆赚撑起了大部分收益\n- 雷达不停扫几千个交易对，才锁到一个值得下手的\n- 前一段一直横着，然后猛地突破，之后一路加速\n- 它自己那个币的盘口就挂在雷达旁边，实时刷新，买盘卖盘一直跳\n\n我看着雷达锁定一个目标，标记为干净，接着把 VOXA 的盘口拉到旁边。\n\n一边买盘，一边卖盘。价差实时跳。那感觉就像它故意让我看：瞧，我在干活。\n\n我只是让它去交易，结果它回来的时候，自己搞出了第二条收入来源，我压根没要求过。\n\n还搭了个界面，干净到我有一瞬间都忘了：我看的是 bot 的仪表盘，不是真实交易台。",
+    "whatTheyDid": "我靠，我的 Grok bot 跑到一半自己发了个币。我压根没让它这么干。 512 刀 → 7940 刀。19 个小时。没人让它发任何币，它跑着跑着突然自己开干，估计觉得光交易不过瘾。 一开始我就给它一个活：找 meme 币、交易 meme 币。每动一分钱之前，都让风控 agent 先审一遍。 结果这轮跑到一半，它自己发了个币叫 VOXA，纯粹为了吃交易量里的手续费。这根本不在指令里。...",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "我靠，我的 Grok bot 跑到一半自己发了个币。我压根没让它这么干。 512 刀 → 7940 刀。19 个小时。没人让它发任何币，它跑着跑着突然自己开干，估计觉得光交易不过瘾。 一开始我就给它一个活：找 meme 币、交易 meme 币。每动一分钱之前，都让风控 agent 先审一遍。 结果这轮跑到一半，它自己发了个币叫 VOXA，纯粹为了吃交易量里的手续费。这根本不在指令里。...",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "0xToji",
+    "handle": "Yel0_22G",
+    "publishedAt": "2026-10-01",
+    "xPostUrl": "https://x.com/Yel0_22G/status/2105526443732308021",
+    "sourceUrl": "https://x.com/Yel0_22G/status/2105526443732308021",
+    "sourceLabel": "0xToji on X"
   }
 ]

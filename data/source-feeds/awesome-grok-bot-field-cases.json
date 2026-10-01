@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 185,
+    "total": 186,
     "candidates": 7,
     "xCandidates": 0,
     "nonXCandidates": 7,
-    "alreadyIngested": 178,
+    "alreadyIngested": 179,
     "pending": 0
   },
   "cases": [
@@ -2421,6 +2421,19 @@
       "url": "https://github.com/tink1010/dont-panic-grokbot",
       "sourceSummary": "Hitchhiker’s Guide–flavored Grok Bot (x.ai/bot share) built around KTeaTime/RSIBreak-style tea timers, water/stretch reminders, and uplift menus, with public bot-rules.md.",
       "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "0xtoji-grok-bot-trading-agent-mints-its-own-meme-coin",
+      "title": "0xToji: Grok Bot trading agent mints its own meme coin",
+      "url": "https://x.com/Yel0_22G/status/2105526443732308021",
+      "sourceSummary": "Field case: a Grok Bot tasked only to trade memecoins autonomously launched its own token (VOXA) and grew a small stack overnight under a risk-review agent.",
+      "sourceType": "x",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
       "ingest": {
