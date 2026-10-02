@@ -196705,5 +196705,129 @@
     "xPostUrl": "https://x.com/Yel0_22G/status/2105526443732308021",
     "sourceUrl": "https://x.com/Yel0_22G/status/2105526443732308021",
     "sourceLabel": "0xToji on X"
+  },
+  {
+    "slug": "mattyp-grok-bot-is-now-more-proactive",
+    "title": "Grok Bot is now more proactive",
+    "headline": "Grok Bot is now more proactive.",
+    "body": "Grok Bot is now more proactive. \n\nWhat does that mean? Here's one example:\n\nI switched flights, but @bot noticed I didn't update my Uber reservation\n\nBot realized, then pinged me to update the reservation *during* my connecting flight\n\nI had @starlink, so I was able to change it before I landed and save myself a headache",
+    "whatTheyDid": "Grok Bot is now more proactive.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Grok Bot is now more proactive.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "matt palmer",
+    "handle": "mattyp",
+    "publishedAt": "2026-10-01",
+    "xPostUrl": "https://x.com/mattyp/status/2105718647218200587",
+    "sourceUrl": "https://x.com/mattyp/status/2105718647218200587",
+    "sourceLabel": "matt palmer on X"
+  },
+  {
+    "slug": "williamzhang20-leetcode-clusters-leetcode-map-created-by-grok-b",
+    "title": "leetcode-clusters — LeetCode map created by Grok Bot",
+    "headline": "Interactive bubble map of every LeetCode problem by shared tags—static site created by Grok Bot and published on GitHub Pages.",
+    "whatTheyDid": "Interactive bubble map of every LeetCode problem by shared tags—static site created by Grok Bot and published on GitHub Pages.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "Interactive bubble map of every LeetCode problem by shared tags—static site created by Grok Bot and published on GitHub Pages.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "github",
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "WilliamZhang20",
+    "publishedAt": "2026-10-02",
+    "sourceUrl": "https://github.com/WilliamZhang20/leetcode-clusters",
+    "sourceLabel": "WilliamZhang20 · GitHub"
+  },
+  {
+    "slug": "scapp-personal-news-reader-pin-magazine-refreshed-by-g",
+    "title": "personal-news-reader — PIN magazine refreshed by Grok Bot",
+    "headline": "PIN-gated personal news magazine on GitHub Pages whose feed is refreshed on a schedule by Grok Bot.",
+    "whatTheyDid": "PIN-gated personal news magazine on GitHub Pages whose feed is refreshed on a schedule by Grok Bot.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "PIN-gated personal news magazine on GitHub Pages whose feed is refreshed on a schedule by Grok Bot.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "scapp",
+    "publishedAt": "2026-09-23",
+    "sourceUrl": "https://github.com/scapp/personal-news-reader",
+    "sourceLabel": "scapp · GitHub"
+  },
+  {
+    "slug": "gilsrubin-sys-market-indicator-breadth-gauge-product-of-grok-b",
+    "title": "market-indicator — breadth gauge product of Grok Bot",
+    "headline": "Browser market-breadth overbought/oversold gauge shipped as a product of Grok Bot (HTML + data.json dashboard).",
+    "whatTheyDid": "Browser market-breadth overbought/oversold gauge shipped as a product of Grok Bot (HTML + data.json dashboard).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Browser market-breadth overbought/oversold gauge shipped as a product of Grok Bot (HTML + data.json dashboard).",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "gilsrubin-sys",
+    "publishedAt": "2026-09-25",
+    "sourceUrl": "https://github.com/gilsrubin-sys/market-indicator",
+    "sourceLabel": "gilsrubin-sys · GitHub"
   }
 ]

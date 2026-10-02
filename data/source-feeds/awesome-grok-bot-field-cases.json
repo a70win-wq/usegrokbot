@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 187,
+    "total": 191,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 179,
+    "alreadyIngested": 183,
     "pending": 0
   },
   "cases": [
@@ -2454,6 +2454,58 @@
         "attempts": 1,
         "code": "no_grok_signal",
         "reason": "Source does not mention Grok Bot."
+      }
+    },
+    {
+      "id": "mattyp-proactive-grok-bot-catches-missed-uber-after-flight-change",
+      "title": "mattyp: proactive Grok Bot catches missed Uber after flight change",
+      "url": "https://x.com/mattyp/status/2105718647218200587",
+      "sourceSummary": "mattyp’s Primary Bot example: after a flight change, Grok Bot noticed the Uber reservation was stale and pinged mid-connection (via Starlink) so it could be updated before landing.",
+      "sourceType": "x",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "leetcode-clusters-leetcode-map-created-by-grok-bot",
+      "title": "leetcode-clusters — LeetCode map created by Grok Bot",
+      "url": "https://github.com/WilliamZhang20/leetcode-clusters",
+      "sourceSummary": "Interactive bubble map of every LeetCode problem by shared tags—static site created by Grok Bot and published on GitHub Pages.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "personal-news-reader-pin-magazine-refreshed-by-grok-bot",
+      "title": "personal-news-reader — PIN magazine refreshed by Grok Bot",
+      "url": "https://github.com/scapp/personal-news-reader",
+      "sourceSummary": "PIN-gated personal news magazine on GitHub Pages whose feed is refreshed on a schedule by Grok Bot.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "market-indicator-breadth-gauge-product-of-grok-bot",
+      "title": "market-indicator — breadth gauge product of Grok Bot",
+      "url": "https://github.com/gilsrubin-sys/market-indicator",
+      "sourceSummary": "Browser market-breadth overbought/oversold gauge shipped as a product of Grok Bot (HTML + data.json dashboard).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
       }
     }
   ]
