@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 193,
+    "total": 195,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 185,
+    "alreadyIngested": 187,
     "pending": 0
   },
   "cases": [
@@ -2526,6 +2526,32 @@
       "title": "taller-grok-bot — Lionel captain team workshop (leads/landing/email)",
       "url": "https://github.com/valenzmanu/taller-grok-bot",
       "sourceSummary": "Guatemala Meetup workshop: captain Bot Lionel spins up Di María/Riquelme/Julián with skills to find restaurant leads, demo a landing, and draft an email (no send).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "mijn-bots-iphone-pwa-for-grok-bot-update-posts",
+      "title": "mijn-bots — iPhone PWA for Grok Bot update posts",
+      "url": "https://github.com/michaelhofsteenge-art/mijn-bots",
+      "sourceSummary": "Dutch iPhone PWA with one big button per Grok Bot assistant to read the latest (and prior) update posts offline-friendly.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "falcon-eye-3d-falcon-stoop-game-made-by-grok-bot",
+      "title": "falcon-eye — 3D falcon stoop game made by Grok Bot",
+      "url": "https://github.com/frank-otto/falcon-eye",
+      "sourceSummary": "Single-file playable three.js peregrine stoop game published as a Grok Bot build artifact (GitHub Pages).",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

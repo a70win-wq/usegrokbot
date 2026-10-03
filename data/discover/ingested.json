@@ -196885,5 +196885,63 @@
     "publishedAt": "2026-10-02",
     "sourceUrl": "https://github.com/valenzmanu/taller-grok-bot",
     "sourceLabel": "valenzmanu · GitHub"
+  },
+  {
+    "slug": "michaelhofsteenge-art-mijn-bots-iphone-pwa-for-grok-bot-update-posts",
+    "title": "mijn-bots — iPhone PWA for Grok Bot update posts",
+    "headline": "Dutch iPhone PWA with one big button per Grok Bot assistant to read the latest (and prior) update posts offline-friendly.",
+    "whatTheyDid": "Dutch iPhone PWA with one big button per Grok Bot assistant to read the latest (and prior) update posts offline-friendly.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Dutch iPhone PWA with one big button per Grok Bot assistant to read the latest (and prior) update posts offline-friendly.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "michaelhofsteenge-art",
+    "publishedAt": "2026-09-28",
+    "sourceUrl": "https://github.com/michaelhofsteenge-art/mijn-bots",
+    "sourceLabel": "michaelhofsteenge-art · GitHub"
+  },
+  {
+    "slug": "frank-otto-falcon-eye-3d-falcon-stoop-game-made-by-grok-bot",
+    "title": "falcon-eye — 3D falcon stoop game made by Grok Bot",
+    "headline": "Single-file playable three.js peregrine stoop game published as a Grok Bot build artifact (GitHub Pages).",
+    "whatTheyDid": "Single-file playable three.js peregrine stoop game published as a Grok Bot build artifact (GitHub Pages).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Single-file playable three.js peregrine stoop game published as a Grok Bot build artifact (GitHub Pages).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "frank-otto",
+    "publishedAt": "2026-10-03",
+    "sourceUrl": "https://github.com/frank-otto/falcon-eye",
+    "sourceLabel": "frank-otto · GitHub"
   }
 ]
