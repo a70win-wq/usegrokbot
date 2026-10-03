@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 191,
+    "total": 193,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 183,
+    "alreadyIngested": 185,
     "pending": 0
   },
   "cases": [
@@ -2500,6 +2500,32 @@
       "title": "market-indicator — breadth gauge product of Grok Bot",
       "url": "https://github.com/gilsrubin-sys/market-indicator",
       "sourceSummary": "Browser market-breadth overbought/oversold gauge shipped as a product of Grok Bot (HTML + data.json dashboard).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-usage-weekly-activity-report-from-bot-box-logs",
+      "title": "grokbot-usage — weekly activity report from Bot box logs",
+      "url": "https://github.com/d3ming/grokbot-usage",
+      "sourceSummary": "Weekly Grok Bot usage report that reads local agent logs on the Bot computer and writes an HTML page plus a five-second text summary (activity proxy, not tokens).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "taller-grok-bot-lionel-captain-team-workshop-leads-landing-email",
+      "title": "taller-grok-bot — Lionel captain team workshop (leads/landing/email)",
+      "url": "https://github.com/valenzmanu/taller-grok-bot",
+      "sourceSummary": "Guatemala Meetup workshop: captain Bot Lionel spins up Di María/Riquelme/Julián with skills to find restaurant leads, demo a landing, and draft an email (no send).",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

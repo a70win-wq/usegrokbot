@@ -196829,5 +196829,61 @@
     "publishedAt": "2026-09-25",
     "sourceUrl": "https://github.com/gilsrubin-sys/market-indicator",
     "sourceLabel": "gilsrubin-sys · GitHub"
+  },
+  {
+    "slug": "d3ming-grokbot-usage-weekly-activity-report-from-bot-bo",
+    "title": "grokbot-usage — weekly activity report from Bot box logs",
+    "headline": "Weekly Grok Bot usage report that reads local agent logs on the Bot computer and writes an HTML page plus a five-second text summary (activity proxy, not tokens).",
+    "whatTheyDid": "Weekly Grok Bot usage report that reads local agent logs on the Bot computer and writes an HTML page plus a five-second text summary (activity proxy, not tokens).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Weekly Grok Bot usage report that reads local agent logs on the Bot computer and writes an HTML page plus a five-second text summary (activity proxy, not tokens).",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "weekly",
+    "source": "community",
+    "authorName": "d3ming",
+    "publishedAt": "2026-10-02",
+    "sourceUrl": "https://github.com/d3ming/grokbot-usage",
+    "sourceLabel": "d3ming · GitHub"
+  },
+  {
+    "slug": "valenzmanu-taller-grok-bot-lionel-captain-team-workshop-lea",
+    "title": "taller-grok-bot — Lionel captain team workshop (leads/landing/email)",
+    "headline": "Guatemala Meetup workshop: captain Bot Lionel spins up Di María/Riquelme/Julián with skills to find restaurant leads, demo a landing, and draft an email (no send).",
+    "whatTheyDid": "Guatemala Meetup workshop: captain Bot Lionel spins up Di María/Riquelme/Julián with skills to find restaurant leads, demo a landing, and draft an email (no send).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Sales teams",
+      "Founders"
+    ],
+    "usefulFor": "Sales teams / Founders",
+    "output": "Guatemala Meetup workshop: captain Bot Lionel spins up Di María/Riquelme/Julián with skills to find restaurant leads, demo a landing, and draft an email (no send).",
+    "category": "sales",
+    "outcomes": [
+      "grow-business",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "valenzmanu",
+    "publishedAt": "2026-10-02",
+    "sourceUrl": "https://github.com/valenzmanu/taller-grok-bot",
+    "sourceLabel": "valenzmanu · GitHub"
   }
 ]
