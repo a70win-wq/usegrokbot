@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 195,
+    "total": 205,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 187,
+    "alreadyIngested": 197,
     "pending": 0
   },
   "cases": [
@@ -2553,6 +2553,136 @@
       "url": "https://github.com/frank-otto/falcon-eye",
       "sourceSummary": "Single-file playable three.js peregrine stoop game published as a Grok Bot build artifact (GitHub Pages).",
       "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "referral-scout-linkedin-referral-grok-bot-assistant",
+      "title": "referral-scout — LinkedIn referral Grok Bot assistant",
+      "url": "https://github.com/IreneYe08/referral-scout",
+      "sourceSummary": "Field Grok Bot assistant/template that finds LinkedIn contacts and drafts referral outreach with human approval before every send.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "1nsar-grok-templates-5-free-paste-ready-grok-bot-templates",
+      "title": "1nsar/grok-templates — 5 free paste-ready Grok Bot templates",
+      "url": "https://github.com/1nsar/grok-templates",
+      "sourceSummary": "Landing page of five free, copy-paste Grok Bot first-message templates (lead research, inbox, meetings, content, admin) by @insar.builds.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-intrusion-detection-team-8-agent-windows-ids",
+      "title": "grok-bot-intrusion-detection-team — 8-agent Windows IDS",
+      "url": "https://github.com/ritvikindupuri/grok-bot-intrusion-detection-team",
+      "sourceSummary": "Eight-agent Grok Bot team that watches a Windows PC for intrusion signals, reports daily deltas, and only remediates after owner approval.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "eyeskull2220-grokbot-sovereignforge-floor-os-handoff",
+      "title": "eyeskull2220/grokbot — SovereignForge Floor OS handoff",
+      "url": "https://github.com/eyeskull2220/grokbot",
+      "sourceSummary": "Operator-desk / Floor OS handoff pack for a Grok Bot CEO and six-seat group (no keys or exchange sessions in-repo; trading stays elsewhere).",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "boydt-morning-brief-grok-bot-written-daily-brief-site",
+      "title": "boydt/morning-brief — Grok Bot–written daily brief site",
+      "url": "https://github.com/boydt/morning-brief",
+      "sourceSummary": "Static morning-brief site filled by a Grok Bot assistant (April) with grokbot:// deep links for follow-up questions and public data sync.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "automated-db2-install-grokbot-db2-lab-menu-for-bot",
+      "title": "automated-db2-install-grokbot — Db2 lab menu for Bot",
+      "url": "https://github.com/raganor-tech/automated-db2-install-grokbot",
+      "sourceSummary": "Lab write-up and menu script for Db2 11.5.9 on WSL2/AlmaLinux 9, with BOT-INSTRUCTIONS.md so a Grok Bot can drive the install/smoke-test steps safely.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "immortalwrt-jdcloud-cs-07-firmware-built-by-grok-bot",
+      "title": "immortalwrt-jdcloud-cs-07 — firmware built by Grok Bot",
+      "url": "https://github.com/pengyuw96/immortalwrt-jdcloud-cs-07",
+      "sourceSummary": "ImmortalWrt SNAPSHOT image for JDCloud RE-CS-07 (qualcommax/ipq60xx), explicitly tagged as compiled by Grok Bot on 2026-10-04.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "vitalitychems-dot-z-tessera-grok-bot-handoff-index",
+      "title": "vitalitychems-dot/z — Tessera Grok Bot handoff index",
+      "url": "https://github.com/vitalitychems-dot/z",
+      "sourceSummary": "Single handoff entrypoint that points a Grok Bot at WALK.md plus the Tessera repository index (no secrets) for continuing Father/Tessera work.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "compile-london-jet-semrick-workshop-notes-via-grok-bot",
+      "title": "Compile London: Jet Semrick workshop notes via Grok Bot",
+      "url": "https://emrecavunt.com/blog/grok-bot-jet-semrick-compile-london",
+      "sourceSummary": "Case write-up of using Grok Bot at Compile London: speech-to-text Notion notes plus separate bots for deck, blog, social, and editorial review.",
+      "sourceType": "article",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "satheez-dev-grok-bot-as-desktop-publishing-teammate",
+      "title": "satheez.dev: Grok Bot as desktop publishing teammate",
+      "url": "https://satheez.dev/writing/grok-bot-desktop-assistant",
+      "sourceSummary": "Practitioner notes on running Grok Bot for satheez.dev publish paths—plugins vs browser, cloud-agent PRs, and hard stops before public posts.",
+      "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
       "ingest": {

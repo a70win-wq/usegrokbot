@@ -196943,5 +196943,293 @@
     "publishedAt": "2026-10-03",
     "sourceUrl": "https://github.com/frank-otto/falcon-eye",
     "sourceLabel": "frank-otto · GitHub"
+  },
+  {
+    "slug": "ireneye08-referral-scout-linkedin-referral-grok-bot-assist",
+    "title": "referral-scout — LinkedIn referral Grok Bot assistant",
+    "headline": "Field Grok Bot assistant/template that finds LinkedIn contacts and drafts referral outreach with human approval before every send.",
+    "whatTheyDid": "Field Grok Bot assistant/template that finds LinkedIn contacts and drafts referral outreach with human approval before every send.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Field Grok Bot assistant/template that finds LinkedIn contacts and drafts referral outreach with human approval before every send.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "linkedin"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "IreneYe08",
+    "publishedAt": "2026-10-02",
+    "sourceUrl": "https://github.com/IreneYe08/referral-scout",
+    "sourceLabel": "IreneYe08 · GitHub"
+  },
+  {
+    "slug": "1nsar-1nsar-grok-templates-5-free-paste-ready-grok-bot",
+    "title": "1nsar/grok-templates — 5 free paste-ready Grok Bot templates",
+    "headline": "Landing page of five free, copy-paste Grok Bot first-message templates (lead research, inbox, meetings, content, admin) by @insar.builds.",
+    "whatTheyDid": "Landing page of five free, copy-paste Grok Bot first-message templates (lead research, inbox, meetings, content, admin) by @insar.builds.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Landing page of five free, copy-paste Grok Bot first-message templates (lead research, inbox, meetings, content, admin) by @insar.builds.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "1nsar",
+    "publishedAt": "2026-10-03",
+    "sourceUrl": "https://github.com/1nsar/grok-templates",
+    "sourceLabel": "1nsar · GitHub"
+  },
+  {
+    "slug": "ritvikindupuri-grok-bot-intrusion-detection-team-8-agent-window",
+    "title": "grok-bot-intrusion-detection-team — 8-agent Windows IDS",
+    "headline": "Eight-agent Grok Bot team that watches a Windows PC for intrusion signals, reports daily deltas, and only remediates after owner approval.",
+    "whatTheyDid": "Eight-agent Grok Bot team that watches a Windows PC for intrusion signals, reports daily deltas, and only remediates after owner approval.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Eight-agent Grok Bot team that watches a Windows PC for intrusion signals, reports daily deltas, and only remediates after owner approval.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "ritvikindupuri",
+    "publishedAt": "2026-09-29",
+    "sourceUrl": "https://github.com/ritvikindupuri/grok-bot-intrusion-detection-team",
+    "sourceLabel": "ritvikindupuri · GitHub"
+  },
+  {
+    "slug": "eyeskull2220-eyeskull2220-grokbot-sovereignforge-floor-os-han",
+    "title": "eyeskull2220/grokbot — SovereignForge Floor OS handoff",
+    "headline": "Operator-desk / Floor OS handoff pack for a Grok Bot CEO and six-seat group (no keys or exchange sessions in-repo; trading stays elsewhere).",
+    "whatTheyDid": "Operator-desk / Floor OS handoff pack for a Grok Bot CEO and six-seat group (no keys or exchange sessions in-repo; trading stays elsewhere).",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Operator-desk / Floor OS handoff pack for a Grok Bot CEO and six-seat group (no keys or exchange sessions in-repo; trading stays elsewhere).",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "eyeskull2220",
+    "publishedAt": "2026-09-02",
+    "sourceUrl": "https://github.com/eyeskull2220/grokbot",
+    "sourceLabel": "eyeskull2220 · GitHub"
+  },
+  {
+    "slug": "boydt-boydt-morning-brief-grok-bot-written-daily-brief",
+    "title": "boydt/morning-brief — Grok Bot–written daily brief site",
+    "headline": "Static morning-brief site filled by a Grok Bot assistant (April) with grokbot:// deep links for follow-up questions and public data sync.",
+    "whatTheyDid": "Static morning-brief site filled by a Grok Bot assistant (April) with grokbot:// deep links for follow-up questions and public data sync.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Static morning-brief site filled by a Grok Bot assistant (April) with grokbot:// deep links for follow-up questions and public data sync.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "daily",
+    "source": "community",
+    "authorName": "boydt",
+    "publishedAt": "2026-09-30",
+    "sourceUrl": "https://github.com/boydt/morning-brief",
+    "sourceLabel": "boydt · GitHub"
+  },
+  {
+    "slug": "raganor-tech-automated-db2-install-grokbot-db2-lab-menu-for-b",
+    "title": "automated-db2-install-grokbot — Db2 lab menu for Bot",
+    "headline": "Lab write-up and menu script for Db2 11.5.9 on WSL2/AlmaLinux 9, with BOT-INSTRUCTIONS.md so a Grok Bot can drive the install/smoke-test steps safely.",
+    "whatTheyDid": "Lab write-up and menu script for Db2 11.5.9 on WSL2/AlmaLinux 9, with BOT-INSTRUCTIONS.md so a Grok Bot can drive the install/smoke-test steps safely.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Lab write-up and menu script for Db2 11.5.9 on WSL2/AlmaLinux 9, with BOT-INSTRUCTIONS.md so a Grok Bot can drive the install/smoke-test steps safely.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "raganor-tech",
+    "publishedAt": "2026-10-03",
+    "sourceUrl": "https://github.com/raganor-tech/automated-db2-install-grokbot",
+    "sourceLabel": "raganor-tech · GitHub"
+  },
+  {
+    "slug": "pengyuw96-immortalwrt-jdcloud-cs-07-firmware-built-by-grok",
+    "title": "immortalwrt-jdcloud-cs-07 — firmware built by Grok Bot",
+    "headline": "ImmortalWrt SNAPSHOT image for JDCloud RE-CS-07 (qualcommax/ipq60xx), explicitly tagged as compiled by Grok Bot on 2026-10-04.",
+    "whatTheyDid": "ImmortalWrt SNAPSHOT image for JDCloud RE-CS-07 (qualcommax/ipq60xx), explicitly tagged as compiled by Grok Bot on 2026-10-04.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "ImmortalWrt SNAPSHOT image for JDCloud RE-CS-07 (qualcommax/ipq60xx), explicitly tagged as compiled by Grok Bot on 2026-10-04.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "pengyuw96",
+    "publishedAt": "2026-10-04",
+    "sourceUrl": "https://github.com/pengyuw96/immortalwrt-jdcloud-cs-07",
+    "sourceLabel": "pengyuw96 · GitHub"
+  },
+  {
+    "slug": "vitalitychems-dot-vitalitychems-dot-z-tessera-grok-bot-handoff-ind",
+    "title": "vitalitychems-dot/z — Tessera Grok Bot handoff index",
+    "headline": "Single handoff entrypoint that points a Grok Bot at WALK.md plus the Tessera repository index (no secrets) for continuing Father/Tessera work.",
+    "whatTheyDid": "Single handoff entrypoint that points a Grok Bot at WALK.md plus the Tessera repository index (no secrets) for continuing Father/Tessera work.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Single handoff entrypoint that points a Grok Bot at WALK.md plus the Tessera repository index (no secrets) for continuing Father/Tessera work.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "vitalitychems-dot",
+    "publishedAt": "2026-10-03",
+    "sourceUrl": "https://github.com/vitalitychems-dot/z",
+    "sourceLabel": "vitalitychems-dot · GitHub"
+  },
+  {
+    "slug": "emre-cavunt-jet-semrick-workshop-notes-via-grok-bot",
+    "title": "Jet Semrick workshop notes via Grok Bot",
+    "headline": "Case write-up of using Grok Bot at Compile London: speech-to-text Notion notes plus separate bots for deck, blog, social, and editorial review.",
+    "whatTheyDid": "Case write-up of using Grok Bot at Compile London: speech-to-text Notion notes plus separate bots for deck, blog, social, and editorial review.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Case write-up of using Grok Bot at Compile London: speech-to-text Notion notes plus separate bots for deck, blog, social, and editorial review.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "notion"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Emre Cavunt",
+    "publishedAt": "2026-09-20",
+    "sourceUrl": "https://emrecavunt.com/blog/grok-bot-jet-semrick-compile-london",
+    "sourceLabel": "Emre Cavunt · Emre Cavunt"
+  },
+  {
+    "slug": "satheez-vettivel-grok-bot-as-desktop-publishing-teammate",
+    "title": "Grok Bot as desktop publishing teammate",
+    "headline": "Practitioner notes on running Grok Bot for satheez.dev publish paths—plugins vs browser, cloud-agent PRs, and hard stops before public posts.",
+    "whatTheyDid": "Practitioner notes on running Grok Bot for satheez.dev publish paths—plugins vs browser, cloud-agent PRs, and hard stops before public posts.",
+    "howItWorks": "This public article was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "Practitioner notes on running Grok Bot for satheez.dev publish paths—plugins vs browser, cloud-agent PRs, and hard stops before public posts.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Satheez Vettivel",
+    "publishedAt": "2026-10-01",
+    "sourceUrl": "https://satheez.dev/writing/grok-bot-desktop-assistant",
+    "sourceLabel": "Satheez Vettivel · Satheez Vettivel"
   }
 ]
