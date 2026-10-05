@@ -197289,5 +197289,33 @@
     "publishedAt": "2026-09-04",
     "sourceUrl": "https://github.com/Sliothar1/GrokD4M",
     "sourceLabel": "Sliothar1 · GitHub"
+  },
+  {
+    "slug": "jt-wang-visa-bulletin-push-visa-priority-date-alerts-to",
+    "title": "Visa Bulletin Push — visa priority-date alerts to a Grok Bot routine",
+    "headline": "Free US Visa Bulletin alerts for China and India EB-1/2/3 that push to a webhook-triggered Grok Bot routine (or ChatGPT and other agents) with one-sentence setup and an immediate test alert.",
+    "whatTheyDid": "Free US Visa Bulletin alerts for China and India EB-1/2/3 that push to a webhook-triggered Grok Bot routine (or ChatGPT and other agents) with one-sentence setup and an immediate test alert.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Free US Visa Bulletin alerts for China and India EB-1/2/3 that push to a webhook-triggered Grok Bot routine (or ChatGPT and other agents) with one-sentence setup and an immediate test alert.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "jt-wang",
+    "publishedAt": "2026-10-04",
+    "sourceUrl": "https://github.com/jt-wang/visa-bulletin-push",
+    "sourceLabel": "jt-wang · GitHub"
   }
 ]
