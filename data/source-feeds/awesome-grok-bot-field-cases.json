@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 208,
+    "total": 211,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 200,
+    "alreadyIngested": 203,
     "pending": 0
   },
   "cases": [
@@ -2722,6 +2722,45 @@
       "url": "https://github.com/jt-wang/visa-bulletin-push",
       "sourceSummary": "Free US Visa Bulletin alerts for China and India EB-1/2/3 that push to a webhook-triggered Grok Bot routine (or ChatGPT and other agents) with one-sentence setup and an immediate test alert.",
       "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "tesla-ready-a-grok-bot-that-warms-up-your-tesla",
+      "title": "Tesla Ready — a Grok Bot that warms up your Tesla",
+      "url": "https://github.com/acupofcode2/tesla-ready-grok-bot",
+      "sourceSummary": "Public skills behind the free Tesla Ready Grok Bot template, which pre-heats or cools the cabin from your calendar and traffic using only Tesla's official Fleet API, with keys and tokens kept on the owner's Grok Bot computer.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "photo-trace-phone-photo-of-an-error-to-root-cause-dublin-builder-day",
+      "title": "photo-trace — phone photo of an error to root cause (Dublin Builder Day)",
+      "url": "https://github.com/henry-da-lab/photo-trace",
+      "sourceSummary": "Built with Grok Bot and Bronto at Grok Bot Dublin Builder Day on 4 Oct 2026: snap an error on your phone and the laptop shows the matching Bronto log search, one root cause and one fix command that only runs after a human approves.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "netprojects-how-we-run-our-sites-with-about-30-grok-bot-agents",
+      "title": "NetProjects: how we run our sites with about 30 Grok Bot agents",
+      "url": "https://netprojects.com/insights/how-we-run-netprojects-with-ai-agents",
+      "sourceSummary": "Internet Projects Ltd explains running about 30 single-job agents on Grok Bot, led by a Chief of Staff, with drafts by default, a human yes for production, code handed to Cursor through reviewed pull requests, and the early September issues it reported to support.",
+      "sourceType": "article",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
       "ingest": {
