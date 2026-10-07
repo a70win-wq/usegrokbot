@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 211,
+    "total": 212,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 203,
+    "alreadyIngested": 204,
     "pending": 0
   },
   "cases": [
@@ -2761,6 +2761,19 @@
       "url": "https://netprojects.com/insights/how-we-run-netprojects-with-ai-agents",
       "sourceSummary": "Internet Projects Ltd explains running about 30 single-job agents on Grok Bot, led by a Chief of Staff, with drafts by default, a human yes for production, code handed to Cursor through reviewed pull requests, and the early September issues it reported to support.",
       "sourceType": "article",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "frostwell-cakes-a-next-js-cake-shop-built-by-grok-bot-from-github-issues",
+      "title": "Frostwell Cakes — a Next.js cake shop built by Grok Bot from GitHub issues",
+      "url": "https://github.com/dev-repos/nextjs-cake-shop-grok-bot",
+      "sourceSummary": "MIT demo for an AI system design tutorial: a mobile-first Next.js custom-cake shop that Grok Bot built from GitHub issues while being driven from a phone, deployed to Vercel, with orders carried in HMAC-signed links instead of a database, Accept and Decline emails to the bakery, and a stubbed PayPal invoice step.",
+      "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
       "ingest": {
