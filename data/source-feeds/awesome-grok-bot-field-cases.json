@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 212,
+    "total": 215,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 204,
+    "alreadyIngested": 207,
     "pending": 0
   },
   "cases": [
@@ -2773,6 +2773,45 @@
       "title": "Frostwell Cakes — a Next.js cake shop built by Grok Bot from GitHub issues",
       "url": "https://github.com/dev-repos/nextjs-cake-shop-grok-bot",
       "sourceSummary": "MIT demo for an AI system design tutorial: a mobile-first Next.js custom-cake shop that Grok Bot built from GitHub issues while being driven from a phone, deployed to Vercel, with orders carried in HMAC-signed links instead of a database, Accept and Decline emails to the bakery, and a stubbed PayPal invoice step.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "the-2026-nobel-prizes-explained-by-a-team-of-grok-bots",
+      "title": "The 2026 Nobel Prizes explained by a team of Grok Bots",
+      "url": "https://github.com/az9713/grokbots-nobel-2026-explainers",
+      "sourceSummary": "Three interactive single-page explainers of the 2026 Physics, Medicine and Chemistry prizes built by a named agent team (researcher, domain writer, illustrator, frontend, tester and publisher, orchestrated by a Chief GrokBot), each folder keeping the research dossier, narrative, QA report and, for chemistry, the full team transcript.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "gefu-hls-journal-an-encrypted-mood-journal-pwa-built-entirely-by-a-grok-bot-team",
+      "title": "Gefühls-Journal — an encrypted mood-journal PWA built entirely by a Grok Bot team",
+      "url": "https://github.com/Oliver19xx/gefuehlsjournal",
+      "sourceSummary": "German offline journaling app whose planning, backlog, design, code, tests and deployment came from a team of Grok Bots (product owner, UX, UI, tester and developer) with only direction from a human; it uses a feelings wheel and writing prompts and keeps every entry AES-256-GCM encrypted on the device, optionally behind a PIN.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "agent-city-a-3d-city-of-one-user-s-grok-bot-assistants-and-their-real-work",
+      "title": "Agent City — a 3D city of one user's Grok Bot assistants and their real work",
+      "url": "https://github.com/brandocalricia/agent-city",
+      "sourceSummary": "Public three.js city (live on GitHub Pages) where one user's AI assistants and 15 working roles such as Scout, Librarian, Council and Auditor show their real routines, saved skills, finds and activity log, grown by a Grok Bot about three sessions a day, with a review-and-apply feed for Grok Build and private email and calendar notes kept to the local copy.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",

@@ -197431,5 +197431,91 @@
     "publishedAt": "2026-10-06",
     "sourceUrl": "https://github.com/dev-repos/nextjs-cake-shop-grok-bot",
     "sourceLabel": "dev-repos · GitHub"
+  },
+  {
+    "slug": "az9713-the-2026-nobel-prizes-explained-by-a-team-of-gro",
+    "title": "The 2026 Nobel Prizes explained by a team of Grok Bots",
+    "headline": "Three interactive single-page explainers of the 2026 Physics, Medicine and Chemistry prizes built by a named agent team (researcher, domain writer, illustrator, frontend, tester and publisher, orchestrated by a Chief GrokBot), each folder keeping the research dossier, narrative, QA report and, for chemistry, the full team transcript.",
+    "whatTheyDid": "Three interactive single-page explainers of the 2026 Physics, Medicine and Chemistry prizes built by a named agent team (researcher, domain writer, illustrator, frontend, tester and publisher, orchestrated by a Chief GrokBot), each folder keeping the research dossier, narrative, QA report and, for chemistry, the full team transcript.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Researchers",
+      "Operators"
+    ],
+    "usefulFor": "Researchers / Operators",
+    "output": "Three interactive single-page explainers of the 2026 Physics, Medicine and Chemistry prizes built by a named agent team (researcher, domain writer, illustrator, frontend, tester and publisher, orchestrated by a Chief GrokBot), each folder keeping the research dossier, narrative, QA report and, for chemistry, the full team transcript.",
+    "category": "research",
+    "outcomes": [
+      "research",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "az9713",
+    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://github.com/az9713/grokbots-nobel-2026-explainers",
+    "sourceLabel": "az9713 · GitHub"
+  },
+  {
+    "slug": "oliver19xx-gefu-hls-journal-an-encrypted-mood-journal-pwa-b",
+    "title": "Gefühls-Journal — an encrypted mood-journal PWA built entirely by a Grok Bot team",
+    "headline": "German offline journaling app whose planning, backlog, design, code, tests and deployment came from a team of Grok Bots (product owner, UX, UI, tester and developer) with only direction from a human; it uses a feelings wheel and writing prompts and keeps every entry AES-256-GCM encrypted on the device, optionally behind a PIN.",
+    "whatTheyDid": "German offline journaling app whose planning, backlog, design, code, tests and deployment came from a team of Grok Bots (product owner, UX, UI, tester and developer) with only direction from a human; it uses a feelings wheel and writing prompts and keeps every entry AES-256-GCM encrypted on the device, optionally behind a PIN.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "German offline journaling app whose planning, backlog, design, code, tests and deployment came from a team of Grok Bots (product owner, UX, UI, tester and developer) with only direction from a human; it uses a feelings wheel and writing prompts and keeps every entry AES-256-GCM encrypted on the device, optionally behind a PIN.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Oliver19xx",
+    "publishedAt": "2026-10-07",
+    "sourceUrl": "https://github.com/Oliver19xx/gefuehlsjournal",
+    "sourceLabel": "Oliver19xx · GitHub"
+  },
+  {
+    "slug": "brandocalricia-agent-city-a-3d-city-of-one-users-grok-bot-assis",
+    "title": "Agent City — a 3D city of one user's Grok Bot assistants and their real work",
+    "headline": "Public three.js city (live on GitHub Pages) where one user's AI assistants and 15 working roles such as Scout, Librarian, Council and Auditor show their real routines, saved skills, finds and activity log, grown by a Grok Bot about three sessions a day, with a review-and-apply feed for Grok Build and private email and calendar notes kept to the local copy.",
+    "whatTheyDid": "Public three.js city (live on GitHub Pages) where one user's AI assistants and 15 working roles such as Scout, Librarian, Council and Auditor show their real routines, saved skills, finds and activity log, grown by a Grok Bot about three sessions a day, with a review-and-apply feed for Grok Build and private email and calendar notes kept to the local copy.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Public three.js city (live on GitHub Pages) where one user's AI assistants and 15 working roles such as Scout, Librarian, Council and Auditor show their real routines, saved skills, finds and activity log, grown by a Grok Bot about three sessions a day, with a review-and-apply feed for Grok Build and private email and calendar notes kept to the local copy.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "brandocalricia",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/brandocalricia/agent-city",
+    "sourceLabel": "brandocalricia · GitHub"
   }
 ]
