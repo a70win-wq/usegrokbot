@@ -197517,5 +197517,177 @@
     "publishedAt": "2026-10-08",
     "sourceUrl": "https://github.com/brandocalricia/agent-city",
     "sourceLabel": "brandocalricia · GitHub"
+  },
+  {
+    "slug": "thedreamerstop-grok-bot-showroom-webgl-toys-built-with-grok-bot",
+    "title": "Grok Bot Showroom — WebGL toys built with Grok Bot",
+    "headline": "Bilingual (Traditional Chinese and English) showroom repo with one dated folder per project built together with Grok Bot, each with its own README, build reports and a live GitHub Pages demo, starting with a 262k-particle WebGL2 stellar forge and a brass-rod shadow sculpture you can redraw.",
+    "whatTheyDid": "Bilingual (Traditional Chinese and English) showroom repo with one dated folder per project built together with Grok Bot, each with its own README, build reports and a live GitHub Pages demo, starting with a 262k-particle WebGL2 stellar forge and a brass-rod shadow sculpture you can redraw.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Bilingual (Traditional Chinese and English) showroom repo with one dated folder per project built together with Grok Bot, each with its own README, build reports and a live GitHub Pages demo, starting with a 262k-particle WebGL2 stellar forge and a brass-rod shadow sculpture you can redraw.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "github"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "TheDreamersTop",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/TheDreamersTop/grok-bot-showroom",
+    "sourceLabel": "TheDreamersTop · GitHub"
+  },
+  {
+    "slug": "zmgid-grokbot-home-move-a-whole-grok-bot-fleet-to-a-ne",
+    "title": "grokbot-home — move a whole Grok Bot fleet to a new account",
+    "headline": "One user's public \"home\" repo for switching Grok Bot accounts: a Bot on the new account reads BOOTSTRAP.md, asks for a passphrase to decrypt the Composio key, installs tools, then recreates every other Bot from saved profiles, memories and routines with CreateAgent and writes what it learned back.",
+    "whatTheyDid": "One user's public \"home\" repo for switching Grok Bot accounts: a Bot on the new account reads BOOTSTRAP.md, asks for a passphrase to decrypt the Composio key, installs tools, then recreates every other Bot from saved profiles, memories and routines with CreateAgent and writes what it learned back.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Creators",
+      "Content teams"
+    ],
+    "usefulFor": "Creators / Content teams",
+    "output": "One user's public \"home\" repo for switching Grok Bot accounts: a Bot on the new account reads BOOTSTRAP.md, asks for a passphrase to decrypt the Composio key, installs tools, then recreates every other Bot from saved profiles, memories and routines with CreateAgent and writes what it learned back.",
+    "category": "content",
+    "outcomes": [
+      "create-content",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "ZMGID",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/ZMGID/grokbot-home",
+    "sourceLabel": "ZMGID · GitHub"
+  },
+  {
+    "slug": "anselmcmakin-tavern-tabletop-rpg-in-a-group-chat-with-three-g",
+    "title": "Tavern — tabletop RPG in a group chat with three Grok Bots",
+    "headline": "Beta Grok Bot template for playing a tabletop RPG in a group chat, where a DM Bot runs the game, a Cast Bot voices NPCs and foes and a Party Bot plays AI heroes alongside the humans; the DM installs the engine from a checksummed release itself.",
+    "whatTheyDid": "Beta Grok Bot template for playing a tabletop RPG in a group chat, where a DM Bot runs the game, a Cast Bot voices NPCs and foes and a Party Bot plays AI heroes alongside the humans; the DM installs the engine from a checksummed release itself.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Beta Grok Bot template for playing a tabletop RPG in a group chat, where a DM Bot runs the game, a Cast Bot voices NPCs and foes and a Party Bot plays AI heroes alongside the humans; the DM installs the engine from a checksummed release itself.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "anselmcmakin",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/anselmcmakin/tavern",
+    "sourceLabel": "anselmcmakin · GitHub"
+  },
+  {
+    "slug": "smfworks-prime-directive-a-two-bot-coding-team-where-only",
+    "title": "Prime Directive — a two-Bot coding team where only you merge",
+    "headline": "Playbook and two shared Grok Bot templates, Builder Prime and Gatekeeper Prime, for a coding team in which one Bot builds, the other reviews and nothing merges without the human's approval, with setup and how-it-works guides.",
+    "whatTheyDid": "Playbook and two shared Grok Bot templates, Builder Prime and Gatekeeper Prime, for a coding team in which one Bot builds, the other reviews and nothing merges without the human's approval, with setup and how-it-works guides.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "Operators",
+      "Grok Bot users"
+    ],
+    "usefulFor": "Operators / Grok Bot users",
+    "output": "Playbook and two shared Grok Bot templates, Builder Prime and Gatekeeper Prime, for a coding team in which one Bot builds, the other reviews and nothing merges without the human's approval, with setup and how-it-works guides.",
+    "category": "operations",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "smfworks",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/smfworks/prime-directive",
+    "sourceLabel": "smfworks · GitHub"
+  },
+  {
+    "slug": "gabe-mobius-next-mission-grok-bot-template-files-for-u-s-mil",
+    "title": "Next Mission — Grok Bot template files for U.S. military transition",
+    "headline": "Shared files for the Next Mission Grok Bot template that helps U.S. service members who are retiring or separating, including a sourced master checklist by time to separation, state veteran benefits and scripts that check sourcing and build a personal deadline list.",
+    "whatTheyDid": "Shared files for the Next Mission Grok Bot template that helps U.S. service members who are retiring or separating, including a sourced master checklist by time to separation, state veteran benefits and scripts that check sourcing and build a personal deadline list.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Shared files for the Next Mission Grok Bot template that helps U.S. service members who are retiring or separating, including a sourced master checklist by time to separation, state veteran benefits and scripts that check sourcing and build a personal deadline list.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "gabe-mobius",
+    "publishedAt": "2026-10-08",
+    "sourceUrl": "https://github.com/gabe-mobius/next-mission",
+    "sourceLabel": "gabe-mobius · GitHub"
+  },
+  {
+    "slug": "open-medical-affairs-ai-in-action-for-medical-affairs-workshop-site-f",
+    "title": "AI in Action for Medical Affairs — workshop site for using Grok Bot",
+    "headline": "Companion website for the AI in Action for Medical Affairs workshop (13–14 Oct 2026, Philadelphia) that explains in plain words how attendees can hand the free Open Medical Affairs libraries to a personal agent such as Grok Bot and review what it makes.",
+    "whatTheyDid": "Companion website for the AI in Action for Medical Affairs workshop (13–14 Oct 2026, Philadelphia) that explains in plain words how attendees can hand the free Open Medical Affairs libraries to a personal agent such as Grok Bot and review what it makes.",
+    "howItWorks": "This public github was surfaced through the awesome-grok-bot Field Cases index. UseGrokBot uses the CC0 index summary plus source metadata, links to the original, and does not copy the source body. The publication date comes from machine-readable metadata on the original source.",
+    "whyUseful": "It is a public field example of Grok Bot being used for a real task, preserved here as a short discovery card with the original source one click away.",
+    "whyItMatters": "UseGrokBot can now discover useful cases beyond X without mirroring the original article, video, newsletter or repository. The linked source remains the authority for the full context.",
+    "whoShouldTry": [
+      "People exploring personal automation",
+      "Grok Bot users"
+    ],
+    "usefulFor": "People exploring personal automation / Grok Bot users",
+    "output": "Companion website for the AI in Action for Medical Affairs workshop (13–14 Oct 2026, Philadelphia) that explains in plain words how attendees can hand the free Open Medical Affairs libraries to a personal agent such as Grok Bot and review what it makes.",
+    "category": "personal",
+    "outcomes": [
+      "automate-work",
+      "save-time"
+    ],
+    "apps": [
+      "browser"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Open-Medical-Affairs",
+    "publishedAt": "2026-10-09",
+    "sourceUrl": "https://github.com/Open-Medical-Affairs/AI-in-Action-Website",
+    "sourceLabel": "Open-Medical-Affairs · GitHub"
   }
 ]

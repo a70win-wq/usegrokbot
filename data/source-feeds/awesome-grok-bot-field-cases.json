@@ -9,11 +9,11 @@
     "note": "The list metadata is CC0. Linked X posts, articles, videos, repositories and other source content retain their own rights. UseGrokBot uses the index as a discovery source, summarizes conservatively, and links back rather than copying source content wholesale."
   },
   "stats": {
-    "total": 215,
+    "total": 221,
     "candidates": 8,
     "xCandidates": 1,
     "nonXCandidates": 7,
-    "alreadyIngested": 207,
+    "alreadyIngested": 213,
     "pending": 0
   },
   "cases": [
@@ -2812,6 +2812,84 @@
       "title": "Agent City — a 3D city of one user's Grok Bot assistants and their real work",
       "url": "https://github.com/brandocalricia/agent-city",
       "sourceSummary": "Public three.js city (live on GitHub Pages) where one user's AI assistants and 15 working roles such as Scout, Librarian, Council and Auditor show their real routines, saved skills, finds and activity log, grown by a Grok Bot about three sessions a day, with a review-and-apply feed for Grok Build and private email and calendar notes kept to the local copy.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grok-bot-showroom-webgl-toys-built-with-grok-bot",
+      "title": "Grok Bot Showroom — WebGL toys built with Grok Bot",
+      "url": "https://github.com/TheDreamersTop/grok-bot-showroom",
+      "sourceSummary": "Bilingual (Traditional Chinese and English) showroom repo with one dated folder per project built together with Grok Bot, each with its own README, build reports and a live GitHub Pages demo, starting with a 262k-particle WebGL2 stellar forge and a brass-rod shadow sculpture you can redraw.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "grokbot-home-move-a-whole-grok-bot-fleet-to-a-new-account",
+      "title": "grokbot-home — move a whole Grok Bot fleet to a new account",
+      "url": "https://github.com/ZMGID/grokbot-home",
+      "sourceSummary": "One user's public \"home\" repo for switching Grok Bot accounts: a Bot on the new account reads BOOTSTRAP.md, asks for a passphrase to decrypt the Composio key, installs tools, then recreates every other Bot from saved profiles, memories and routines with CreateAgent and writes what it learned back.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "tavern-tabletop-rpg-in-a-group-chat-with-three-grok-bots",
+      "title": "Tavern — tabletop RPG in a group chat with three Grok Bots",
+      "url": "https://github.com/anselmcmakin/tavern",
+      "sourceSummary": "Beta Grok Bot template for playing a tabletop RPG in a group chat, where a DM Bot runs the game, a Cast Bot voices NPCs and foes and a Party Bot plays AI heroes alongside the humans; the DM installs the engine from a checksummed release itself.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "prime-directive-a-two-bot-coding-team-where-only-you-merge",
+      "title": "Prime Directive — a two-Bot coding team where only you merge",
+      "url": "https://github.com/smfworks/prime-directive",
+      "sourceSummary": "Playbook and two shared Grok Bot templates, Builder Prime and Gatekeeper Prime, for a coding team in which one Bot builds, the other reviews and nothing merges without the human's approval, with setup and how-it-works guides.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "next-mission-grok-bot-template-files-for-u-s-military-transition",
+      "title": "Next Mission — Grok Bot template files for U.S. military transition",
+      "url": "https://github.com/gabe-mobius/next-mission",
+      "sourceSummary": "Shared files for the Next Mission Grok Bot template that helps U.S. service members who are retiring or separating, including a sourced master checklist by time to separation, state veteran benefits and scripts that check sourcing and build a personal deadline list.",
+      "sourceType": "github",
+      "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
+      "sourceStatus": "already-ingested",
+      "ingest": {
+        "status": "published",
+        "attempts": 1
+      }
+    },
+    {
+      "id": "ai-in-action-for-medical-affairs-workshop-site-for-using-grok-bot",
+      "title": "AI in Action for Medical Affairs — workshop site for using Grok Bot",
+      "url": "https://github.com/Open-Medical-Affairs/AI-in-Action-Website",
+      "sourceSummary": "Companion website for the AI in Action for Medical Affairs workshop (13–14 Oct 2026, Philadelphia) that explains in plain words how attendees can hand the free Open Medical Affairs libraries to a personal agent such as Grok Bot and review what it makes.",
       "sourceType": "github",
       "sourceIndex": "RongleCat/awesome-grok-bot#field-cases",
       "sourceStatus": "already-ingested",
