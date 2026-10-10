@@ -197689,5 +197689,39 @@
     "publishedAt": "2026-10-09",
     "sourceUrl": "https://github.com/Open-Medical-Affairs/AI-in-Action-Website",
     "sourceLabel": "Open-Medical-Affairs · GitHub"
+  },
+  {
+    "slug": "louisferreira-i-made-this-reverse-engineer-grok-bot-because-it",
+    "title": "I made this reverse-engineer Grok bot because it's been getting popular",
+    "headline": "I made this reverse-engineer Grok bot because it's been getting popular.",
+    "body": "I made this reverse-engineer Grok bot because it's been getting popular. Let me know what you think and how I can improve it going forward.\nhttps://x.ai/bot/5enZ0Vvocx2Xph7gaiPpy",
+    "whatTheyDid": "I made this reverse-engineer Grok bot because it's been getting popular.",
+    "howItWorks": "UseGrokBot ingested this public X post. We keep the original permalink and did not re-run this Bot.",
+    "whyUseful": "A public example of someone handing work to Grok Bot, kept here with attribution.",
+    "whyItMatters": "The original X post is the source. This card is a short curator summary, not a reprint of the thread.",
+    "whoShouldTry": [
+      "Developers",
+      "Engineering teams"
+    ],
+    "usefulFor": "Developers / Engineering teams",
+    "output": "I made this reverse-engineer Grok bot because it's been getting popular.",
+    "category": "coding",
+    "outcomes": [
+      "build-software",
+      "automate-work"
+    ],
+    "apps": [
+      "browser",
+      "x"
+    ],
+    "difficulty": "medium",
+    "schedule": "one-time",
+    "source": "community",
+    "authorName": "Louis",
+    "handle": "LouisFerreira",
+    "publishedAt": "2026-10-10",
+    "xPostUrl": "https://x.com/LouisFerreira/status/2108820821263241430",
+    "sourceUrl": "https://x.com/LouisFerreira/status/2108820821263241430",
+    "sourceLabel": "Louis on X"
   }
 ]
